@@ -10,6 +10,8 @@ import { TopPerformers } from "@/components/TopPerformers";
 import { DividendSummaryCard } from "@/components/DividendTracker";
 import { MarketContextDisplay } from "@/components/MarketContext";
 import { AIChatbot } from "@/components/AIChatbot";
+import { WatchlistTable } from "@/components/WatchlistTable";
+import { PortfolioNewsFeed } from "@/components/PortfolioNewsFeed";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
@@ -119,6 +121,11 @@ const Index = () => {
           <HoldingsTable holdings={holdings} />
         </section>
 
+        {/* Watchlist Table */}
+        <section>
+          <WatchlistTable />
+        </section>
+
         {/* Portfolio Value Trend Chart */}
         <section className="relative z-20">
           <PortfolioValueTrendChart summary={summary} />
@@ -129,9 +136,10 @@ const Index = () => {
           <PerformanceChart holdings={holdings} />
         </section>
 
-        {/* Top/Worst Performers */}
-        <section>
+        {/* Top/Worst Performers & News Feed */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <TopPerformers topPerformers={topPerformers} worstPerformers={worstPerformers} />
+          <PortfolioNewsFeed holdings={holdings} />
         </section>
 
         {/* AI Recommendations */}

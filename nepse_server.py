@@ -627,6 +627,35 @@ def delete_quarterly_record(symbol: str, fy: str, quarter: int):
         return jsonify({'status': 'deleted', 'symbol': symbol, 'fy': fy, 'quarter': quarter})
     return jsonify({'error': f'Quarter Q{quarter} FY {fy} not found for {symbol}'}), 404
 
+# ============================================================================
+# News API
+# ============================================================================
+
+NEWS_DB_PATH = os.path.join(os.path.dirname(__file__), "db", "news.json")
+
+def load_news_db():
+    try:
+        with open(NEWS_DB_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+    except Exception as e:
+        print(f"Error loading news DB: {e}")
+        return {}
+
+@app.route('/api/news/<symbol>', methods=['GET'])
+def get_news(symbol: str):
+    """Return all cached news for a symbol."""
+    db = load_news_db()
+    news_items = db.get(symbol.upper(), [])
+    return jsonify({'symbol': symbol.upper(), 'news': news_items})
+
+@app.route('/api/news', methods=['GET'])
+def get_all_news():
+    """Return all cached news."""
+    db = load_news_db()
+    return jsonify(db)
+
 
 # ============================================================================
 # Main

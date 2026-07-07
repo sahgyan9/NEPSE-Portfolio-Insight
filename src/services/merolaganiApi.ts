@@ -219,11 +219,45 @@ export const fetchMerolaganiFundamentals = async (
 ): Promise<MerolaganiFundamentals | null> => {
     const normalizedSymbol = symbol.toUpperCase().trim();
 
-    // Get static book value data
+    try {
+        const response = await fetch("http://localhost:5001/api/fundamentals");
+        if (response.ok) {
+            const data = await response.json();
+            const fundData = data.fundamentals?.[normalizedSymbol];
+            if (fundData) {
+                const result: MerolaganiFundamentals = {
+                    symbol: normalizedSymbol,
+                    bookValue: fundData.bookValue ?? null,
+                    eps: fundData.eps ?? null,
+                    epsInfo: null,
+                    peRatio: fundData.peRatio ?? null,
+                    pbRatio: fundData.pbRatio ?? null,
+                    lastTradedPrice: null,
+                    marketCap: null,
+                    week52High: null,
+                    week52Low: null,
+                    sector: null,
+                    roe: null,
+                    dividendYield: null,
+                    sharesOutstanding: null,
+                    source: 'live',
+                    sourceDetails: 'Scraped via Firecrawl',
+                    isLiveData: true,
+                    fetchedAt: new Date().toISOString(),
+                };
+                setCachedData(normalizedSymbol, result);
+                return result;
+            }
+        }
+    } catch (e) {
+        console.error(`[Merolagani] Failed to fetch live fundamentals from backend:`, e);
+    }
+
+    // Get static book value data as fallback
     const staticData = getStaticFundamentals(normalizedSymbol);
 
     if (staticData && staticData.bookValue !== null) {
-        console.log(`[Merolagani] 📚 Static book value for ${normalizedSymbol}: ${staticData.bookValue}`);
+        console.log(`[Merolagani] 📚 Static fallback for ${normalizedSymbol}: ${staticData.bookValue}`);
 
         const data: MerolaganiFundamentals = {
             symbol: normalizedSymbol,
@@ -241,12 +275,11 @@ export const fetchMerolaganiFundamentals = async (
             dividendYield: null,
             sharesOutstanding: null,
             source: 'static',
-            sourceDetails: 'Hard-coded book values (updated quarterly)',
+            sourceDetails: 'Hard-coded book values (fallback)',
             isLiveData: false,
             fetchedAt: new Date().toISOString(),
         };
 
-        // Also update in-memory cache for session performance
         setCachedData(normalizedSymbol, data);
         return data;
     }
@@ -266,17 +299,74 @@ export const fetchMultipleFundamentals = async (
 ): Promise<Map<string, MerolaganiFundamentals>> => {
     const results = new Map<string, MerolaganiFundamentals>();
 
-    // Fetch in parallel with small delay
-    const promises = symbols.map(async (symbol, index) => {
-        // Small staggered delay to avoid overwhelming the API
-        await new Promise(resolve => setTimeout(resolve, index * 100));
-        const data = await fetchMerolaganiFundamentals(symbol, forceRefresh);
-        if (data) {
-            results.set(symbol.toUpperCase(), data);
+    let allFundamentals = {};
+    try {
+        const response = await fetch("http://localhost:5001/api/fundamentals");
+        if (response.ok) {
+            const data = await response.json();
+            allFundamentals = data.fundamentals || {};
         }
-    });
+    } catch (e) {
+        console.error(`[Merolagani] Failed to fetch live fundamentals from backend in batch:`, e);
+    }
 
-    await Promise.all(promises);
+    for (const symbol of symbols) {
+        const normalizedSymbol = symbol.toUpperCase().trim();
+        const fundData = allFundamentals[normalizedSymbol];
+        
+        if (fundData) {
+            const result: MerolaganiFundamentals = {
+                symbol: normalizedSymbol,
+                bookValue: fundData.bookValue ?? null,
+                eps: fundData.eps ?? null,
+                epsInfo: null,
+                peRatio: fundData.peRatio ?? null,
+                pbRatio: fundData.pbRatio ?? null,
+                lastTradedPrice: null,
+                marketCap: null,
+                week52High: null,
+                week52Low: null,
+                sector: null,
+                roe: null,
+                dividendYield: null,
+                sharesOutstanding: null,
+                source: 'live',
+                sourceDetails: 'Scraped via Firecrawl',
+                isLiveData: true,
+                fetchedAt: new Date().toISOString(),
+            };
+            setCachedData(normalizedSymbol, result);
+            results.set(normalizedSymbol, result);
+        } else {
+            // Fallback to static
+            const staticData = getStaticFundamentals(normalizedSymbol);
+            if (staticData && staticData.bookValue !== null) {
+                const data: MerolaganiFundamentals = {
+                    symbol: normalizedSymbol,
+                    bookValue: staticData.bookValue,
+                    eps: staticData.eps,
+                    epsInfo: null,
+                    peRatio: staticData.peRatio,
+                    pbRatio: null,
+                    lastTradedPrice: null,
+                    marketCap: null,
+                    week52High: null,
+                    week52Low: null,
+                    sector: staticData.sector,
+                    roe: staticData.roe,
+                    dividendYield: null,
+                    sharesOutstanding: null,
+                    source: 'static',
+                    sourceDetails: 'Hard-coded book values (fallback)',
+                    isLiveData: false,
+                    fetchedAt: new Date().toISOString(),
+                };
+                setCachedData(normalizedSymbol, data);
+                results.set(normalizedSymbol, data);
+            }
+        }
+    }
+
     return results;
 };
 
