@@ -18,4 +18,4 @@ WshShell.Run "cmd /c cd /d """ & scriptDir & """ && npm run dev", 1, False
 
 ' Open browser after a short delay
 WScript.Sleep 3000
-WshShell.Run "http://localhost:8080", 1, False
+WshShell.Run "http://localhost:5173", 1, False
