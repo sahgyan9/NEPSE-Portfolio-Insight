@@ -186,7 +186,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
             <DialogTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
                     <Database className="h-4 w-4" />
-                    Manage Portfolio
+                    <span className="hidden xl:inline">Manage</span>
                 </Button>
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">

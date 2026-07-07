@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
 import { toast } from "@/hooks/use-toast";
 import { STORAGE_KEYS } from "@/lib/constants";
-import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2 } from "lucide-react";
+import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Index = () => {
@@ -148,7 +148,7 @@ const Index = () => {
         </section>
 
         {/* Quick Navigation Cards */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link to="/fundamentals">
             <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50 cursor-pointer group">
               <CardHeader className="pb-2">
@@ -178,6 +178,23 @@ const Index = () => {
               <CardContent>
                 <Button variant="ghost" size="sm" className="gap-2 group-hover:text-primary">
                   View Market <ArrowRight className="w-4 h-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/intelligence">
+            <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50 cursor-pointer group">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Brain className="w-5 h-5 text-purple-500" />
+                  Macro Intelligence
+                </CardTitle>
+                <CardDescription>Policy research & portfolio optimization</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" size="sm" className="gap-2 group-hover:text-primary">
+                  View Intelligence <ArrowRight className="w-4 h-4" />
                 </Button>
               </CardContent>
             </Card>

@@ -391,6 +391,37 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                             print(f"Error reading quarterly data for {sym}: {e}")
                             
             self._send_json({"fundamentals": fundamentals})
+            
+        elif path == "/api/macro-research":
+            try:
+                # If 'force=true' is passed, run the script, else just serve the JSON
+                force_refresh = query.get("force", ["false"])[0] == "true"
+                db_path = os.path.join(os.path.dirname(__file__), "db", "macro_research.json")
+                
+                if force_refresh or not os.path.exists(db_path):
+                    import subprocess
+                    script_path = os.path.join(os.path.dirname(__file__), "tools", "fetch_relevant_research.py")
+                    subprocess.run(["python", script_path], check=True)
+                    
+                with open(db_path, "r", encoding="utf-8") as f:
+                    research_data = json.load(f)
+            except Exception as e:
+                research_data = {"error": str(e)}
+            self._send_json({"research": research_data})
+            
+        elif path == "/api/portfolio-optimization":
+            try:
+                import subprocess
+                script_path = os.path.join(os.path.dirname(__file__), "tools", "optimize_portfolio.py")
+                # Always run it to get the freshest data
+                subprocess.run(["python", script_path], check=True)
+                
+                db_path = os.path.join(os.path.dirname(__file__), "db", "portfolio_optimization.json")
+                with open(db_path, "r", encoding="utf-8") as f:
+                    opt_data = json.load(f)
+            except Exception as e:
+                opt_data = {"error": str(e)}
+            self._send_json({"optimization": opt_data})
         
         elif path == "/api/transactions":
             db = load_db()
