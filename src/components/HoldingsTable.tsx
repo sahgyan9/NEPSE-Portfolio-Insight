@@ -268,7 +268,10 @@ export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
                 <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate">
                   <Link
                     to={`/quarterly?symbol=${holding.scrip}`}
-                    className={cn(columnColors.company, "hover:text-primary hover:underline transition-all")}
+                    className={cn(
+                      columnColors.company,
+                      "border-b border-dashed border-muted-foreground/45 hover:border-solid hover:border-primary hover:text-primary transition-all cursor-pointer inline-block max-w-full"
+                    )}
                   >
                     {holding.fullName}
                   </Link>
