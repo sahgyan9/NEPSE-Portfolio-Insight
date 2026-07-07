@@ -120,6 +120,9 @@ ${holdingsContext}
         setInput("");
         setIsLoading(true);
 
+        // Retrieve API key from local storage, falling back to the hardcoded key if not configured
+        const configuredKey = localStorage.getItem(STORAGE_KEYS.apiKey) || GEMINI_API_KEY;
+
         try {
             // Build conversation history for context
             const conversationHistory = messages.slice(-10).map((m) => ({
@@ -148,7 +151,7 @@ GUIDELINES:
 - Format responses with markdown for better readability (use **bold**, *italic*, bullet points, etc.)`;
 
             const response = await fetch(
-                `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`,
+                `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${configuredKey}`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

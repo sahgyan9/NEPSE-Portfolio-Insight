@@ -102,12 +102,17 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button
-                variant={apiKey ? "ghost" : "default"}
+                variant={apiKey ? "outline" : "default"}
                 size="sm"
-                className={`gap-2 ${!apiKey ? "animate-pulse" : ""}`}
+                className={cn(
+                  "gap-2",
+                  !apiKey && "animate-pulse bg-yellow-500 hover:bg-yellow-600 text-black",
+                  apiKey && "border-green-500/50 hover:bg-green-500/10 text-green-500 hover:text-green-600"
+                )}
               >
                 <Key className="h-4 w-4" />
-                <span className="hidden xl:inline">{apiKey ? "API" : "API"}</span>
+                <span className="hidden xl:inline">{apiKey ? "API Active" : "Configure API"}</span>
+                {apiKey && <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>}
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">

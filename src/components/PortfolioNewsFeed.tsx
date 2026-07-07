@@ -29,14 +29,20 @@ export const PortfolioNewsFeed = ({ holdings }: PortfolioNewsFeedProps) => {
       setIsLoading(true);
       try {
         // Fetch Watchlist
-        const wlRes = await fetch("http://localhost:5001/api/watchlist");
+        const wlUrl = import.meta.env.DEV
+          ? '/api/portfolio-db/api/watchlist'
+          : 'http://localhost:5001/api/watchlist';
+        const wlRes = await fetch(wlUrl);
         if (wlRes.ok) {
           const wlData = await wlRes.json();
           setWatchlistSymbols((wlData.watchlist || []).map((w: any) => w.symbol));
         }
 
         // Fetch News
-        const newsRes = await fetch("http://localhost:8000/api/news");
+        const newsUrl = import.meta.env.DEV
+          ? '/api/nepse-server/api/news'
+          : 'http://localhost:8000/api/news';
+        const newsRes = await fetch(newsUrl);
         if (newsRes.ok) {
           const newsData = await newsRes.json();
           setNewsDb(newsData);

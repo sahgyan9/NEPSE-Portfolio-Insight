@@ -19,6 +19,18 @@ export default defineConfig(({ mode }) => ({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/nepsetty/, '/api/stock'),
         secure: true,
+      },
+      '/api/nepse-server': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/nepse-server/, ''),
+        secure: false,
+      },
+      '/api/portfolio-db': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/portfolio-db/, ''),
+        secure: false,
       }
     }
   },

@@ -138,7 +138,9 @@ const FALLBACK_FUNDAMENTALS: Record<string, Partial<MerolaganiFundamentals>> = {
 // PYTHON API PROXY (Local Development)
 // ============================================================
 
-const PYTHON_API_URL = 'http://localhost:8000'; // Local Python API server
+const PYTHON_API_URL = import.meta.env.DEV
+    ? '/api/nepse-server'
+    : 'http://localhost:8000'; // Local Python API server
 
 /**
  * Fetch from local Python API server
@@ -147,7 +149,7 @@ const PYTHON_API_URL = 'http://localhost:8000'; // Local Python API server
 const fetchFromPythonApi = async (symbol: string): Promise<MerolaganiFundamentals | null> => {
     try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout for live scraping
 
         const response = await fetch(`${PYTHON_API_URL}/api/stock/${symbol}`, {
             signal: controller.signal,
@@ -219,8 +221,24 @@ export const fetchMerolaganiFundamentals = async (
 ): Promise<MerolaganiFundamentals | null> => {
     const normalizedSymbol = symbol.toUpperCase().trim();
 
+    // Check cache first (only use cache if it has complete scraped data)
+    const cached = getCachedData(normalizedSymbol);
+    if (cached && !forceRefresh && cached.lastTradedPrice !== null) {
+        return cached;
+    }
+
+    // Try Python API (Port 8000) first for live scraped data
+    const pythonData = await fetchFromPythonApi(normalizedSymbol);
+    if (pythonData) {
+        setCachedData(normalizedSymbol, pythonData);
+        return pythonData;
+    }
+
     try {
-        const response = await fetch("http://localhost:5001/api/fundamentals");
+        const url = import.meta.env.DEV
+            ? '/api/portfolio-db/api/fundamentals'
+            : 'http://localhost:5001/api/fundamentals';
+        const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
             const fundData = data.fundamentals?.[normalizedSymbol];
@@ -301,7 +319,10 @@ export const fetchMultipleFundamentals = async (
 
     let allFundamentals = {};
     try {
-        const response = await fetch("http://localhost:5001/api/fundamentals");
+        const url = import.meta.env.DEV
+            ? '/api/portfolio-db/api/fundamentals'
+            : 'http://localhost:5001/api/fundamentals';
+        const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
             allFundamentals = data.fundamentals || {};

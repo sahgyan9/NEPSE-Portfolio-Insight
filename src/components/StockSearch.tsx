@@ -21,8 +21,9 @@ export const StockSearch = () => {
     const [stockData, setStockData] = useState<MerolaganiFundamentals | null>(null);
     const [error, setError] = useState<string | null>(null);
 
-    const handleSearch = useCallback(async () => {
-        if (!searchQuery.trim()) {
+    const handleSearch = useCallback(async (targetSymbol?: string) => {
+        const query = (targetSymbol || searchQuery).trim().toUpperCase();
+        if (!query) {
             toast({
                 title: "Enter a symbol",
                 description: "Please enter a stock symbol to search",
@@ -36,12 +37,12 @@ export const StockSearch = () => {
         setStockData(null);
 
         try {
-            const data = await fetchMerolaganiFundamentals(searchQuery.trim().toUpperCase());
+            const data = await fetchMerolaganiFundamentals(query);
 
             if (data) {
                 setStockData(data);
             } else {
-                setError(`No data found for "${searchQuery.toUpperCase()}". Make sure the symbol is correct.`);
+                setError(`No data found for "${query}". Make sure the symbol is correct.`);
             }
         } catch (err) {
             setError("Failed to fetch stock data. Please try again.");
@@ -335,6 +336,7 @@ export const StockSearch = () => {
                                         className="cursor-pointer hover:bg-primary/10"
                                         onClick={() => {
                                             setSearchQuery(symbol);
+                                            handleSearch(symbol);
                                         }}
                                     >
                                         {symbol}

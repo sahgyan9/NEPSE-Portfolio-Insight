@@ -7,7 +7,9 @@ import type {
   SymbolListItem,
 } from '@/types/quarterly';
 
-const BASE = 'http://localhost:8000';
+const BASE = import.meta.env.DEV
+  ? '/api/nepse-server'
+  : 'http://localhost:8000';
 
 // ── Upload PDF ──────────────────────────────────────────────────────────────
 export async function uploadQuarterlyPdf(

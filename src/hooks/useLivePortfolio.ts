@@ -434,7 +434,11 @@ export const useLivePortfolio = (): LivePortfolioData => {
             // Fetch dynamic fundamentals
             let dynamicFundamentals = {};
             try {
-                const fundRes = await fetch("http://localhost:5001/api/fundamentals");
+                const fundRes = await fetch(
+                    import.meta.env.DEV
+                        ? '/api/portfolio-db/api/fundamentals'
+                        : 'http://localhost:5001/api/fundamentals'
+                );
                 if (fundRes.ok) {
                     const fundData = await fundRes.json();
                     dynamicFundamentals = fundData.fundamentals || {};

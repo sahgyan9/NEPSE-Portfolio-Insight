@@ -55,7 +55,10 @@ export default function IntelligencePage() {
         setIsLoading(true);
         try {
             // Fetch Macro Research
-            const macroRes = await fetch(`http://localhost:5001/api/macro-research?force=${force}`);
+            const macroUrl = import.meta.env.DEV
+                ? `/api/portfolio-db/api/macro-research?force=${force}`
+                : `http://localhost:5001/api/macro-research?force=${force}`;
+            const macroRes = await fetch(macroUrl);
             if (macroRes.ok) {
                 const data = await macroRes.json();
                 if (data.research && Array.isArray(data.research)) {
@@ -64,7 +67,10 @@ export default function IntelligencePage() {
             }
 
             // Fetch Portfolio Optimization
-            const optRes = await fetch('http://localhost:5001/api/portfolio-optimization');
+            const optUrl = import.meta.env.DEV
+                ? '/api/portfolio-db/api/portfolio-optimization'
+                : 'http://localhost:5001/api/portfolio-optimization';
+            const optRes = await fetch(optUrl);
             if (optRes.ok) {
                 const data = await optRes.json();
                 if (data.optimization && !data.optimization.error) {
