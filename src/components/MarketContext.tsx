@@ -65,10 +65,12 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
 
     useEffect(() => {
         fetchData();
-        // Refresh every 5 minutes
-        const interval = setInterval(fetchData, 5 * 60 * 1000);
+        // Retry every 30 s while NEPSE server is still warming up;
+        // slow down to every 5 min once index data is available.
+        const intervalMs = marketData?.nepseIndex ? 5 * 60 * 1000 : 30 * 1000;
+        const interval = setInterval(fetchData, intervalMs);
         return () => clearInterval(interval);
-    }, [fetchData]);
+    }, [fetchData, marketData?.nepseIndex]);
 
     if (isLoading) {
         return <MarketContextSkeleton compact={compact} />;

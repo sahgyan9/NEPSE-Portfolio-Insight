@@ -317,18 +317,14 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
         setSelectedPeriod(period);
     };
 
-    // Calculate period change
-    const periodChange = stats
-        ? stats.change
-        : chartData.length >= 2
-            ? chartData[chartData.length - 1].value - chartData[0].value
-            : 0;
+    // Calculate period change dynamically from chartData so it includes the live current value
+    const periodChange = chartData.length >= 2
+        ? chartData[chartData.length - 1].value - chartData[0].value
+        : 0;
 
-    const periodChangePercent = stats
-        ? stats.changePercent
-        : chartData.length >= 2 && chartData[0].value > 0
-            ? ((periodChange / chartData[0].value) * 100)
-            : 0;
+    const periodChangePercent = chartData.length >= 2 && chartData[0].value > 0
+        ? ((periodChange / chartData[0].value) * 100)
+        : 0;
 
     const isPositiveChange = periodChange >= 0;
 
