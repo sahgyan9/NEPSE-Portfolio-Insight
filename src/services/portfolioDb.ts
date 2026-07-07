@@ -308,3 +308,41 @@ export function clearFundamentalsCache(symbol?: string): void {
         console.error('Failed to clear fundamentals cache:', error);
     }
 }
+
+export interface PortfolioHealthPillar {
+    name: string;
+    score: number;
+    description: string;
+}
+
+export interface PortfolioHealthResponse {
+    overallScore: number;
+    grade: string;
+    pillars: {
+        structure: PortfolioHealthPillar;
+        fundamentals: PortfolioHealthPillar;
+        valuation: PortfolioHealthPillar;
+        dividend: PortfolioHealthPillar;
+        volatility: PortfolioHealthPillar;
+    };
+    holdings: Array<{
+        symbol: string;
+        sector: string;
+        weight: number;
+        currentValue: number;
+    }>;
+    strengths: string[];
+    warnings: string[];
+    recommendations: string[];
+    calculatedAt: string;
+}
+
+/**
+ * Get portfolio health score calculation
+ */
+export async function getPortfolioHealth(): Promise<PortfolioHealthResponse> {
+    const response = await fetch(`${API_BASE}/portfolio-health`);
+    if (!response.ok) throw new Error("Failed to fetch portfolio health");
+    const data = await response.json();
+    return data.health;
+}
