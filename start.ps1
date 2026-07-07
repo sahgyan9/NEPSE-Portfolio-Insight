@@ -38,5 +38,22 @@ Write-Host "Press Ctrl+C to stop the frontend server." -ForegroundColor Yellow
 Write-Host "(Python servers will continue running in background)" -ForegroundColor Yellow
 Write-Host ""
 
+# Open browser once Vite is ready (background job)
+Start-Job -ScriptBlock {
+    $maxWait = 45
+    $waited  = 0
+    while ($waited -lt $maxWait) {
+        Start-Sleep -Seconds 2
+        $waited += 2
+        try {
+            $r = Invoke-WebRequest -Uri "http://localhost:5173" -TimeoutSec 2 -UseBasicParsing -ErrorAction Stop
+            if ($r.StatusCode -ge 100) {
+                Start-Process "http://localhost:5173"
+                break
+            }
+        } catch { }
+    }
+} | Out-Null
+
 # Run npm dev in the foreground
 npm run dev
