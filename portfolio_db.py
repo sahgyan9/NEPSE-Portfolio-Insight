@@ -423,6 +423,20 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 opt_data = {"error": str(e)}
             self._send_json({"optimization": opt_data})
         
+        elif path == "/api/portfolio-health":
+            try:
+                import subprocess
+                script_path = os.path.join(os.path.dirname(__file__), "tools", "portfolio_health.py")
+                # Run the script to generate fresh health data
+                subprocess.run(["python", script_path], check=True)
+                
+                db_path = os.path.join(os.path.dirname(__file__), "db", "portfolio_health.json")
+                with open(db_path, "r", encoding="utf-8") as f:
+                    health_data = json.load(f)
+            except Exception as e:
+                health_data = {"error": str(e)}
+            self._send_json({"health": health_data})
+        
         elif path == "/api/transactions":
             db = load_db()
             period = query.get("period", ["all"])[0]
