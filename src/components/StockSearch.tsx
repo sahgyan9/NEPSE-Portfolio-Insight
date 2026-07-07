@@ -86,7 +86,7 @@ export const StockSearch = () => {
             <DialogTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2 hidden sm:flex">
                     <Search className="h-4 w-4" />
-                    <span>Search Stock</span>
+                    <span className="hidden xl:inline">Search</span>
                 </Button>
             </DialogTrigger>
             <DialogTrigger asChild>

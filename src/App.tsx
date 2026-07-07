@@ -9,6 +9,7 @@ import MarketPage from "./pages/MarketPage";
 import MiscPage from "./pages/MiscPage";
 import DividendsPage from "./pages/DividendsPage";
 import QuarterlyPage from "./pages/QuarterlyPage";
+import IntelligencePage from "./pages/Intelligence";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/market" element={<MarketPage />} />
           <Route path="/dividends" element={<DividendsPage />} />
           <Route path="/quarterly" element={<QuarterlyPage />} />
+          <Route path="/intelligence" element={<IntelligencePage />} />
           <Route path="/misc" element={<MiscPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

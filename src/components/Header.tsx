@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BarChart3, Settings, RefreshCw, Key, TrendingUp, Activity, PieChart, Coins, MoreHorizontal, Gift, FileBarChart } from "lucide-react";
+import { BarChart3, Settings, RefreshCw, Key, TrendingUp, Activity, PieChart, Coins, MoreHorizontal, Gift, FileBarChart, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -32,11 +32,12 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
   };
 
   const navItems = [
-    { path: "/", label: "Dashboard", icon: BarChart3 },
-    { path: "/fundamentals", label: "Fundamentals", icon: TrendingUp },
-    { path: "/quarterly", label: "Quarterly", icon: FileBarChart },
+    { path: "/", label: "Home", icon: BarChart3 },
+    { path: "/fundamentals", label: "Funda", icon: TrendingUp },
+    { path: "/quarterly", label: "Qtly", icon: FileBarChart },
     { path: "/market", label: "Market", icon: Activity },
-    { path: "/dividends", label: "Dividends", icon: Gift },
+    { path: "/dividends", label: "Divs", icon: Gift },
+    { path: "/intelligence", label: "Intel", icon: Brain },
     { path: "/misc", label: "Misc", icon: MoreHorizontal },
   ];
 
@@ -58,7 +59,7 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -106,7 +107,7 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
                 className={`gap-2 ${!apiKey ? "animate-pulse" : ""}`}
               >
                 <Key className="h-4 w-4" />
-                <span className="hidden sm:inline">{apiKey ? "API Connected" : "Add API Key"}</span>
+                <span className="hidden xl:inline">{apiKey ? "API" : "API"}</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
@@ -137,8 +138,8 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden border-t border-border/40">
-        <nav className="flex items-center justify-around p-2">
+      <div className="xl:hidden border-t border-border/40 overflow-x-auto scrollbar-hide">
+        <nav className="flex items-center justify-start sm:justify-around p-2 min-w-max gap-2">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = location.pathname === item.path;
