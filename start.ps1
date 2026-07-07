@@ -30,7 +30,7 @@ Write-Host "   All services started!               " -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Services running:" -ForegroundColor White
-Write-Host "  - Frontend:      http://localhost:8080" -ForegroundColor Gray
+Write-Host "  - Frontend:      http://localhost:5173" -ForegroundColor Gray
 Write-Host "  - Portfolio DB:  http://localhost:5001" -ForegroundColor Gray
 Write-Host "  - NEPSE Server:  http://localhost:8000" -ForegroundColor Gray
 Write-Host ""
