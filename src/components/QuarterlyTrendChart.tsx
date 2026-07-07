@@ -143,6 +143,8 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
   };
 
   const activeMetricDefs = METRICS.filter(m => activeMetrics.has(m.key));
+  const hasLeftAxis = activeMetricDefs.some(m => m.group === 'scale');
+  const hasRightAxis = activeMetricDefs.some(m => m.group !== 'scale');
 
   // Group metrics by group for the legend/toggle UI
   const metricsByGroup = useMemo(() => {
@@ -226,7 +228,7 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
       <div className="h-[380px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           {chartType === 'line' ? (
-            <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+            <LineChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
               <XAxis
                 dataKey="label"
@@ -235,10 +237,22 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
                 axisLine={false}
               />
               <YAxis
+                yAxisId="left"
+                orientation="left"
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
+                hide={!hasLeftAxis}
                 tickFormatter={(v) => v >= 1000 ? `${(v/1000).toFixed(0)}k` : String(v)}
+              />
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={false}
+                axisLine={false}
+                hide={!hasRightAxis}
+                tickFormatter={(v) => String(v)}
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend
@@ -248,6 +262,7 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
               {activeMetricDefs.map(m => (
                 <Line
                   key={m.key}
+                  yAxisId={m.group === 'scale' ? 'left' : 'right'}
                   type="monotone"
                   dataKey={m.key}
                   name={m.label}
@@ -260,7 +275,7 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
               ))}
             </LineChart>
           ) : (
-            <BarChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+            <BarChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
               <XAxis
                 dataKey="label"
@@ -269,10 +284,22 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
                 axisLine={false}
               />
               <YAxis
+                yAxisId="left"
+                orientation="left"
                 tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
                 tickLine={false}
                 axisLine={false}
+                hide={!hasLeftAxis}
                 tickFormatter={(v) => v >= 1000 ? `${(v/1000).toFixed(0)}k` : String(v)}
+              />
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={false}
+                axisLine={false}
+                hide={!hasRightAxis}
+                tickFormatter={(v) => String(v)}
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend
@@ -280,7 +307,14 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
                 wrapperStyle={{ fontSize: 12 }}
               />
               {activeMetricDefs.map(m => (
-                <Bar key={m.key} dataKey={m.key} name={m.label} fill={m.color} radius={[3, 3, 0, 0]} />
+                <Bar
+                  key={m.key}
+                  yAxisId={m.group === 'scale' ? 'left' : 'right'}
+                  dataKey={m.key}
+                  name={m.label}
+                  fill={m.color}
+                  radius={[3, 3, 0, 0]}
+                />
               ))}
             </BarChart>
           )}
