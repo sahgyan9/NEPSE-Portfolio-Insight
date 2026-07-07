@@ -37,20 +37,33 @@ interface MetricDef {
   defaultOn: boolean;
 }
 
+const getRawMetric = (q: QuarterRecord, keys: string[]): number | null => {
+  if (!q.raw) return null;
+  for (const k of keys) {
+    if (q.raw[k] !== undefined && q.raw[k] !== null) return q.raw[k];
+    
+    // Try case-insensitive matching without spaces
+    const target = k.toLowerCase().replace(/\s+/g, '');
+    const foundKey = Object.keys(q.raw).find(rk => rk.toLowerCase().replace(/\s+/g, '') === target);
+    if (foundKey && q.raw[foundKey] !== undefined && q.raw[foundKey] !== null) return q.raw[foundKey];
+  }
+  return null;
+};
+
 const toCr = (v: number | null) => v !== null ? +(v / 10_000_000).toFixed(2) : null;
 
 const METRICS: MetricDef[] = [
   // Scale metrics (Cr)
-  { key: 'revenue',   label: 'Revenue (Cr)',        group: 'scale',   getValue: q => toCr(q.raw.revenue),          unit: 'Cr', color: '#3b82f6', defaultOn: true },
-  { key: 'net_profit',label: 'Net Profit (Cr)',      group: 'scale',   getValue: q => toCr(q.raw.net_profit),       unit: 'Cr', color: '#22c55e', defaultOn: true },
-  { key: 'gross_profit',label:'Gross Profit (Cr)',   group: 'scale',   getValue: q => toCr(q.raw.gross_profit),     unit: 'Cr', color: '#a855f7', defaultOn: false },
-  { key: 'op_profit', label: 'Oper. Profit (Cr)',    group: 'scale',   getValue: q => toCr(q.raw.operating_profit), unit: 'Cr', color: '#f59e0b', defaultOn: false },
-  { key: 'total_equity', label: 'Total Equity (Cr)', group: 'scale',   getValue: q => toCr(q.raw.total_equity),     unit: 'Cr', color: '#06b6d4', defaultOn: false },
-  { key: 'total_assets', label: 'Total Assets (Cr)', group: 'scale',   getValue: q => toCr(q.raw.total_assets),     unit: 'Cr', color: '#64748b', defaultOn: false },
-  { key: 'borrowings',label: 'Borrowings (Cr)',      group: 'scale',   getValue: q => toCr(q.raw.lt_loan),          unit: 'Cr', color: '#ef4444', defaultOn: false },
+  { key: 'revenue',   label: 'Revenue (Cr)',        group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Revenue', 'Interest Income', 'revenue'])), unit: 'Cr', color: '#3b82f6', defaultOn: true },
+  { key: 'net_profit',label: 'Net Profit (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Net Profit', 'net_profit'])),       unit: 'Cr', color: '#22c55e', defaultOn: true },
+  { key: 'gross_profit',label:'Gross Profit (Cr)',   group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Gross Profit', 'gross_profit'])),     unit: 'Cr', color: '#a855f7', defaultOn: false },
+  { key: 'op_profit', label: 'Oper. Profit (Cr)',    group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Operating Profit', 'operating_profit', 'op_profit'])), unit: 'Cr', color: '#f59e0b', defaultOn: false },
+  { key: 'total_equity', label: 'Total Equity (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Equity', 'total_equity'])),     unit: 'Cr', color: '#06b6d4', defaultOn: false },
+  { key: 'total_assets', label: 'Total Assets (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Assets', 'total_assets'])),     unit: 'Cr', color: '#64748b', defaultOn: false },
+  { key: 'borrowings',label: 'Borrowings (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Borrowings', 'lt_loan', 'borrowings'])), unit: 'Cr', color: '#ef4444', defaultOn: false },
   // Ratio / per-share metrics
-  { key: 'eps_ttm',   label: 'EPS TTM',              group: 'ratios',  getValue: q => q.computed.eps_ttm,           unit: 'Rs', color: '#22c55e', defaultOn: true },
-  { key: 'bvps',      label: 'BVPS',                 group: 'ratios',  getValue: q => q.computed.bvps,              unit: 'Rs', color: '#3b82f6', defaultOn: false },
+  { key: 'eps_ttm',   label: 'EPS TTM',              group: 'ratios',  getValue: q => q.computed.eps_ttm,           unit: 'Rs', color: '#14b8a6', defaultOn: true },
+  { key: 'bvps',      label: 'BVPS',                 group: 'ratios',  getValue: q => q.computed.bvps,              unit: 'Rs', color: '#ec4899', defaultOn: false },
   // Profitability %
   { key: 'roe_ttm',   label: 'ROE TTM %',            group: 'profitability', getValue: q => q.computed.roe_ttm,    unit: '%',  color: '#f59e0b', defaultOn: true },
   { key: 'roa_ttm',   label: 'ROA TTM %',            group: 'profitability', getValue: q => q.computed.roa_ttm,    unit: '%',  color: '#a855f7', defaultOn: false },
