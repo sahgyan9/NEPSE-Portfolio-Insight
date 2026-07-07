@@ -10,6 +10,7 @@ import { fetchMultipleFundamentals, MerolaganiFundamentals } from "@/services/me
 import { StockSymbolLink } from "@/components/StockSymbolLink";
 import { toast } from "@/hooks/use-toast";
 import { getCachedStockData } from "@/services/sharebazaarApi";
+import { Link } from "react-router-dom";
 
 interface WatchlistEntry {
   symbol: string;
@@ -196,8 +197,16 @@ export const WatchlistTable = () => {
                   <TableCell>
                     <StockSymbolLink symbol={item.symbol} className="font-semibold text-primary" />
                   </TableCell>
-                  <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate text-muted-foreground">
-                    {item.company}
+                  <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate">
+                    <Link
+                      to={`/quarterly?symbol=${item.symbol}`}
+                      className={cn(
+                        "text-muted-foreground",
+                        "border-b border-dashed border-muted-foreground/45 hover:border-solid hover:border-primary hover:text-primary transition-all cursor-pointer inline-block max-w-full"
+                      )}
+                    >
+                      {item.company}
+                    </Link>
                   </TableCell>
                   <TableCell className="font-mono text-violet-500 font-medium">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : formatCurrency(item.ltp ?? item.fundamentals?.lastTradedPrice)}

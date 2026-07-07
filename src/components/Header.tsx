@@ -9,6 +9,7 @@ import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
+import { NewsTicker } from "./NewsTicker";
 
 interface HeaderProps {
   apiKey: string;
@@ -166,6 +167,9 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
           })}
         </nav>
       </div>
+
+      {/* News Ticker rendered below navbar */}
+      <NewsTicker />
     </header>
   );
 };
