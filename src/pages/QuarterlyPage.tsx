@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowLeft, FileText, RefreshCw, Trash2,
   TrendingUp, BarChart2, Table2, Upload,
-  AlertCircle, Building2, Calendar, Loader2, Search, Download
+  AlertCircle, Building2, Calendar, Loader2, Search, Download, X
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -49,18 +49,19 @@ import type {
 } from '@/types/quarterly';
 import { STORAGE_KEYS } from '@/lib/constants';
 
-// ── Sector badge colours ──────────────────────────────────────────────────────
-const SECTOR_COLORS: Record<string, string> = {
-  hydro: 'bg-blue-500/10 text-blue-600 border-blue-500/20',
-  bank: 'bg-green-500/10 text-green-600 border-green-500/20',
-  microfinance: 'bg-purple-500/10 text-purple-600 border-purple-500/20',
-  manufacturing: 'bg-orange-500/10 text-orange-600 border-orange-500/20',
-  insurance: 'bg-pink-500/10 text-pink-600 border-pink-500/20',
-};
-
-const SECTOR_LABEL: Record<string, string> = {
-  hydro: '⚡ Hydro', bank: '🏦 Bank', microfinance: '🌱 Microfinance',
-  manufacturing: '🏭 Manufacturing', insurance: '🛡 Insurance',
+// ── Sector badge colours & labels ─────────────────────────────────────────────
+const getSectorStyle = (sector: string = '') => {
+  const s = (sector || '').toLowerCase();
+  if (s.includes('bank')) return { color: 'bg-green-500/10 text-green-600 border-green-500/20', label: '🏦 ' + sector };
+  if (s.includes('hydro')) return { color: 'bg-blue-500/10 text-blue-600 border-blue-500/20', label: '⚡ ' + sector };
+  if (s.includes('microfinance')) return { color: 'bg-purple-500/10 text-purple-600 border-purple-500/20', label: '🌱 ' + sector };
+  if (s.includes('manufacturing') || s.includes('processing')) return { color: 'bg-orange-500/10 text-orange-600 border-orange-500/20', label: '🏭 ' + sector };
+  if (s.includes('insurance')) return { color: 'bg-pink-500/10 text-pink-600 border-pink-500/20', label: '🛡️ ' + sector };
+  if (s.includes('finance')) return { color: 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20', label: '💵 ' + sector };
+  if (s.includes('hotel') || s.includes('tourism')) return { color: 'bg-teal-500/10 text-teal-600 border-teal-500/20', label: '🏨 ' + sector };
+  if (s.includes('investment')) return { color: 'bg-indigo-500/10 text-indigo-600 border-indigo-500/20', label: '📈 ' + sector };
+  if (s.includes('trading')) return { color: 'bg-cyan-500/10 text-cyan-600 border-cyan-500/20', label: '🔄 ' + sector };
+  return { color: 'bg-slate-500/10 text-slate-600 border-slate-500/20', label: '📦 ' + (sector || 'Others') };
 };
 
 // ── Mini KPI Card ─────────────────────────────────────────────────────────────
@@ -82,6 +83,15 @@ const QuarterlyPage = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [newSymbol, setNewSymbol] = useState('');
   const [activeTab, setActiveTab] = useState('trends');
+  const [unfetchedSymbols, setUnfetchedSymbols] = useState<string[]>([]);
+  const [stockSearchQuery, setStockSearchQuery] = useState('');
+
+  const filteredStocks = useMemo(() => {
+    return stocks.filter(stock => 
+      stock.symbol.toLowerCase().includes(stockSearchQuery.toLowerCase()) ||
+      (stock.company_name || '').toLowerCase().includes(stockSearchQuery.toLowerCase())
+    );
+  }, [stocks, stockSearchQuery]);
 
   // Load stock list
   const loadStocks = useCallback(async () => {
@@ -92,6 +102,36 @@ const QuarterlyPage = () => {
       setSelectedSymbol(list[0].symbol);
     }
   }, [selectedSymbol]);
+
+  // Check which watchlist/portfolio symbols are missing quarterly data
+  useEffect(() => {
+    const checkUnfetched = async () => {
+      try {
+        const holdingsRes = await fetch(import.meta.env.DEV ? '/api/portfolio-db/api/holdings' : 'http://localhost:5001/api/holdings');
+        const watchlistRes = await fetch(import.meta.env.DEV ? '/api/portfolio-db/api/watchlist' : 'http://localhost:5001/api/watchlist');
+        
+        let allSyms: string[] = [];
+        if (holdingsRes.ok) {
+          const data = await holdingsRes.json();
+          allSyms.push(...(data.holdings || []).map((h: any) => h.symbol));
+        }
+        if (watchlistRes.ok) {
+          const data = await watchlistRes.json();
+          allSyms.push(...(data.watchlist || []).map((w: any) => w.symbol));
+        }
+        
+        const uniqueSyms = Array.from(new Set(allSyms));
+        const fetchedSyms = new Set(stocks.map(s => s.symbol));
+        const missing = uniqueSyms.filter(sym => !fetchedSyms.has(sym));
+        setUnfetchedSymbols(missing);
+      } catch (e) {
+        console.error("Failed to check unfetched symbols", e);
+      }
+    };
+    if (stocks.length > 0) {
+      checkUnfetched();
+    }
+  }, [stocks]);
 
   // Load data for selected symbol
   const loadSymbolData = useCallback(async (symbol: string) => {
@@ -155,8 +195,20 @@ const QuarterlyPage = () => {
     const ok = await deleteQuarter(q.symbol, q.fy, q.quarter);
     if (ok) {
       toast({ title: `Deleted ${q.quarter_label}`, variant: 'default' });
-      await loadSymbolData(selectedSymbol);
-      await loadStocks();
+      const list = await listQuarterlyStocks();
+      setStocks(list);
+      
+      const hasStillData = list.some(s => s.symbol === selectedSymbol);
+      if (hasStillData) {
+        await loadSymbolData(selectedSymbol);
+      } else {
+        if (list.length > 0) {
+          setSelectedSymbol(list[0].symbol);
+        } else {
+          setSelectedSymbol('');
+          setSymbolData(null);
+        }
+      }
     } else {
       toast({ title: 'Delete failed', variant: 'destructive' });
     }
@@ -224,6 +276,23 @@ const QuarterlyPage = () => {
                   {isFetching ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Fetch'}
                 </Button>
               </div>
+              {unfetchedSymbols.length > 0 && (
+                <div className="mt-3 pt-3 border-t border-border/60">
+                  <p className="text-[10px] uppercase font-bold text-muted-foreground/80 mb-1.5 tracking-wider">Unfetched Watchlist / Portfolio:</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {unfetchedSymbols.slice(0, 6).map(sym => (
+                      <Badge 
+                        key={sym} 
+                        variant="outline" 
+                        className="cursor-pointer hover:bg-secondary/80 font-mono text-[10px] px-1.5 py-0.5 border-dashed border-muted-foreground/30"
+                        onClick={() => handleFetchNepseAlpha(sym)}
+                      >
+                        {sym}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Stock list */}
@@ -237,14 +306,39 @@ const QuarterlyPage = () => {
                 </Button>
               </div>
 
+              {stocks.length > 0 && (
+                <div className="relative mb-3">
+                  <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-muted-foreground" />
+                  <input
+                    type="text"
+                    placeholder="Filter stocks..."
+                    value={stockSearchQuery}
+                    onChange={(e) => setStockSearchQuery(e.target.value)}
+                    className="w-full pl-8 pr-7 h-8 flex rounded-md border border-input bg-transparent px-3 py-1 text-xs shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  />
+                  {stockSearchQuery && (
+                    <button 
+                      onClick={() => setStockSearchQuery('')}
+                      className="absolute right-2 top-2 text-muted-foreground hover:text-foreground"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  )}
+                </div>
+              )}
+
               {stocks.length === 0 ? (
                 <div className="text-center py-8 text-muted-foreground text-sm">
                   <FileText className="w-8 h-8 mx-auto mb-2 opacity-40" />
                   No data yet. Upload a quarterly PDF to get started.
                 </div>
+              ) : filteredStocks.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground text-sm">
+                  No stocks match "{stockSearchQuery}"
+                </div>
               ) : (
-                <div className="space-y-2">
-                  {stocks.map(stock => (
+                <div className="space-y-2 max-h-[480px] overflow-y-auto pr-1">
+                  {filteredStocks.map(stock => (
                     <button
                       key={stock.symbol}
                       onClick={() => setSelectedSymbol(stock.symbol)}
@@ -256,8 +350,8 @@ const QuarterlyPage = () => {
                     >
                       <div className="flex items-center justify-between">
                         <span className="font-mono font-bold text-sm">{stock.symbol}</span>
-                        <Badge variant="outline" className={`text-xs ${SECTOR_COLORS[stock.sector ?? ''] ?? ''}`}>
-                          {SECTOR_LABEL[stock.sector ?? ''] ?? stock.sector}
+                        <Badge variant="outline" className={`text-xs ${getSectorStyle(stock.sector).color}`}>
+                          {getSectorStyle(stock.sector).label}
                         </Badge>
                       </div>
                       <p className="text-xs text-muted-foreground mt-0.5 truncate">{stock.company_name}</p>
@@ -287,8 +381,8 @@ const QuarterlyPage = () => {
                   <div>
                     <div className="flex items-center gap-3">
                       <h2 className="text-2xl font-bold font-mono">{selectedSymbol}</h2>
-                      <Badge variant="outline" className={SECTOR_COLORS[symbolData?.sector ?? ''] ?? ''}>
-                        {SECTOR_LABEL[symbolData?.sector ?? ''] ?? symbolData?.sector}
+                      <Badge variant="outline" className={getSectorStyle(symbolData?.sector).color}>
+                        {getSectorStyle(symbolData?.sector).label}
                       </Badge>
                     </div>
                     <p className="text-muted-foreground text-sm mt-0.5">{symbolData?.company_name}</p>
