@@ -21,7 +21,7 @@ def _clean_number(val_str):
 def parse_financials_md(md_path):
     """Parses the LLM extracted financials table into a dict keyed by FY-Q"""
     if not os.path.exists(md_path):
-        return {}
+        return {}, [], {}  # fixed: was returning bare {} which broke 3-tuple unpack
         
     with open(md_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -29,7 +29,7 @@ def parse_financials_md(md_path):
     lines = content.splitlines()
     table_lines = [l for l in lines if l.startswith('|')]
     if len(table_lines) < 2:
-        return {}
+        return {}, [], {}
 
     # Parse header
     headers = [col.strip() for col in table_lines[0].split('|')[1:-1]]
@@ -88,6 +88,80 @@ def parse_financials_md(md_path):
     return financials_data, ordered_keys, bs_yoy
 
 
+def _parse_from_financials_only(fundamentals_md_path, symbol):
+    """
+    Fallback for stocks where the broker-widget page doesn't render a quarterly
+    table (e.g. microfinance, development banks like CBBL).
+
+    All the data we need — EPS, BVPS, ROE, Net Profit, Revenue — is already
+    present in the LLM-extracted _financials.md. We map those rows directly
+    to the 'computed' schema instead of needing the broker-widget table.
+    """
+    fin_path = fundamentals_md_path.replace("_fundamentals.md", "_financials.md")
+    financials_data, ordered_keys, bs_yoy = parse_financials_md(fin_path)
+
+    if not financials_data:
+        print(f"Error: No financials data found for {symbol} in fallback either.")
+        return []
+
+    # Map from financials row labels -> computed schema keys
+    # These rows appear in the financials LLM table for banks/microfinance
+    raw_to_computed = {
+        "EPS Reported":       "eps_ttm",
+        "Book Value Reported": "bvps",
+        "ROE Reported":       "roe_ttm",
+        "Net Profit":         "net_profit_ttm",
+        "Interest Income":    "revenue_ttm",
+        "Total Operating Income": "revenue_ttm",  # manufacturing fallback
+    }
+
+    # Rebuild quarter metadata from the keys (format: "2082-83-Q3")
+    quarter_meta = {}
+    for key in financials_data:
+        parts = key.rsplit('-Q', 1)
+        if len(parts) == 2:
+            fy = parts[0]          # e.g. "2082-83"
+            q  = int(parts[1])     # e.g. 3
+            short_fy = fy[2:]      # e.g. "82-83"
+            quarter_meta[key] = {
+                "fy": fy,
+                "quarter": q,
+                "quarter_label": f"Q{q} {short_fy}",
+            }
+
+    # Extract computed values from the raw financials rows
+    computed_by_key = {k: {} for k in financials_data}
+    for raw_row, computed_key in raw_to_computed.items():
+        for fq_key, row_dict in financials_data.items():
+            if raw_row in row_dict:
+                val = row_dict[raw_row]
+                # revenue_ttm should only come from Interest Income if not already set
+                if computed_key not in computed_by_key[fq_key]:
+                    computed_by_key[fq_key][computed_key] = val
+
+    # Build final list sorted by FY and quarter
+    final_data = []
+    for key in sorted(financials_data.keys(), key=lambda k: (quarter_meta.get(k, {}).get('fy',''), quarter_meta.get(k, {}).get('quarter', 0))):
+        meta = quarter_meta.get(key, {})
+        if not meta:
+            continue
+        final_data.append({
+            "symbol":        symbol.upper(),
+            "sector":        "unknown",   # overridden by upsert_quarterly_data via company_symbol_map
+            "fy":            meta["fy"],
+            "quarter":       meta["quarter"],
+            "quarter_label": meta["quarter_label"],
+            "parsed_at":     datetime.now().isoformat(),
+            "computed":      computed_by_key.get(key, {}),
+            "raw":           financials_data.get(key, {}),
+            "raw_keys_order": ordered_keys,
+            "yoy":           bs_yoy,
+        })
+
+    print(f"[fallback] Extracted {len(final_data)} quarters from financials table for {symbol}.")
+    return final_data
+
+
 def parse_markdown_table(md_path, symbol):
     with open(md_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -105,8 +179,8 @@ def parse_markdown_table(md_path, symbol):
             table_lines.append(line)
 
     if not table_lines:
-        print(f"Error: Could not find data table in {md_path}")
-        return []
+        print(f"Warning: No broker-widget table in {md_path}. Trying financials-only fallback for {symbol}...")
+        return _parse_from_financials_only(md_path, symbol)
 
     # Extract sector
     sector = "unknown"

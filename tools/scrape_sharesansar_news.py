@@ -9,11 +9,13 @@ DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db", "news.j
 
 def scrape_news(symbol):
     symbol = symbol.upper()
-    url = f"https://www.sharesansar.com/company/{symbol}"
+    url = f"https://www.sharesansar.com/category/latest?company={symbol}"
     out_file = f".tmp/{symbol}_news.md"
     
+    from datetime import datetime, timedelta
+
     # We ask the LLM to output a clean JSON array of news items
-    prompt = "Extract all the news headlines from the 'Recent News' or 'Company News' section. Format the output STRICTLY as a JSON array of objects, where each object has 'headline', 'date', and 'link' keys. Do not include any other text besides the JSON."
+    prompt = f"Extract all news headlines from the list of articles that are SPECIFICALLY about the company with the exact symbol '{symbol}'. IMPORTANT: If '{symbol}' is a substring of another company's symbol (e.g., pulling 'NHDL' news when asked for 'HDL'), you MUST completely ignore the news about the other company. Format the output STRICTLY as a JSON array of objects, where each object has 'headline', 'date' (converted to YYYY-MM-DD format), and 'link' keys. Do not include any other text besides the JSON."
     
     print(f"Scraping news for {symbol} from {url}...")
     try:
@@ -32,11 +34,11 @@ def scrape_news(symbol):
         json_match = re.search(r'\[\s*\{.*?\}\s*\]', content, re.DOTALL)
         
         if json_match:
-            news_items = json.loads(json_match.group(0))
+            new_items = json.loads(json_match.group(0))
         else:
             print(f"Warning: Could not parse JSON from the LLM output for {symbol}. Falling back to empty array.")
             print(f"Raw output: {content[:200]}...")
-            news_items = []
+            new_items = []
             
         # Update db/news.json
         try:
@@ -45,7 +47,37 @@ def scrape_news(symbol):
         except (FileNotFoundError, json.JSONDecodeError):
             db = {}
             
-        db[symbol] = news_items
+        existing_items = db.get(symbol, [])
+        combined = existing_items + new_items
+        
+        # Deduplicate by link and headline
+        merged_dict = {}
+        for item in combined:
+            link = item.get('link', '')
+            headline = item.get('headline', '')
+            key = link if link else headline
+            if key and key not in merged_dict:
+                merged_dict[key] = item
+                
+        # Filter by 90 days and sort
+        cutoff_date = datetime.now() - timedelta(days=90)
+        final_news = []
+        
+        for item in merged_dict.values():
+            date_str = item.get('date', '')
+            try:
+                # Assuming LLM converted to YYYY-MM-DD
+                dt = datetime.strptime(date_str[:10], '%Y-%m-%d')
+                if dt >= cutoff_date:
+                    final_news.append((dt, item))
+            except ValueError:
+                # If date parsing fails, keep it but treat it as today for sorting
+                final_news.append((datetime.now(), item))
+                
+        # Sort descending by date
+        final_news.sort(key=lambda x: x[0], reverse=True)
+        
+        db[symbol] = [x[1] for x in final_news]
         
         os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
         with open(DB_PATH, 'w', encoding='utf-8') as f:

@@ -19,6 +19,7 @@ from nepse import AsyncNepse
 import asyncio
 import httpx
 import os
+import sys
 import json
 from bs4 import BeautifulSoup
 import re
@@ -77,7 +78,7 @@ class NepseDataFetcher:
             return self._cache['nepse_index']['data']
         
         try:
-            raw_data = await self._nepse.getNepseIndex()
+            raw_data = await asyncio.wait_for(self._nepse.getNepseIndex(), timeout=5.0)
             for idx in raw_data:
                 if 'NEPSE Index' in idx.get('index', ''):
                     result = {
@@ -121,8 +122,8 @@ class NepseDataFetcher:
             return self._cache['all_indices']['data']
         
         try:
-            main_raw = await self._nepse.getNepseIndex()
-            sub_raw = await self._nepse.getNepseSubIndices()
+            main_raw = await asyncio.wait_for(self._nepse.getNepseIndex(), timeout=3.0)
+            sub_raw = await asyncio.wait_for(self._nepse.getNepseSubIndices(), timeout=3.0)
             
             main_indices = []
             for idx in main_raw:
@@ -167,7 +168,7 @@ class NepseDataFetcher:
             return self._cache['market_status']['data']
         
         try:
-            status = await self._nepse.isNepseOpen()
+            status = await asyncio.wait_for(self._nepse.isNepseOpen(), timeout=3.0)
             result = {
                 'is_open': status.get('isOpen', '').upper() == 'OPEN',
                 'status': status.get('isOpen', 'UNKNOWN'),
@@ -194,8 +195,8 @@ class NepseDataFetcher:
             market_status = await self.get_market_status()
             
             # Get top gainers/losers from NEPSE API
-            top_gainers = await self._nepse.getTopGainers()
-            top_losers = await self._nepse.getTopLosers()
+            top_gainers = await asyncio.wait_for(self._nepse.getTopGainers(), timeout=3.0)
+            top_losers = await asyncio.wait_for(self._nepse.getTopLosers(), timeout=3.0)
             
             gainers = []
             for stock in (top_gainers or [])[:5]:
@@ -228,9 +229,10 @@ class NepseDataFetcher:
             self._cache['market_summary'] = {'data': result, 'timestamp': time.time()}
             return result
         except Exception as e:
-            print(f"Error fetching market summary: {e}")
+            err_msg = str(e)
+            print(f"Error fetching market summary: {err_msg}")
         
-        return {'source': 'error', 'error': str(e)}
+        return {'source': 'error', 'error': err_msg if 'err_msg' in locals() else 'Unknown error'}
 
 
 # ============================================================================
@@ -592,20 +594,36 @@ def fetch_quarterly_data(symbol: str):
 
     symbol = symbol.upper()
     try:
-        # Step 1: Scrape
+        python = sys.executable  # use the same venv Python running this server
+        project_root = os.path.dirname(os.path.abspath(__file__))
+
+        # Step 1: Scrape NepseAlpha
         print(f"[nepse_server] Scraping NepseAlpha for {symbol}...")
-        scrape_cmd = ["python", "tools/scrape_nepsealpha.py", symbol]
-        subprocess.run(scrape_cmd, check=True, capture_output=True, text=True)
+        scrape_res = subprocess.run(
+            [python, "tools/scrape_nepsealpha.py", symbol],
+            capture_output=True, text=True, cwd=project_root
+        )
+        if scrape_res.returncode != 0:
+            detail = scrape_res.stderr or scrape_res.stdout or "No output"
+            print(f"[nepse_server] Scrape failed for {symbol}: {detail}")
+            return jsonify({'error': f'Scrape failed for {symbol}', 'details': detail}), 500
 
         # Step 2: Parse and upsert
         print(f"[nepse_server] Parsing markdown for {symbol}...")
-        parse_cmd = ["python", "tools/parse_nepsealpha_md.py", symbol]
-        parse_res = subprocess.run(parse_cmd, check=True, capture_output=True, text=True)
+        parse_res = subprocess.run(
+            [python, "tools/parse_nepsealpha_md.py", symbol],
+            capture_output=True, text=True, cwd=project_root
+        )
+        if parse_res.returncode != 0:
+            detail = parse_res.stderr or parse_res.stdout or "No output"
+            print(f"[nepse_server] Parse failed for {symbol}: {detail}")
+            return jsonify({'error': f'Parse failed for {symbol}', 'details': detail}), 500
 
         return jsonify({'message': f'Successfully fetched data for {symbol}', 'details': parse_res.stdout}), 200
 
-    except subprocess.CalledProcessError as e:
-        print(f"[nepse_server] Fetch error for {symbol}: {e.stderr or e.output or e}")
+    except Exception as e:
+        import traceback
+        print(f"[nepse_server] Unexpected error for {symbol}: {traceback.format_exc()}")
         return jsonify({'error': f'Failed to fetch data for {symbol}', 'details': str(e)}), 500
 
 @app.route('/api/quarterly/list', methods=['GET'])
@@ -677,10 +695,63 @@ def get_all_news():
     db = load_news_db()
     return jsonify(db)
 
+@app.route('/api/news/fetch/<symbol>', methods=['POST', 'OPTIONS'])
+def fetch_news(symbol: str):
+    """Run scrape_sharesansar_news.py to fetch latest news for a symbol."""
+    if request.method == 'OPTIONS':
+        return '', 204
+    
+    symbol = symbol.upper()
+    try:
+        python = sys.executable
+        project_root = os.path.dirname(os.path.abspath(__file__))
+        
+        print(f"[nepse_server] Fetching news for {symbol}...")
+        res = subprocess.run(
+            [python, "tools/scrape_sharesansar_news.py", symbol],
+            capture_output=True, text=True, cwd=project_root
+        )
+        
+        if res.returncode != 0:
+            detail = res.stderr or res.stdout or "No output"
+            print(f"[nepse_server] News fetch failed for {symbol}: {detail}")
+            return jsonify({'error': f'Fetch failed for {symbol}', 'details': detail}), 500
+            
+        # Return updated news for this symbol
+        db = load_news_db()
+        return jsonify({'symbol': symbol, 'news': db.get(symbol, []), 'message': 'Successfully fetched news'})
+        
+    except Exception as e:
+        import traceback
+        print(f"[nepse_server] Unexpected error for {symbol} news: {traceback.format_exc()}")
+        return jsonify({'error': f'Failed to fetch news for {symbol}', 'details': str(e)}), 500
+
 
 # ============================================================================
 # Main
 # ============================================================================
+
+def _warmup_nepse():
+    """Pre-fetch NEPSE data at startup so the token handshake is done
+    before the first browser request arrives."""
+    time.sleep(3)  # Give Flask a moment to bind its port first
+    print("[Warmup] Pre-fetching NEPSE index...")
+    try:
+        run_async(nepse_fetcher.get_nepse_index())
+        print("[Warmup] NEPSE index cached OK")
+    except Exception as e:
+        print(f"[Warmup] NEPSE index failed (will retry on first request): {e}")
+    try:
+        run_async(nepse_fetcher.get_market_status())
+        print("[Warmup] Market status cached OK")
+    except Exception as e:
+        print(f"[Warmup] Market status failed: {e}")
+    try:
+        run_async(nepse_fetcher.get_all_indices())
+        print("[Warmup] All indices cached OK")
+    except Exception as e:
+        print(f"[Warmup] All indices failed: {e}")
+
 
 if __name__ == '__main__':
     print("=" * 60)
@@ -699,5 +770,9 @@ if __name__ == '__main__':
     print("\n" + "=" * 60)
     print("Starting server on http://localhost:8000")
     print("=" * 60 + "\n")
-    
+
+    # Kick off warmup in background so first browser request finds cached data
+    warmup_thread = threading.Thread(target=_warmup_nepse, daemon=True)
+    warmup_thread.start()
+
     app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
