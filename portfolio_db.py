@@ -349,6 +349,48 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         if path == "/api/holdings":
             db = load_db()
             self._send_json({"holdings": db["holdings"]})
+            
+        elif path == "/api/watchlist":
+            db = load_db()
+            self._send_json({"watchlist": db.get("watchlist", [])})
+        
+        elif path == "/api/fundamentals":
+            try:
+                db_path = os.path.join(os.path.dirname(__file__), "db", "fundamentals.json")
+                with open(db_path, "r", encoding="utf-8") as f:
+                    fundamentals = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                fundamentals = {}
+                
+            # Augment/Override with Quarterly Data if available (saves tokens!)
+            quarterly_dir = os.path.join(os.path.dirname(__file__), "db", "quarterly")
+            if os.path.exists(quarterly_dir):
+                for fname in os.listdir(quarterly_dir):
+                    if fname.endswith(".json"):
+                        sym = fname[:-5].upper()
+                        try:
+                            with open(os.path.join(quarterly_dir, fname), "r", encoding="utf-8") as f:
+                                q_data = json.load(f)
+                                if q_data and "quarters" in q_data and len(q_data["quarters"]) > 0:
+                                    # Get the latest quarter
+                                    latest_q = q_data["quarters"][-1]
+                                    computed = latest_q.get("computed", {})
+                                    
+                                    if sym not in fundamentals:
+                                        fundamentals[sym] = {}
+                                        
+                                    if "eps_ttm" in computed and computed["eps_ttm"] is not None:
+                                        fundamentals[sym]["eps"] = computed["eps_ttm"]
+                                    if "bvps" in computed and computed["bvps"] is not None:
+                                        fundamentals[sym]["bookValue"] = computed["bvps"]
+                                    if "pe_ratio" in computed and computed["pe_ratio"] is not None:
+                                        fundamentals[sym]["peRatio"] = computed["pe_ratio"]
+                                    if "pb_ratio" in computed and computed["pb_ratio"] is not None:
+                                        fundamentals[sym]["pbRatio"] = computed["pb_ratio"]
+                        except Exception as e:
+                            print(f"Error reading quarterly data for {sym}: {e}")
+                            
+            self._send_json({"fundamentals": fundamentals})
         
         elif path == "/api/transactions":
             db = load_db()
@@ -491,6 +533,31 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             
             save_db(db)
             self._send_json({"success": True, "action": action, "holdings": db["holdings"]})
+            
+        elif path == "/api/watchlist/add":
+            db = load_db()
+            symbol = data.get("symbol", "").upper()
+            company = data.get("company", symbol)
+            
+            if not symbol:
+                self._send_json({"error": "Symbol is required"}, 400)
+                return
+                
+            watchlist = db.setdefault("watchlist", [])
+            existing = next((h for h in watchlist if h["symbol"] == symbol), None)
+            
+            if existing:
+                self._send_json({"success": True, "action": "exists", "watchlist": watchlist})
+                return
+                
+            watchlist.append({
+                "symbol": symbol,
+                "company": company,
+                "dateAdded": datetime.now().strftime("%Y-%m-%d")
+            })
+            
+            save_db(db)
+            self._send_json({"success": True, "action": "added", "watchlist": watchlist})
         
         elif path == "/api/holdings/sell":
             # Sell stock (reduce quantity or remove)
@@ -612,6 +679,24 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             
             save_db(db)
             self._send_json({"success": True, "holdings": db["holdings"]})
+        
+        elif path == "/api/watchlist":
+            symbol = query.get("symbol", [""])[0].upper()
+            
+            if not symbol:
+                self._send_json({"error": "Symbol required"}, 400)
+                return
+            
+            db = load_db()
+            original_count = len(db.get("watchlist", []))
+            db["watchlist"] = [h for h in db.get("watchlist", []) if h["symbol"] != symbol]
+            
+            if len(db["watchlist"]) == original_count:
+                self._send_json({"error": f"Stock {symbol} not found in watchlist"}, 404)
+                return
+            
+            save_db(db)
+            self._send_json({"success": True, "watchlist": db["watchlist"]})
         
         else:
             self._send_json({"error": "Not found"}, 404)

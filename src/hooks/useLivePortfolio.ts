@@ -315,10 +315,12 @@ export const useLivePortfolio = (): LivePortfolioData => {
         portfolioData: RawPortfolioItem[],
         stockData: Map<string, ShareBazaarResponse>,
         dividendData?: Map<string, unknown>,
-        manualDividends?: Map<string, ManualDividendRow>
+        manualDividends?: Map<string, ManualDividendRow>,
+        dynamicFundamentals?: Record<string, any>
     ): StockHolding[] => {
         // Use passed manual dividend data (fetched asynchronously)
         const dividendMap = manualDividends || new Map<string, ManualDividendRow>();
+        const funds = dynamicFundamentals || {};
 
         return portfolioData.map((item, index) => {
             const apiData = stockData.get(item.scrip);
@@ -341,7 +343,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
             const gainLoss = currentValue - item.totalCost;
             const gainLossPercent = ((currentValue - item.totalCost) / item.totalCost) * 100;
 
-            const fundamentals = fundamentalData[item.scrip];
+            const fundamentals = funds[item.scrip] || fundamentalData[item.scrip];
 
             // Calculate P/B ratio dynamically: LTP / Book Value
             const bookValue = fundamentals?.bookValue || null;
@@ -429,11 +431,23 @@ export const useLivePortfolio = (): LivePortfolioData => {
             const manualDividends = await getManualDividendData();
             console.log('[useLivePortfolio] Loaded manual dividends for', manualDividends.size, 'symbols');
 
+            // Fetch dynamic fundamentals
+            let dynamicFundamentals = {};
+            try {
+                const fundRes = await fetch("http://localhost:5001/api/fundamentals");
+                if (fundRes.ok) {
+                    const fundData = await fundRes.json();
+                    dynamicFundamentals = fundData.fundamentals || {};
+                }
+            } catch (e) {
+                console.error('[useLivePortfolio] Failed to fetch dynamic fundamentals', e);
+            }
+
             // No dividend API calls; manual entry only
             const dividendData: Map<string, unknown> = new Map();
             setDividendDataLoaded(manualDividends.size > 0);
 
-            const newHoldings = buildHoldings(portfolioData, stockData, dividendData, manualDividends);
+            const newHoldings = buildHoldings(portfolioData, stockData, dividendData, manualDividends, dynamicFundamentals);
             setHoldings(newHoldings);
             setLastUpdated(new Date());
 
