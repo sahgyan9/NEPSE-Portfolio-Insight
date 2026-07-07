@@ -1,0 +1,650 @@
+{
+  "ADBL": {
+    "symbol": "ADBL",
+    "bookValue": 235.13,
+    "eps": null,
+    "pe": -32.18,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "AKJCL": {
+    "symbol": "AKJCL",
+    "bookValue": 91.95,
+    "eps": null,
+    "pe": 31.61,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "AKPL": {
+    "symbol": "AKPL",
+    "bookValue": 101.21,
+    "eps": null,
+    "pe": 40.94,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "API": {
+    "symbol": "API",
+    "bookValue": 114.74,
+    "eps": null,
+    "pe": 16.71,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "BNT": {
+    "symbol": "BNT",
+    "bookValue": 3141.86,
+    "eps": null,
+    "pe": 13.2,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "BOKL": {
+    "symbol": "BOKL",
+    "bookValue": 170.54,
+    "eps": null,
+    "pe": 20.79,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "BPCL": {
+    "symbol": "BPCL",
+    "bookValue": 210.43,
+    "eps": null,
+    "pe": 71.76,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CBBL": {
+    "symbol": "CBBL",
+    "bookValue": 266.18,
+    "eps": null,
+    "pe": 30.72,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CBL": {
+    "symbol": "CBL",
+    "bookValue": 134.25,
+    "eps": null,
+    "pe": 16.01,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CFCL": {
+    "symbol": "CFCL",
+    "bookValue": 114.32,
+    "eps": null,
+    "pe": 59.4,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CHCL": {
+    "symbol": "CHCL",
+    "bookValue": 132.45,
+    "eps": null,
+    "pe": 53.09,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CORBL": {
+    "symbol": "CORBL",
+    "bookValue": 136.54,
+    "eps": null,
+    "pe": 653.15,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "CZBIL": {
+    "symbol": "CZBIL",
+    "bookValue": 150.77,
+    "eps": null,
+    "pe": -33.66,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "EBL": {
+    "symbol": "EBL",
+    "bookValue": 246.88,
+    "eps": null,
+    "pe": 18.83,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "FOWAD": {
+    "symbol": "FOWAD",
+    "bookValue": 271.79,
+    "eps": null,
+    "pe": 55.86,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "GBIME": {
+    "symbol": "GBIME",
+    "bookValue": 179.5,
+    "eps": null,
+    "pe": 11.69,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "GFCL": {
+    "symbol": "GFCL",
+    "bookValue": 200.26,
+    "eps": null,
+    "pe": 35.17,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "GMFIL": {
+    "symbol": "GMFIL",
+    "bookValue": 157.35,
+    "eps": null,
+    "pe": -36.85,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "GRDBL": {
+    "symbol": "GRDBL",
+    "bookValue": 117.31,
+    "eps": null,
+    "pe": -51.96,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "GUFL": {
+    "symbol": "GUFL",
+    "bookValue": 134.18,
+    "eps": null,
+    "pe": -24.86,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "HBL": {
+    "symbol": "HBL",
+    "bookValue": 177.63,
+    "eps": null,
+    "pe": 15.09,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "HDHPC": {
+    "symbol": "HDHPC",
+    "bookValue": 77.95,
+    "eps": null,
+    "pe": 74.51,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "HGI": {
+    "symbol": "HGI",
+    "bookValue": 122.93,
+    "eps": null,
+    "pe": 41.24,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "ICFC": {
+    "symbol": "ICFC",
+    "bookValue": 183.63,
+    "eps": null,
+    "pe": 81.69,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "KBL": {
+    "symbol": "KBL",
+    "bookValue": 145.21,
+    "eps": null,
+    "pe": 11.07,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "KSBBL": {
+    "symbol": "KSBBL",
+    "bookValue": 152.31,
+    "eps": null,
+    "pe": 20.99,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "LBL": {
+    "symbol": "LBL",
+    "bookValue": 156.35,
+    "eps": null,
+    "pe": 11.84,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "LGIL": {
+    "symbol": "LGIL",
+    "bookValue": 122.97,
+    "eps": null,
+    "pe": 34.22,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "LICN": {
+    "symbol": "LICN",
+    "bookValue": 183.32,
+    "eps": null,
+    "pe": 111.17,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "MBL": {
+    "symbol": "MBL",
+    "bookValue": 154.61,
+    "eps": null,
+    "pe": 15.91,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "MEGA": {
+    "symbol": "MEGA",
+    "bookValue": 134.26,
+    "eps": null,
+    "pe": 18.02,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "MFIL": {
+    "symbol": "MFIL",
+    "bookValue": 157.87,
+    "eps": null,
+    "pe": 51.64,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "MLBL": {
+    "symbol": "MLBL",
+    "bookValue": 162.31,
+    "eps": null,
+    "pe": 40.98,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "MNBBL": {
+    "symbol": "MNBBL",
+    "bookValue": 161.67,
+    "eps": null,
+    "pe": 30.48,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NABIL": {
+    "symbol": "NABIL",
+    "bookValue": 240.72,
+    "eps": null,
+    "pe": 19.2,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NBL": {
+    "symbol": "NBL",
+    "bookValue": 260.32,
+    "eps": null,
+    "pe": 14.8,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NCCB": {
+    "symbol": "NCCB",
+    "bookValue": 147.35,
+    "eps": null,
+    "pe": 10.53,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NHDL": {
+    "symbol": "NHDL",
+    "bookValue": 125.01,
+    "eps": null,
+    "pe": 33.2,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NHPC": {
+    "symbol": "NHPC",
+    "bookValue": 96.79,
+    "eps": null,
+    "pe": 110.29,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NIB": {
+    "symbol": "NIB",
+    "bookValue": 188.77,
+    "eps": null,
+    "pe": 10.48,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NICA": {
+    "symbol": "NICA",
+    "bookValue": 198.74,
+    "eps": null,
+    "pe": 97.87,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NICL": {
+    "symbol": "NICL",
+    "bookValue": 171.58,
+    "eps": null,
+    "pe": -33.37,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NIFRA": {
+    "symbol": "NIFRA",
+    "bookValue": 119.97,
+    "eps": null,
+    "pe": 67.67,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NLG": {
+    "symbol": "NLG",
+    "bookValue": 168.76,
+    "eps": null,
+    "pe": -43.97,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NLIC": {
+    "symbol": "NLIC",
+    "bookValue": 136.32,
+    "eps": null,
+    "pe": 82.56,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NLICL": {
+    "symbol": "NLICL",
+    "bookValue": 131.54,
+    "eps": null,
+    "pe": 58.54,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NTC": {
+    "symbol": "NTC",
+    "bookValue": 505.75,
+    "eps": null,
+    "pe": 30.4,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "NYADI": {
+    "symbol": "NYADI",
+    "bookValue": 67.49,
+    "eps": null,
+    "pe": -180.49,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "OHL": {
+    "symbol": "OHL",
+    "bookValue": 328.16,
+    "eps": null,
+    "pe": -69.25,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "PCBL": {
+    "symbol": "PCBL",
+    "bookValue": 179.32,
+    "eps": null,
+    "pe": 9.91,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "PFL": {
+    "symbol": "PFL",
+    "bookValue": 48.08,
+    "eps": null,
+    "pe": -15.02,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "PRIN": {
+    "symbol": "PRIN",
+    "bookValue": 202.27,
+    "eps": null,
+    "pe": 44.24,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "PRVU": {
+    "symbol": "PRVU",
+    "bookValue": 161.83,
+    "eps": null,
+    "pe": 19.18,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "RHPL": {
+    "symbol": "RHPL",
+    "bookValue": 77.52,
+    "eps": null,
+    "pe": -7.04,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SADBL": {
+    "symbol": "SADBL",
+    "bookValue": 155.06,
+    "eps": null,
+    "pe": 40.32,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SANIMA": {
+    "symbol": "SANIMA",
+    "bookValue": 172.71,
+    "eps": null,
+    "pe": 23.81,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SBI": {
+    "symbol": "SBI",
+    "bookValue": 189.58,
+    "eps": null,
+    "pe": 22.03,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SBL": {
+    "symbol": "SBL",
+    "bookValue": 212.43,
+    "eps": null,
+    "pe": 42.8,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SCB": {
+    "symbol": "SCB",
+    "bookValue": 222.71,
+    "eps": null,
+    "pe": 22.66,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SHEL": {
+    "symbol": "SHEL",
+    "bookValue": 111.79,
+    "eps": null,
+    "pe": 18.18,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SHINE": {
+    "symbol": "SHINE",
+    "bookValue": 153.05,
+    "eps": null,
+    "pe": 24.18,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SHPC": {
+    "symbol": "SHPC",
+    "bookValue": 170.6,
+    "eps": null,
+    "pe": 29.21,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SIC": {
+    "symbol": "SIC",
+    "bookValue": 147.26,
+    "eps": null,
+    "pe": 24.76,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SICL": {
+    "symbol": "SICL",
+    "bookValue": 192.63,
+    "eps": null,
+    "pe": -29.26,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SIFC": {
+    "symbol": "SIFC",
+    "bookValue": 140.98,
+    "eps": null,
+    "pe": 356.81,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SJCL": {
+    "symbol": "SJCL",
+    "bookValue": 85.53,
+    "eps": null,
+    "pe": 16.99,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SLICL": {
+    "symbol": "SLICL",
+    "bookValue": 135.04,
+    "eps": null,
+    "pe": 0.0,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "SMFDB": {
+    "symbol": "SMFDB",
+    "bookValue": 128.09,
+    "eps": null,
+    "pe": 104.54,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "TRH": {
+    "symbol": "TRH",
+    "bookValue": 157.49,
+    "eps": null,
+    "pe": -146.28,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "UFL": {
+    "symbol": "UFL",
+    "bookValue": 159.49,
+    "eps": null,
+    "pe": 40.44,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "UNHPL": {
+    "symbol": "UNHPL",
+    "bookValue": 102.84,
+    "eps": null,
+    "pe": 61.81,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  },
+  "UPPER": {
+    "symbol": "UPPER",
+    "bookValue": 53.25,
+    "eps": null,
+    "pe": 5.46,
+    "pbv": null,
+    "roe": null,
+    "sector": null
+  }
+}

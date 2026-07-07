@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#080C0A" />
+  
+  <!-- Grid lines -->
+  <line x1="20" y1="80" x2="80" y2="80" stroke="#33CC8C" stroke-width="2" stroke-opacity="0.3" />
+  <line x1="20" y1="20" x2="20" y2="80" stroke="#33CC8C" stroke-width="2" stroke-opacity="0.3" />
+  
+  <!-- Line Chart -->
+  <polyline points="20,70 40,60 55,75 75,30" fill="none" stroke="#33CC8C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Glowing Dot at peak -->
+  <circle cx="75" cy="30" r="5" fill="#33CC8C" />
+  <circle cx="75" cy="30" r="8" fill="#33CC8C" opacity="0.4" />
+</svg>

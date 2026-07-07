@@ -1,0 +1,317 @@
+﻿{
+    "holdings":  [
+                     {
+                         "symbol":  "BHL",
+                         "company":  "Balephi Hydropower Limited",
+                         "quantity":  20,
+                         "avgCost":  100.0,
+                         "dateAdded":  "2025-05-13"
+                     },
+                     {
+                         "symbol":  "CBBL",
+                         "company":  "Chhimek Laghubitta Bittiya Sanstha Limited",
+                         "quantity":  20,
+                         "avgCost":  847.61,
+                         "dateAdded":  "2025-03-30"
+                     },
+                     {
+                         "symbol":  "CHCL",
+                         "company":  "Chilime Hydropower Company Limited",
+                         "quantity":  10,
+                         "avgCost":  494.24,
+                         "dateAdded":  "2025-03-27"
+                     },
+                     {
+                         "symbol":  "CLI",
+                         "company":  "Citizen Life Insurance Company Limited",
+                         "quantity":  13,
+                         "avgCost":  210.77,
+                         "dateAdded":  "2025-06-01"
+                     },
+                     {
+                         "symbol":  "CSY",
+                         "company":  "Citizens Super Yield Fund",
+                         "quantity":  100,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2025-11-09"
+                     },
+                     {
+                         "symbol":  "GCIL",
+                         "company":  "Ghorahi Cement Industry Limited",
+                         "quantity":  11,
+                         "avgCost":  404.55,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "HBL",
+                         "company":  "Himalayan Bank Limited",
+                         "quantity":  110,
+                         "avgCost":  191.53,
+                         "dateAdded":  "2025-11-29"
+                     },
+                     {
+                         "symbol":  "HDL",
+                         "company":  "Himalayan Distillery Limited",
+                         "quantity":  23,
+                         "avgCost":  1183.93,
+                         "dateAdded":  "2025-03-04"
+                     },
+                     {
+                         "symbol":  "HRL",
+                         "company":  "Himalayan Reinsurance Limited",
+                         "quantity":  21,
+                         "avgCost":  200.95,
+                         "dateAdded":  "2025-10-27"
+                     },
+                     {
+                         "symbol":  "KDBY",
+                         "company":  "Kumari Dhanabriddhi Yojana",
+                         "quantity":  100,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "MMF1",
+                         "company":  "Mahila Sambriddhi Kosh",
+                         "quantity":  120,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "NABIL",
+                         "company":  "Nabil Bank Limited",
+                         "quantity":  70,
+                         "avgCost":  528.53,
+                         "dateAdded":  "2025-11-13"
+                     },
+                     {
+                         "symbol":  "NBF3",
+                         "company":  "Nabil Balanced Fund 3",
+                         "quantity":  100,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "NIBLSF",
+                         "company":  "NIBL Samriddhi Fund",
+                         "quantity":  3671,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2025-05-13"
+                     },
+                     {
+                         "symbol":  "NICA",
+                         "company":  "NIC Asia Bank Ltd.",
+                         "quantity":  20,
+                         "avgCost":  433.16,
+                         "dateAdded":  "2024-12-13"
+                     },
+                     {
+                         "symbol":  "NIMB",
+                         "company":  "Nepal Investment Mega Bank Limited",
+                         "quantity":  75,
+                         "avgCost":  213.66,
+                         "dateAdded":  "2025-11-13"
+                     },
+                     {
+                         "symbol":  "NMBSBFE",
+                         "company":  "NMB Saral Bachat Fund - E",
+                         "quantity":  100,
+                         "avgCost":  10.0,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "NTC",
+                         "company":  "Nepal Doorsanchar Company Limited",
+                         "quantity":  90,
+                         "avgCost":  868.89,
+                         "dateAdded":  "2025-11-13"
+                     },
+                     {
+                         "symbol":  "SAHAS",
+                         "company":  "Sahas Urja Limited",
+                         "quantity":  50,
+                         "avgCost":  611.46,
+                         "dateAdded":  "2025-11-29"
+                     },
+                     {
+                         "symbol":  "SARBTM",
+                         "company":  "Sarbottam Cement Limited",
+                         "quantity":  10,
+                         "avgCost":  808.51,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "SGHC",
+                         "company":  "Swet-Ganga Hydropower \u0026 Construction Limited",
+                         "quantity":  10,
+                         "avgCost":  100.0,
+                         "dateAdded":  "2024-08-26"
+                     },
+                     {
+                         "symbol":  "SNLI",
+                         "company":  "Sun Nepal Life Insurance Company Limited",
+                         "quantity":  16,
+                         "avgCost":  186.88,
+                         "dateAdded":  "2025-07-16"
+                     },
+                     {
+                         "symbol":  "SONA",
+                         "company":  "Sonapur Minerals And Oil Limited",
+                         "quantity":  10,
+                         "avgCost":  237.58,
+                         "dateAdded":  "2024-09-22"
+                     },
+                     {
+                         "symbol":  "UPPER",
+                         "company":  "Upper Tamakoshi Hydropower Ltd.",
+                         "quantity":  20,
+                         "avgCost":  215.05,
+                         "dateAdded":  "2024-09-22"
+                     }
+                 ],
+    "transactions":  [
+                         {
+                             "type":  "BUY",
+                             "symbol":  "NIMB",
+                             "quantity":  10,
+                             "price":  200,
+                             "date":  "2025-11-30 15:38:38"
+                         },
+                         {
+                             "type":  "SELL",
+                             "symbol":  "NIMB",
+                             "quantity":  10,
+                             "price":  200,
+                             "date":  "2025-11-30 15:39:57"
+                         },
+                         {
+                             "type":  "BUY",
+                             "symbol":  "NTC",
+                             "quantity":  50,
+                             "price":  865,
+                             "date":  "2025-11-30 15:41:48"
+                         }
+                     ],
+    "valueHistory":  [
+                         {
+                             "date":  "2025-01-04",
+                             "invested":  273610.08,
+                             "value":  231714.7
+                         },
+                         {
+                             "date":  "2025-02-03",
+                             "invested":  273610.08,
+                             "value":  247922.6
+                         },
+                         {
+                             "date":  "2025-03-05",
+                             "invested":  273610.08,
+                             "value":  262031.31
+                         },
+                         {
+                             "date":  "2025-04-04",
+                             "invested":  273610.08,
+                             "value":  264347.81
+                         },
+                         {
+                             "date":  "2025-05-04",
+                             "invested":  273610.08,
+                             "value":  282602.63
+                         },
+                         {
+                             "date":  "2025-06-03",
+                             "invested":  273610.08,
+                             "value":  281182.21
+                         },
+                         {
+                             "date":  "2025-07-03",
+                             "invested":  273610.08,
+                             "value":  289371.24
+                         },
+                         {
+                             "date":  "2025-08-02",
+                             "invested":  273610.08,
+                             "value":  285820.41
+                         },
+                         {
+                             "date":  "2025-09-01",
+                             "invested":  273610.08,
+                             "value":  296001.04
+                         },
+                         {
+                             "date":  "2025-10-01",
+                             "invested":  273610.08,
+                             "value":  294693.93
+                         },
+                         {
+                             "date":  "2025-10-31",
+                             "invested":  273610.08,
+                             "value":  317454.21
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  273610.08,
+                             "value":  287290.58
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  273610.08,
+                             "value":  0
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  273610.08,
+                             "value":  297945.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  0
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  297945.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  0
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  0
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         },
+                         {
+                             "date":  "2025-11-30",
+                             "invested":  314723.18,
+                             "value":  341020.41
+                         }
+                     ]
+}

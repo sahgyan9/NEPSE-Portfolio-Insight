@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#080C0A" />
+  
+  <!-- Monogram P and I -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Letter P -->
+    <path d="M 35 75 L 35 25 C 35 25 55 25 55 40 C 55 55 35 55 35 55" stroke="#F2CA38" stroke-width="8" />
+    
+    <!-- Letter I (integrated as a growth bar) -->
+    <line x1="65" y1="75" x2="65" y2="45" stroke="#33CC8C" stroke-width="8" />
+    <circle cx="65" cy="30" r="4" fill="#33CC8C" />
+  </g>
+</svg>

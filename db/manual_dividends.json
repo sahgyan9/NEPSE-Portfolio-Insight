@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "id": "SAHAS-1770794059735",
+      "symbol": "SAHAS",
+      "companyName": "Sahas Urja Limited",
+      "fiscalYear": "081-082",
+      "bonusPercent": 21,
+      "cashPercent": 1.11,
+      "cashIncome": 0
+    },
+    {
+      "id": "NTC-1769150292203",
+      "symbol": "NTC",
+      "companyName": "Nepal Doorsanchar Company Limited",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 30,
+      "cashIncome": 1135
+    },
+    {
+      "id": "CHCl-1769094913060",
+      "symbol": "CHCL",
+      "companyName": "Chilime Hydropower Company Limited",
+      "fiscalYear": "081-082",
+      "bonusPercent": 8,
+      "cashPercent": 4,
+      "cashIncome": 84
+    },
+    {
+      "id": "CBBL-1768394985161",
+      "symbol": "CBBL",
+      "companyName": "Chhimek Laghubitta Bittiya Sanstha Limited",
+      "fiscalYear": "081-081",
+      "bonusPercent": 12.5,
+      "cashPercent": 12.5,
+      "cashIncome": 225
+    },
+    {
+      "id": "SNLI-1768321657411",
+      "symbol": "SNLI",
+      "companyName": "Sun Nepal Life Insurance Company Limited",
+      "fiscalYear": "081-081",
+      "bonusPercent": 5,
+      "cashPercent": 15.26,
+      "cashIncome": 231
+    },
+    {
+      "id": "CLI-1768042691698",
+      "symbol": "CLI",
+      "companyName": "Citizen Life Insurance Company Limited",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 20,
+      "cashIncome": 251.33
+    },
+    {
+      "id": "SARBTM-1766667163011",
+      "symbol": "SARBTM",
+      "companyName": "Sarbottam Cement Limited",
+      "fiscalYear": "081-082",
+      "bonusPercent": 5,
+      "cashPercent": 15,
+      "cashIncome": 147.8
+    },
+    {
+      "id": "HDL-1766667106451",
+      "symbol": "HDL",
+      "companyName": "Himalayan Distillery Limited",
+      "fiscalYear": "081-081",
+      "bonusPercent": 20,
+      "cashPercent": 5,
+      "cashIncome": 84.25
+    },
+    {
+      "id": "NBF3-1766667024068",
+      "symbol": "NBF3",
+      "companyName": "Nabil Balanced Fund 3",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 13,
+      "cashIncome": 121.5
+    },
+    {
+      "id": "MMF1-1766666981421",
+      "symbol": "MMF1",
+      "companyName": "Mahila Sambriddhi Kosh",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 11.75,
+      "cashIncome": 131.95
+    },
+    {
+      "id": "NMBSBFE-1766666925661",
+      "symbol": "NMBSBFE",
+      "companyName": "NMB Saral Bachat Fund - E",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 4.18,
+      "cashIncome": 39.72
+    },
+    {
+      "id": "KDBY-1766666887917",
+      "symbol": "KDBY",
+      "companyName": "Kumari Dhanabriddhi Yojana",
+      "fiscalYear": "081-082",
+      "bonusPercent": 0,
+      "cashPercent": 10.5,
+      "cashIncome": 99.75
+    }
+  ]
+}
