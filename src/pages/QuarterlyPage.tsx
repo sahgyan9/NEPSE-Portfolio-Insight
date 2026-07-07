@@ -2,7 +2,7 @@
 // Main quarterly financial reports page
 // Features: stock selector, PDF upload zone, trend charts, data table, delete quarters
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft, FileText, RefreshCw, Trash2,
@@ -87,10 +87,13 @@ const QuarterlyPage = () => {
   const [stockSearchQuery, setStockSearchQuery] = useState('');
 
   const filteredStocks = useMemo(() => {
-    return stocks.filter(stock => 
-      stock.symbol.toLowerCase().includes(stockSearchQuery.toLowerCase()) ||
-      (stock.company_name || '').toLowerCase().includes(stockSearchQuery.toLowerCase())
-    );
+    return stocks.filter(stock => {
+      if (!stock || !stock.symbol) return false;
+      const sym = (stock.symbol || '').toLowerCase();
+      const name = (stock.company_name || '').toLowerCase();
+      const q = stockSearchQuery.toLowerCase();
+      return sym.includes(q) || name.includes(q);
+    });
   }, [stocks, stockSearchQuery]);
 
   // Load stock list
@@ -113,15 +116,15 @@ const QuarterlyPage = () => {
         let allSyms: string[] = [];
         if (holdingsRes.ok) {
           const data = await holdingsRes.json();
-          allSyms.push(...(data.holdings || []).map((h: any) => h.symbol));
+          allSyms.push(...(data.holdings || []).map((h: any) => h?.symbol).filter(Boolean));
         }
         if (watchlistRes.ok) {
           const data = await watchlistRes.json();
-          allSyms.push(...(data.watchlist || []).map((w: any) => w.symbol));
+          allSyms.push(...(data.watchlist || []).map((w: any) => w?.symbol).filter(Boolean));
         }
         
         const uniqueSyms = Array.from(new Set(allSyms));
-        const fetchedSyms = new Set(stocks.map(s => s.symbol));
+        const fetchedSyms = new Set(stocks.filter(s => s && s.symbol).map(s => s.symbol));
         const missing = uniqueSyms.filter(sym => !fetchedSyms.has(sym));
         setUnfetchedSymbols(missing);
       } catch (e) {
