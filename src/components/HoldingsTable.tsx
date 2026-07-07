@@ -10,6 +10,8 @@ import { StockHolding } from "@/data/portfolioData";
 import { fetchMultipleFundamentals, MerolaganiFundamentals } from "@/services/merolaganiApi";
 import { StockSymbolLink } from "@/components/StockSymbolLink";
 
+import { Link } from "react-router-dom";
+
 interface HoldingsTableProps {
   holdings: StockHolding[];
 }
@@ -263,8 +265,13 @@ export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
                     className={cn("font-semibold", columnColors.symbol)}
                   />
                 </TableCell>
-                <TableCell className={cn("hidden lg:table-cell text-sm max-w-[200px] truncate", columnColors.company)}>
-                  {holding.fullName}
+                <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate">
+                  <Link
+                    to={`/quarterly?symbol=${holding.scrip}`}
+                    className={cn(columnColors.company, "hover:text-primary hover:underline transition-all")}
+                  >
+                    {holding.fullName}
+                  </Link>
                 </TableCell>
                 <TableCell className={cn("font-mono", columnColors.qty)}>{holding.quantity.toLocaleString()}</TableCell>
                 <TableCell className={cn("font-mono text-sm", columnColors.avgCost)}>{formatCurrency(holding.waccRate)}</TableCell>

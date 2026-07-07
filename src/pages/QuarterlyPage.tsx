@@ -3,7 +3,7 @@
 // Features: stock selector, PDF upload zone, trend charts, data table, delete quarters
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import {
   ArrowLeft, FileText, RefreshCw, Trash2,
   TrendingUp, BarChart2, Table2, Upload,
@@ -77,7 +77,9 @@ const KpiCard = ({ label, value, sub }: { label: string; value: string; sub?: st
 const QuarterlyPage = () => {
   const [apiKey, setApiKey] = useState(() => localStorage.getItem(STORAGE_KEYS.apiKey) || '');
   const [stocks, setStocks] = useState<SymbolListItem[]>([]);
-  const [selectedSymbol, setSelectedSymbol] = useState<string>('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const symbolParam = searchParams.get('symbol');
+  const [selectedSymbol, setSelectedSymbol] = useState<string>(symbolParam?.toUpperCase() || '');
   const [symbolData, setSymbolData] = useState<SymbolQuarterlyData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
@@ -100,11 +102,21 @@ const QuarterlyPage = () => {
   const loadStocks = useCallback(async () => {
     const list = await listQuarterlyStocks();
     setStocks(list);
-    // Auto-select first stock if none selected
-    if (!selectedSymbol && list.length > 0) {
+    
+    // Auto-select based on query param, or first stock
+    if (symbolParam && list.some(s => s && s.symbol === symbolParam.toUpperCase())) {
+      setSelectedSymbol(symbolParam.toUpperCase());
+    } else if (!selectedSymbol && list.length > 0) {
       setSelectedSymbol(list[0].symbol);
     }
-  }, [selectedSymbol]);
+  }, [selectedSymbol, symbolParam]);
+
+  // Synchronize selectedSymbol to query parameters
+  useEffect(() => {
+    if (selectedSymbol) {
+      setSearchParams({ symbol: selectedSymbol });
+    }
+  }, [selectedSymbol, setSearchParams]);
 
   // Check which watchlist/portfolio symbols are missing quarterly data
   useEffect(() => {
