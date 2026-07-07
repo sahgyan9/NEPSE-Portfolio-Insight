@@ -7,7 +7,9 @@
  * Data is stored permanently in the file system, not in browser localStorage.
  */
 
-const API_BASE = "http://localhost:8000/api";
+const API_BASE = import.meta.env.DEV
+    ? '/api/nepse-server/api'
+    : 'http://localhost:8000/api';
 
 export interface ManualDividendEntry {
     id: string;

@@ -34,7 +34,10 @@ export const WatchlistTable = () => {
   const fetchWatchlist = async () => {
     try {
       setIsLoadingDB(true);
-      const res = await fetch("http://localhost:5001/api/watchlist");
+      const url = import.meta.env.DEV
+        ? '/api/portfolio-db/api/watchlist'
+        : 'http://localhost:5001/api/watchlist';
+      const res = await fetch(url);
       if (res.ok) {
         const data = await res.json();
         setWatchlist(data.watchlist || []);
@@ -88,7 +91,10 @@ export const WatchlistTable = () => {
     setIsAdding(true);
     
     try {
-      const res = await fetch("http://localhost:5001/api/watchlist/add", {
+      const url = import.meta.env.DEV
+        ? '/api/portfolio-db/api/watchlist/add'
+        : 'http://localhost:5001/api/watchlist/add';
+      const res = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ symbol })
@@ -113,7 +119,10 @@ export const WatchlistTable = () => {
 
   const handleRemoveSymbol = async (symbol: string) => {
     try {
-      const res = await fetch(`http://localhost:5001/api/watchlist?symbol=${symbol}`, {
+      const url = import.meta.env.DEV
+        ? `/api/portfolio-db/api/watchlist?symbol=${symbol}`
+        : `http://localhost:5001/api/watchlist?symbol=${symbol}`;
+      const res = await fetch(url, {
         method: "DELETE"
       });
       

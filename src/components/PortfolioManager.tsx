@@ -107,7 +107,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
 
             toast({
                 title: result.action === "added" ? "Stock Added" : "Stock Updated",
-                description: `${addForm.symbol} has been ${result.action} successfully. Click refresh to update dashboard.`,
+                description: `${addForm.symbol} has been ${result.action} successfully.`,
             });
 
             // Refetch transactions
@@ -139,7 +139,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
 
             toast({
                 title: "Stock Sold",
-                description: `${sellForm.quantity} units of ${sellForm.symbol} sold. Click refresh to update dashboard.`,
+                description: `${sellForm.quantity} units of ${sellForm.symbol} sold.`,
             });
 
             // Refetch transactions
@@ -167,7 +167,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
             setHoldings(result.holdings);
             toast({
                 title: "Stock Removed",
-                description: `${symbol} has been removed from your portfolio. Click refresh to update dashboard.`,
+                description: `${symbol} has been removed from your portfolio.`,
             });
 
             // Notify parent to refresh

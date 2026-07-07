@@ -279,21 +279,42 @@ class MerolaganiFetcher:
                             if value_cell:
                                 text = value_cell.get_text(strip=True)
                                 text = text.replace(',', '').replace('%', '')
-                                return float(text) if text and text != '-' else None
+                                text = re.sub(r'^(Rs\.|NPR|Nrs\.)\s*', '', text, flags=re.I).strip()
+                                match = re.match(r'^\s*([-+]?\d*\.?\d+)', text)
+                                if match:
+                                    return float(match.group(1))
                     except:
                         pass
                     return None
                 
+                # 52 Week High and Low parsing
+                high_52 = None
+                low_52 = None
+                label_52 = soup.find('th', string=re.compile(r'52 Weeks High\s*-\s*Low|52 Week.*High.*Low', re.I))
+                if label_52:
+                    val_cell = label_52.find_next('td')
+                    if val_cell:
+                        text_52 = val_cell.get_text(strip=True)
+                        parts = text_52.split('-')
+                        if len(parts) == 2:
+                            try:
+                                high_52 = float(parts[0].replace(',', '').strip())
+                                low_52 = float(parts[1].replace(',', '').strip())
+                            except:
+                                pass
+
                 result = {
                     'symbol': symbol.upper(),
                     'book_value': extract_value('Book Value'),
                     'eps': extract_value('EPS'),
                     'pe_ratio': extract_value('P/E Ratio'),
-                    'roe': extract_value('ROE'),
+                    'pb_ratio': extract_value('PBV'),
+                    'last_traded_price': extract_value('Market Price'),
+                    'roe': extract_value('ROE|Return on Equity'),
                     'market_cap': extract_value('Market Capitalization'),
-                    'shares_outstanding': extract_value('Total Listed Shares'),
-                    '52_week_high': extract_value('52 Week.*High'),
-                    '52_week_low': extract_value('52 Week.*Low'),
+                    'shares_outstanding': extract_value('Shares Outstanding|Listed Shares|Total Listed Shares'),
+                    '52_week_high': high_52,
+                    '52_week_low': low_52,
                     'source': 'live',
                     'timestamp': datetime.now().isoformat()
                 }

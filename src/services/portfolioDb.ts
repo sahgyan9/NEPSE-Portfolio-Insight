@@ -5,7 +5,9 @@
  * to manage portfolio holdings and track value history over time.
  */
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = import.meta.env.DEV
+    ? '/api/portfolio-db/api'
+    : 'http://localhost:5001/api';
 
 export type TimePeriod = "1d" | "1w" | "1m" | "3m" | "6m" | "1y" | "all";
 
