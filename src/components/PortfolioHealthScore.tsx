@@ -9,7 +9,7 @@
  * - Grade badge
  */
 
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import {
@@ -23,7 +23,11 @@ import { StockHolding } from '@/data/portfolioData';
 import {
     calculatePortfolioHealth,
     getGradeColor,
+    getHealthColor,
+    getHealthBgColor,
 } from '@/lib/valuationScoring';
+import { getPortfolioHealth, PortfolioHealthResponse } from '@/services/portfolioDb';
+import { HealthIndicator, MetricHealth } from '@/types/fundamentals';
 import { Info, TrendingUp, Shield, PieChart, Building2, Coins } from 'lucide-react';
 
 interface PortfolioHealthScoreProps {
@@ -31,15 +35,111 @@ interface PortfolioHealthScoreProps {
 }
 
 export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) => {
-    const health = useMemo(() => calculatePortfolioHealth(holdings), [holdings]);
+    const [serverHealth, setServerHealth] = useState<PortfolioHealthResponse | null>(null);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const fetchServerHealth = async () => {
+            try {
+                setLoading(true);
+                const data = await getPortfolioHealth();
+                setServerHealth(data);
+            } catch (err) {
+                console.warn("Failed to fetch health score from server, falling back to client-side", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchServerHealth();
+    }, [holdings]);
+
+    const health = useMemo(() => {
+        if (serverHealth && !serverHealth.hasOwnProperty('error')) {
+            const createIndicator = (
+                name: string,
+                value: number,
+                description: string,
+                icon: string,
+                status: MetricHealth
+            ): HealthIndicator => {
+                return {
+                    name,
+                    value,
+                    maxValue: 100,
+                    status,
+                    label: `${value}%`,
+                    description,
+                    icon,
+                    color: getHealthColor(status),
+                    bgColor: getHealthBgColor(status),
+                };
+            };
+            
+            const getStatusFromScore = (score: number): MetricHealth => {
+                if (score >= 80) return 'excellent';
+                if (score >= 65) return 'good';
+                if (score >= 50) return 'fair';
+                if (score >= 35) return 'poor';
+                return 'critical';
+            };
+
+            const pillars = serverHealth.pillars;
+            return {
+                overallScore: serverHealth.overallScore,
+                status: getStatusFromScore(serverHealth.overallScore),
+                grade: serverHealth.grade,
+                indicators: {
+                    diversification: createIndicator(
+                        pillars.structure.name,
+                        pillars.structure.score,
+                        pillars.structure.description,
+                        '📊',
+                        getStatusFromScore(pillars.structure.score)
+                    ),
+                    valuation: createIndicator(
+                        pillars.valuation.name,
+                        pillars.valuation.score,
+                        pillars.valuation.description,
+                        '💎',
+                        getStatusFromScore(pillars.valuation.score)
+                    ),
+                    dividendQuality: createIndicator(
+                        pillars.dividend.name,
+                        pillars.dividend.score,
+                        pillars.dividend.description,
+                        '💰',
+                        getStatusFromScore(pillars.dividend.score)
+                    ),
+                    concentration: createIndicator(
+                        pillars.fundamentals.name,
+                        pillars.fundamentals.score,
+                        pillars.fundamentals.description,
+                        '🏢',
+                        getStatusFromScore(pillars.fundamentals.score)
+                    ),
+                    sectorBalance: createIndicator(
+                        pillars.volatility.name,
+                        pillars.volatility.score,
+                        pillars.volatility.description,
+                        '⚡',
+                        getStatusFromScore(pillars.volatility.score)
+                    ),
+                },
+                strengths: serverHealth.strengths,
+                warnings: serverHealth.warnings,
+                recommendations: serverHealth.recommendations
+            };
+        }
+        return calculatePortfolioHealth(holdings);
+    }, [holdings, serverHealth]);
 
     // Icon mapping for indicators
     const iconMap: Record<string, React.ReactNode> = {
         diversification: <PieChart className="w-4 h-4" />,
         valuation: <TrendingUp className="w-4 h-4" />,
         dividendQuality: <Coins className="w-4 h-4" />,
-        concentration: <Shield className="w-4 h-4" />,
-        sectorBalance: <Building2 className="w-4 h-4" />,
+        concentration: <Building2 className="w-4 h-4" />,
+        sectorBalance: <Shield className="w-4 h-4" />,
     };
 
     return (

@@ -8,6 +8,7 @@ import { STORAGE_KEYS } from '@/lib/constants';
 import { ArrowLeft, Brain, TrendingUp, AlertTriangle, CheckCircle, ExternalLink, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
+import { PortfolioHealthScore } from '@/components/PortfolioHealthScore';
 
 interface MacroPaper {
     title: string;
@@ -144,9 +145,58 @@ export default function IntelligencePage() {
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* LEFT COLUMN: Portfolio Optimizer */}
-                    <div className="space-y-6">
+                <div className="space-y-6">
+                    {/* FULL WIDTH: Portfolio Health Score */}
+                    <PortfolioHealthScore holdings={holdings} />
+
+                    {/* TWO COLUMN GRID: Macro Research & Portfolio Optimizer */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        {/* LEFT COLUMN: NRB Policy & Macro Research */}
+                        <Card className="h-full border-muted-foreground/20">
+                            <CardHeader className="bg-muted/30">
+                                <CardTitle className="flex items-center gap-2">
+                                    <Brain className="w-5 h-5 text-purple-500" />
+                                    NRB Policy & Macro Research
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-6">
+                                <p className="text-sm text-muted-foreground mb-6">
+                                    Live feed of the most highly cited academic papers from OpenAlex regarding Nepal's monetary policy, banking liquidity, and NEPSE market efficiency.
+                                </p>
+                                
+                                {macroResearch.length > 0 ? (
+                                    <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                                        {macroResearch.map((paper, idx) => (
+                                            <div key={idx} className="p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors">
+                                                <h4 className="font-semibold text-sm mb-2 leading-tight">{paper.title}</h4>
+                                                <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
+                                                    <span className="bg-background px-2 py-1 rounded border">Year: {paper.publication_year}</span>
+                                                    <span className="bg-background px-2 py-1 rounded border flex items-center gap-1">
+                                                        Citations: <strong className="text-foreground">{paper.cited_by_count}</strong>
+                                                    </span>
+                                                </div>
+                                                <div className="flex gap-3">
+                                                    <a href={paper.url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-primary hover:underline">
+                                                        View Paper <ExternalLink className="w-3 h-3" />
+                                                    </a>
+                                                    {paper.open_access_pdf && (
+                                                        <a href={paper.open_access_pdf} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-red-500 hover:underline">
+                                                            Download PDF
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className="py-8 text-center text-muted-foreground">
+                                        {isLoading ? "Fetching latest macro-economic research..." : "No research data found."}
+                                    </div>
+                                )}
+                            </CardContent>
+                        </Card>
+
+                        {/* RIGHT COLUMN: Quantitative Portfolio Optimizer */}
                         <Card className="border-primary/20 shadow-lg">
                             <CardHeader className="bg-muted/30">
                                 <CardTitle className="flex items-center gap-2">
@@ -221,53 +271,6 @@ export default function IntelligencePage() {
                                 ) : (
                                     <div className="py-8 text-center text-muted-foreground">
                                         {isLoading ? "Running mathematical optimization..." : "No portfolio data available."}
-                                    </div>
-                                )}
-                            </CardContent>
-                        </Card>
-                    </div>
-
-                    {/* RIGHT COLUMN: Macro Policy Watcher */}
-                    <div className="space-y-6">
-                        <Card className="h-full border-muted-foreground/20">
-                            <CardHeader className="bg-muted/30">
-                                <CardTitle className="flex items-center gap-2">
-                                    <Brain className="w-5 h-5 text-purple-500" />
-                                    NRB Policy & Macro Research
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="pt-6">
-                                <p className="text-sm text-muted-foreground mb-6">
-                                    Live feed of the most highly cited academic papers from OpenAlex regarding Nepal's monetary policy, banking liquidity, and NEPSE market efficiency.
-                                </p>
-                                
-                                {macroResearch.length > 0 ? (
-                                    <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
-                                        {macroResearch.map((paper, idx) => (
-                                            <div key={idx} className="p-4 rounded-lg border bg-card hover:bg-muted/50 transition-colors">
-                                                <h4 className="font-semibold text-sm mb-2 leading-tight">{paper.title}</h4>
-                                                <div className="flex flex-wrap gap-3 text-xs text-muted-foreground mb-3">
-                                                    <span className="bg-background px-2 py-1 rounded border">Year: {paper.publication_year}</span>
-                                                    <span className="bg-background px-2 py-1 rounded border flex items-center gap-1">
-                                                        Citations: <strong className="text-foreground">{paper.cited_by_count}</strong>
-                                                    </span>
-                                                </div>
-                                                <div className="flex gap-3">
-                                                    <a href={paper.url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-primary hover:underline">
-                                                        View Paper <ExternalLink className="w-3 h-3" />
-                                                    </a>
-                                                    {paper.open_access_pdf && (
-                                                        <a href={paper.open_access_pdf} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-red-500 hover:underline">
-                                                            Download PDF
-                                                        </a>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <div className="py-8 text-center text-muted-foreground">
-                                        {isLoading ? "Fetching latest macro-economic research..." : "No research data found."}
                                     </div>
                                 )}
                             </CardContent>
