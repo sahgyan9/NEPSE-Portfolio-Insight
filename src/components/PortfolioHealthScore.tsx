@@ -1,0 +1,216 @@
+/**
+ * Portfolio Health Score Component
+ * =================================
+ * 
+ * Visual representation of portfolio health with:
+ * - Circular gauge for overall score
+ * - Individual metric indicators
+ * - Educational tooltips
+ * - Grade badge
+ */
+
+import { useMemo } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { Badge } from '@/components/ui/badge';
+import { StockHolding } from '@/data/portfolioData';
+import {
+    calculatePortfolioHealth,
+    getGradeColor,
+} from '@/lib/valuationScoring';
+import { Info, TrendingUp, Shield, PieChart, Building2, Coins } from 'lucide-react';
+
+interface PortfolioHealthScoreProps {
+    holdings: StockHolding[];
+}
+
+export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) => {
+    const health = useMemo(() => calculatePortfolioHealth(holdings), [holdings]);
+
+    // Icon mapping for indicators
+    const iconMap: Record<string, React.ReactNode> = {
+        diversification: <PieChart className="w-4 h-4" />,
+        valuation: <TrendingUp className="w-4 h-4" />,
+        dividendQuality: <Coins className="w-4 h-4" />,
+        concentration: <Shield className="w-4 h-4" />,
+        sectorBalance: <Building2 className="w-4 h-4" />,
+    };
+
+    return (
+        <Card className="w-full">
+            <CardHeader className="pb-2">
+                <div className="flex items-center justify-between">
+                    <div>
+                        <CardTitle className="text-xl font-bold">Portfolio Health Score</CardTitle>
+                        <CardDescription>Comprehensive assessment of your portfolio</CardDescription>
+                    </div>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <Info className="w-4 h-4 text-muted-foreground" />
+                            </TooltipTrigger>
+                            <TooltipContent className="max-w-xs">
+                                <p>
+                                    Health score is calculated based on diversification, valuation metrics,
+                                    dividend quality, concentration risk, and sector balance.
+                                </p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                </div>
+            </CardHeader>
+            <CardContent>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* Main Score Gauge */}
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="relative w-40 h-40">
+                            {/* Background circle */}
+                            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="8"
+                                    className="text-muted/20"
+                                />
+                                {/* Progress circle */}
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="45"
+                                    fill="none"
+                                    stroke={getGradeColor(health.grade)}
+                                    strokeWidth="8"
+                                    strokeLinecap="round"
+                                    strokeDasharray={`${health.overallScore * 2.83} 283`}
+                                    className="transition-all duration-1000 ease-out"
+                                />
+                            </svg>
+                            {/* Center content */}
+                            <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                <span
+                                    className="text-4xl font-bold"
+                                    style={{ color: getGradeColor(health.grade) }}
+                                >
+                                    {health.grade}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    {health.overallScore}/100
+                                </span>
+                            </div>
+                        </div>
+                        <Badge
+                            className="mt-4 text-sm"
+                            style={{
+                                backgroundColor: `${getGradeColor(health.grade)}20`,
+                                color: getGradeColor(health.grade),
+                            }}
+                        >
+                            {health.status === 'excellent' && '🌟 Excellent'}
+                            {health.status === 'good' && '✅ Good'}
+                            {health.status === 'fair' && '⚖️ Fair'}
+                            {health.status === 'poor' && '⚠️ Needs Attention'}
+                            {health.status === 'critical' && '🚨 Critical'}
+                        </Badge>
+                    </div>
+
+                    {/* Individual Indicators */}
+                    <div className="lg:col-span-2 space-y-4">
+                        <h4 className="font-semibold text-sm text-muted-foreground mb-3">
+                            HEALTH BREAKDOWN
+                        </h4>
+                        {Object.entries(health.indicators).map(([key, indicator]) => (
+                            <div key={key} className="space-y-1">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2">
+                                        <span className={indicator.bgColor + ' p-1.5 rounded-md'}>
+                                            {iconMap[key]}
+                                        </span>
+                                        <TooltipProvider>
+                                            <Tooltip>
+                                                <TooltipTrigger className="flex items-center gap-1">
+                                                    <span className="text-sm font-medium">{indicator.name}</span>
+                                                    <Info className="w-3 h-3 text-muted-foreground" />
+                                                </TooltipTrigger>
+                                                <TooltipContent className="max-w-xs">
+                                                    <p className="text-sm">{indicator.description}</p>
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    </div>
+                                    <span
+                                        className="text-sm font-bold"
+                                        style={{ color: indicator.color }}
+                                    >
+                                        {indicator.label}
+                                    </span>
+                                </div>
+                                <Progress
+                                    value={indicator.value}
+                                    className="h-2"
+                                    style={{
+                                        // @ts-expect-error -- CSS custom property
+                                        '--progress-color': indicator.color,
+                                    }}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Insights Section */}
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {/* Strengths */}
+                    {health.strengths.length > 0 && (
+                        <div className="p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+                            <h5 className="font-semibold text-green-600 dark:text-green-400 flex items-center gap-2 mb-2">
+                                <span>💪</span> Strengths
+                            </h5>
+                            <ul className="space-y-1">
+                                {health.strengths.map((s, i) => (
+                                    <li key={i} className="text-sm text-muted-foreground">• {s}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {/* Warnings */}
+                    {health.warnings.length > 0 && (
+                        <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
+                            <h5 className="font-semibold text-yellow-600 dark:text-yellow-400 flex items-center gap-2 mb-2">
+                                <span>⚠️</span> Warnings
+                            </h5>
+                            <ul className="space-y-1">
+                                {health.warnings.map((w, i) => (
+                                    <li key={i} className="text-sm text-muted-foreground">• {w}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {/* Recommendations */}
+                    {health.recommendations.length > 0 && (
+                        <div className="p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                            <h5 className="font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-2 mb-2">
+                                <span>💡</span> Recommendations
+                            </h5>
+                            <ul className="space-y-1">
+                                {health.recommendations.map((r, i) => (
+                                    <li key={i} className="text-sm text-muted-foreground">• {r}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+            </CardContent>
+        </Card>
+    );
+};

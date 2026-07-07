@@ -1,0 +1,547 @@
+{
+  "holdings": [
+    {
+      "symbol": "BHL",
+      "company": "Balephi Hydropower Limited",
+      "quantity": 20,
+      "avgCost": 100.0,
+      "dateAdded": "2025-05-13"
+    },
+    {
+      "symbol": "CBBL",
+      "company": "Chhimek Laghubitta Bittiya Sanstha Limited",
+      "quantity": 22,
+      "avgCost": 779.643,
+      "dateAdded": "2026-03-25"
+    },
+    {
+      "symbol": "CHCL",
+      "company": "Chilime Hydropower Company Limited",
+      "quantity": 10,
+      "avgCost": 494.2371,
+      "dateAdded": "2025-03-27"
+    },
+    {
+      "symbol": "CLI",
+      "company": "Citizen Life Insurance Company Limited",
+      "quantity": 13,
+      "avgCost": 210.7692,
+      "dateAdded": "2025-06-01"
+    },
+    {
+      "symbol": "CSBY",
+      "company": "Citizens Super Yield Fund",
+      "quantity": 100,
+      "avgCost": 10.0,
+      "dateAdded": "2025-11-09"
+    },
+    {
+      "symbol": "GCIL",
+      "company": "Ghorahi Cement Industry Limited",
+      "quantity": 12,
+      "avgCost": 379.1667,
+      "dateAdded": "2026-03-09"
+    },
+    {
+      "symbol": "HBL",
+      "company": "Himalayan Bank Limited",
+      "quantity": 110,
+      "avgCost": 191.5257,
+      "dateAdded": "2025-11-29"
+    },
+    {
+      "symbol": "HDL",
+      "company": "Himalayan Distillery Limited",
+      "quantity": 27,
+      "avgCost": 1023.3491,
+      "dateAdded": "2026-01-07"
+    },
+    {
+      "symbol": "HRL",
+      "company": "Himalayan Reinsurance Limited",
+      "quantity": 21,
+      "avgCost": 200.9524,
+      "dateAdded": "2025-10-27"
+    },
+    {
+      "symbol": "KDBY",
+      "company": "Kumari Dhanabriddhi Yojana",
+      "quantity": 100,
+      "avgCost": 10.0,
+      "dateAdded": "2024-09-22"
+    },
+    {
+      "symbol": "MMF1",
+      "company": "Mahila Sambriddhi Kosh",
+      "quantity": 120,
+      "avgCost": 10.0,
+      "dateAdded": "2024-09-22"
+    },
+    {
+      "symbol": "NABIL",
+      "company": "Nabil Bank Limited",
+      "quantity": 70,
+      "avgCost": 528.5251,
+      "dateAdded": "2025-11-13"
+    },
+    {
+      "symbol": "NBF3",
+      "company": "Nabil Balanced Fund 3",
+      "quantity": 100,
+      "avgCost": 10.0,
+      "dateAdded": "2024-09-22"
+    },
+    {
+      "symbol": "NIBLSF",
+      "company": "NIBL Samriddhi Fund",
+      "quantity": 7428,
+      "avgCost": 10.0,
+      "dateAdded": "2026-05-20"
+    },
+    {
+      "symbol": "NICA",
+      "company": "NIC Asia Bank Ltd.",
+      "quantity": 20,
+      "avgCost": 433.159,
+      "dateAdded": "2024-12-13"
+    },
+    {
+      "symbol": "NIMB",
+      "company": "Nepal Investment Mega Bank Limited",
+      "quantity": 95,
+      "avgCost": 211.4414,
+      "dateAdded": "2026-06-29"
+    },
+    {
+      "symbol": "NMBSBFE",
+      "company": "NMB Saral Bachat Fund - E",
+      "quantity": 100,
+      "avgCost": 10.0,
+      "dateAdded": "2024-09-22"
+    },
+    {
+      "symbol": "NTC",
+      "company": "Nepal Telecom",
+      "quantity": 40,
+      "avgCost": 873.755,
+      "dateAdded": "2025-11-13"
+    },
+    {
+      "symbol": "SAHAS",
+      "company": "Sahas Urja Limited",
+      "quantity": 75,
+      "avgCost": 584.0735,
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "symbol": "SARBTM",
+      "company": "Sarbottam Cement Limited",
+      "quantity": 11,
+      "avgCost": 744.1012,
+      "dateAdded": "2026-03-25"
+    },
+    {
+      "symbol": "SGHC",
+      "company": "Swet-Ganga Hydropower & Construction Limited",
+      "quantity": 10,
+      "avgCost": 100.0,
+      "dateAdded": "2024-08-26"
+    },
+    {
+      "symbol": "SNLI",
+      "company": "Sun Nepal Life Insurance Company Limited",
+      "quantity": 17,
+      "avgCost": 181.7647,
+      "dateAdded": "2026-03-25"
+    },
+    {
+      "symbol": "SONA",
+      "company": "Sonapur Minerals And Oil Limited",
+      "quantity": 10,
+      "avgCost": 237.58,
+      "dateAdded": "2024-09-22"
+    },
+    {
+      "symbol": "UPPER",
+      "company": "Upper Tamakoshi Hydropower Ltd.",
+      "quantity": 45,
+      "avgCost": 207.6606,
+      "dateAdded": "2026-06-29"
+    }
+  ],
+  "transactions": [
+    {
+      "type": "BUY",
+      "symbol": "HDL",
+      "quantity": 4,
+      "price": 100,
+      "date": "2026-01-07 18:20:44"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIBLSF",
+      "quantity": 275,
+      "price": 10,
+      "date": "2026-01-22 20:47:17"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 4,
+      "price": 100,
+      "date": "2026-02-11 12:39:57"
+    }
+  ],
+  "valueHistory": [
+    {
+      "date": "2025-08-02",
+      "invested": 273610.08,
+      "value": 285820.41
+    },
+    {
+      "date": "2025-09-01",
+      "invested": 273610.08,
+      "value": 296001.04
+    },
+    {
+      "date": "2025-10-01",
+      "invested": 273610.08,
+      "value": 294693.93
+    },
+    {
+      "date": "2025-10-31",
+      "invested": 273610.08,
+      "value": 317454.21
+    },
+    {
+      "date": "2025-11-30",
+      "invested": 271278.68,
+      "value": 297945.41
+    },
+    {
+      "date": "2025-12-02",
+      "invested": 271473.08,
+      "value": 297287.21
+    },
+    {
+      "date": "2025-12-02T18:24:04.652270",
+      "invested": 271473.08,
+      "value": 296712.51
+    },
+    {
+      "date": "2025-12-03T17:56:03.879560",
+      "invested": 271473.08,
+      "value": 294929.01
+    },
+    {
+      "date": "2025-12-03T17:59:01.526103",
+      "invested": 271473.08,
+      "value": 294259.61
+    },
+    {
+      "date": "2025-12-10T11:45:03.535273",
+      "invested": 271473.08,
+      "value": 291696.21
+    },
+    {
+      "date": "2025-12-24T18:50:15.522798",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-24T18:57:20.585646",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-24T19:04:52.384986",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-24T19:20:04.061415",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-24T19:28:32.303755",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-24T19:52:06.246561",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T08:29:58.950949",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T08:38:49.983153",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T16:11:29.478704",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T16:20:53.267131",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T16:50:13.581040",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T16:59:50.338938",
+      "invested": 271473.08,
+      "value": 292460.71
+    },
+    {
+      "date": "2025-12-25T17:00:16.387002",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T17:07:39.674056",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T17:49:59.156410",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T17:55:17.049040",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T18:10:19.907379",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T18:17:03.481458",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2025-12-25T18:23:17.728374",
+      "invested": 271473.08,
+      "value": 291250.71
+    },
+    {
+      "date": "2026-01-04T13:29:19.313964",
+      "invested": 271473.08,
+      "value": 288761.31
+    },
+    {
+      "date": "2026-01-07T18:20:13.355120",
+      "invested": 271473.08,
+      "value": 288827.41
+    },
+    {
+      "date": "2026-01-07T18:20:48.650027",
+      "invested": 271873.14,
+      "value": 293449.41
+    },
+    {
+      "date": "2026-01-07T18:25:57.110102",
+      "invested": 271873.14,
+      "value": 293449.41
+    },
+    {
+      "date": "2026-01-07T18:41:48.761083",
+      "invested": 271873.14,
+      "value": 293449.41
+    },
+    {
+      "date": "2026-01-07T18:57:33.290529",
+      "invested": 271873.14,
+      "value": 293449.41
+    },
+    {
+      "date": "2026-01-10T16:23:03.389439",
+      "invested": 271873.14,
+      "value": 293243.01
+    },
+    {
+      "date": "2026-01-10T16:28:20.729320",
+      "invested": 271873.14,
+      "value": 293243.01
+    },
+    {
+      "date": "2026-01-13T21:57:52.311544",
+      "invested": 271873.14,
+      "value": 292711.41
+    },
+    {
+      "date": "2026-01-14T15:45:44.334148",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:23:48.805305",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:29:41.043779",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:36:08.743745",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:44:39.825029",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:50:13.059742",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T17:55:17.055008",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T18:16:06.310763",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T18:24:00.075129",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T18:29:41.066149",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T18:37:55.964597",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-14T18:45:46.069938",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-15T20:52:35.553901",
+      "invested": 271873.14,
+      "value": 292268.81
+    },
+    {
+      "date": "2026-01-18T15:07:58.659104",
+      "invested": 271873.14,
+      "value": 294106.21
+    },
+    {
+      "date": "2026-01-22T20:42:20.692081",
+      "invested": 271873.14,
+      "value": 298384.61
+    },
+    {
+      "date": "2026-01-22T20:47:22.018570",
+      "invested": 274623.14,
+      "value": 301109.86
+    },
+    {
+      "date": "2026-01-23T12:08:28.129586",
+      "invested": 274623.14,
+      "value": 301109.86
+    },
+    {
+      "date": "2026-01-25T18:00:17.093478",
+      "invested": 274623.14,
+      "value": 307364.06
+    },
+    {
+      "date": "2026-01-25T18:01:57.518262",
+      "invested": 274623.14,
+      "value": 305920.06
+    },
+    {
+      "date": "2026-02-11T12:38:55.612202",
+      "invested": 274623.14,
+      "value": 310596.1
+    },
+    {
+      "date": "2026-02-11T12:40:00.322154",
+      "invested": 275022.92,
+      "value": 312858.1
+    },
+    {
+      "date": "2026-02-11T12:43:04.991877",
+      "invested": 275022.92,
+      "value": 298679.86
+    },
+    {
+      "date": "2026-07-04T07:06:20.771375",
+      "invested": 275022.92,
+      "value": 300246.06
+    },
+    {
+      "date": "2026-07-04T07:09:17.983113",
+      "invested": 332280.99,
+      "value": 348895.04
+    },
+    {
+      "date": "2026-07-04T07:10:02.272109",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-04T07:15:41.114863",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-04T15:53:39.614827",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-06T07:49:52.947690",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-06T08:26:26.774815",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-06T08:53:12.169383",
+      "invested": 332280.99,
+      "value": 360486.28
+    },
+    {
+      "date": "2026-07-07T06:11:43.559325",
+      "invested": 332280.99,
+      "value": 358841.48
+    },
+    {
+      "date": "2026-07-07T07:30:58.753158",
+      "invested": 332280.99,
+      "value": 358841.48
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+    "SNLI": {
+        "symbol": "SNLI",
+        "companyName": "Sun Nepal Life Insurance Company Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 5.0,
+                "cashPercent": 15.26,
+                "totalPercent": 20.26,
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 23.8,
+                "cashPercent": 1.25,
+                "totalPercent": 25.05,
+                "notes": ""
+            }
+        ]
+    },
+    "NABIL": {
+        "symbol": "NABIL",
+        "companyName": "Nabil Bank Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 12.5,
+                "totalPercent": 12.5,
+                "notes": ""
+            }
+        ]
+    },
+    "HBL": {
+        "symbol": "HBL",
+        "companyName": "Himalayan Bank Limited",
+        "dividends": [
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 0.0,
+                "cashPercent": 11.11,
+                "totalPercent": 11.11,
+                "notes": ""
+            }
+        ]
+    },
+    "UPPER": {
+        "symbol": "UPPER",
+        "companyName": "Upper Tamakoshi Hydropower Ltd.",
+        "dividends": [
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 100.0,
+                "cashPercent": 0.0,
+                "totalPercent": 100.0,
+                "notes": "Bonus ratio 1:1 (100% bonus)"
+            }
+        ]
+    }
+}
