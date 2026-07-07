@@ -210,11 +210,11 @@ export const fetchMarketContext = async (): Promise<MarketContext> => {
             };
         }
 
-        // Return fallback data
+        // Return fallback data (nepseIndex null so UI shows "unavailable" not "NEPSE 0")
         console.log('[MarketData] Using fallback data - server unavailable');
         return {
             summary: null,
-            nepseIndex: fallbackNepseIndex,
+            nepseIndex: null,
             topGainers: [],
             topLosers: [],
             subIndices: [],
