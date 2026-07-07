@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
 import { toast } from "@/hooks/use-toast";
 import { STORAGE_KEYS } from "@/lib/constants";
-import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain } from "lucide-react";
+import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain, Newspaper } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Index = () => {
@@ -87,7 +87,35 @@ const Index = () => {
         isRefreshing={isLoading}
       />
 
-      <main className="container px-4 py-6 space-y-6">
+      <main className="container px-4 py-6 space-y-6 relative">
+        {/* Quick Section Navigation */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sticky top-[100px] z-40 bg-background/95 backdrop-blur-md py-2 mb-4">
+          {[
+            { id: 'summary', label: 'Summary', icon: <Activity className="w-3 h-3 mr-1" /> },
+            { id: 'holdings', label: 'Holdings', icon: <Coins className="w-3 h-3 mr-1" /> },
+            { id: 'watchlist', label: 'Watchlist', icon: <BookOpen className="w-3 h-3 mr-1" /> },
+            { id: 'charts', label: 'Charts', icon: <TrendingUp className="w-3 h-3 mr-1" /> },
+            { id: 'news', label: 'News & Perf', icon: <Newspaper className="w-3 h-3 mr-1" /> },
+            { id: 'ai', label: 'AI Insights', icon: <Brain className="w-3 h-3 mr-1" /> },
+          ].map(s => (
+            <Button 
+              key={s.id} 
+              variant="ghost" 
+              size="sm" 
+              className="rounded-full text-xs h-8 whitespace-nowrap bg-muted/40 hover:bg-primary/20 hover:text-primary transition-all font-medium"
+              onClick={() => {
+                const el = document.getElementById(s.id);
+                if (el) {
+                  const y = el.getBoundingClientRect().top + window.scrollY - 140;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+              }}
+            >
+              {s.icon} {s.label}
+            </Button>
+          ))}
+        </div>
+
         {/* Live Data Status Banner */}
         {isLoading && (
           <Alert className="border-blue-500/50 bg-blue-500/10">
@@ -107,27 +135,27 @@ const Index = () => {
         )}
 
         {/* Market Context Widget */}
-        <section>
+        <section id="market-context">
           <MarketContextDisplay compact />
         </section>
 
         {/* Summary Cards */}
-        <section>
+        <section id="summary">
           <PortfolioSummaryCards summary={summary} />
         </section>
 
         {/* Holdings Table */}
-        <section>
+        <section id="holdings">
           <HoldingsTable holdings={holdings} />
         </section>
 
         {/* Watchlist Table */}
-        <section>
+        <section id="watchlist">
           <WatchlistTable />
         </section>
 
         {/* Portfolio Value Trend Chart */}
-        <section className="relative z-20">
+        <section id="charts" className="relative z-20">
           <PortfolioValueTrendChart summary={summary} />
         </section>
 
@@ -137,13 +165,13 @@ const Index = () => {
         </section>
 
         {/* Top/Worst Performers & News Feed */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section id="news" className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <TopPerformers topPerformers={topPerformers} worstPerformers={worstPerformers} />
           <PortfolioNewsFeed holdings={holdings} />
         </section>
 
         {/* AI Recommendations */}
-        <section>
+        <section id="ai">
           <AIRecommendations holdings={holdings} summary={summary} apiKey={apiKey} />
         </section>
 

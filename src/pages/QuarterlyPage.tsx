@@ -32,9 +32,11 @@ import {
 } from '@/components/ui/alert-dialog';
 import { toast } from '@/hooks/use-toast';
 import { Header } from '@/components/Header';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { QuarterlyUploadZone } from '@/components/QuarterlyUploadZone';
 import { QuarterlyTrendChart } from '@/components/QuarterlyTrendChart';
 import { QuarterlyDataTable } from '@/components/QuarterlyDataTable';
+import { StockSymbolLink } from '@/components/StockSymbolLink';
 import {
   listQuarterlyStocks,
   getQuarterlyData,
@@ -395,7 +397,7 @@ const QuarterlyPage = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className="flex items-center gap-3">
-                      <h2 className="text-2xl font-bold font-mono">{selectedSymbol}</h2>
+                      <StockSymbolLink symbol={selectedSymbol} className="text-2xl font-bold font-mono" />
                       <Badge variant="outline" className={getSectorStyle(symbolData?.sector).color}>
                         {getSectorStyle(symbolData?.sector).label}
                       </Badge>
@@ -416,28 +418,30 @@ const QuarterlyPage = () => {
 
                 {/* KPI summary from latest quarter */}
                 {latestQ && (
+                  <ErrorBoundary label="KPI Cards">
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
                     <KpiCard
                       label="EPS TTM"
-                      value={latestQ.computed.eps_ttm !== null ? `Rs ${latestQ.computed.eps_ttm.toFixed(2)}` : '—'}
+                      value={latestQ.computed?.eps_ttm != null ? `Rs ${Number(latestQ.computed.eps_ttm).toFixed(2)}` : '—'}
                       sub={latestQ.quarter_label}
                     />
                     <KpiCard
                       label="BVPS"
-                      value={latestQ.computed.bvps !== null ? `Rs ${latestQ.computed.bvps.toFixed(2)}` : '—'}
+                      value={latestQ.computed?.bvps != null ? `Rs ${Number(latestQ.computed.bvps).toFixed(2)}` : '—'}
                       sub="Book Value / Share"
                     />
                     <KpiCard
                       label="ROE TTM"
-                      value={latestQ.computed.roe_ttm !== null ? `${latestQ.computed.roe_ttm.toFixed(2)}%` : '—'}
+                      value={latestQ.computed?.roe_ttm != null ? `${Number(latestQ.computed.roe_ttm).toFixed(2)}%` : '—'}
                       sub="Return on Equity"
                     />
                     <KpiCard
                       label="Net Margin"
-                      value={latestQ.computed.net_margin !== null ? `${latestQ.computed.net_margin.toFixed(2)}%` : '—'}
+                      value={latestQ.computed?.net_margin != null ? `${Number(latestQ.computed.net_margin).toFixed(2)}%` : '—'}
                       sub="Net Profit / Revenue"
                     />
                   </div>
+                  </ErrorBoundary>
                 )}
 
                 {/* Tabs */}
@@ -463,7 +467,9 @@ const QuarterlyPage = () => {
                     {isLoading ? (
                       <div className="h-64 flex items-center justify-center text-muted-foreground">Loading…</div>
                     ) : (
-                      <QuarterlyTrendChart quarters={quarters} companyName={symbolData?.company_name} />
+                      <ErrorBoundary label="Quarterly Chart">
+                        <QuarterlyTrendChart quarters={quarters} companyName={symbolData?.company_name} />
+                      </ErrorBoundary>
                     )}
                   </TabsContent>
 
