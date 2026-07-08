@@ -178,8 +178,9 @@ export default function IntelligencePage() {
                                         {latestPeriod}
                                     </Badge>
                                 </CardTitle>
-                                <CardDescription className="text-xs text-muted-foreground">
-                                    Ranked by sector-relative weighted percentiles: <code className="bg-muted px-1.5 py-0.5 rounded text-amber-400 font-mono text-[10px]">Score = (0.4 × ROE Pct) + (0.3 × EPS Growth Pct) + (0.3 × Net Profit Growth Pct)</code>
+                                <CardDescription className="text-xs text-muted-foreground flex flex-col gap-1">
+                                    <span>Ranked by hybrid sector-aware scoring: <code className="bg-muted px-1.5 py-0.5 rounded text-amber-400 font-mono text-[10px]">Final Score = Base × (1 + QualityMod)</code></span>
+                                    <span className="text-[10px]">Base = 35% ROE + 25% EPS Growth (Consistency-Adjusted) + 20% Net Margin + 20% Rev Growth (percentiles) | QualityMod = Sector-specific metrics (±25%)</span>
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="pt-6">
@@ -217,12 +218,43 @@ export default function IntelligencePage() {
                                                                 {topStock.epsGrowth >= 0 ? "+" : ""}{topStock.epsGrowth.toFixed(1)}%
                                                             </span>
                                                         </div>
-                                                        <div className="flex justify-between">
-                                                            <span>Profit Growth:</span>
-                                                            <span className={`font-semibold ${topStock.profitGrowth >= 0 ? "text-emerald-500" : "text-rose-500"}`}>
-                                                                {topStock.profitGrowth >= 0 ? "+" : ""}{topStock.profitGrowth.toFixed(1)}%
-                                                            </span>
-                                                        </div>
+                                                        {topStock.epsConsistency !== undefined && (
+                                                            <div className="flex justify-between text-[10px] text-muted-foreground/80 pl-2">
+                                                                <span>↳ Consistency:</span>
+                                                                <span className="font-semibold text-foreground">
+                                                                    {topStock.epsConsistency.toFixed(0)}%
+                                                                </span>
+                                                            </div>
+                                                        )}
+                                                        {topStock.revenueGrowth !== undefined && (
+                                                            <div className="flex justify-between">
+                                                                <span>Revenue Growth:</span>
+                                                                <span className={`font-semibold ${topStock.revenueGrowth >= 0 ? "text-emerald-500" : "text-rose-500"}`}>
+                                                                    {topStock.revenueGrowth >= 0 ? "+" : ""}{topStock.revenueGrowth.toFixed(1)}%
+                                                                </span>
+                                                            </div>
+                                                        )}
+                                                        {topStock.netMargin !== undefined && (
+                                                            <div className="flex justify-between">
+                                                                <span>Net Margin (TTM):</span>
+                                                                <span className="font-semibold text-foreground">{topStock.netMargin.toFixed(1)}%</span>
+                                                            </div>
+                                                        )}
+                                                        {topStock.qualityModifier !== undefined && (
+                                                            <div className="border-t border-dashed pt-1.5 mt-1">
+                                                                <div className="flex justify-between">
+                                                                    <span>Quality Mod:</span>
+                                                                    <span className={`font-semibold ${topStock.qualityModifier >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                                                                        {topStock.qualityModifier >= 0 ? "+" : ""}{topStock.qualityModifier.toFixed(1)}%
+                                                                    </span>
+                                                                </div>
+                                                                {topStock.qualityDetail && (
+                                                                    <p className="text-[10px] text-muted-foreground mt-1 font-mono truncate" title={topStock.qualityDetail}>
+                                                                        {topStock.qualityDetail}
+                                                                    </p>
+                                                                )}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 </div>
                                             );
