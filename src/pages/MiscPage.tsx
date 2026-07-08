@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { CompoundingProjector } from "@/components/CompoundingProjector";
 import { PortfolioValueTrendChart } from "@/components/PortfolioValueTrendChart";
 import { PortfolioHealthScore } from "@/components/PortfolioHealthScore";
@@ -28,8 +29,8 @@ const MiscPage = () => {
             setApiKey(savedKey);
         }
 
-        const defaultKey = "AIzaSyCXEgV6ChL8LLkENETsJoSVIAKsgqSl8Tg";
-        if (!savedKey) {
+        const defaultKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+        if (!savedKey && defaultKey) {
             setApiKey(defaultKey);
             localStorage.setItem(STORAGE_KEYS.apiKey, defaultKey);
         }
@@ -100,15 +101,7 @@ const MiscPage = () => {
                 </section>
 
                 {/* Footer */}
-                <footer className="text-center py-8 border-t border-border/40">
-                    <p className="text-sm text-muted-foreground">
-                        Data as of Nov 30, 2025 • Investment advice based on{" "}
-                        <span className="text-primary">The Intelligent Investor</span> principles
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                        Disclaimer: This is not financial advice. Always do your own research.
-                    </p>
-                </footer>
+                <Footer />
             </main>
 
             {/* AI Chatbot - Floating */}
