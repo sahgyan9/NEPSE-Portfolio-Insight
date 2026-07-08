@@ -28,6 +28,8 @@ from functools import wraps
 import threading
 import time
 import tempfile
+import traceback
+import subprocess
 
 # Quarterly PDF modules
 try:
@@ -231,8 +233,7 @@ class NepseDataFetcher:
         except Exception as e:
             err_msg = str(e)
             print(f"Error fetching market summary: {err_msg}")
-        
-        return {'source': 'error', 'error': err_msg if 'err_msg' in locals() else 'Unknown error'}
+            return {'source': 'error', 'error': err_msg}
 
 
 # ============================================================================
@@ -334,13 +335,23 @@ nepse_fetcher = NepseDataFetcher()
 merolagani_fetcher = MerolaganiFetcher()
 
 
-def run_async(coro):
-    """Run async function in sync context"""
-    loop = asyncio.new_event_loop()
+# Create a thread-safe background asyncio loop
+_async_loop = asyncio.new_event_loop()
+
+def _start_async_loop(loop):
+    asyncio.set_event_loop(loop)
     try:
-        return loop.run_until_complete(coro)
-    finally:
-        loop.close()
+        loop.run_forever()
+    except Exception as e:
+        print(f"Async loop exception: {e}")
+
+_loop_thread = threading.Thread(target=_start_async_loop, args=(_async_loop,), daemon=True)
+_loop_thread.start()
+
+def run_async(coro):
+    """Run async function in background thread's event loop"""
+    future = asyncio.run_coroutine_threadsafe(coro, _async_loop)
+    return future.result()
 
 
 # ============================================================================
@@ -570,7 +581,6 @@ def upload_quarterly_pdf():
     except ValueError as e:
         return jsonify({'error': f'Detection failed: {str(e)}'}), 422
     except Exception as e:
-        import traceback
         print(traceback.format_exc())
         return jsonify({'error': f'Parse error: {str(e)}'}), 500
     finally:
@@ -579,9 +589,6 @@ def upload_quarterly_pdf():
             os.unlink(tmp_path)
         except Exception:
             pass
-
-
-import subprocess
 
 @app.route('/api/quarterly/fetch/<symbol>', methods=['POST', 'OPTIONS'])
 def fetch_quarterly_data(symbol: str):
@@ -622,9 +629,42 @@ def fetch_quarterly_data(symbol: str):
         return jsonify({'message': f'Successfully fetched data for {symbol}', 'details': parse_res.stdout}), 200
 
     except Exception as e:
-        import traceback
         print(f"[nepse_server] Unexpected error for {symbol}: {traceback.format_exc()}")
         return jsonify({'error': f'Failed to fetch data for {symbol}', 'details': str(e)}), 500
+
+@app.route('/api/quarterly/top-performers', methods=['GET'])
+def get_quarterly_top_performers():
+    """Get top performing stocks per sector for the latest quarter."""
+    db_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "db")
+    file_path = os.path.join(db_dir, "quarterly_top_performers.json")
+    
+    # Auto-regenerate if file is missing or older than 24 hours
+    regenerate = False
+    if not os.path.exists(file_path):
+        regenerate = True
+    else:
+        file_age = time.time() - os.path.getmtime(file_path)
+        if file_age > 86400: # 24 hours
+            regenerate = True
+            
+    if regenerate:
+        try:
+            print("[nepse_server] Regenerating quarterly top performers...")
+            python = sys.executable
+            script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools", "quarterly_top_performers.py")
+            subprocess.run([python, script_path], check=True)
+        except Exception as e:
+            print(f"[nepse_server] Failed to regenerate top performers: {e}")
+            
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                return jsonify(json.load(f))
+        except Exception as e:
+            return jsonify({'error': 'Failed to read data', 'details': str(e)}), 500
+    else:
+        return jsonify({'error': 'Top performers file not found'}), 404
+
 
 @app.route('/api/quarterly/list', methods=['GET'])
 def list_quarterly_stocks():
@@ -722,7 +762,6 @@ def fetch_news(symbol: str):
         return jsonify({'symbol': symbol, 'news': db.get(symbol, []), 'message': 'Successfully fetched news'})
         
     except Exception as e:
-        import traceback
         print(f"[nepse_server] Unexpected error for {symbol} news: {traceback.format_exc()}")
         return jsonify({'error': f'Failed to fetch news for {symbol}', 'details': str(e)}), 500
 

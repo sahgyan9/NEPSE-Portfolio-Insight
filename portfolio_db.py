@@ -16,6 +16,8 @@ API runs on: http://localhost:5001
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 import os
+import sys
+import subprocess
 from datetime import datetime, timedelta
 from urllib.parse import urlparse, parse_qs
 import random
@@ -271,16 +273,17 @@ def cleanup_value_history(db):
         
         date_str = h.get("date", "")
         
-        # If it's already ISO format with time, use full timestamp as key
         if "T" in date_str:
             key = date_str
+            iso_date = date_str
         else:
             # For old date-only entries, keep only the last one per date
             key = date_str
+            iso_date = f"{date_str}T00:00:00"
         
         # Update (keeps last value for duplicates)
         cleaned[key] = {
-            "date": date_str,
+            "date": iso_date,
             "invested": h.get("invested", 0),
             "value": h.get("value", 0)
         }
@@ -288,39 +291,6 @@ def cleanup_value_history(db):
     # Sort by date and return as list
     sorted_history = sorted(cleaned.values(), key=lambda x: x["date"])
     return sorted_history
-
-
-def generate_historical_data(db):
-    """Generate historical value data if not present."""
-    if db.get("valueHistory") and len(db["valueHistory"]) > 0:
-        return db["valueHistory"]
-    
-    # Generate simulated historical data for the past 12 months
-    history = []
-    total_invested = calculate_total_invested(db["holdings"])
-    base_value = total_invested * 0.85  # Start at 85% of invested
-    
-    today = datetime.now()
-    for i in range(12):
-        date = today - timedelta(days=(11-i) * 30)
-        # Simulate growth with some volatility
-        growth = 1 + (random.uniform(-0.02, 0.08))
-        base_value = base_value * growth
-        
-        history.append({
-            "date": date.strftime("%Y-%m-%d"),
-            "invested": round(total_invested, 2),
-            "value": round(base_value, 2)
-        })
-    
-    # Update last entry to reflect current approximate value
-    # (In real app, this would be calculated from live prices)
-    if history:
-        history[-1]["value"] = round(total_invested * 1.05, 2)  # ~5% gain for demo
-    
-    db["valueHistory"] = history
-    save_db(db)
-    return history
 
 
 class PortfolioHandler(BaseHTTPRequestHandler):
@@ -399,9 +369,8 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 db_path = os.path.join(os.path.dirname(__file__), "db", "macro_research.json")
                 
                 if force_refresh or not os.path.exists(db_path):
-                    import subprocess
                     script_path = os.path.join(os.path.dirname(__file__), "tools", "fetch_relevant_research.py")
-                    subprocess.run(["python", script_path], check=True)
+                    subprocess.run([sys.executable, script_path], check=True)
                     
                 with open(db_path, "r", encoding="utf-8") as f:
                     research_data = json.load(f)
@@ -411,10 +380,9 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             
         elif path == "/api/portfolio-optimization":
             try:
-                import subprocess
                 script_path = os.path.join(os.path.dirname(__file__), "tools", "optimize_portfolio.py")
                 # Always run it to get the freshest data
-                subprocess.run(["python", script_path], check=True)
+                subprocess.run([sys.executable, script_path], check=True)
                 
                 db_path = os.path.join(os.path.dirname(__file__), "db", "portfolio_optimization.json")
                 with open(db_path, "r", encoding="utf-8") as f:
@@ -425,10 +393,9 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         
         elif path == "/api/portfolio-health":
             try:
-                import subprocess
                 script_path = os.path.join(os.path.dirname(__file__), "tools", "portfolio_health.py")
                 # Run the script to generate fresh health data
-                subprocess.run(["python", script_path], check=True)
+                subprocess.run([sys.executable, script_path], check=True)
                 
                 db_path = os.path.join(os.path.dirname(__file__), "db", "portfolio_health.json")
                 with open(db_path, "r", encoding="utf-8") as f:
@@ -447,12 +414,6 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             db = load_db()
             period = query.get("period", ["all"])[0]
             history = get_value_history_by_period(db, period)
-            
-            # If no data for the period, generate some historical data
-            if not history:
-                history = generate_historical_data(db)
-                history = get_value_history_by_period(db, period)
-            
             self._send_json({"history": history, "period": period})
         
         elif path == "/api/value-history/stats":
