@@ -1,0 +1,590 @@
+{
+  "generatedAt": "2026-07-08T07:12:02.256989",
+  "latestPeriod": "FY 2082-83 Q3",
+  "periods": {
+    "FY 2082-83 Q3": {
+      "Hydropower": [
+        {
+          "symbol": "SGHC",
+          "score": 78.0,
+          "roe": 8.27,
+          "eps": 6.51,
+          "epsGrowth": 714.15,
+          "profitGrowth": 160.8
+        },
+        {
+          "symbol": "BHL",
+          "score": 70.0,
+          "roe": 5.9,
+          "eps": 4.6,
+          "epsGrowth": 135.2,
+          "profitGrowth": 172.14
+        },
+        {
+          "symbol": "SAHAS",
+          "score": 58.0,
+          "roe": 16.84,
+          "eps": 27.36,
+          "epsGrowth": 62.09,
+          "profitGrowth": 41.78
+        }
+      ],
+      "unknown": [
+        {
+          "symbol": "CBBL",
+          "score": 70.0,
+          "roe": 15.07,
+          "eps": 34.99,
+          "epsGrowth": 4.54,
+          "profitGrowth": 6.2
+        },
+        {
+          "symbol": "SNLI",
+          "score": 30.0,
+          "roe": 7.2,
+          "eps": 10.48,
+          "epsGrowth": 34.88,
+          "profitGrowth": 3.35
+        }
+      ],
+      "Life Insurance": [
+        {
+          "symbol": "CLI",
+          "score": 100.0,
+          "roe": 6.09,
+          "eps": 8.55,
+          "epsGrowth": 6.61,
+          "profitGrowth": 6.61
+        }
+      ],
+      "Manufacturing": [
+        {
+          "symbol": "SONA",
+          "score": 70.0,
+          "roe": 5.2,
+          "eps": 10.02,
+          "epsGrowth": 215.3,
+          "profitGrowth": 397.79
+        },
+        {
+          "symbol": "SHIVM",
+          "score": 57.5,
+          "roe": 9.91,
+          "eps": 18.11,
+          "epsGrowth": 126.94,
+          "profitGrowth": 54.59
+        },
+        {
+          "symbol": "SARBTM",
+          "score": 52.5,
+          "roe": 13.03,
+          "eps": 25.02,
+          "epsGrowth": 99.05,
+          "profitGrowth": 50.21
+        }
+      ],
+      "Commercial Bank": [
+        {
+          "symbol": "NABIL",
+          "score": 70.0,
+          "roe": 13.15,
+          "eps": 31.57,
+          "epsGrowth": 14.76,
+          "profitGrowth": 33.92
+        },
+        {
+          "symbol": "HBL",
+          "score": 63.3,
+          "roe": 4.59,
+          "eps": 7.86,
+          "epsGrowth": 27.6,
+          "profitGrowth": 52.49
+        },
+        {
+          "symbol": "NICA",
+          "score": 40.0,
+          "roe": 0.5,
+          "eps": 0.97,
+          "epsGrowth": 138.49,
+          "profitGrowth": -10.49
+        }
+      ],
+      "Others": [
+        {
+          "symbol": "NTC",
+          "score": 100.0,
+          "roe": 6.53,
+          "eps": 33.88,
+          "epsGrowth": 57.73,
+          "profitGrowth": 120.7
+        },
+        {
+          "symbol": "HRL",
+          "score": 0.0,
+          "roe": 2.13,
+          "eps": 3.28,
+          "epsGrowth": -73.44,
+          "profitGrowth": -104.48
+        }
+      ],
+      "Microfinance": [
+        {
+          "symbol": "JBLB",
+          "score": 100.0,
+          "roe": 24.33,
+          "eps": 57.77,
+          "epsGrowth": 184.44,
+          "profitGrowth": 76.26
+        }
+      ],
+      "Hotels": [
+        {
+          "symbol": "SHL",
+          "score": 100.0,
+          "roe": 26.33,
+          "eps": 6.42,
+          "epsGrowth": 15.05,
+          "profitGrowth": 17.83
+        }
+      ]
+    },
+    "FY 2082-83 Q2": {
+      "Hydropower": [
+        {
+          "symbol": "SGHC",
+          "score": 68.0,
+          "roe": 4.12,
+          "eps": 3.2,
+          "epsGrowth": 176.74,
+          "profitGrowth": 176.74
+        },
+        {
+          "symbol": "MEN",
+          "score": 64.0,
+          "roe": 16.12,
+          "eps": 21.08,
+          "epsGrowth": 80.02,
+          "profitGrowth": 80.02
+        },
+        {
+          "symbol": "UPPER",
+          "score": 64.0,
+          "roe": 4.75,
+          "eps": 2.32,
+          "epsGrowth": 115.11,
+          "profitGrowth": 115.11
+        }
+      ],
+      "unknown": [
+        {
+          "symbol": "CBBL",
+          "score": 100.0,
+          "roe": 15.62,
+          "eps": 35.31,
+          "epsGrowth": 18.65,
+          "profitGrowth": 18.65
+        },
+        {
+          "symbol": "SNLI",
+          "score": 0.0,
+          "roe": 7.29,
+          "eps": 10.33,
+          "epsGrowth": 3.2,
+          "profitGrowth": 3.2
+        }
+      ],
+      "Life Insurance": [
+        {
+          "symbol": "CLI",
+          "score": 100.0,
+          "roe": 5.96,
+          "eps": 8.51,
+          "epsGrowth": -1.5,
+          "profitGrowth": -1.5
+        }
+      ],
+      "Manufacturing": [
+        {
+          "symbol": "SHIVM",
+          "score": 80.0,
+          "roe": 10.88,
+          "eps": 19.57,
+          "epsGrowth": 591.52,
+          "profitGrowth": 591.52
+        },
+        {
+          "symbol": "SARBTM",
+          "score": 75.0,
+          "roe": 13.22,
+          "eps": 24.91,
+          "epsGrowth": 169.59,
+          "profitGrowth": 169.59
+        },
+        {
+          "symbol": "HDL",
+          "score": 40.0,
+          "roe": 24.34,
+          "eps": 27.03,
+          "epsGrowth": 67.78,
+          "profitGrowth": 67.78
+        }
+      ],
+      "Commercial Bank": [
+        {
+          "symbol": "NABIL",
+          "score": 80.0,
+          "roe": 13.58,
+          "eps": 31.94,
+          "epsGrowth": 21.68,
+          "profitGrowth": 21.68
+        },
+        {
+          "symbol": "NICA",
+          "score": 60.0,
+          "roe": 0.48,
+          "eps": 0.95,
+          "epsGrowth": 138.31,
+          "profitGrowth": 138.31
+        },
+        {
+          "symbol": "NIMB",
+          "score": 46.7,
+          "roe": 8.42,
+          "eps": 16.22,
+          "epsGrowth": -11.12,
+          "profitGrowth": -11.12
+        }
+      ],
+      "Others": [
+        {
+          "symbol": "HRL",
+          "score": 100.0,
+          "roe": 8.45,
+          "eps": 13.07,
+          "epsGrowth": 9.46,
+          "profitGrowth": 9.46
+        },
+        {
+          "symbol": "NTC",
+          "score": 0.0,
+          "roe": 4.57,
+          "eps": 23.32,
+          "epsGrowth": -21.11,
+          "profitGrowth": -21.11
+        }
+      ],
+      "Microfinance": [
+        {
+          "symbol": "JBLB",
+          "score": 100.0,
+          "roe": 23.32,
+          "eps": 52.76,
+          "epsGrowth": 214.05,
+          "profitGrowth": 214.05
+        }
+      ],
+      "Hotels": [
+        {
+          "symbol": "SHL",
+          "score": 100.0,
+          "roe": 26.35,
+          "eps": 6.1,
+          "epsGrowth": 12.13,
+          "profitGrowth": 12.13
+        }
+      ]
+    },
+    "FY 2082-83 Q1": {
+      "Hydropower": [
+        {
+          "symbol": "MEN",
+          "score": 92.0,
+          "roe": 19.1,
+          "eps": 23.92,
+          "epsGrowth": 204.33,
+          "profitGrowth": 204.33
+        },
+        {
+          "symbol": "UPPER",
+          "score": 64.0,
+          "roe": 59.4,
+          "eps": -0.36,
+          "epsGrowth": 97.51,
+          "profitGrowth": 97.51
+        },
+        {
+          "symbol": "SAHAS",
+          "score": 52.0,
+          "roe": 14.46,
+          "eps": 21.81,
+          "epsGrowth": 111.54,
+          "profitGrowth": 111.54
+        }
+      ],
+      "unknown": [
+        {
+          "symbol": "CBBL",
+          "score": 100.0,
+          "roe": 15.53,
+          "eps": 34.4,
+          "epsGrowth": 22.33,
+          "profitGrowth": 22.33
+        },
+        {
+          "symbol": "SNLI",
+          "score": 0.0,
+          "roe": 8.43,
+          "eps": 11.65,
+          "epsGrowth": 6.88,
+          "profitGrowth": 6.88
+        }
+      ],
+      "Life Insurance": [
+        {
+          "symbol": "CLI",
+          "score": 100.0,
+          "roe": 5.83,
+          "eps": 8.51,
+          "epsGrowth": 10.81,
+          "profitGrowth": 10.81
+        }
+      ],
+      "Manufacturing": [
+        {
+          "symbol": "SARBTM",
+          "score": 90.0,
+          "roe": 13.91,
+          "eps": 25.87,
+          "epsGrowth": 1595.38,
+          "profitGrowth": 1595.38
+        },
+        {
+          "symbol": "HDL",
+          "score": 70.0,
+          "roe": 21.57,
+          "eps": 22.9,
+          "epsGrowth": 89.1,
+          "profitGrowth": 89.1
+        },
+        {
+          "symbol": "SHIVM",
+          "score": 65.0,
+          "roe": 9.96,
+          "eps": 17.72,
+          "epsGrowth": 213.07,
+          "profitGrowth": 213.07
+        }
+      ],
+      "Commercial Bank": [
+        {
+          "symbol": "NIMB",
+          "score": 86.7,
+          "roe": 8.21,
+          "eps": 15.64,
+          "epsGrowth": 3.85,
+          "profitGrowth": 3.85
+        },
+        {
+          "symbol": "NABIL",
+          "score": 80.0,
+          "roe": 10.96,
+          "eps": 25.24,
+          "epsGrowth": -10.69,
+          "profitGrowth": -10.69
+        },
+        {
+          "symbol": "HBL",
+          "score": 33.3,
+          "roe": 3.87,
+          "eps": 6.59,
+          "epsGrowth": -40.68,
+          "profitGrowth": -40.68
+        }
+      ],
+      "Others": [
+        {
+          "symbol": "HRL",
+          "score": 100.0,
+          "roe": 8.51,
+          "eps": 12.97,
+          "epsGrowth": 55.7,
+          "profitGrowth": 55.7
+        },
+        {
+          "symbol": "NTC",
+          "score": 0.0,
+          "roe": 2.46,
+          "eps": 12.52,
+          "epsGrowth": -64.4,
+          "profitGrowth": -64.4
+        }
+      ],
+      "Microfinance": [
+        {
+          "symbol": "JBLB",
+          "score": 100.0,
+          "roe": 20.76,
+          "eps": 44.93,
+          "epsGrowth": 220.7,
+          "profitGrowth": 220.7
+        }
+      ],
+      "Hotels": [
+        {
+          "symbol": "SHL",
+          "score": 100.0,
+          "roe": 25.62,
+          "eps": 5.73,
+          "epsGrowth": 8.73,
+          "profitGrowth": 8.73
+        }
+      ]
+    },
+    "FY 2081-82 Q4": {
+      "Hydropower": [
+        {
+          "symbol": "MEN",
+          "score": 100.0,
+          "roe": 17.02,
+          "eps": 20.14,
+          "epsGrowth": 208.9,
+          "profitGrowth": 208.9
+        },
+        {
+          "symbol": "SAHAS",
+          "score": 80.0,
+          "roe": 13.63,
+          "eps": 19.74,
+          "epsGrowth": 116.92,
+          "profitGrowth": 116.92
+        },
+        {
+          "symbol": "SGHC",
+          "score": 52.0,
+          "roe": -0.51,
+          "eps": -0.36,
+          "epsGrowth": 96.58,
+          "profitGrowth": 96.58
+        }
+      ],
+      "unknown": [
+        {
+          "symbol": "CBBL",
+          "score": 100.0,
+          "roe": 15.58,
+          "eps": 33.53,
+          "epsGrowth": 21.18,
+          "profitGrowth": 21.18
+        },
+        {
+          "symbol": "SNLI",
+          "score": 0.0,
+          "roe": 7.83,
+          "eps": 10.27,
+          "epsGrowth": -5.61,
+          "profitGrowth": -5.61
+        }
+      ],
+      "Life Insurance": [
+        {
+          "symbol": "CLI",
+          "score": 100.0,
+          "roe": 5.9,
+          "eps": 8.5,
+          "epsGrowth": 30.77,
+          "profitGrowth": 30.77
+        }
+      ],
+      "Manufacturing": [
+        {
+          "symbol": "SARBTM",
+          "score": 90.0,
+          "roe": 10.58,
+          "eps": 19.23,
+          "epsGrowth": 475.75,
+          "profitGrowth": 475.75
+        },
+        {
+          "symbol": "HDL",
+          "score": 70.0,
+          "roe": 25.53,
+          "eps": 25.85,
+          "epsGrowth": 170.11,
+          "profitGrowth": 170.11
+        },
+        {
+          "symbol": "SHIVM",
+          "score": 65.0,
+          "roe": 8.14,
+          "eps": 14.2,
+          "epsGrowth": 217.67,
+          "profitGrowth": 217.67
+        }
+      ],
+      "Commercial Bank": [
+        {
+          "symbol": "NIMB",
+          "score": 86.7,
+          "roe": 10.57,
+          "eps": 19.8,
+          "epsGrowth": 30.01,
+          "profitGrowth": 30.01
+        },
+        {
+          "symbol": "NABIL",
+          "score": 80.0,
+          "roe": 11.65,
+          "eps": 26.34,
+          "epsGrowth": 0.96,
+          "profitGrowth": 0.96
+        },
+        {
+          "symbol": "HBL",
+          "score": 33.3,
+          "roe": 3.97,
+          "eps": 6.7,
+          "epsGrowth": -46.7,
+          "profitGrowth": -46.7
+        }
+      ],
+      "Others": [
+        {
+          "symbol": "HRL",
+          "score": 100.0,
+          "roe": 8.53,
+          "eps": 12.79,
+          "epsGrowth": 8.3,
+          "profitGrowth": 8.3
+        },
+        {
+          "symbol": "NTC",
+          "score": 0.0,
+          "roe": 2.89,
+          "eps": 14.82,
+          "epsGrowth": -59.7,
+          "profitGrowth": -59.7
+        }
+      ],
+      "Microfinance": [
+        {
+          "symbol": "JBLB",
+          "score": 100.0,
+          "roe": 20.9,
+          "eps": 42.28,
+          "epsGrowth": 177.79,
+          "profitGrowth": 177.79
+        }
+      ],
+      "Hotels": [
+        {
+          "symbol": "SHL",
+          "score": 100.0,
+          "roe": 26.59,
+          "eps": 5.71,
+          "epsGrowth": 11.52,
+          "profitGrowth": 11.52
+        }
+      ]
+    }
+  }
+}
