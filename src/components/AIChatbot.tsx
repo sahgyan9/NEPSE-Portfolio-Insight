@@ -29,7 +29,7 @@ interface AIChatbotProps {
     summary: PortfolioSummary;
 }
 
-const GEMINI_API_KEY = "AIzaSyCXEgV6ChL8LLkENETsJoSVIAKsgqSl8Tg";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 
 export const AIChatbot = ({ holdings, summary }: AIChatbotProps) => {
     const [isOpen, setIsOpen] = useState(false);
