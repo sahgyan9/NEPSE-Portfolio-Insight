@@ -72,7 +72,9 @@ const API_BASE_URL = import.meta.env.DEV
  */
 export const fetchStockData = async (symbol: string): Promise<ShareBazaarResponse | null> => {
     try {
-        console.log(`[ShareBazaar] Fetching ${symbol}...`);
+        if (import.meta.env.DEV) {
+            console.log(`[ShareBazaar] Fetching ${symbol}...`);
+        }
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
@@ -85,13 +87,17 @@ export const fetchStockData = async (symbol: string): Promise<ShareBazaarRespons
         });
         clearTimeout(timeoutId);
 
-        console.log(`[ShareBazaar] ${symbol} response status: ${response.status}`);
+        if (import.meta.env.DEV) {
+            console.log(`[ShareBazaar] ${symbol} response status: ${response.status}`);
+        }
         if (!response.ok) {
             console.error(`[ShareBazaar] Failed to fetch data for ${symbol}: ${response.status}`);
             return null;
         }
         const data = await response.json();
-        console.log(`[ShareBazaar] ${symbol} data:`, data);
+        if (import.meta.env.DEV) {
+            console.log(`[ShareBazaar] ${symbol} data:`, data);
+        }
         return data;
     } catch (error) {
         if (error instanceof Error && error.name === 'AbortError') {
@@ -106,36 +112,29 @@ export const fetchStockData = async (symbol: string): Promise<ShareBazaarRespons
 /**
  * Fetch stock data for multiple symbols in parallel
  * 
- * Uses staggered requests (100ms delay between each) to avoid
- * overwhelming the API and potential rate limiting.
+ * Uses chunked concurrent batches (max 5 at a time) to prevent
+ * rate limiting while achieving high performance.
  * 
  * @param symbols - Array of NEPSE stock symbols
  * @returns Map of symbol -> ShareBazaarResponse
- * 
- * @example
- * const data = await fetchMultipleStockData(["NABIL", "HBL", "CHCL"]);
- * data.forEach((response, symbol) => {
- *   console.log(`${symbol}: Rs. ${response.ltp}`);
- * });
  */
 export const fetchMultipleStockData = async (
     symbols: string[]
 ): Promise<Map<string, ShareBazaarResponse>> => {
     const results = new Map<string, ShareBazaarResponse>();
+    const batchSize = 5;
 
-    // Fetch all symbols in parallel with a small delay to avoid rate limiting
-    // Reduced delay from 100ms to 50ms for faster loading
-    const fetchPromises = symbols.map(async (symbol, index) => {
-        // Add a small staggered delay to avoid overwhelming the API
-        await new Promise(resolve => setTimeout(resolve, index * 50));
-        const data = await fetchStockData(symbol);
-        if (data) {
-            results.set(symbol, data);
-        }
-        return { symbol, data };
-    });
+    for (let i = 0; i < symbols.length; i += batchSize) {
+        const batch = symbols.slice(i, i + batchSize);
+        const promises = batch.map(async (symbol) => {
+            const data = await fetchStockData(symbol);
+            if (data) {
+                results.set(symbol, data);
+            }
+        });
+        await Promise.allSettled(promises);
+    }
 
-    await Promise.all(fetchPromises);
     return results;
 };
 
