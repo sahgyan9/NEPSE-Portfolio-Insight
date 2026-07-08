@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { PortfolioSummaryCards } from "@/components/PortfolioSummaryCards";
 import { HoldingsTable } from "@/components/HoldingsTable";
 import { PerformanceChart } from "@/components/PerformanceChart";
@@ -17,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
 import { toast } from "@/hooks/use-toast";
 import { STORAGE_KEYS } from "@/lib/constants";
-import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain, Newspaper } from "lucide-react";
+import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain, Newspaper, Award } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Index = () => {
@@ -45,8 +46,9 @@ const Index = () => {
     }
 
     // Pre-populate with provided key
-    const defaultKey = "AIzaSyCXEgV6ChL8LLkENETsJoSVIAKsgqSl8Tg";
-    if (!savedKey) {
+    // Pre-populate with provided key from environment variables
+    const defaultKey = import.meta.env.VITE_GEMINI_API_KEY || "";
+    if (!savedKey && defaultKey) {
       setApiKey(defaultKey);
       localStorage.setItem(STORAGE_KEYS.apiKey, defaultKey);
     }
@@ -89,31 +91,35 @@ const Index = () => {
 
       <main className="container px-4 py-6 space-y-6 relative">
         {/* Quick Section Navigation */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0 sticky top-[100px] z-40 bg-background/95 backdrop-blur-md py-2 mb-4">
-          {[
-            { id: 'summary', label: 'Summary', icon: <Activity className="w-3 h-3 mr-1" /> },
-            { id: 'holdings', label: 'Holdings', icon: <Coins className="w-3 h-3 mr-1" /> },
-            { id: 'watchlist', label: 'Watchlist', icon: <BookOpen className="w-3 h-3 mr-1" /> },
-            { id: 'charts', label: 'Charts', icon: <TrendingUp className="w-3 h-3 mr-1" /> },
-            { id: 'news', label: 'News & Perf', icon: <Newspaper className="w-3 h-3 mr-1" /> },
-            { id: 'ai', label: 'AI Insights', icon: <Brain className="w-3 h-3 mr-1" /> },
-          ].map(s => (
-            <Button 
-              key={s.id} 
-              variant="ghost" 
-              size="sm" 
-              className="rounded-full text-xs h-8 whitespace-nowrap bg-muted/40 hover:bg-primary/20 hover:text-primary transition-all font-medium"
-              onClick={() => {
-                const el = document.getElementById(s.id);
-                if (el) {
-                  const y = el.getBoundingClientRect().top + window.scrollY - 140;
-                  window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-              }}
-            >
-              {s.icon} {s.label}
-            </Button>
-          ))}
+        <div className="w-full sticky top-[64px] z-40 bg-background/80 backdrop-blur-md py-2 mb-6">
+          <div className="flex flex-wrap md:grid md:grid-cols-7 gap-1.5 justify-center w-full">
+            {[
+              { id: 'summary', label: 'Summary', icon: <Activity className="w-3 h-3" /> },
+              { id: 'holdings', label: 'Holdings', icon: <Coins className="w-3 h-3" /> },
+              { id: 'watchlist', label: 'Watchlist', icon: <BookOpen className="w-3 h-3" /> },
+              { id: 'charts', label: 'Charts', icon: <TrendingUp className="w-3 h-3" /> },
+              { id: 'performers', label: 'Performers', icon: <Award className="w-3 h-3" /> },
+              { id: 'news', label: 'News Feed', icon: <Newspaper className="w-3 h-3" /> },
+              { id: 'ai', label: 'AI Insights', icon: <Brain className="w-3 h-3" /> },
+            ].map(s => (
+              <Button 
+                key={s.id} 
+                variant="ghost" 
+                size="sm" 
+                className="flex-1 md:w-full min-w-[90px] text-[11px] h-7 bg-muted/20 hover:bg-primary/10 hover:text-primary transition-all font-medium border border-border/30 rounded-full flex items-center justify-center gap-1 text-white"
+                onClick={() => {
+                  const el = document.getElementById(s.id);
+                  if (el) {
+                    const y = el.getBoundingClientRect().top + window.scrollY - 128;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }}
+              >
+                {s.icon}
+                <span>{s.label}</span>
+              </Button>
+            ))}
+          </div>
         </div>
 
         {/* Live Data Status Banner */}
@@ -164,9 +170,13 @@ const Index = () => {
           <PerformanceChart holdings={holdings} />
         </section>
 
-        {/* Top/Worst Performers & News Feed */}
-        <section id="news" className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Top/Worst Performers */}
+        <section id="performers" className="relative z-10">
           <TopPerformers topPerformers={topPerformers} worstPerformers={worstPerformers} />
+        </section>
+
+        {/* News Feed */}
+        <section id="news" className="relative z-10">
           <PortfolioNewsFeed holdings={holdings} />
         </section>
 
@@ -232,15 +242,7 @@ const Index = () => {
         </section>
 
         {/* Footer */}
-        <footer className="text-center py-8 border-t border-border/40">
-          <p className="text-sm text-muted-foreground">
-            Data as of Nov 30, 2025 • Investment advice based on{" "}
-            <span className="text-primary">The Intelligent Investor</span> principles
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
-            Disclaimer: This is not financial advice. Always do your own research.
-          </p>
-        </footer>
+        <Footer />
       </main>
 
       {/* AI Chatbot - Floating */}
