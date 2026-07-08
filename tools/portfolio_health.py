@@ -65,35 +65,6 @@ def load_json(filepath):
         except Exception:
             return None
 
-def trigger_fetch_quarterly(symbol):
-    """Trigger the scrape and parse scripts programmatically if quarterly data is missing."""
-    symbol = symbol.upper()
-    python_bin = sys.executable
-    tools_dir = os.path.dirname(__file__)
-    project_root = os.path.dirname(tools_dir)
-    
-    scrape_script = os.path.join(tools_dir, "scrape_nepsealpha.py")
-    parse_script = os.path.join(tools_dir, "parse_nepsealpha_md.py")
-    
-    print(f"[Health Algorithm] Missing quarterly data for {symbol}. Fetching live...")
-    try:
-        # Run scrape script
-        r1 = subprocess.run([python_bin, scrape_script, symbol], capture_output=True, text=True, cwd=project_root)
-        if r1.returncode != 0:
-            print(f"[Health Algorithm] Scrape script failed for {symbol}: {r1.stderr}")
-            return False
-        
-        # Run parse script
-        r2 = subprocess.run([python_bin, parse_script, symbol], capture_output=True, text=True, cwd=project_root)
-        if r2.returncode != 0:
-            print(f"[Health Algorithm] Parse script failed for {symbol}: {r2.stderr}")
-            return False
-        
-        print(f"[Health Algorithm] Successfully fetched quarterly data for {symbol}.")
-        return True
-    except Exception as e:
-        print(f"[Health Algorithm] Failed to run fetch scripts for {symbol}: {e}")
-        return False
 
 def calculate_health():
     db_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db")
@@ -160,9 +131,20 @@ def calculate_health():
     if max_weight > 0.25:
         penalty = (max_weight - 0.25) * 200
         concentration_score = max(0, min(100, round(100 - penalty)))
-        max_stock = next(h["symbol"] for h in holdings_processed if h["weight"] == max_weight)
-        warnings.append(f"Concentration risk: {max_stock} represents {max_weight*100:.1f}% of the portfolio.")
-        recommendations.append(f"Trim position in {max_stock} to bring it below 20-25% of total asset allocation.")
+        max_stock = next((h["symbol"] for h in holdings_processed if h["weight"] == max_weight), "Unknown")
+        target_allocation = 0.20
+        excess_weight = max_weight - target_allocation
+        trim_value = total_value * excess_weight
+        max_stock_entry = next((h for h in holdings_processed if h["symbol"] == max_stock), None)
+        if max_stock_entry:
+            qty_to_trim = int(trim_value / max_stock_entry["currentPrice"]) if max_stock_entry["currentPrice"] > 0 else 0
+            warnings.append(
+                f"Concentration risk: {max_stock} represents {max_weight*100:.1f}% of your portfolio (limit: 25.0%). "
+                f"Having too much capital in a single stock exposes your entire portfolio to extreme downside risk if that company underperforms."
+            )
+            recommendations.append(
+                f"Trim your position in {max_stock} by {qty_to_trim:,} shares (approx. Rs. {trim_value:,.2f}) to bring its allocation down to a safe {target_allocation*100:.0f}%."
+            )
     else:
         strengths.append("Concentration risk is well-managed with no holding exceeding 25% weight.")
         
@@ -191,13 +173,10 @@ def calculate_health():
         # Check if quarterly report exists
         q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
         if not os.path.exists(q_path):
-            # Attempt to auto-fetch
-            success = trigger_fetch_quarterly(sym)
-            if not success:
-                print(f"[Health Algorithm] Fetch failed for {sym}. Using defaults.")
+            print(f"[Health Algorithm] Missing quarterly data for {sym}. Using defaults.")
         
         q_data = load_json(q_path)
-        latest_q = q_data["quarters"][-1] if q_data and q_data.get("quarters") else None
+        latest_q = q_data["quarters"][-1] if q_data and q_data.get("quarters") and len(q_data["quarters"]) > 0 else None
         
         scrip_score = 70.0 # default baseline
         
@@ -219,8 +198,13 @@ def calculate_health():
                     
                     if car < min_car:
                         car_score = 0.0
-                        warnings.append(f"Regulatory Alert: {sym} CAR ({car:.2f}%) is below NRB requirement ({min_car}%). Dividends may be frozen.")
-                        recommendations.append(f"Avoid adding more to {sym} until its capital cushion (CAR) improves.")
+                        warnings.append(
+                            f"Regulatory Capital Adequacy Alert: {sym} CAR ({car:.2f}%) is below the NRB requirement of {min_car:.1f}%. "
+                            f"Banks failing to meet CAR requirements face strict corrective action, including dividend distribution bans."
+                        )
+                        recommendations.append(
+                            f"Stop accumulating {sym} and monitor upcoming earnings to see if CAR recovers above {min_car:.1f}%."
+                        )
                     elif car >= exc_car:
                         car_score = 100.0
                     else:
@@ -235,14 +219,25 @@ def calculate_health():
                         elif 75.0 <= cd <= 88.0: cd_score = 85.0
                         elif cd > 90.0:
                             cd_score = 30.0
-                            warnings.append(f"Liquidity Crunch: {sym} CD ratio ({cd:.2f}%) exceeds safe 90% limit.")
+                            warnings.append(
+                                f"Liquidity Strain Warning: {sym} CD ratio ({cd:.2f}%) exceeds the regulatory limit of 90.0%. "
+                                f"This limits credit expansion capacity and puts negative pressure on interest margins."
+                            )
+                            recommendations.append(
+                                f"Prefer commercial banks with CD ratios in the stable 80-85% range for safer credit growth capacity."
+                            )
                     else:  # Microfinance
                         if 90.0 <= cd <= 115.0: cd_score = 100.0
                         elif 85.0 <= cd <= 125.0: cd_score = 80.0
                         elif cd > 125.0:
                             cd_score = 40.0
-                            warnings.append(f"Leverage Alert: {sym} CD ratio is {cd:.2f}%. Highly dependent on commercial bank borrowings.")
-                            recommendations.append(f"Monitor {sym}'s Cost of Funds since high CD indicates borrow-heavy growth.")
+                            warnings.append(
+                                f"Microfinance Leverage Warning: {sym} CD ratio is {cd:.2f}%, exceeding the microfinance ceiling of 120.0%. "
+                                f"This high CD ratio highlights heavy dependency on commercial bank wholesale lending."
+                            )
+                            recommendations.append(
+                                f"Monitor {sym}'s Cost of Funds (COF) carefully, as wholesale borrowing costs directly squeeze margins."
+                            )
                 
                 # Cost of Funds (COF) Score
                 cof = raw.get("Cost of funds") or raw.get("Cost of Funds") or raw.get("cost_of_funds")
@@ -262,8 +257,13 @@ def calculate_health():
                     elif npl <= 3.0: npl_score = 80.0
                     elif npl > 5.0:
                         npl_score = 20.0
-                        warnings.append(f"Bad Loans Warning: {sym} NPL has hit {npl:.2f}%, exceeding 5% threshold.")
-                        recommendations.append(f"Review asset quality and provisioning trends for {sym}.")
+                        warnings.append(
+                            f"Asset Quality Alert: {sym} NPL ratio ({npl:.2f}%) exceeds the critical 5.0% threshold. "
+                            f"High NPLs require heavy provision charges which severely reduce net income and dividend capacity."
+                        )
+                        recommendations.append(
+                            f"Review the loan loss provision coverage ratio for {sym} to verify if write-offs are sufficiently covered."
+                        )
                 
                 scrip_score = 0.35 * car_score + 0.25 * cd_score + 0.20 * cof_score + 0.20 * npl_score
                 
@@ -280,8 +280,13 @@ def calculate_health():
                     elif de <= 1.6: de_score = 60.0
                     elif de > 2.0:
                         de_score = 20.0
-                        warnings.append(f"Highly Leveraged: {sym} Debt-to-Equity is {de:.2f}. High interest payment drag.")
-                        recommendations.append(f"Favor hydropowers like CHCL or MEN that have lower debt loads.")
+                        warnings.append(
+                            f"High Balance Sheet Leverage: {sym} Debt-to-Equity is {de:.2f} (safe limit: < 2.0). "
+                            f"Hydropower projects with excessive debt carry high fixed interest expenses that eat profits in dry seasons."
+                        )
+                        recommendations.append(
+                            f"Favor hydropowers with lower debt loads such as CHCL or BHL/MEN to reduce interest expense vulnerability."
+                        )
                 
                 # ROA Score
                 roa = computed.get("roa_ttm") or computed.get("roa")
@@ -553,10 +558,40 @@ def calculate_health():
     elif overall_score >= 40: grade = 'D'
     else: grade = 'F'
 
+    # 4. Generate Text Summary
+    text_summary = (
+        f"Your portfolio is graded '{grade}' with an overall health score of {overall_score}/100. "
+    )
+    if overall_score >= 80:
+        text_summary += "This indicates excellent balance sheet strength, strong profitability, and conservative valuations. "
+    elif overall_score >= 60:
+        text_summary += "This indicates moderate health. Your portfolio is diversified but contains some elevated leverage or valuation risks that warrant closer monitoring. "
+    else:
+        text_summary += "This indicates high risk. Several core holdings show weak capital adequacy, poor asset quality, or extreme concentration. "
+        
+    text_summary += f"The portfolio's structure scores {structure_score}/100 in diversification. "
+    if max_weight > 0.25:
+        text_summary += f"The primary structural issue is high concentration in {max_stock} ({max_weight*100:.1f}%). "
+    else:
+        text_summary += "Your stock concentration is well balanced. "
+        
+    text_summary += f"Financial fundamentals score {fundamentals_score}/100, "
+    bank_warnings = [w for w in warnings if "Regulatory" in w or "NPL" in w]
+    hydro_warnings = [w for w in warnings if "Leverage" in w or "High" in w]
+    if bank_warnings and hydro_warnings:
+        text_summary += "reflecting capital adequacy (CAR) limits in your banks and high debt levels in your hydropower holdings."
+    elif bank_warnings:
+        text_summary += "reflecting capital adequacy (CAR) or bad loan issues in your banking holdings."
+    elif hydro_warnings:
+        text_summary += "reflecting high debt loads in your hydropower holdings."
+    else:
+        text_summary += "reflecting healthy earnings and clean balance sheets across all major holdings."
+
     # Build response structure
     result = {
         "overallScore": overall_score,
         "grade": grade,
+        "textSummary": text_summary,
         "pillars": {
             "structure": {
                 "name": "Diversification & Structure",
