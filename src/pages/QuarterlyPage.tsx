@@ -32,6 +32,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { toast } from '@/hooks/use-toast';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { QuarterlyUploadZone } from '@/components/QuarterlyUploadZone';
 import { QuarterlyTrendChart } from '@/components/QuarterlyTrendChart';
@@ -554,6 +555,7 @@ const QuarterlyPage = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

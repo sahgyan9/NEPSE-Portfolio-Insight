@@ -11,6 +11,7 @@
 
 import { useState } from 'react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { MarketContextDisplay } from '@/components/MarketContext';
 import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
@@ -97,14 +98,7 @@ const MarketPage = () => {
                 </div>
 
                 {/* Footer */}
-                <footer className="text-center py-8 mt-8 border-t border-border/40">
-                    <p className="text-sm text-muted-foreground">
-                        Data sourced from unofficial NEPSE API • Educational purposes only
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                        ⚠️ Data may be delayed. Always verify with official sources for trading decisions.
-                    </p>
-                </footer>
+                <Footer />
             </main>
 
             {/* AI Chatbot - Floating */}
