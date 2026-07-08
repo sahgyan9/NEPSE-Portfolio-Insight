@@ -54,7 +54,7 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
     }, [holdings]);
 
     const health = useMemo(() => {
-        if (serverHealth && !serverHealth.hasOwnProperty('error')) {
+        if (serverHealth && !('error' in serverHealth)) {
             const createIndicator = (
                 name: string,
                 value: number,
@@ -88,6 +88,7 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                 overallScore: serverHealth.overallScore,
                 status: getStatusFromScore(serverHealth.overallScore),
                 grade: serverHealth.grade,
+                textSummary: serverHealth.textSummary,
                 indicators: {
                     diversification: createIndicator(
                         pillars.structure.name,
@@ -222,11 +223,21 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                         </Badge>
                     </div>
 
-                    {/* Individual Indicators */}
+                    {/* Individual Indicators & Summary */}
                     <div className="lg:col-span-2 space-y-4">
-                        <h4 className="font-semibold text-sm text-muted-foreground mb-3">
-                            HEALTH BREAKDOWN
+                        {health.textSummary && (
+                            <div className="p-4 rounded-xl bg-card border border-border/50 text-sm text-foreground leading-relaxed shadow-inner">
+                                <p className="font-semibold text-primary mb-1 flex items-center gap-1.5">
+                                    <Shield className="w-4 h-4 text-primary" /> Health Assessment
+                                </p>
+                                <p className="text-muted-foreground">{health.textSummary}</p>
+                            </div>
+                        )}
+                        
+                        <h4 className="font-semibold text-sm text-muted-foreground mb-3 uppercase tracking-wider">
+                            Health Breakdown
                         </h4>
+                        
                         {Object.entries(health.indicators).map(([key, indicator]) => (
                             <div key={key} className="space-y-1">
                                 <div className="flex items-center justify-between">
@@ -257,8 +268,7 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                                     value={indicator.value}
                                     className="h-2"
                                     style={{
-                                        // @ts-expect-error -- CSS custom property
-                                        '--progress-color': indicator.color,
+                                        ['--progress-color' as any]: indicator.color,
                                     }}
                                 />
                             </div>
@@ -274,9 +284,9 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                             <h5 className="font-semibold text-green-600 dark:text-green-400 flex items-center gap-2 mb-2">
                                 <span>💪</span> Strengths
                             </h5>
-                            <ul className="space-y-1">
+                            <ul className="space-y-1.5">
                                 {health.strengths.map((s, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">• {s}</li>
+                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {s}</li>
                                 ))}
                             </ul>
                         </div>
@@ -288,9 +298,9 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                             <h5 className="font-semibold text-yellow-600 dark:text-yellow-400 flex items-center gap-2 mb-2">
                                 <span>⚠️</span> Warnings
                             </h5>
-                            <ul className="space-y-1">
+                            <ul className="space-y-1.5">
                                 {health.warnings.map((w, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">• {w}</li>
+                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {w}</li>
                                 ))}
                             </ul>
                         </div>
@@ -302,9 +312,9 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                             <h5 className="font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-2 mb-2">
                                 <span>💡</span> Recommendations
                             </h5>
-                            <ul className="space-y-1">
+                            <ul className="space-y-1.5">
                                 {health.recommendations.map((r, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">• {r}</li>
+                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {r}</li>
                                 ))}
                             </ul>
                         </div>
