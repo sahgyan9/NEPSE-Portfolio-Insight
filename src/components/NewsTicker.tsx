@@ -96,10 +96,17 @@ export const NewsTicker = () => {
       'profit', 'loss', 'q1', 'q2', 'q3', 'q4', 'quarterly', 'net worth',
       'merger', 'acquisition', 'right share', 'auction', 'demerger'
     ];
+
+    // Only show news from the last 90 days
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - 90);
     
     const matched: NewsMapItem[] = [];
     Object.entries(newsDb).forEach(([symbol, items]) => {
       items.forEach(news => {
+        const newsDate = new Date(news.date);
+        if (newsDate < cutoff) return; // skip old news
+
         const headlineLower = news.headline.toLowerCase();
         const isImportant = IMPORTANT_KEYWORDS.some(kw => headlineLower.includes(kw));
         if (isImportant) {
