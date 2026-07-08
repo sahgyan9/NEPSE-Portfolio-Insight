@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
 import { STORAGE_KEYS } from '@/lib/constants';
 import { ArrowLeft, Brain, TrendingUp, AlertTriangle, CheckCircle, ExternalLink, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
 import { PortfolioHealthScore } from '@/components/PortfolioHealthScore';
+import { Badge } from '@/components/ui/badge';
 
 interface MacroPaper {
     title: string;
@@ -45,6 +47,8 @@ export default function IntelligencePage() {
     
     const [macroResearch, setMacroResearch] = useState<MacroPaper[]>([]);
     const [optimization, setOptimization] = useState<OptimizationData | null>(null);
+    const [quarterlyPerformers, setQuarterlyPerformers] = useState<Record<string, any>>({});
+    const [latestPeriod, setLatestPeriod] = useState<string>('');
     const [isLoading, setIsLoading] = useState(false);
 
     const handleApiKeyChange = (key: string) => {
@@ -77,6 +81,18 @@ export default function IntelligencePage() {
                 if (data.optimization && !data.optimization.error) {
                     setOptimization(data.optimization);
                 }
+            }
+
+            // Fetch Quarterly Top Performers
+            const performersUrl = import.meta.env.DEV
+                ? '/api/nepse-server/api/quarterly/top-performers'
+                : 'http://localhost:8000/api/quarterly/top-performers';
+            const perfRes = await fetch(performersUrl);
+            if (perfRes.ok) {
+                const perfData = await perfRes.json();
+                setLatestPeriod(perfData.latestPeriod || '');
+                const latestData = perfData.periods?.[perfData.latestPeriod] || {};
+                setQuarterlyPerformers(latestData);
             }
         } catch (error) {
             console.error("Failed to fetch intelligence data", error);
@@ -148,6 +164,73 @@ export default function IntelligencePage() {
                 <div className="space-y-6">
                     {/* FULL WIDTH: Portfolio Health Score */}
                     <PortfolioHealthScore holdings={holdings} />
+
+                    {/* Quarterly Sector Leaders Card */}
+                    {latestPeriod && Object.keys(quarterlyPerformers).length > 0 && (
+                        <Card className="border-amber-500/20 bg-gradient-to-br from-card to-amber-500/5">
+                            <CardHeader className="bg-muted/30 pb-3">
+                                <CardTitle className="flex items-center justify-between mb-1">
+                                    <div className="flex items-center gap-2">
+                                        <TrendingUp className="w-5 h-5 text-amber-500" />
+                                        <span>Quarterly Sector Leaders (Top Performers)</span>
+                                    </div>
+                                    <Badge variant="outline" className="bg-amber-500/10 text-amber-400 border-amber-500/20">
+                                        {latestPeriod}
+                                    </Badge>
+                                </CardTitle>
+                                <CardDescription className="text-xs text-muted-foreground">
+                                    Ranked by sector-relative weighted percentiles: <code className="bg-muted px-1.5 py-0.5 rounded text-amber-400 font-mono text-[10px]">Score = (0.4 × ROE Pct) + (0.3 × EPS Growth Pct) + (0.3 × Net Profit Growth Pct)</code>
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="pt-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                    {Object.entries(quarterlyPerformers)
+                                        .filter(([sector]) => sector !== 'unknown' && sector !== 'Others')
+                                        .map(([sector, stocks]: [string, any]) => {
+                                            const topStock = stocks[0];
+                                            if (!topStock) return null;
+                                            return (
+                                                <div key={sector} className="p-4 rounded-xl border bg-background/50 hover:border-amber-500/30 transition-all flex flex-col justify-between">
+                                                    <div>
+                                                        <p className="text-xs text-muted-foreground uppercase font-bold tracking-wider mb-2">{sector}</p>
+                                                        <div className="flex items-baseline justify-between mb-2">
+                                                            <Link
+                                                                to={`/quarterly?symbol=${topStock.symbol}`}
+                                                                className="text-lg font-bold font-mono text-amber-400 border-b border-dashed border-amber-400/40 hover:border-solid hover:text-amber-300 transition-all cursor-pointer"
+                                                                title={`Analyze ${topStock.symbol} quarterly details`}
+                                                            >
+                                                                {topStock.symbol}
+                                                            </Link>
+                                                            <Badge className="bg-emerald-500/15 text-emerald-400 hover:bg-emerald-500/15 border-none font-semibold text-[10px]">
+                                                                Score: {topStock.score.toFixed(1)}
+                                                            </Badge>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-1.5 text-xs text-muted-foreground border-t pt-2 mt-1">
+                                                        <div className="flex justify-between">
+                                                            <span>ROE (TTM):</span>
+                                                            <span className="font-semibold text-foreground">{topStock.roe.toFixed(1)}%</span>
+                                                        </div>
+                                                        <div className="flex justify-between">
+                                                            <span>EPS Growth YoY:</span>
+                                                            <span className={`font-semibold ${topStock.epsGrowth >= 0 ? "text-emerald-500" : "text-rose-500"}`}>
+                                                                {topStock.epsGrowth >= 0 ? "+" : ""}{topStock.epsGrowth.toFixed(1)}%
+                                                            </span>
+                                                        </div>
+                                                        <div className="flex justify-between">
+                                                            <span>Profit Growth:</span>
+                                                            <span className={`font-semibold ${topStock.profitGrowth >= 0 ? "text-emerald-500" : "text-rose-500"}`}>
+                                                                {topStock.profitGrowth >= 0 ? "+" : ""}{topStock.profitGrowth.toFixed(1)}%
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )}
 
                     {/* TWO COLUMN GRID: Macro Research & Portfolio Optimizer */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -279,11 +362,7 @@ export default function IntelligencePage() {
                 </div>
                 
                 {/* Footer */}
-                <footer className="text-center py-8 mt-8 border-t border-border/40">
-                    <p className="text-sm text-muted-foreground">
-                        Optimization uses frontier market heuristics • Research data provided by OpenAlex (Free Open Access)
-                    </p>
-                </footer>
+                <Footer />
             </main>
 
             {/* AI Chatbot */}
