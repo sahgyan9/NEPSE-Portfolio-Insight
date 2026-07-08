@@ -11,6 +11,7 @@
 
 import { useState, useMemo } from 'react';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import { PortfolioHealthScore } from '@/components/PortfolioHealthScore';
 import { StockValuationCard } from '@/components/StockValuationCard';
 import { DividendTracker } from '@/components/DividendTracker';
@@ -327,15 +328,7 @@ const FundamentalsPage = () => {
                 </Tabs>
 
                 {/* Footer */}
-                <footer className="text-center py-8 mt-8 border-t border-border/40">
-                    <p className="text-sm text-muted-foreground">
-                        Valuation metrics based on{' '}
-                        <span className="text-primary">Benjamin Graham's</span> value investing principles
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                        Disclaimer: This is educational content, not financial advice.
-                    </p>
-                </footer>
+                <Footer />
             </main>
 
             {/* AI Chatbot - Floating */}
