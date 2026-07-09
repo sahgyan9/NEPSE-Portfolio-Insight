@@ -7,6 +7,29 @@ import re
 
 DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db", "fundamentals.json")
 
+ENV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+SAFETY_FALLBACK_KEY = "fc-56a6f95e247d4c70a9b8f70d5b135db3"
+
+def get_api_keys():
+    primary = None
+    secondary = None
+    if os.path.exists(ENV_PATH):
+        with open(ENV_PATH, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith("FIRECRAWL_API_KEY="):
+                    primary = line.strip().split("=")[1].strip().strip('"').strip("'")
+                elif line.strip().startswith("FIRECRAWL_API_KEY_2="):
+                    secondary = line.strip().split("=")[1].strip().strip('"').strip("'")
+    
+    keys = []
+    if primary:
+        keys.append(primary)
+    if secondary:
+        keys.append(secondary)
+    if SAFETY_FALLBACK_KEY not in keys:
+        keys.append(SAFETY_FALLBACK_KEY)
+    return keys
+
 def scrape_fundamental(symbol):
     symbol = symbol.upper()
     url = f"https://nepsealpha.com/broker-widget/stock-detail?symbol={symbol}"
@@ -15,14 +38,29 @@ def scrape_fundamental(symbol):
     prompt = "Extract EPS, Book Value (or BV), P/E ratio, and P/B ratio. Format the output STRICTLY as a JSON object with keys: eps, bookValue, peRatio, pbRatio. Ensure the values are numbers. If a value is missing or N/A, use null."
     
     print(f"Scraping fundamentals for {symbol} from {url}...")
+    api_keys = get_api_keys()
+    success = False
+    
+    for api_key in api_keys:
+        try:
+            os.makedirs(".tmp", exist_ok=True)
+            env = os.environ.copy()
+            env["FIRECRAWL_API_KEY"] = api_key
+            
+            subprocess.run(
+                f'npx firecrawl-cli scrape "{url}" -Q "{prompt}" -o "{out_file}"',
+                check=True,
+                shell=True,
+                env=env
+            )
+            success = True
+            break
+        except subprocess.CalledProcessError as e:
+            print(f"Error running Firecrawl for {symbol} with key ...{api_key[-6:]}: {e}")
+            
+    if not success:
+        return False
     try:
-        os.makedirs(".tmp", exist_ok=True)
-        subprocess.run(
-            f'npx firecrawl-cli scrape "{url}" -Q "{prompt}" -o {out_file}',
-            check=True,
-            shell=True
-        )
-        
         # Read the generated markdown file
         with open(out_file, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -54,9 +92,6 @@ def scrape_fundamental(symbol):
         print(json.dumps(fundamental_data, indent=2))
         return True
         
-    except subprocess.CalledProcessError as e:
-        print(f"Error running Firecrawl for {symbol}: {e}")
-        return False
     except json.JSONDecodeError as e:
         print(f"Error parsing JSON for {symbol}: {e}")
         return False
