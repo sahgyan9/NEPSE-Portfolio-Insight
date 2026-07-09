@@ -36,9 +36,10 @@ import { StockSymbolLink } from '@/components/StockSymbolLink';
 interface StockValuationCardProps {
     holding: StockHolding;
     showDetails?: boolean;
+    allHoldings?: StockHolding[];
 }
 
-export const StockValuationCard = ({ holding, showDetails = true }: StockValuationCardProps) => {
+export const StockValuationCard = ({ holding, showDetails = true, allHoldings }: StockValuationCardProps) => {
     const valuation = useMemo(() => calculateValuationScore(holding), [holding]);
 
     const peHealth = getMetricHealth(holding.peRatio, PE_THRESHOLDS);
@@ -55,6 +56,20 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
         if (holding.gainLossPercent < 0) return <TrendingDown className="w-4 h-4 text-red-500" />;
         return <Minus className="w-4 h-4 text-gray-500" />;
     };
+
+    const sectorAverages = useMemo(() => {
+        if (!allHoldings) return { pe: null, pb: null };
+        const peers = allHoldings.filter(h => h.sector === holding.sector);
+        const peList = peers.map(h => h.peRatio).filter((pe): pe is number => pe !== null && pe !== undefined && pe > 0);
+        const pbList = peers.map(h => h.pbRatio).filter((pb): pb is number => pb !== null && pb !== undefined && pb > 0);
+        return {
+            pe: peList.length > 0 ? peList.reduce((a, b) => a + b, 0) / peList.length : null,
+            pb: pbList.length > 0 ? pbList.reduce((a, b) => a + b, 0) / pbList.length : null,
+        };
+    }, [allHoldings, holding.sector]);
+
+    const has52w = holding.high52 !== null && holding.high52 !== undefined && holding.low52 !== null && holding.low52 !== undefined;
+    const hasGovernance = (holding.promoterHolding !== null && holding.promoterHolding !== undefined) || (holding.avgVolume120d !== null && holding.avgVolume120d !== undefined);
 
     return (
         <Card className="w-full hover:shadow-lg transition-shadow">
@@ -122,6 +137,31 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
 
                 {showDetails && (
                     <>
+                        {/* 52-Week Range Bar */}
+                        {has52w && (
+                            <div className="mb-4 p-3 rounded-lg border border-border bg-card/30 space-y-2">
+                                <div className="flex justify-between text-[10px] text-muted-foreground">
+                                    <span>52W L: Rs. {holding.low52!.toFixed(2)}</span>
+                                    <span className="font-semibold text-foreground uppercase tracking-wider text-[9px]">52-Week Range</span>
+                                    <span>52W H: Rs. {holding.high52!.toFixed(2)}</span>
+                                </div>
+                                <div className="relative h-2 rounded-full bg-muted w-full">
+                                    {(() => {
+                                        const range = holding.high52! - holding.low52!;
+                                        const pct = range > 0 ? ((holding.currentPrice - holding.low52!) / range) * 100 : 0;
+                                        const clamped = Math.min(100, Math.max(0, pct));
+                                        return (
+                                            <div 
+                                                className="absolute h-4 w-4 bg-primary border-2 border-background rounded-full -top-1 shadow -translate-x-1/2 cursor-help" 
+                                                style={{ left: `${clamped}%` }}
+                                            />
+                                        );
+                                    })()}
+                                    <div className="h-full bg-primary/20 rounded-full w-full" />
+                                </div>
+                            </div>
+                        )}
+
                         {/* Metrics Grid */}
                         <div className="grid grid-cols-2 gap-3">
                             {/* P/E Ratio */}
@@ -129,6 +169,7 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
                                 label="P/E Ratio"
                                 value={formatValue(holding.peRatio)}
                                 health={peHealth}
+                                subValue={sectorAverages.pe !== null ? `Sector Avg: ${sectorAverages.pe.toFixed(1)}` : undefined}
                                 education={METRIC_EDUCATION.peRatio}
                             />
 
@@ -137,6 +178,7 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
                                 label="P/B Ratio"
                                 value={formatValue(holding.pbRatio)}
                                 health={pbHealth}
+                                subValue={sectorAverages.pb !== null ? `Sector Avg: ${sectorAverages.pb.toFixed(1)}` : undefined}
                                 education={METRIC_EDUCATION.pbRatio}
                             />
 
@@ -216,6 +258,41 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
                             </div>
                         )}
 
+                        {/* Governance & Liquidity */}
+                        {hasGovernance && (
+                            <div className="mt-4 pt-4 border-t">
+                                <h4 className="text-xs font-semibold text-muted-foreground mb-2">GOVERNANCE & LIQUIDITY</h4>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {holding.promoterHolding !== null && holding.promoterHolding !== undefined && (
+                                        <MetricItem
+                                            label="Promoter Share"
+                                            value={`${holding.promoterHolding.toFixed(1)}%`}
+                                            health={holding.promoterHolding >= 51 ? 'excellent' : holding.promoterHolding >= 30 ? 'good' : 'poor'}
+                                            education={{
+                                                term: 'Promoter Shareholding',
+                                                definition: 'Percentage of shares held by promoters. Higher shareholding reflects strong skin-in-the-game.',
+                                                goodRange: 'Above 51% (Financials) / 30% (Others)',
+                                                warningThreshold: 'Below limits signals high governance risk',
+                                            }}
+                                        />
+                                    )}
+                                    {holding.avgVolume120d !== null && holding.avgVolume120d !== undefined && (
+                                        <MetricItem
+                                            label="120D Avg Vol"
+                                            value={holding.avgVolume120d.toLocaleString()}
+                                            health={holding.avgVolume120d >= 5000 ? 'excellent' : 'poor'}
+                                            education={{
+                                                term: '120-Day Average Volume',
+                                                definition: 'Average trading volume over the last 120 trading days. High volume ensures easy entry/exit.',
+                                                goodRange: 'Above 5,000 shares is liquid',
+                                                warningThreshold: 'Below 5,000 indicates high liquidity risk',
+                                            }}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
                         {/* Score Breakdown */}
                         <div className="mt-4 pt-4 border-t">
                             <h4 className="text-xs font-semibold text-muted-foreground mb-2">SCORE BREAKDOWN</h4>
@@ -253,6 +330,7 @@ interface MetricItemProps {
     label: string;
     value: string;
     health: string;
+    subValue?: string;
     education: {
         term: string;
         definition: string;
@@ -261,32 +339,39 @@ interface MetricItemProps {
     };
 }
 
-const MetricItem = ({ label, value, health, education }: MetricItemProps) => {
+const MetricItem = ({ label, value, health, subValue, education }: MetricItemProps) => {
     const healthColor = getHealthColor(health as 'excellent' | 'good' | 'fair' | 'poor' | 'critical' | 'unknown');
     const healthIcon = getHealthIcon(health as 'excellent' | 'good' | 'fair' | 'poor' | 'critical' | 'unknown');
 
     return (
-        <div className="p-3 rounded-lg bg-muted/30">
-            <div className="flex items-center justify-between mb-1">
-                <TooltipProvider>
-                    <Tooltip>
-                        <TooltipTrigger className="flex items-center gap-1">
-                            <span className="text-xs text-muted-foreground">{label}</span>
-                            <Info className="w-3 h-3 text-muted-foreground" />
-                        </TooltipTrigger>
-                        <TooltipContent className="max-w-xs">
-                            <p className="font-semibold mb-1">{education.term}</p>
-                            <p className="text-sm mb-2">{education.definition}</p>
-                            <p className="text-xs text-green-500">✓ Good: {education.goodRange}</p>
-                            <p className="text-xs text-yellow-500">⚠ Warning: {education.warningThreshold}</p>
-                        </TooltipContent>
-                    </Tooltip>
-                </TooltipProvider>
-                <span className="text-xs">{healthIcon}</span>
+        <div className="p-3 rounded-lg bg-muted/30 flex flex-col justify-between h-full">
+            <div>
+                <div className="flex items-center justify-between mb-1">
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger className="flex items-center gap-1">
+                                <span className="text-xs text-muted-foreground">{label}</span>
+                                <Info className="w-3 h-3 text-muted-foreground" />
+                            </TooltipTrigger>
+                            <TooltipContent className="max-w-xs">
+                                <p className="font-semibold mb-1">{education.term}</p>
+                                <p className="text-sm mb-2">{education.definition}</p>
+                                <p className="text-xs text-green-500">✓ Good: {education.goodRange}</p>
+                                <p className="text-xs text-yellow-500">⚠ Warning: {education.warningThreshold}</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                    <span className="text-xs">{healthIcon}</span>
+                </div>
+                <p className="text-lg font-bold" style={{ color: healthColor }}>
+                    {value}
+                </p>
             </div>
-            <p className="text-lg font-bold" style={{ color: healthColor }}>
-                {value}
-            </p>
+            {subValue && (
+                <p className="text-[10px] text-muted-foreground mt-1 border-t border-border/20 pt-1">
+                    {subValue}
+                </p>
+            )}
         </div>
     );
 };

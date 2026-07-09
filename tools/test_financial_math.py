@@ -218,3 +218,174 @@ def test_derived_metrics_calculation(mock_quarterly):
     
     # Assert NIM = (NII * (4/4) / Total Assets) * 100 = (10B / 400B) * 100 = 2.5%
     assert comp["net_interest_margin"] == 2.5
+
+    # Mock more metrics in raw to test new ratios:
+    # Operating Profit = 6,000,000,000.0
+    # Interest Income = 24,000,000,000.0
+    # Loans and Advances to Customers = 260,000,000,000.0
+    # Number of Shares = 270,000,000.0
+    # Current Assets = 80,000,000,000.0
+    mock_quarterly("NABIL", [
+        {
+            "sector": "Commercial Bank",
+            "fy": "2082-83",
+            "quarter": 2,
+            "raw": {
+                "Total Assets": 400000000000.0,
+                "Total Equity": 40000000000.0,
+                "Net Profit": 2000000000.0,
+            },
+            "computed": {
+                "eps_ttm": 10.0,
+                "bvps": 140.0,
+                "pe_ratio": 18.0,
+                "net_profit_ttm": 2000000000.0,
+                "revenue_ttm": 10000000000.0
+            },
+            "yoy": {}
+        },
+        {
+            "sector": "Commercial Bank",
+            "fy": "2082-83",
+            "quarter": 3,
+            "raw": {
+                "Total Assets": 400000000000.0,
+                "Total Equity": 40000000000.0,
+                "Net Interest Income": 8000000000.0,
+                "Net Profit": 3500000000.0,
+                "Revenue": 15000000000.0,
+                "Operating Profit": 4000000000.0,
+                "Number of Shares": 270000000.0,
+            },
+            "computed": {
+                "eps_ttm": 15.0,
+                "bvps": 150.0,
+                "pe_ratio": 16.0,
+                "net_profit_ttm": 3500000000.0,
+                "revenue_ttm": 15000000000.0
+            },
+            "yoy": {
+                "net_profit_ttm": 10.0
+            }
+        },
+        {
+            "sector": "Commercial Bank",
+            "fy": "2082-83",
+            "quarter": 4,
+            "raw": {
+                "Total Assets": 400000000000.0,
+                "Total Equity": 40000000000.0,
+                "Interest Income": 24000000000.0,
+                "Net Interest Income": 10000000000.0,
+                "Net Profit": 5500000000.0,
+                "Revenue": 20000000000.0,
+                "Operating Profit": 6000000000.0,
+                "Loans and Advances to Customers": 260000000000.0,
+                "Number of Shares": 270000000.0,
+                "Current Assets": 80000000000.0,
+            },
+            "computed": {
+                "eps_ttm": 18.5,
+                "bvps": 160.0,
+                "pe_ratio": 15.0,
+                "net_profit_ttm": 5500000000.0,
+                "revenue_ttm": 20000000000.0
+            },
+            "yoy": {
+                "net_profit_ttm": 12.5
+            }
+        }
+    ])
+    
+    calculate_derived_metrics()
+    
+    with open(quarterly_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        
+    latest_q = data["quarters"][-1]
+    comp = latest_q["computed"]
+    
+    # Assert Operating Profit Margin = 6B / 20B = 30.0%
+    assert comp["operating_profit_margin"] == 30.0
+    
+    # Assert Revenue per Share = 20B / 270M = 74.07
+    assert comp["revenue_per_share"] == 74.07
+    
+    # Assert Loan to Asset = 260B / 400B = 65.0%
+    assert comp["loan_to_asset"] == 65.0
+    
+    # Assert Efficiency Ratio: op_exp = total_op_income - op_profit = 20B - 6B = 14B. Efficiency = 14B / 20B = 70.0%
+    # Note: Revenue cumulative is used as Total Operating Income proxy in check when "Total Operating Income" key is missing
+    assert comp["efficiency_ratio"] == 70.0
+    
+    # Assert Interest Coverage: interest_expense = interest_income - net_interest_income = 24B - 10B = 14B. IC = 6B / 14B = 0.43
+    assert comp["interest_coverage"] == 0.43
+    
+    # Assert QoQ profit momentum:
+    # Q3 Net Profit single = 3.5B - 2.0B = 1.5B
+    # Q4 Net Profit single = 5.5B - 3.5B = 2.0B
+    # Momentum = ((2B - 1.5B) / 1.5B) * 100 = 33.33%
+    assert comp["qoq_profit_momentum"] == 33.33
+
+    # Test Hydropower/Manufacturing sector fixed asset turnover
+    mock_quarterly("UPPER", [{
+        "sector": "Hydropower",
+        "fy": "2082-83",
+        "quarter": 4,
+        "raw": {
+            "Total Assets": 100000.0,
+            "Current Assets": 20000.0,
+            "Revenue": 4000.0,
+            "Net Profit": -1000.0,
+            "Operating Profit": 1000.0
+        },
+        "computed": {
+            "eps_ttm": -5.0,
+            "bvps": 50.0,
+            "revenue_ttm": 4000.0
+        },
+        "yoy": {}
+    }])
+    
+    calculate_derived_metrics()
+    
+    upper_path = os.path.join(project_root, "db", "quarterly", "UPPER.json")
+    with open(upper_path, "r", encoding="utf-8") as f:
+        upper_data = json.load(f)
+        
+    upper_comp = upper_data["quarters"][0]["computed"]
+    # fixed_assets = 100k - 20k = 80k. turnover = 4k / 80k = 0.05
+    assert upper_comp["fixed_asset_turnover"] == 0.05
+
+    # Test Insurance sector calculation yield & combined ratio
+    mock_quarterly("CLI", [{
+        "sector": "Life Insurance",
+        "fy": "2082-83",
+        "quarter": 2,
+        "raw": {
+            "Total Investment and Loans": 1000000000.0,
+            "Income From Investment Loans And Others": 25000000.0,
+            "Net Claim Payment": 15000000.0,
+            "Net Premium": 20000000.0,
+            "Management Expenses": 2000000.0
+        },
+        "computed": {
+            "eps_ttm": 10.0,
+            "bvps": 120.0
+        },
+        "yoy": {}
+    }])
+    
+    calculate_derived_metrics()
+    
+    cli_path = os.path.join(project_root, "db", "quarterly", "CLI.json")
+    with open(cli_path, "r", encoding="utf-8") as f:
+        cli_data = json.load(f)
+        
+    cli_comp = cli_data["quarters"][0]["computed"]
+    
+    # Assert Investment Yield = (25M / 1B) * (4/2) * 100 = 5.0%
+    assert cli_comp["investment_yield"] == 5.0
+    
+    # Assert Combined Ratio = (15M / 20M) + (2M / 20M) = 75.0% + 10.0% = 85.0%
+    assert cli_comp["combined_ratio"] == 85.0

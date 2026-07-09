@@ -29,6 +29,15 @@ export interface QuarterlyComputed {
   dupont_asset_turnover?: number | null;
   dupont_equity_multiplier?: number | null;
   dupont_roe?: number | null;
+  operating_profit_margin?: number | null;
+  revenue_per_share?: number | null;
+  qoq_profit_momentum?: number | null;
+  loan_to_asset?: number | null;
+  efficiency_ratio?: number | null;
+  interest_coverage?: number | null;
+  fixed_asset_turnover?: number | null;
+  investment_yield?: number | null;
+  combined_ratio?: number | null;
 }
 
 export interface QuarterlyYoY {

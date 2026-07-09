@@ -47,9 +47,11 @@ def scrape_market_data_for_symbol(symbol, api_key):
         "1. Shares Outstanding (or Outstanding Shares) "
         "2. Promoter Shareholding (%) (or Promoter Shares %) "
         "3. Public Shareholding (%) (or Public Shares %) "
-        "4. 120 Days Average Volume. "
+        "4. 120 Days Average Volume "
+        "5. 52 Weeks High "
+        "6. 52 Weeks Low. "
         "Format the output STRICTLY as a single JSON object with these keys: "
-        "sharesOutstanding, promoterHolding, publicFloat, avgVolume120d. "
+        "sharesOutstanding, promoterHolding, publicFloat, avgVolume120d, high52, low52. "
         "Values MUST be numbers (promoterHolding and publicFloat should be percentages from 0 to 100). "
         "If a value is not found, use null."
     )
@@ -103,7 +105,7 @@ def update_fundamentals_db(symbol, data):
     existing = db.setdefault(symbol, {})
     
     # Merge values
-    for k in ["sharesOutstanding", "promoterHolding", "publicFloat", "avgVolume120d"]:
+    for k in ["sharesOutstanding", "promoterHolding", "publicFloat", "avgVolume120d", "high52", "low52"]:
         if k in data and data[k] is not None:
             existing[k] = data[k]
             

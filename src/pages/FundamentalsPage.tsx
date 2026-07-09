@@ -324,6 +324,7 @@ const FundamentalsPage = () => {
                                     key={holding.scrip}
                                     holding={holding}
                                     showDetails={viewMode === 'grid'}
+                                    allHoldings={holdings}
                                 />
                             ))}
                         </div>
