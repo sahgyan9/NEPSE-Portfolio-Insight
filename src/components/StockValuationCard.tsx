@@ -156,6 +156,65 @@ export const StockValuationCard = ({ holding, showDetails = true }: StockValuati
                                 education={METRIC_EDUCATION.dividendYield}
                             />
                         </div>
+                        
+                        {/* Derived Metrics Grid */}
+                        {(holding.grahamNumber !== undefined || holding.pegRatio !== undefined || holding.earningsYield !== undefined) && (
+                            <div className="mt-4 pt-4 border-t">
+                                <h4 className="text-xs font-semibold text-muted-foreground mb-2">ANALYST METRICS</h4>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {holding.grahamNumber !== null && holding.grahamNumber !== undefined && (
+                                        <MetricItem
+                                            label="Graham Number"
+                                            value={`Rs. ${holding.grahamNumber.toFixed(2)}`}
+                                            health={holding.currentPrice < holding.grahamNumber ? 'excellent' : 'fair'}
+                                            education={METRIC_EDUCATION.grahamNumber}
+                                        />
+                                    )}
+                                    {holding.pegRatio !== null && holding.pegRatio !== undefined && (
+                                        <MetricItem
+                                            label="PEG Ratio"
+                                            value={holding.pegRatio.toFixed(2)}
+                                            health={holding.pegRatio < 1.0 ? 'excellent' : holding.pegRatio <= 1.5 ? 'good' : 'poor'}
+                                            education={METRIC_EDUCATION.pegRatio}
+                                        />
+                                    )}
+                                    {holding.earningsYield !== null && holding.earningsYield !== undefined && (
+                                        <MetricItem
+                                            label="Earnings Yield"
+                                            value={`${holding.earningsYield.toFixed(2)}%`}
+                                            health={holding.earningsYield > 8.0 ? 'excellent' : holding.earningsYield >= 5.0 ? 'good' : 'poor'}
+                                            education={METRIC_EDUCATION.earningsYield}
+                                        />
+                                    )}
+                                    {holding.sector === 'Commercial Bank' && holding.netInterestMargin !== null && holding.netInterestMargin !== undefined && (
+                                        <MetricItem
+                                            label="NIM"
+                                            value={`${holding.netInterestMargin.toFixed(2)}%`}
+                                            health={holding.netInterestMargin > 3.5 ? 'excellent' : 'fair'}
+                                            education={{
+                                                term: 'Net Interest Margin (NIM)',
+                                                definition: 'Measures the difference between interest income generated and interest paid out relative to assets.',
+                                                goodRange: '> 3.5% is healthy',
+                                                warningThreshold: '< 2.5% signals pressure on earnings',
+                                            }}
+                                        />
+                                    )}
+                                    {(holding.sector === 'Hydropower' || holding.sector === 'Manufacturing') && holding.debtToEquity !== null && holding.debtToEquity !== undefined && (
+                                        <MetricItem
+                                            label="Debt-to-Equity"
+                                            value={holding.debtToEquity.toFixed(2)}
+                                            health={holding.debtToEquity < 1.5 ? 'excellent' : holding.debtToEquity <= 2.5 ? 'fair' : 'critical'}
+                                            education={{
+                                                term: 'Debt-to-Equity (D/E)',
+                                                definition: 'Compares total borrowings to shareholders\' equity. Higher leverage increases interest payment risk.',
+                                                goodRange: '< 1.5 is standard',
+                                                warningThreshold: '> 2.0 indicates elevated leverage risk',
+                                            }}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Score Breakdown */}
                         <div className="mt-4 pt-4 border-t">

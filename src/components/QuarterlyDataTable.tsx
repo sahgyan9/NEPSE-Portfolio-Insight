@@ -106,6 +106,43 @@ const SCREEN1_ROWS: RowDef[] = [
     getValue: q => fmtCr(q.computed.revenue_ttm),
     getYoY: q => q.yoy.revenue_ttm,
   },
+  {
+    label: 'Graham Number',
+    getValue: q => q.computed.graham_number ? `Rs. ${fmt(q.computed.graham_number)}` : '—',
+  },
+  {
+    label: 'Earnings Yield',
+    getValue: q => q.computed.earnings_yield ? fmtPct(q.computed.earnings_yield) : '—',
+  },
+  {
+    label: 'PEG Ratio',
+    getValue: q => fmt(q.computed.peg_ratio),
+  },
+  {
+    label: 'Debt-to-Equity',
+    getValue: q => fmt(q.computed.debt_to_equity),
+  },
+  {
+    label: 'Net Interest Margin',
+    getValue: q => q.computed.net_interest_margin ? fmtPct(q.computed.net_interest_margin) : '—',
+  },
+  {
+    label: 'DuPont: Net Margin',
+    getValue: q => q.computed.dupont_net_margin ? fmtPct(q.computed.dupont_net_margin) : '—',
+  },
+  {
+    label: 'DuPont: Asset Turnover',
+    getValue: q => fmt(q.computed.dupont_asset_turnover, 4),
+  },
+  {
+    label: 'DuPont: Equity Multiplier',
+    getValue: q => fmt(q.computed.dupont_equity_multiplier),
+  },
+  {
+    label: 'DuPont: Computed ROE',
+    getValue: q => q.computed.dupont_roe ? fmtPct(q.computed.dupont_roe) : '—',
+    highlight: true,
+  },
 ];
 
 // ── Main component ────────────────────────────────────────────────────────────

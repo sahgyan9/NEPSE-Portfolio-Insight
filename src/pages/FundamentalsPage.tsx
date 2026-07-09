@@ -53,7 +53,7 @@ const FundamentalsPage = () => {
     );
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
     const [searchQuery, setSearchQuery] = useState('');
-    const [sortBy, setSortBy] = useState<'score' | 'pe' | 'pb' | 'dividend' | 'gainLoss'>('score');
+    const [sortBy, setSortBy] = useState<'score' | 'pe' | 'pb' | 'dividend' | 'gainLoss' | 'graham' | 'peg' | 'earningsYield'>('score');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
     const [sectorFilter, setSectorFilter] = useState<string>('all');
 
@@ -110,6 +110,18 @@ const FundamentalsPage = () => {
                 case 'gainLoss':
                     comparison = a.gainLossPercent - b.gainLossPercent;
                     break;
+                case 'graham':
+                    // Sort by discount % to Graham Number: (Graham - LTP) / Graham
+                    const aDisc = a.grahamNumber ? (a.grahamNumber - a.currentPrice) / a.grahamNumber : -999;
+                    const bDisc = b.grahamNumber ? (b.grahamNumber - b.currentPrice) / b.grahamNumber : -999;
+                    comparison = aDisc - bDisc;
+                    break;
+                case 'peg':
+                    comparison = (a.pegRatio || 999) - (b.pegRatio || 999);
+                    break;
+                case 'earningsYield':
+                    comparison = (a.earningsYield || -999) - (b.earningsYield || -999);
+                    break;
             }
 
             return sortOrder === 'desc' ? -comparison : comparison;
@@ -165,7 +177,7 @@ const FundamentalsPage = () => {
                 </div>
 
                 <Tabs defaultValue="overview" className="space-y-6">
-                    <TabsList className="grid grid-cols-4 w-full max-w-lg">
+                    <TabsList className="grid grid-cols-5 w-full max-w-2xl">
                         <TabsTrigger value="overview" className="gap-2">
                             <PieChart className="w-4 h-4" />
                             <span className="hidden sm:inline">Overview</span>
@@ -173,6 +185,10 @@ const FundamentalsPage = () => {
                         <TabsTrigger value="valuations" className="gap-2">
                             <TrendingUp className="w-4 h-4" />
                             <span className="hidden sm:inline">Valuations</span>
+                        </TabsTrigger>
+                        <TabsTrigger value="screener" className="gap-2">
+                            <Search className="w-4 h-4" />
+                            <span className="hidden sm:inline">Screener</span>
                         </TabsTrigger>
                         <TabsTrigger value="dividends" className="gap-2">
                             <Coins className="w-4 h-4" />
@@ -247,7 +263,7 @@ const FundamentalsPage = () => {
                             </Select>
 
                             <Select value={sortBy} onValueChange={(v) => setSortBy(v as typeof sortBy)}>
-                                <SelectTrigger className="w-[150px]">
+                                <SelectTrigger className="w-[170px]">
                                     <SelectValue placeholder="Sort by" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -256,6 +272,9 @@ const FundamentalsPage = () => {
                                     <SelectItem value="pb">P/B Ratio</SelectItem>
                                     <SelectItem value="dividend">Dividend Yield</SelectItem>
                                     <SelectItem value="gainLoss">Gain/Loss %</SelectItem>
+                                    <SelectItem value="graham">Graham Margin %</SelectItem>
+                                    <SelectItem value="peg">PEG Ratio</SelectItem>
+                                    <SelectItem value="earningsYield">Earnings Yield</SelectItem>
                                 </SelectContent>
                             </Select>
 
@@ -314,6 +333,93 @@ const FundamentalsPage = () => {
                                 <p className="text-muted-foreground">No holdings match your filters</p>
                             </div>
                         )}
+                    </TabsContent>
+
+                    {/* Value Screener Tab */}
+                    <TabsContent value="screener" className="space-y-6">
+                        <div className="rounded-lg border bg-card p-6">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <h2 className="text-xl font-bold mb-1">Graham & PEG Value Screener</h2>
+                                    <p className="text-sm text-muted-foreground">
+                                        Identifies undervalued holdings based on the Benjamin Graham intrinsic value formula (Price &lt; Graham Number) and growth-adjusted PEG valuations.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div className="overflow-x-auto rounded-md border">
+                                <table className="w-full text-sm">
+                                    <thead>
+                                        <tr className="bg-muted/50 border-b">
+                                            <th className="text-left p-3 font-semibold text-muted-foreground">Scrip</th>
+                                            <th className="text-left p-3 font-semibold text-muted-foreground">Sector</th>
+                                            <th className="text-right p-3 font-semibold text-muted-foreground">LTP (Rs.)</th>
+                                            <th className="text-right p-3 font-semibold text-muted-foreground">Graham Number</th>
+                                            <th className="text-right p-3 font-semibold text-muted-foreground">Discount %</th>
+                                            <th className="text-right p-3 font-semibold text-muted-foreground">PEG Ratio</th>
+                                            <th className="text-right p-3 font-semibold text-muted-foreground">Earnings Yield</th>
+                                            <th className="text-center p-3 font-semibold text-muted-foreground">Signal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {holdings.filter(h => h.sector !== 'Mutual Fund').map(h => {
+                                            const isGrahamUndervalued = h.grahamNumber ? h.currentPrice < h.grahamNumber : false;
+                                            const isStrongBuy = h.grahamNumber ? h.currentPrice < h.grahamNumber * 0.67 : false;
+                                            
+                                            let signalText = "Fully Valued";
+                                            let signalColor = "text-muted-foreground bg-muted/20 border-muted-foreground/10";
+                                            
+                                            if (isStrongBuy) {
+                                                signalText = "Strong Buy (Deep Value)";
+                                                signalColor = "text-green-600 bg-green-500/10 border-green-500/20";
+                                            } else if (isGrahamUndervalued) {
+                                                signalText = "Undervalued";
+                                                signalColor = "text-lime-600 bg-lime-500/10 border-lime-500/20";
+                                            } else if (h.grahamNumber && h.currentPrice > h.grahamNumber * 1.5) {
+                                                signalText = "Overvalued";
+                                                signalColor = "text-red-500 bg-red-500/10 border-red-500/20";
+                                            }
+                                            
+                                            const discountPercent = h.grahamNumber 
+                                                ? ((h.grahamNumber - h.currentPrice) / h.grahamNumber) * 100 
+                                                : null;
+                                            
+                                            return (
+                                                <tr key={h.scrip} className="border-b transition-colors hover:bg-muted/30">
+                                                    <td className="p-3 font-bold">{h.scrip}</td>
+                                                    <td className="p-3 text-muted-foreground text-xs">{h.sector}</td>
+                                                    <td className="p-3 text-right font-mono font-semibold">Rs. {h.currentPrice.toLocaleString()}</td>
+                                                    <td className="p-3 text-right font-mono">
+                                                        {h.grahamNumber ? `Rs. ${h.grahamNumber.toFixed(2)}` : '—'}
+                                                    </td>
+                                                    <td className={`p-3 text-right font-mono font-semibold ${discountPercent !== null && discountPercent > 0 ? 'text-green-500' : 'text-muted-foreground'}`}>
+                                                        {discountPercent !== null ? `${discountPercent.toFixed(1)}%` : '—'}
+                                                    </td>
+                                                    <td className="p-3 text-right font-mono">
+                                                        {h.pegRatio !== null && h.pegRatio !== undefined ? h.pegRatio.toFixed(2) : '—'}
+                                                    </td>
+                                                    <td className="p-3 text-right font-mono">
+                                                        {h.earningsYield !== null && h.earningsYield !== undefined ? `${h.earningsYield.toFixed(2)}%` : '—'}
+                                                    </td>
+                                                    <td className="p-3 text-center">
+                                                        <Badge className={`border text-xs px-2 py-0.5 ${signalColor}`} variant="outline">
+                                                            {signalText}
+                                                        </Badge>
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })}
+                                        {holdings.filter(h => h.sector !== 'Mutual Fund').length === 0 && (
+                                            <tr>
+                                                <td colSpan={8} className="text-center p-8 text-muted-foreground">
+                                                    No ratings available for mutual fund holdings.
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </TabsContent>
 
                     {/* Dividends Tab */}
