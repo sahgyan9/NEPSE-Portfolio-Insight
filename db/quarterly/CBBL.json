@@ -23,7 +23,16 @@
         "net_profit_till_qtr": 1000900000.0,
         "revenue_till_qtr": 5943200000.000001,
         "net_profit_ttm": 1000900000.0,
-        "revenue_ttm": 5943200000.000001
+        "revenue_ttm": 5943200000.000001,
+        "graham_number": 357.3,
+        "earnings_yield": 2.58,
+        "peg_ratio": null,
+        "dupont_net_margin": 16.84,
+        "dupont_asset_turnover": null,
+        "dupont_equity_multiplier": null,
+        "dupont_roe": null,
+        "debt_to_equity": null,
+        "net_interest_margin": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -100,7 +109,16 @@
         "net_profit_till_qtr": 237500000.0,
         "revenue_till_qtr": 1495600000.0,
         "net_profit_ttm": 1017300000.0,
-        "revenue_ttm": 5928800000.0
+        "revenue_ttm": 5928800000.0,
+        "graham_number": 365.83,
+        "earnings_yield": 3.42,
+        "peg_ratio": 4.4,
+        "dupont_net_margin": 17.16,
+        "dupont_asset_turnover": null,
+        "dupont_equity_multiplier": null,
+        "dupont_roe": null,
+        "debt_to_equity": null,
+        "net_interest_margin": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -177,7 +195,16 @@
         "net_profit_till_qtr": 511800000.0,
         "revenue_till_qtr": 2968200000.0,
         "net_profit_ttm": 1076600000.0,
-        "revenue_ttm": 5995200000.0
+        "revenue_ttm": 5995200000.0,
+        "graham_number": 375.97,
+        "earnings_yield": 3.86,
+        "peg_ratio": 1.81,
+        "dupont_net_margin": 17.96,
+        "dupont_asset_turnover": null,
+        "dupont_equity_multiplier": null,
+        "dupont_roe": null,
+        "debt_to_equity": null,
+        "net_interest_margin": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -254,7 +281,16 @@
         "net_profit_till_qtr": 853600000.0,
         "revenue_till_qtr": 4493700000.0,
         "net_profit_ttm": 1210700000.0,
-        "revenue_ttm": 6069800000.0
+        "revenue_ttm": 6069800000.0,
+        "graham_number": 406.74,
+        "earnings_yield": 3.92,
+        "peg_ratio": 0.55,
+        "dupont_net_margin": 19.95,
+        "dupont_asset_turnover": 0.1218,
+        "dupont_equity_multiplier": 6.27,
+        "dupont_roe": 15.24,
+        "debt_to_equity": 0.4,
+        "net_interest_margin": null
       },
       "raw": {
         "Paid Up Capital": 3215345870.0,
@@ -353,7 +389,16 @@
         "net_profit_till_qtr": 1212900000.0,
         "revenue_till_qtr": 6122300000.0,
         "net_profit_ttm": 1212900000.0,
-        "revenue_ttm": 6122300000.0
+        "revenue_ttm": 6122300000.0,
+        "graham_number": 415.58,
+        "earnings_yield": 3.65,
+        "peg_ratio": 1.29,
+        "dupont_net_margin": 19.81,
+        "dupont_asset_turnover": 0.1183,
+        "dupont_equity_multiplier": 6.25,
+        "dupont_roe": 14.65,
+        "debt_to_equity": 0.37,
+        "net_interest_margin": null
       },
       "raw": {
         "Paid Up Capital": 3215345870.0,
@@ -452,7 +497,16 @@
         "net_profit_till_qtr": 269000000.0,
         "revenue_till_qtr": 1651200000.0,
         "net_profit_ttm": 1244400000.0,
-        "revenue_ttm": 6277800000.0
+        "revenue_ttm": 6277800000.0,
+        "graham_number": 427.94,
+        "earnings_yield": 3.79,
+        "peg_ratio": 1.18,
+        "dupont_net_margin": 19.82,
+        "dupont_asset_turnover": 0.1168,
+        "dupont_equity_multiplier": 6.28,
+        "dupont_roe": 14.54,
+        "debt_to_equity": 0.35,
+        "net_interest_margin": null
       },
       "raw": {
         "Paid Up Capital": 3215345870.0,
@@ -551,7 +605,16 @@
         "net_profit_till_qtr": 576100000.0,
         "revenue_till_qtr": 3247100000.0,
         "net_profit_ttm": 1277100000.0,
-        "revenue_ttm": 6401200000.0
+        "revenue_ttm": 6401200000.0,
+        "graham_number": 430.86,
+        "earnings_yield": 3.7,
+        "peg_ratio": 1.45,
+        "dupont_net_margin": 19.95,
+        "dupont_asset_turnover": 0.1166,
+        "dupont_equity_multiplier": 6.5,
+        "dupont_roe": 15.12,
+        "debt_to_equity": 0.33,
+        "net_interest_margin": null
       },
       "raw": {
         "Paid Up Capital": 3617264100.0,
@@ -650,7 +713,16 @@
         "net_profit_till_qtr": 906500000.0,
         "revenue_till_qtr": 4910900000.0,
         "net_profit_ttm": 1265800000.0,
-        "revenue_ttm": 6539500000.0
+        "revenue_ttm": 6539500000.0,
+        "graham_number": 436.42,
+        "earnings_yield": 3.92,
+        "peg_ratio": 5.6,
+        "dupont_net_margin": 19.36,
+        "dupont_asset_turnover": 0.1144,
+        "dupont_equity_multiplier": 6.53,
+        "dupont_roe": 14.46,
+        "debt_to_equity": 0.33,
+        "net_interest_margin": null
       },
       "raw": {
         "Paid Up Capital": 3617264100.0,

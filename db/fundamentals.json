@@ -141,7 +141,9 @@
     "eps": 31.57,
     "bookValue": 243.3,
     "peRatio": 16.66,
-    "pbRatio": 2.16
+    "pbRatio": 2.16,
+    "promoterHolding": 60.0,
+    "publicFloat": 40.0
   },
   "HDL": {
     "eps": 28.89,
