@@ -19,3 +19,10 @@ This document outlines workspace-specific rules and constraints that the AI agen
   1. **Definition:** Core meaning of the ratio.
   2. **Ranges & Benchmarks:** Explicit values showing what constitutes a "Good Range" vs. a "Warning Threshold".
   3. **Trend & Growth Guide:** Clear advice on how to evaluate the direction of growth or change (e.g., whether growth is positive or indicates warning signs).
+
+## 🚀 Git Workflow
+- **Incremental Commits:** When syncing changes to GitHub, make separate, logical commits for each component or feature changed (e.g., commit navigation changes, ticker changes, and server changes separately). Do not package multiple distinct tasks into a single monolithic commit.
+
+## 📰 News & Ticker Freshness
+- **Lookback Cutoff:** Active real-time components (such as the news ticker marquee) must exclude news articles older than 90 days to prevent stale or irrelevant historical context from cluttering current views.
+
