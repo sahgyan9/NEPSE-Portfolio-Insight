@@ -30,3 +30,8 @@ This document outlines workspace-specific rules and constraints that the AI agen
 ## 📰 News & Ticker Freshness
 - **Lookback Cutoff:** Active real-time components (such as the news ticker marquee) must exclude news articles older than 90 days to prevent stale or irrelevant historical context from cluttering current views.
 
+## ⚡ Strict Async Timeouts (No Indefinite Hangs)
+- **Timeouts on External Requests:** When writing or modifying backend server code that fetches data from third-party APIs or scrapers (e.g., NEPSE, ShareBazaar), NEVER rely on default timeout behavior. All `await` calls to external fetchers must be explicitly wrapped with a strict timeout (e.g., `asyncio.wait_for(..., timeout=3.0)`) to ensure the server gracefully falls back to cached data or returns an error payload without freezing the entire application thread.
+
+## 🗑️ Deletion & State Management Scoping
+- **Superficial vs. Core Deletions:** If a user requests to "delete" or "remove" an item in the context of an annoying UI element, mislabeled text, or news ticker, assume the scope of deletion is strictly limited to that superficial data layer (e.g., `db/news.json`). NEVER delete core user state records (like financial holdings in `db/portfolio.json` or core configurations) without explicitly confirming the destructive action with the user first, as this causes catastrophic drops in calculated metrics.
