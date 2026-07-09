@@ -19,6 +19,16 @@ export interface QuarterlyComputed {
   net_profit_ttm: number | null;
   revenue_ttm: number | null;
   roe_reported: number | null;
+  // Derived metrics
+  graham_number?: number | null;
+  earnings_yield?: number | null;
+  peg_ratio?: number | null;
+  debt_to_equity?: number | null;
+  net_interest_margin?: number | null;
+  dupont_net_margin?: number | null;
+  dupont_asset_turnover?: number | null;
+  dupont_equity_multiplier?: number | null;
+  dupont_roe?: number | null;
 }
 
 export interface QuarterlyYoY {
