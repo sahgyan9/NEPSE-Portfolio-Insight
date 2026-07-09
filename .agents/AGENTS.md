@@ -19,6 +19,10 @@ This document outlines workspace-specific rules and constraints that the AI agen
   1. **Definition:** Core meaning of the ratio.
   2. **Ranges & Benchmarks:** Explicit values showing what constitutes a "Good Range" vs. a "Warning Threshold".
   3. **Trend & Growth Guide:** Clear advice on how to evaluate the direction of growth or change (e.g., whether growth is positive or indicates warning signs).
+- **Interactive Text Signifiers:** Any text or table cells that trigger page transitions or navigation (such as company names in the holdings table) must be styled with a dashed bottom border by default to signify their clickability. On hover, the border must transition to a solid line and highlight in the primary brand color to confirm interactivity.
+- **Dual Y-Axis Scaling:** When plotting metrics with vastly different ranges (such as scale metrics in Millions/Crores and ratio metrics in Rupees or Percentages) on the same chart, implement a dual Y-axis layout. This prevents smaller values from being flat-lined and rendered unreadable. Dynamically hide the secondary axis if no metrics mapped to it are active.
+- **Cache Validity Checking:** In-memory or persistent cache checks on the frontend must check for object completeness rather than relying solely on timestamps. If the cached record contains null values for critical metrics (such as the last traded price), invalidate the cache entry and force a new API fetch.
+- **Query Parameter Routing:** Detail pages that show data for a selected item must synchronize their active state (such as the selected stock symbol) with query parameters in the URL. This supports persistence on browser reload and enables deep linking directly from dashboards or table links.
 
 ## 🚀 Git Workflow
 - **Incremental Commits:** When syncing changes to GitHub, make separate, logical commits for each component or feature changed (e.g., commit navigation changes, ticker changes, and server changes separately). Do not package multiple distinct tasks into a single monolithic commit.
