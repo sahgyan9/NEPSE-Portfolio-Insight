@@ -1,11 +1,35 @@
 {
   "totalValue": 342212.9927,
   "holdingCount": 25,
-  "volatilityScore": 0.25,
+  "volatilityScore": 0.246,
   "sectorExposure": [
     {
       "sector": "Others",
-      "weight": 1.0
+      "weight": 0.3467
+    },
+    {
+      "sector": "Commercial Bank",
+      "weight": 0.2537
+    },
+    {
+      "sector": "Hydropower",
+      "weight": 0.1785
+    },
+    {
+      "sector": "Manufacturing",
+      "weight": 0.1249
+    },
+    {
+      "sector": "Unknown",
+      "weight": 0.0592
+    },
+    {
+      "sector": "Hotels",
+      "weight": 0.029
+    },
+    {
+      "sector": "Life Insurance",
+      "weight": 0.008
     }
   ],
   "suggestion": "BALANCED: Your portfolio has a healthy mix of defensive and growth variance.",

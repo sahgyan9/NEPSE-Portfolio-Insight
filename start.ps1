@@ -4,7 +4,15 @@
 Write-Host ""
 Write-Host "Starting Portfolio Insight services..." -ForegroundColor Green
 
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+# Resolve script directory robustly (works when called from .bat, double-click, or PS directly)
+if ($PSScriptRoot -and (Test-Path $PSScriptRoot)) {
+    $scriptDir = $PSScriptRoot
+} elseif ($MyInvocation.MyCommand.Path) {
+    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+} else {
+    $scriptDir = (Get-Location).Path
+}
+Write-Host "Script directory: $scriptDir" -ForegroundColor DarkGray
 
 # 1. Verify virtual environment exists
 $venvDir = "$scriptDir\.venv"
@@ -66,8 +74,41 @@ if ($ready) {
     Write-Host ""
     Write-Host "Services started successfully!" -ForegroundColor Green
     Write-Host "- Portfolio Database: http://localhost:5001" -ForegroundColor Gray
-    Write-Host "- NEPSE Server: http://localhost:8000" -ForegroundColor Gray
+    Write-Host "- NEPSE Server:       http://localhost:8000" -ForegroundColor Gray
 } else {
     Write-Host "WARNING: Servers are taking longer than usual to start. Please check the logs if the UI cannot connect." -ForegroundColor Yellow
+}
+Write-Host ""
+
+# 6. Launch Vite dev server in a new background window
+Write-Host "Launching Vite dev server (port 5173)..." -ForegroundColor Cyan
+Start-Process -FilePath "cmd.exe" -ArgumentList "/c cd /d `"$scriptDir`" && npm run dev" -WindowStyle Minimized
+
+# 7. Poll http://localhost:5173 until Vite is ready (max 45 seconds)
+Write-Host "Waiting for Vite to be ready..." -ForegroundColor DarkGray
+$viteReady = $false
+for ($j = 0; $j -lt 30; $j++) {
+    try {
+        $response = Invoke-WebRequest -Uri "http://localhost:5173" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
+        if ($response.StatusCode -ge 100) { $viteReady = $true; break }
+    } catch { }
+    Start-Sleep -Milliseconds 1500
+}
+
+# 8. Open the app in Chrome (fallback to default browser)
+$appUrl = "http://localhost:5173"
+$chromePaths = @(
+    "$env:ProgramFiles\Google\Chrome\Application\chrome.exe",
+    "$env:ProgramFiles(x86)\Google\Chrome\Application\chrome.exe",
+    "$env:LocalAppData\Google\Chrome\Application\chrome.exe"
+)
+$chromeExe = $chromePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+if ($chromeExe) {
+    Write-Host "Opening app in Chrome: $appUrl" -ForegroundColor Green
+    Start-Process -FilePath $chromeExe -ArgumentList $appUrl
+} else {
+    Write-Host "Chrome not found - opening in default browser: $appUrl" -ForegroundColor Yellow
+    Start-Process $appUrl
 }
 Write-Host ""
