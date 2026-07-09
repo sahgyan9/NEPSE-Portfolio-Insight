@@ -34,6 +34,20 @@ export interface StockHolding {
   dupontAssetTurnover?: number | null;
   dupontEquityMultiplier?: number | null;
   dupontRoe?: number | null;
+  operatingProfitMargin?: number | null;
+  revenuePerShare?: number | null;
+  qoqProfitMomentum?: number | null;
+  loanToAsset?: number | null;
+  efficiencyRatio?: number | null;
+  interestCoverage?: number | null;
+  fixedAssetTurnover?: number | null;
+  investmentYield?: number | null;
+  combinedRatio?: number | null;
+  high52?: number | null;
+  low52?: number | null;
+  promoterHolding?: number | null;
+  publicFloat?: number | null;
+  avgVolume120d?: number | null;
 }
 
 export interface PortfolioSummary {

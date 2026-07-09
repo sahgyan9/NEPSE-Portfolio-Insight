@@ -81,8 +81,10 @@ def scrape_fundamental(symbol):
                 db = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
             db = {}
-            
-        db[symbol] = fundamental_data
+        existing = db.setdefault(symbol, {})
+        for k in ["eps", "bookValue", "peRatio", "pbRatio"]:
+            if k in fundamental_data and fundamental_data[k] is not None:
+                existing[k] = fundamental_data[k]
         
         os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
         with open(DB_PATH, 'w', encoding='utf-8') as f:

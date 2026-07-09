@@ -267,6 +267,20 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 dupontAssetTurnover: fundamentals?.dupont_asset_turnover || null,
                 dupontEquityMultiplier: fundamentals?.dupont_equity_multiplier || null,
                 dupontRoe: fundamentals?.dupont_roe || null,
+                operatingProfitMargin: fundamentals?.operating_profit_margin || null,
+                revenuePerShare: fundamentals?.revenue_per_share || null,
+                qoqProfitMomentum: fundamentals?.qoq_profit_momentum || null,
+                loanToAsset: fundamentals?.loan_to_asset || null,
+                efficiencyRatio: fundamentals?.efficiency_ratio || null,
+                interestCoverage: fundamentals?.interest_coverage || null,
+                fixedAssetTurnover: fundamentals?.fixed_asset_turnover || null,
+                investmentYield: fundamentals?.investment_yield || null,
+                combinedRatio: fundamentals?.combined_ratio || null,
+                high52: fundamentals?.high52 || null,
+                low52: fundamentals?.low52 || null,
+                promoterHolding: fundamentals?.promoterHolding || null,
+                publicFloat: fundamentals?.publicFloat || null,
+                avgVolume120d: fundamentals?.avgVolume120d || null,
             };
         });
     }, []);

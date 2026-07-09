@@ -15,25 +15,41 @@
     "eps": 8.55,
     "bookValue": 131.17,
     "peRatio": 52.87,
-    "pbRatio": 3.45
+    "pbRatio": 3.45,
+    "promoterHolding": 70.0,
+    "publicFloat": 30.0,
+    "high52": 526.33,
+    "low52": 412.0
   },
   "NIMB": {
     "eps": 15.72,
     "bookValue": 199.72,
     "peRatio": 12.28,
-    "pbRatio": 0.97
+    "pbRatio": 0.97,
+    "promoterHolding": 79.45,
+    "publicFloat": 20.55,
+    "high52": 242.64,
+    "low52": 184.6
   },
   "BHL": {
     "eps": 4.6,
     "bookValue": 79.95,
     "peRatio": 45.15,
-    "pbRatio": 2.6
+    "pbRatio": 2.6,
+    "promoterHolding": 0.0,
+    "publicFloat": 100.0,
+    "high52": 257.7,
+    "low52": 167.0
   },
   "SNLI": {
     "eps": null,
     "bookValue": null,
     "peRatio": null,
-    "pbRatio": null
+    "pbRatio": null,
+    "promoterHolding": 70.0,
+    "publicFloat": 30.0,
+    "high52": 504.49,
+    "low52": 392.38
   },
   "NIBLSF": {
     "eps": 0.0,
@@ -45,13 +61,21 @@
     "eps": 6.63,
     "bookValue": 121.0,
     "peRatio": 72.27,
-    "pbRatio": 3.96
+    "pbRatio": 3.96,
+    "promoterHolding": 0.0,
+    "publicFloat": 100.0,
+    "high52": 530.29,
+    "low52": 429.63
   },
   "SAHAS": {
     "eps": 27.36,
     "bookValue": 176.74,
     "peRatio": 23.58,
-    "pbRatio": 3.65
+    "pbRatio": 3.65,
+    "promoterHolding": 0.0,
+    "publicFloat": 100.0,
+    "high52": 687.0,
+    "low52": 487.6
   },
   "NBF3": {
     "eps": 0.0,
@@ -63,13 +87,20 @@
     "eps": 6.51,
     "bookValue": 83.67,
     "peRatio": 52.05,
-    "pbRatio": 4.05
+    "pbRatio": 4.05,
+    "publicFloat": 100.0,
+    "high52": 476.76,
+    "low52": 299.9
   },
   "HRL": {
     "eps": 3.28,
     "bookValue": 150.18,
     "peRatio": 176.28,
-    "pbRatio": 3.85
+    "pbRatio": 3.85,
+    "promoterHolding": 70.0,
+    "publicFloat": 29.4,
+    "high52": 1103.73,
+    "low52": 569.5
   },
   "CSBY": {
     "eps": 0.0,
@@ -81,37 +112,61 @@
     "eps": -1.03,
     "bookValue": 46.69,
     "peRatio": -184.54,
-    "pbRatio": 4.07
+    "pbRatio": 4.07,
+    "publicFloat": 100.0,
+    "high52": 238.0,
+    "low52": 169.1
   },
   "GCIL": {
     "eps": -5.27,
     "bookValue": 168.7,
     "peRatio": -65.6,
-    "pbRatio": 2.05
+    "pbRatio": 2.05,
+    "promoterHolding": 80.0,
+    "publicFloat": 19.76,
+    "high52": 509.03,
+    "low52": 336.0
   },
   "NTC": {
     "eps": 33.88,
     "bookValue": 550.88,
     "peRatio": 25.0,
-    "pbRatio": 1.54
+    "pbRatio": 1.54,
+    "sharesOutstanding": 18000000000.0,
+    "promoterHolding": 91.52,
+    "publicFloat": 8.48,
+    "high52": 929.41,
+    "low52": 808.0
   },
   "NICA": {
     "eps": 0.97,
     "bookValue": 172.97,
     "peRatio": 343.33,
-    "pbRatio": 1.93
+    "pbRatio": 1.93,
+    "promoterHolding": 51.0,
+    "publicFloat": 49.0,
+    "high52": 420.05,
+    "low52": 306.4
   },
   "SARBTM": {
     "eps": 25.02,
     "bookValue": 195.96,
     "peRatio": 32.11,
-    "pbRatio": 4.1
+    "pbRatio": 4.1,
+    "promoterHolding": 87.1,
+    "publicFloat": 12.04,
+    "high52": 958.86,
+    "low52": 771.43
   },
   "SONA": {
     "eps": 10.02,
     "bookValue": 197.22,
     "peRatio": 41.65,
-    "pbRatio": 2.12
+    "pbRatio": 2.12,
+    "promoterHolding": 60.0,
+    "publicFloat": 37.58,
+    "high52": 513.46,
+    "low52": 401.0
   },
   "NMBSBFE": {
     "eps": null,
@@ -129,7 +184,12 @@
     "eps": 7.86,
     "bookValue": 171.96,
     "peRatio": 25.0,
-    "pbRatio": 1.14
+    "pbRatio": 1.14,
+    "sharesOutstanding": 22581662530,
+    "promoterHolding": 72.99,
+    "publicFloat": 27.01,
+    "high52": 249.98,
+    "low52": 186.0
   },
   "KDBY": {
     "eps": 0.0,
@@ -143,12 +203,31 @@
     "peRatio": 16.66,
     "pbRatio": 2.16,
     "promoterHolding": 60.0,
-    "publicFloat": 40.0
+    "publicFloat": 40.0,
+    "high52": 554.63,
+    "low52": 483.0
   },
   "HDL": {
     "eps": 28.89,
     "bookValue": 131.8,
     "peRatio": 39.67,
-    "pbRatio": 8.7
+    "pbRatio": 8.7,
+    "promoterHolding": 58.0,
+    "publicFloat": 42.0,
+    "high52": 1271.4,
+    "low52": 1015.38
+  },
+  "CBBL": {
+    "promoterHolding": 51.0,
+    "publicFloat": 49.0,
+    "high52": 999.5,
+    "low52": 822.22
+  },
+  "SHL": {
+    "sharesOutstanding": 1175110098.97,
+    "promoterHolding": 69.0,
+    "publicFloat": 31.0,
+    "high52": 535.0,
+    "low52": 415.83
   }
 }

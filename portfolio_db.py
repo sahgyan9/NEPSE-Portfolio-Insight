@@ -364,7 +364,7 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                                         fundamentals[sym]["pbRatio"] = computed["pb_ratio"]
                                         
                                     # Add derived metrics
-                                    for key in ["graham_number", "earnings_yield", "peg_ratio", "debt_to_equity", "net_interest_margin", "dupont_net_margin", "dupont_asset_turnover", "dupont_equity_multiplier", "dupont_roe"]:
+                                    for key in ["graham_number", "earnings_yield", "peg_ratio", "debt_to_equity", "net_interest_margin", "dupont_net_margin", "dupont_asset_turnover", "dupont_equity_multiplier", "dupont_roe", "operating_profit_margin", "revenue_per_share", "qoq_profit_momentum", "loan_to_asset", "efficiency_ratio", "interest_coverage", "fixed_asset_turnover", "investment_yield", "combined_ratio"]:
                                         if key in computed and computed[key] is not None:
                                             fundamentals[sym][key] = computed[key]
                         except Exception as e:
