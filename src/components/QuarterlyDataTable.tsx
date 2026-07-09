@@ -192,7 +192,28 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
   let rows: RowDef[] = [];
   
   if (mode === 'screen1') {
-    rows = SCREEN1_ROWS;
+    const rawSector = displayQ[0]?.sector || "";
+    const sector = rawSector.toLowerCase();
+    const isBankOrMicro = sector.includes("bank") || sector.includes("microfinance") || sector.includes("laghubitta");
+    const isInsurance = sector.includes("insurance");
+    const isCapitalHeavy = sector.includes("hydro") || sector.includes("manufactur") || sector.includes("hotel") || sector.includes("trading") || sector.includes("telecom");
+
+    rows = SCREEN1_ROWS.filter(row => {
+      const label = row.label;
+      if (label === 'Net Interest Margin' || label === 'Loan-to-Asset Ratio' || label === 'Efficiency Ratio') {
+        return isBankOrMicro;
+      }
+      if (label.startsWith('Insurance:')) {
+        return isInsurance;
+      }
+      if (label === 'Fixed Asset Turnover') {
+        return isCapitalHeavy;
+      }
+      if (label === 'Debt-to-Equity') {
+        return !isBankOrMicro && !isInsurance;
+      }
+      return true;
+    });
   } else {
     // Dynamically generate Screen 2 rows based on keys present in raw data
     // Use the raw_keys_order from the most recent quarter to maintain sorting
