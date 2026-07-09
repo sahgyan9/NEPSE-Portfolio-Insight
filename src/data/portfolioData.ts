@@ -24,6 +24,16 @@ export interface StockHolding {
   latestBonusRatio?: string | null;  // e.g., "1:1", "7:1"
   bonusShares?: number;  // Number of bonus shares to receive
   bonusShareValue?: number;  // Value of bonus shares at current price
+  // Derived metrics
+  grahamNumber?: number | null;
+  earningsYield?: number | null;
+  pegRatio?: number | null;
+  debtToEquity?: number | null;
+  netInterestMargin?: number | null;
+  dupontNetMargin?: number | null;
+  dupontAssetTurnover?: number | null;
+  dupontEquityMultiplier?: number | null;
+  dupontRoe?: number | null;
 }
 
 export interface PortfolioSummary {
@@ -97,33 +107,7 @@ const companyInfo: Record<string, { fullName: string; sector: string }> = {
   NMBSBFE: { fullName: "NMB Saral Bachat Fund - E", sector: "Mutual Fund" },
 };
 
-// Fundamental data - P/B ratio is calculated dynamically from LTP/bookValue
-const fundamentalData: Record<string, { peRatio: number | null; eps: number | null; bookValue: number; dividendYield: number }> = {
-  BHL: { peRatio: 15.2, eps: 12.0, bookValue: 86.8, dividendYield: 3.5 },
-  CBBL: { peRatio: 12.5, eps: 83.0, bookValue: 576.5, dividendYield: 2.8 },
-  CHCL: { peRatio: 18.7, eps: 27.0, bookValue: 158.0, dividendYield: 4.2 },
-  CLI: { peRatio: 10.8, eps: 45.9, bookValue: 330.7, dividendYield: 2.5 },
-  CSY: { peRatio: null, eps: null, bookValue: 10.53, dividendYield: 0 },
-  GCIL: { peRatio: 22.1, eps: 20.6, bookValue: 189.3, dividendYield: 1.8 },
-  HBL: { peRatio: 8.2, eps: 24.3, bookValue: 234.0, dividendYield: 5.2 },
-  HDL: { peRatio: 25.3, eps: 47.8, bookValue: 115.33, dividendYield: 3.0 },
-  HRL: { peRatio: 14.5, eps: 60.0, bookValue: 310.7, dividendYield: 2.2 },
-  KDBY: { peRatio: null, eps: null, bookValue: 10.0, dividendYield: 0 },
-  MMF1: { peRatio: null, eps: null, bookValue: 10.0, dividendYield: 0 },
-  NABIL: { peRatio: 9.5, eps: 54.2, bookValue: 429.1, dividendYield: 4.8 },
-  NBF3: { peRatio: null, eps: null, bookValue: 10.0, dividendYield: 0 },
-  NIBLSF: { peRatio: null, eps: null, bookValue: 10.0, dividendYield: 0 },
-  NICA: { peRatio: 7.8, eps: 42.9, bookValue: 372.1, dividendYield: 4.5 },
-  NIMB: { peRatio: 6.5, eps: 31.1, bookValue: 269.3, dividendYield: 5.0 },
-  NMBSBFE: { peRatio: null, eps: null, bookValue: 10.0, dividendYield: 0 },
-  NTC: { peRatio: 12.0, eps: 72.2, bookValue: 481.1, dividendYield: 6.5 },
-  SAHAS: { peRatio: 16.8, eps: 33.7, bookValue: 226.2, dividendYield: 3.8 },
-  SARBTM: { peRatio: null, eps: null, bookValue: 198, dividendYield: 0 },
-  SGHC: { peRatio: 19.2, eps: 22.6, bookValue: 149.7, dividendYield: 2.8 },
-  SNLI: { peRatio: 11.2, eps: 46.0, bookValue: 321.8, dividendYield: 2.0 },
-  SONA: { peRatio: 20.5, eps: 21.3, bookValue: 140.9, dividendYield: 2.5 },
-  UPPER: { peRatio: 8.5, eps: 21.5, bookValue: 166.4, dividendYield: 7.2 },
-};
+import { fundamentalData } from './companyRegistry';
 
 // Portfolio data from CSV (WACC/Cost) and PDF (Current Values)
 const rawPortfolioData = [
