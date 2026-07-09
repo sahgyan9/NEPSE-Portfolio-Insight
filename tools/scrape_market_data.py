@@ -11,9 +11,6 @@ DB_PATH = os.path.join(PROJECT_ROOT, "db", "fundamentals.json")
 PORTFOLIO_PATH = os.path.join(PROJECT_ROOT, "db", "portfolio.json")
 ENV_PATH = os.path.join(PROJECT_ROOT, ".env")
 
-# Default safety-net fallback key
-SAFETY_FALLBACK_KEY = "fc-56a6f95e247d4c70a9b8f70d5b135db3"
-
 def get_api_keys():
     """Load API keys from .env and return a list of [primary, secondary]."""
     primary = None
@@ -26,13 +23,17 @@ def get_api_keys():
                 elif line.strip().startswith("FIRECRAWL_API_KEY_2="):
                     secondary = line.strip().split("=")[1].strip().strip('"').strip("'")
     
+    # Fallback to system environment variables
+    if not primary:
+        primary = os.environ.get("FIRECRAWL_API_KEY")
+    if not secondary:
+        secondary = os.environ.get("FIRECRAWL_API_KEY_2")
+
     keys = []
     if primary:
         keys.append(primary)
     if secondary:
         keys.append(secondary)
-    if SAFETY_FALLBACK_KEY not in keys:
-        keys.append(SAFETY_FALLBACK_KEY)
     return keys
 
 def scrape_market_data_for_symbol(symbol, api_key):
