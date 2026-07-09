@@ -12,19 +12,53 @@ def load_json(filepath):
 # Sector volatility heuristics (based on frontier market models from arXiv q-fin)
 # Lower is less volatile.
 SECTOR_VOLATILITY = {
-    "Commercial Banks": 0.15,
-    "Development Banks": 0.20,
+    "Commercial Bank": 0.15,
+    "Development Bank": 0.20,
     "Life Insurance": 0.22,
-    "Non Life Insurance": 0.25,
+    "Non-Life Insurance": 0.25,
     "Microfinance": 0.35,
     "Hydropower": 0.40,
     "Finance": 0.30,
-    "Manufacturing And Processing": 0.18,
-    "Hotels And Tourism": 0.38,
+    "Manufacturing": 0.18,
+    "Hotels": 0.38,
     "Investment": 0.25,
     "Trading": 0.30,
+    "Telecom": 0.12,
+    "Mutual Fund": 0.10,
     "Others": 0.25
 }
+
+def normalize_sector(sector):
+    if not sector:
+        return "Others"
+    s = sector.strip().lower()
+    if "bank" in s:
+        if "development" in s:
+            return "Development Bank"
+        return "Commercial Bank"
+    if "microfinance" in s or "laghubitta" in s:
+        return "Microfinance"
+    if "life insurance" in s:
+        return "Life Insurance"
+    if "non-life" in s or "non life" in s or "reinsurance" in s:
+        return "Non-Life Insurance"
+    if "insurance" in s:
+        return "Life Insurance" # default fallback
+    if "hydro" in s:
+        return "Hydropower"
+    if "manufactur" in s or "distiller" in s or "cement" in s:
+        return "Manufacturing"
+    if "hotel" in s or "tourism" in s:
+        return "Hotels"
+    if "invest" in s:
+        return "Investment"
+    if "trade" in s or "oil" in s:
+        return "Trading"
+    if "telecom" in s or "phone" in s or "communication" in s:
+        return "Telecom"
+    if "mutual" in s or "fund" in s:
+        return "Mutual Fund"
+    return sector.title()
 
 def analyze_portfolio():
     print("="*60)
@@ -58,22 +92,21 @@ def analyze_portfolio():
         value = h.get("quantity", 0) * h.get("avgCost", 0)
         weight = value / total_value
         
-        # Get sector from fundamentals if available
+        # Get sector from fundamentals if available, otherwise check quarterly data
         fund = fundamentals.get(sym, {})
-        # For this heuristic, if sector isn't in fundamental, we'll try to guess or use Others
-        # NepseAlpha usually doesn't give sector in our raw fundamental pull, so we might need to fallback.
-        # Let's just assign a default volatility if unknown, but we can look for "sector" key.
-        sector = fund.get("sector", "Others")
-        if sector not in SECTOR_VOLATILITY:
-            # Map common abbreviations
-            if "bank" in sector.lower(): vol = 0.15
-            elif "hydro" in sector.lower(): vol = 0.40
-            elif "micro" in sector.lower(): vol = 0.35
-            else: vol = 0.25
-        else:
-            vol = SECTOR_VOLATILITY[sector]
+        sector = fund.get("sector")
+        
+        if not sector:
+            # Fallback to quarterly JSON sector
+            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
+            q_data = load_json(q_path)
+            if q_data and q_data.get("sector"):
+                sector = q_data["sector"]
+                
+        normalized_sector = normalize_sector(sector)
+        vol = SECTOR_VOLATILITY.get(normalized_sector, 0.25)
             
-        sector_exposure[sector] = sector_exposure.get(sector, 0) + weight
+        sector_exposure[normalized_sector] = sector_exposure.get(normalized_sector, 0.0) + weight
         portfolio_volatility += (weight * vol)
         
     print(f"\nCurrent Portfolio Volatility Score: {portfolio_volatility:.3f} (Lower is safer)")

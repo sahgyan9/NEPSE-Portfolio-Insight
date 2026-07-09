@@ -10,8 +10,40 @@ FUNDAMENTALS_PROMPT = (
     "Net Profit Till Qtr, Revenue Till Qtr, Net Profit TTM, Revenue TTM) and all quarter columns."
 )
 
+ENV_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+SAFETY_FALLBACK_KEY = "fc-56a6f95e247d4c70a9b8f70d5b135db3"
+
+def get_api_keys():
+    primary = None
+    secondary = None
+    if os.path.exists(ENV_PATH):
+        with open(ENV_PATH, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith("FIRECRAWL_API_KEY="):
+                    primary = line.strip().split("=")[1].strip().strip('"').strip("'")
+                elif line.strip().startswith("FIRECRAWL_API_KEY_2="):
+                    secondary = line.strip().split("=")[1].strip().strip('"').strip("'")
+    
+    keys = []
+    if primary:
+        keys.append(primary)
+    if secondary:
+        keys.append(secondary)
+    if SAFETY_FALLBACK_KEY not in keys:
+        keys.append(SAFETY_FALLBACK_KEY)
+    return keys
+
 def _run(cmd):
-    return subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    api_keys = get_api_keys()
+    last_res = None
+    for api_key in api_keys:
+        env = os.environ.copy()
+        env["FIRECRAWL_API_KEY"] = api_key
+        res = subprocess.run(cmd, shell=True, env=env, capture_output=True, text=True)
+        if res.returncode == 0:
+            return res
+        last_res = res
+    return last_res
 
 def scrape_symbol(symbol):
     symbol = symbol.upper()
