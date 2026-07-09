@@ -56,6 +56,38 @@ SECTOR_MAPPING = {
     "NMBSBFE": "Mutual Fund"
 }
 
+def normalize_sector(sector):
+    if not sector:
+        return "Others"
+    s = sector.strip().lower()
+    if "bank" in s:
+        if "development" in s:
+            return "Development Bank"
+        return "Commercial Bank"
+    if "microfinance" in s or "laghubitta" in s:
+        return "Microfinance"
+    if "life insurance" in s:
+        return "Life Insurance"
+    if "non-life" in s or "non life" in s or "reinsurance" in s:
+        return "Non-Life Insurance"
+    if "insurance" in s:
+        return "Life Insurance" # default fallback
+    if "hydro" in s:
+        return "Hydropower"
+    if "manufactur" in s or "distiller" in s or "cement" in s:
+        return "Manufacturing"
+    if "hotel" in s or "tourism" in s:
+        return "Hotels"
+    if "invest" in s:
+        return "Investment"
+    if "trade" in s or "oil" in s:
+        return "Trading"
+    if "telecom" in s or "phone" in s or "communication" in s:
+        return "Telecom"
+    if "mutual" in s or "fund" in s:
+        return "Mutual Fund"
+    return sector.title()
+
 def load_json(filepath):
     if not os.path.exists(filepath):
         return None
@@ -66,11 +98,46 @@ def load_json(filepath):
             return None
 
 
+def get_sector_averages(fundamentals_data, db_dir):
+    sector_pe = {}
+    sector_pb = {}
+    
+    for sym, fund in fundamentals_data.items():
+        sector = SECTOR_MAPPING.get(sym)
+        if not sector:
+            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
+            q_data = load_json(q_path)
+            if q_data and q_data.get("sector"):
+                sector = q_data["sector"]
+        if not sector:
+            continue
+            
+        normalized = normalize_sector(sector)
+        if normalized == "Mutual Fund":
+            continue
+            
+        pe = fund.get("peRatio")
+        pb = fund.get("pbRatio")
+        
+        if pe is not None and pe > 0:
+            sector_pe.setdefault(normalized, []).append(pe)
+        if pb is not None and pb > 0:
+            sector_pb.setdefault(normalized, []).append(pb)
+            
+    averages = {}
+    for sect in sector_pe:
+        averages[sect] = {
+            "pe": sum(sector_pe[sect]) / len(sector_pe[sect]) if sector_pe[sect] else 20.0,
+            "pb": sum(sector_pb[sect]) / len(sector_pb[sect]) if sector_pb.get(sect) else 2.0
+        }
+    return averages
+
 def calculate_health():
     db_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db")
     portfolio_data = load_json(os.path.join(db_dir, "portfolio.json"))
     fundamentals_data = load_json(os.path.join(db_dir, "fundamentals.json")) or {}
     manual_dividends = load_json(os.path.join(db_dir, "manual_dividends.json")) or {"entries": []}
+    sector_averages = get_sector_averages(fundamentals_data, db_dir)
     
     if not portfolio_data or "holdings" not in portfolio_data or not portfolio_data["holdings"]:
         print("No portfolio holdings found.")
@@ -95,13 +162,24 @@ def calculate_health():
         current_value = qty * price
         total_value += current_value
         
+        # Determine sector dynamically
+        sector = SECTOR_MAPPING.get(sym)
+        if not sector:
+            # Try to read from quarterly report
+            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
+            q_data = load_json(q_path)
+            if q_data and q_data.get("sector"):
+                sector = q_data["sector"]
+        
+        normalized_sector = normalize_sector(sector)
+        
         holdings_processed.append({
             "symbol": sym,
             "quantity": qty,
             "avgCost": avg_cost,
             "currentPrice": price,
             "currentValue": current_value,
-            "sector": SECTOR_MAPPING.get(sym, "Others")
+            "sector": normalized_sector
         })
         
     if total_value == 0:
@@ -333,6 +411,37 @@ def calculate_health():
                 
                 scrip_score = 0.40 * roe_score + 0.30 * roa_score + 0.30 * growth_score
 
+        # Check promoter holdings and average volume if available in fundamentals.json
+        fund = fundamentals_data.get(sym, {})
+        promoter_holding = fund.get("promoterHolding")
+        avg_volume_120d = fund.get("avgVolume120d")
+        
+        # 1. Promoter holding check
+        if promoter_holding is not None:
+            min_promoter = 51.0 if sector in ["Commercial Bank", "Development Bank", "Life Insurance", "Non-Life Insurance"] else 30.0
+            if promoter_holding < min_promoter:
+                warnings.append(
+                    f"Low Promoter Shareholding: {sym} promoter holding is {promoter_holding:.1f}% "
+                    f"(minimum recommended: {min_promoter:.1f}%). Low skin-in-the-game by promoters "
+                    f"increases governance risks and potential for management misalignment."
+                )
+                recommendations.append(
+                    f"Investigate why promoters have reduced stake in {sym} and monitor management stability."
+                )
+                scrip_score = max(0.0, scrip_score - 15.0)
+                
+        # 2. Liquidity check
+        if avg_volume_120d is not None:
+            if avg_volume_120d < 5000:
+                warnings.append(
+                    f"Low Liquidity alert: {sym} has an average 120-day volume of {int(avg_volume_120d):,} shares. "
+                    f"Illiquid counters suffer from high slippage, making it hard to exit large positions quickly."
+                )
+                recommendations.append(
+                    f"Avoid building large positions in {sym} and be prepared for potential exit delays during market stress."
+                )
+                scrip_score = max(0.0, scrip_score - 10.0)
+
         fundamental_scores.append(scrip_score)
         fundamental_weights.append(weight)
         
@@ -373,7 +482,8 @@ def calculate_health():
         # PB Score
         pb_score = 60
         if pb is not None:
-            if pb < 1.2: pb_score = 100
+            if pb < 0: pb_score = 20
+            elif pb < 1.2: pb_score = 100
             elif pb <= 2.2: pb_score = 80
             elif pb <= 3.5: pb_score = 60
             elif pb <= 5.0: pb_score = 40
@@ -399,6 +509,21 @@ def calculate_health():
             peg_score = 20
             
         scrip_val_score = 0.40 * pe_score + 0.30 * pb_score + 0.30 * peg_score
+            
+        # Relative Valuation premium check
+        sect_avg = sector_averages.get(h["sector"])
+        if sect_avg and pe is not None and pe > 0:
+            avg_pe = sect_avg.get("pe")
+            if avg_pe and pe > 1.5 * avg_pe:
+                warnings.append(
+                    f"Relative Overvaluation Warning: {sym} P/E ({pe:.1f}) is more than 50% higher than its sector average P/E ({avg_pe:.1f}). "
+                    f"Paying an extreme premium relative to industry peers decreases your safety margin."
+                )
+                recommendations.append(
+                    f"Investigate if {sym} merits this premium, or consider shifting capital to cheaper peers in the {h['sector']} sector."
+                )
+                scrip_val_score = max(0.0, scrip_val_score - 15.0)
+
         valuation_scores.append(scrip_val_score)
 
     if holdings_processed:

@@ -258,6 +258,15 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 latestBonusRatio,
                 bonusShares,
                 bonusShareValue,
+                grahamNumber: fundamentals?.graham_number || null,
+                earningsYield: fundamentals?.earnings_yield || null,
+                pegRatio: fundamentals?.peg_ratio || null,
+                debtToEquity: fundamentals?.debt_to_equity || null,
+                netInterestMargin: fundamentals?.net_interest_margin || null,
+                dupontNetMargin: fundamentals?.dupont_net_margin || null,
+                dupontAssetTurnover: fundamentals?.dupont_asset_turnover || null,
+                dupontEquityMultiplier: fundamentals?.dupont_equity_multiplier || null,
+                dupontRoe: fundamentals?.dupont_roe || null,
             };
         });
     }, []);

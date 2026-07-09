@@ -153,6 +153,27 @@ export const METRIC_EDUCATION = {
             high: 'Strong asset base, good for stability',
         },
     },
+    grahamNumber: {
+        term: 'Graham Number',
+        definition: 'The maximum fair value price based on Benjamin Graham\'s classic formula (square root of 22.5 * EPS * Book Value).',
+        example: '√(22.5 * EPS * Book Value)',
+        goodRange: 'Current price < Graham Number (Margin of Safety)',
+        warningThreshold: 'Current price > Graham Number',
+    },
+    pegRatio: {
+        term: 'PEG Ratio (P/E to Growth)',
+        definition: 'Compares the P/E ratio to the company\'s YoY earnings growth rate to find value in growth.',
+        example: 'P/E Ratio / YoY TTM Net Profit Growth %',
+        goodRange: 'Below 1.0 (undervalued relative to growth)',
+        warningThreshold: 'Above 1.5 (expensive relative to growth)',
+    },
+    earningsYield: {
+        term: 'Earnings Yield',
+        definition: 'Shows earnings generated per rupee of stock price. The direct inverse of P/E, comparable to interest rates.',
+        example: '(EPS / Price) * 100',
+        goodRange: 'Above 8% (highly competitive with Fixed Deposits)',
+        warningThreshold: 'Below 4% (low yield compared to risk-free rate)',
+    },
 };
 
 // ============================================================
@@ -171,6 +192,7 @@ export const getMetricHealth = (
     }
 
     if (thresholds.lowerIsBetter) {
+        if (value < 0) return 'critical'; // Negative PE/PB signifies losses/insolvency
         if (value <= thresholds.excellent) return 'excellent';
         if (value <= thresholds.good) return 'good';
         if (value <= thresholds.fair) return 'fair';
@@ -245,10 +267,24 @@ export const getHealthIcon = (health: MetricHealth): string => {
     return icons[health];
 };
 
-/**
- * Calculate overall valuation score for a stock
- */
 export const calculateValuationScore = (holding: StockHolding): ValuationScore => {
+    if (holding.sector === 'Mutual Fund') {
+        return {
+            overallScore: 0,
+            status: 'unknown',
+            label: 'Mutual Fund (Not Rated)',
+            color: '#6b7280', // gray-500
+            icon: '⚪',
+            breakdown: {
+                peScore: 0,
+                pbScore: 0,
+                dividendScore: 0,
+                epsScore: 0,
+            },
+            recommendations: ['Valuation metrics are not applicable to Mutual Funds. Analyze fund Net Asset Value (NAV) instead.'],
+        };
+    }
+
     const peHealth = getMetricHealth(holding.peRatio, PE_THRESHOLDS);
     const pbHealth = getMetricHealth(holding.pbRatio, PB_THRESHOLDS);
     const dividendHealth = getMetricHealth(holding.dividendYield, DIVIDEND_THRESHOLDS);

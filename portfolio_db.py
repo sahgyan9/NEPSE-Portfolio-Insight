@@ -259,35 +259,40 @@ def cleanup_value_history(db):
     """
     Clean up value history by:
     1. Removing entries with value = 0
-    2. Keeping only the last entry per date (for old date-only entries)
-    3. Converting old date-only entries to ISO format
+    2. Keeping only the last entry per day (deduplicating multiple entries on the same day)
+    3. Ensuring all are in ISO format
     """
     history = db.get("valueHistory", [])
     if not history:
         return []
     
+    # Sort history by date first so that the last one per day is indeed the latest
+    history_sorted = sorted(history, key=lambda x: x.get("date", ""))
+    
     cleaned = {}
-    for h in history:
-        if h.get("value", 0) <= 0:
+    for h in history_sorted:
+        val = h.get("value", 0)
+        if val <= 0:
             continue
         
         date_str = h.get("date", "")
+        if not date_str:
+            continue
+            
+        day_key = date_str.split("T")[0]
         
         if "T" in date_str:
-            key = date_str
             iso_date = date_str
         else:
-            # For old date-only entries, keep only the last one per date
-            key = date_str
             iso_date = f"{date_str}T00:00:00"
-        
-        # Update (keeps last value for duplicates)
-        cleaned[key] = {
+            
+        # Overwrite previous entry on the same day (keeping the last/latest one)
+        cleaned[day_key] = {
             "date": iso_date,
             "invested": h.get("invested", 0),
             "value": h.get("value", 0)
         }
-    
+        
     # Sort by date and return as list
     sorted_history = sorted(cleaned.values(), key=lambda x: x["date"])
     return sorted_history
@@ -357,6 +362,11 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                                         fundamentals[sym]["peRatio"] = computed["pe_ratio"]
                                     if "pb_ratio" in computed and computed["pb_ratio"] is not None:
                                         fundamentals[sym]["pbRatio"] = computed["pb_ratio"]
+                                        
+                                    # Add derived metrics
+                                    for key in ["graham_number", "earnings_yield", "peg_ratio", "debt_to_equity", "net_interest_margin", "dupont_net_margin", "dupont_asset_turnover", "dupont_equity_multiplier", "dupont_roe"]:
+                                        if key in computed and computed[key] is not None:
+                                            fundamentals[sym][key] = computed[key]
                         except Exception as e:
                             print(f"Error reading quarterly data for {sym}: {e}")
                             
@@ -634,11 +644,24 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                     pass
             
             if should_record and current_value > 0:
-                db.setdefault("valueHistory", []).append({
-                    "date": timestamp,
-                    "invested": round(total_invested, 2),
-                    "value": round(current_value, 2)
-                })
+                history = db.setdefault("valueHistory", [])
+                today_str = datetime.now().strftime("%Y-%m-%d")
+                
+                updated = False
+                if history:
+                    last_entry = history[-1]
+                    if last_entry.get("date", "").startswith(today_str):
+                        last_entry["invested"] = round(total_invested, 2)
+                        last_entry["value"] = round(current_value, 2)
+                        last_entry["date"] = timestamp
+                        updated = True
+                        
+                if not updated:
+                    history.append({
+                        "date": timestamp,
+                        "invested": round(total_invested, 2),
+                        "value": round(current_value, 2)
+                    })
                 
                 # Keep only last 365 days of history (but allow many entries per day)
                 cutoff = datetime.now() - timedelta(days=365)
