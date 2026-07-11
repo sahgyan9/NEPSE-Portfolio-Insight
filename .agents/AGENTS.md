@@ -73,7 +73,25 @@ Add micro-animations, full JS interactivity, generated images, accessibility pas
 1. **Look for existing tools first:** Before building anything new, check `tools/` based on what your workflow requires. Only create new scripts when nothing exists for that task.
 2. **Learn and adapt when things fail:** When you hit an error, read the full traceback, fix the script, and retest. Document rate limits, timing quirks, or unexpected behavior in the workflow.
 3. **Keep workflows current:** Workflows should evolve as you learn. Update them when you find better methods or encounter constraints. Do not create or overwrite workflows without asking first.
-4. **Self-Improvement Loop:** Identify what broke -> Fix the tool -> Verify the fix -> Update the workflow -> Move on.
+4. **Enforce Prompt Learning:** Always read `prompt_learnings.md` at the start of any new session or task to load past rules. If the user provides feedback on your outputs or you refine your prompt approach, log the refinement history in `prompt_history/` and update the master `prompt_learnings.md` following `workflows/prompt_learning.md`.
+5. **Bootstrap Prompt Learning System:** At the beginning of any workspace setup, check if the prompt learning files exist. If they do not, automatically initialize them:
+   - Create `prompt_learnings.md` in the root directory.
+   - Create the directory `prompt_history/` and write `prompt_history/TEMPLATE.md` to define the history template.
+   - Create `workflows/prompt_learning.md` containing the SOP for prompt refinements.
+
+   Initialize these files using the standard templates defined globally in your system-injected instructions. If you need reference files, you can read the live master blueprints from the source workspace:
+   - Log: [prompt_learnings.md](file:///c:/Users/sahgy/Downloads/10hrs%20Video%20on%20Claude%20Code/prompt_learnings.md)
+   - Template: [TEMPLATE.md](file:///c:/Users/sahgy/Downloads/10hrs%20Video%20on%20Claude%20Code/prompt_history/TEMPLATE.md)
+   - Workflow: [prompt_learning.md](file:///c:/Users/sahgy/Downloads/10hrs%20Video%20on%20Claude%20Code/workflows/prompt_learning.md)
+6. **The Self-Improvement Loop:** Every failure or user course-correction is a chance to make the system stronger:
+   1. Identify what broke or what the user disliked in the prompt/execution.
+   2. Fix the tool or refine the prompt.
+   3. Verify the fix works.
+   4. Update the workflow with the new approach.
+   5. Log prompt adjustments in `prompt_history/` and update `prompt_learnings.md`.
+   6. Move on with a more robust system.
+
+   This loop is how the framework improves over time.
 
 ### File Structure & Directory Layout
 - **Deliverables:** Final outputs go to cloud services (Google Sheets, Slides, etc.) where the user can access them directly.
