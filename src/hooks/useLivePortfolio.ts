@@ -181,7 +181,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
     const buildHoldings = useCallback((
         portfolioData: RawPortfolioItem[],
         stockData: Map<string, ShareBazaarResponse>,
-        dividendData?: Map<string, unknown>,
+        dividendData?: Record<string, any>,
         manualDividends?: Map<string, ManualDividendRow>,
         dynamicFundamentals?: Record<string, any>
     ): StockHolding[] => {
@@ -218,6 +218,13 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 ? currentPrice / bookValue
                 : null;
 
+            // Calculate automated dividend average (bonus only)
+            const autoDivs = (dividendData && dividendData[item.scrip]) ? dividendData[item.scrip].dividends || [] : [];
+            let avgBonus = 0;
+            if (autoDivs.length > 0) {
+                avgBonus = autoDivs.reduce((sum: number, d: any) => sum + (Number(d.bonusPercent) || 0), 0) / autoDivs.length;
+            }
+
             // Use manual dividend entry if available
             const latestDividendPercent = manualDividend?.cashPercent || 0;
             const paidUpValue = getPaidUpValue(item.scrip);
@@ -250,7 +257,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 peRatio: fundamentals?.peRatio || null,
                 eps: fundamentals?.eps || null,
                 bookValue,
-                dividendYield: fundamentals?.dividendYield || null,
+                dividendYield: avgBonus > 0 ? avgBonus : (fundamentals?.dividendYield || null),
                 lastModified: item.lastModified,
                 latestDividendPercent: latestDividendPercent > 0 ? latestDividendPercent : null,
                 dividendIncome,
@@ -337,11 +344,24 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 console.error('[useLivePortfolio] Failed to fetch dynamic fundamentals', e);
             }
 
-            // No dividend API calls; manual entry only
-            const dividendData: Map<string, unknown> = new Map();
-            setDividendDataLoaded(manualDividends.size > 0);
+            // Fetch automated dividend data
+            let automatedDividends: Record<string, any> = {};
+            try {
+                const divRes = await fetch(
+                    import.meta.env.DEV
+                        ? '/api/nepse-server/api/dividends/data'
+                        : 'http://localhost:8000/api/dividends/data'
+                );
+                if (divRes.ok) {
+                    automatedDividends = await divRes.json();
+                }
+            } catch (e) {
+                console.error('[useLivePortfolio] Failed to fetch automated dividends', e);
+            }
+            
+            setDividendDataLoaded(Object.keys(automatedDividends).length > 0 || manualDividends.size > 0);
 
-            const newHoldings = buildHoldings(portfolioData, stockData, dividendData, manualDividends, dynamicFundamentals);
+            const newHoldings = buildHoldings(portfolioData, stockData, automatedDividends, manualDividends, dynamicFundamentals);
             setHoldings(newHoldings);
             setLastUpdated(new Date());
 

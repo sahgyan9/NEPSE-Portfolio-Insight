@@ -7,7 +7,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import {
   ArrowLeft, FileText, RefreshCw, Trash2,
   TrendingUp, BarChart2, Table2, Upload,
-  AlertCircle, Building2, Calendar, Loader2, Search, Download, X
+  AlertCircle, Building2, Calendar, Loader2, Search, Download, X, Coins
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -84,12 +84,14 @@ const QuarterlyPage = () => {
   const symbolParam = searchParams.get('symbol');
   const [selectedSymbol, setSelectedSymbol] = useState<string>(symbolParam?.toUpperCase() || '');
   const [symbolData, setSymbolData] = useState<SymbolQuarterlyData | null>(null);
+  const [dividendHistory, setDividendHistory] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
-  const [newSymbol, setNewSymbol] = useState('');
   const [activeTab, setActiveTab] = useState('trends');
   const [unfetchedSymbols, setUnfetchedSymbols] = useState<string[]>([]);
   const [stockSearchQuery, setStockSearchQuery] = useState('');
+  const [sectorFilter, setSectorFilter] = useState('all');
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const filteredStocks = useMemo(() => {
     return stocks.filter(stock => {
@@ -97,9 +99,17 @@ const QuarterlyPage = () => {
       const sym = (stock.symbol || '').toLowerCase();
       const name = (stock.company_name || '').toLowerCase();
       const q = stockSearchQuery.toLowerCase();
-      return sym.includes(q) || name.includes(q);
+      const matchesSearch = sym.includes(q) || name.includes(q);
+
+      let matchesSector = true;
+      if (sectorFilter !== 'all') {
+        const sector = (stock.sector || '').toLowerCase();
+        matchesSector = sector.includes(sectorFilter);
+      }
+
+      return matchesSearch && matchesSector;
     });
-  }, [stocks, stockSearchQuery]);
+  }, [stocks, stockSearchQuery, sectorFilter]);
 
   // Load stock list
   const loadStocks = useCallback(async () => {
@@ -158,6 +168,20 @@ const QuarterlyPage = () => {
     try {
       const data = await getQuarterlyData(symbol);
       setSymbolData(data);
+      
+      try {
+        const divUrl = import.meta.env.DEV ? `/api/nepse-server/api/dividends/history/${symbol}` : `http://localhost:8000/api/dividends/history/${symbol}`;
+        const res = await fetch(divUrl);
+        if (res.ok) {
+            const divData = await res.json();
+            setDividendHistory(divData.history || []);
+        } else {
+            setDividendHistory([]);
+        }
+      } catch (err) {
+        console.error("Failed to fetch dividend history", err);
+        setDividendHistory([]);
+      }
     } finally {
       setIsLoading(false);
     }
@@ -261,136 +285,170 @@ const QuarterlyPage = () => {
             Quarterly Reports
           </h1>
           <p className="text-muted-foreground">
-            Drop any quarterly PDF — company, year &amp; quarter auto-detected. Track trends across all quarters.
+            Fetch quarterly reports directly from NepseAlpha. Track financial trends, analyze balance sheets, and review metrics.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[320px,1fr] gap-6">
-          {/* ── Left sidebar ────────────────────────────────────────────────── */}
-          <div className="space-y-4">
-            {/* Fetch zone */}
-            <div className="rounded-xl border border-border bg-card p-4">
-              <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide mb-3 flex items-center gap-2">
-                <Download className="w-4 h-4" /> Fetch from NepseAlpha
-              </h2>
-              <div className="flex gap-2">
-                <div className="relative flex-1">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    placeholder="Symbol (e.g. SAHAS)"
-                    value={newSymbol}
-                    onChange={(e) => setNewSymbol(e.target.value.toUpperCase())}
-                    onKeyDown={(e) => e.key === 'Enter' && handleFetchNepseAlpha(newSymbol)}
-                    className="w-full pl-9 h-9 flex rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  />
-                </div>
-                <Button 
-                  size="sm" 
-                  className="h-9" 
-                  disabled={isFetching || !newSymbol.trim()}
-                  onClick={() => handleFetchNepseAlpha(newSymbol)}
+        <div className="space-y-6">
+          {/* ── Top Control Bar (Search & Filter) ─────────────────────── */}
+          <div className="rounded-xl border border-border bg-card p-4 flex flex-col md:flex-row gap-4 items-start md:items-center relative z-20">
+            <Search className="w-5 h-5 text-muted-foreground hidden md:block ml-2" />
+            <div className="relative flex-1 w-full">
+              <input
+                type="text"
+                placeholder="Search stocks to view or fetch new data (e.g. SAHAS)..."
+                value={stockSearchQuery}
+                onChange={(e) => { setStockSearchQuery(e.target.value.toUpperCase()); setShowSuggestions(true); }}
+                onFocus={() => setShowSuggestions(true)}
+                onBlur={() => setShowSuggestions(false)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && stockSearchQuery.trim()) {
+                    const exactMatch = stocks.find(s => s.symbol === stockSearchQuery.trim());
+                    if (exactMatch) {
+                      setSelectedSymbol(exactMatch.symbol);
+                      setShowSuggestions(false);
+                      setStockSearchQuery('');
+                    } else {
+                      handleFetchNepseAlpha(stockSearchQuery.trim());
+                      setShowSuggestions(false);
+                      setStockSearchQuery('');
+                    }
+                  }
+                }}
+                className="w-full pl-4 pr-10 h-12 flex rounded-lg border border-input bg-background px-4 py-2 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              />
+              {stockSearchQuery && (
+                <button 
+                  onMouseDown={(e) => { e.preventDefault(); setStockSearchQuery(''); }}
+                  className="absolute right-3 top-3.5 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {isFetching ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Fetch'}
-                </Button>
-              </div>
-              {unfetchedSymbols.length > 0 && (
-                <div className="mt-3 pt-3 border-t border-border/60">
-                  <p className="text-[10px] uppercase font-bold text-muted-foreground/80 mb-1.5 tracking-wider">Unfetched Watchlist / Portfolio:</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {unfetchedSymbols.slice(0, 6).map(sym => (
-                      <Badge 
-                        key={sym} 
-                        variant="outline" 
-                        className="cursor-pointer hover:bg-secondary/80 font-mono text-[10px] px-1.5 py-0.5 border-dashed border-muted-foreground/30"
-                        onClick={() => handleFetchNepseAlpha(sym)}
+                  <X className="h-5 w-5" />
+                </button>
+              )}
+            </div>
+
+            <Select value={sectorFilter} onValueChange={(val) => { setSectorFilter(val); setShowSuggestions(true); }}>
+              <SelectTrigger className="w-full md:w-[200px] h-12 bg-background">
+                <SelectValue placeholder="All Sectors" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Sectors</SelectItem>
+                <SelectItem value="bank">Commercial Banks</SelectItem>
+                <SelectItem value="hydro">Hydro Power</SelectItem>
+                <SelectItem value="microfinance">Microfinance</SelectItem>
+                <SelectItem value="insurance">Insurance</SelectItem>
+                <SelectItem value="finance">Finance</SelectItem>
+                <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                <SelectItem value="hotel">Hotels &amp; Tourism</SelectItem>
+                <SelectItem value="investment">Investment</SelectItem>
+              </SelectContent>
+            </Select>
+
+            {/* Auto-suggest dropdown */}
+            {showSuggestions && (
+              <div className="absolute top-[110%] left-0 right-0 bg-card border border-border rounded-xl shadow-xl max-h-[450px] overflow-y-auto scrollbar-thin flex flex-col z-50">
+                {/* 1. Show existing fetched stocks */}
+                {filteredStocks.length > 0 && (
+                  <div className="p-2 space-y-1">
+                    {filteredStocks.map(stock => (
+                      <button
+                        key={stock.symbol}
+                        onMouseDown={(e) => { 
+                          e.preventDefault(); 
+                          setSelectedSymbol(stock.symbol);
+                          setShowSuggestions(false);
+                          setStockSearchQuery('');
+                        }}
+                        className={`w-full text-left p-3 rounded-lg hover:bg-muted/80 transition-colors flex items-center justify-between
+                          ${selectedSymbol === stock.symbol ? 'bg-primary/10' : ''}`}
                       >
-                        {sym}
-                      </Badge>
+                        <div>
+                          <span className="font-mono font-bold">{stock.symbol}</span>
+                          <p className="text-xs text-muted-foreground mt-0.5">{stock.company_name}</p>
+                        </div>
+                        <div className="flex flex-col items-end gap-1">
+                          <Badge variant="outline" className={`text-[9px] px-1.5 py-0 ${getSectorStyle(stock.sector).color}`}>
+                            {getSectorStyle(stock.sector).label}
+                          </Badge>
+                          <span className="text-[10px] text-muted-foreground flex items-center gap-1">
+                            <Calendar className="w-2.5 h-2.5" /> {stock.quarter_count} Qs
+                          </span>
+                        </div>
+                      </button>
                     ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
 
-            {/* Stock list */}
-            <div className="rounded-xl border border-border bg-card p-4">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide flex items-center gap-2">
-                  <Building2 className="w-4 h-4" /> Stocks with Data
-                </h2>
-                <Button variant="ghost" size="icon" className="h-6 w-6" onClick={loadStocks}>
-                  <RefreshCw className="w-3 h-3" />
-                </Button>
-              </div>
-
-              {stocks.length > 0 && (
-                <div className="relative mb-3">
-                  <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-muted-foreground" />
-                  <input
-                    type="text"
-                    placeholder="Filter stocks..."
-                    value={stockSearchQuery}
-                    onChange={(e) => setStockSearchQuery(e.target.value)}
-                    className="w-full pl-8 pr-7 h-8 flex rounded-md border border-input bg-transparent px-3 py-1 text-xs shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                  />
-                  {stockSearchQuery && (
-                    <button 
-                      onClick={() => setStockSearchQuery('')}
-                      className="absolute right-2 top-2 text-muted-foreground hover:text-foreground"
-                    >
-                      <X className="h-3 w-3" />
-                    </button>
-                  )}
-                </div>
-              )}
-
-              {stocks.length === 0 ? (
-                <div className="text-center py-8 text-muted-foreground text-sm">
-                  <FileText className="w-8 h-8 mx-auto mb-2 opacity-40" />
-                  No data yet. Upload a quarterly PDF to get started.
-                </div>
-              ) : filteredStocks.length === 0 ? (
-                <div className="text-center py-8 text-muted-foreground text-sm">
-                  No stocks match "{stockSearchQuery}"
-                </div>
-              ) : (
-                <div className="space-y-2 max-h-[480px] overflow-y-auto pr-1">
-                  {filteredStocks.map(stock => (
+                {/* 2. Show option to fetch new stock or update existing if typed */}
+                {stockSearchQuery.trim() && (
+                  <div className="p-2 border-t border-border/50 bg-primary/5">
                     <button
-                      key={stock.symbol}
-                      onClick={() => setSelectedSymbol(stock.symbol)}
-                      className={`w-full text-left p-3 rounded-lg border transition-all
-                        ${selectedSymbol === stock.symbol
-                          ? 'border-primary bg-primary/10'
-                          : 'border-border hover:border-primary/40 hover:bg-muted/50'
-                        }`}
+                      onMouseDown={(e) => { 
+                        e.preventDefault(); 
+                        handleFetchNepseAlpha(stockSearchQuery.trim()); 
+                        setShowSuggestions(false); 
+                        setStockSearchQuery('');
+                      }}
+                      className="w-full text-left p-3 rounded-lg hover:bg-primary/15 transition-colors flex items-center gap-3 text-primary"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="font-mono font-bold text-sm">{stock.symbol}</span>
-                        <Badge variant="outline" className={`text-xs ${getSectorStyle(stock.sector).color}`}>
-                          {getSectorStyle(stock.sector).label}
-                        </Badge>
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-0.5 truncate">{stock.company_name}</p>
-                      <div className="flex items-center gap-2 mt-1.5">
-                        <Calendar className="w-3 h-3 text-muted-foreground" />
-                        <span className="text-xs text-muted-foreground">{stock.quarter_count} quarter{stock.quarter_count !== 1 ? 's' : ''}</span>
+                      {isFetching ? <Loader2 className="w-5 h-5 animate-spin" /> : <Download className="w-5 h-5" />}
+                      <div>
+                        <span className="font-bold block">
+                          {stocks.some(s => s.symbol === stockSearchQuery.trim()) 
+                            ? `Update "${stockSearchQuery.trim()}" Data` 
+                            : `Fetch "${stockSearchQuery.trim()}"`}
+                        </span>
+                        <span className="text-xs opacity-80">Download latest quarterly data from NepseAlpha</span>
                       </div>
                     </button>
-                  ))}
-                </div>
-              )}
-            </div>
+                  </div>
+                )}
+
+                {/* 3. Show missing watchlist items */}
+                {unfetchedSymbols.filter(sym => sym.includes(stockSearchQuery.trim())).length > 0 && (
+                  <div className="p-2 border-t border-border/50">
+                    <p className="text-xs font-semibold text-muted-foreground uppercase px-3 py-2 flex items-center gap-2">
+                      <AlertCircle className="w-3.5 h-3.5" /> Missing Watchlist Data
+                    </p>
+                    <div className="space-y-1">
+                      {unfetchedSymbols.filter(sym => sym.includes(stockSearchQuery.trim())).map(sym => (
+                        <button
+                          key={sym}
+                          onMouseDown={(e) => { 
+                            e.preventDefault(); 
+                            handleFetchNepseAlpha(sym); 
+                            setShowSuggestions(false);
+                            setStockSearchQuery('');
+                          }}
+                          className="w-full text-left p-3 rounded-lg hover:bg-muted/80 transition-colors flex items-center justify-between group"
+                        >
+                          <span className="font-mono font-bold text-muted-foreground group-hover:text-foreground">{sym}</span>
+                          <span className="text-xs text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <Download className="w-3 h-3" /> Fetch
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* No results fallback */}
+                {filteredStocks.length === 0 && !stockSearchQuery.trim() && unfetchedSymbols.length === 0 && (
+                  <div className="p-4 text-sm text-muted-foreground text-center">No stocks match your search or filter.</div>
+                )}
+              </div>
+            )}
           </div>
 
-          {/* ── Main content ────────────────────────────────────────────────── */}
+
+
+          {/* ── Main Content (Company Details) ─────────────────────── */}
           <div>
             {!selectedSymbol ? (
-              <div className="flex flex-col items-center justify-center h-64 rounded-xl border border-dashed border-border text-muted-foreground gap-3 p-6 text-center">
+              <div className="flex flex-col items-center justify-center h-[500px] rounded-xl border border-dashed border-border text-muted-foreground gap-3 p-6 text-center">
                 <Download className="w-12 h-12 opacity-30" />
-                <p className="font-medium">Fetch a stock symbol from NepseAlpha to begin</p>
-                <p className="text-sm">Type a symbol like SAHAS or MEN in the sidebar and click Fetch.</p>
+                <p className="font-medium text-lg">Select or fetch a stock to begin</p>
+                <p className="text-sm">Use the control bar above to search for your stocks or fetch new data from NepseAlpha.</p>
               </div>
             ) : (
               <>
@@ -447,7 +505,7 @@ const QuarterlyPage = () => {
 
                 {/* Tabs */}
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
-                  <TabsList className="grid grid-cols-4 mb-4">
+                  <TabsList className="grid grid-cols-5 mb-4">
                     <TabsTrigger value="trends" className="gap-1.5 text-xs sm:text-sm">
                       <TrendingUp className="w-4 h-4" /><span className="hidden sm:inline">Trends</span>
                     </TabsTrigger>
@@ -456,6 +514,9 @@ const QuarterlyPage = () => {
                     </TabsTrigger>
                     <TabsTrigger value="screen1" className="gap-1.5 text-xs sm:text-sm">
                       <BarChart2 className="w-4 h-4" /><span className="hidden sm:inline">Ratios</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="dividends" className="gap-1.5 text-xs sm:text-sm">
+                      <Coins className="w-4 h-4" /><span className="hidden sm:inline">Dividends</span>
                     </TabsTrigger>
                     <TabsTrigger value="manage" className="gap-1.5 text-xs sm:text-sm">
                       <AlertCircle className="w-4 h-4" /><span className="hidden sm:inline">Manage</span>
@@ -484,6 +545,41 @@ const QuarterlyPage = () => {
                   <TabsContent value="screen1" className="rounded-xl border border-border bg-card p-5">
                     <h3 className="font-semibold mb-4">Ratio Metrics</h3>
                     <QuarterlyDataTable quarters={quarters} mode="screen1" />
+                  </TabsContent>
+
+                  {/* Dividends tab */}
+                  <TabsContent value="dividends" className="rounded-xl border border-border bg-card p-5">
+                    <h3 className="font-semibold mb-4">Dividend History</h3>
+                    {dividendHistory.length > 0 ? (
+                      <div className="overflow-x-auto rounded-md border">
+                        <table className="w-full text-sm text-left">
+                          <thead className="bg-muted text-muted-foreground text-xs uppercase">
+                            <tr>
+                              <th className="px-4 py-3 font-medium">Fiscal Year</th>
+                              <th className="px-4 py-3 font-medium text-right">Bonus %</th>
+                              <th className="px-4 py-3 font-medium text-right">Cash %</th>
+                              <th className="px-4 py-3 font-medium text-right">Total %</th>
+                              <th className="px-4 py-3 font-medium">Book Closure</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-border">
+                            {dividendHistory.map((d: any, idx: number) => (
+                              <tr key={idx} className={`transition-colors hover:bg-muted/50 ${idx % 2 === 0 ? 'bg-background' : 'bg-muted/20'}`}>
+                                <td className="px-4 py-3 font-mono">{d.fiscalYear}</td>
+                                <td className="px-4 py-3 text-right">{d.bonusPercent.toFixed(2)}%</td>
+                                <td className="px-4 py-3 text-right">{d.cashPercent.toFixed(2)}%</td>
+                                <td className="px-4 py-3 text-right font-semibold text-primary">{d.totalPercent.toFixed(2)}%</td>
+                                <td className="px-4 py-3 text-muted-foreground">{d.bookClosureDateAD || d.bookClosureDateBS || 'N/A'}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    ) : (
+                      <div className="py-8 text-center text-muted-foreground border rounded-lg bg-muted/10">
+                        {isLoading ? "Loading dividend data..." : "No dividend history found for this symbol."}
+                      </div>
+                    )}
                   </TabsContent>
 
                   {/* Manage / Fallback tab (inline) */}
@@ -555,7 +651,7 @@ const QuarterlyPage = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer apiKey={apiKey} onApiKeyChange={(k) => { setApiKey(k); localStorage.setItem(STORAGE_KEYS.apiKey, k); }} />
     </div>
   );
 };
