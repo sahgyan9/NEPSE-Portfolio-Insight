@@ -394,7 +394,7 @@ export default function IntelligencePage() {
                 </div>
                 
                 {/* Footer */}
-                <Footer />
+                <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
             </main>
 
             {/* AI Chatbot */}

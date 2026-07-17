@@ -1,7 +1,38 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Activity, MoreHorizontal, ShieldCheck } from 'lucide-react';
+import { TrendingUp, Activity, MoreHorizontal, ShieldCheck, Key } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { toast } from '@/hooks/use-toast';
+import { cn } from '@/lib/utils';
+import { STORAGE_KEYS } from '@/lib/constants';
 
-export const Footer = () => {
+interface FooterProps {
+  apiKey?: string;
+  onApiKeyChange?: (key: string) => void;
+}
+
+export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
+  // Fall back to localStorage when the page doesn't pass props
+  const effectiveApiKey = apiKey ?? (localStorage.getItem(STORAGE_KEYS.apiKey) || '');
+  const [tempApiKey, setTempApiKey] = useState(effectiveApiKey);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleSaveApiKey = () => {
+    if (onApiKeyChange) {
+      onApiKeyChange(tempApiKey);
+    } else {
+      localStorage.setItem(STORAGE_KEYS.apiKey, tempApiKey);
+    }
+    setIsDialogOpen(false);
+    toast({
+      title: "API Key Saved",
+      description: "Your Gemini API key has been saved.",
+    });
+  };
+
   return (
     <footer className="w-full border-t border-border/40 bg-background/30 py-8 mt-12 text-sm">
       <div className="container px-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -15,30 +46,78 @@ export const Footer = () => {
             Disclaimer: This is not official financial advice. Always verify with official sources.
           </p>
         </div>
-        
+
         <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
           <span className="text-muted-foreground select-none">Additional Modules:</span>
-          <Link 
-            to="/fundamentals" 
+          <Link
+            to="/fundamentals"
             className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
           >
             <TrendingUp className="w-3.5 h-3.5" />
             <span>Fundamentals</span>
           </Link>
-          <Link 
-            to="/market" 
+          <Link
+            to="/market"
             className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
           >
             <Activity className="w-3.5 h-3.5 text-blue-500" />
             <span>Market</span>
           </Link>
-          <Link 
-            to="/misc" 
+          <Link
+            to="/misc"
             className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
           >
             <MoreHorizontal className="w-3.5 h-3.5" />
             <span>Misc</span>
           </Link>
+
+          {/* Gemini API configuration */}
+          <Dialog
+            open={isDialogOpen}
+            onOpenChange={(open) => {
+              setIsDialogOpen(open);
+              if (open) setTempApiKey(effectiveApiKey);
+            }}
+          >
+            <DialogTrigger asChild>
+              <Button
+                variant={effectiveApiKey ? "outline" : "default"}
+                size="sm"
+                className={cn(
+                  "gap-2",
+                  !effectiveApiKey && "animate-pulse bg-yellow-500 hover:bg-yellow-600 text-black",
+                  effectiveApiKey && "border-green-500/50 hover:bg-green-500/10 text-green-500 hover:text-green-600"
+                )}
+              >
+                <Key className="h-4 w-4" />
+                <span>{effectiveApiKey ? "API Active" : "Configure API"}</span>
+                {effectiveApiKey && <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>}
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md bg-card border-border">
+              <DialogHeader>
+                <DialogTitle>Configure Gemini API Key</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <Label htmlFor="apiKey">Gemini API Key</Label>
+                  <Input
+                    id="apiKey"
+                    type="password"
+                    placeholder="Enter your Gemini API key"
+                    value={tempApiKey}
+                    onChange={(e) => setTempApiKey(e.target.value)}
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Used for AI-powered investment recommendations. Your key is stored locally.
+                  </p>
+                </div>
+                <Button onClick={handleSaveApiKey} className="w-full">
+                  Save API Key
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </footer>

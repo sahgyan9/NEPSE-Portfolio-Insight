@@ -98,7 +98,7 @@ const MarketPage = () => {
                 </div>
 
                 {/* Footer */}
-                <Footer />
+                <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
             </main>
 
             {/* AI Chatbot - Floating */}

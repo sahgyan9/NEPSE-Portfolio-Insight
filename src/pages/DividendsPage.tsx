@@ -1,13 +1,4 @@
-/**
- * Dividends Page (Manual Entry)
- * --------------------------------
- * - Auto-fetches company name from ShareBazaar API or local registry
- * - User-managed dividend rows saved to file via API (persistent)
- * - Fields: Bonus %, Cash %, Total %, Fiscal Year, Cash Income
- * - Supports editing existing entries
- */
-
-import { useEffect, useMemo, useState, useCallback } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -24,9 +15,17 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
-import { Trash2, PlusCircle, ArrowLeft, Pencil, Check, X, Loader2, RefreshCw, Save, Database } from 'lucide-react';
+import { Trash2, PlusCircle, ArrowLeft, Pencil, Check, X, Loader2, RefreshCw, Save, Database, Banknote, Sparkles, TrendingUp, DownloadCloud, Search, Info, HelpCircle, ArrowUpDown } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { ShareSparkline } from '@/components/ShareSparkline';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import {
+    fetchPortfolioDividends,
+    refreshDividendAnnouncements,
+    PortfolioDividendsResponse,
+} from '@/services/receivedDividendsApi';
 import { STORAGE_KEYS } from '@/lib/constants';
-import { fetchStockData } from '@/services/sharebazaarApi';
+import { fetchStockData, getCachedStockData } from '@/services/sharebazaarApi';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
 import {
     getManualDividends,
@@ -37,6 +36,8 @@ import {
     ManualDividendEntry
 } from '@/services/manualDividendDb';
 import { useToast } from '@/hooks/use-toast';
+import { cn } from '@/lib/utils';
+import { StockHolding, portfolioHoldings as localHoldings } from '@/data/portfolioData';
 
 interface DividendRow {
     id: string;
@@ -46,294 +47,152 @@ interface DividendRow {
     bonusPercent: number;
     cashPercent: number;
     cashIncome: number;
+    disabled?: boolean;
+    disabledReason?: string;
 }
-
-// Local company name registry as fallback
-const localCompanyNames: Record<string, string> = {
-    BHL: "Balephi Hydropower Limited",
-    CHCL: "Chilime Hydropower Company Limited",
-    SAHAS: "Sahas Urja Limited",
-    SGHC: "Swet-Ganga Hydropower & Construction Limited",
-    UPPER: "Upper Tamakoshi Hydropower Ltd.",
-    HBL: "Himalayan Bank Limited",
-    NABIL: "Nabil Bank Limited",
-    NICA: "NIC Asia Bank Ltd.",
-    NIMB: "Nepal Investment Mega Bank Limited",
-    CBBL: "Chhimek Laghubitta Bittiya Sanstha Limited",
-    CLI: "Citizen Life Insurance Company Limited",
-    SNLI: "Sun Nepal Life Insurance Company Limited",
-    HRL: "Himalayan Reinsurance Limited",
-    HDL: "Himalayan Distillery Limited",
-    GCIL: "Ghorahi Cement Industry Limited",
-    SARBTM: "Sarbottam Cement Limited",
-    SONA: "Sonapur Minerals And Oil Limited",
-    NTC: "Nepal Doorsanchar Company Limited",
-    CSY: "Citizens Super Yield Fund",
-    KDBY: "Kumari Dhanabriddhi Yojana",
-    MMF1: "Mahila Sambriddhi Kosh",
-    NBF3: "Nabil Balanced Fund 3",
-    NIBLSF: "NIBL Samriddhi Fund",
-    NMBSBFE: "NMB Saral Bachat Fund - E",
-};
 
 const DividendsPage = () => {
     const [apiKey, setApiKey] = useState('');
     const [rows, setRows] = useState<DividendRow[]>([]);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [editDraft, setEditDraft] = useState<DividendRow | null>(null);
-    const [isFetchingName, setIsFetchingName] = useState(false);
-    const [isRefreshingNames, setIsRefreshingNames] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
     const [serverAvailable, setServerAvailable] = useState(false);
     const [saveError, setSaveError] = useState<string | null>(null);
+    const [ltpMap, setLtpMap] = useState<Map<string, number>>(new Map());
+    const [searchQuery, setSearchQuery] = useState('');
+    const [sortKey, setSortKey] = useState<string>('symbol');
+    const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const { toast } = useToast();
+
+    // Auto dividends
+    const [fiscalYear, setFiscalYear] = useState('081-082');
+    const [portfolioData, setPortfolioData] = useState<PortfolioDividendsResponse | null>(null);
+    const [isFetchingAuto, setIsFetchingAuto] = useState(true);
+    const [isRefreshingAuto, setIsRefreshingAuto] = useState(false);
+    const [holdings, setHoldings] = useState<StockHolding[]>([]);
+
     const [draft, setDraft] = useState<Omit<DividendRow, 'id'>>({
         symbol: '',
         companyName: '',
-        fiscalYear: '',
+        fiscalYear: '081-082',
         bonusPercent: 0,
         cashPercent: 0,
         cashIncome: 0,
     });
 
-    // Fetch company name from API or local registry
-    const fetchCompanyName = useCallback(async (symbol: string): Promise<string> => {
-        const upperSymbol = symbol.toUpperCase().trim();
-
-        // First check local registry
-        if (localCompanyNames[upperSymbol]) {
-            return localCompanyNames[upperSymbol];
-        }
-
-        // Try to fetch from ShareBazaar API
-        try {
-            setIsFetchingName(true);
-            const data = await fetchStockData(upperSymbol);
-            if (data?.company_name && data.company_name.trim() !== '') {
-                return data.company_name;
-            }
-        } catch (error) {
-            console.warn('Failed to fetch company name from API:', error);
-        } finally {
-            setIsFetchingName(false);
-        }
-
-        return '';
-    }, []);
-
-    // Auto-fetch company name when symbol changes
-    useEffect(() => {
-        const symbolTrimmed = draft.symbol.trim().toUpperCase();
-        if (symbolTrimmed.length >= 2 && !draft.companyName) {
-            const timeoutId = setTimeout(async () => {
-                const name = await fetchCompanyName(symbolTrimmed);
-                if (name) {
-                    setDraft(prev => ({ ...prev, companyName: name }));
-                }
-            }, 500); // Debounce 500ms
-            return () => clearTimeout(timeoutId);
-        }
-    }, [draft.symbol, draft.companyName, fetchCompanyName]);
-
-    // Load api key and saved rows from file
     useEffect(() => {
         const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
         if (savedKey) setApiKey(savedKey);
 
-        // Load dividend entries from file via API
-        const loadDividends = async () => {
-            setIsLoading(true);
-            try {
-                const available = await isManualDividendServerAvailable();
-                setServerAvailable(available);
+        const loadData = async () => {
+            // Load manual entries
+            const available = await isManualDividendServerAvailable();
+            setServerAvailable(available);
+            const data = await getManualDividends();
+            setRows(data);
+            setIsLoading(false);
 
-                if (available) {
-                    const entries = await getManualDividends();
-                    setRows(entries as DividendRow[]);
-                    setSaveError(null);
-                } else {
-                    // Fallback: try to load from localStorage if server is not available
-                    const savedRows = localStorage.getItem('manualDividendRows');
-                    if (savedRows) {
-                        try {
-                            const parsed: DividendRow[] = JSON.parse(savedRows);
-                            setRows(parsed);
-                        } catch (e) {
-                            console.warn('Failed to parse saved dividend rows', e);
-                        }
-                    }
-                    setSaveError('Server not available. Data will not persist after browser close.');
-                }
-            } catch (error) {
-                console.error('Failed to load dividend entries:', error);
-                setSaveError('Failed to load dividend data from server.');
-            } finally {
-                setIsLoading(false);
+            // Load portfolio holdings to calculate yields
+            try {
+                setHoldings(localHoldings);
+            } catch (e) {
+                console.error("Failed to load portfolio holdings", e);
             }
         };
 
-        loadDividends();
+        loadData();
     }, []);
 
-    // Auto-populate missing company names for existing rows
+    // Load auto dividends
     useEffect(() => {
-        const updateMissingCompanyNames = async () => {
-            const rowsNeedingUpdate = rows.filter(r => !r.companyName);
-            if (rowsNeedingUpdate.length === 0) return;
-
-            const updates: Record<string, string> = {};
-
-            for (const row of rowsNeedingUpdate) {
-                // First check local registry
-                const localName = localCompanyNames[row.symbol.toUpperCase()];
-                if (localName) {
-                    updates[row.id] = localName;
-                    continue;
-                }
-
-                // Try API (with delay to avoid rate limiting)
-                try {
-                    const data = await fetchStockData(row.symbol);
-                    if (data?.company_name && data.company_name.trim() !== '') {
-                        updates[row.id] = data.company_name;
-                    }
-                } catch (error) {
-                    console.warn(`Failed to fetch company name for ${row.symbol}:`, error);
-                }
-            }
-
-            if (Object.keys(updates).length > 0) {
-                setRows(prev => prev.map(r =>
-                    updates[r.id] ? { ...r, companyName: updates[r.id] } : r
-                ));
+        const fetchAuto = async () => {
+            setIsFetchingAuto(true);
+            try {
+                const data = await fetchPortfolioDividends(fiscalYear);
+                setPortfolioData(data);
+            } catch (error: any) {
+                console.error("Failed to load portfolio dividends:", error);
+            } finally {
+                setIsFetchingAuto(false);
             }
         };
+        fetchAuto();
+    }, [fiscalYear, rows]); // Re-fetch auto when rows change (manual entries merged backend)
 
-        updateMissingCompanyNames();
-    }, [rows.length]); // Only run when rows are first loaded or count changes
-
-    // Also keep localStorage as backup for when server is not available
+    // Load LTP for all symbols in portfolio
     useEffect(() => {
-        if (rows.length > 0) {
-            localStorage.setItem('manualDividendRows', JSON.stringify(rows));
-        }
-    }, [rows]);
+        if (!portfolioData) return;
+        
+        const symbols = portfolioData.companies.map(c => c.symbol);
+        
+        const loadLTPs = async () => {
+            const newLtpMap = new Map<string, number>();
+            for (const sym of symbols) {
+                const cached = getCachedStockData(sym);
+                if (cached && cached.last_traded_price) {
+                    newLtpMap.set(sym, parseFloat(cached.last_traded_price));
+                } else {
+                    try {
+                        const fresh = await fetchStockData(sym);
+                        if (fresh && fresh.last_traded_price) {
+                            newLtpMap.set(sym, parseFloat(fresh.last_traded_price));
+                        }
+                    } catch (e) {
+                        console.error(`Failed LTP for ${sym}`);
+                    }
+                }
+            }
+            setLtpMap(newLtpMap);
+        };
+        loadLTPs();
+    }, [portfolioData]);
 
     const handleApiKeyChange = (key: string) => {
         setApiKey(key);
         localStorage.setItem(STORAGE_KEYS.apiKey, key);
     };
 
-    const resetDraft = () => {
-        setDraft({
-            symbol: '',
-            companyName: '',
-            fiscalYear: '',
-            bonusPercent: 0,
-            cashPercent: 0,
-            cashIncome: 0,
-        });
+    const handleRefreshAuto = async () => {
+        setIsRefreshingAuto(true);
+        try {
+            await refreshDividendAnnouncements();
+            const data = await fetchPortfolioDividends(fiscalYear);
+            setPortfolioData(data);
+            toast({ title: "Success", description: "Dividend announcements refreshed from NepaliPaisa." });
+        } catch (error: any) {
+            toast({ title: "Error", description: error.message || "Failed to refresh", variant: "destructive" });
+        } finally {
+            setIsRefreshingAuto(false);
+        }
     };
 
+    // Manual Entry functions
     const addRow = async () => {
         if (!draft.symbol) return;
-        const id = `${draft.symbol}-${Date.now()}`;
-        const symbol = draft.symbol.toUpperCase();
-
-        // Auto-fetch company name if not provided
-        let companyName = draft.companyName;
-        if (!companyName) {
-            companyName = await fetchCompanyName(symbol);
-        }
-
-        const newEntry: DividendRow = {
-            id,
-            symbol,
-            companyName,
-            fiscalYear: draft.fiscalYear,
-            bonusPercent: draft.bonusPercent || 0,
-            cashPercent: draft.cashPercent || 0,
-            cashIncome: draft.cashIncome || 0,
-        };
-
+        const newEntry = { ...draft, symbol: draft.symbol.toUpperCase() };
         setIsSaving(true);
-        setSaveError(null);
-
-        // Check server availability before operation
-        const available = await isManualDividendServerAvailable();
-        setServerAvailable(available);
-
         try {
-            if (available) {
-                const updatedEntries = await addManualDividend(newEntry as ManualDividendEntry);
-                setRows(updatedEntries as DividendRow[]);
-                toast({
-                    title: "Added",
-                    description: `${symbol} dividend entry added successfully`,
-                });
-            } else {
-                // Fallback to local state only
-                setRows(prev => [newEntry, ...prev]);
-                setSaveError('Server not available. Changes saved locally only.');
-                toast({
-                    title: "Warning",
-                    description: "Server not available. Changes saved locally only.",
-                    variant: "destructive",
-                });
-            }
+            const updatedEntries = await addManualDividend(newEntry as ManualDividendEntry);
+            setRows(updatedEntries);
+            setDraft({ ...draft, symbol: '', companyName: '', bonusPercent: 0, cashPercent: 0, cashIncome: 0 });
+            toast({ title: "Success", description: "Manual dividend entry added." });
         } catch (error: any) {
-            console.error('Failed to add dividend entry:', error);
-            // Still add to local state
-            setRows(prev => [newEntry, ...prev]);
-            setSaveError('Failed to save to server. Changes saved locally.');
-            toast({
-                title: "Error",
-                description: error.message || "Failed to save to server",
-                variant: "destructive",
-            });
+            setSaveError(error.message);
         } finally {
             setIsSaving(false);
         }
-
-        resetDraft();
     };
 
     const deleteRow = async (id: string) => {
         setIsSaving(true);
-        setSaveError(null);
-
-        // Check server availability before operation
-        const available = await isManualDividendServerAvailable();
-        setServerAvailable(available);
-
         try {
-            if (available) {
-                const updatedEntries = await deleteManualDividend(id);
-                setRows(updatedEntries as DividendRow[]);
-                toast({
-                    title: "Deleted",
-                    description: "Dividend entry deleted successfully",
-                });
-            } else {
-                setRows(prev => prev.filter(r => r.id !== id));
-                setSaveError('Server not available. Changes saved locally only.');
-                toast({
-                    title: "Warning",
-                    description: "Server not available. Changes saved locally only.",
-                    variant: "destructive",
-                });
-            }
+            const updatedEntries = await deleteManualDividend(id);
+            setRows(updatedEntries);
+            toast({ title: "Success", description: "Entry removed." });
         } catch (error: any) {
-            console.error('Failed to delete dividend entry:', error);
-            // Still delete from local state
-            setRows(prev => prev.filter(r => r.id !== id));
-            setSaveError('Failed to delete from server. Changes saved locally.');
-            toast({
-                title: "Error",
-                description: error.message || "Failed to delete from server",
-                variant: "destructive",
-            });
+            setSaveError(error.message);
         } finally {
             setIsSaving(false);
         }
@@ -351,381 +210,361 @@ const DividendsPage = () => {
 
     const saveEditing = async () => {
         if (!editDraft) return;
-
-        // Auto-fetch company name if cleared
-        let companyName = editDraft.companyName;
-        if (!companyName) {
-            companyName = await fetchCompanyName(editDraft.symbol);
-        }
-
-        const updatedEntry: DividendRow = {
-            ...editDraft,
-            companyName,
-            symbol: editDraft.symbol.toUpperCase()
-        };
-
         setIsSaving(true);
-        setSaveError(null);
-
-        // Check server availability before operation
-        const available = await isManualDividendServerAvailable();
-        setServerAvailable(available);
-
         try {
-            if (available) {
-                const updatedEntries = await updateManualDividend(editDraft.id, updatedEntry as ManualDividendEntry);
-                setRows(updatedEntries as DividendRow[]);
-                toast({
-                    title: "Updated",
-                    description: `${updatedEntry.symbol} dividend entry updated successfully`,
-                });
-            } else {
-                // Fallback to local state only
-                setRows(prev => prev.map(r =>
-                    r.id === editDraft.id ? updatedEntry : r
-                ));
-                setSaveError('Server not available. Changes saved locally only.');
-                toast({
-                    title: "Warning",
-                    description: "Server not available. Changes saved locally only.",
-                    variant: "destructive",
-                });
-            }
+            const updatedEntry = { ...editDraft, symbol: editDraft.symbol.toUpperCase() };
+            const updatedEntries = await updateManualDividend(editDraft.id, updatedEntry as ManualDividendEntry);
+            setRows(updatedEntries);
+            toast({ title: "Success", description: "Entry updated." });
         } catch (error: any) {
-            console.error('Failed to update dividend entry:', error);
-            // Still update local state
-            setRows(prev => prev.map(r =>
-                r.id === editDraft.id ? updatedEntry : r
-            ));
-            setSaveError('Failed to save to server. Changes saved locally.');
-            toast({
-                title: "Error",
-                description: error.message || "Failed to save to server",
-                variant: "destructive",
-            });
+            setSaveError(error.message);
         } finally {
             setIsSaving(false);
+            setEditingId(null);
+            setEditDraft(null);
         }
-
-        setEditingId(null);
-        setEditDraft(null);
     };
 
-    // Refresh all company names
-    const refreshAllCompanyNames = async () => {
-        if (rows.length === 0 || isRefreshingNames) return;
-
-        setIsRefreshingNames(true);
-        const updates: Record<string, string> = {};
-
-        for (const row of rows) {
-            // First check local registry
-            const localName = localCompanyNames[row.symbol.toUpperCase()];
-            if (localName) {
-                updates[row.id] = localName;
-                continue;
-            }
-
-            // Try API
-            try {
-                const data = await fetchStockData(row.symbol);
-                if (data?.company_name && data.company_name.trim() !== '') {
-                    updates[row.id] = data.company_name;
-                }
-            } catch (error) {
-                console.warn(`Failed to fetch company name for ${row.symbol}:`, error);
-            }
-        }
-
-        if (Object.keys(updates).length > 0) {
-            setRows(prev => prev.map(r =>
-                updates[r.id] ? { ...r, companyName: updates[r.id] } : r
-            ));
-        }
-
-        setIsRefreshingNames(false);
+    const statusLabel: Record<string, { text: string; className: string }> = {
+        'announced': { text: 'Announced', className: 'bg-amber-500/10 text-amber-500' },
+        'book-closure-upcoming': { text: 'Upcoming BC', className: 'bg-blue-500/10 text-blue-500' },
+        'book-closed': { text: 'Book Closed', className: 'bg-emerald-500/10 text-emerald-500' },
     };
 
-    const totalCashIncome = useMemo(
-        () => rows.reduce((sum, r) => sum + (r.cashIncome || 0), 0),
-        [rows]
-    );
+    const totalCashIncome = useMemo(() => rows.reduce((sum, r) => sum + (r.cashIncome || 0), 0), [rows]);
 
     return (
         <div className="min-h-screen bg-background">
-            <Header
-                apiKey={apiKey}
-                onApiKeyChange={handleApiKeyChange}
-                onRefresh={() => { }}
-                isRefreshing={false}
-            />
+            <Header apiKey={apiKey} onApiKeyChange={handleApiKeyChange} onRefresh={handleRefreshAuto} isRefreshing={isRefreshingAuto} />
 
             <main className="container px-4 py-6 space-y-6">
-                {/* Navigation */}
                 <div className="flex items-center justify-between">
                     <Link to="/">
-                        <Button variant="ghost" size="sm" className="gap-2">
-                            <ArrowLeft className="h-4 w-4" />
-                            Back to Dashboard
-                        </Button>
+                        <Button variant="ghost" size="sm" className="gap-2"><ArrowLeft className="h-4 w-4" /> Back to Dashboard</Button>
                     </Link>
                 </div>
 
-                <div className="space-y-2">
-                    <h1 className="text-2xl font-bold">Dividend Data (Manual)</h1>
-                    <p className="text-muted-foreground">Enter symbol and company name will auto-fetch. Click Edit to modify existing entries.</p>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="space-y-1">
+                        <h1 className="text-3xl font-bold tracking-tight">Dividends & Income</h1>
+                        <p className="text-muted-foreground text-sm">
+                            Auto-tracked dividends for your holdings. Bonus shares are valued using real-time market prices (LTP).
+                        </p>
+                    </div>
                 </div>
 
-                {isLoading ? (
-                    <Alert>
-                        <Loader2 className="h-4 w-4 animate-spin mr-2" />
-                        <AlertDescription>Loading dividend data...</AlertDescription>
-                    </Alert>
-                ) : serverAvailable ? (
-                    <Alert className="border-green-500/50 bg-green-500/10">
-                        <Database className="h-4 w-4 text-green-500" />
-                        <AlertDescription className="text-green-700 dark:text-green-300">
-                            Data saves to file (db/manual_dividends.json). Your entries persist even after closing the browser.
-                            {isSaving && <Loader2 className="inline h-3 w-3 animate-spin ml-2" />}
-                        </AlertDescription>
-                    </Alert>
-                ) : (
-                    <Alert variant="destructive">
-                        <AlertDescription>
-                            Server not available. Data saves locally in your browser only. Start the Python server for persistent storage.
-                        </AlertDescription>
-                    </Alert>
-                )}
-
-                {saveError && (
-                    <Alert variant="destructive">
-                        <AlertDescription>{saveError}</AlertDescription>
-                    </Alert>
-                )}
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="flex items-center gap-2">Add Dividend Entry</CardTitle>
-                        <CardDescription>Fields: Bonus %, Cash %, Total %, Fiscal Year, Cash Income</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                {/* Auto Dividends Dashboard */}
+                <Card className="border-primary/20 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-primary to-blue-500"></div>
+                    <CardHeader className="pb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                             <div>
-                                <Label htmlFor="symbol">Symbol</Label>
-                                <Input
-                                    id="symbol"
-                                    placeholder="SNLI"
-                                    value={draft.symbol}
-                                    onChange={(e) => setDraft({ ...draft, symbol: e.target.value, companyName: '' })}
-                                />
+                                <CardTitle className="text-xl flex items-center gap-2">
+                                    <Sparkles className="h-5 w-5 text-emerald-500" />
+                                    Portfolio Income Dashboard
+                                </CardTitle>
+                                <CardDescription>Auto-calculated based on your current portfolio holdings.</CardDescription>
                             </div>
-                            <div>
-                                <Label htmlFor="company">Company {isFetchingName && <Loader2 className="inline h-3 w-3 animate-spin ml-1" />}</Label>
-                                <Input
-                                    id="company"
-                                    placeholder={isFetchingName ? "Fetching..." : "Auto-fetched or enter manually"}
-                                    value={draft.companyName}
-                                    onChange={(e) => setDraft({ ...draft, companyName: e.target.value })}
-                                />
-                            </div>
-                            <div>
-                                <Label htmlFor="fy">Fiscal Year</Label>
-                                <Input
-                                    id="fy"
-                                    placeholder="081-082"
-                                    value={draft.fiscalYear}
-                                    onChange={(e) => setDraft({ ...draft, fiscalYear: e.target.value })}
-                                />
-                            </div>
-                            <div>
-                                <Label htmlFor="bonus">Bonus %</Label>
-                                <Input
-                                    id="bonus"
-                                    type="number"
-                                    step="0.01"
-                                    value={draft.bonusPercent}
-                                    onChange={(e) => setDraft({ ...draft, bonusPercent: parseFloat(e.target.value) || 0 })}
-                                />
-                            </div>
-                            <div>
-                                <Label htmlFor="cash">Cash %</Label>
-                                <Input
-                                    id="cash"
-                                    type="number"
-                                    step="0.01"
-                                    value={draft.cashPercent}
-                                    onChange={(e) => setDraft({ ...draft, cashPercent: parseFloat(e.target.value) || 0 })}
-                                />
-                            </div>
-                            <div>
-                                <Label htmlFor="income">Cash Income (Rs)</Label>
-                                <Input
-                                    id="income"
-                                    type="number"
-                                    step="0.01"
-                                    value={draft.cashIncome}
-                                    onChange={(e) => setDraft({ ...draft, cashIncome: parseFloat(e.target.value) || 0 })}
-                                />
-                            </div>
-                        </div>
-                        <div className="flex gap-2">
-                            <Button onClick={addRow} className="gap-2">
-                                <PlusCircle className="h-4 w-4" />
-                                Add
-                            </Button>
-                            <Button variant="outline" onClick={resetDraft} className="gap-2">
-                                Clear
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardHeader>
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <CardTitle>Dividend Table</CardTitle>
-                                <CardDescription>Total Cash Income: Rs. {totalCashIncome.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</CardDescription>
-                            </div>
-                            {rows.length > 0 && (
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={refreshAllCompanyNames}
-                                    disabled={isRefreshingNames}
-                                    className="gap-2"
+                            <div className="flex items-center gap-3 bg-muted/50 p-1.5 rounded-lg border">
+                                <Label htmlFor="fy-select" className="text-xs font-semibold px-2 text-muted-foreground">FISCAL YEAR</Label>
+                                <select
+                                    id="fy-select"
+                                    className="h-8 bg-background border rounded-md text-sm px-3 outline-none focus:ring-1 focus:ring-primary font-mono font-medium"
+                                    value={fiscalYear}
+                                    onChange={(e) => setFiscalYear(e.target.value)}
                                 >
-                                    <RefreshCw className={`h-4 w-4 ${isRefreshingNames ? 'animate-spin' : ''}`} />
-                                    {isRefreshingNames ? 'Fetching...' : 'Refresh Names'}
+                                    <option value="081-082">081-082</option>
+                                    <option value="080-081">080-081</option>
+                                    <option value="079-080">079-080</option>
+                                </select>
+                                <Button variant="outline" size="sm" onClick={handleRefreshAuto} disabled={isRefreshingAuto} className="h-8 gap-2 bg-background">
+                                    <RefreshCw className={`h-3 w-3 ${isRefreshingAuto ? 'animate-spin' : ''}`} />
+                                    <span className="hidden sm:inline">Refresh</span>
                                 </Button>
-                            )}
+                            </div>
                         </div>
                     </CardHeader>
                     <CardContent>
-                        {rows.length === 0 ? (
-                            <p className="text-muted-foreground">No entries yet. Add rows above.</p>
-                        ) : (
-                            <div className="overflow-x-auto">
+                        {isFetchingAuto ? (
+                            <div className="h-40 flex items-center justify-center">
+                                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground/50" />
+                            </div>
+                        ) : portfolioData ? (
+                            <>
+                                {(() => {
+                                    const { totals, companies } = portfolioData;
+
+                                    const enhancedCompanies = companies.map(c => {
+                                        const ltp = ltpMap.get(c.symbol) || 100; // fallback par value
+                                        const trueBonusValue = c.received.bonusShares * ltp;
+                                        return { ...c, trueBonusValue, ltp };
+                                    });
+
+                                    let filteredCompanies = enhancedCompanies;
+                                    if (searchQuery) {
+                                        const q = searchQuery.toLowerCase();
+                                        filteredCompanies = enhancedCompanies.filter(c => c.symbol.toLowerCase().includes(q) || c.companyName.toLowerCase().includes(q));
+                                    }
+
+                                    const totalTrueBonusValue = enhancedCompanies.reduce((acc, c) => acc + c.trueBonusValue, 0);
+                                    const totalPortfolioValue = holdings.reduce((acc, h) => acc + (h.currentValue || 0), 0);
+                                    const totalTrueIncomeForYear = totals.cashNet + totalTrueBonusValue;
+                                    const dividendYield = totalPortfolioValue > 0 ? (totalTrueIncomeForYear / totalPortfolioValue) * 100 : 0;
+
+                                    const handleSort = (key: string) => {
+                                        if (sortKey === key) {
+                                            setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+                                        } else {
+                                            setSortKey(key);
+                                            setSortOrder('desc'); 
+                                        }
+                                    };
+
+                                    const sortedCompanies = [...filteredCompanies].sort((a, b) => {
+                                        let aVal: any = a[sortKey as keyof typeof a];
+                                        let bVal: any = b[sortKey as keyof typeof b];
+
+                                        if (sortKey === 'cashNet') {
+                                            aVal = a.received.cashNet;
+                                            bVal = b.received.cashNet;
+                                        } else if (sortKey === 'bonusShares') {
+                                            aVal = a.received.bonusShares;
+                                            bVal = b.received.bonusShares;
+                                        }
+
+                                        if (typeof aVal === 'string' && typeof bVal === 'string') {
+                                            return sortOrder === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                                        }
+                                        return sortOrder === 'asc' ? (aVal as number) - (bVal as number) : (bVal as number) - (aVal as number);
+                                    });
+
+                                    const columnColors = {
+                                        symbol: "text-primary",
+                                        announced: "text-amber-500",
+                                        bookClosure: "text-muted-foreground",
+                                        bonusShares: "text-emerald-500",
+                                        cashNet: "text-blue-500",
+                                        status: "text-slate-400",
+                                    };
+
+                                    const SortableHeader = ({ label, sortKeyName, colorClass }: { label: string; sortKeyName: string; colorClass?: string }) => (
+                                        <button onClick={() => handleSort(sortKeyName)} className={cn("flex items-center gap-1 hover:opacity-80 transition-colors font-semibold outline-none", colorClass)}>
+                                            {label}
+                                            <ArrowUpDown className="h-3 w-3" />
+                                        </button>
+                                    );
+
+                                    return (
+                                        <>
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                                <div className="rounded-lg border p-3">
+                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground"><Banknote className="h-3.5 w-3.5" /> Cash Received (net)</div>
+                                                    <div className="text-xl font-bold font-mono mt-1">Rs. {totals.cashNet.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                    <div className="text-[11px] text-muted-foreground font-mono">gross Rs. {totals.cashGross.toLocaleString('en-NP', { maximumFractionDigits: 0 })} − 5% tax</div>
+                                                </div>
+                                                <div className="rounded-lg border p-3">
+                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground"><TrendingUp className="h-3.5 w-3.5" /> Bonus Shares Added</div>
+                                                    <div className="text-xl font-bold font-mono mt-1 text-emerald-500">+{totals.bonusShares}</div>
+                                                    <div className="text-[11px] text-muted-foreground font-mono">true value Rs. {totalTrueBonusValue.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                </div>
+                                                <div className="rounded-lg border p-3">
+                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground">Average Portfolio Yield</div>
+                                                    <div className="text-xl font-bold font-mono mt-1 text-blue-500">{dividendYield.toFixed(2)}%</div>
+                                                    <div className="text-[11px] text-muted-foreground">True Income / Portfolio Value</div>
+                                                </div>
+                                                <div className="rounded-lg border p-3 border-emerald-500/30 bg-emerald-500/5">
+                                                    <div className="text-xs text-muted-foreground font-semibold">Total True Value</div>
+                                                    <div className="text-xl font-bold font-mono mt-1 text-emerald-600 dark:text-emerald-400">Rs. {totalTrueIncomeForYear.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                    <div className="text-[11px] text-muted-foreground">bonus valued at current LTP</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="relative w-full max-w-sm">
+                                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                                                    <Input placeholder="Search dividends..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9 h-9" />
+                                                </div>
+                                            </div>
+
+                                            <div className="overflow-x-auto">
+                                                <TooltipProvider delayDuration={300}>
+                                                    <Table>
+                                                        <TableHeader>
+                                                            <TableRow>
+                                                                <TableHead><SortableHeader label="Symbol" sortKeyName="symbol" colorClass={columnColors.symbol} /></TableHead>
+                                                                <TableHead><SortableHeader label="Announced" sortKeyName="totalPercent" colorClass={columnColors.announced} /></TableHead>
+                                                                <TableHead className={cn("hidden md:table-cell", columnColors.bookClosure)}>Book Closure</TableHead>
+                                                                <TableHead><SortableHeader label="Shares Added" sortKeyName="bonusShares" colorClass={columnColors.bonusShares} /></TableHead>
+                                                                <TableHead><SortableHeader label="Cash Received" sortKeyName="cashNet" colorClass={columnColors.cashNet} /></TableHead>
+                                                                <TableHead className="hidden md:table-cell"><SortableHeader label="Status" sortKeyName="status" colorClass={columnColors.status} /></TableHead>
+                                                                <TableHead>Bonus Shares (all-time)</TableHead>
+                                                            </TableRow>
+                                                        </TableHeader>
+                                                        <TableBody>
+                                                            {sortedCompanies.map((c) => (
+                                                                <TableRow key={c.symbol}>
+                                                                    <TableCell>
+                                                                        <div className="font-semibold underline decoration-dashed hover:decoration-solid hover:text-primary transition-all cursor-pointer">
+                                                                            <StockSymbolLink symbol={c.symbol} className={columnColors.symbol} />
+                                                                        </div>
+                                                                        <div className="text-[11px] text-muted-foreground max-w-[140px] truncate hidden md:block" title={c.companyName}>{c.companyName}</div>
+                                                                        <div className="text-[10px] text-muted-foreground font-mono">{c.quantity} sh held</div>
+                                                                    </TableCell>
+                                                                    <TableCell>
+                                                                        <div className="flex flex-col gap-0.5">
+                                                                            <div className={cn("font-medium", columnColors.announced)}>{c.totalPercent.toFixed(1)}% Total</div>
+                                                                            <div className="text-[11px] text-muted-foreground flex gap-2"><span>B: {c.bonusPercent}%</span><span>C: {c.cashPercent}%</span></div>
+                                                                        </div>
+                                                                    </TableCell>
+                                                                    <TableCell className={cn("hidden md:table-cell text-sm", columnColors.bookClosure)}>
+                                                                        {c.bookClosureDateAD ? (
+                                                                            <div className="flex flex-col">
+                                                                                <span>{c.bookClosureDateAD}</span>
+                                                                                <span className="text-[10px] text-muted-foreground">{c.bookClosureDateBS}</span>
+                                                                            </div>
+                                                                        ) : c.source === 'manual' ? (
+                                                                            <span className="text-muted-foreground/60 italic">Manually logged</span>
+                                                                        ) : (<span className="text-muted-foreground/60 italic">Upcoming</span>)}
+                                                                    </TableCell>
+                                                                    <TableCell>
+                                                                        {c.received.bonusShares > 0 ? (
+                                                                            <div className="flex flex-col gap-0.5">
+                                                                                <div className={cn("font-mono font-bold", columnColors.bonusShares)}>+{c.received.bonusShares}</div>
+                                                                                {c.received.bonusSharesExact !== c.received.bonusShares && (
+                                                                                    <Tooltip>
+                                                                                        <TooltipTrigger asChild>
+                                                                                            <div className="text-[10px] text-muted-foreground cursor-help flex items-center gap-1 w-fit text-left">
+                                                                                                (was {c.received.bonusSharesExact.toFixed(2)})
+                                                                                                <Info className="h-2.5 w-2.5" />
+                                                                                            </div>
+                                                                                        </TooltipTrigger>
+                                                                                        <TooltipContent side="top">
+                                                                                            <p className="text-xs"><strong>Fractional shares</strong><br />NEPSE pays fractions as cash.</p>
+                                                                                        </TooltipContent>
+                                                                                    </Tooltip>
+                                                                                )}
+                                                                                <div className="text-[10px] text-muted-foreground">Value: Rs. {c.trueBonusValue.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                                            </div>
+                                                                        ) : (<span className="text-muted-foreground">-</span>)}
+                                                                    </TableCell>
+                                                                    <TableCell>
+                                                                        {c.received.cashGross > 0 ? (
+                                                                            <div className="flex flex-col gap-0.5">
+                                                                                <div className={cn("font-mono font-medium", columnColors.cashNet)}>Rs. {c.received.cashNet.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                                                <Tooltip>
+                                                                                    <TooltipTrigger asChild>
+                                                                                        <div className="text-[10px] text-muted-foreground cursor-help flex items-center gap-1 w-fit text-left">
+                                                                                            gross Rs. {c.received.cashGross.toLocaleString('en-NP', { maximumFractionDigits: 0 })}
+                                                                                            <Info className="h-2.5 w-2.5" />
+                                                                                        </div>
+                                                                                    </TooltipTrigger>
+                                                                                    <TooltipContent side="top" className="max-w-xs">
+                                                                                        <p className="text-xs"><strong>Dividend Tax Breakdown</strong><br />5% tax on cash and bonus par value.</p>
+                                                                                    </TooltipContent>
+                                                                                </Tooltip>
+                                                                            </div>
+                                                                        ) : (<span className="text-muted-foreground">-</span>)}
+                                                                    </TableCell>
+                                                                    <TableCell className="hidden md:table-cell">
+                                                                        <Badge variant="outline" className={`text-[10px] border-0 px-1.5 py-0 ${statusLabel[c.status]?.className || ''}`}>
+                                                                            {statusLabel[c.status]?.text || c.status}
+                                                                        </Badge>
+                                                                    </TableCell>
+                                                                    <TableCell className="min-w-[120px]">
+                                                                        <div className="h-[40px] w-full">
+                                                                            <ShareSparkline timeline={c.shareTimeline} />
+                                                                        </div>
+                                                                    </TableCell>
+                                                                </TableRow>
+                                                            ))}
+                                                        </TableBody>
+                                                    </Table>
+                                                </TooltipProvider>
+                                            </div>
+                                        </>
+                                    );
+                                })()}
+                            </>
+                        ) : null}
+                    </CardContent>
+                </Card>
+
+                {/* Manual Overrides Accordion */}
+                <details className="group border rounded-lg overflow-hidden bg-card/30">
+                    <summary className="cursor-pointer p-4 hover:bg-muted/50 transition-colors flex items-center justify-between font-semibold border-b border-transparent group-open:border-border">
+                        <div className="space-y-1">
+                            <h2 className="text-lg">Manual Entries & Overrides</h2>
+                            <p className="text-sm text-muted-foreground font-normal">Add missing dividends or override auto-calculated amounts.</p>
+                        </div>
+                        <div className="text-primary group-open:rotate-180 transition-transform">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </summary>
+                    <div className="p-4 space-y-6">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="text-lg">Add Override</CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+                                    <div><Label>Symbol</Label><Input value={draft.symbol} onChange={(e) => setDraft({ ...draft, symbol: e.target.value })} /></div>
+                                    <div><Label>Fiscal Year</Label><Input value={draft.fiscalYear} onChange={(e) => setDraft({ ...draft, fiscalYear: e.target.value })} /></div>
+                                    <div><Label>Bonus %</Label><Input type="number" step="0.01" value={draft.bonusPercent} onChange={(e) => setDraft({ ...draft, bonusPercent: parseFloat(e.target.value) || 0 })} /></div>
+                                    <div><Label>Cash %</Label><Input type="number" step="0.01" value={draft.cashPercent} onChange={(e) => setDraft({ ...draft, cashPercent: parseFloat(e.target.value) || 0 })} /></div>
+                                    <div><Label>Cash Income</Label><Input type="number" step="0.01" value={draft.cashIncome} onChange={(e) => setDraft({ ...draft, cashIncome: parseFloat(e.target.value) || 0 })} /></div>
+                                </div>
+                                <div className="flex gap-2">
+                                    <Button onClick={addRow}><PlusCircle className="h-4 w-4 mr-2" />Add</Button>
+                                </div>
+                            </CardContent>
+                        </Card>
+                        
+                        {rows.length > 0 && (
+                            <div className="overflow-x-auto border rounded-lg">
                                 <Table>
                                     <TableHeader>
                                         <TableRow>
                                             <TableHead>Symbol</TableHead>
-                                            <TableHead className="hidden md:table-cell">Company</TableHead>
-                                            <TableHead>Fiscal Year</TableHead>
+                                            <TableHead>FY</TableHead>
                                             <TableHead>Bonus %</TableHead>
                                             <TableHead>Cash %</TableHead>
-                                            <TableHead>Total %</TableHead>
                                             <TableHead>Cash Income</TableHead>
                                             <TableHead className="text-right">Actions</TableHead>
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
-                                        {rows.map((row) => {
-                                            const isEditing = editingId === row.id;
-                                            const displayRow = isEditing && editDraft ? editDraft : row;
-                                            const totalPercent = (displayRow.bonusPercent || 0) + (displayRow.cashPercent || 0);
-
-                                            if (isEditing && editDraft) {
-                                                return (
-                                                    <TableRow key={row.id} className="bg-muted/50">
-                                                        <TableCell>
-                                                            <Input
-                                                                value={editDraft.symbol}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, symbol: e.target.value })}
-                                                                className="h-8 w-20"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell className="hidden md:table-cell">
-                                                            <Input
-                                                                value={editDraft.companyName}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, companyName: e.target.value })}
-                                                                placeholder="Auto-fetch on save"
-                                                                className="h-8 w-40"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell>
-                                                            <Input
-                                                                value={editDraft.fiscalYear}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, fiscalYear: e.target.value })}
-                                                                className="h-8 w-24"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell>
-                                                            <Input
-                                                                type="number"
-                                                                step="0.01"
-                                                                value={editDraft.bonusPercent}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, bonusPercent: parseFloat(e.target.value) || 0 })}
-                                                                className="h-8 w-20"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell>
-                                                            <Input
-                                                                type="number"
-                                                                step="0.01"
-                                                                value={editDraft.cashPercent}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, cashPercent: parseFloat(e.target.value) || 0 })}
-                                                                className="h-8 w-20"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell className="font-mono font-semibold">{totalPercent.toFixed(2)}%</TableCell>
-                                                        <TableCell>
-                                                            <Input
-                                                                type="number"
-                                                                step="0.01"
-                                                                value={editDraft.cashIncome}
-                                                                onChange={(e) => setEditDraft({ ...editDraft, cashIncome: parseFloat(e.target.value) || 0 })}
-                                                                className="h-8 w-24"
-                                                            />
-                                                        </TableCell>
-                                                        <TableCell className="text-right">
-                                                            <div className="flex gap-1 justify-end">
-                                                                <Button variant="ghost" size="sm" onClick={saveEditing} className="text-green-600 hover:text-green-700 gap-1">
-                                                                    <Check className="h-4 w-4" />
-                                                                    Save
-                                                                </Button>
-                                                                <Button variant="ghost" size="sm" onClick={cancelEditing} className="text-muted-foreground hover:text-foreground gap-1">
-                                                                    <X className="h-4 w-4" />
-                                                                    Cancel
-                                                                </Button>
-                                                            </div>
-                                                        </TableCell>
-                                                    </TableRow>
-                                                );
-                                            }
-
-                                            return (
-                                                <TableRow key={row.id}>
-                                                    <TableCell className="font-semibold">
+                                        {rows.map(row => (
+                                            <TableRow key={row.id} className={cn(row.disabled && "opacity-50")}>
+                                                <TableCell className="font-semibold">
+                                                    <div className="flex items-center gap-2">
                                                         <StockSymbolLink symbol={row.symbol} />
-                                                    </TableCell>
-                                                    <TableCell className="hidden md:table-cell text-sm text-muted-foreground">{row.companyName || '-'}</TableCell>
-                                                    <TableCell className="font-mono text-xs">{row.fiscalYear || '-'}</TableCell>
-                                                    <TableCell className="font-mono text-emerald-500">{row.bonusPercent || 0}%</TableCell>
-                                                    <TableCell className="font-mono text-amber-500">{row.cashPercent || 0}%</TableCell>
-                                                    <TableCell className="font-mono font-semibold">{totalPercent.toFixed(2)}%</TableCell>
-                                                    <TableCell className="font-mono">Rs. {row.cashIncome?.toLocaleString('en-NP', { maximumFractionDigits: 0 }) || 0}</TableCell>
-                                                    <TableCell className="text-right">
-                                                        <div className="flex gap-1 justify-end">
-                                                            <Button variant="ghost" size="sm" onClick={() => startEditing(row)} className="text-blue-600 hover:text-blue-700 gap-1">
-                                                                <Pencil className="h-4 w-4" />
-                                                                Edit
-                                                            </Button>
-                                                            <Button variant="ghost" size="sm" onClick={() => deleteRow(row.id)} className="text-destructive hover:text-destructive gap-1">
-                                                                <Trash2 className="h-4 w-4" />
-                                                                Remove
-                                                            </Button>
-                                                        </div>
-                                                    </TableCell>
-                                                </TableRow>
-                                            );
-                                        })}
+                                                        {row.disabled && (
+                                                            <Tooltip>
+                                                                <TooltipTrigger asChild>
+                                                                    <Badge variant="outline" className="text-[10px] border-0 px-1.5 py-0 bg-muted text-muted-foreground cursor-help">Disabled</Badge>
+                                                                </TooltipTrigger>
+                                                                <TooltipContent side="top" className="max-w-xs">
+                                                                    <p className="text-xs">{row.disabledReason || "Kept for reference, excluded from calculations."}</p>
+                                                                </TooltipContent>
+                                                            </Tooltip>
+                                                        )}
+                                                    </div>
+                                                </TableCell>
+                                                <TableCell className="font-mono text-xs">{row.fiscalYear}</TableCell>
+                                                <TableCell className="font-mono text-emerald-500">{row.bonusPercent}%</TableCell>
+                                                <TableCell className="font-mono text-amber-500">{row.cashPercent}%</TableCell>
+                                                <TableCell className="font-mono">Rs. {row.cashIncome}</TableCell>
+                                                <TableCell className="text-right">
+                                                    <Button variant="ghost" size="sm" onClick={() => deleteRow(row.id)} className="text-destructive"><Trash2 className="h-4 w-4" /></Button>
+                                                </TableCell>
+                                            </TableRow>
+                                        ))}
                                     </TableBody>
                                 </Table>
                             </div>
                         )}
-                    </CardContent>
-                </Card>
+                    </div>
+                </details>
             </main>
             <Footer />
         </div>
