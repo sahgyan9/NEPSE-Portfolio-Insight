@@ -9,7 +9,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-07-07T07:17:39.087113",
+      "parsed_at": "2026-07-17T05:57:43.691048",
       "computed": {
         "pe_ratio": 68.5,
         "pb_ratio": 3.9,
@@ -32,7 +32,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -82,7 +91,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-07-07T07:17:39.087133",
+      "parsed_at": "2026-07-17T05:57:43.691070",
       "computed": {
         "pe_ratio": 44.3,
         "pb_ratio": 3.2,
@@ -105,7 +114,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -155,7 +173,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-07-07T07:17:39.087136",
+      "parsed_at": "2026-07-17T05:57:43.691074",
       "computed": {
         "pe_ratio": 40.7,
         "pb_ratio": 3.0,
@@ -178,7 +196,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -228,7 +255,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-07-07T07:17:39.087138",
+      "parsed_at": "2026-07-17T05:57:43.691078",
       "computed": {
         "pe_ratio": 30.3,
         "pb_ratio": 3.0,
@@ -251,7 +278,16 @@
         "dupont_equity_multiplier": 2.58,
         "dupont_roe": 11.23,
         "debt_to_equity": 1.56,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": 69.27,
+        "revenue_per_share": 67.98,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": 2.28,
+        "fixed_asset_turnover": 0.15,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 3780000000.0,
@@ -317,7 +353,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-07-07T07:17:39.087141",
+      "parsed_at": "2026-07-17T05:57:43.691081",
       "computed": {
         "pe_ratio": 28.5,
         "pb_ratio": 3.7,
@@ -340,7 +376,16 @@
         "dupont_equity_multiplier": 2.55,
         "dupont_roe": 12.99,
         "debt_to_equity": 1.28,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": 65.28,
+        "revenue_per_share": 70.17,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": 2.09,
+        "fixed_asset_turnover": 0.16,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 3780000000.0,
@@ -406,7 +451,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-07-07T07:17:39.087142",
+      "parsed_at": "2026-07-17T05:57:43.691083",
       "computed": {
         "pe_ratio": 27.9,
         "pb_ratio": 3.6,
@@ -429,7 +474,16 @@
         "dupont_equity_multiplier": 2.42,
         "dupont_roe": 13.42,
         "debt_to_equity": 1.4,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": 73.21,
+        "revenue_per_share": 71.69,
+        "qoq_profit_momentum": 622.11,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": 3.71,
+        "fixed_asset_turnover": 0.16,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 3780000000.0,
@@ -495,7 +549,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-07-07T07:17:39.087144",
+      "parsed_at": "2026-07-17T05:57:43.691085",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.4,
@@ -518,7 +572,16 @@
         "dupont_equity_multiplier": 2.41,
         "dupont_roe": 14.04,
         "debt_to_equity": 1.39,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": 72.99,
+        "revenue_per_share": 59.94,
+        "qoq_profit_momentum": -17.17,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": 3.66,
+        "fixed_asset_turnover": 0.16,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 4573800000.0,
@@ -584,7 +647,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-07-07T07:17:39.087146",
+      "parsed_at": "2026-07-17T05:57:43.691088",
       "computed": {
         "pe_ratio": 26.8,
         "pb_ratio": 3.8,
@@ -607,7 +670,16 @@
         "dupont_equity_multiplier": 2.29,
         "dupont_roe": 15.46,
         "debt_to_equity": 1.28,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": 71.37,
+        "revenue_per_share": 62.08,
+        "qoq_profit_momentum": -32.21,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": 3.44,
+        "fixed_asset_turnover": 0.16,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 4573800000.0,
@@ -668,5 +740,5 @@
       }
     }
   ],
-  "last_updated": "2026-07-07T07:17:39.182333"
+  "last_updated": "2026-07-17T05:57:43.781529"
 }

@@ -19,6 +19,9 @@ export interface ManualDividendEntry {
     bonusPercent: number;
     cashPercent: number;
     cashIncome: number;
+    bonusSharesReceived?: number;
+    disabled?: boolean;
+    disabledReason?: string;
 }
 
 export interface ManualDividendData {

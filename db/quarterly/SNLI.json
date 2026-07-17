@@ -32,7 +32,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -115,7 +124,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -204,7 +222,16 @@
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": null,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {},
       "raw_keys_order": [
@@ -293,7 +320,16 @@
         "dupont_equity_multiplier": 2.54,
         "dupont_roe": 6.31,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": 121.39,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 3961600000.0,
@@ -404,7 +440,16 @@
         "dupont_equity_multiplier": 2.36,
         "dupont_roe": 7.01,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": 90.63,
+        "qoq_profit_momentum": null,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 5008691600.0,
@@ -515,7 +560,16 @@
         "dupont_equity_multiplier": 2.31,
         "dupont_roe": 7.54,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": 74.27,
+        "qoq_profit_momentum": 12.08,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 5031226500.0,
@@ -626,7 +680,16 @@
         "dupont_equity_multiplier": 2.54,
         "dupont_roe": 7.37,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": 88.21,
+        "qoq_profit_momentum": -80.72,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 5031232000.0,
@@ -737,7 +800,16 @@
         "dupont_equity_multiplier": 2.63,
         "dupont_roe": 7.42,
         "debt_to_equity": null,
-        "net_interest_margin": null
+        "net_interest_margin": null,
+        "operating_profit_margin": null,
+        "revenue_per_share": 66.71,
+        "qoq_profit_momentum": 18.36,
+        "loan_to_asset": null,
+        "efficiency_ratio": null,
+        "interest_coverage": null,
+        "fixed_asset_turnover": null,
+        "investment_yield": null,
+        "combined_ratio": null
       },
       "raw": {
         "Paid Up Capital": 5282793600.0,

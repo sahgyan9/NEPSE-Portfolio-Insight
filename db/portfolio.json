@@ -38,8 +38,8 @@
     {
       "symbol": "HDL",
       "company": "Himalayan Distillery Limited",
-      "quantity": 27,
-      "avgCost": 1023.3491,
+      "quantity": 37,
+      "avgCost": 1057.39,
       "dateAdded": "2026-01-07"
     },
     {
@@ -101,8 +101,8 @@
     {
       "symbol": "NICA",
       "company": "NIC Asia Bank Ltd.",
-      "quantity": 20,
-      "avgCost": 433.159,
+      "quantity": 30,
+      "avgCost": 400.19,
       "dateAdded": "2024-12-13"
     },
     {
@@ -129,8 +129,8 @@
     {
       "symbol": "SAHAS",
       "company": "Sahas Urja Limited",
-      "quantity": 75,
-      "avgCost": 584.0735,
+      "quantity": 85,
+      "avgCost": 591.29,
       "dateAdded": "2026-07-02"
     },
     {
@@ -164,8 +164,8 @@
     {
       "symbol": "UPPER",
       "company": "Upper Tamakoshi Hydropower Ltd.",
-      "quantity": 45,
-      "avgCost": 207.6606,
+      "quantity": 55,
+      "avgCost": 204.62,
       "dateAdded": "2026-06-29"
     },
     {
@@ -174,6 +174,13 @@
       "quantity": 20,
       "avgCost": 496.6,
       "dateAdded": "2026-07-07"
+    },
+    {
+      "symbol": "AVYAN",
+      "company": "Aviyan Laghubitta Bittiya Sanstha Limited",
+      "quantity": 20,
+      "avgCost": 1043.9,
+      "dateAdded": "2026-07-16"
     }
   ],
   "transactions": [
@@ -182,28 +189,384 @@
       "symbol": "HDL",
       "quantity": 4,
       "price": 100,
-      "date": "2026-01-07 18:20:44"
+      "date": "2026-01-07 18:20:44",
+      "source": "manual"
     },
     {
       "type": "BUY",
       "symbol": "NIBLSF",
       "quantity": 275,
       "price": 10,
-      "date": "2026-01-22 20:47:17"
+      "date": "2026-01-22 20:47:17",
+      "source": "manual"
     },
     {
       "type": "BUY",
       "symbol": "SAHAS",
       "quantity": 4,
       "price": 100,
-      "date": "2026-02-11 12:39:57"
+      "date": "2026-02-11 12:39:57",
+      "source": "manual"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 100,
+      "date": "2024-06-01",
+      "source": "ipo-allotment (date approximate; correct if known)"
+    },
+    {
+      "type": "BUY",
+      "symbol": "UPPER",
+      "quantity": 20,
+      "price": 213.8,
+      "date": "2024-07-28",
+      "billNo": "KTM-P8182-0005239"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 10,
+      "price": 261.04,
+      "date": "2024-07-29",
+      "billNo": "KTM-P8182-0006024"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 10,
+      "price": 231.03,
+      "date": "2024-08-11",
+      "billNo": "KTM-P8182-0012281"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HDL",
+      "quantity": 10,
+      "price": 1383.17,
+      "date": "2024-09-04",
+      "billNo": "KTM-P8182-0023335"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HDL",
+      "quantity": 10,
+      "price": 1304.88,
+      "date": "2024-09-16",
+      "billNo": "KTM-P8182-0026746"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NICA",
+      "quantity": 10,
+      "price": 454.7,
+      "date": "2024-09-16",
+      "billNo": "KTM-P8182-0026746"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SARBTM",
+      "quantity": 10,
+      "price": 806.01,
+      "date": "2024-09-16",
+      "billNo": "KTM-P8182-0026746"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NABIL",
+      "quantity": 20,
+      "price": 571.13,
+      "date": "2024-11-12",
+      "billNo": "KTM-P8182-0035128"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NABIL",
+      "quantity": 10,
+      "price": 526.07,
+      "date": "2024-12-05",
+      "billNo": "KTM-P8182-0040623"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NABIL",
+      "quantity": 10,
+      "price": 517.43,
+      "date": "2024-12-08",
+      "billNo": "KTM-P8182-0040976"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NICA",
+      "quantity": 10,
+      "price": 406.62,
+      "date": "2024-12-10",
+      "billNo": "KTM-P8182-0041557"
+    },
+    {
+      "type": "BUY",
+      "symbol": "CBBL",
+      "quantity": 10,
+      "price": 855.09,
+      "date": "2025-01-13",
+      "billNo": "KTM-P8182-0047008"
+    },
+    {
+      "type": "BUY",
+      "symbol": "CHCL",
+      "quantity": 10,
+      "price": 491.74,
+      "date": "2025-03-23",
+      "billNo": "KTM-P8182-0062347"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NTC",
+      "quantity": 10,
+      "price": 903.88,
+      "date": "2025-03-23",
+      "billNo": "KTM-P8182-0062347"
+    },
+    {
+      "type": "BUY",
+      "symbol": "CBBL",
+      "quantity": 10,
+      "price": 835.12,
+      "date": "2025-03-25",
+      "billNo": "KTM-P8182-0062888"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NABIL",
+      "quantity": 10,
+      "price": 481.6,
+      "date": "2025-03-25",
+      "billNo": "KTM-P8182-0062888"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NTC",
+      "quantity": 10,
+      "price": 865.73,
+      "date": "2025-06-03",
+      "billNo": "KTM-P8182-0075434"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NTC",
+      "quantity": 10,
+      "price": 842.15,
+      "date": "2025-06-22",
+      "billNo": "KTM-P8182-0079585"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 20,
+      "price": 207.78,
+      "date": "2025-06-25",
+      "billNo": "KTM-P8182-0080430"
+    },
+    {
+      "type": "SELL",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 609.9,
+      "date": "2025-07-16",
+      "billNo": "KTM-S8182-0093462"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NABIL",
+      "quantity": 20,
+      "price": 509.9,
+      "date": "2025-11-09",
+      "billNo": "KTM-P8283-0019091"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 15,
+      "price": 199.75,
+      "date": "2025-11-09",
+      "billNo": "KTM-P8283-0019091"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 20,
+      "price": 199.45,
+      "date": "2025-11-09",
+      "billNo": "KTM-P8283-0019091"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NTC",
+      "quantity": 10,
+      "price": 873.26,
+      "date": "2025-11-09",
+      "billNo": "KTM-P8283-0019091"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 676.53,
+      "date": "2025-11-11",
+      "billNo": "KTM-P8283-0019444"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 676.43,
+      "date": "2025-11-11",
+      "billNo": "KTM-P8283-0019444"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 567.12,
+      "date": "2025-11-23",
+      "billNo": "KTM-P8283-0020835"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 566.12,
+      "date": "2025-11-23",
+      "billNo": "KTM-P8283-0020835"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 566.12,
+      "date": "2025-11-23",
+      "billNo": "KTM-P8283-0020835"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.53,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.93,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.93,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.93,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.53,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 10,
+      "price": 194.93,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HBL",
+      "quantity": 40,
+      "price": 194.63,
+      "date": "2025-11-25",
+      "billNo": "KTM-P8283-0021292"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NIMB",
+      "quantity": 20,
+      "price": 195.03,
+      "date": "2026-06-19",
+      "billNo": "KTM-P8283-0060827"
+    },
+    {
+      "type": "BUY",
+      "symbol": "UPPER",
+      "quantity": 25,
+      "price": 200.75,
+      "date": "2026-06-19",
+      "billNo": "KTM-P8283-0060827"
     },
     {
       "type": "BUY",
       "symbol": "SHL",
       "quantity": 20,
-      "price": 496.6,
-      "date": "2026-07-07 17:27:26"
+      "price": 495.35,
+      "date": "2026-07-03",
+      "billNo": "KTM-P8283-0062835"
+    },
+    {
+      "type": "BUY",
+      "symbol": "NICA",
+      "quantity": 10,
+      "price": 334.25,
+      "date": "2026-07-08",
+      "billNo": "KTM-P8283-0063390"
+    },
+    {
+      "type": "BUY",
+      "symbol": "AVYAN",
+      "quantity": 20,
+      "price": 1043.9,
+      "date": "2026-07-13",
+      "billNo": "KTM-P8283-0064012"
+    },
+    {
+      "type": "BUY",
+      "symbol": "HDL",
+      "quantity": 10,
+      "price": 1149.29,
+      "date": "2026-07-13",
+      "billNo": "KTM-P8283-0064012"
+    },
+    {
+      "type": "BUY",
+      "symbol": "SAHAS",
+      "quantity": 10,
+      "price": 645.41,
+      "date": "2026-07-13",
+      "billNo": "KTM-P8283-0064012"
+    },
+    {
+      "type": "BUY",
+      "symbol": "UPPER",
+      "quantity": 10,
+      "price": 190.93,
+      "date": "2026-07-14",
+      "billNo": "KTM-P8283-0064206"
     }
   ],
   "valueHistory": [
@@ -346,6 +709,16 @@
       "date": "2026-07-11T08:22:33.172384",
       "invested": 342212.99,
       "value": 366446.31
+    },
+    {
+      "date": "2026-07-16T21:23:26.199407",
+      "invested": 386290.03,
+      "value": 410305.98
+    },
+    {
+      "date": "2026-07-17T09:28:59.614667",
+      "invested": 386290.03,
+      "value": 410305.98
     }
   ],
   "watchlist": [

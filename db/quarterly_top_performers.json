@@ -1,8 +1,38 @@
 {
-  "generatedAt": "2026-07-10T19:45:33.260095",
+  "generatedAt": "2026-07-17T09:52:36.440014",
   "latestPeriod": "FY 2082-83 Q3",
   "periods": {
     "FY 2082-83 Q3": {
+      "Microfinance": [
+        {
+          "symbol": "AVYAN",
+          "score": 85.9,
+          "baseScore": 75.0,
+          "roe": 39.26,
+          "eps": 53.13,
+          "epsGrowth": 162.62,
+          "epsConsistency": 75.0,
+          "profitGrowth": 162.62,
+          "revenueGrowth": 48.74,
+          "netMargin": 25.67,
+          "qualityModifier": 14.5,
+          "qualityDetail": "NPL: 5.14% (-0.0); COF: 6.3% (+1.0); CD Ratio: 110.3% (+1.0)"
+        },
+        {
+          "symbol": "JBLB",
+          "score": 25.4,
+          "baseScore": 25.0,
+          "roe": 24.33,
+          "eps": 57.77,
+          "epsGrowth": 184.41,
+          "epsConsistency": 100.0,
+          "profitGrowth": 184.41,
+          "revenueGrowth": 43.52,
+          "netMargin": 23.98,
+          "qualityModifier": 1.6,
+          "qualityDetail": "NPL: 4.80% (+0.1); COF: 7.6% (+0.8); CD Ratio: 127.2% (-0.6)"
+        }
+      ],
       "Hydropower": [
         {
           "symbol": "MEN",
@@ -20,7 +50,7 @@
         },
         {
           "symbol": "SAHAS",
-          "score": 66.3,
+          "score": 69.7,
           "baseScore": 60.0,
           "roe": 16.84,
           "eps": 27.36,
@@ -29,8 +59,8 @@
           "profitGrowth": 62.07,
           "revenueGrowth": 10.51,
           "netMargin": 44.06,
-          "qualityModifier": 10.4,
-          "qualityDetail": "D/E: 1.28 (+0.2); ROA: 6.9% (+0.6)"
+          "qualityModifier": 16.2,
+          "qualityDetail": "D/E: 1.28 (+0.2); ROA: 6.9% (+0.6); Avg Div: 14.5% (+5.8%)"
         },
         {
           "symbol": "BHL",
@@ -50,7 +80,7 @@
       "unknown": [
         {
           "symbol": "CBBL",
-          "score": 90.6,
+          "score": 99.5,
           "baseScore": 100.0,
           "roe": 15.07,
           "eps": 34.99,
@@ -59,8 +89,8 @@
           "profitGrowth": 4.55,
           "revenueGrowth": 7.74,
           "netMargin": 19.36,
-          "qualityModifier": -9.4,
-          "qualityDetail": "ROA: 2.4% (-0.3); Op Profit Growth: +5.6% (-0.4)"
+          "qualityModifier": -0.5,
+          "qualityDetail": "ROA: 2.4% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
         },
         {
           "symbol": "SNLI",
@@ -73,14 +103,14 @@
           "profitGrowth": 2.03,
           "revenueGrowth": 4.34,
           "netMargin": 15.71,
-          "qualityModifier": -0.9,
-          "qualityDetail": "ROA: 2.9% (-0.0)"
+          "qualityModifier": 4.9,
+          "qualityDetail": "ROA: 2.9% (-0.0); Avg Div: 14.4% (+5.8%)"
         }
       ],
       "Life Insurance": [
         {
           "symbol": "CLI",
-          "score": 87.2,
+          "score": 91.4,
           "baseScore": 100.0,
           "roe": 6.09,
           "eps": 8.55,
@@ -89,14 +119,14 @@
           "profitGrowth": 6.55,
           "revenueGrowth": 23.13,
           "netMargin": 4.92,
-          "qualityModifier": -12.8,
-          "qualityDetail": "ROA: 1.7% (-0.5)"
+          "qualityModifier": -8.6,
+          "qualityDetail": "ROA: 1.7% (-0.5); Avg Div: 10.7% (+4.3%)"
         }
       ],
       "Commercial Bank": [
         {
           "symbol": "NABIL",
-          "score": 92.3,
+          "score": 98.8,
           "baseScore": 91.7,
           "roe": 13.15,
           "eps": 31.57,
@@ -105,8 +135,8 @@
           "profitGrowth": 14.74,
           "revenueGrowth": -6.99,
           "netMargin": 22.3,
-          "qualityModifier": 0.7,
-          "qualityDetail": "CAR: 12.5% (+0.0); NPL: 4.37% (-0.6); COF: 3.2% (+1.0)"
+          "qualityModifier": 7.8,
+          "qualityDetail": "CAR: 12.5% (+0.0); NPL: 4.37% (-0.6); COF: 3.2% (+1.0); Avg Div: 17.6% (+7.1%)"
         },
         {
           "symbol": "NIMB",
@@ -124,7 +154,7 @@
         },
         {
           "symbol": "HBL",
-          "score": 44.6,
+          "score": 48.1,
           "baseScore": 50.0,
           "roe": 4.59,
           "eps": 7.86,
@@ -133,14 +163,14 @@
           "profitGrowth": 27.71,
           "revenueGrowth": -19.49,
           "netMargin": 7.4,
-          "qualityModifier": -10.8,
-          "qualityDetail": "CAR: 11.3% (-0.8); NPL: 7.98% (-1.0); COF: 3.9% (+1.0)"
+          "qualityModifier": -3.9,
+          "qualityDetail": "CAR: 11.3% (-0.8); NPL: 7.98% (-1.0); COF: 3.9% (+1.0); Avg Div: 17.2% (+6.9%)"
         }
       ],
       "Manufacturing": [
         {
           "symbol": "HDL",
-          "score": 77.1,
+          "score": 82.8,
           "baseScore": 61.7,
           "roe": 24.54,
           "eps": 28.89,
@@ -149,12 +179,12 @@
           "profitGrowth": 20.8,
           "revenueGrowth": 11.71,
           "netMargin": 14.09,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 21.1% (+1.0)"
+          "qualityModifier": 34.3,
+          "qualityDetail": "ROA: 21.1% (+1.0); Avg Div: 23.3% (+9.3%)"
         },
         {
           "symbol": "SARBTM",
-          "score": 64.6,
+          "score": 65.4,
           "baseScore": 51.7,
           "roe": 13.03,
           "eps": 25.02,
@@ -163,8 +193,8 @@
           "profitGrowth": 99.13,
           "revenueGrowth": 12.99,
           "netMargin": 13.41,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 8.4% (+1.0)"
+          "qualityModifier": 26.6,
+          "qualityDetail": "ROA: 8.4% (+1.0); Avg Div: 4.0% (+1.6%)"
         },
         {
           "symbol": "SHIVM",
@@ -193,8 +223,8 @@
           "profitGrowth": 57.75,
           "revenueGrowth": 33.23,
           "netMargin": 16.02,
-          "qualityModifier": 22.1,
-          "qualityDetail": "ROA: 4.8% (+0.9)"
+          "qualityModifier": 22.7,
+          "qualityDetail": "ROA: 4.8% (+0.9); Avg Div: 1.3% (+0.5%)"
         },
         {
           "symbol": "HRL",
@@ -207,24 +237,8 @@
           "profitGrowth": -73.42,
           "revenueGrowth": -3.98,
           "netMargin": 4.92,
-          "qualityModifier": -19.5,
-          "qualityDetail": "ROA: 1.4% (-0.8)"
-        }
-      ],
-      "Microfinance": [
-        {
-          "symbol": "JBLB",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 24.33,
-          "eps": 57.77,
-          "epsGrowth": 184.41,
-          "epsConsistency": 100.0,
-          "profitGrowth": 184.41,
-          "revenueGrowth": 43.52,
-          "netMargin": 23.98,
-          "qualityModifier": 1.6,
-          "qualityDetail": "NPL: 4.80% (+0.1); COF: 7.6% (+0.8); CD Ratio: 127.2% (-0.6)"
+          "qualityModifier": -17.8,
+          "qualityDetail": "ROA: 1.4% (-0.8); Avg Div: 4.2% (+1.7%)"
         }
       ],
       "Hotels": [
@@ -239,12 +253,42 @@
           "profitGrowth": 14.92,
           "revenueGrowth": 15.58,
           "netMargin": 24.1,
-          "qualityModifier": 18.8,
-          "qualityDetail": "ROA: 20.7% (+1.0); Op Profit Growth: +15.1% (+0.5)"
+          "qualityModifier": 25.9,
+          "qualityDetail": "ROA: 20.7% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
         }
       ]
     },
     "FY 2082-83 Q2": {
+      "Microfinance": [
+        {
+          "symbol": "AVYAN",
+          "score": 88.4,
+          "baseScore": 75.0,
+          "roe": 44.49,
+          "eps": 55.85,
+          "epsGrowth": 122.44,
+          "epsConsistency": 75.0,
+          "profitGrowth": 122.44,
+          "revenueGrowth": 42.67,
+          "netMargin": 27.72,
+          "qualityModifier": 17.8,
+          "qualityDetail": "NPL: 4.15% (+0.3); COF: 6.7% (+1.0); CD Ratio: 109.7% (+1.0)"
+        },
+        {
+          "symbol": "JBLB",
+          "score": 24.9,
+          "baseScore": 25.0,
+          "roe": 23.32,
+          "eps": 52.76,
+          "epsGrowth": 214.04,
+          "epsConsistency": 100.0,
+          "profitGrowth": 214.04,
+          "revenueGrowth": 42.03,
+          "netMargin": 22.57,
+          "qualityModifier": -0.3,
+          "qualityDetail": "NPL: 5.98% (-0.3); COF: 7.8% (+0.7); CD Ratio: 124.8% (-0.3)"
+        }
+      ],
       "Hydropower": [
         {
           "symbol": "MEN",
@@ -262,7 +306,7 @@
         },
         {
           "symbol": "SAHAS",
-          "score": 60.7,
+          "score": 64.1,
           "baseScore": 58.0,
           "roe": 15.32,
           "eps": 24.0,
@@ -271,12 +315,12 @@
           "profitGrowth": 64.5,
           "revenueGrowth": 8.28,
           "netMargin": 40.04,
-          "qualityModifier": 4.7,
-          "qualityDetail": "D/E: 1.39 (+0.0); ROA: 6.1% (+0.4)"
+          "qualityModifier": 10.5,
+          "qualityDetail": "D/E: 1.39 (+0.0); ROA: 6.1% (+0.4); Avg Div: 14.5% (+5.8%)"
         },
         {
           "symbol": "CHCL",
-          "score": 52.1,
+          "score": 55.2,
           "baseScore": 45.0,
           "roe": 6.09,
           "eps": 7.32,
@@ -285,14 +329,14 @@
           "profitGrowth": 6.24,
           "revenueGrowth": -7.08,
           "netMargin": 54.03,
-          "qualityModifier": 15.9,
-          "qualityDetail": "D/E: 0.00 (+1.0); ROA: 5.8% (+0.3)"
+          "qualityModifier": 22.6,
+          "qualityDetail": "D/E: 0.00 (+1.0); ROA: 5.8% (+0.3); Avg Div: 16.9% (+6.7%)"
         }
       ],
       "unknown": [
         {
           "symbol": "CBBL",
-          "score": 91.2,
+          "score": 100.0,
           "baseScore": 100.0,
           "roe": 15.62,
           "eps": 35.31,
@@ -301,8 +345,8 @@
           "profitGrowth": 18.63,
           "revenueGrowth": 6.77,
           "netMargin": 19.95,
-          "qualityModifier": -8.8,
-          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4)"
+          "qualityModifier": 0.1,
+          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
         },
         {
           "symbol": "SNLI",
@@ -315,14 +359,14 @@
           "profitGrowth": 3.17,
           "revenueGrowth": -2.74,
           "netMargin": 12.29,
-          "qualityModifier": 1.0,
-          "qualityDetail": "ROA: 3.1% (+0.0)"
+          "qualityModifier": 6.8,
+          "qualityDetail": "ROA: 3.1% (+0.0); Avg Div: 14.4% (+5.8%)"
         }
       ],
       "Life Insurance": [
         {
           "symbol": "CLI",
-          "score": 88.8,
+          "score": 93.1,
           "baseScore": 100.0,
           "roe": 5.96,
           "eps": 8.51,
@@ -331,8 +375,8 @@
           "profitGrowth": -1.51,
           "revenueGrowth": -0.67,
           "netMargin": 5.12,
-          "qualityModifier": -11.2,
-          "qualityDetail": "ROA: 1.8% (-0.4)"
+          "qualityModifier": -6.9,
+          "qualityDetail": "ROA: 1.8% (-0.4); Avg Div: 10.7% (+4.3%)"
         }
       ],
       "Commercial Bank": [
@@ -347,8 +391,8 @@
           "profitGrowth": 21.71,
           "revenueGrowth": -8.46,
           "netMargin": 22.02,
-          "qualityModifier": 3.0,
-          "qualityDetail": "CAR: 12.8% (+0.2); NPL: 4.25% (-0.6); COF: 3.6% (+1.0)"
+          "qualityModifier": 10.1,
+          "qualityDetail": "CAR: 12.8% (+0.2); NPL: 4.25% (-0.6); COF: 3.6% (+1.0); Avg Div: 17.6% (+7.1%)"
         },
         {
           "symbol": "NIMB",
@@ -366,7 +410,7 @@
         },
         {
           "symbol": "HBL",
-          "score": 23.5,
+          "score": 25.2,
           "baseScore": 25.0,
           "roe": 3.34,
           "eps": 5.7,
@@ -375,14 +419,14 @@
           "profitGrowth": -54.91,
           "revenueGrowth": -21.98,
           "netMargin": 5.17,
-          "qualityModifier": -5.9,
-          "qualityDetail": "CAR: 11.7% (-0.5); NPL: 4.65% (-0.8); COF: 4.0% (+1.0)"
+          "qualityModifier": 1.0,
+          "qualityDetail": "CAR: 11.7% (-0.5); NPL: 4.65% (-0.8); COF: 4.0% (+1.0); Avg Div: 17.2% (+6.9%)"
         }
       ],
       "Manufacturing": [
         {
           "symbol": "SARBTM",
-          "score": 75.0,
+          "score": 76.0,
           "baseScore": 60.0,
           "roe": 13.22,
           "eps": 24.91,
@@ -391,8 +435,22 @@
           "profitGrowth": 169.58,
           "revenueGrowth": 21.17,
           "netMargin": 13.49,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 8.6% (+1.0)"
+          "qualityModifier": 26.6,
+          "qualityDetail": "ROA: 8.6% (+1.0); Avg Div: 4.0% (+1.6%)"
+        },
+        {
+          "symbol": "HDL",
+          "score": 73.9,
+          "baseScore": 55.0,
+          "roe": 24.34,
+          "eps": 27.03,
+          "epsGrowth": 67.71,
+          "epsConsistency": 75.0,
+          "profitGrowth": 67.71,
+          "revenueGrowth": 39.96,
+          "netMargin": 13.47,
+          "qualityModifier": 34.3,
+          "qualityDetail": "ROA: 20.9% (+1.0); Avg Div: 23.3% (+9.3%)"
         },
         {
           "symbol": "SHIVM",
@@ -407,20 +465,6 @@
           "netMargin": 14.1,
           "qualityModifier": 25.0,
           "qualityDetail": "ROA: 8.7% (+1.0)"
-        },
-        {
-          "symbol": "HDL",
-          "score": 68.8,
-          "baseScore": 55.0,
-          "roe": 24.34,
-          "eps": 27.03,
-          "epsGrowth": 67.71,
-          "epsConsistency": 75.0,
-          "profitGrowth": 67.71,
-          "revenueGrowth": 39.96,
-          "netMargin": 13.47,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 20.9% (+1.0)"
         }
       ],
       "Others": [
@@ -435,12 +479,12 @@
           "profitGrowth": 9.48,
           "revenueGrowth": 6.76,
           "netMargin": 17.92,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 5.8% (+1.0)"
+          "qualityModifier": 26.7,
+          "qualityDetail": "ROA: 5.8% (+1.0); Avg Div: 4.2% (+1.7%)"
         },
         {
           "symbol": "NTC",
-          "score": 20.9,
+          "score": 21.0,
           "baseScore": 20.0,
           "roe": 4.57,
           "eps": 23.32,
@@ -449,24 +493,8 @@
           "profitGrowth": -21.12,
           "revenueGrowth": 7.41,
           "netMargin": 11.42,
-          "qualityModifier": 4.4,
-          "qualityDetail": "ROA: 3.4% (+0.2)"
-        }
-      ],
-      "Microfinance": [
-        {
-          "symbol": "JBLB",
-          "score": 99.7,
-          "baseScore": 100.0,
-          "roe": 23.32,
-          "eps": 52.76,
-          "epsGrowth": 214.04,
-          "epsConsistency": 100.0,
-          "profitGrowth": 214.04,
-          "revenueGrowth": 42.03,
-          "netMargin": 22.57,
-          "qualityModifier": -0.3,
-          "qualityDetail": "NPL: 5.98% (-0.3); COF: 7.8% (+0.7); CD Ratio: 124.8% (-0.3)"
+          "qualityModifier": 4.9,
+          "qualityDetail": "ROA: 3.4% (+0.2); Avg Div: 1.3% (+0.5%)"
         }
       ],
       "Hotels": [
@@ -481,12 +509,42 @@
           "profitGrowth": 12.01,
           "revenueGrowth": 12.9,
           "netMargin": 23.8,
-          "qualityModifier": 18.8,
-          "qualityDetail": "ROA: 20.3% (+1.0); Op Profit Growth: +15.1% (+0.5)"
+          "qualityModifier": 25.9,
+          "qualityDetail": "ROA: 20.3% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
         }
       ]
     },
     "FY 2082-83 Q1": {
+      "Microfinance": [
+        {
+          "symbol": "AVYAN",
+          "score": 79.5,
+          "baseScore": 75.0,
+          "roe": 37.44,
+          "eps": 42.85,
+          "epsGrowth": 210.45,
+          "epsConsistency": 75.0,
+          "profitGrowth": 210.45,
+          "revenueGrowth": 65.74,
+          "netMargin": 24.81,
+          "qualityModifier": 6.0,
+          "qualityDetail": "NPL: 7.69% (-0.9); COF: 7.0% (+1.0); CD Ratio: 107.9% (+1.0)"
+        },
+        {
+          "symbol": "JBLB",
+          "score": 25.3,
+          "baseScore": 25.0,
+          "roe": 20.76,
+          "eps": 44.93,
+          "epsGrowth": 220.63,
+          "epsConsistency": 100.0,
+          "profitGrowth": 220.63,
+          "revenueGrowth": 48.73,
+          "netMargin": 19.05,
+          "qualityModifier": 1.4,
+          "qualityDetail": "NPL: 4.62% (+0.1); COF: 8.0% (+0.6); CD Ratio: 126.8% (-0.6)"
+        }
+      ],
       "Hydropower": [
         {
           "symbol": "MEN",
@@ -504,7 +562,7 @@
         },
         {
           "symbol": "SAHAS",
-          "score": 54.4,
+          "score": 57.4,
           "baseScore": 53.0,
           "roe": 14.46,
           "eps": 21.81,
@@ -513,8 +571,8 @@
           "profitGrowth": 111.56,
           "revenueGrowth": 11.86,
           "netMargin": 36.8,
-          "qualityModifier": 2.6,
-          "qualityDetail": "D/E: 1.40 (-0.0); ROA: 5.6% (+0.2)"
+          "qualityModifier": 8.4,
+          "qualityDetail": "D/E: 1.40 (-0.0); ROA: 5.6% (+0.2); Avg Div: 14.5% (+5.8%)"
         },
         {
           "symbol": "UPPER",
@@ -534,7 +592,7 @@
       "unknown": [
         {
           "symbol": "CBBL",
-          "score": 91.2,
+          "score": 100.0,
           "baseScore": 100.0,
           "roe": 15.53,
           "eps": 34.4,
@@ -543,8 +601,8 @@
           "profitGrowth": 22.33,
           "revenueGrowth": 5.89,
           "netMargin": 19.82,
-          "qualityModifier": -8.8,
-          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4)"
+          "qualityModifier": 0.2,
+          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
         },
         {
           "symbol": "SNLI",
@@ -557,14 +615,14 @@
           "profitGrowth": 6.92,
           "revenueGrowth": -8.92,
           "netMargin": 16.48,
-          "qualityModifier": 7.9,
-          "qualityDetail": "ROA: 3.6% (+0.3)"
+          "qualityModifier": 13.6,
+          "qualityDetail": "ROA: 3.6% (+0.3); Avg Div: 14.4% (+5.8%)"
         }
       ],
       "Life Insurance": [
         {
           "symbol": "CLI",
-          "score": 90.8,
+          "score": 95.1,
           "baseScore": 100.0,
           "roe": 5.83,
           "eps": 8.51,
@@ -573,14 +631,14 @@
           "profitGrowth": 10.76,
           "revenueGrowth": 24.38,
           "netMargin": 5.3,
-          "qualityModifier": -9.2,
-          "qualityDetail": "ROA: 1.9% (-0.4)"
+          "qualityModifier": -4.9,
+          "qualityDetail": "ROA: 1.9% (-0.4); Avg Div: 10.7% (+4.3%)"
         }
       ],
       "Commercial Bank": [
         {
           "symbol": "NABIL",
-          "score": 93.6,
+          "score": 100.0,
           "baseScore": 91.7,
           "roe": 10.96,
           "eps": 25.24,
@@ -589,8 +647,8 @@
           "profitGrowth": -10.71,
           "revenueGrowth": -12.31,
           "netMargin": 17.31,
-          "qualityModifier": 2.1,
-          "qualityDetail": "CAR: 12.7% (+0.1); NPL: 4.31% (-0.6); COF: 4.1% (+1.0)"
+          "qualityModifier": 9.1,
+          "qualityDetail": "CAR: 12.7% (+0.1); NPL: 4.31% (-0.6); COF: 4.1% (+1.0); Avg Div: 17.6% (+7.1%)"
         },
         {
           "symbol": "NIMB",
@@ -608,7 +666,7 @@
         },
         {
           "symbol": "HBL",
-          "score": 32.0,
+          "score": 34.3,
           "baseScore": 33.3,
           "roe": 3.87,
           "eps": 6.59,
@@ -617,14 +675,14 @@
           "profitGrowth": -40.64,
           "revenueGrowth": -21.89,
           "netMargin": 5.65,
-          "qualityModifier": -3.9,
-          "qualityDetail": "CAR: 12.3% (-0.1); NPL: 7.39% (-1.0); COF: 4.3% (+1.0)"
+          "qualityModifier": 3.0,
+          "qualityDetail": "CAR: 12.3% (-0.1); NPL: 7.39% (-1.0); COF: 4.3% (+1.0); Avg Div: 17.2% (+6.9%)"
         }
       ],
       "Manufacturing": [
         {
           "symbol": "HDL",
-          "score": 81.2,
+          "score": 87.3,
           "baseScore": 65.0,
           "roe": 21.57,
           "eps": 22.9,
@@ -633,12 +691,12 @@
           "profitGrowth": 89.08,
           "revenueGrowth": 45.4,
           "netMargin": 12.44,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 18.4% (+1.0)"
+          "qualityModifier": 34.3,
+          "qualityDetail": "ROA: 18.4% (+1.0); Avg Div: 23.3% (+9.3%)"
         },
         {
           "symbol": "SARBTM",
-          "score": 81.2,
+          "score": 82.3,
           "baseScore": 65.0,
           "roe": 13.91,
           "eps": 25.87,
@@ -647,8 +705,8 @@
           "profitGrowth": 50.21,
           "revenueGrowth": 73.02,
           "netMargin": 13.42,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 9.0% (+1.0)"
+          "qualityModifier": 26.6,
+          "qualityDetail": "ROA: 9.0% (+1.0); Avg Div: 4.0% (+1.6%)"
         },
         {
           "symbol": "SHIVM",
@@ -677,8 +735,8 @@
           "profitGrowth": 55.67,
           "revenueGrowth": 54.58,
           "netMargin": 18.24,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 5.8% (+1.0)"
+          "qualityModifier": 26.7,
+          "qualityDetail": "ROA: 5.8% (+1.0); Avg Div: 4.2% (+1.7%)"
         },
         {
           "symbol": "NTC",
@@ -691,24 +749,8 @@
           "profitGrowth": -64.39,
           "revenueGrowth": -0.07,
           "netMargin": 6.53,
-          "qualityModifier": -14.9,
-          "qualityDetail": "ROA: 1.8% (-0.6)"
-        }
-      ],
-      "Microfinance": [
-        {
-          "symbol": "JBLB",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 20.76,
-          "eps": 44.93,
-          "epsGrowth": 220.63,
-          "epsConsistency": 100.0,
-          "profitGrowth": 220.63,
-          "revenueGrowth": 48.73,
-          "netMargin": 19.05,
-          "qualityModifier": 1.4,
-          "qualityDetail": "NPL: 4.62% (+0.1); COF: 8.0% (+0.6); CD Ratio: 126.8% (-0.6)"
+          "qualityModifier": -14.3,
+          "qualityDetail": "ROA: 1.8% (-0.6); Avg Div: 1.3% (+0.5%)"
         }
       ],
       "Hotels": [
@@ -723,16 +765,46 @@
           "profitGrowth": 8.6,
           "revenueGrowth": 10.39,
           "netMargin": 23.34,
-          "qualityModifier": 18.8,
-          "qualityDetail": "ROA: 19.8% (+1.0); Op Profit Growth: +15.1% (+0.5)"
+          "qualityModifier": 25.9,
+          "qualityDetail": "ROA: 19.8% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
         }
       ]
     },
     "FY 2081-82 Q4": {
+      "Microfinance": [
+        {
+          "symbol": "JBLB",
+          "score": 66.7,
+          "baseScore": 65.0,
+          "roe": 20.9,
+          "eps": 42.28,
+          "epsGrowth": 177.78,
+          "epsConsistency": 75.0,
+          "profitGrowth": 177.78,
+          "revenueGrowth": 48.81,
+          "netMargin": 18.27,
+          "qualityModifier": 2.7,
+          "qualityDetail": "NPL: 4.87% (+0.0); COF: 8.2% (+0.5); CD Ratio: 124.2% (-0.2)"
+        },
+        {
+          "symbol": "AVYAN",
+          "score": 40.3,
+          "baseScore": 35.0,
+          "roe": 23.86,
+          "eps": 26.42,
+          "epsGrowth": 210.45,
+          "epsConsistency": 50.0,
+          "profitGrowth": 210.45,
+          "revenueGrowth": 35.25,
+          "netMargin": 16.53,
+          "qualityModifier": 15.1,
+          "qualityDetail": "NPL: 4.00% (+0.3); COF: 8.1% (+0.6); CD Ratio: 103.3% (+1.0)"
+        }
+      ],
       "unknown": [
         {
           "symbol": "CBBL",
-          "score": 73.0,
+          "score": 80.2,
           "baseScore": 80.0,
           "roe": 15.58,
           "eps": 33.53,
@@ -741,12 +813,12 @@
           "profitGrowth": 21.17,
           "revenueGrowth": 3.01,
           "netMargin": 19.81,
-          "qualityModifier": -8.7,
-          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4)"
+          "qualityModifier": 0.2,
+          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
         },
         {
           "symbol": "SNLI",
-          "score": 21.0,
+          "score": 22.1,
           "baseScore": 20.0,
           "roe": 7.83,
           "eps": 10.27,
@@ -755,8 +827,8 @@
           "profitGrowth": -5.65,
           "revenueGrowth": 16.83,
           "netMargin": 11.95,
-          "qualityModifier": 4.9,
-          "qualityDetail": "ROA: 3.4% (+0.2)"
+          "qualityModifier": 10.6,
+          "qualityDetail": "ROA: 3.4% (+0.2); Avg Div: 14.4% (+5.8%)"
         }
       ],
       "Hydropower": [
@@ -776,7 +848,7 @@
         },
         {
           "symbol": "SAHAS",
-          "score": 41.2,
+          "score": 43.6,
           "baseScore": 40.0,
           "roe": 13.63,
           "eps": 19.74,
@@ -785,12 +857,12 @@
           "profitGrowth": 116.98,
           "revenueGrowth": 8.35,
           "netMargin": 34.03,
-          "qualityModifier": 3.1,
-          "qualityDetail": "D/E: 1.28 (+0.2); ROA: 5.1% (+0.0)"
+          "qualityModifier": 8.9,
+          "qualityDetail": "D/E: 1.28 (+0.2); ROA: 5.1% (+0.0); Avg Div: 14.5% (+5.8%)"
         },
         {
           "symbol": "CHCL",
-          "score": 23.2,
+          "score": 24.5,
           "baseScore": 20.0,
           "roe": 6.08,
           "eps": 7.17,
@@ -799,14 +871,14 @@
           "profitGrowth": 5.13,
           "revenueGrowth": 0.07,
           "netMargin": 52.54,
-          "qualityModifier": 15.9,
-          "qualityDetail": "D/E: 0.00 (+1.0); ROA: 5.8% (+0.3)"
+          "qualityModifier": 22.7,
+          "qualityDetail": "D/E: 0.00 (+1.0); ROA: 5.8% (+0.3); Avg Div: 16.9% (+6.7%)"
         }
       ],
       "Life Insurance": [
         {
           "symbol": "CLI",
-          "score": 87.0,
+          "score": 91.3,
           "baseScore": 100.0,
           "roe": 5.9,
           "eps": 8.5,
@@ -815,11 +887,25 @@
           "profitGrowth": 30.86,
           "revenueGrowth": 21.44,
           "netMargin": 5.63,
-          "qualityModifier": -13.0,
-          "qualityDetail": "ROA: 1.7% (-0.5)"
+          "qualityModifier": -8.7,
+          "qualityDetail": "ROA: 1.7% (-0.5); Avg Div: 10.7% (+4.3%)"
         }
       ],
       "Commercial Bank": [
+        {
+          "symbol": "NABIL",
+          "score": 88.8,
+          "baseScore": 85.0,
+          "roe": 11.65,
+          "eps": 26.34,
+          "epsGrowth": 0.96,
+          "epsConsistency": 50.0,
+          "profitGrowth": 0.96,
+          "revenueGrowth": -12.6,
+          "netMargin": 17.61,
+          "qualityModifier": 4.5,
+          "qualityDetail": "CAR: 11.9% (-0.4); NPL: 4.27% (-0.6); COF: 4.4% (+1.0); Avg Div: 17.6% (+7.1%)"
+        },
         {
           "symbol": "NIMB",
           "score": 86.3,
@@ -835,22 +921,8 @@
           "qualityDetail": "CAR: 13.7% (+0.8); NPL: 5.85% (-1.0); COF: 4.2% (+1.0)"
         },
         {
-          "symbol": "NABIL",
-          "score": 82.8,
-          "baseScore": 85.0,
-          "roe": 11.65,
-          "eps": 26.34,
-          "epsGrowth": 0.96,
-          "epsConsistency": 50.0,
-          "profitGrowth": 0.96,
-          "revenueGrowth": -12.6,
-          "netMargin": 17.61,
-          "qualityModifier": -2.6,
-          "qualityDetail": "CAR: 11.9% (-0.4); NPL: 4.27% (-0.6); COF: 4.4% (+1.0)"
-        },
-        {
           "symbol": "HBL",
-          "score": 30.6,
+          "score": 32.9,
           "baseScore": 33.3,
           "roe": 3.97,
           "eps": 6.7,
@@ -859,8 +931,8 @@
           "profitGrowth": -46.71,
           "revenueGrowth": -22.14,
           "netMargin": 5.46,
-          "qualityModifier": -8.2,
-          "qualityDetail": "CAR: 11.6% (-0.6); NPL: 7.28% (-1.0); COF: 4.8% (+1.0)"
+          "qualityModifier": -1.4,
+          "qualityDetail": "CAR: 11.6% (-0.6); NPL: 7.28% (-1.0); COF: 4.8% (+1.0); Avg Div: 17.2% (+6.9%)"
         }
       ],
       "Manufacturing": [
@@ -875,12 +947,12 @@
           "profitGrowth": 170.01,
           "revenueGrowth": 73.3,
           "netMargin": 13.24,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 22.0% (+1.0)"
+          "qualityModifier": 34.3,
+          "qualityDetail": "ROA: 22.0% (+1.0); Avg Div: 23.3% (+9.3%)"
         },
         {
           "symbol": "SARBTM",
-          "score": 85.4,
+          "score": 86.5,
           "baseScore": 68.3,
           "roe": 10.58,
           "eps": 19.23,
@@ -889,8 +961,8 @@
           "profitGrowth": 476.41,
           "revenueGrowth": 49.84,
           "netMargin": 10.52,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 6.8% (+1.0)"
+          "qualityModifier": 26.6,
+          "qualityDetail": "ROA: 6.8% (+1.0); Avg Div: 4.0% (+1.6%)"
         },
         {
           "symbol": "SHIVM",
@@ -919,8 +991,8 @@
           "profitGrowth": 8.32,
           "revenueGrowth": 16.64,
           "netMargin": 17.98,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 5.9% (+1.0)"
+          "qualityModifier": 26.7,
+          "qualityDetail": "ROA: 5.9% (+1.0); Avg Div: 4.2% (+1.7%)"
         },
         {
           "symbol": "NTC",
@@ -933,24 +1005,8 @@
           "profitGrowth": -59.68,
           "revenueGrowth": 0.21,
           "netMargin": 7.73,
-          "qualityModifier": -11.1,
-          "qualityDetail": "ROA: 2.1% (-0.4)"
-        }
-      ],
-      "Microfinance": [
-        {
-          "symbol": "JBLB",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 20.9,
-          "eps": 42.28,
-          "epsGrowth": 177.78,
-          "epsConsistency": 75.0,
-          "profitGrowth": 177.78,
-          "revenueGrowth": 48.81,
-          "netMargin": 18.27,
-          "qualityModifier": 2.7,
-          "qualityDetail": "NPL: 4.87% (+0.0); COF: 8.2% (+0.5); CD Ratio: 124.2% (-0.2)"
+          "qualityModifier": -10.6,
+          "qualityDetail": "ROA: 2.1% (-0.4); Avg Div: 1.3% (+0.5%)"
         }
       ],
       "Hotels": [
@@ -965,8 +1021,8 @@
           "profitGrowth": 11.58,
           "revenueGrowth": 10.91,
           "netMargin": 24.21,
-          "qualityModifier": 18.8,
-          "qualityDetail": "ROA: 21.3% (+1.0); Op Profit Growth: +15.1% (+0.5)"
+          "qualityModifier": 25.9,
+          "qualityDetail": "ROA: 21.3% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
         }
       ]
     }
