@@ -12,7 +12,9 @@ const API_BASE = import.meta.env.DEV
 
 export interface SharePoint {
     date: string;   // YYYY-MM-DD (AD)
-    shares: number;
+    shares: number; // cumulative bonus shares as of this date
+    fiscalYear?: string;  // FY this bonus event belongs to (absent on the anchor/today points)
+    gain?: number;        // bonus shares granted at this specific event
 }
 
 export interface ReceivedDividend {
