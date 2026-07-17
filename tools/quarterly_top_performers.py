@@ -35,7 +35,7 @@ def scale_cd_ratio(cd):
     else:
         return scale_metric(cd, 115.0, 130.0, invert=True)
 
-def compute_quality_modifier(sector, raw, computed, yoy, op_growth):
+def compute_quality_modifier(sector, raw, computed, yoy, op_growth, avg_dividend=0.0):
     scores = []
     weights = []
     details = []
@@ -136,17 +136,40 @@ def compute_quality_modifier(sector, raw, computed, yoy, op_growth):
             weights.append(0.50)
             details.append(f"Op Profit Growth: {op_growth:+.1f}% ({score:+.1f})")
 
-    if not scores:
+    if not scores and avg_dividend <= 0:
         return 0.0, "Standard quality baseline"
 
-    weighted_avg = sum(s * w for s, w in zip(scores, weights)) / sum(weights)
-    modifier = weighted_avg * 0.25  # Scaled to [-0.25, +0.25]
+    if scores:
+        weighted_avg = sum(s * w for s, w in zip(scores, weights)) / sum(weights)
+        modifier = weighted_avg * 0.25  # Scaled to [-0.25, +0.25]
+    else:
+        modifier = 0.0
+
+    # Dividend Premium (+ up to 10% for high consistent payers)
+    if avg_dividend > 0:
+        # Scale 0% to 25% linearly to 0.0 - 1.0
+        div_score = (avg_dividend - 0.0) / (25.0 - 0.0)
+        div_score = max(0.0, min(1.0, div_score))
+        div_boost = div_score * 0.10
+        modifier += div_boost
+        details.append(f"Avg Div: {avg_dividend:.1f}% (+{div_boost*100:.1f}%)")
+
     return modifier, "; ".join(details)
 
 def main():
     print("Computing top quarterly stock performers per sector with hybrid formula...")
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     quarterly_dir = os.path.join(project_root, "db", "quarterly")
+    
+    # Load Dividend History for Average calculation
+    dividend_db = load_json(os.path.join(project_root, "db", "dividend_data.json")) or {}
+    
+    avg_dividends = {}
+    for sym, data in dividend_db.items():
+        divs = data.get("dividends", [])
+        if divs:
+            # Rank based ONLY on bonus shares
+            avg_dividends[sym] = sum(float(d.get("bonusPercent", 0)) for d in divs) / len(divs)
     
     if not os.path.exists(quarterly_dir):
         print(f"Directory {quarterly_dir} does not exist.")
@@ -445,8 +468,9 @@ def main():
                 base_score = 0.35 * r_pct + 0.25 * eg_pct + 0.20 * nm_pct + 0.20 * rg_pct
                 
                 # Quality Modifier
+                avg_div = avg_dividends.get(s["symbol"], 0.0)
                 mod, detail_str = compute_quality_modifier(
-                    sector, s["raw"], s["computed"], s["yoy"], s["opGrowth"]
+                    sector, s["raw"], s["computed"], s["yoy"], s["opGrowth"], avg_div
                 )
                 
                 # Final Score = Base * (1 + Modifier)

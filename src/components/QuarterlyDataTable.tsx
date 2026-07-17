@@ -490,9 +490,9 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
           <tbody>
             {rows.map((row, rowIdx) => (
               <tr key={row.label}
-                className={`border-b border-border/50 transition-colors hover:bg-muted/30
+                className={`border-b border-border/50 transition-colors hover:bg-muted/50
                   ${row.highlight ? 'font-semibold' : ''}
-                  ${rowIdx % 2 === 0 ? '' : 'bg-muted/10'}`}
+                  ${rowIdx % 2 === 0 ? 'bg-background' : 'bg-muted/20'}`}
               >
                 {/* Metric label */}
                 <td className="px-4 py-3 text-foreground">
