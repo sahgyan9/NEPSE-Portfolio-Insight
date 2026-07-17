@@ -435,7 +435,7 @@ const FundamentalsPage = () => {
                 </Tabs>
 
                 {/* Footer */}
-                <Footer />
+                <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
             </main>
 
             {/* AI Chatbot - Floating */}

@@ -242,7 +242,7 @@ const Index = () => {
         </section>
 
         {/* Footer */}
-        <Footer />
+        <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
       </main>
 
       {/* AI Chatbot - Floating */}

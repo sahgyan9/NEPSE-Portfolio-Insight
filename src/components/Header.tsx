@@ -1,23 +1,14 @@
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { 
-  BarChart3, 
-  RefreshCw, 
-  Key, 
-  TrendingUp, 
-  Activity, 
-  MoreHorizontal, 
-  Gift, 
-  FileBarChart, 
-  Brain, 
-  Menu 
+import {
+  BarChart3,
+  RefreshCw,
+  Gift,
+  FileBarChart,
+  Brain,
+  Menu
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
@@ -30,19 +21,8 @@ interface HeaderProps {
   isRefreshing: boolean;
 }
 
-export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: HeaderProps) => {
-  const [tempApiKey, setTempApiKey] = useState(apiKey);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
   const location = useLocation();
-
-  const handleSaveApiKey = () => {
-    onApiKeyChange(tempApiKey);
-    setIsDialogOpen(false);
-    toast({
-      title: "API Key Saved",
-      description: "Your Gemini API key has been saved.",
-    });
-  };
 
   const navItems = [
     { path: "/", label: "Home", icon: BarChart3 },
@@ -109,48 +89,6 @@ export const Header = ({ apiKey, onApiKeyChange, onRefresh, isRefreshing }: Head
             >
               <RefreshCw className={`h-4 w-4 ${isRefreshing ? "animate-spin" : ""}`} />
             </Button>
-
-            {/* Gemini configuration */}
-            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-              <DialogTrigger asChild>
-                <Button
-                  variant={apiKey ? "outline" : "default"}
-                  size="sm"
-                  className={cn(
-                    "gap-2",
-                    !apiKey && "animate-pulse bg-yellow-500 hover:bg-yellow-600 text-black",
-                    apiKey && "border-green-500/50 hover:bg-green-500/10 text-green-500 hover:text-green-600"
-                  )}
-                >
-                  <Key className="h-4 w-4" />
-                  <span className="hidden lg:inline">{apiKey ? "API Active" : "Configure API"}</span>
-                  {apiKey && <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>}
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md bg-card border-border">
-                <DialogHeader>
-                  <DialogTitle>Configure Gemini API Key</DialogTitle>
-                </DialogHeader>
-                <div className="space-y-4 py-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="apiKey">Gemini API Key</Label>
-                    <Input
-                      id="apiKey"
-                      type="password"
-                      placeholder="Enter your Gemini API key"
-                      value={tempApiKey}
-                      onChange={(e) => setTempApiKey(e.target.value)}
-                    />
-                    <p className="text-xs text-muted-foreground">
-                      Used for AI-powered investment recommendations. Your key is stored locally.
-                    </p>
-                  </div>
-                  <Button onClick={handleSaveApiKey} className="w-full">
-                    Save API Key
-                  </Button>
-                </div>
-              </DialogContent>
-            </Dialog>
 
             {/* Mobile Drawer Trigger */}
             <div className="lg:hidden flex items-center">
