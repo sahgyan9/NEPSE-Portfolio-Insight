@@ -546,7 +546,42 @@ def _shares_held_at(transactions, symbol, as_of_date, fallback_qty):
     return qty
 
 
-def _bonus_share_growth_timeline(symbol, transactions, dividend_db, current_qty, today):
+def _all_fy_bonus_events(symbol, dividend_db, manual_db):
+    """Merge auto-scraped and manual dividend records across EVERY fiscal year
+    on record for this symbol - manual override takes precedence over auto for
+    a given FY, same precedence compute_portfolio_dividends uses for the
+    currently selected FY, just applied to all of them at once. Without this,
+    the bonus timeline would silently ignore any year the user corrected or
+    added by hand (e.g. CHCL 081-082's manual 8% override), since NepaliPaisa's
+    scrape doesn't know about those. Disabled manual entries (superseded by the
+    automatic calc - see disabledReason) are skipped, matching the main loop."""
+    manual_by_fy = {}
+    for e in manual_db.get("entries", []):
+        if e.get("disabled") or (e.get("symbol", "") or "").upper() != symbol:
+            continue
+        manual_by_fy[(e.get("fiscalYear") or "").strip()] = e
+
+    auto_by_fy = {d.get("fiscalYear"): d for d in dividend_db.get(symbol, {}).get("dividends", [])}
+
+    events = []
+    for fy in set(auto_by_fy) | set(manual_by_fy):
+        auto = auto_by_fy.get(fy)
+        manual = manual_by_fy.get(fy)
+        # No real book closure on record (manual-only entry, or an unmatched
+        # auto stub) - approximate with the end of this FY's receiving window,
+        # the same fallback compute_portfolio_dividends uses for eligibility.
+        date = (auto or {}).get("bookClosureDateAD") or _fy_receive_window(fy)[1]
+        override = manual.get("bonusSharesReceived") if manual else None
+        bonus_pct = float(manual.get("bonusPercent", 0)) if manual else float((auto or {}).get("bonusPercent", 0) or 0)
+        if override is not None:
+            events.append((date, None, float(override), fy))
+        elif bonus_pct > 0:
+            events.append((date, bonus_pct, None, fy))
+    events.sort(key=lambda e: e[0])
+    return events
+
+
+def _bonus_share_growth_timeline(symbol, transactions, dividend_db, manual_db, current_qty, date_added, today):
     """Track CUMULATIVE bonus shares received via dividends only - isolated
     from ordinary buy/sell activity. Total share count (purchases + bonuses)
     is a portfolio-holdings concern (see HoldingsTable on the home page,
@@ -557,27 +592,43 @@ def _bonus_share_growth_timeline(symbol, transactions, dividend_db, current_qty,
     Each event's bonus is computed against the real total held right before
     that book closure (transaction-based shares plus bonus shares already
     credited by then), floored to whole shares - the same math used for the
-    per-FY dividend calc above. Symbols with no bonus dividends on record
-    (cash-only payers, mutual funds) return an empty timeline, rendered as
-    "-" by ShareSparkline rather than a misleading flat line."""
-    bonus_events = []
-    for d in dividend_db.get(symbol, {}).get("dividends", []):
-        bc = d.get("bookClosureDateAD", "")
-        bpct = float(d.get("bonusPercent", 0) or 0)
-        if bc and bc <= today and bpct > 0:
-            bonus_events.append((bc, bpct))
-    bonus_events.sort(key=lambda e: e[0])
+    per-FY dividend calc above. Bonus events from before the holder actually
+    owned the stock are excluded (using the first real transaction date, or
+    dateAdded when there's no transaction history at all) - otherwise a
+    decades-old serial bonus-payer like NABIL or CHCL would drag the timeline
+    back over a decade of flat, pre-ownership zeros. Symbols with no bonus
+    dividends on record (cash-only payers, mutual funds) return an empty
+    timeline, rendered as "-" by ShareSparkline rather than a misleading
+    flat line."""
+    events = [e for e in _all_fy_bonus_events(symbol, dividend_db, manual_db) if e[0] <= today]
+    if not events:
+        return []
 
-    if not bonus_events:
+    sym_txns = [t for t in transactions
+                if t.get("symbol", "").upper() == symbol and (t.get("date", "") or "")[:10]]
+    if sym_txns:
+        ownership_start = min(t["date"][:10] for t in sym_txns)
+    else:
+        ownership_start = date_added or events[0][0]
+    events = [e for e in events if e[0] >= ownership_start]
+    if not events:
         return []
 
     cumulative_bonus = 0
-    timeline = [{"date": bonus_events[0][0], "shares": 0}]
-    for bc, bpct in bonus_events:
-        held_from_txns = _shares_held_at(transactions, symbol, bc, current_qty)
-        base = held_from_txns + cumulative_bonus
-        cumulative_bonus += int(base * bpct / 100.0)
-        timeline.append({"date": bc, "shares": cumulative_bonus})
+    timeline = [{"date": events[0][0], "shares": 0}]
+    for date, bpct, override, fy in events:
+        if override is not None:
+            granted = int(override)
+        else:
+            held_from_txns = _shares_held_at(transactions, symbol, date, current_qty)
+            base = held_from_txns + cumulative_bonus
+            granted = int(base * bpct / 100.0)
+        cumulative_bonus += granted
+        # fiscalYear/gain let the UI show "FY 080-081: +3 shares" on hover,
+        # instead of just a bare cumulative total the user has to do the
+        # subtraction on themselves to sanity-check against what they recall
+        # actually receiving each year.
+        timeline.append({"date": date, "shares": cumulative_bonus, "fiscalYear": fy, "gain": granted})
 
     if timeline[-1]["date"] < today:
         timeline.append({"date": today, "shares": cumulative_bonus})
@@ -698,7 +749,7 @@ def compute_portfolio_dividends(fy):
         # portfolio-holdings concern) and not scoped to just the currently
         # selected fiscal year (growth from earlier years stays visible
         # instead of resetting every time the FY dropdown changes).
-        timeline = _bonus_share_growth_timeline(symbol, transactions, dividend_db, qty, today)
+        timeline = _bonus_share_growth_timeline(symbol, transactions, dividend_db, manual_db, qty, date_added, today)
 
         companies.append({
             "symbol": symbol,

@@ -6,6 +6,13 @@
  * closure date). This tracks "how many shares has this stock given me for
  * free", not total share count - buy/sell activity belongs to the portfolio
  * holdings view, not this dividend-specific one.
+ *
+ * The lifetime total shown here intentionally differs from the "Shares
+ * Added" column, which is scoped to only the currently selected fiscal
+ * year - `highlightDate` + `currentFyGain` tie the two together visually
+ * (a highlighted dot + an explicit "+N this FY" line) so that difference
+ * reads as "this FY within the lifetime total" rather than two disagreeing
+ * numbers.
  */
 
 import { useMemo, useState } from 'react';
@@ -15,9 +22,11 @@ interface ShareSparklineProps {
     timeline: SharePoint[];
     width?: number;
     height?: number;
+    highlightDate?: string;
+    currentFyGain?: number;
 }
 
-export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSparklineProps) => {
+export const ShareSparkline = ({ timeline, width = 110, height = 34, highlightDate, currentFyGain }: ShareSparklineProps) => {
     const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
     const { points, linePath, areaPath, dots, grew, first, last, x, y } = useMemo(() => {
@@ -52,7 +61,7 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSpar
         // Dots only where the count actually jumped (bonus credited)
         const jumpDots = pts
             .filter((p, i) => i > 0 && p.shares !== pts[i - 1].shares)
-            .map(p => ({ cx: xFn(p.date), cy: yFn(p.shares), date: p.date, shares: p.shares }));
+            .map(p => ({ cx: xFn(p.date), cy: yFn(p.shares), date: p.date, shares: p.shares, isCurrentFy: p.date === highlightDate }));
 
         return {
             points: pts,
@@ -65,12 +74,12 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSpar
             x: xFn,
             y: yFn,
         };
-    }, [timeline, width, height]);
+    }, [timeline, width, height, highlightDate]);
 
     if (!linePath || !x || !y) return <span className="text-xs text-muted-foreground">-</span>;
 
     const color = grew ? 'hsl(152 76% 40%)' : 'hsl(215 15% 55%)';
-    const totalGained = last - first;
+    const currentFyColor = 'hsl(38 92% 50%)';
     const hovered = hoverIdx !== null ? points[hoverIdx] : null;
 
     return (
@@ -79,7 +88,7 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSpar
                 <svg
                     width={width}
                     height={height}
-                    className="overflow-visible cursor-crosshair"
+                    className="overflow-visible cursor-pointer"
                     onMouseLeave={() => setHoverIdx(null)}
                     onMouseMove={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
@@ -99,7 +108,15 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSpar
                     <path d={areaPath} fill={color} opacity={0.12} />
                     <path d={linePath} fill="none" stroke={color} strokeWidth={1.5} strokeLinejoin="round" />
                     {dots.map((dot, i) => (
-                        <circle key={i} cx={dot.cx} cy={dot.cy} r={2.5} fill={color} />
+                        <circle
+                            key={i}
+                            cx={dot.cx}
+                            cy={dot.cy}
+                            r={dot.isCurrentFy ? 3.5 : 2.5}
+                            fill={dot.isCurrentFy ? currentFyColor : color}
+                            stroke={dot.isCurrentFy ? 'white' : 'none'}
+                            strokeWidth={dot.isCurrentFy ? 1 : 0}
+                        />
                     ))}
                     {hovered && (
                         <>
@@ -113,16 +130,26 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34 }: ShareSpar
                         className="absolute z-10 pointer-events-none rounded-md border bg-popover px-2 py-1 text-[10px] shadow-md whitespace-nowrap -translate-x-1/2 -translate-y-full"
                         style={{ left: x(hovered.date), top: -6 }}
                     >
-                        <div className="font-semibold">{hovered.shares} bonus sh.</div>
-                        <div className="text-muted-foreground">{hovered.date}</div>
+                        {hovered.fiscalYear ? (
+                            <>
+                                <div className="font-semibold">FY {hovered.fiscalYear}: +{hovered.gain} sh.</div>
+                                <div className="text-muted-foreground">{hovered.shares} cumulative &middot; {hovered.date}</div>
+                            </>
+                        ) : (
+                            <>
+                                <div className="font-semibold">{hovered.shares} cumulative</div>
+                                <div className="text-muted-foreground">{hovered.date}</div>
+                            </>
+                        )}
                     </div>
                 )}
             </div>
-            {grew && (
-                <span className="text-[10px] font-mono text-emerald-500 whitespace-nowrap">
-                    +{totalGained} sh.
-                </span>
-            )}
+            <div className="flex flex-col text-[10px] font-mono whitespace-nowrap leading-tight">
+                <span className={grew ? 'text-emerald-500' : 'text-muted-foreground'}>{last} lifetime</span>
+                {!!currentFyGain && (
+                    <span style={{ color: currentFyColor }}>+{currentFyGain} this FY</span>
+                )}
+            </div>
         </div>
     );
 };
