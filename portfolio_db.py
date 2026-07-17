@@ -18,6 +18,9 @@ import json
 import os
 import sys
 import subprocess
+import csv
+import io
+import re
 from datetime import datetime, timedelta
 from urllib.parse import urlparse, parse_qs
 import random
@@ -49,6 +52,90 @@ def save_db(data):
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     with open(DB_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def parse_holdings_csv(text):
+    """
+    Parse a Meroshare portfolio CSV (WACC Report or My Purchase Source export)
+    into holdings.
+
+    Tolerant to column-name differences across Meroshare report exports: it
+    matches headers by keyword rather than requiring exact names, so both the
+    "WACC Report" and "My Purchase Source" CSV layouts work.
+
+    Returns (holdings, skipped) where holdings is a list of holding dicts and
+    skipped is a list of symbols that were ignored (zero/blank quantity).
+    """
+    reader = csv.DictReader(io.StringIO(text))
+    if not reader.fieldnames:
+        return [], []
+
+    def find_col(candidates):
+        """Return the actual header whose lowercased name contains a candidate."""
+        for header in reader.fieldnames:
+            key = (header or "").strip().lower()
+            for c in candidates:
+                if c in key:
+                    return header
+        return None
+
+    sym_col = find_col(["scrip name", "scrip", "symbol", "stock"])
+    qty_col = find_col([
+        "wacc calculated quantity", "current balance", "balance",
+        "quantity", "qty", "units",
+    ])
+    rate_col = find_col([
+        "wacc rate", "purchase rate", "average cost", "avg cost", "rate",
+    ])
+    date_col = find_col(["last modification date", "last transaction date", "date"])
+
+    if not sym_col or not qty_col:
+        raise ValueError(
+            "Could not find scrip/quantity columns. Export the WACC Report or "
+            "My Purchase Source report from Meroshare as CSV."
+        )
+
+    def to_number(raw):
+        try:
+            return float(str(raw).replace(",", "").strip() or "0")
+        except (ValueError, AttributeError):
+            return 0.0
+
+    holdings = []
+    skipped = []
+    for row in reader:
+        symbol = (row.get(sym_col) or "").strip().upper()
+        if not symbol:
+            continue
+
+        qty = to_number(row.get(qty_col))
+        if qty <= 0:
+            skipped.append(symbol)
+            continue
+        if qty.is_integer():
+            qty = int(qty)
+
+        rate = to_number(row.get(rate_col)) if rate_col else 0.0
+
+        # Parse dates like "5/13/2025 14:46" -> "2025-05-13"
+        date_added = ""
+        raw_date = (row.get(date_col) or "").strip() if date_col else ""
+        m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", raw_date)
+        if m:
+            mm, dd, yyyy = m.groups()
+            date_added = f"{yyyy}-{int(mm):02d}-{int(dd):02d}"
+        if not date_added:
+            date_added = datetime.now().strftime("%Y-%m-%d")
+
+        holdings.append({
+            "symbol": symbol,
+            "company": symbol,  # resolved to full name by the frontend registry/API
+            "quantity": qty,
+            "avgCost": round(rate, 2),
+            "dateAdded": date_added,
+        })
+
+    return holdings, skipped
 
 
 def calculate_total_invested(holdings):
@@ -549,7 +636,54 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             
             save_db(db)
             self._send_json({"success": True, "action": action, "holdings": db["holdings"]})
-            
+
+        elif path == "/api/holdings/import-csv":
+            # Bulk-import holdings from a Meroshare CSV export.
+            # mode: "replace" (default) treats the CSV as the full portfolio
+            # snapshot; "merge" keeps existing holdings the CSV doesn't mention.
+            csv_text = data.get("csv", "")
+            mode = (data.get("mode") or "replace").lower()
+
+            if not csv_text.strip():
+                self._send_json({"error": "No CSV content provided."}, 400)
+                return
+
+            try:
+                parsed_holdings, skipped = parse_holdings_csv(csv_text)
+            except ValueError as e:
+                self._send_json({"error": str(e)}, 400)
+                return
+            except Exception as e:
+                self._send_json({"error": f"Failed to parse CSV: {e}"}, 400)
+                return
+
+            if not parsed_holdings:
+                self._send_json({
+                    "error": "No valid holdings found in the CSV. Make sure you "
+                             "uploaded the WACC Report or My Purchase Source export."
+                }, 400)
+                return
+
+            db = load_db()
+
+            if mode == "merge":
+                by_symbol = {h["symbol"]: h for h in db.get("holdings", [])}
+                for h in parsed_holdings:
+                    by_symbol[h["symbol"]] = h  # imported snapshot wins
+                db["holdings"] = list(by_symbol.values())
+            else:  # replace
+                db["holdings"] = parsed_holdings
+
+            save_db(db)
+            self._send_json({
+                "success": True,
+                "imported": len(parsed_holdings),
+                "skipped": len(skipped),
+                "skippedSymbols": skipped,
+                "mode": mode,
+                "holdings": db["holdings"],
+            })
+
         elif path == "/api/watchlist/add":
             db = load_db()
             symbol = data.get("symbol", "").upper()
@@ -765,6 +899,9 @@ def run_server(port=5001):
 |  --------------------------------------------------------- |
 |  POST /api/holdings/add      - Add/update stock            |
 |       Body: {{"symbol", "company", "quantity", "avgCost"}}   |
+|  --------------------------------------------------------- |
+|  POST /api/holdings/import-csv - Bulk import from Meroshare |
+|       Body: {{"csv", "mode": "replace"|"merge"}}             |
 |  --------------------------------------------------------- |
 |  POST /api/holdings/sell     - Sell stock                  |
 |       Body: {{"symbol", "quantity", "sellPrice"}}            |
