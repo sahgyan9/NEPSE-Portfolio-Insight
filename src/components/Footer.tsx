@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { TrendingUp, Activity, MoreHorizontal, ShieldCheck, Key } from 'lucide-react';
+import { ShieldCheck, Key } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -42,35 +41,12 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
             <span>NEPSE Portfolio Insight</span>
           </div>
           <p className="text-xs text-muted-foreground max-w-md">
-            Value investing and portfolio health metrics inspired by Benjamin Graham's *The Intelligent Investor*.
+            Value investing and portfolio health metrics inspired by Benjamin Graham's <em>The Intelligent Investor</em>.
             Disclaimer: This is not official financial advice. Always verify with official sources.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
-          <span className="text-muted-foreground select-none">Additional Modules:</span>
-          <Link
-            to="/fundamentals"
-            className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
-          >
-            <TrendingUp className="w-3.5 h-3.5" />
-            <span>Fundamentals</span>
-          </Link>
-          <Link
-            to="/market"
-            className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
-          >
-            <Activity className="w-3.5 h-3.5 text-blue-500" />
-            <span>Market</span>
-          </Link>
-          <Link
-            to="/misc"
-            className="flex items-center gap-1 text-muted-foreground hover:text-primary hover:bg-primary/5 px-2.5 py-1.5 rounded-lg border border-transparent hover:border-primary/20 transition-all"
-          >
-            <MoreHorizontal className="w-3.5 h-3.5" />
-            <span>Misc</span>
-          </Link>
-
           {/* Gemini API configuration */}
           <Dialog
             open={isDialogOpen}
@@ -81,16 +57,15 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
           >
             <DialogTrigger asChild>
               <Button
-                variant={effectiveApiKey ? "outline" : "default"}
+                variant="outline"
                 size="sm"
                 className={cn(
                   "gap-2",
-                  !effectiveApiKey && "animate-pulse bg-yellow-500 hover:bg-yellow-600 text-black",
                   effectiveApiKey && "border-green-500/50 hover:bg-green-500/10 text-green-500 hover:text-green-600"
                 )}
               >
                 <Key className="h-4 w-4" />
-                <span>{effectiveApiKey ? "API Active" : "Configure API"}</span>
+                <span>{effectiveApiKey ? "API Active" : "Configure AI (optional)"}</span>
                 {effectiveApiKey && <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>}
               </Button>
             </DialogTrigger>

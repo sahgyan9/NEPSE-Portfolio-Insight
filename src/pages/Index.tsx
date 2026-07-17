@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,16 +13,17 @@ import { MarketContextDisplay } from "@/components/MarketContext";
 import { AIChatbot } from "@/components/AIChatbot";
 import { WatchlistTable } from "@/components/WatchlistTable";
 import { PortfolioNewsFeed } from "@/components/PortfolioNewsFeed";
+import { PortfolioImportZone } from "@/components/PortfolioImportZone";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
+import { useApiKey } from "@/hooks/useApiKey";
 import { toast } from "@/hooks/use-toast";
-import { STORAGE_KEYS } from "@/lib/constants";
 import { TrendingUp, Activity, Coins, ArrowRight, BookOpen, CheckCircle2, Loader2, Brain, Newspaper, Award } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Index = () => {
-  const [apiKey, setApiKey] = useState("");
+  const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
 
   // Use live portfolio data from ShareBazaar API
   const {
@@ -35,29 +36,9 @@ const Index = () => {
     error,
     lastUpdated,
     refetch,
-    isDbConnected
+    isDbConnected,
+    isEmpty
   } = usePortfolioAnalytics();
-
-  useEffect(() => {
-    // Load API key from localStorage
-    const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
-    if (savedKey) {
-      setApiKey(savedKey);
-    }
-
-    // Pre-populate with provided key
-    // Pre-populate with provided key from environment variables
-    const defaultKey = import.meta.env.VITE_GEMINI_API_KEY || "";
-    if (!savedKey && defaultKey) {
-      setApiKey(defaultKey);
-      localStorage.setItem(STORAGE_KEYS.apiKey, defaultKey);
-    }
-  }, []);
-
-  const handleApiKeyChange = (key: string) => {
-    setApiKey(key);
-    localStorage.setItem(STORAGE_KEYS.apiKey, key);
-  };
 
   const handleRefresh = async () => {
     await refetch();
@@ -66,6 +47,14 @@ const Index = () => {
       description: lastUpdated
         ? `Portfolio data updated at ${lastUpdated.toLocaleTimeString()}`
         : "Portfolio data has been updated.",
+    });
+  };
+
+  const handlePortfolioImported = async () => {
+    await refetch();
+    toast({
+      title: "Portfolio imported",
+      description: "Your holdings are loaded. Welcome aboard!",
     });
   };
 
@@ -83,12 +72,24 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header
-        apiKey={apiKey}
-        onApiKeyChange={handleApiKeyChange}
         onRefresh={handleRefresh}
         isRefreshing={isLoading}
       />
 
+      {isEmpty ? (
+        <main className="container px-4 py-16 relative">
+          <div className="max-w-xl mx-auto text-center space-y-6">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight">Welcome — let's load your portfolio</h2>
+              <p className="text-muted-foreground mt-2">
+                Import your holdings once and every chart, score and insight fills in automatically.
+                Nothing is entered by hand.
+              </p>
+            </div>
+            <PortfolioImportZone onImported={handlePortfolioImported} />
+          </div>
+        </main>
+      ) : (
       <main className="container px-4 py-6 space-y-6 relative">
         {/* Quick Section Navigation */}
         <div className="w-full sticky top-[64px] z-40 bg-background/80 backdrop-blur-md py-2 mb-6">
@@ -106,7 +107,7 @@ const Index = () => {
                 key={s.id} 
                 variant="ghost" 
                 size="sm" 
-                className="flex-1 md:w-full min-w-[90px] text-[11px] h-7 bg-muted/20 hover:bg-primary/10 hover:text-primary transition-all font-medium border border-border/30 rounded-full flex items-center justify-center gap-1 text-white"
+                className="flex-1 md:w-full min-w-[90px] text-[11px] h-7 bg-muted/20 hover:bg-primary/10 hover:text-primary transition-all font-medium border border-border/30 rounded-full flex items-center justify-center gap-1 text-foreground"
                 onClick={() => {
                   const el = document.getElementById(s.id);
                   if (el) {
@@ -244,6 +245,7 @@ const Index = () => {
         {/* Footer */}
         <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
       </main>
+      )}
 
       {/* AI Chatbot - Floating */}
       <AIChatbot holdings={holdings} summary={summary} />

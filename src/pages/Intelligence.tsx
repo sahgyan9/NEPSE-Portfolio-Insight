@@ -5,7 +5,7 @@ import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
-import { STORAGE_KEYS } from '@/lib/constants';
+import { useApiKey } from '@/hooks/useApiKey';
 import { ArrowLeft, Brain, TrendingUp, AlertTriangle, CheckCircle, ExternalLink, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
@@ -42,19 +42,14 @@ interface OptimizationData {
 }
 
 export default function IntelligencePage() {
-    const [apiKey, setApiKey] = useState(() => localStorage.getItem(STORAGE_KEYS.apiKey) || '');
+    const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
     const { holdings, summary, isLoading: portfolioLoading, refetch } = usePortfolioAnalytics();
-    
+
     const [macroResearch, setMacroResearch] = useState<MacroPaper[]>([]);
     const [optimization, setOptimization] = useState<OptimizationData | null>(null);
     const [quarterlyPerformers, setQuarterlyPerformers] = useState<Record<string, any>>({});
     const [latestPeriod, setLatestPeriod] = useState<string>('');
     const [isLoading, setIsLoading] = useState(false);
-
-    const handleApiKeyChange = (key: string) => {
-        setApiKey(key);
-        localStorage.setItem(STORAGE_KEYS.apiKey, key);
-    };
 
     const fetchIntelligence = async (force: boolean = false) => {
         setIsLoading(true);
@@ -129,8 +124,6 @@ export default function IntelligencePage() {
     return (
         <div className="min-h-screen bg-background">
             <Header
-                apiKey={apiKey}
-                onApiKeyChange={handleApiKeyChange}
                 onRefresh={handleRefresh}
                 isRefreshing={isLoading || portfolioLoading}
             />
