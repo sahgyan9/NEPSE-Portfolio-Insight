@@ -32,6 +32,7 @@ import {
 } from '@/lib/valuationScoring';
 import { Info, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
+import { DynamicGradientBorder } from '@/components/DynamicGradientBorder';
 
 interface StockValuationCardProps {
     holding: StockHolding;
@@ -72,8 +73,9 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
     const hasGovernance = (holding.promoterHolding !== null && holding.promoterHolding !== undefined) || (holding.avgVolume120d !== null && holding.avgVolume120d !== undefined);
 
     return (
-        <Card className="w-full hover:shadow-lg transition-shadow">
-            <CardHeader className="pb-2">
+        <Card className="w-full hover:shadow-lg transition-shadow relative overflow-hidden">
+            <DynamicGradientBorder />
+            <CardHeader className="pb-2 relative z-10">
                 <div className="flex items-start justify-between">
                     <div className="flex-1">
                         <div className="flex items-center gap-2">
@@ -117,7 +119,7 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
                 </div>
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="relative z-10">
                 {/* Price & Gain/Loss Row */}
                 <div className="flex items-center justify-between mb-4 p-3 rounded-lg bg-muted/50">
                     <div>

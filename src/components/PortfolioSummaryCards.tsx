@@ -1,6 +1,7 @@
 import { TrendingUp, TrendingDown, Wallet, PieChart, Target, Award, Gift, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PortfolioSummary } from "@/data/portfolioData";
+import { DynamicGradientBorder } from "./DynamicGradientBorder";
 
 interface PortfolioSummaryCardsProps {
   summary: PortfolioSummary;
@@ -28,7 +29,7 @@ const StatCard = ({
   return (
     <div
       className={cn(
-        "stat-card opacity-0 animate-fade-in",
+        "stat-card opacity-0 animate-fade-in relative overflow-hidden",
         trend === "up" && "hover:glow-profit",
         trend === "down" && "hover:glow-loss",
         size === "large" && "py-6",
@@ -39,7 +40,8 @@ const StatCard = ({
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="flex items-start justify-between">
+      <DynamicGradientBorder />
+      <div className="flex items-start justify-between relative z-10">
         <div className="space-y-1">
           <p className={cn(
             "font-medium text-muted-foreground",
