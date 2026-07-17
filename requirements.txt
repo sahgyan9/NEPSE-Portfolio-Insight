@@ -1,0 +1,13 @@
+# Portfolio Insight — Python backend dependencies
+# Install into the project's virtual environment:
+#   python -m venv .venv
+#   .venv\Scripts\pip install -r requirements.txt
+
+Flask==3.1.0
+beautifulsoup4==4.15.0
+lxml==6.1.1
+pdfplumber==0.11.10
+httpx==0.28.1
+
+# Unofficial NEPSE API (installed from source)
+nepse @ git+https://github.com/basic-bgnr/NepseUnofficialApi.git

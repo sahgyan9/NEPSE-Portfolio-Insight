@@ -1,58 +1,62 @@
 # Portfolio Insight
 
-Portfolio Insight is a robust and visually engaging portfolio tracking application designed specifically for investors on the Nepal Stock Exchange (NEPSE). It provides real-time insights, performance analytics, and clear visualizations to help you make informed financial decisions.
+Portfolio Insight is a visually engaging portfolio tracker built for investors on the
+Nepal Stock Exchange (NEPSE). Import your holdings once from Meroshare and every chart,
+valuation score, and insight fills in automatically — no manual data entry.
 
 ## Features
 
-- **Real-time Tracking**: Monitor your portfolio's performance with up-to-date NEPSE data.
-- **Analytics & Visualizations**: Interactive charts to track gains, losses, and asset allocation.
-- **Modern Interface**: A sleek, dark-mode focused UI built with Tailwind CSS and shadcn-ui.
+- **One-step import** — drop your Meroshare CSV and your whole portfolio loads instantly.
+- **Live tracking** — up-to-date NEPSE prices, gains/losses, and portfolio value over time.
+- **Analytics & valuation** — P/E, P/B, dividends, sector allocation, and health scoring
+  inspired by Benjamin Graham's *The Intelligent Investor*.
+- **Modern interface** — a sleek dashboard built with React, Tailwind CSS, and shadcn-ui.
 
-## Technologies Used
+## Getting your portfolio from Meroshare
 
-This project is built with:
+1. Log in to **Meroshare**.
+2. Open **My Purchase Source** (Portfolio).
+3. Click **CSV** to download — on mobile, tap the **⋮** menu, then **CSV**.
+4. Drag that file into the app's import box (shown automatically on first run).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- Python (Backend scripts and Data Processing)
+## Running the app (Windows)
 
-## Getting Started
+The app runs three local services: a portfolio database (port 5001), a NEPSE data
+server (port 8000), and the web UI (port 5173). One launcher starts all of them.
 
-### Prerequisites
+### First-time setup
 
-Ensure you have the following installed:
-- [Node.js & npm](https://nodejs.org/en/)
-- Python (for backend services)
-
-### Installation
-
-1. **Clone the repository:**
-   ```sh
-   git clone <YOUR_GIT_URL>
-   cd <YOUR_PROJECT_NAME>
-   ```
-
-2. **Install frontend dependencies:**
-   ```sh
-   npm i
-   ```
-
-3. **Install python dependencies:**
-   *(Ensure you have a virtual environment set up)*
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-### Running the Application
-
-To start both the frontend and the background servers on Windows:
+Run these once:
 
 ```sh
-npm run start:servers
-npm run dev
+# 1. Frontend dependencies
+npm install
+
+# 2. Python backend dependencies (creates a virtual environment)
+python -m venv .venv
+.venv\Scripts\pip install -r requirements.txt
 ```
 
-The application will be accessible at `http://localhost:5173`.
+### Every day after that
+
+Just **double-click `PortfolioInsight.vbs`** (or `start.bat`). It starts all three
+services and opens the app in your browser automatically.
+
+You can also start it from a terminal:
+
+```sh
+npm start
+```
+
+To stop the background services:
+
+```sh
+npm run stop
+```
+
+The application opens at `http://localhost:5173`.
+
+## Technologies
+
+- Vite, TypeScript, React, shadcn-ui, Tailwind CSS
+- Python (Flask + stdlib HTTP servers) for the local database and NEPSE data services
