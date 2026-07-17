@@ -6,16 +6,26 @@
             {
                 "fiscalYear": "081-082",
                 "bonusPercent": 5.0,
-                "cashPercent": 15.26,
-                "totalPercent": 20.26,
-                "notes": ""
+                "cashPercent": 15.2632,
+                "totalPercent": 20.2632,
+                "notes": "",
+                "bookClosureDateAD": "2025-12-29",
+                "bookClosureDateBS": "2082-09-14",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa"
             },
             {
                 "fiscalYear": "079-080",
                 "bonusPercent": 23.8,
-                "cashPercent": 1.25,
-                "totalPercent": 25.05,
-                "notes": ""
+                "cashPercent": 1.2526,
+                "totalPercent": 25.0526,
+                "notes": "",
+                "bookClosureDateAD": "2024-05-09",
+                "bookClosureDateBS": "2081-01-27",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa"
             }
         ]
     },
@@ -28,6 +38,179 @@
                 "bonusPercent": 0.0,
                 "cashPercent": 12.5,
                 "totalPercent": 12.5,
+                "notes": "",
+                "bookClosureDateAD": "2025-12-31",
+                "bookClosureDateBS": "2082-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa"
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 0.0,
+                "cashPercent": 10.0,
+                "totalPercent": 10.0,
+                "bookClosureDateAD": "2024-11-25",
+                "bookClosureDateBS": "2081-08-10",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 11.0,
+                "totalPercent": 11.0,
+                "bookClosureDateAD": "2023-12-15",
+                "bookClosureDateBS": "2080-08-29",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 18.5,
+                "cashPercent": 11.5,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2023-01-02",
+                "bookClosureDateBS": "2079-09-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 33.6,
+                "cashPercent": 4.4,
+                "totalPercent": 38.0,
+                "bookClosureDateAD": "2021-12-31",
+                "bookClosureDateBS": "2078-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 33.5,
+                "cashPercent": 1.76,
+                "totalPercent": 35.26,
+                "bookClosureDateAD": "2020-12-30",
+                "bookClosureDateBS": "2077-09-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 12.0,
+                "cashPercent": 22.0,
+                "totalPercent": 34.0,
+                "bookClosureDateAD": "2019-12-24",
+                "bookClosureDateBS": "2076-09-08",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 12.0,
+                "cashPercent": 22.0,
+                "totalPercent": 34.0,
+                "bookClosureDateAD": "2019-02-26",
+                "bookClosureDateBS": "2075-11-14",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 30.0,
+                "cashPercent": 18.0,
+                "totalPercent": 48.0,
+                "bookClosureDateAD": "2017-09-12",
+                "bookClosureDateBS": "2074-05-27",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 30.0,
+                "cashPercent": 15.0,
+                "totalPercent": 45.0,
+                "bookClosureDateAD": "2016-09-21",
+                "bookClosureDateBS": "2073-06-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 30.0,
+                "cashPercent": 6.842,
+                "totalPercent": 36.842,
+                "bookClosureDateAD": "2015-12-06",
+                "bookClosureDateBS": "2072-08-20",
+                "distributionDateAD": "2015-12-28",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 20.0,
+                "cashPercent": 45.0,
+                "totalPercent": 65.0,
+                "bookClosureDateAD": "2014-11-13",
+                "bookClosureDateBS": "2071-07-27",
+                "distributionDateAD": "2014-12-02",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 25.0,
+                "cashPercent": 40.0,
+                "totalPercent": 65.0,
+                "bookClosureDateAD": "2013-12-09",
+                "bookClosureDateBS": "2070-08-24",
+                "distributionDateAD": "2013-12-28",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 20.0,
+                "cashPercent": 40.0,
+                "totalPercent": 60.0,
+                "bookClosureDateAD": "2012-10-03",
+                "bookClosureDateBS": "2069-06-17",
+                "distributionDateAD": "2012-10-30",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 0.0,
+                "cashPercent": 30.0,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2011-12-04",
+                "bookClosureDateBS": "2068-08-18",
+                "distributionDateAD": "2011-12-20",
+                "status": "Closed",
+                "source": "nepalipaisa",
                 "notes": ""
             }
         ]
@@ -38,9 +221,146 @@
         "dividends": [
             {
                 "fiscalYear": "078-079",
-                "bonusPercent": 0.0,
-                "cashPercent": 11.11,
-                "totalPercent": 11.11,
+                "bonusPercent": 11.11,
+                "cashPercent": 8.0,
+                "totalPercent": 19.11,
+                "notes": "",
+                "bookClosureDateAD": "2023-01-02",
+                "bookClosureDateBS": "2079-09-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa"
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 21.38,
+                "cashPercent": 4.62,
+                "totalPercent": 26.0,
+                "bookClosureDateAD": "2021-12-26",
+                "bookClosureDateBS": "2078-09-11",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 14.0,
+                "cashPercent": 6.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2020-12-29",
+                "bookClosureDateBS": "2077-09-14",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 10.0,
+                "cashPercent": 12.0,
+                "totalPercent": 22.0,
+                "bookClosureDateAD": "2020-01-27",
+                "bookClosureDateBS": "2076-10-13",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 5.0,
+                "cashPercent": 10.78,
+                "totalPercent": 15.78,
+                "bookClosureDateAD": "2018-12-31",
+                "bookClosureDateBS": "2075-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 25.0,
+                "cashPercent": 1.3158,
+                "totalPercent": 26.3158,
+                "bookClosureDateAD": "2017-12-26",
+                "bookClosureDateBS": "2074-09-11",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 30.0,
+                "cashPercent": 1.57,
+                "totalPercent": 31.57,
+                "bookClosureDateAD": "2016-12-21",
+                "bookClosureDateBS": "2073-09-06",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 35.0,
+                "cashPercent": 7.1,
+                "totalPercent": 42.1,
+                "bookClosureDateAD": "2015-12-04",
+                "bookClosureDateBS": "2072-08-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 15.0,
+                "cashPercent": 6.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2014-11-26",
+                "bookClosureDateBS": "2071-08-10",
+                "distributionDateAD": "2014-12-27",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 5.0,
+                "cashPercent": 10.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2014-03-06",
+                "bookClosureDateBS": "2070-11-22",
+                "distributionDateAD": "2014-04-02",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 15.0,
+                "cashPercent": 13.4211,
+                "totalPercent": 28.4211,
+                "bookClosureDateAD": "2012-12-13",
+                "bookClosureDateBS": "2069-08-28",
+                "distributionDateAD": "2012-12-31",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 20.0,
+                "cashPercent": 16.8421,
+                "totalPercent": 36.8421,
+                "bookClosureDateAD": "2011-12-08",
+                "bookClosureDateBS": "2068-08-22",
+                "distributionDateAD": "2012-01-01",
+                "status": "Closed",
+                "source": "nepalipaisa",
                 "notes": ""
             }
         ]
@@ -48,14 +368,1369 @@
     "UPPER": {
         "symbol": "UPPER",
         "companyName": "Upper Tamakoshi Hydropower Ltd.",
+        "dividends": []
+    },
+    "SAHAS": {
+        "symbol": "SAHAS",
+        "companyName": "Sahas Urja Ltd.",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 21.0,
+                "cashPercent": 1.1053,
+                "totalPercent": 22.1053,
+                "bookClosureDateAD": "2025-11-21",
+                "bookClosureDateBS": "2082-08-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 8.0,
+                "cashPercent": 0.421,
+                "totalPercent": 8.421,
+                "bookClosureDateAD": "2024-09-29",
+                "bookClosureDateBS": "2081-06-13",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "CBBL": {
+        "symbol": "CBBL",
+        "companyName": "Chhimek Laghubitta Bittiya Sanstha Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 12.5,
+                "cashPercent": 12.5,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2025-12-31",
+                "bookClosureDateBS": "2082-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 8.0,
+                "cashPercent": 7.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2024-12-31",
+                "bookClosureDateBS": "2081-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 5.0,
+                "cashPercent": 10.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2024-01-02",
+                "bookClosureDateBS": "2080-09-17",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 22.0,
+                "cashPercent": 3.26,
+                "totalPercent": 25.26,
+                "bookClosureDateAD": "2023-03-09",
+                "bookClosureDateBS": "2079-11-25",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 27.0,
+                "cashPercent": 3.0,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2021-12-22",
+                "bookClosureDateBS": "2078-09-07",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 22.0,
+                "cashPercent": 7.0,
+                "totalPercent": 29.0,
+                "bookClosureDateAD": "2020-12-30",
+                "bookClosureDateBS": "2077-09-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 27.11,
+                "cashPercent": 17.21,
+                "totalPercent": 44.32,
+                "bookClosureDateAD": "2019-12-02",
+                "bookClosureDateBS": "2076-08-16",
+                "distributionDateAD": "2019-12-23",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 18.0,
+                "cashPercent": 22.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2019-04-29",
+                "bookClosureDateBS": "2076-01-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 19.89,
+                "cashPercent": 25.11,
+                "totalPercent": 45.0,
+                "bookClosureDateAD": "2017-10-23",
+                "bookClosureDateBS": "2074-07-06",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 40.0,
+                "cashPercent": 12.7,
+                "totalPercent": 52.7,
+                "bookClosureDateAD": "2016-12-11",
+                "bookClosureDateBS": "2073-08-26",
+                "distributionDateAD": "2017-02-09",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 40.0,
+                "cashPercent": 12.7,
+                "totalPercent": 52.7,
+                "bookClosureDateAD": "2015-12-11",
+                "bookClosureDateBS": "2072-08-25",
+                "distributionDateAD": "2016-02-21",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 35.0,
+                "cashPercent": 10.0,
+                "totalPercent": 45.0,
+                "bookClosureDateAD": "2014-11-21",
+                "bookClosureDateBS": "2071-08-05",
+                "distributionDateAD": "2015-01-22",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 33.23,
+                "cashPercent": 15.0,
+                "totalPercent": 48.23,
+                "bookClosureDateAD": "2013-12-08",
+                "bookClosureDateBS": "2070-08-23",
+                "distributionDateAD": "2014-02-06",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 25.0,
+                "cashPercent": 17.1,
+                "totalPercent": 42.1,
+                "bookClosureDateAD": "2012-11-25",
+                "bookClosureDateBS": "2069-08-10",
+                "distributionDateAD": "2013-01-09",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 0.0,
+                "cashPercent": 25.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2011-11-10",
+                "bookClosureDateBS": "2068-07-24",
+                "distributionDateAD": "2011-12-10",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "HDL": {
+        "symbol": "HDL",
+        "companyName": "Himalayan Distillery Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 20.0,
+                "cashPercent": 5.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2025-11-06",
+                "bookClosureDateBS": "2082-07-20",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 15.0,
+                "cashPercent": 5.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2025-01-03",
+                "bookClosureDateBS": "2081-09-19",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 10.0,
+                "cashPercent": 15.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2023-12-29",
+                "bookClosureDateBS": "2080-09-13",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 60.0,
+                "cashPercent": 10.0,
+                "totalPercent": 70.0,
+                "bookClosureDateAD": "2023-01-04",
+                "bookClosureDateBS": "2079-09-20",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 75.0,
+                "cashPercent": 25.0,
+                "totalPercent": 100.0,
+                "bookClosureDateAD": "2021-12-31",
+                "bookClosureDateBS": "2078-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 50.0,
+                "cashPercent": 50.0,
+                "totalPercent": 100.0,
+                "bookClosureDateAD": "2021-01-01",
+                "bookClosureDateBS": "2077-09-17",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 50.0,
+                "cashPercent": 52.63,
+                "totalPercent": 102.63,
+                "bookClosureDateAD": "2019-12-01",
+                "bookClosureDateBS": "2076-08-15",
+                "distributionDateAD": "2020-01-19",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 0.0,
+                "cashPercent": 21.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2018-12-19",
+                "bookClosureDateBS": "2075-09-04",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 0.0,
+                "cashPercent": 21.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2017-12-01",
+                "bookClosureDateBS": "2074-08-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 0.0,
+                "cashPercent": 20.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2016-11-17",
+                "bookClosureDateBS": "2073-08-02",
+                "distributionDateAD": "2017-01-23",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 0.0,
+                "cashPercent": 20.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2015-11-17",
+                "bookClosureDateBS": "2072-08-01",
+                "distributionDateAD": "2016-01-13",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 0.0,
+                "cashPercent": 10.52,
+                "totalPercent": 10.52,
+                "bookClosureDateAD": "2014-11-10",
+                "bookClosureDateBS": "2071-07-24",
+                "distributionDateAD": "2014-12-20",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NTC": {
+        "symbol": "NTC",
+        "companyName": "Nepal Doorsanchar Company Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 30.0,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2026-01-04",
+                "bookClosureDateBS": "2082-09-20",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 0.0,
+                "cashPercent": 30.0,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2025-01-02",
+                "bookClosureDateBS": "2081-09-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 40.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2024-01-04",
+                "bookClosureDateBS": "2080-09-19",
+                "distributionDateAD": "2024-01-14",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 0.0,
+                "cashPercent": 40.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2023-01-02",
+                "bookClosureDateBS": "2079-09-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 20.0,
+                "cashPercent": 20.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2022-03-25",
+                "bookClosureDateBS": "2078-12-11",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 0.0,
+                "cashPercent": 40.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2021-03-12",
+                "bookClosureDateBS": "2077-11-28",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 0.0,
+                "cashPercent": 45.0,
+                "totalPercent": 45.0,
+                "bookClosureDateAD": "2019-12-31",
+                "bookClosureDateBS": "2076-09-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 0.0,
+                "cashPercent": 55.0,
+                "totalPercent": 55.0,
+                "bookClosureDateAD": "2018-12-30",
+                "bookClosureDateBS": "2075-09-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 0.0,
+                "cashPercent": 55.0,
+                "totalPercent": 55.0,
+                "bookClosureDateAD": "2017-12-27",
+                "bookClosureDateBS": "2074-09-12",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 0.0,
+                "cashPercent": 51.0,
+                "totalPercent": 51.0,
+                "bookClosureDateAD": "2017-02-26",
+                "bookClosureDateBS": "2073-11-15",
+                "distributionDateAD": "2017-03-15",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 0.0,
+                "cashPercent": 50.0,
+                "totalPercent": 50.0,
+                "bookClosureDateAD": "2016-04-17",
+                "bookClosureDateBS": "2073-01-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 0.0,
+                "cashPercent": 47.0,
+                "totalPercent": 47.0,
+                "bookClosureDateAD": "2015-03-26",
+                "bookClosureDateBS": "2071-12-12",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 0.0,
+                "cashPercent": 46.0,
+                "totalPercent": 46.0,
+                "bookClosureDateAD": "2014-06-13",
+                "bookClosureDateBS": "2071-02-30",
+                "distributionDateAD": "2014-07-09",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 0.0,
+                "cashPercent": 48.0,
+                "totalPercent": 48.0,
+                "bookClosureDateAD": "2013-03-17",
+                "bookClosureDateBS": "2069-12-04",
+                "distributionDateAD": "2013-04-10",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 0.0,
+                "cashPercent": 45.0,
+                "totalPercent": 45.0,
+                "bookClosureDateAD": "2012-03-16",
+                "bookClosureDateBS": "2068-12-03",
+                "distributionDateAD": "2012-01-07",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "AVYAN": {
+        "symbol": "AVYAN",
+        "companyName": "Aviyan Lagubitta Bittiya Sanstha Limited",
+        "dividends": [
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 0.0,
+                "totalPercent": 0.0,
+                "bookClosureDateAD": "2024-06-03",
+                "bookClosureDateBS": "2081-02-21",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "BHL": {
+        "symbol": "BHL",
+        "companyName": "",
+        "dividends": []
+    },
+    "CHCL": {
+        "symbol": "CHCL",
+        "companyName": "Chilime Hydropower Company Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 8.0,
+                "cashPercent": 4.0,
+                "totalPercent": 12.0,
+                "bookClosureDateAD": "2026-01-01",
+                "bookClosureDateBS": "2082-09-17",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 10.0,
+                "cashPercent": 2.0,
+                "totalPercent": 12.0,
+                "bookClosureDateAD": "2024-12-31",
+                "bookClosureDateBS": "2081-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 10.0,
+                "cashPercent": 5.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2023-12-24",
+                "bookClosureDateBS": "2080-09-08",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 7.5,
+                "cashPercent": 7.5,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2022-12-18",
+                "bookClosureDateBS": "2079-09-03",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 7.5,
+                "cashPercent": 7.5,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2021-12-30",
+                "bookClosureDateBS": "2078-09-15",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 10.0,
+                "cashPercent": 10.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2020-12-14",
+                "bookClosureDateBS": "2077-08-29",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 20.0,
+                "cashPercent": 5.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2019-11-13",
+                "bookClosureDateBS": "2076-07-27",
+                "distributionDateAD": "2019-12-16",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 20.0,
+                "cashPercent": 5.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2019-01-03",
+                "bookClosureDateBS": "2075-09-19",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 15.0,
+                "cashPercent": 10.0,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "2017-10-23",
+                "bookClosureDateBS": "2074-07-06",
+                "distributionDateAD": "2017-12-13",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 10.0,
+                "cashPercent": 10.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2016-12-23",
+                "bookClosureDateBS": "2073-09-08",
+                "distributionDateAD": "2017-02-26",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 15.0,
+                "cashPercent": 12.0,
+                "totalPercent": 27.0,
+                "bookClosureDateAD": "2015-12-18",
+                "bookClosureDateBS": "2072-09-03",
+                "distributionDateAD": "2016-02-20",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 20.0,
+                "cashPercent": 15.0,
+                "totalPercent": 35.0,
+                "bookClosureDateAD": "2014-09-23",
+                "bookClosureDateBS": "2071-06-07",
+                "distributionDateAD": "2014-11-22",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 30.0,
+                "cashPercent": 10.0,
+                "totalPercent": 40.0,
+                "bookClosureDateAD": "2013-09-13",
+                "bookClosureDateBS": "2070-05-28",
+                "distributionDateAD": "2013-10-08",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 30.0,
+                "cashPercent": 20.0,
+                "totalPercent": 50.0,
+                "bookClosureDateAD": "2012-09-25",
+                "bookClosureDateBS": "2069-06-09",
+                "distributionDateAD": "2012-11-03",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 40.0,
+                "cashPercent": 30.0,
+                "totalPercent": 70.0,
+                "bookClosureDateAD": "2011-12-27",
+                "bookClosureDateBS": "2068-09-12",
+                "distributionDateAD": "2012-02-01",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "CLI": {
+        "symbol": "CLI",
+        "companyName": "Citizen Life Insurance Company Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 20.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2025-12-23",
+                "bookClosureDateBS": "2082-09-08",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 26.98412698,
+                "cashPercent": 1.42022,
+                "totalPercent": 28.40434698,
+                "bookClosureDateAD": "2025-03-12",
+                "bookClosureDateBS": "2081-11-28",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 5.0,
+                "cashPercent": 0.2632,
+                "totalPercent": 5.2632,
+                "bookClosureDateAD": "2024-01-14",
+                "bookClosureDateBS": "2080-09-29",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "CSBY": {
+        "symbol": "CSBY",
+        "companyName": "",
+        "dividends": []
+    },
+    "GCIL": {
+        "symbol": "GCIL",
+        "companyName": "Ghorahi Cement Industry Ltd.",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 10.0,
+                "cashPercent": 0.5263,
+                "totalPercent": 10.5263,
+                "bookClosureDateAD": "2025-12-12",
+                "bookClosureDateBS": "2082-08-26",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 15.0,
+                "cashPercent": 0.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2024-01-01",
+                "bookClosureDateBS": "2080-09-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "HRL": {
+        "symbol": "HRL",
+        "companyName": "Himalayan Re-Insurance Limited",
         "dividends": [
             {
                 "fiscalYear": "080-081",
-                "bonusPercent": 100.0,
-                "cashPercent": 0.0,
-                "totalPercent": 100.0,
-                "notes": "Bonus ratio 1:1 (100% bonus)"
+                "bonusPercent": 4.5,
+                "cashPercent": 0.24,
+                "totalPercent": 4.74,
+                "bookClosureDateAD": "2025-05-25",
+                "bookClosureDateBS": "2082-02-11",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 4.0,
+                "cashPercent": 0.21,
+                "totalPercent": 4.21,
+                "bookClosureDateAD": "2024-02-19",
+                "bookClosureDateBS": "2080-11-07",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
             }
         ]
+    },
+    "KDBY": {
+        "symbol": "KDBY",
+        "companyName": "Kumari Dhanabriddhi Yojana",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 10.5,
+                "totalPercent": 10.5,
+                "bookClosureDateAD": "2025-08-25",
+                "bookClosureDateBS": "2082-05-09",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 0.0,
+                "cashPercent": 9.5,
+                "totalPercent": 9.5,
+                "bookClosureDateAD": "2024-09-04",
+                "bookClosureDateBS": "2081-05-19",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 6.0,
+                "totalPercent": 6.0,
+                "bookClosureDateAD": "2023-09-04",
+                "bookClosureDateBS": "2080-05-18",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "MMF1": {
+        "symbol": "MMF1",
+        "companyName": "Mega Mutual Fund - 1",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 11.75,
+                "totalPercent": 11.75,
+                "bookClosureDateAD": "2025-09-12",
+                "bookClosureDateBS": "2082-05-27",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NBF3": {
+        "symbol": "NBF3",
+        "companyName": "Nabil Balanced Fund III",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 13.0,
+                "totalPercent": 13.0,
+                "bookClosureDateAD": "2025-09-07",
+                "bookClosureDateBS": "2082-05-22",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NIBLSF": {
+        "symbol": "NIBLSF",
+        "companyName": "NIBL Sahabhagita Fund",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 0.0,
+                "cashPercent": 7.0,
+                "totalPercent": 7.0,
+                "bookClosureDateAD": "2025-07-21",
+                "bookClosureDateBS": "2082-04-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 4.0,
+                "totalPercent": 4.0,
+                "bookClosureDateAD": "2023-07-27",
+                "bookClosureDateBS": "2080-04-11",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 0.0,
+                "cashPercent": 7.2,
+                "totalPercent": 7.2,
+                "bookClosureDateAD": "2022-08-25",
+                "bookClosureDateBS": "2079-05-09",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "077-078",
+                "bonusPercent": 0.0,
+                "cashPercent": 50.0,
+                "totalPercent": 50.0,
+                "bookClosureDateAD": "2021-07-29",
+                "bookClosureDateBS": "2078-04-14",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 0.0,
+                "cashPercent": 8.25,
+                "totalPercent": 8.25,
+                "bookClosureDateAD": "2021-07-29",
+                "bookClosureDateBS": "2078-04-14",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NICA": {
+        "symbol": "NICA",
+        "companyName": "NIC Asia Bank Ltd.",
+        "dividends": [
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 29.0,
+                "cashPercent": 1.52,
+                "totalPercent": 30.52,
+                "bookClosureDateAD": "2023-10-03",
+                "bookClosureDateBS": "2080-06-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "076-077",
+                "bonusPercent": 19.0,
+                "cashPercent": 1.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2020-11-25",
+                "bookClosureDateBS": "2077-08-10",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 10.0,
+                "cashPercent": 11.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2019-09-15",
+                "bookClosureDateBS": "2076-05-29",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 10.0,
+                "cashPercent": 0.526,
+                "totalPercent": 10.526,
+                "bookClosureDateAD": "2018-12-05",
+                "bookClosureDateBS": "2075-08-19",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 20.0,
+                "cashPercent": 1.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2017-09-01",
+                "bookClosureDateBS": "2074-05-16",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 26.0,
+                "cashPercent": 1.37,
+                "totalPercent": 27.37,
+                "bookClosureDateAD": "2016-09-21",
+                "bookClosureDateBS": "2073-06-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 39.0,
+                "cashPercent": 2.05,
+                "totalPercent": 41.05,
+                "bookClosureDateAD": "2016-01-10",
+                "bookClosureDateBS": "2072-09-26",
+                "distributionDateAD": "2016-03-16",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 15.0,
+                "cashPercent": 15.0,
+                "totalPercent": 30.0,
+                "bookClosureDateAD": "2014-12-15",
+                "bookClosureDateBS": "2071-08-29",
+                "distributionDateAD": "2015-01-12",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 0.0,
+                "cashPercent": 20.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2014-02-05",
+                "bookClosureDateBS": "2070-10-22",
+                "distributionDateAD": "2014-03-03",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NIMB": {
+        "symbol": "NIMB",
+        "companyName": "Nepal Investment Mega Bank Limited",
+        "dividends": [
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 0.0,
+                "totalPercent": 0.0,
+                "bookClosureDateAD": "",
+                "bookClosureDateBS": "",
+                "distributionDateAD": "",
+                "status": "",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "NMBSBFE": {
+        "symbol": "NMBSBFE",
+        "companyName": "",
+        "dividends": []
+    },
+    "SARBTM": {
+        "symbol": "SARBTM",
+        "companyName": "Sarbottam Cement Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 5.0,
+                "cashPercent": 15.0,
+                "totalPercent": 20.0,
+                "bookClosureDateAD": "2025-11-28",
+                "bookClosureDateBS": "2082-08-12",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 7.0,
+                "cashPercent": 3.0,
+                "totalPercent": 10.0,
+                "bookClosureDateAD": "2024-12-27",
+                "bookClosureDateBS": "2081-09-12",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 0.0,
+                "cashPercent": 15.0,
+                "totalPercent": 15.0,
+                "bookClosureDateAD": "2024-04-12",
+                "bookClosureDateBS": "2080-12-30",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "SGHC": {
+        "symbol": "SGHC",
+        "companyName": "",
+        "dividends": []
+    },
+    "SHL": {
+        "symbol": "SHL",
+        "companyName": "Soaltee Hotel Limited",
+        "dividends": [
+            {
+                "fiscalYear": "081-082",
+                "bonusPercent": 15.0,
+                "cashPercent": 16.57894737,
+                "totalPercent": 31.57894737,
+                "bookClosureDateAD": "2025-11-21",
+                "bookClosureDateBS": "2082-08-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "080-081",
+                "bonusPercent": 10.0,
+                "cashPercent": 26.84210526,
+                "totalPercent": 36.84210526,
+                "bookClosureDateAD": "2024-11-28",
+                "bookClosureDateBS": "2081-08-13",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "079-080",
+                "bonusPercent": 5.0,
+                "cashPercent": 26.57894737,
+                "totalPercent": 31.57894737,
+                "bookClosureDateAD": "2023-12-21",
+                "bookClosureDateBS": "2080-09-05",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "078-079",
+                "bonusPercent": 5.0,
+                "cashPercent": 21.3158,
+                "totalPercent": 26.3158,
+                "bookClosureDateAD": "2022-12-22",
+                "bookClosureDateBS": "2079-09-07",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "075-076",
+                "bonusPercent": 15.0,
+                "cashPercent": 11.31,
+                "totalPercent": 26.31,
+                "bookClosureDateAD": "2019-12-11",
+                "bookClosureDateBS": "2076-08-25",
+                "distributionDateAD": "2020-02-06",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "074-075",
+                "bonusPercent": 10.0,
+                "cashPercent": 16.31,
+                "totalPercent": 26.31,
+                "bookClosureDateAD": "2018-12-12",
+                "bookClosureDateBS": "2075-08-26",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "073-074",
+                "bonusPercent": 15.0,
+                "cashPercent": 6.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2017-11-20",
+                "bookClosureDateBS": "2074-08-04",
+                "distributionDateAD": "",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "072-073",
+                "bonusPercent": 10.0,
+                "cashPercent": 11.05,
+                "totalPercent": 21.05,
+                "bookClosureDateAD": "2016-12-12",
+                "bookClosureDateBS": "2073-08-27",
+                "distributionDateAD": "2017-06-01",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "071-072",
+                "bonusPercent": 25.0,
+                "cashPercent": 6.57,
+                "totalPercent": 31.57,
+                "bookClosureDateAD": "2015-12-16",
+                "bookClosureDateBS": "2072-09-01",
+                "distributionDateAD": "2016-05-05",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "070-071",
+                "bonusPercent": 40.0,
+                "cashPercent": 17.89,
+                "totalPercent": 57.89,
+                "bookClosureDateAD": "2014-12-14",
+                "bookClosureDateBS": "2071-08-28",
+                "distributionDateAD": "2015-01-22",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "069-070",
+                "bonusPercent": 40.0,
+                "cashPercent": 12.632,
+                "totalPercent": 52.632,
+                "bookClosureDateAD": "2013-11-17",
+                "bookClosureDateBS": "2070-08-02",
+                "distributionDateAD": "2013-12-29",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "068-069",
+                "bonusPercent": 20.0,
+                "cashPercent": 32.63,
+                "totalPercent": 52.63,
+                "bookClosureDateAD": "2012-12-05",
+                "bookClosureDateBS": "2069-08-20",
+                "distributionDateAD": "2013-01-08",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            },
+            {
+                "fiscalYear": "067-068",
+                "bonusPercent": 20.0,
+                "cashPercent": 32.63,
+                "totalPercent": 52.63,
+                "bookClosureDateAD": "2011-12-11",
+                "bookClosureDateBS": "2068-08-25",
+                "distributionDateAD": "2012-01-12",
+                "status": "Closed",
+                "source": "nepalipaisa",
+                "notes": ""
+            }
+        ]
+    },
+    "SONA": {
+        "symbol": "SONA",
+        "companyName": "",
+        "dividends": []
     }
 }

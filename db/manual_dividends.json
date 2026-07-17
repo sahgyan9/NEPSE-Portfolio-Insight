@@ -7,7 +7,10 @@
       "fiscalYear": "081-082",
       "bonusPercent": 21,
       "cashPercent": 1.11,
-      "cashIncome": 0
+      "cashIncome": 0,
+      "bonusSharesReceived": 5,
+      "disabled": true,
+      "disabledReason": "2026-07-17: Kept for reference, not deleted. Superseded by automatic transaction-based share-at-closure calc (_shares_held_at in nepse_server.py) now that real buy/sell history is imported from broker emails - see workflows/import_broker_transactions.md. Auto calc gives 4 bonus shares (20 shares held at 2025-11-21 closure x 21%) vs the 5 actually received; the 1-share gap is pre-2025-11 history still untracked. User chose to accept the automatic estimate going forward rather than hand-correct each fiscal year."
     },
     {
       "id": "NTC-1769150292203",
