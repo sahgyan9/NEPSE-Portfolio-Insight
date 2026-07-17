@@ -13,7 +13,7 @@
  * - Manual dividend entries from DividendsPage are integrated into holdings
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { StockHolding, PortfolioSummary } from '@/data/portfolioData';
 import { getCachedStockData, clearStockDataCache, ShareBazaarResponse } from '@/services/sharebazaarApi';
 import { getHoldings as getDbHoldings, isServerRunning, DBHolding } from '@/services/portfolioDb';
@@ -151,6 +151,8 @@ export interface LivePortfolioData {
     refetch: () => Promise<void>;
     isDbConnected: boolean;
     dividendDataLoaded: boolean;
+    /** True when the database is connected but holds no positions yet (new user). */
+    isEmpty: boolean;
 }
 
 /**
@@ -163,6 +165,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
     const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
     const [isDbConnected, setIsDbConnected] = useState(false);
     const [dividendDataLoaded, setDividendDataLoaded] = useState(false);
+    const [isEmpty, setIsEmpty] = useState(false);
 
     /**
      * Build holdings array from raw data + API response + dividend data
@@ -298,8 +301,13 @@ export const useLivePortfolio = (): LivePortfolioData => {
         setDividendDataLoaded(false);
 
         try {
-            // First, try to fetch holdings from the local database
+            // First, try to fetch holdings from the local database.
+            // When the DB is connected we trust it as the source of truth — even
+            // when it's empty — so a brand-new user sees a genuine "import your
+            // portfolio" empty state instead of someone else's demo holdings.
+            // The hardcoded demo data is only used when the DB is unreachable.
             let portfolioData: RawPortfolioItem[] = fallbackPortfolioData;
+            let empty = false;
 
             const dbConnected = await isServerRunning();
             setIsDbConnected(dbConnected);
@@ -307,15 +315,24 @@ export const useLivePortfolio = (): LivePortfolioData => {
             if (dbConnected) {
                 try {
                     const dbHoldings = await getDbHoldings();
-                    if (dbHoldings && dbHoldings.length > 0) {
-                        portfolioData = dbHoldingsToRaw(dbHoldings);
-                        console.log('[useLivePortfolio] Loaded', portfolioData.length, 'holdings from database');
-                    }
+                    portfolioData = dbHoldingsToRaw(dbHoldings || []);
+                    empty = portfolioData.length === 0;
+                    console.log('[useLivePortfolio] Loaded', portfolioData.length, 'holdings from database');
                 } catch (dbError) {
                     console.log('[useLivePortfolio] Database fetch failed, using fallback data');
                 }
             } else {
                 console.log('[useLivePortfolio] Database not connected, using fallback data');
+            }
+
+            setIsEmpty(empty);
+
+            if (empty) {
+                // Nothing to price — surface the empty state immediately.
+                setHoldings([]);
+                setLastUpdated(new Date());
+                setIsLoading(false);
+                return;
             }
 
             // Now fetch live prices from ShareBazaar API
@@ -419,6 +436,30 @@ export const useLivePortfolio = (): LivePortfolioData => {
         fetchData();
     }, [fetchData]);
 
+    // Auto-refresh when the user returns to the tab — but only if the data is
+    // stale (older than 5 minutes). The staleness gate keeps prices feeling live
+    // without ever hammering upstream APIs, and it deliberately does NOT trigger
+    // the scraper/news fetches (those stay manual to respect their rate limits).
+    const liveStateRef = useRef({ isLoading, lastUpdated, isEmpty });
+    liveStateRef.current = { isLoading, lastUpdated, isEmpty };
+
+    useEffect(() => {
+        const STALE_MS = 5 * 60 * 1000;
+        const onFocus = () => {
+            const { isLoading: loading, lastUpdated: updated, isEmpty: empty } = liveStateRef.current;
+            if (loading || empty) return;
+            if (!updated || Date.now() - updated.getTime() > STALE_MS) {
+                refetch();
+            }
+        };
+        window.addEventListener('focus', onFocus);
+        document.addEventListener('visibilitychange', onFocus);
+        return () => {
+            window.removeEventListener('focus', onFocus);
+            document.removeEventListener('visibilitychange', onFocus);
+        };
+    }, [refetch]);
+
     return {
         holdings,
         summary,
@@ -428,6 +469,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
         refetch,
         isDbConnected,
         dividendDataLoaded,
+        isEmpty,
     };
 };
 
