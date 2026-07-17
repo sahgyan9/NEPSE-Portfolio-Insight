@@ -37,7 +37,9 @@
       "fiscalYear": "081-081",
       "bonusPercent": 12.5,
       "cashPercent": 12.5,
-      "cashIncome": 225
+      "cashIncome": 225,
+      "disabled": true,
+      "disabledReason": "2026-07-17: Kept for reference, not deleted. fiscalYear '081-081' is not a valid FY (should be 080-081 or 081-082) - this is a typo'd duplicate of the auto-scraped 081-082 entry (same 12.5% bonus / 12.5% cash, bookClosureDateAD 2025-12-31). Same class of bug as HDL-1766667106451: harmless in the main dividend table (bad FY string never matched the dropdown) but double-counted as a phantom event in the all-years bonus-share timeline."
     },
     {
       "id": "SNLI-1768321657411",
@@ -46,7 +48,9 @@
       "fiscalYear": "081-081",
       "bonusPercent": 5,
       "cashPercent": 15.26,
-      "cashIncome": 231
+      "cashIncome": 231,
+      "disabled": true,
+      "disabledReason": "2026-07-17: Kept for reference, not deleted. fiscalYear '081-081' is not a valid FY (should be 080-081 or 081-082) - this is a typo'd duplicate of the auto-scraped 081-082 entry (bonus 5.0% / cash 15.2632%, rounded to 5/15.26 here, bookClosureDateAD 2025-12-29). Same class of bug as HDL-1766667106451 and CBBL-1768394985161."
     },
     {
       "id": "CLI-1768042691698",
@@ -73,7 +77,9 @@
       "fiscalYear": "081-081",
       "bonusPercent": 20,
       "cashPercent": 5,
-      "cashIncome": 84.25
+      "cashIncome": 84.25,
+      "disabled": true,
+      "disabledReason": "2026-07-17: Kept for reference, not deleted. fiscalYear '081-081' is not a valid FY (should be 080-081 or 081-082) - this is a typo'd duplicate of the auto-scraped 081-082 entry (same 20% bonus / 5% cash, bookClosureDateAD 2025-11-06). Its bad FY string never matched the fiscal-year dropdown so it was silently harmless in the main dividend table, but the all-years bonus-share timeline (ShareSparkline lifetime total) picked it up as a third, phantom dividend event and double-counted it - inflating HDL's lifetime bonus shares from the real 7 to 12. User caught the discrepancy by checking their actual holdings."
     },
     {
       "id": "NBF3-1766667024068",

@@ -21,6 +21,10 @@ export const companyRegistry: Record<string, CompanyRegistryEntry> = {
 
     // === MICROFINANCE / DEVELOPMENT BANK ===
     CBBL: { fullName: "Chhimek Laghubitta Bittiya Sanstha Limited", sector: "Microfinance" },
+    AVYAN: { fullName: "Aviyan Laghubitta Bittiya Sanstha Limited", sector: "Microfinance" },
+
+    // === HOTEL / TOURISM ===
+    SHL: { fullName: "Soaltee Hotel Limited", sector: "Hotel" },
 
     // === LIFE INSURANCE ===
     CLI: { fullName: "Citizen Life Insurance Company Limited", sector: "Life Insurance" },
@@ -33,9 +37,10 @@ export const companyRegistry: Record<string, CompanyRegistryEntry> = {
     HDL: { fullName: "Himalayan Distillery Limited", sector: "Manufacturing" },
     GCIL: { fullName: "Ghorahi Cement Industry Limited", sector: "Manufacturing" },
     SARBTM: { fullName: "Sarbottam Cement Limited", sector: "Manufacturing" },
+    SONA: { fullName: "Sonapur Minerals And Oil Limited", sector: "Manufacturing And Processing" },
 
     // === TRADING / OIL & GAS ===
-    SONA: { fullName: "Sonapur Minerals And Oil Limited", sector: "Trading" },
+
 
     // === TELECOM ===
     NTC: { fullName: "Nepal Doorsanchar Company Limited", sector: "Telecom" },
