@@ -154,6 +154,42 @@ export async function addStock(
     return response.json();
 }
 
+export interface ImportCsvResult {
+    success: boolean;
+    imported: number;
+    skipped: number;
+    skippedSymbols: string[];
+    mode: "replace" | "merge";
+    holdings: DBHolding[];
+}
+
+/**
+ * Bulk-import holdings from a Meroshare CSV export (WACC Report or
+ * My Purchase Source). The raw CSV text is sent to the local database server,
+ * which parses it tolerantly and stores the resulting holdings.
+ *
+ * @param csvText Raw CSV file contents.
+ * @param mode "replace" treats the CSV as the full portfolio snapshot (default);
+ *             "merge" keeps existing holdings the CSV doesn't mention.
+ */
+export async function importHoldingsCsv(
+    csvText: string,
+    mode: "replace" | "merge" = "replace"
+): Promise<ImportCsvResult> {
+    const response = await fetch(`${API_BASE}/holdings/import-csv`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ csv: csvText, mode }),
+    });
+
+    if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.error || "Failed to import CSV");
+    }
+
+    return response.json();
+}
+
 /**
  * Sell stock (reduce or remove position)
  */
