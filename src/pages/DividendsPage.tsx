@@ -38,6 +38,7 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { StockHolding, portfolioHoldings as localHoldings } from '@/data/portfolioData';
+import { DynamicGradientBorder } from '@/components/DynamicGradientBorder';
 
 interface DividendRow {
     id: string;
@@ -253,38 +254,16 @@ const DividendsPage = () => {
                     </div>
                 </div>
 
-                {/* Auto Dividends Dashboard */}
-                <Card className="border-primary/20 shadow-sm relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-primary to-blue-500"></div>
-                    <CardHeader className="pb-4">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                            <div>
-                                <CardTitle className="text-xl flex items-center gap-2">
-                                    <Sparkles className="h-5 w-5 text-emerald-500" />
-                                    Portfolio Income Dashboard
-                                </CardTitle>
-                                <CardDescription>Auto-calculated based on your current portfolio holdings.</CardDescription>
-                            </div>
-                            <div className="flex items-center gap-3 bg-muted/50 p-1.5 rounded-lg border">
-                                <Label htmlFor="fy-select" className="text-xs font-semibold px-2 text-muted-foreground">FISCAL YEAR</Label>
-                                <select
-                                    id="fy-select"
-                                    className="h-8 bg-background border rounded-md text-sm px-3 outline-none focus:ring-1 focus:ring-primary font-mono font-medium"
-                                    value={fiscalYear}
-                                    onChange={(e) => setFiscalYear(e.target.value)}
-                                >
-                                    <option value="081-082">081-082</option>
-                                    <option value="080-081">080-081</option>
-                                    <option value="079-080">079-080</option>
-                                </select>
-                                <Button variant="outline" size="sm" onClick={handleRefreshAuto} disabled={isRefreshingAuto} className="h-8 gap-2 bg-background">
-                                    <RefreshCw className={`h-3 w-3 ${isRefreshingAuto ? 'animate-spin' : ''}`} />
-                                    <span className="hidden sm:inline">Refresh</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </CardHeader>
-                    <CardContent>
+                {/* Auto Dividends Dashboard Header & Controls */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 className="text-2xl font-bold flex items-center gap-2">
+                            <Sparkles className="h-6 w-6 text-emerald-500" />
+                            Portfolio Income Dashboard
+                        </h2>
+                        <p className="text-sm text-muted-foreground mt-1">Auto-calculated based on your current portfolio holdings.</p>
+                    </div>
+                </div>
                         {isFetchingAuto ? (
                             <div className="h-40 flex items-center justify-center">
                                 <Loader2 className="h-8 w-8 animate-spin text-muted-foreground/50" />
@@ -355,38 +334,75 @@ const DividendsPage = () => {
                                     );
 
                                     return (
-                                        <>
-                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                                                <div className="rounded-lg border p-3">
-                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground"><Banknote className="h-3.5 w-3.5" /> Cash Received (net)</div>
-                                                    <div className="text-xl font-bold font-mono mt-1">Rs. {totals.cashNet.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
-                                                    <div className="text-[11px] text-muted-foreground font-mono">gross Rs. {totals.cashGross.toLocaleString('en-NP', { maximumFractionDigits: 0 })} − 5% tax</div>
+                                        <div className="space-y-6">
+                                            {/* KPI Section */}
+                                            <section id="dividend-kpis">
+                                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                                    <Card className="border-border shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                                                        <DynamicGradientBorder />
+                                                        <CardContent className="p-4 flex flex-col justify-center relative z-10">
+                                                            <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-wider mb-2"><Banknote className="h-4 w-4" /> Cash Received (net)</div>
+                                                            <div className="text-2xl font-bold font-mono">Rs. {totals.cashNet.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                            <div className="text-[11px] text-muted-foreground font-mono mt-1">gross Rs. {totals.cashGross.toLocaleString('en-NP', { maximumFractionDigits: 0 })} − 5% tax</div>
+                                                        </CardContent>
+                                                    </Card>
+                                                    <Card className="border-border shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                                                        <DynamicGradientBorder />
+                                                        <CardContent className="p-4 flex flex-col justify-center relative z-10">
+                                                            <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-wider mb-2"><TrendingUp className="h-4 w-4" /> Bonus Shares Added</div>
+                                                            <div className="text-2xl font-bold font-mono text-emerald-500">+{totals.bonusShares}</div>
+                                                            <div className="text-[11px] text-muted-foreground font-mono mt-1">true value Rs. {totalTrueBonusValue.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                        </CardContent>
+                                                    </Card>
+                                                    <Card className="border-border shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                                                        <DynamicGradientBorder />
+                                                        <CardContent className="p-4 flex flex-col justify-center relative z-10">
+                                                            <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-wider mb-2">Avg Portfolio Yield</div>
+                                                            <div className="text-2xl font-bold font-mono text-blue-500">{dividendYield.toFixed(2)}%</div>
+                                                            <div className="text-[11px] text-muted-foreground mt-1">True Income / Portfolio Value</div>
+                                                        </CardContent>
+                                                    </Card>
+                                                    <Card className="border-emerald-500/30 bg-emerald-500/5 shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+                                                        <DynamicGradientBorder />
+                                                        <CardContent className="p-4 flex flex-col justify-center relative z-10">
+                                                            <div className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold uppercase tracking-wider mb-2">Total True Value</div>
+                                                            <div className="text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400">Rs. {totalTrueIncomeForYear.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
+                                                            <div className="text-[11px] text-emerald-600/70 dark:text-emerald-400/70 mt-1">bonus valued at current LTP</div>
+                                                        </CardContent>
+                                                    </Card>
                                                 </div>
-                                                <div className="rounded-lg border p-3">
-                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground"><TrendingUp className="h-3.5 w-3.5" /> Bonus Shares Added</div>
-                                                    <div className="text-xl font-bold font-mono mt-1 text-emerald-500">+{totals.bonusShares}</div>
-                                                    <div className="text-[11px] text-muted-foreground font-mono">true value Rs. {totalTrueBonusValue.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
-                                                </div>
-                                                <div className="rounded-lg border p-3">
-                                                    <div className="flex items-center gap-2 text-xs text-muted-foreground">Average Portfolio Yield</div>
-                                                    <div className="text-xl font-bold font-mono mt-1 text-blue-500">{dividendYield.toFixed(2)}%</div>
-                                                    <div className="text-[11px] text-muted-foreground">True Income / Portfolio Value</div>
-                                                </div>
-                                                <div className="rounded-lg border p-3 border-emerald-500/30 bg-emerald-500/5">
-                                                    <div className="text-xs text-muted-foreground font-semibold">Total True Value</div>
-                                                    <div className="text-xl font-bold font-mono mt-1 text-emerald-600 dark:text-emerald-400">Rs. {totalTrueIncomeForYear.toLocaleString('en-NP', { maximumFractionDigits: 0 })}</div>
-                                                    <div className="text-[11px] text-muted-foreground">bonus valued at current LTP</div>
-                                                </div>
-                                            </div>
+                                            </section>
                                             
-                                            <div className="flex items-center justify-between mb-4">
-                                                <div className="relative w-full max-w-sm">
-                                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                                                    <Input placeholder="Search dividends..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9 h-9" />
-                                                </div>
-                                            </div>
+                                            {/* Table Section */}
+                                            <section id="dividend-table">
+                                                <Card className="border-border shadow-sm relative overflow-hidden">
+                                                    <DynamicGradientBorder />
+                                                    <CardContent className="p-0 relative z-10">
+                                                        <div className="p-4 border-b border-border bg-muted/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                                            <div className="relative w-full max-w-sm">
+                                                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                                                                <Input placeholder="Search dividends..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-9 h-9 bg-background" />
+                                                            </div>
+                                                            <div className="flex items-center gap-3 bg-background p-1.5 rounded-lg border">
+                                                                <Label htmlFor="fy-select" className="text-xs font-semibold px-2 text-muted-foreground">FISCAL YEAR</Label>
+                                                                <select
+                                                                    id="fy-select"
+                                                                    className="h-8 bg-background border rounded-md text-sm px-3 outline-none focus:ring-1 focus:ring-primary font-mono font-medium"
+                                                                    value={fiscalYear}
+                                                                    onChange={(e) => setFiscalYear(e.target.value)}
+                                                                >
+                                                                    <option value="081-082">081-082</option>
+                                                                    <option value="080-081">080-081</option>
+                                                                    <option value="079-080">079-080</option>
+                                                                </select>
+                                                                <Button variant="outline" size="sm" onClick={handleRefreshAuto} disabled={isRefreshingAuto} className="h-8 gap-2 bg-background">
+                                                                    <RefreshCw className={`h-3 w-3 ${isRefreshingAuto ? 'animate-spin' : ''}`} />
+                                                                    <span className="hidden sm:inline">Refresh</span>
+                                                                </Button>
+                                                            </div>
+                                                        </div>
 
-                                            <div className="overflow-x-auto">
+                                                        <div className="overflow-x-auto">
                                                 <TooltipProvider delayDuration={300}>
                                                     <Table>
                                                         <TableHeader>
@@ -405,7 +421,9 @@ const DividendsPage = () => {
                                                                 <TableRow key={c.symbol}>
                                                                     <TableCell>
                                                                         <div className="font-semibold underline decoration-dashed hover:decoration-solid hover:text-primary transition-all cursor-pointer">
-                                                                            <StockSymbolLink symbol={c.symbol} className={columnColors.symbol} />
+                                                                            <Link to={`/quarterly?symbol=${c.symbol}&tab=dividends`} className={cn("inline-flex items-center gap-1 hover:underline hover:opacity-80 transition-all", columnColors.symbol)}>
+                                                                                {c.symbol}
+                                                                            </Link>
                                                                         </div>
                                                                         <div className="text-[11px] text-muted-foreground max-w-[140px] truncate hidden md:block" title={c.companyName}>{c.companyName}</div>
                                                                         <div className="text-[10px] text-muted-foreground font-mono">{c.quantity} sh held</div>
@@ -472,7 +490,11 @@ const DividendsPage = () => {
                                                                     </TableCell>
                                                                     <TableCell className="min-w-[120px]">
                                                                         <div className="h-[40px] w-full">
-                                                                            <ShareSparkline timeline={c.shareTimeline} />
+                                                                            <ShareSparkline
+                                                                                timeline={c.shareTimeline}
+                                                                                highlightDate={c.bookClosureDateAD}
+                                                                                currentFyGain={c.received.bonusShares}
+                                                                            />
                                                                         </div>
                                                                     </TableCell>
                                                                 </TableRow>
@@ -480,14 +502,15 @@ const DividendsPage = () => {
                                                         </TableBody>
                                                     </Table>
                                                 </TooltipProvider>
-                                            </div>
-                                        </>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                            </section>
+                                        </div>
                                     );
                                 })()}
                             </>
                         ) : null}
-                    </CardContent>
-                </Card>
 
                 {/* Manual Overrides Accordion */}
                 <details className="group border rounded-lg overflow-hidden bg-card/30">
@@ -537,7 +560,9 @@ const DividendsPage = () => {
                                             <TableRow key={row.id} className={cn(row.disabled && "opacity-50")}>
                                                 <TableCell className="font-semibold">
                                                     <div className="flex items-center gap-2">
-                                                        <StockSymbolLink symbol={row.symbol} />
+                                                        <Link to={`/quarterly?symbol=${row.symbol}&tab=dividends`} className="inline-flex items-center gap-1 hover:underline hover:opacity-80 transition-all text-primary">
+                                                            {row.symbol}
+                                                        </Link>
                                                         {row.disabled && (
                                                             <Tooltip>
                                                                 <TooltipTrigger asChild>

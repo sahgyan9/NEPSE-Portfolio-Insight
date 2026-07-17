@@ -38,6 +38,7 @@ import { QuarterlyUploadZone } from '@/components/QuarterlyUploadZone';
 import { QuarterlyTrendChart } from '@/components/QuarterlyTrendChart';
 import { QuarterlyDataTable } from '@/components/QuarterlyDataTable';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
+import { DynamicGradientBorder } from '@/components/DynamicGradientBorder';
 import {
   listQuarterlyStocks,
   getQuarterlyData,
@@ -69,10 +70,13 @@ const getSectorStyle = (sector: string = '') => {
 
 // ── Mini KPI Card ─────────────────────────────────────────────────────────────
 const KpiCard = ({ label, value, sub }: { label: string; value: string; sub?: string }) => (
-  <div className="p-4 rounded-xl border border-border bg-card">
-    <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">{label}</p>
-    <p className="text-2xl font-bold font-mono mt-1">{value}</p>
-    {sub && <p className="text-xs text-muted-foreground mt-1">{sub}</p>}
+  <div className="p-4 rounded-xl border border-border bg-card relative overflow-hidden">
+    <DynamicGradientBorder />
+    <div className="relative z-10">
+      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">{label}</p>
+      <p className="text-2xl font-bold font-mono mt-1">{value}</p>
+      {sub && <p className="text-xs text-muted-foreground mt-1">{sub}</p>}
+    </div>
   </div>
 );
 
@@ -87,7 +91,8 @@ const QuarterlyPage = () => {
   const [dividendHistory, setDividendHistory] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
-  const [activeTab, setActiveTab] = useState('trends');
+  const tabParam = searchParams.get('tab');
+  const [activeTab, setActiveTab] = useState(tabParam || 'trends');
   const [unfetchedSymbols, setUnfetchedSymbols] = useState<string[]>([]);
   const [stockSearchQuery, setStockSearchQuery] = useState('');
   const [sectorFilter, setSectorFilter] = useState('all');
@@ -126,10 +131,11 @@ const QuarterlyPage = () => {
 
   // Synchronize selectedSymbol to query parameters
   useEffect(() => {
-    if (selectedSymbol) {
-      setSearchParams({ symbol: selectedSymbol });
-    }
-  }, [selectedSymbol, setSearchParams]);
+    const params: Record<string, string> = {};
+    if (selectedSymbol) params.symbol = selectedSymbol;
+    if (activeTab) params.tab = activeTab;
+    setSearchParams(params);
+  }, [selectedSymbol, activeTab, setSearchParams]);
 
   // Check which watchlist/portfolio symbols are missing quarterly data
   useEffect(() => {
@@ -191,7 +197,6 @@ const QuarterlyPage = () => {
   useEffect(() => {
     if (selectedSymbol) {
       loadSymbolData(selectedSymbol);
-      setActiveTab('trends');
     }
   }, [selectedSymbol]);
 
@@ -524,62 +529,74 @@ const QuarterlyPage = () => {
                   </TabsList>
 
                   {/* Trends tab */}
-                  <TabsContent value="trends" className="rounded-xl border border-border bg-card p-5">
-                    <h3 className="font-semibold mb-4">Quarterly Trends — All Years</h3>
-                    {isLoading ? (
-                      <div className="h-64 flex items-center justify-center text-muted-foreground">Loading…</div>
-                    ) : (
-                      <ErrorBoundary label="Quarterly Chart">
-                        <QuarterlyTrendChart quarters={quarters} companyName={symbolData?.company_name} />
-                      </ErrorBoundary>
-                    )}
+                  <TabsContent value="trends" className="rounded-xl border border-border bg-card p-5 relative overflow-hidden">
+                    <DynamicGradientBorder />
+                    <div className="relative z-10">
+                      <h3 className="font-semibold mb-4">Quarterly Trends — All Years</h3>
+                      {isLoading ? (
+                        <div className="h-64 flex items-center justify-center text-muted-foreground">Loading…</div>
+                      ) : (
+                        <ErrorBoundary label="Quarterly Chart">
+                          <QuarterlyTrendChart quarters={quarters} companyName={symbolData?.company_name} />
+                        </ErrorBoundary>
+                      )}
+                    </div>
                   </TabsContent>
 
                   {/* Balance Sheet table */}
-                  <TabsContent value="screen2" className="rounded-xl border border-border bg-card p-5">
-                    <h3 className="font-semibold mb-4">Balance Sheet + P&L (Rs Crore)</h3>
-                    <QuarterlyDataTable quarters={quarters} mode="screen2" />
+                  <TabsContent value="screen2" className="rounded-xl border border-border bg-card p-5 relative overflow-hidden">
+                    <DynamicGradientBorder />
+                    <div className="relative z-10">
+                      <h3 className="font-semibold mb-4">Balance Sheet + P&L (Rs Crore)</h3>
+                      <QuarterlyDataTable quarters={quarters} mode="screen2" />
+                    </div>
                   </TabsContent>
 
                   {/* Ratios table */}
-                  <TabsContent value="screen1" className="rounded-xl border border-border bg-card p-5">
-                    <h3 className="font-semibold mb-4">Ratio Metrics</h3>
-                    <QuarterlyDataTable quarters={quarters} mode="screen1" />
+                  <TabsContent value="screen1" className="rounded-xl border border-border bg-card p-5 relative overflow-hidden">
+                    <DynamicGradientBorder />
+                    <div className="relative z-10">
+                      <h3 className="font-semibold mb-4">Ratio Metrics</h3>
+                      <QuarterlyDataTable quarters={quarters} mode="screen1" />
+                    </div>
                   </TabsContent>
 
                   {/* Dividends tab */}
-                  <TabsContent value="dividends" className="rounded-xl border border-border bg-card p-5">
-                    <h3 className="font-semibold mb-4">Dividend History</h3>
-                    {dividendHistory.length > 0 ? (
-                      <div className="overflow-x-auto rounded-md border">
-                        <table className="w-full text-sm text-left">
-                          <thead className="bg-muted text-muted-foreground text-xs uppercase">
-                            <tr>
-                              <th className="px-4 py-3 font-medium">Fiscal Year</th>
-                              <th className="px-4 py-3 font-medium text-right">Bonus %</th>
-                              <th className="px-4 py-3 font-medium text-right">Cash %</th>
-                              <th className="px-4 py-3 font-medium text-right">Total %</th>
-                              <th className="px-4 py-3 font-medium">Book Closure</th>
-                            </tr>
-                          </thead>
-                          <tbody className="divide-y divide-border">
-                            {dividendHistory.map((d: any, idx: number) => (
-                              <tr key={idx} className={`transition-colors hover:bg-muted/50 ${idx % 2 === 0 ? 'bg-background' : 'bg-muted/20'}`}>
-                                <td className="px-4 py-3 font-mono">{d.fiscalYear}</td>
-                                <td className="px-4 py-3 text-right">{d.bonusPercent.toFixed(2)}%</td>
-                                <td className="px-4 py-3 text-right">{d.cashPercent.toFixed(2)}%</td>
-                                <td className="px-4 py-3 text-right font-semibold text-primary">{d.totalPercent.toFixed(2)}%</td>
-                                <td className="px-4 py-3 text-muted-foreground">{d.bookClosureDateAD || d.bookClosureDateBS || 'N/A'}</td>
+                  <TabsContent value="dividends" className="rounded-xl border border-border bg-card p-5 relative overflow-hidden">
+                    <DynamicGradientBorder />
+                    <div className="relative z-10">
+                      <h3 className="font-semibold mb-4">Dividend History</h3>
+                      {dividendHistory.length > 0 ? (
+                        <div className="overflow-x-auto rounded-md border">
+                          <table className="w-full text-sm text-left">
+                            <thead className="bg-muted text-muted-foreground text-xs uppercase">
+                              <tr>
+                                <th className="px-4 py-3 font-medium">Fiscal Year</th>
+                                <th className="px-4 py-3 font-medium text-right">Bonus %</th>
+                                <th className="px-4 py-3 font-medium text-right">Cash %</th>
+                                <th className="px-4 py-3 font-medium text-right">Total %</th>
+                                <th className="px-4 py-3 font-medium">Book Closure</th>
                               </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    ) : (
-                      <div className="py-8 text-center text-muted-foreground border rounded-lg bg-muted/10">
-                        {isLoading ? "Loading dividend data..." : "No dividend history found for this symbol."}
-                      </div>
-                    )}
+                            </thead>
+                            <tbody className="divide-y divide-border">
+                              {dividendHistory.map((d: any, idx: number) => (
+                                <tr key={idx} className={`transition-colors hover:bg-muted/50 ${idx % 2 === 0 ? 'bg-background' : 'bg-muted/20'}`}>
+                                  <td className="px-4 py-3 font-mono">{d.fiscalYear}</td>
+                                  <td className="px-4 py-3 text-right">{d.bonusPercent.toFixed(2)}%</td>
+                                  <td className="px-4 py-3 text-right">{d.cashPercent.toFixed(2)}%</td>
+                                  <td className="px-4 py-3 text-right font-semibold text-primary">{d.totalPercent.toFixed(2)}%</td>
+                                  <td className="px-4 py-3 text-muted-foreground">{d.bookClosureDateAD || d.bookClosureDateBS || 'N/A'}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      ) : (
+                        <div className="py-8 text-center text-muted-foreground border rounded-lg bg-muted/10">
+                          {isLoading ? "Loading dividend data..." : "No dividend history found for this symbol."}
+                        </div>
+                      )}
+                    </div>
                   </TabsContent>
 
                   {/* Manage / Fallback tab (inline) */}
