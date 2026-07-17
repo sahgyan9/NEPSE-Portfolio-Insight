@@ -24,7 +24,6 @@ import {
     refreshDividendAnnouncements,
     PortfolioDividendsResponse,
 } from '@/services/receivedDividendsApi';
-import { STORAGE_KEYS } from '@/lib/constants';
 import { fetchStockData, getCachedStockData } from '@/services/sharebazaarApi';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
 import {
@@ -53,7 +52,6 @@ interface DividendRow {
 }
 
 const DividendsPage = () => {
-    const [apiKey, setApiKey] = useState('');
     const [rows, setRows] = useState<DividendRow[]>([]);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [editDraft, setEditDraft] = useState<DividendRow | null>(null);
@@ -84,9 +82,6 @@ const DividendsPage = () => {
     });
 
     useEffect(() => {
-        const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
-        if (savedKey) setApiKey(savedKey);
-
         const loadData = async () => {
             // Load manual entries
             const available = await isManualDividendServerAvailable();
@@ -149,11 +144,6 @@ const DividendsPage = () => {
         };
         loadLTPs();
     }, [portfolioData]);
-
-    const handleApiKeyChange = (key: string) => {
-        setApiKey(key);
-        localStorage.setItem(STORAGE_KEYS.apiKey, key);
-    };
 
     const handleRefreshAuto = async () => {
         setIsRefreshingAuto(true);
@@ -236,7 +226,7 @@ const DividendsPage = () => {
 
     return (
         <div className="min-h-screen bg-background">
-            <Header apiKey={apiKey} onApiKeyChange={handleApiKeyChange} onRefresh={handleRefreshAuto} isRefreshing={isRefreshingAuto} />
+            <Header onRefresh={handleRefreshAuto} isRefreshing={isRefreshingAuto} />
 
             <main className="container px-4 py-6 space-y-6">
                 <div className="flex items-center justify-between">

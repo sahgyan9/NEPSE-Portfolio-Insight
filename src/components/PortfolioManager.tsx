@@ -20,8 +20,9 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Plus, Minus, Database, RefreshCw, Trash2, AlertCircle } from "lucide-react";
+import { Plus, Minus, Database, RefreshCw, Trash2, AlertCircle, Upload } from "lucide-react";
 import { StockSymbolLink } from "@/components/StockSymbolLink";
+import { PortfolioImportZone } from "@/components/PortfolioImportZone";
 import {
     getHoldings,
     addStock,
@@ -205,7 +206,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
                             <>
                                 <AlertCircle className="h-4 w-4 text-yellow-500" />
                                 <span className="text-yellow-500">
-                                    Database not connected. Run: <code className="bg-muted px-1 rounded">python portfolio_db.py</code>
+                                    Database not connected. Close this and re-open the app using its launcher.
                                 </span>
                             </>
                         )}
@@ -215,13 +216,12 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
                 {!isConnected ? (
                     <div className="p-8 text-center space-y-4">
                         <AlertCircle className="h-12 w-12 mx-auto text-yellow-500" />
-                        <h3 className="text-lg font-semibold">Database Server Not Running</h3>
+                        <h3 className="text-lg font-semibold">Local services aren't running</h3>
                         <p className="text-muted-foreground max-w-md mx-auto">
-                            To manage your portfolio, start the database server by running:
+                            Your portfolio is stored on your own computer. Close the app and re-open it
+                            using its launcher — double-click <span className="font-medium text-foreground">PortfolioInsight.vbs</span>
+                            {" "}(or <span className="font-medium text-foreground">start.bat</span>) — then come back here.
                         </p>
-                        <code className="block bg-muted p-3 rounded-lg font-mono text-sm">
-                            python portfolio_db.py
-                        </code>
                         <Button onClick={fetchData} variant="outline" className="gap-2">
                             <RefreshCw className="h-4 w-4" />
                             Retry Connection
@@ -229,8 +229,12 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
                     </div>
                 ) : (
                     <Tabs defaultValue="holdings" className="w-full">
-                        <TabsList className="grid w-full grid-cols-4">
+                        <TabsList className="grid w-full grid-cols-5">
                             <TabsTrigger value="holdings">Holdings ({holdings.length})</TabsTrigger>
+                            <TabsTrigger value="import">
+                                <Upload className="h-4 w-4 mr-1" />
+                                Import
+                            </TabsTrigger>
                             <TabsTrigger value="add">
                                 <Plus className="h-4 w-4 mr-1" />
                                 Buy
@@ -300,6 +304,24 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
                                     </TableBody>
                                 </Table>
                             </div>
+                        </TabsContent>
+
+                        {/* Import CSV Tab */}
+                        <TabsContent value="import" className="space-y-4">
+                            <p className="text-sm text-muted-foreground">
+                                Import your full portfolio from a Meroshare CSV. This replaces your
+                                current holdings with the snapshot in the file.
+                            </p>
+                            <PortfolioImportZone
+                                onImported={async () => {
+                                    await fetchData();
+                                    onPortfolioChange?.();
+                                    toast({
+                                        title: "Portfolio imported",
+                                        description: "Your holdings have been updated from the CSV.",
+                                    });
+                                }}
+                            />
                         </TabsContent>
 
                         {/* Add Stock Tab */}

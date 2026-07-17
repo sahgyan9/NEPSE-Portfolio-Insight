@@ -6,12 +6,12 @@ import { PortfolioHealthScore } from "@/components/PortfolioHealthScore";
 import { SectorAllocationChart } from "@/components/SectorAllocationChart";
 import { AIChatbot } from "@/components/AIChatbot";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
-import { useState, useEffect } from "react";
+import { useApiKey } from "@/hooks/useApiKey";
+import { useEffect } from "react";
 import { toast } from "@/hooks/use-toast";
-import { STORAGE_KEYS } from "@/lib/constants";
 
 const MiscPage = () => {
-    const [apiKey, setApiKey] = useState("");
+    const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
 
     const {
         holdings,
@@ -22,24 +22,6 @@ const MiscPage = () => {
         lastUpdated,
         refetch
     } = usePortfolioAnalytics();
-
-    useEffect(() => {
-        const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
-        if (savedKey) {
-            setApiKey(savedKey);
-        }
-
-        const defaultKey = import.meta.env.VITE_GEMINI_API_KEY || "";
-        if (!savedKey && defaultKey) {
-            setApiKey(defaultKey);
-            localStorage.setItem(STORAGE_KEYS.apiKey, defaultKey);
-        }
-    }, []);
-
-    const handleApiKeyChange = (key: string) => {
-        setApiKey(key);
-        localStorage.setItem(STORAGE_KEYS.apiKey, key);
-    };
 
     const handleRefresh = async () => {
         await refetch();
@@ -64,8 +46,6 @@ const MiscPage = () => {
     return (
         <div className="min-h-screen bg-background">
             <Header
-                apiKey={apiKey}
-                onApiKeyChange={handleApiKeyChange}
                 onRefresh={handleRefresh}
                 isRefreshing={isLoading}
             />

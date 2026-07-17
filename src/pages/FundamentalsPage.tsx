@@ -30,7 +30,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
 import { calculateValuationScore } from '@/lib/valuationScoring';
-import { STORAGE_KEYS } from '@/lib/constants';
+import { useApiKey } from '@/hooks/useApiKey';
 import {
     LayoutGrid,
     List,
@@ -48,9 +48,7 @@ import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
 
 const FundamentalsPage = () => {
-    const [apiKey, setApiKey] = useState(() =>
-        localStorage.getItem(STORAGE_KEYS.apiKey) || ''
-    );
+    const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState<'score' | 'pe' | 'pb' | 'dividend' | 'gainLoss' | 'graham' | 'peg' | 'earningsYield'>('score');
@@ -130,11 +128,6 @@ const FundamentalsPage = () => {
         return result;
     }, [holdings, searchQuery, sectorFilter, sortBy, sortOrder]);
 
-    const handleApiKeyChange = (key: string) => {
-        setApiKey(key);
-        localStorage.setItem(STORAGE_KEYS.apiKey, key);
-    };
-
     const handleRefresh = async () => {
         await refetch();
         toast({
@@ -146,8 +139,6 @@ const FundamentalsPage = () => {
     return (
         <div className="min-h-screen bg-background">
             <Header
-                apiKey={apiKey}
-                onApiKeyChange={handleApiKeyChange}
                 onRefresh={handleRefresh}
                 isRefreshing={isLoading}
             />

@@ -51,7 +51,7 @@ import type {
   UploadSuccessResponse,
   QuarterRecord,
 } from '@/types/quarterly';
-import { STORAGE_KEYS } from '@/lib/constants';
+import { useApiKey } from '@/hooks/useApiKey';
 
 // ── Sector badge colours & labels ─────────────────────────────────────────────
 const getSectorStyle = (sector: string = '') => {
@@ -82,7 +82,7 @@ const KpiCard = ({ label, value, sub }: { label: string; value: string; sub?: st
 
 // ── Main Page ─────────────────────────────────────────────────────────────────
 const QuarterlyPage = () => {
-  const [apiKey, setApiKey] = useState(() => localStorage.getItem(STORAGE_KEYS.apiKey) || '');
+  const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
   const [stocks, setStocks] = useState<SymbolListItem[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const symbolParam = searchParams.get('symbol');
@@ -267,8 +267,6 @@ const QuarterlyPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header
-        apiKey={apiKey}
-        onApiKeyChange={(k) => { setApiKey(k); localStorage.setItem(STORAGE_KEYS.apiKey, k); }}
         onRefresh={() => { loadStocks(); if (selectedSymbol) loadSymbolData(selectedSymbol); }}
         isRefreshing={isLoading}
       />
@@ -668,7 +666,7 @@ const QuarterlyPage = () => {
           </div>
         </div>
       </main>
-      <Footer apiKey={apiKey} onApiKeyChange={(k) => { setApiKey(k); localStorage.setItem(STORAGE_KEYS.apiKey, k); }} />
+      <Footer apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
     </div>
   );
 };

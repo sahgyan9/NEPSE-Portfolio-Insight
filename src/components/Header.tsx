@@ -5,31 +5,48 @@ import {
   Gift,
   FileBarChart,
   Brain,
-  Menu
+  Menu,
+  TrendingUp,
+  Activity,
+  MoreHorizontal,
+  ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
 import { NewsTicker } from "./NewsTicker";
 
 interface HeaderProps {
-  apiKey: string;
-  onApiKeyChange: (key: string) => void;
   onRefresh: () => void;
   isRefreshing: boolean;
 }
 
+// Primary destinations — always visible in the bar.
+const navItems = [
+  { path: "/", label: "Home", icon: BarChart3 },
+  { path: "/quarterly", label: "Quarterly", icon: FileBarChart },
+  { path: "/dividends", label: "Dividends", icon: Gift },
+  { path: "/intelligence", label: "Intelligence", icon: Brain },
+];
+
+// Secondary destinations — grouped under "More" on desktop, listed inline on mobile.
+const moreItems = [
+  { path: "/fundamentals", label: "Fundamentals", icon: TrendingUp },
+  { path: "/market", label: "Market", icon: Activity },
+  { path: "/misc", label: "Misc", icon: MoreHorizontal },
+];
+
 export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
   const location = useLocation();
-
-  const navItems = [
-    { path: "/", label: "Home", icon: BarChart3 },
-    { path: "/quarterly", label: "Quarterly", icon: FileBarChart },
-    { path: "/dividends", label: "Dividends", icon: Gift },
-    { path: "/intelligence", label: "Intelligence", icon: Brain },
-  ];
+  const isMoreActive = moreItems.some((item) => item.path === location.pathname);
 
   return (
     <>
@@ -70,6 +87,37 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
                   </Link>
                 );
               })}
+
+              {/* Secondary destinations grouped under one menu to keep the bar lean */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant={isMoreActive ? "secondary" : "ghost"}
+                    size="sm"
+                    className={cn("gap-1", isMoreActive && "bg-primary/10 text-primary")}
+                  >
+                    More
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-48">
+                  {moreItems.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = location.pathname === item.path;
+                    return (
+                      <DropdownMenuItem key={item.path} asChild>
+                        <Link
+                          to={item.path}
+                          className={cn("gap-2 cursor-pointer", isActive && "text-primary")}
+                        >
+                          <Icon className="h-4 w-4" />
+                          {item.label}
+                        </Link>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
           </div>
 
@@ -109,7 +157,7 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
                     </div>
                   </div>
                   <nav className="flex-1 py-4 px-2 space-y-1">
-                    {navItems.map((item) => {
+                    {[...navItems, ...moreItems].map((item) => {
                       const Icon = item.icon;
                       const isActive = location.pathname === item.path;
                       return (

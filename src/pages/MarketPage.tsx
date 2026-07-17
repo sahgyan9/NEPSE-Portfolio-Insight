@@ -9,29 +9,21 @@
  * - Sector indices
  */
 
-import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { MarketContextDisplay } from '@/components/MarketContext';
 import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
-import { STORAGE_KEYS } from '@/lib/constants';
+import { useApiKey } from '@/hooks/useApiKey';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
 
 const MarketPage = () => {
-    const [apiKey, setApiKey] = useState(() =>
-        localStorage.getItem(STORAGE_KEYS.apiKey) || ''
-    );
+    const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
 
     const { holdings, summary, isLoading, refetch } = usePortfolioAnalytics();
-
-    const handleApiKeyChange = (key: string) => {
-        setApiKey(key);
-        localStorage.setItem(STORAGE_KEYS.apiKey, key);
-    };
 
     const handleRefresh = async () => {
         await refetch();
@@ -44,8 +36,6 @@ const MarketPage = () => {
     return (
         <div className="min-h-screen bg-background">
             <Header
-                apiKey={apiKey}
-                onApiKeyChange={handleApiKeyChange}
                 onRefresh={handleRefresh}
                 isRefreshing={isLoading}
             />
