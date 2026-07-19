@@ -28,6 +28,38 @@ SECTOR_VOLATILITY = {
     "Others": 0.25
 }
 
+# Authoritative symbol -> sector map (kept in sync with
+# src/data/companyRegistry.ts). Used as the PRIMARY source because the scraped
+# quarterly JSONs mislabel several scrips (e.g. CBBL/SNLI as "unknown", HRL/NTC
+# as "Others") and mutual funds have no quarterly file at all.
+SYMBOL_SECTOR = {
+    # Hydropower
+    "BHL": "Hydropower", "CHCL": "Hydropower", "SAHAS": "Hydropower",
+    "SGHC": "Hydropower", "UPPER": "Hydropower", "MEN": "Hydropower",
+    # Commercial Banks
+    "HBL": "Commercial Bank", "NABIL": "Commercial Bank", "NICA": "Commercial Bank",
+    "NIMB": "Commercial Bank", "NBL": "Commercial Bank",
+    # Microfinance
+    "CBBL": "Microfinance", "AVYAN": "Microfinance", "JBLB": "Microfinance",
+    "SKBBL": "Microfinance",
+    # Hotel / Tourism
+    "SHL": "Hotel",
+    # Life Insurance
+    "CLI": "Life Insurance", "SNLI": "Life Insurance",
+    # Non-Life Insurance / Reinsurance
+    "HRL": "Non-Life Insurance",
+    # Manufacturing & Processing
+    "HDL": "Manufacturing", "GCIL": "Manufacturing", "SARBTM": "Manufacturing",
+    "SONA": "Manufacturing", "SHIVM": "Manufacturing",
+    # Telecom
+    "NTC": "Telecom",
+    # Mutual Funds
+    "CSBY": "Mutual Fund", "CSY": "Mutual Fund", "KDBY": "Mutual Fund",
+    "MMF1": "Mutual Fund", "NBF3": "Mutual Fund", "NIBLSF": "Mutual Fund",
+    "NMBSBFE": "Mutual Fund",
+}
+
+
 def normalize_sector(sector):
     if not sector:
         return "Others"
@@ -38,10 +70,12 @@ def normalize_sector(sector):
         return "Commercial Bank"
     if "microfinance" in s or "laghubitta" in s:
         return "Microfinance"
-    if "life insurance" in s:
-        return "Life Insurance"
+    # Check non-life/reinsurance BEFORE life, since "non-life insurance"
+    # contains the substring "life insurance".
     if "non-life" in s or "non life" in s or "reinsurance" in s:
         return "Non-Life Insurance"
+    if "life insurance" in s:
+        return "Life Insurance"
     if "insurance" in s:
         return "Life Insurance" # default fallback
     if "hydro" in s:
@@ -92,10 +126,14 @@ def analyze_portfolio():
         value = h.get("quantity", 0) * h.get("avgCost", 0)
         weight = value / total_value
         
-        # Get sector from fundamentals if available, otherwise check quarterly data
-        fund = fundamentals.get(sym, {})
-        sector = fund.get("sector")
-        
+        # Sector resolution order: authoritative map -> fundamentals -> quarterly.
+        # The map wins first because scraped sources mislabel several scrips.
+        sector = SYMBOL_SECTOR.get(sym.upper())
+
+        if not sector:
+            fund = fundamentals.get(sym, {})
+            sector = fund.get("sector")
+
         if not sector:
             # Fallback to quarterly JSON sector
             q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
