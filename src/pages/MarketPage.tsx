@@ -12,6 +12,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { MarketContextDisplay } from '@/components/MarketContext';
+import { FundamentalsArchiveCard } from '@/components/FundamentalsArchiveCard';
 import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
@@ -62,19 +63,22 @@ const MarketPage = () => {
                 {/* Market Context Display */}
                 <MarketContextDisplay />
 
+                {/* All-company fundamentals archive (build history for later analysis) */}
+                <FundamentalsArchiveCard />
+
                 {/* Educational Note */}
                 <div className="mt-8 p-4 rounded-lg bg-muted/50 border">
                     <h4 className="font-semibold mb-2">📊 Understanding NEPSE Market</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                         <div>
                             <p className="font-medium text-foreground mb-1">Market Hours</p>
-                            <p>Sunday - Thursday: 11:00 AM - 3:00 PM</p>
+                            <p>Sunday - Thursday: 10:30 AM - 3:30 PM</p>
                             <p>Friday & Saturday: Closed</p>
                         </div>
                         <div>
                             <p className="font-medium text-foreground mb-1">Circuit Breakers</p>
-                            <p>Upper Circuit: +10% (max daily gain)</p>
-                            <p>Lower Circuit: -10% (max daily loss)</p>
+                            <p>Stock price limit: ±15% per day (since Apr 2026)</p>
+                            <p>Market halt: NEPSE index moves ±8% in a day</p>
                         </div>
                         <div>
                             <p className="font-medium text-foreground mb-1">Settlement</p>
