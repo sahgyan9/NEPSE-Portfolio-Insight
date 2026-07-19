@@ -1170,6 +1170,60 @@ def _warmup_nepse():
         print(f"[Warmup] All indices failed: {e}")
 
 
+REFRESH_META_PATH = os.path.join(os.path.dirname(__file__), "db", "refresh_meta.json")
+
+
+def _daily_refresh_loop():
+    """Once per calendar day (first time the server is up that day), refresh
+    portfolio news + dividend announcements in the background. Timestamp is
+    persisted in db/refresh_meta.json, so restarts don't re-trigger it."""
+    time.sleep(15)  # let Flask bind and NEPSE warmup start first
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    while True:
+        try:
+            meta = _load_json_file(REFRESH_META_PATH, {})
+            today = datetime.now().strftime("%Y-%m-%d")
+            if meta.get("lastDailyRefresh") != today:
+                print("[DailyRefresh] Running daily news + dividend refresh...")
+                portfolio = _load_json_file(PORTFOLIO_PATH, {"holdings": []})
+                symbols = sorted({h["symbol"].upper() for h in portfolio.get("holdings", [])})
+
+                ok, failed = 0, 0
+                for sym in symbols:
+                    try:
+                        res = subprocess.run(
+                            [sys.executable, "tools/scrape_sharesansar_news.py", sym],
+                            capture_output=True, text=True, cwd=project_root, timeout=60
+                        )
+                        ok += 1 if res.returncode == 0 else 0
+                        failed += 0 if res.returncode == 0 else 1
+                    except Exception as e:
+                        failed += 1
+                        print(f"[DailyRefresh] news {sym} failed: {e}")
+                    time.sleep(1)  # polite pacing between page fetches
+
+                try:
+                    subprocess.run(
+                        [sys.executable, "tools/scrape_dividends.py"],
+                        capture_output=True, text=True, cwd=project_root, timeout=300
+                    )
+                    print("[DailyRefresh] Dividend announcements refreshed")
+                except Exception as e:
+                    print(f"[DailyRefresh] dividends failed: {e}")
+
+                meta["lastDailyRefresh"] = today
+                meta["lastDailyRefreshAt"] = datetime.now().isoformat(timespec="seconds")
+                meta["newsSymbolsOk"] = ok
+                meta["newsSymbolsFailed"] = failed
+                os.makedirs(os.path.dirname(REFRESH_META_PATH), exist_ok=True)
+                with open(REFRESH_META_PATH, "w", encoding="utf-8") as f:
+                    json.dump(meta, f, indent=2)
+                print(f"[DailyRefresh] Done — news for {ok} symbols ({failed} failed)")
+        except Exception:
+            print(f"[DailyRefresh] error: {traceback.format_exc()}")
+        time.sleep(3600)  # re-check hourly (catches date rollover on long-running server)
+
+
 if __name__ == '__main__':
     print("=" * 60)
     print("NEPSE Data Server")
@@ -1191,5 +1245,9 @@ if __name__ == '__main__':
     # Kick off warmup in background so first browser request finds cached data
     warmup_thread = threading.Thread(target=_warmup_nepse, daemon=True)
     warmup_thread.start()
+
+    # Daily auto-refresh of portfolio news + dividend announcements
+    daily_refresh_thread = threading.Thread(target=_daily_refresh_loop, daemon=True)
+    daily_refresh_thread.start()
 
     app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
