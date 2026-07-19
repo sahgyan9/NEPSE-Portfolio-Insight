@@ -22,6 +22,44 @@ import { getManualDividends, isManualDividendServerAvailable, ManualDividendEntr
 import { companyRegistry, fundamentalData, fallbackPrices } from '@/data/companyRegistry';
 
 /**
+ * Last-known-good price cache (localStorage).
+ *
+ * When the ShareBazaar API fails or returns only some symbols, we used to
+ * fall back to the STATIC fallbackPrices table (stale) or 0 — which made the
+ * portfolio's Current Value visibly collapse until the API recovered.
+ * Instead we remember every live price we ever successfully fetched and use
+ * that as the first fallback, so a flaky API just means slightly stale
+ * prices rather than a wrong total.
+ */
+const LAST_KNOWN_PRICES_KEY = 'pi_last_known_prices';
+
+const loadLastKnownPrices = (): Record<string, number> => {
+    try {
+        return JSON.parse(localStorage.getItem(LAST_KNOWN_PRICES_KEY) || '{}');
+    } catch {
+        return {};
+    }
+};
+
+const saveLastKnownPrices = (stockData: Map<string, ShareBazaarResponse>) => {
+    try {
+        const prices = loadLastKnownPrices();
+        let changed = false;
+        stockData.forEach((data, symbol) => {
+            if (data?.ltp && data.ltp > 0) {
+                prices[symbol] = data.ltp;
+                changed = true;
+            }
+        });
+        if (changed) {
+            localStorage.setItem(LAST_KNOWN_PRICES_KEY, JSON.stringify(prices));
+        }
+    } catch {
+        // best-effort cache; ignore quota/serialization errors
+    }
+};
+
+/**
  * Manual Dividend Entry from DividendsPage
  */
 interface ManualDividendRow {
@@ -191,6 +229,7 @@ export const useLivePortfolio = (): LivePortfolioData => {
         // Use passed manual dividend data (fetched asynchronously)
         const dividendMap = manualDividends || new Map<string, ManualDividendRow>();
         const funds = dynamicFundamentals || {};
+        const lastKnown = loadLastKnownPrices();
 
         return portfolioData.map((item, index) => {
             const apiData = stockData.get(item.scrip);
@@ -203,8 +242,12 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 ? apiData.company_name
                 : registryInfo.fullName;
 
-            // Use API ltp if available, otherwise fallback to cached prices
-            const currentPrice = apiData?.ltp || fallbackPrices[item.scrip] || 0;
+            // Price priority: live API ltp -> last successfully fetched live
+            // price (localStorage) -> static fallback table -> 0
+            const currentPrice = apiData?.ltp
+                || lastKnown[item.scrip]
+                || fallbackPrices[item.scrip]
+                || 0;
 
             // Sector always comes from our registry (API doesn't provide sector)
             const sector = registryInfo.sector;
@@ -340,6 +383,10 @@ export const useLivePortfolio = (): LivePortfolioData => {
             console.log('[useLivePortfolio] Fetching prices for', symbols.length, 'symbols');
             const stockData = await getCachedStockData(symbols);
             console.log('[useLivePortfolio] Received data for', stockData.size, 'symbols');
+
+            // Remember every live price we got, so future API hiccups fall
+            // back to these instead of stale static prices / zero.
+            saveLastKnownPrices(stockData);
 
             // Fetch manual dividend data from file storage (or localStorage fallback)
             const manualDividends = await getManualDividendData();

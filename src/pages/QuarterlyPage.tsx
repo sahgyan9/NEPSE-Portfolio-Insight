@@ -144,19 +144,34 @@ const QuarterlyPage = () => {
         const holdingsRes = await fetch(import.meta.env.DEV ? '/api/portfolio-db/api/holdings' : 'http://localhost:5001/api/holdings');
         const watchlistRes = await fetch(import.meta.env.DEV ? '/api/portfolio-db/api/watchlist' : 'http://localhost:5001/api/watchlist');
         
-        let allSyms: string[] = [];
+        // Track symbol -> company name so we can skip funds/bonds, which never
+        // publish quarterly EPS/financials and would otherwise sit here forever.
+        const symName = new Map<string, string>();
+        const pushSyms = (items: any[], symKey: string, nameKey: string) => {
+          for (const it of items || []) {
+            const sym = it?.[symKey];
+            if (sym) symName.set(sym, it?.[nameKey] || '');
+          }
+        };
         if (holdingsRes.ok) {
           const data = await holdingsRes.json();
-          allSyms.push(...(data.holdings || []).map((h: any) => h?.symbol).filter(Boolean));
+          pushSyms(data.holdings, 'symbol', 'company');
         }
         if (watchlistRes.ok) {
           const data = await watchlistRes.json();
-          allSyms.push(...(data.watchlist || []).map((w: any) => w?.symbol).filter(Boolean));
+          pushSyms(data.watchlist, 'symbol', 'company');
         }
-        
-        const uniqueSyms = Array.from(new Set(allSyms));
+
+        // Mutual funds, schemes and bonds/debentures have no quarterly reports.
+        // Detect by known symbols plus name keywords (catches future funds too).
+        const KNOWN_NON_QUARTERLY = new Set(['CSBY', 'KDBY', 'MMF1', 'NBF3', 'NIBLSF', 'NMBSBFE']);
+        const FUND_BOND_NAME = /\b(fund|yojana|kosh|scheme|balanced|yield|bachat|samriddhi|debenture|bond)\b/i;
+        const isNonQuarterly = (sym: string) =>
+          KNOWN_NON_QUARTERLY.has(sym) || FUND_BOND_NAME.test(symName.get(sym) || '');
+
+        const uniqueSyms = Array.from(symName.keys());
         const fetchedSyms = new Set(stocks.filter(s => s && s.symbol).map(s => s.symbol));
-        const missing = uniqueSyms.filter(sym => !fetchedSyms.has(sym));
+        const missing = uniqueSyms.filter(sym => !fetchedSyms.has(sym) && !isNonQuarterly(sym));
         setUnfetchedSymbols(missing);
       } catch (e) {
         console.error("Failed to check unfetched symbols", e);

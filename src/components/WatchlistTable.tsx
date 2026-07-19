@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { ArrowUpDown, Info, Loader2, Plus, Trash2, TrendingDown, TrendingUp } from "lucide-react";
+import { ArrowUpDown, Info, Loader2, Plus, RefreshCw, Trash2, TrendingDown, TrendingUp } from "lucide-react";
 import { TableCell, TableHead, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -30,6 +30,7 @@ export const WatchlistTable = () => {
   const [isLoadingDB, setIsLoadingDB] = useState(true);
   const [newSymbol, setNewSymbol] = useState("");
   const [isAdding, setIsAdding] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   // Fetch watchlist from DB
   const fetchWatchlist = async () => {
@@ -83,6 +84,45 @@ export const WatchlistTable = () => {
     
     fetchFundamentals();
   }, [watchlist]);
+
+  // Re-scrape fundamentals for watchlist symbols (direct NepseAlpha fetch,
+  // no API key) then reload the table.
+  const handleRefreshFundamentals = async () => {
+    if (watchlist.length === 0 || isRefreshing) return;
+    setIsRefreshing(true);
+    try {
+      const url = import.meta.env.DEV
+        ? '/api/portfolio-db/api/fundamentals/refresh'
+        : 'http://localhost:5001/api/fundamentals/refresh';
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ symbols: watchlist.map(w => w.symbol) })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        toast({ title: "Refreshed", description: "Watchlist fundamentals updated from NepseAlpha." });
+        await fetchWatchlist(); // retriggers the fundamentals fetch effect
+      } else if (res.ok && data.partial) {
+        toast({
+          title: "Partially refreshed",
+          description: `Updated most symbols; failed: ${(data.failed_symbols || []).join(", ") || "unknown"}. NepseAlpha may be rate-limiting — try again in a minute.`,
+        });
+        await fetchWatchlist(); // still show what succeeded
+      } else {
+        toast({
+          title: "Refresh failed",
+          description: data.error
+            || (data.failed_symbols?.length ? `Failed: ${data.failed_symbols.join(", ")}. NepseAlpha may be rate-limiting — try again in a minute.` : "Could not refresh fundamentals. Is the database server running?"),
+          variant: "destructive"
+        });
+      }
+    } catch (e) {
+      toast({ title: "Refresh failed", description: "Could not reach the database server.", variant: "destructive" });
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
 
   const handleAddSymbol = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -153,19 +193,37 @@ export const WatchlistTable = () => {
           {isLoadingDB && <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />}
         </h3>
         
-        <form onSubmit={handleAddSymbol} className="flex gap-2 w-full sm:w-auto">
-          <Input 
-            placeholder="Symbol (e.g. NICA)" 
-            value={newSymbol}
-            onChange={e => setNewSymbol(e.target.value)}
-            className="w-full sm:w-48 h-9 text-transform-uppercase"
-            maxLength={10}
-          />
-          <Button type="submit" size="sm" disabled={isAdding || !newSymbol.trim()} className="shrink-0 h-9">
-            {isAdding ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4 mr-1" />}
-            Add
-          </Button>
-        </form>
+        <div className="flex gap-2 w-full sm:w-auto items-center">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={handleRefreshFundamentals}
+                disabled={isRefreshing || watchlist.length === 0}
+                className="shrink-0 h-9"
+              >
+                <RefreshCw className={cn("h-4 w-4", isRefreshing && "animate-spin")} />
+                <span className="hidden sm:inline ml-1">{isRefreshing ? "Refreshing..." : "Refresh"}</span>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>Re-fetch EPS, Book Value, P/E, P/B for all watchlist symbols</TooltipContent>
+          </Tooltip>
+          <form onSubmit={handleAddSymbol} className="flex gap-2 w-full sm:w-auto">
+            <Input
+              placeholder="Symbol (e.g. NICA)"
+              value={newSymbol}
+              onChange={e => setNewSymbol(e.target.value)}
+              className="w-full sm:w-48 h-9 text-transform-uppercase"
+              maxLength={10}
+            />
+            <Button type="submit" size="sm" disabled={isAdding || !newSymbol.trim()} className="shrink-0 h-9">
+              {isAdding ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4 mr-1" />}
+              Add
+            </Button>
+          </form>
+        </div>
       </div>
       
       <div className="max-h-[500px] overflow-auto scrollbar-thin relative">
