@@ -1,15 +1,15 @@
 {
   "totalValue": 386290.02749999997,
   "holdingCount": 26,
-  "volatilityScore": 0.252,
+  "volatilityScore": 0.214,
   "sectorExposure": [
-    {
-      "sector": "Others",
-      "weight": 0.3072
-    },
     {
       "sector": "Commercial Bank",
       "weight": 0.2334
+    },
+    {
+      "sector": "Mutual Fund",
+      "weight": 0.2058
     },
     {
       "sector": "Hydropower",
@@ -21,11 +21,11 @@
     },
     {
       "sector": "Microfinance",
-      "weight": 0.054
+      "weight": 0.0984
     },
     {
-      "sector": "Unknown",
-      "weight": 0.0524
+      "sector": "Telecom",
+      "weight": 0.0905
     },
     {
       "sector": "Hotels",
@@ -33,7 +33,11 @@
     },
     {
       "sector": "Life Insurance",
-      "weight": 0.0071
+      "weight": 0.0151
+    },
+    {
+      "sector": "Non-Life Insurance",
+      "weight": 0.0109
     }
   ],
   "suggestion": "BALANCED: Your portfolio has a healthy mix of defensive and growth variance.",
