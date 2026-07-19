@@ -33,3 +33,8 @@ __pycache__/
 db/.pids
 db/portfolio_health.json
 db/portfolio_optimization.json
+
+# Personal portfolio data — NEVER commit real holdings.
+# Ship db/portfolio.example.json as the empty template instead.
+db/portfolio.json
+db/refresh_meta.json
