@@ -229,5 +229,38 @@
     "publicFloat": 31.0,
     "high52": 535.0,
     "low52": 415.83
+  },
+  "NBL": {
+    "eps": 25.74,
+    "bookValue": 272.79,
+    "peRatio": 10.36,
+    "pbRatio": 0.98,
+    "sharesOutstanding": 146940229,
+    "promoterHolding": 51.0,
+    "publicFloat": 49.0,
+    "high52": 307.98,
+    "low52": 230.0
+  },
+  "NRN": {
+    "eps": 29.34,
+    "bookValue": 172.44,
+    "peRatio": 49.85,
+    "pbRatio": 8.48,
+    "sharesOutstanding": 17981212,
+    "promoterHolding": 0.0,
+    "publicFloat": 100.0,
+    "high52": 1711.4,
+    "low52": 1235.0
+  },
+  "SKBBL": {
+    "eps": 16.58,
+    "bookValue": 218.4,
+    "peRatio": 46.07,
+    "pbRatio": 3.5,
+    "sharesOutstanding": 49271701,
+    "promoterHolding": 70.0,
+    "publicFloat": 30.0,
+    "high52": 865.38,
+    "low52": 711.6
   }
 }
