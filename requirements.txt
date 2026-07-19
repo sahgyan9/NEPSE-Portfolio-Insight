@@ -9,5 +9,10 @@ lxml==6.1.1
 pdfplumber==0.11.10
 httpx==0.28.1
 
+# Chrome TLS impersonation — lets the NepseAlpha scrapers get past Cloudflare's
+# bot-check (plain httpx/requests get 403'd). The scrapers fall back to httpx
+# if this isn't installed, but installing it is strongly recommended.
+curl_cffi==0.15.0
+
 # Unofficial NEPSE API (installed from source)
 nepse @ git+https://github.com/basic-bgnr/NepseUnofficialApi.git
