@@ -34,6 +34,70 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "db", "portfolio.json")
 last_known_value = 0
 auto_record_interval = 3600  # Record every hour (in seconds)
 
+# ── All-company fundamentals archive (quarterly) ──────────────────────────────
+ARCHIVE_META_PATH = os.path.join(os.path.dirname(__file__), "db",
+                                 "fundamentals_archive", "_meta.json")
+ARCHIVE_SCRIPT = os.path.join(os.path.dirname(__file__), "tools",
+                              "archive_fundamentals.py")
+ARCHIVE_MIN_DAYS = 85           # ~one quarter; re-collect when older than this
+_archive_running = threading.Lock()  # prevent overlapping collector runs
+
+
+def _archive_last_run():
+    """Return datetime of the last archive collection, or None."""
+    try:
+        with open(ARCHIVE_META_PATH, "r", encoding="utf-8") as f:
+            ts = json.load(f).get("last_run")
+        return datetime.fromisoformat(ts) if ts else None
+    except (FileNotFoundError, json.JSONDecodeError, ValueError, TypeError):
+        return None
+
+
+def _run_archive_collector():
+    """Run the full-market fundamentals collector as a subprocess (blocking).
+
+    Guarded by a lock so a scheduled run and a manual trigger can't overlap.
+    Returns (ok: bool, message: str).
+    """
+    if not _archive_running.acquire(blocking=False):
+        return False, "An archive collection is already in progress."
+    try:
+        print("[archive] Starting full-market fundamentals collection...")
+        res = subprocess.run(
+            [sys.executable, ARCHIVE_SCRIPT],
+            capture_output=True, text=True, timeout=3600,
+            cwd=os.path.dirname(__file__),
+        )
+        tail = (res.stdout or "").strip().splitlines()[-1:] or [""]
+        print(f"[archive] Done (rc={res.returncode}): {tail[0]}")
+        return res.returncode in (0, 2), tail[0]
+    except subprocess.TimeoutExpired:
+        return False, "Archive collection timed out."
+    except Exception as e:
+        return False, str(e)
+    finally:
+        _archive_running.release()
+
+
+def _archive_scheduler_loop():
+    """Background thread: run the collector once per quarter (when the app is on)."""
+    # small startup delay so the server is up first
+    time.sleep(30)
+    while True:
+        try:
+            last = _archive_last_run()
+            due = last is None or (datetime.now() - last).days >= ARCHIVE_MIN_DAYS
+            if due:
+                print("[archive] Quarterly collection is due — running now.")
+                _run_archive_collector()
+            else:
+                days = (datetime.now() - last).days
+                print(f"[archive] Last run {days}d ago; next in ~{ARCHIVE_MIN_DAYS - days}d.")
+        except Exception as e:
+            print(f"[archive] scheduler error: {e}")
+        # check once a day
+        time.sleep(24 * 3600)
+
 
 def load_db():
     """Load the database from JSON file."""
@@ -569,10 +633,27 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 "gainLoss": round(current_value - total_invested, 2),
                 "gainLossPercent": round((current_value - total_invested) / total_invested * 100, 2) if total_invested > 0 else 0
             })
-        
+
+        elif path == "/api/fundamentals/archive/status":
+            # Report archive freshness so the UI can show "last collected" and
+            # whether a collection is currently running.
+            last = _archive_last_run()
+            meta = {}
+            try:
+                with open(ARCHIVE_META_PATH, "r", encoding="utf-8") as f:
+                    meta = json.load(f)
+            except (FileNotFoundError, json.JSONDecodeError):
+                pass
+            self._send_json({
+                "last_run": last.isoformat() if last else None,
+                "days_since": (datetime.now() - last).days if last else None,
+                "running": _archive_running.locked(),
+                "last_stats": meta.get("last_stats"),
+            })
+
         else:
             self._send_json({"error": "Not found"}, 404)
-    
+
     def do_POST(self):
         content_length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(content_length).decode("utf-8")
@@ -585,7 +666,57 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         
         parsed = urlparse(self.path)
         path = parsed.path
-        
+
+        if path == "/api/fundamentals/archive":
+            # Manually trigger a full-market fundamentals archive collection.
+            # Runs in the background so the request returns immediately; the
+            # collection takes several minutes for ~250 companies.
+            if _archive_running.locked():
+                self._send_json({"success": False,
+                                 "status": "running",
+                                 "message": "A collection is already in progress."}, 202)
+                return
+            threading.Thread(target=_run_archive_collector, daemon=True).start()
+            self._send_json({"success": True, "status": "started",
+                             "message": "Full-market fundamentals collection started in the background."})
+            return
+
+        if path == "/api/fundamentals/refresh":
+            # Re-scrape fundamentals for the given symbols (or holdings +
+            # watchlist when none given) via the direct NepseAlpha scraper
+            # (tools/scrape_fundamentals_direct.py — no API key needed).
+            symbols = [s.upper() for s in (data.get("symbols") or []) if s]
+            script = os.path.join(os.path.dirname(__file__), "tools",
+                                  "scrape_fundamentals_direct.py")
+            cmd = [sys.executable, script] + symbols
+            try:
+                res = subprocess.run(cmd, capture_output=True, text=True,
+                                     timeout=300,
+                                     cwd=os.path.dirname(__file__))
+                stdout = res.stdout or ""
+                # The scraper prints "Failed symbols: A, B" when some fail
+                # (returncode 2). Partial success should still refresh the UI.
+                failed = []
+                m = re.search(r"Failed symbols:\s*(.+)", stdout)
+                if m:
+                    failed = [s.strip() for s in m.group(1).split(",") if s.strip()]
+                ok = res.returncode == 0
+                partial = res.returncode == 2 and (not symbols or len(failed) < len(symbols))
+                self._send_json({
+                    "success": ok,
+                    "partial": partial,
+                    "failed_symbols": failed,
+                    "returncode": res.returncode,
+                    "output": stdout[-2000:],
+                    "error": (res.stderr or "")[-500:] if not (ok or partial) else "",
+                }, 200 if (ok or partial) else 502)
+            except subprocess.TimeoutExpired:
+                self._send_json({"success": False,
+                                 "error": "Refresh timed out after 300s"}, 504)
+            except Exception as e:
+                self._send_json({"success": False, "error": str(e)}, 500)
+            return
+
         if path == "/api/holdings/add":
             # Add new stock or update existing
             db = load_db()
@@ -878,7 +1009,13 @@ def run_server(port=5001):
     db["valueHistory"] = cleaned
     save_db(db)
     print(f"Cleaned up {original_count - len(cleaned)} invalid entries. {len(cleaned)} entries remaining.")
-    
+
+    # Start the quarterly fundamentals-archive scheduler in the background.
+    # It self-throttles via db/fundamentals_archive/_meta.json, so it only
+    # actually collects when a quarter (~85 days) has passed.
+    threading.Thread(target=_archive_scheduler_loop, daemon=True).start()
+    print("Quarterly fundamentals-archive scheduler started.")
+
     server = HTTPServer(("localhost", port), PortfolioHandler)
     print(f"""
 +------------------------------------------------------------+

@@ -200,20 +200,22 @@ class NepseDataFetcher:
             top_gainers = await asyncio.wait_for(self._nepse.getTopGainers(), timeout=3.0)
             top_losers = await asyncio.wait_for(self._nepse.getTopLosers(), timeout=3.0)
             
+            # NEPSE's top-gainers/losers payload uses 'ltp' (not
+            # 'lastTradedPrice' like some other endpoints) — accept both.
             gainers = []
             for stock in (top_gainers or [])[:5]:
                 gainers.append({
                     'symbol': stock.get('symbol', ''),
-                    'ltp': stock.get('lastTradedPrice', 0),
+                    'ltp': stock.get('ltp', stock.get('lastTradedPrice', 0)),
                     'change': stock.get('pointChange', 0),
                     'change_pct': stock.get('percentageChange', 0)
                 })
-            
+
             losers = []
             for stock in (top_losers or [])[:5]:
                 losers.append({
                     'symbol': stock.get('symbol', ''),
-                    'ltp': stock.get('lastTradedPrice', 0),
+                    'ltp': stock.get('ltp', stock.get('lastTradedPrice', 0)),
                     'change': stock.get('pointChange', 0),
                     'change_pct': stock.get('percentageChange', 0)
                 })
