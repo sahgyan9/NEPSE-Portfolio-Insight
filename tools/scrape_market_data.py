@@ -4,12 +4,14 @@ import json
 import re
 import subprocess
 import argparse
+import httpx
 
 # Setup paths
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(PROJECT_ROOT, "db", "fundamentals.json")
 PORTFOLIO_PATH = os.path.join(PROJECT_ROOT, "db", "portfolio.json")
 ENV_PATH = os.path.join(PROJECT_ROOT, ".env")
+
 
 def get_api_keys():
     """Load API keys from .env and return a list of [primary, secondary]."""
@@ -36,8 +38,54 @@ def get_api_keys():
         keys.append(secondary)
     return keys
 
-def scrape_market_data_for_symbol(symbol, api_key):
-    """Scrape market data for a symbol using a specific Firecrawl API key."""
+
+def fetch_market_data_hamroshare(symbol: str) -> dict:
+    """Fetch 52w high/low, shares outstanding, and promoter/public float from HamroShare RSC (~250ms)."""
+    symbol = symbol.upper().strip()
+    url = f"https://hamroshare.com.np/company/{symbol}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) PortfolioInsight/1.0",
+        "RSC": "1"
+    }
+    try:
+        resp = httpx.get(url, headers=headers, timeout=8.0, follow_redirects=True)
+        if resp.status_code != 200:
+            return None
+        text = resp.text
+
+        def _search_num(pattern, default=None):
+            m = re.search(pattern, text)
+            if m:
+                try:
+                    return float(m.group(1))
+                except (ValueError, TypeError):
+                    pass
+            return default
+
+        high_52 = _search_num(r'"fiftyTwoWeekHigh":([-0-9.]+)')
+        low_52 = _search_num(r'"fiftyTwoWeekLow":([-0-9.]+)')
+        shares_out = _search_num(r'"stockListedShares":([-0-9.]+)') or _search_num(r'"shares":([-0-9.]+)')
+        promoter_pct = _search_num(r'"promoterPercentage":([-0-9.]+)')
+        public_pct = _search_num(r'"publicPercentage":([-0-9.]+)')
+
+        data = {
+            "sharesOutstanding": int(shares_out) if shares_out is not None else None,
+            "promoterHolding": round(promoter_pct, 2) if promoter_pct is not None else None,
+            "publicFloat": round(public_pct, 2) if public_pct is not None else None,
+            "high52": high_52,
+            "low52": low_52,
+            "avgVolume120d": None
+        }
+        if any(v is not None for v in [data["high52"], data["low52"], data["sharesOutstanding"]]):
+            return data
+        return None
+    except Exception as e:
+        print(f"[HamroShare] Fetch error for {symbol}: {e}")
+        return None
+
+
+def scrape_market_data_firecrawl(symbol: str, api_key: str) -> dict:
+    """Scrape market data for a symbol using Firecrawl CLI fallback."""
     symbol = symbol.upper()
     url = f"https://nepsealpha.com/stocks/{symbol}/info"
     out_file = os.path.join(PROJECT_ROOT, ".tmp", f"{symbol}_market_data.md")
@@ -57,43 +105,53 @@ def scrape_market_data_for_symbol(symbol, api_key):
         "If a value is not found, use null."
     )
     
-    # Run command with key in environment
     env = os.environ.copy()
     env["FIRECRAWL_API_KEY"] = api_key
-    
-    print(f"Scraping {symbol} via Firecrawl (Key: ...{api_key[-6:]})...")
-    
     cmd = f'npx firecrawl-cli scrape "{url}" -Q "{prompt}" -o "{out_file}"'
     res = subprocess.run(cmd, shell=True, env=env, capture_output=True, text=True)
     
-    if res.returncode != 0:
-        print(f"Firecrawl CLI failed with exit code {res.returncode}")
-        print(f"Error: {res.stderr}")
-        return None
-        
-    if not os.path.exists(out_file):
-        print(f"Output file {out_file} was not generated.")
+    if res.returncode != 0 or not os.path.exists(out_file):
         return None
         
     with open(out_file, "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Extract JSON object from markdown output
     json_match = re.search(r'\{.*?\}', content, re.DOTALL)
     if not json_match:
-        print(f"Could not locate JSON block in scraped output.")
-        print(f"Content: {content[:300]}")
         return None
         
     try:
-        data = json.loads(json_match.group(0))
-        return data
-    except Exception as e:
-        print(f"Failed to parse JSON content: {e}")
+        return json.loads(json_match.group(0))
+    except Exception:
         return None
 
-def update_fundamentals_db(symbol, data):
-    """Merge scraped data into fundamentals.json."""
+
+def fetch_market_data(symbol: str, source: str = "auto") -> dict:
+    """Fetch market data using selected source hierarchy."""
+    symbol = symbol.upper().strip()
+    
+    # 1. HamroShare primary
+    if source in ("auto", "hamroshare"):
+        data = fetch_market_data_hamroshare(symbol)
+        if data:
+            return data
+            
+    # 2. Firecrawl fallback
+    if source in ("auto", "firecrawl"):
+        api_keys = get_api_keys()
+        for api_key in api_keys:
+            try:
+                data = scrape_market_data_firecrawl(symbol, api_key)
+                if data:
+                    return data
+            except Exception:
+                pass
+                
+    return None
+
+
+def update_fundamentals_db(symbol: str, data: dict):
+    """Merge scraped data into fundamentals.json non-destructively."""
     db = {}
     if os.path.exists(DB_PATH):
         try:
@@ -105,7 +163,7 @@ def update_fundamentals_db(symbol, data):
     symbol = symbol.upper()
     existing = db.setdefault(symbol, {})
     
-    # Merge values
+    # Non-destructive merge
     for k in ["sharesOutstanding", "promoterHolding", "publicFloat", "avgVolume120d", "high52", "low52"]:
         if k in data and data[k] is not None:
             existing[k] = data[k]
@@ -114,14 +172,13 @@ def update_fundamentals_db(symbol, data):
         json.dump(db, f, indent=2, ensure_ascii=False)
     print(f"Successfully saved market data for {symbol} to fundamentals.json")
 
-def scrape_all():
-    # Load symbols from portfolio
+
+def scrape_all(source: str = "auto"):
     symbols = []
     if os.path.exists(PORTFOLIO_PATH):
         try:
             with open(PORTFOLIO_PATH, "r", encoding="utf-8") as f:
                 portfolio = json.load(f)
-                # Exclude Mutual Funds
                 for h in portfolio.get("holdings", []):
                     sector = h.get("sector", "")
                     if "fund" not in sector.lower() and h["symbol"] not in ["CSBY", "KDBY", "MMF1", "NBF3", "NIBLSF", "NMBSBFE"]:
@@ -129,45 +186,32 @@ def scrape_all():
         except Exception as e:
             print(f"Error loading portfolio symbols: {e}")
             
-    symbols = list(set(symbols))
+    symbols = sorted(list(set(symbols)))
     if not symbols:
         print("No active corporate symbols found in portfolio.")
         return
         
-    api_keys = get_api_keys()
-    print(f"Found {len(symbols)} corporate symbols to scrape.")
-    print(f"Available Firecrawl API keys: {len(api_keys)}")
-    
+    print(f"Found {len(symbols)} corporate symbols to process (Source: {source}).")
     for symbol in symbols:
-        success = False
-        for api_key in api_keys:
-            try:
-                data = scrape_market_data_for_symbol(symbol, api_key)
-                if data:
-                    update_fundamentals_db(symbol, data)
-                    success = True
-                    break # Success, move to next symbol
-            except Exception as e:
-                print(f"Error scraping {symbol} with key ...{api_key[-6:]}: {e}")
-                
-        if not success:
-            print(f"Failed to scrape market data for {symbol} with all available keys.")
+        data = fetch_market_data(symbol, source=source)
+        if data:
+            update_fundamentals_db(symbol, data)
+        else:
+            print(f"Failed to fetch market data for {symbol}")
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("symbol", nargs="?", default="all")
+    parser = argparse.ArgumentParser(description="Scrape market data for symbols")
+    parser.add_argument("symbol", nargs="?", default="all", help="Stock symbol or 'all'")
+    parser.add_argument("--source", choices=["auto", "hamroshare", "firecrawl"], default="auto",
+                        help="Data source (default: auto)")
     args = parser.parse_args()
     
     if args.symbol.lower() == "all":
-        scrape_all()
+        scrape_all(source=args.source)
     else:
-        api_keys = get_api_keys()
-        success = False
-        for api_key in api_keys:
-            data = scrape_market_data_for_symbol(args.symbol, api_key)
-            if data:
-                update_fundamentals_db(args.symbol, data)
-                success = True
-                break
-        if not success:
-            print(f"Failed to scrape {args.symbol}")
+        data = fetch_market_data(args.symbol, source=args.source)
+        if data:
+            update_fundamentals_db(args.symbol, data)
+        else:
+            print(f"Failed to fetch {args.symbol}")
