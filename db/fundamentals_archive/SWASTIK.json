@@ -1,0 +1,49 @@
+{
+  "symbol": "SWASTIK",
+  "full_name": "Swastik Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 2080,
+      "pe_ratio": 97.52,
+      "pb_ratio": 13.09,
+      "graham_number": 276.18,
+      "discount_from_graham": 6.5313,
+      "eps_reported": 21.33,
+      "eps_ttm": 21.33,
+      "book_value": 158.94,
+      "roe": 13.42,
+      "roa": 1.63,
+      "net_margin_ttm": 12.67,
+      "asset_turnover_ttm": 12.83,
+      "net_profit_ttm": 12317573.17,
+      "revenue_ttm": 97193548.87,
+      "shares_outstanding": 577500,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 60,
+      "public_float": 40,
+      "week52_high": 3270.1,
+      "week52_low": 407.4,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 390,
+      "trade_turnover": 792090,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

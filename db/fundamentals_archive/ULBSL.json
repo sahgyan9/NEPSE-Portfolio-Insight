@@ -1,0 +1,49 @@
+{
+  "symbol": "ULBSL",
+  "full_name": "Upakar Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 2792,
+      "pe_ratio": 69.71,
+      "pb_ratio": 10.08,
+      "graham_number": 499.6,
+      "discount_from_graham": 4.5884,
+      "eps_reported": 38.5,
+      "eps_ttm": 40.05,
+      "book_value": 276.96,
+      "roe": 15.91,
+      "roa": 1.37,
+      "net_margin_ttm": 15.45,
+      "asset_turnover_ttm": 8.87,
+      "net_profit_ttm": 42517020,
+      "revenue_ttm": 275187000,
+      "shares_outstanding": 1061480,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 64,
+      "public_float": 36,
+      "week52_high": 4325,
+      "week52_low": 2760,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 429,
+      "trade_turnover": 1200127.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

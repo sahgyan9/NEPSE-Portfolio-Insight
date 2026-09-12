@@ -1,0 +1,49 @@
+{
+  "symbol": "IGI",
+  "full_name": "IGI Prudential Insurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 442.8,
+      "pe_ratio": 133.72,
+      "pb_ratio": 2.42,
+      "graham_number": 116.68,
+      "discount_from_graham": 2.7951,
+      "eps_reported": 0.02,
+      "eps_ttm": 3.31,
+      "book_value": 182.72,
+      "roe": 1.81,
+      "roa": 0.76,
+      "net_margin_ttm": 2.47,
+      "asset_turnover_ttm": 30.8,
+      "net_profit_ttm": 100310370,
+      "revenue_ttm": 4063375220,
+      "shares_outstanding": 30293350,
+      "dividend_payout_ratio": 1.51,
+      "dividend_to_ltp": 0.0113,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 580.29,
+      "week52_low": 395,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2536,
+      "trade_turnover": 1118376,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

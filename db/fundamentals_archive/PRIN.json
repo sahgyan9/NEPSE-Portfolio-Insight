@@ -1,0 +1,49 @@
+{
+  "symbol": "PRIN",
+  "full_name": "Prabhu Insurance Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 679,
+      "pe_ratio": 56.24,
+      "pb_ratio": 3.52,
+      "graham_number": 228.84,
+      "discount_from_graham": 1.9672,
+      "eps_reported": 16.58,
+      "eps_ttm": 12.07,
+      "book_value": 192.78,
+      "roe": 6.48,
+      "roa": 3.04,
+      "net_margin_ttm": 12.87,
+      "asset_turnover_ttm": 23.58,
+      "net_profit_ttm": 223225490,
+      "revenue_ttm": 1734365790,
+      "shares_outstanding": 18489393,
+      "dividend_payout_ratio": 0.7455,
+      "dividend_to_ltp": 0.0133,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 774.26,
+      "week52_low": 586.84,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4698,
+      "trade_turnover": 3178666.8,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

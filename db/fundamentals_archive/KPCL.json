@@ -1,0 +1,49 @@
+{
+  "symbol": "KPCL",
+  "full_name": "Kalika power Company Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 472.9,
+      "pe_ratio": 49.5,
+      "pb_ratio": 4.1,
+      "graham_number": 157.52,
+      "discount_from_graham": 2.0021,
+      "eps_reported": 12.77,
+      "eps_ttm": 9.55,
+      "book_value": 115.44,
+      "roe": 8.67,
+      "roa": 7.98,
+      "net_margin_ttm": 47.63,
+      "asset_turnover_ttm": 16.76,
+      "net_profit_ttm": 95469200,
+      "revenue_ttm": 200419870,
+      "shares_outstanding": 9993259,
+      "dividend_payout_ratio": 0.7327,
+      "dividend_to_ltp": 0.0148,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 636.21,
+      "week52_low": 454,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4939,
+      "trade_turnover": 2321330,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

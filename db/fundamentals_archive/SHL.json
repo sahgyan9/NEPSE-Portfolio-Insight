@@ -1,0 +1,49 @@
+{
+  "symbol": "SHL",
+  "full_name": "Soaltee Hotel Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hotels",
+      "ltp_at_capture": 500.9,
+      "pe_ratio": 78.06,
+      "pb_ratio": 18.74,
+      "graham_number": 62.13,
+      "discount_from_graham": 7.0627,
+      "eps_reported": 6.25,
+      "eps_ttm": 6.42,
+      "book_value": 26.73,
+      "roe": 26.33,
+      "roa": 20.68,
+      "net_margin_ttm": 24.1,
+      "asset_turnover_ttm": 85.82,
+      "net_profit_ttm": 754049630,
+      "revenue_ttm": 3129051230,
+      "shares_outstanding": 117511009,
+      "dividend_payout_ratio": 0.2571,
+      "dividend_to_ltp": 0.0033,
+      "promoter_holding": 69,
+      "public_float": 31,
+      "week52_high": 535,
+      "week52_low": 415.83,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 10693,
+      "trade_turnover": 5346500,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hotels"
+}

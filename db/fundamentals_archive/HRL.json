@@ -1,0 +1,49 @@
+{
+  "symbol": "HRL",
+  "full_name": "Himalayan Reinsurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Others",
+      "ltp_at_capture": 596,
+      "pe_ratio": 181.61,
+      "pb_ratio": 3.97,
+      "graham_number": 105.3,
+      "discount_from_graham": 4.6598,
+      "eps_reported": -0.54,
+      "eps_ttm": 3.28,
+      "book_value": 150.18,
+      "roe": 2.13,
+      "roa": 1.44,
+      "net_margin_ttm": 4.92,
+      "asset_turnover_ttm": 29.23,
+      "net_profit_ttm": 356652140,
+      "revenue_ttm": 7255947120,
+      "shares_outstanding": 108680000,
+      "dividend_payout_ratio": 1.3713,
+      "dividend_to_ltp": 0.0076,
+      "promoter_holding": 70,
+      "public_float": 29.4,
+      "week52_high": 1103.73,
+      "week52_low": 553,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 66030,
+      "trade_turnover": 39690633,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Others"
+}

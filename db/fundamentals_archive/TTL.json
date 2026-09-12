@@ -1,0 +1,49 @@
+{
+  "symbol": "TTL",
+  "full_name": "Trade Tower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Others",
+      "ltp_at_capture": 731,
+      "pe_ratio": 298.03,
+      "pb_ratio": 6.89,
+      "graham_number": 76.53,
+      "discount_from_graham": 8.5514,
+      "eps_reported": 2.45,
+      "eps_ttm": 2.45,
+      "book_value": 106.14,
+      "roe": 2.31,
+      "roa": 1.47,
+      "net_margin_ttm": 13.2,
+      "asset_turnover_ttm": 11.14,
+      "net_profit_ttm": 20004904.19,
+      "revenue_ttm": 151545100,
+      "shares_outstanding": 8156097,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51.3,
+      "public_float": 47.73,
+      "week52_high": 1148,
+      "week52_low": 692.4,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9862,
+      "trade_turnover": 7199260,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Others"
+}

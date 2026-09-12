@@ -1,0 +1,49 @@
+{
+  "symbol": "KBSH",
+  "full_name": "Kutheli Bukhari Small Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 960,
+      "pe_ratio": 144.09,
+      "pb_ratio": 7.37,
+      "graham_number": 139.71,
+      "discount_from_graham": 5.8715,
+      "eps_reported": 9.93,
+      "eps_ttm": 6.66,
+      "book_value": 130.2,
+      "roe": 5.26,
+      "roa": 4.56,
+      "net_margin_ttm": 32.02,
+      "asset_turnover_ttm": 14.24,
+      "net_profit_ttm": 9824710,
+      "revenue_ttm": 30681620,
+      "shares_outstanding": 1474596,
+      "dividend_payout_ratio": 1.5009,
+      "dividend_to_ltp": 0.0104,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 1890,
+      "week52_low": 960,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 25843,
+      "trade_turnover": 24421635,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

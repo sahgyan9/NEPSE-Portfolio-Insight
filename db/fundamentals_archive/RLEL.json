@@ -1,0 +1,49 @@
+{
+  "symbol": "RLEL",
+  "full_name": "Ridge Line Energy Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 905,
+      "pe_ratio": 85.67,
+      "pb_ratio": 7.24,
+      "graham_number": 172.41,
+      "discount_from_graham": 4.2492,
+      "eps_reported": 10.57,
+      "eps_ttm": 10.56,
+      "book_value": 125.06,
+      "roe": 8.45,
+      "roa": 4.68,
+      "net_margin_ttm": 39.66,
+      "asset_turnover_ttm": 11.8,
+      "net_profit_ttm": 125181030.25,
+      "revenue_ttm": 315638270.7,
+      "shares_outstanding": 11850000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 78,
+      "public_float": 11.16,
+      "week52_high": 1400,
+      "week52_low": 330,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4575,
+      "trade_turnover": 4112925,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

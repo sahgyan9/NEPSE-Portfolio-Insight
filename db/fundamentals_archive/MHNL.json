@@ -1,0 +1,49 @@
+{
+  "symbol": "MHNL",
+  "full_name": "Mountain Hydro Nepal Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 242.9,
+      "pe_ratio": 56.86,
+      "pb_ratio": 6.61,
+      "graham_number": 59.41,
+      "discount_from_graham": 3.0883,
+      "eps_reported": 8.19,
+      "eps_ttm": 4.27,
+      "book_value": 36.73,
+      "roe": 14.46,
+      "roa": 1.56,
+      "net_margin_ttm": 11.99,
+      "asset_turnover_ttm": 13.02,
+      "net_profit_ttm": 53396520,
+      "revenue_ttm": 445429040,
+      "shares_outstanding": 12500000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 323.5,
+      "week52_low": 226,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7798,
+      "trade_turnover": 1894914,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

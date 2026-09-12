@@ -1,0 +1,49 @@
+{
+  "symbol": "DLBS",
+  "full_name": "Dhaulagiri Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1215,
+      "pe_ratio": 57.33,
+      "pb_ratio": 8.17,
+      "graham_number": 266.28,
+      "discount_from_graham": 3.5629,
+      "eps_reported": 18.29,
+      "eps_ttm": 21.19,
+      "book_value": 148.7,
+      "roe": 12.74,
+      "roa": 1.1,
+      "net_margin_ttm": 9.07,
+      "asset_turnover_ttm": 12.13,
+      "net_profit_ttm": 28207510,
+      "revenue_ttm": 311145450,
+      "shares_outstanding": 1331000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 67.9,
+      "public_float": 32.1,
+      "week52_high": 1610.33,
+      "week52_low": 1165,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 227,
+      "trade_turnover": 272627,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

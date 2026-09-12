@@ -1,0 +1,49 @@
+{
+  "symbol": "NUBL",
+  "full_name": "Nirdhan Utthan Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 617,
+      "pe_ratio": 33.15,
+      "pb_ratio": 2.88,
+      "graham_number": 299.67,
+      "discount_from_graham": 1.0589,
+      "eps_reported": 7.54,
+      "eps_ttm": 18.61,
+      "book_value": 214.43,
+      "roe": 8.89,
+      "roa": 1.81,
+      "net_margin_ttm": 13.74,
+      "asset_turnover_ttm": 13.13,
+      "net_profit_ttm": 510517890,
+      "revenue_ttm": 3714425860,
+      "shares_outstanding": 27426837,
+      "dividend_payout_ratio": 0.6447,
+      "dividend_to_ltp": 0.0194,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 778.68,
+      "week52_low": 590.2,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9169,
+      "trade_turnover": 5712287,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

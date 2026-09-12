@@ -1,0 +1,49 @@
+{
+  "symbol": "NICLBSL",
+  "full_name": "NIC ASIA Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 560,
+      "pe_ratio": -28.4,
+      "pb_ratio": 4.4,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": 8.2,
+      "eps_ttm": -19.72,
+      "book_value": 127.35,
+      "roe": 0,
+      "roa": -1.54,
+      "net_margin_ttm": -15.55,
+      "asset_turnover_ttm": 9.89,
+      "net_profit_ttm": -343047760,
+      "revenue_ttm": 2206443870,
+      "shares_outstanding": 17394400,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 68,
+      "public_float": 32,
+      "week52_high": 742.82,
+      "week52_low": 537,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4105,
+      "trade_turnover": 2290590,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

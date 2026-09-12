@@ -1,0 +1,49 @@
+{
+  "symbol": "SHPC",
+  "full_name": "Sanima Mai Hydropower Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 511,
+      "pe_ratio": 104.76,
+      "pb_ratio": 3.83,
+      "graham_number": 121,
+      "discount_from_graham": 3.2232,
+      "eps_reported": 4.83,
+      "eps_ttm": 4.88,
+      "book_value": 133.39,
+      "roe": 2.98,
+      "roa": 2.57,
+      "net_margin_ttm": 37.58,
+      "asset_turnover_ttm": 6.85,
+      "net_profit_ttm": 182340110,
+      "revenue_ttm": 485181880,
+      "shares_outstanding": 37379937,
+      "dividend_payout_ratio": 2.05,
+      "dividend_to_ltp": 0.0196,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 631.82,
+      "week52_low": 483.5,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9281,
+      "trade_turnover": 4714748,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

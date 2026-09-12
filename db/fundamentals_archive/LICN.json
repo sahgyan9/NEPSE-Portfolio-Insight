@@ -1,0 +1,49 @@
+{
+  "symbol": "LICN",
+  "full_name": "Life Insurance Co. Nepal",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 786.3,
+      "pe_ratio": 108.02,
+      "pb_ratio": 4.46,
+      "graham_number": 170.01,
+      "discount_from_graham": 3.6251,
+      "eps_reported": 7.77,
+      "eps_ttm": 7.28,
+      "book_value": 176.47,
+      "roe": 4.03,
+      "roa": 0.27,
+      "net_margin_ttm": 1.9,
+      "asset_turnover_ttm": 14.15,
+      "net_profit_ttm": 400339240,
+      "revenue_ttm": 21072411500,
+      "shares_outstanding": 54999999,
+      "dividend_payout_ratio": 2.8919,
+      "dividend_to_ltp": 0.0268,
+      "promoter_holding": 67.34,
+      "public_float": 32.66,
+      "week52_high": 950,
+      "week52_low": 765,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9284,
+      "trade_turnover": 7333431.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

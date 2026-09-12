@@ -1,0 +1,49 @@
+{
+  "symbol": "BNL",
+  "full_name": "Bottlers Nepal (Balaju) Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 14700,
+      "pe_ratio": -145.7,
+      "pb_ratio": 4.46,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": 150.48,
+      "eps_ttm": -100.89,
+      "book_value": 3297.17,
+      "roe": 0,
+      "roa": -1.41,
+      "net_margin_ttm": -1.71,
+      "asset_turnover_ttm": 82.33,
+      "net_profit_ttm": -196630000,
+      "revenue_ttm": 11501177000,
+      "shares_outstanding": 1948887,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 90.78,
+      "public_float": 9.22,
+      "week52_high": 17400,
+      "week52_low": 13872.8,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-28",
+      "trade_volume": 10,
+      "trade_turnover": 147000,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

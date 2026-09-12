@@ -1,0 +1,49 @@
+{
+  "symbol": "ALICL",
+  "full_name": "Asian Life Insurance Co. Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 434,
+      "pe_ratio": 54,
+      "pb_ratio": 3.65,
+      "graham_number": 146.72,
+      "discount_from_graham": 1.9579,
+      "eps_reported": 9.26,
+      "eps_ttm": 8.04,
+      "book_value": 119.06,
+      "roe": 6.85,
+      "roa": 0.74,
+      "net_margin_ttm": 4.08,
+      "asset_turnover_ttm": 18.04,
+      "net_profit_ttm": 422007440,
+      "revenue_ttm": 10347675540,
+      "shares_outstanding": 52512170,
+      "dividend_payout_ratio": 1.2443,
+      "dividend_to_ltp": 0.023,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 502.04,
+      "week52_low": 418,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7936,
+      "trade_turnover": 3460096,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

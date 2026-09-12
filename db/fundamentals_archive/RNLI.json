@@ -1,0 +1,49 @@
+{
+  "symbol": "RNLI",
+  "full_name": "Reliable Nepal Life Insurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 444,
+      "pe_ratio": 40.14,
+      "pb_ratio": 3.04,
+      "graham_number": 190.73,
+      "discount_from_graham": 1.3279,
+      "eps_reported": 12.07,
+      "eps_ttm": 11.06,
+      "book_value": 146.17,
+      "roe": 7.44,
+      "roa": 2.53,
+      "net_margin_ttm": 24.38,
+      "asset_turnover_ttm": 10.38,
+      "net_profit_ttm": 574814330,
+      "revenue_ttm": 2357643570,
+      "shares_outstanding": 51968000,
+      "dividend_payout_ratio": 1.0849,
+      "dividend_to_ltp": 0.027,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 520.2,
+      "week52_low": 424,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 12306,
+      "trade_turnover": 5487245.4,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

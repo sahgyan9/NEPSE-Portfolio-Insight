@@ -1,0 +1,49 @@
+{
+  "symbol": "USHEC",
+  "full_name": "Upper Solu Hydro Electric Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 491.2,
+      "pe_ratio": 33.62,
+      "pb_ratio": 4.13,
+      "graham_number": 197.74,
+      "discount_from_graham": 1.4841,
+      "eps_reported": 20.43,
+      "eps_ttm": 14.61,
+      "book_value": 118.95,
+      "roe": 12.91,
+      "roa": 4.09,
+      "net_margin_ttm": 31.61,
+      "asset_turnover_ttm": 12.94,
+      "net_profit_ttm": 197229550,
+      "revenue_ttm": 623873440,
+      "shares_outstanding": 13500000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 546.41,
+      "week52_low": 434,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3861,
+      "trade_turnover": 1895751,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

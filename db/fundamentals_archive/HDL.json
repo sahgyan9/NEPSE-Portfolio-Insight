@@ -1,0 +1,49 @@
+{
+  "symbol": "HDL",
+  "full_name": "Himalayan Distillery Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 1167.5,
+      "pe_ratio": 40.42,
+      "pb_ratio": 8.86,
+      "graham_number": 292.68,
+      "discount_from_graham": 2.989,
+      "eps_reported": 30.78,
+      "eps_ttm": 28.89,
+      "book_value": 131.8,
+      "roe": 24.54,
+      "roa": 21.06,
+      "net_margin_ttm": 14.09,
+      "asset_turnover_ttm": 149.51,
+      "net_profit_ttm": 1065327640,
+      "revenue_ttm": 7561936770,
+      "shares_outstanding": 36880821,
+      "dividend_payout_ratio": 0.8655,
+      "dividend_to_ltp": 0.0214,
+      "promoter_holding": 58,
+      "public_float": 42,
+      "week52_high": 1271.4,
+      "week52_low": 1081.67,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 12284,
+      "trade_turnover": 14310860,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

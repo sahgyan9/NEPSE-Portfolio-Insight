@@ -1,0 +1,49 @@
+{
+  "symbol": "NGPL",
+  "full_name": "Ngadi Group Power Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 410,
+      "pe_ratio": 460.81,
+      "pb_ratio": 2.71,
+      "graham_number": 55.08,
+      "discount_from_graham": 6.4443,
+      "eps_reported": 1.39,
+      "eps_ttm": 0.89,
+      "book_value": 151.52,
+      "roe": 0.59,
+      "roa": 0.5,
+      "net_margin_ttm": 26.39,
+      "asset_turnover_ttm": 1.88,
+      "net_profit_ttm": 34590520,
+      "revenue_ttm": 131081530,
+      "shares_outstanding": 38876863,
+      "dividend_payout_ratio": 5.6196,
+      "dividend_to_ltp": 0.0122,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 491,
+      "week52_low": 334.13,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 131638,
+      "trade_turnover": 53958416.2,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

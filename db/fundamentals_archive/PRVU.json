@@ -1,0 +1,49 @@
+{
+  "symbol": "PRVU",
+  "full_name": "Prabhu Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 198,
+      "pe_ratio": 10.55,
+      "pb_ratio": 1.35,
+      "graham_number": 248.51,
+      "discount_from_graham": -0.2033,
+      "eps_reported": 4.82,
+      "eps_ttm": 18.77,
+      "book_value": 146.26,
+      "roe": 12.26,
+      "roa": 1.09,
+      "net_margin_ttm": 21.11,
+      "asset_turnover_ttm": 5.16,
+      "net_profit_ttm": 4418156000,
+      "revenue_ttm": 20930099000,
+      "shares_outstanding": 235424900,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 245.34,
+      "week52_low": 181.2,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 130100,
+      "trade_turnover": 25460570,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

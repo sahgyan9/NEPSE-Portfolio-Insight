@@ -1,0 +1,49 @@
+{
+  "symbol": "HPPL",
+  "full_name": "Himalayan Power Partner Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 381.9,
+      "pe_ratio": 43.36,
+      "pb_ratio": 3.22,
+      "graham_number": 153.27,
+      "discount_from_graham": 1.4917,
+      "eps_reported": 15.76,
+      "eps_ttm": 8.81,
+      "book_value": 118.53,
+      "roe": 9.35,
+      "roa": 2.57,
+      "net_margin_ttm": 19.18,
+      "asset_turnover_ttm": 13.38,
+      "net_profit_ttm": 140771120,
+      "revenue_ttm": 733865830,
+      "shares_outstanding": 15981255,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 424.3,
+      "week52_low": 312.93,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 573305,
+      "trade_turnover": 226283483.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

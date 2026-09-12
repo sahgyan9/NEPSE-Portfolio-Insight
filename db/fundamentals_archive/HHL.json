@@ -1,0 +1,49 @@
+{
+  "symbol": "HHL",
+  "full_name": "Himalayan Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 340,
+      "pe_ratio": 50.56,
+      "pb_ratio": 4.04,
+      "graham_number": 112.85,
+      "discount_from_graham": 2.0129,
+      "eps_reported": 8.29,
+      "eps_ttm": 6.72,
+      "book_value": 84.17,
+      "roe": 8.3,
+      "roa": 3.24,
+      "net_margin_ttm": 22.19,
+      "asset_turnover_ttm": 14.59,
+      "net_profit_ttm": 73628770,
+      "revenue_ttm": 331768270,
+      "shares_outstanding": 10950000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 434.15,
+      "week52_low": 315,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 22933,
+      "trade_turnover": 7797220,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

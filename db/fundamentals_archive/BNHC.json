@@ -1,0 +1,49 @@
+{
+  "symbol": "BNHC",
+  "full_name": "Buddha Bhumi Nepal Hydro Power Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 287,
+      "pe_ratio": 12320.9,
+      "pb_ratio": 3.11,
+      "graham_number": 6.95,
+      "discount_from_graham": 40.298,
+      "eps_reported": 7.53,
+      "eps_ttm": 0.02,
+      "book_value": 92.15,
+      "roe": 0.04,
+      "roa": 0.01,
+      "net_margin_ttm": 0.11,
+      "asset_turnover_ttm": 12.49,
+      "net_profit_ttm": 186350,
+      "revenue_ttm": 168965990,
+      "shares_outstanding": 8000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 380,
+      "week52_low": 250.5,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 15036,
+      "trade_turnover": 4297288.8,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

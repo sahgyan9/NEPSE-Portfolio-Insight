@@ -1,0 +1,49 @@
+{
+  "symbol": "NABBC",
+  "full_name": "Narayani Development Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 790,
+      "pe_ratio": -66.6,
+      "pb_ratio": 23.96,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -12.64,
+      "eps_ttm": -11.86,
+      "book_value": 32.98,
+      "roe": 0,
+      "roa": -10.85,
+      "net_margin_ttm": -287.59,
+      "asset_turnover_ttm": 3.77,
+      "net_profit_ttm": -62276050,
+      "revenue_ttm": 21654600,
+      "shares_outstanding": 5249930,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 71,
+      "public_float": 29,
+      "week52_high": 1789.9,
+      "week52_low": 675.7,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4231,
+      "trade_turnover": 3321758.1,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

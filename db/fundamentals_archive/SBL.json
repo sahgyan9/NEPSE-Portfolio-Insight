@@ -1,0 +1,49 @@
+{
+  "symbol": "SBL",
+  "full_name": "Siddhartha Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 412.5,
+      "pe_ratio": 17.31,
+      "pb_ratio": 1.9,
+      "graham_number": 340.88,
+      "discount_from_graham": 0.2101,
+      "eps_reported": 14.68,
+      "eps_ttm": 23.83,
+      "book_value": 216.73,
+      "roe": 11.43,
+      "roa": 1.04,
+      "net_margin_ttm": 16.96,
+      "asset_turnover_ttm": 6.12,
+      "net_profit_ttm": 3525317977,
+      "revenue_ttm": 20788414333,
+      "shares_outstanding": 147944791,
+      "dividend_payout_ratio": 0.4419,
+      "dividend_to_ltp": 0.0255,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 415.7,
+      "week52_low": 320.6,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 91430,
+      "trade_turnover": 37751447,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

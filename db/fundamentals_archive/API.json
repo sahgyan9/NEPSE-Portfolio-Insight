@@ -1,0 +1,49 @@
+{
+  "symbol": "API",
+  "full_name": "API Power Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 336.5,
+      "pe_ratio": 29.3,
+      "pb_ratio": 2.92,
+      "graham_number": 172.63,
+      "discount_from_graham": 0.9493,
+      "eps_reported": 13.76,
+      "eps_ttm": 11.48,
+      "book_value": 115.32,
+      "roe": 10.5,
+      "roa": 5.03,
+      "net_margin_ttm": 41.15,
+      "asset_turnover_ttm": 12.23,
+      "net_profit_ttm": 732708290,
+      "revenue_ttm": 1780772240,
+      "shares_outstanding": 63797242,
+      "dividend_payout_ratio": 0.4354,
+      "dividend_to_ltp": 0.0149,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 364.2,
+      "week52_low": 247.71,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 110338,
+      "trade_turnover": 36963230,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

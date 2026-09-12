@@ -1,0 +1,49 @@
+{
+  "symbol": "SPL",
+  "full_name": "Shuvam Power Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 678.9,
+      "pe_ratio": 102.98,
+      "pb_ratio": 6.71,
+      "graham_number": 122.47,
+      "discount_from_graham": 4.5435,
+      "eps_reported": 8.16,
+      "eps_ttm": 6.59,
+      "book_value": 101.11,
+      "roe": 6.64,
+      "roa": 5.39,
+      "net_margin_ttm": 83.97,
+      "asset_turnover_ttm": 6.42,
+      "net_profit_ttm": 13185250,
+      "revenue_ttm": 15701770,
+      "shares_outstanding": 2000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 1021.65,
+      "week52_low": 641.1,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 5481,
+      "trade_turnover": 3562650,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

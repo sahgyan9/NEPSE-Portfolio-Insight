@@ -1,0 +1,49 @@
+{
+  "symbol": "GCIL",
+  "full_name": "Ghorahi Cement Industry Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 360,
+      "pe_ratio": -68.34,
+      "pb_ratio": 2.13,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -4.21,
+      "eps_ttm": -5.27,
+      "book_value": 168.7,
+      "roe": 0,
+      "roa": -1.18,
+      "net_margin_ttm": -5.21,
+      "asset_turnover_ttm": 22.64,
+      "net_profit_ttm": -264683570,
+      "revenue_ttm": 5075436040,
+      "shares_outstanding": 50244542,
+      "dividend_payout_ratio": -1.8983,
+      "dividend_to_ltp": 0.0278,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 509.03,
+      "week52_low": 322.5,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 15185,
+      "trade_turnover": 5436230,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "MKHC",
+  "full_name": "Maya Khola Hydropower Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 291,
+      "pe_ratio": 195.12,
+      "pb_ratio": 4.61,
+      "graham_number": 46.03,
+      "discount_from_graham": 5.3214,
+      "eps_reported": 3.9,
+      "eps_ttm": 1.49,
+      "book_value": 63.15,
+      "roe": 2.4,
+      "roa": 0.47,
+      "net_margin_ttm": 3.85,
+      "asset_turnover_ttm": 12.08,
+      "net_profit_ttm": 14914000,
+      "revenue_ttm": 387273000,
+      "shares_outstanding": 10000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 490.48,
+      "week52_low": 283.3,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7635,
+      "trade_turnover": 2214913.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "STC",
+  "full_name": "Salt Trading Corporation",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Tradings",
+      "ltp_at_capture": 5200,
+      "pe_ratio": 185.24,
+      "pb_ratio": 11.43,
+      "graham_number": 536.06,
+      "discount_from_graham": 8.7004,
+      "eps_reported": 36.19,
+      "eps_ttm": 28.07,
+      "book_value": 454.95,
+      "roe": 3,
+      "roa": 1.1,
+      "net_margin_ttm": 1.26,
+      "asset_turnover_ttm": 87.54,
+      "net_profit_ttm": 108444540,
+      "revenue_ttm": 8612540060,
+      "shares_outstanding": 3863035,
+      "dividend_payout_ratio": 0.3562,
+      "dividend_to_ltp": 0.0019,
+      "promoter_holding": 9.67,
+      "public_float": 78.74,
+      "week52_high": 5747.95,
+      "week52_low": 4429.22,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 1391,
+      "trade_turnover": 7219290,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Tradings"
+}

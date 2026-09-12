@@ -1,0 +1,49 @@
+{
+  "symbol": "MBJC",
+  "full_name": "Madhya Bhotekoshi Jalavidyut Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 273.4,
+      "pe_ratio": 259.75,
+      "pb_ratio": 2.89,
+      "graham_number": 47.36,
+      "discount_from_graham": 4.7732,
+      "eps_reported": 1.71,
+      "eps_ttm": 1.05,
+      "book_value": 94.7,
+      "roe": 1.12,
+      "roa": 0.28,
+      "net_margin_ttm": 4.42,
+      "asset_turnover_ttm": 6.45,
+      "net_profit_ttm": 63152900,
+      "revenue_ttm": 1430345810,
+      "shares_outstanding": 60000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 330.3,
+      "week52_low": 266.5,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 37825,
+      "trade_turnover": 10174925,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "SAHAS",
+  "full_name": "Sahas Urja Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 663.9,
+      "pe_ratio": 24.27,
+      "pb_ratio": 3.76,
+      "graham_number": 329.83,
+      "discount_from_graham": 1.0128,
+      "eps_reported": 34.48,
+      "eps_ttm": 27.36,
+      "book_value": 176.74,
+      "roe": 16.84,
+      "roa": 6.89,
+      "net_margin_ttm": 44.06,
+      "asset_turnover_ttm": 15.63,
+      "net_profit_ttm": 1251253920,
+      "revenue_ttm": 2839626140,
+      "shares_outstanding": 45738000,
+      "dividend_payout_ratio": 0.8042,
+      "dividend_to_ltp": 0.0331,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 687,
+      "week52_low": 487.6,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 60590,
+      "trade_turnover": 40219642,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

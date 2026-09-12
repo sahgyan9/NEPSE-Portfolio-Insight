@@ -1,0 +1,49 @@
+{
+  "symbol": "ADBL",
+  "full_name": "Agricultural Development Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 320.5,
+      "pe_ratio": 13.57,
+      "pb_ratio": 1.39,
+      "graham_number": 349.95,
+      "discount_from_graham": -0.0842,
+      "eps_reported": 9.42,
+      "eps_ttm": 23.61,
+      "book_value": 230.49,
+      "roe": 10.35,
+      "roa": 0.9,
+      "net_margin_ttm": 12.62,
+      "asset_turnover_ttm": 7.17,
+      "net_profit_ttm": 3378126662,
+      "revenue_ttm": 26774108049,
+      "shares_outstanding": 143055190,
+      "dividend_payout_ratio": 0.5505,
+      "dividend_to_ltp": 0.0406,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 334.9,
+      "week52_low": 286.9,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 114881,
+      "trade_turnover": 36888289.1,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

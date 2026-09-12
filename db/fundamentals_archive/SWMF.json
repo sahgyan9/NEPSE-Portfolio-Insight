@@ -1,0 +1,49 @@
+{
+  "symbol": "SWMF",
+  "full_name": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 635,
+      "pe_ratio": 28.22,
+      "pb_ratio": 4.16,
+      "graham_number": 278.16,
+      "discount_from_graham": 1.2829,
+      "eps_reported": 22.82,
+      "eps_ttm": 22.5,
+      "book_value": 152.82,
+      "roe": 15.12,
+      "roa": 1.95,
+      "net_margin_ttm": 20.63,
+      "asset_turnover_ttm": 9.45,
+      "net_profit_ttm": 248928140,
+      "revenue_ttm": 1206743430,
+      "shares_outstanding": 11062862,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 855.57,
+      "week52_low": 607.9,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2596,
+      "trade_turnover": 1612375.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

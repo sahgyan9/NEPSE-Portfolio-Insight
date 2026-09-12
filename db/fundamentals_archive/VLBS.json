@@ -1,0 +1,49 @@
+{
+  "symbol": "VLBS",
+  "full_name": "Vijaya laghubitta Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 680,
+      "pe_ratio": -665.8,
+      "pb_ratio": 4.29,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -4.51,
+      "eps_ttm": -1.02,
+      "book_value": 158.39,
+      "roe": 0,
+      "roa": -0.07,
+      "net_margin_ttm": -1.04,
+      "asset_turnover_ttm": 6.85,
+      "net_profit_ttm": -8086070,
+      "revenue_ttm": 776365040,
+      "shares_outstanding": 7917220,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 74.39,
+      "public_float": 25.61,
+      "week52_high": 979.89,
+      "week52_low": 645,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 683,
+      "trade_turnover": 466489,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "GMFIL",
+  "full_name": "Guheshowori Merchant Bank & Finance Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 471,
+      "pe_ratio": 116.18,
+      "pb_ratio": 2.8,
+      "graham_number": 123.93,
+      "discount_from_graham": 2.8004,
+      "eps_reported": 6,
+      "eps_ttm": 4.05,
+      "book_value": 168.38,
+      "roe": 2.54,
+      "roa": 0.41,
+      "net_margin_ttm": 6.33,
+      "asset_turnover_ttm": 6.51,
+      "net_profit_ttm": 41035000,
+      "revenue_ttm": 648191000,
+      "shares_outstanding": 10121760,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 52.34,
+      "public_float": 47.66,
+      "week52_high": 538,
+      "week52_low": 413,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 12422,
+      "trade_turnover": 5774987.8,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

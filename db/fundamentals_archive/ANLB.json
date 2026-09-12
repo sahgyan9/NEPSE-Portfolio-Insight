@@ -1,0 +1,49 @@
+{
+  "symbol": "ANLB",
+  "full_name": "Aatmanirbhar Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 5735,
+      "pe_ratio": 71.57,
+      "pb_ratio": 13.52,
+      "graham_number": 874.59,
+      "discount_from_graham": 5.5573,
+      "eps_reported": 82.49,
+      "eps_ttm": 80.13,
+      "book_value": 424.28,
+      "roe": 22.23,
+      "roa": 3.73,
+      "net_margin_ttm": 32.04,
+      "asset_turnover_ttm": 11.64,
+      "net_profit_ttm": 71719480,
+      "revenue_ttm": 223873050,
+      "shares_outstanding": 895071,
+      "dividend_payout_ratio": 0.1872,
+      "dividend_to_ltp": 0.0026,
+      "promoter_holding": 67.37,
+      "public_float": 32.63,
+      "week52_high": 7200,
+      "week52_low": 4977.67,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2167,
+      "trade_turnover": 12260886,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "GUFL",
+  "full_name": "Gurkhas Finance Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 584,
+      "pe_ratio": 78.88,
+      "pb_ratio": 3.7,
+      "graham_number": 162.17,
+      "discount_from_graham": 2.6012,
+      "eps_reported": 19.89,
+      "eps_ttm": 7.4,
+      "book_value": 157.88,
+      "roe": 5.06,
+      "roa": 0.6,
+      "net_margin_ttm": 9.26,
+      "asset_turnover_ttm": 6.46,
+      "net_profit_ttm": 64262270,
+      "revenue_ttm": 693888740,
+      "shares_outstanding": 8679938,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 619.9,
+      "week52_low": 460.6,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 24738,
+      "trade_turnover": 14323302,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

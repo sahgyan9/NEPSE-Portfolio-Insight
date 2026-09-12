@@ -1,0 +1,49 @@
+{
+  "symbol": "UPCL",
+  "full_name": "UNIVERSAL POWER COMPANY LTD",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 349.9,
+      "pe_ratio": 161,
+      "pb_ratio": 3.04,
+      "graham_number": 74.97,
+      "discount_from_graham": 3.667,
+      "eps_reported": 1.1,
+      "eps_ttm": 2.17,
+      "book_value": 114.95,
+      "roe": 2.02,
+      "roa": 1.3,
+      "net_margin_ttm": 30.25,
+      "asset_turnover_ttm": 4.3,
+      "net_profit_ttm": 54008140,
+      "revenue_ttm": 178563990,
+      "shares_outstanding": 24851236,
+      "dividend_payout_ratio": 4.1412,
+      "dividend_to_ltp": 0.0257,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 422,
+      "week52_low": 341.5,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 16967,
+      "trade_turnover": 5936753.3,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

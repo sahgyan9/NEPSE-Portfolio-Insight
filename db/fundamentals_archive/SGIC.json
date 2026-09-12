@@ -1,0 +1,49 @@
+{
+  "symbol": "SGIC",
+  "full_name": "Sanima GIC Insurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 464.2,
+      "pe_ratio": 62.3,
+      "pb_ratio": 3.18,
+      "graham_number": 156.31,
+      "discount_from_graham": 1.9697,
+      "eps_reported": 3.19,
+      "eps_ttm": 7.45,
+      "book_value": 145.75,
+      "roe": 5.3,
+      "roa": 2.07,
+      "net_margin_ttm": 5.94,
+      "asset_turnover_ttm": 34.83,
+      "net_profit_ttm": 168195050,
+      "revenue_ttm": 2832356220,
+      "shares_outstanding": 22575000,
+      "dividend_payout_ratio": 0.6711,
+      "dividend_to_ltp": 0.0108,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 585.64,
+      "week52_low": 425.71,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 6341,
+      "trade_turnover": 2916860,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

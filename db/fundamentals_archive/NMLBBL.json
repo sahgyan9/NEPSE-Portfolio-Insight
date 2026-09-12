@@ -1,0 +1,49 @@
+{
+  "symbol": "NMLBBL",
+  "full_name": "Nerude Mirmire Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 532.2,
+      "pe_ratio": 31,
+      "pb_ratio": 2.95,
+      "graham_number": 263.75,
+      "discount_from_graham": 1.0178,
+      "eps_reported": 4.18,
+      "eps_ttm": 17.17,
+      "book_value": 180.1,
+      "roe": 8.55,
+      "roa": 1.12,
+      "net_margin_ttm": 9.53,
+      "asset_turnover_ttm": 11.72,
+      "net_profit_ttm": 239949540,
+      "revenue_ttm": 2516947120,
+      "shares_outstanding": 13977643,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51.49,
+      "public_float": 48.51,
+      "week52_high": 795.72,
+      "week52_low": 525,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 6400,
+      "trade_turnover": 3392640,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

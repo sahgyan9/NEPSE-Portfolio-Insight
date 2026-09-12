@@ -1,0 +1,49 @@
+{
+  "symbol": "UMHL",
+  "full_name": "United Modi Hydropower Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 585,
+      "pe_ratio": 107.59,
+      "pb_ratio": 5.6,
+      "graham_number": 113,
+      "discount_from_graham": 4.1771,
+      "eps_reported": 5.44,
+      "eps_ttm": 5.44,
+      "book_value": 104.37,
+      "roe": 5.3,
+      "roa": 3.32,
+      "net_margin_ttm": 33.25,
+      "asset_turnover_ttm": 10,
+      "net_profit_ttm": 71587000,
+      "revenue_ttm": 215298000,
+      "shares_outstanding": 13166350,
+      "dividend_payout_ratio": 1.2874,
+      "dividend_to_ltp": 0.012,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 642.06,
+      "week52_low": 475.7,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 59984,
+      "trade_turnover": 34844705.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "SPDL",
+  "full_name": "Synergy Power Development Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 378,
+      "pe_ratio": 71.69,
+      "pb_ratio": 3.53,
+      "graham_number": 112.76,
+      "discount_from_graham": 2.3524,
+      "eps_reported": 5.33,
+      "eps_ttm": 5.27,
+      "book_value": 107.18,
+      "roe": 4.94,
+      "roa": 4,
+      "net_margin_ttm": 43.24,
+      "asset_turnover_ttm": 9.25,
+      "net_profit_ttm": 70166990,
+      "revenue_ttm": 162269050,
+      "shares_outstanding": 13308487,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 463,
+      "week52_low": 329.45,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 112040,
+      "trade_turnover": 43135400,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

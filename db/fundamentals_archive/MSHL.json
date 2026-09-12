@@ -1,0 +1,49 @@
+{
+  "symbol": "MSHL",
+  "full_name": "Mid Solu Hydropower Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 616,
+      "pe_ratio": 34.36,
+      "pb_ratio": 5.29,
+      "graham_number": 216.68,
+      "discount_from_graham": 1.8429,
+      "eps_reported": 18.32,
+      "eps_ttm": 17.93,
+      "book_value": 116.41,
+      "roe": 16.52,
+      "roa": 7.03,
+      "net_margin_ttm": 50.3,
+      "asset_turnover_ttm": 13.98,
+      "net_profit_ttm": 154275880,
+      "revenue_ttm": 306724970,
+      "shares_outstanding": 8606600,
+      "dividend_payout_ratio": 0.8368,
+      "dividend_to_ltp": 0.0244,
+      "promoter_holding": 80,
+      "public_float": 9.8,
+      "week52_high": 874,
+      "week52_low": 585,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 443,
+      "trade_turnover": 269919.9,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

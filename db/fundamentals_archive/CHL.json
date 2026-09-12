@@ -1,0 +1,49 @@
+{
+  "symbol": "CHL",
+  "full_name": "Chhyangdi Hydropower Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 262,
+      "pe_ratio": 216.21,
+      "pb_ratio": 3.08,
+      "graham_number": 48.17,
+      "discount_from_graham": 4.4395,
+      "eps_reported": 3.25,
+      "eps_ttm": 1.21,
+      "book_value": 85.09,
+      "roe": 1.48,
+      "roa": 0.7,
+      "net_margin_ttm": 5.32,
+      "asset_turnover_ttm": 13.16,
+      "net_profit_ttm": 9378610,
+      "revenue_ttm": 176145790,
+      "shares_outstanding": 7739550,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 328.82,
+      "week52_low": 227.9,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7768,
+      "trade_turnover": 2048421.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

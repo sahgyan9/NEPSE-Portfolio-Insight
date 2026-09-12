@@ -1,0 +1,49 @@
+{
+  "symbol": "BUNGAL",
+  "full_name": "Bungal Hydro Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 599.5,
+      "pe_ratio": -763.36,
+      "pb_ratio": 7.08,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -0.79,
+      "eps_ttm": -0.79,
+      "book_value": 84.68,
+      "roe": 0,
+      "roa": -0.22,
+      "net_margin_ttm": -2.07,
+      "asset_turnover_ttm": 10.53,
+      "net_profit_ttm": -6518370,
+      "revenue_ttm": 315443319.45,
+      "shares_outstanding": 8300000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 65,
+      "public_float": 24.25,
+      "week52_high": 888,
+      "week52_low": 332.6,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 26811,
+      "trade_turnover": 15898923,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

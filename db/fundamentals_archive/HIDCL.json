@@ -1,0 +1,49 @@
+{
+  "symbol": "HIDCL",
+  "full_name": "Hydroelectricity Investment and Development Company Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Investment",
+      "ltp_at_capture": 260,
+      "pe_ratio": 81.85,
+      "pb_ratio": 2.31,
+      "graham_number": 89.71,
+      "discount_from_graham": 1.8981,
+      "eps_reported": 2.93,
+      "eps_ttm": 3.18,
+      "book_value": 112.61,
+      "roe": 2.81,
+      "roa": 3.43,
+      "net_margin_ttm": 70.28,
+      "asset_turnover_ttm": 4.88,
+      "net_profit_ttm": 791894000,
+      "revenue_ttm": 1126831000,
+      "shares_outstanding": 249282101,
+      "dividend_payout_ratio": 1.1018,
+      "dividend_to_ltp": 0.0135,
+      "promoter_holding": 80,
+      "public_float": 20,
+      "week52_high": 309.03,
+      "week52_low": 246.6,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 31898,
+      "trade_turnover": 8293480,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Investment"
+}

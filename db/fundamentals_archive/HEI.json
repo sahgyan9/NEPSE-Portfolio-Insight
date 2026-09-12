@@ -1,0 +1,49 @@
+{
+  "symbol": "HEI",
+  "full_name": "Himalayan Everest Insurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 537,
+      "pe_ratio": 43.24,
+      "pb_ratio": 2.62,
+      "graham_number": 239.51,
+      "discount_from_graham": 1.242,
+      "eps_reported": 5.9,
+      "eps_ttm": 12.42,
+      "book_value": 205.28,
+      "roe": 6.01,
+      "roa": 2.76,
+      "net_margin_ttm": 7.41,
+      "asset_turnover_ttm": 37.31,
+      "net_profit_ttm": 310524900,
+      "revenue_ttm": 4192570850,
+      "shares_outstanding": 25001577,
+      "dividend_payout_ratio": 0.6441,
+      "dividend_to_ltp": 0.0149,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 634.65,
+      "week52_low": 461.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 1764,
+      "trade_turnover": 957499.2,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

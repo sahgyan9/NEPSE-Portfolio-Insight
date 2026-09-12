@@ -1,0 +1,49 @@
+{
+  "symbol": "SJLIC",
+  "full_name": "Suryajyoti Life Insurance Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 417.9,
+      "pe_ratio": 54.42,
+      "pb_ratio": 3.33,
+      "graham_number": 147.25,
+      "discount_from_graham": 1.8381,
+      "eps_reported": 8.79,
+      "eps_ttm": 7.68,
+      "book_value": 125.49,
+      "roe": 6.04,
+      "roa": 0.74,
+      "net_margin_ttm": 3.09,
+      "asset_turnover_ttm": 23.96,
+      "net_profit_ttm": 384868720,
+      "revenue_ttm": 12461503970,
+      "shares_outstanding": 50119477,
+      "dividend_payout_ratio": 1.6929,
+      "dividend_to_ltp": 0.0311,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 484.9,
+      "week52_low": 397,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 14879,
+      "trade_turnover": 6174785,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

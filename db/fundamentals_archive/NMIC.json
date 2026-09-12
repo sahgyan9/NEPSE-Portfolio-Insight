@@ -1,0 +1,49 @@
+{
+  "symbol": "NMIC",
+  "full_name": "Nepal Micro Insurance Company Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 941.5,
+      "pe_ratio": 264.59,
+      "pb_ratio": 9.4,
+      "graham_number": 89.55,
+      "discount_from_graham": 9.5133,
+      "eps_reported": 4.54,
+      "eps_ttm": 3.56,
+      "book_value": 100.17,
+      "roe": 3.55,
+      "roa": 2.42,
+      "net_margin_ttm": 11.36,
+      "asset_turnover_ttm": 21.33,
+      "net_profit_ttm": 26687930,
+      "revenue_ttm": 234965170,
+      "shares_outstanding": 7500000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1700.91,
+      "week52_low": 885,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 1591,
+      "trade_turnover": 1492358,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

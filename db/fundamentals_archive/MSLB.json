@@ -1,0 +1,49 @@
+{
+  "symbol": "MSLB",
+  "full_name": "Mahuli Samudayik Laghubitta Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1220,
+      "pe_ratio": 24.02,
+      "pb_ratio": 5.8,
+      "graham_number": 490.28,
+      "discount_from_graham": 1.4884,
+      "eps_reported": 42.26,
+      "eps_ttm": 50.78,
+      "book_value": 210.37,
+      "roe": 25.11,
+      "roa": 4.06,
+      "net_margin_ttm": 24.13,
+      "asset_turnover_ttm": 16.83,
+      "net_profit_ttm": 196782180,
+      "revenue_ttm": 815440910,
+      "shares_outstanding": 3874948,
+      "dividend_payout_ratio": 0.0985,
+      "dividend_to_ltp": 0.0041,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1561.62,
+      "week52_low": 1206.68,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 1042,
+      "trade_turnover": 1255610,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

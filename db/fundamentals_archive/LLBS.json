@@ -1,0 +1,49 @@
+{
+  "symbol": "LLBS",
+  "full_name": "Laxmi Laghubitta Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 910,
+      "pe_ratio": 150.95,
+      "pb_ratio": 4.72,
+      "graham_number": 161.76,
+      "discount_from_graham": 4.6257,
+      "eps_reported": 17.29,
+      "eps_ttm": 6.03,
+      "book_value": 192.91,
+      "roe": 3.39,
+      "roa": 0.41,
+      "net_margin_ttm": 3.14,
+      "asset_turnover_ttm": 13.09,
+      "net_profit_ttm": 26625560,
+      "revenue_ttm": 848370780,
+      "shares_outstanding": 4416621,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1240.35,
+      "week52_low": 875,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2744,
+      "trade_turnover": 2497040,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

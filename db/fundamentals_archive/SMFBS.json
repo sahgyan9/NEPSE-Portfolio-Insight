@@ -1,0 +1,49 @@
+{
+  "symbol": "SMFBS",
+  "full_name": "Swabhimaan Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1521,
+      "pe_ratio": 29.06,
+      "pb_ratio": 7.05,
+      "graham_number": 503.85,
+      "discount_from_graham": 2.0187,
+      "eps_reported": 37.96,
+      "eps_ttm": 52.33,
+      "book_value": 215.6,
+      "roe": 27.52,
+      "roa": 2.52,
+      "net_margin_ttm": 17.91,
+      "asset_turnover_ttm": 14.06,
+      "net_profit_ttm": 80303700,
+      "revenue_ttm": 448252630,
+      "shares_outstanding": 1534441,
+      "dividend_payout_ratio": 0.1911,
+      "dividend_to_ltp": 0.0066,
+      "promoter_holding": 67.89,
+      "public_float": 32.11,
+      "week52_high": 1939.18,
+      "week52_low": 1454,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 126,
+      "trade_turnover": 193649.4,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "SANVI",
+  "full_name": "Sanvi Energy Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 605.3,
+      "pe_ratio": -71.26,
+      "pb_ratio": 5.63,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -8.5,
+      "eps_ttm": -8.49,
+      "book_value": 107.55,
+      "roe": 0,
+      "roa": -2.72,
+      "net_margin_ttm": -48.1,
+      "asset_turnover_ttm": 5.66,
+      "net_profit_ttm": -74754560.02,
+      "revenue_ttm": 155415536.4,
+      "shares_outstanding": 8800000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 56.93,
+      "public_float": 42.41,
+      "week52_high": 1015,
+      "week52_low": 544,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9221,
+      "trade_turnover": 5518768.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

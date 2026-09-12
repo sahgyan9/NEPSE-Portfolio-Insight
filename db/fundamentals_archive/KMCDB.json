@@ -1,0 +1,49 @@
+{
+  "symbol": "KMCDB",
+  "full_name": "Kalika Microcredit Development Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 787,
+      "pe_ratio": 64.43,
+      "pb_ratio": 5.08,
+      "graham_number": 206.37,
+      "discount_from_graham": 2.8135,
+      "eps_reported": 4.37,
+      "eps_ttm": 12.22,
+      "book_value": 154.96,
+      "roe": 7.41,
+      "roa": 1.04,
+      "net_margin_ttm": 7.61,
+      "asset_turnover_ttm": 13.61,
+      "net_profit_ttm": 54782830,
+      "revenue_ttm": 719563060,
+      "shares_outstanding": 4484615,
+      "dividend_payout_ratio": 0.7777,
+      "dividend_to_ltp": 0.0121,
+      "promoter_holding": 54.52,
+      "public_float": 45.48,
+      "week52_high": 1057.52,
+      "week52_low": 760,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4767,
+      "trade_turnover": 3737328,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

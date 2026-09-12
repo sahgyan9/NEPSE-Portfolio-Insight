@@ -1,0 +1,49 @@
+{
+  "symbol": "RSML",
+  "full_name": "Reliance Spinning Mills Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 3185,
+      "pe_ratio": 170.1,
+      "pb_ratio": 6.4,
+      "graham_number": 457.76,
+      "discount_from_graham": 5.9578,
+      "eps_reported": 18.73,
+      "eps_ttm": 18.72,
+      "book_value": 497.37,
+      "roe": 3.76,
+      "roa": 2.54,
+      "net_margin_ttm": 3.58,
+      "asset_turnover_ttm": 70.99,
+      "net_profit_ttm": 355767195.96,
+      "revenue_ttm": 9944793539.91,
+      "shares_outstanding": 19000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 89.86,
+      "public_float": 5.78,
+      "week52_high": 4799,
+      "week52_low": 330,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 57536,
+      "trade_turnover": 179397248,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

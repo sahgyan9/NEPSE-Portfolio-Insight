@@ -1,0 +1,49 @@
+{
+  "symbol": "SARBTM",
+  "full_name": "Sarbottam Cement Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 791,
+      "pe_ratio": 31.61,
+      "pb_ratio": 4.04,
+      "graham_number": 332.17,
+      "discount_from_graham": 1.3813,
+      "eps_reported": 23.12,
+      "eps_ttm": 25.02,
+      "book_value": 195.96,
+      "roe": 13.03,
+      "roa": 8.45,
+      "net_margin_ttm": 13.41,
+      "asset_turnover_ttm": 62.99,
+      "net_profit_ttm": 1307370200,
+      "revenue_ttm": 9746916260,
+      "shares_outstanding": 52242750,
+      "dividend_payout_ratio": 0.7992,
+      "dividend_to_ltp": 0.0253,
+      "promoter_holding": 87.1,
+      "public_float": 12.04,
+      "week52_high": 958.86,
+      "week52_low": 771.43,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9246,
+      "trade_turnover": 7304340,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

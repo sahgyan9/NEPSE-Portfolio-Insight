@@ -1,0 +1,49 @@
+{
+  "symbol": "HLI",
+  "full_name": "Himalayan Life Insurance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 328,
+      "pe_ratio": 89.25,
+      "pb_ratio": 3.27,
+      "graham_number": 91.14,
+      "discount_from_graham": 2.599,
+      "eps_reported": 3.81,
+      "eps_ttm": 3.68,
+      "book_value": 100.45,
+      "roe": 3.4,
+      "roa": 0.36,
+      "net_margin_ttm": 1.82,
+      "asset_turnover_ttm": 19.55,
+      "net_profit_ttm": 336018150,
+      "revenue_ttm": 18433634820,
+      "shares_outstanding": 91432373,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 449.57,
+      "week52_low": 317,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 13570,
+      "trade_turnover": 4421106,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

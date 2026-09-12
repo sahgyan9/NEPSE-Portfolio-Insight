@@ -1,0 +1,49 @@
+{
+  "symbol": "MKCL",
+  "full_name": "Muktinath Krishi Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Others",
+      "ltp_at_capture": 1139,
+      "pe_ratio": 147.65,
+      "pb_ratio": 10.98,
+      "graham_number": 134.19,
+      "discount_from_graham": 7.4877,
+      "eps_reported": -3.49,
+      "eps_ttm": 7.71,
+      "book_value": 103.75,
+      "roe": 7.52,
+      "roa": 4.54,
+      "net_margin_ttm": 8.2,
+      "asset_turnover_ttm": 55.38,
+      "net_profit_ttm": 58321130,
+      "revenue_ttm": 711010890,
+      "shares_outstanding": 7560000,
+      "dividend_payout_ratio": 1.037,
+      "dividend_to_ltp": 0.007,
+      "promoter_holding": 80,
+      "public_float": 19.4,
+      "week52_high": 1676.97,
+      "week52_low": 1065,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 454,
+      "trade_turnover": 519330.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Others"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "TRH",
+  "full_name": "Taragaon Regency Hotel Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hotels",
+      "ltp_at_capture": 780,
+      "pe_ratio": -1108.07,
+      "pb_ratio": 5.3,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -9.84,
+      "eps_ttm": -0.7,
+      "book_value": 147.3,
+      "roe": 0,
+      "roa": -0.31,
+      "net_margin_ttm": -8.03,
+      "asset_turnover_ttm": 3.91,
+      "net_profit_ttm": -13811946,
+      "revenue_ttm": 171942650,
+      "shares_outstanding": 19621201,
+      "dividend_payout_ratio": -7.103,
+      "dividend_to_ltp": 0.0064,
+      "promoter_holding": 30.85,
+      "public_float": 69.15,
+      "week52_high": 1037.82,
+      "week52_low": 686.9,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 544,
+      "trade_turnover": 419097.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hotels"
+}

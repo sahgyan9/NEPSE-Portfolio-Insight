@@ -1,0 +1,49 @@
+{
+  "symbol": "HDHPC",
+  "full_name": "Himal Dolakha Hydropower Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 215.9,
+      "pe_ratio": -70.8,
+      "pb_ratio": 2.91,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -4.36,
+      "eps_ttm": -3.05,
+      "book_value": 74.09,
+      "roe": 0,
+      "roa": -3.65,
+      "net_margin_ttm": -70.15,
+      "asset_turnover_ttm": 5.21,
+      "net_profit_ttm": -85382570,
+      "revenue_ttm": 121714100,
+      "shares_outstanding": 28000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 265,
+      "week52_low": 165,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 77239,
+      "trade_turnover": 16567765.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

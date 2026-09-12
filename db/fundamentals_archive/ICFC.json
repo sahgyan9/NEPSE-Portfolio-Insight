@@ -1,0 +1,49 @@
+{
+  "symbol": "ICFC",
+  "full_name": "ICFC Finance Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 613.1,
+      "pe_ratio": 28.68,
+      "pb_ratio": 3.47,
+      "graham_number": 291.45,
+      "discount_from_graham": 1.1036,
+      "eps_reported": 11.62,
+      "eps_ttm": 21.38,
+      "book_value": 176.61,
+      "roe": 12.06,
+      "roa": 1.04,
+      "net_margin_ttm": 13.66,
+      "asset_turnover_ttm": 7.65,
+      "net_profit_ttm": 252972740,
+      "revenue_ttm": 1851835330,
+      "shares_outstanding": 11834709,
+      "dividend_payout_ratio": 0.7387,
+      "dividend_to_ltp": 0.0258,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 715.56,
+      "week52_low": 588,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 10039,
+      "trade_turnover": 6204102,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "NABIL",
+  "full_name": "Nabil Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 558,
+      "pe_ratio": 17.68,
+      "pb_ratio": 2.29,
+      "graham_number": 415.7,
+      "discount_from_graham": 0.3423,
+      "eps_reported": 28.14,
+      "eps_ttm": 31.57,
+      "book_value": 243.3,
+      "roe": 13.15,
+      "roa": 1.28,
+      "net_margin_ttm": 22.3,
+      "asset_turnover_ttm": 5.73,
+      "net_profit_ttm": 8540793000,
+      "revenue_ttm": 38300359000,
+      "shares_outstanding": 270569970,
+      "dividend_payout_ratio": 0.396,
+      "dividend_to_ltp": 0.0224,
+      "promoter_holding": 60,
+      "public_float": 40,
+      "week52_high": 560,
+      "week52_low": 483,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-28",
+      "trade_volume": 61497,
+      "trade_turnover": 34237335.1,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

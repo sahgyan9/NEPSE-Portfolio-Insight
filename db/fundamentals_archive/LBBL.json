@@ -1,0 +1,49 @@
+{
+  "symbol": "LBBL",
+  "full_name": "Lumbini Bikas Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 499.9,
+      "pe_ratio": 20.31,
+      "pb_ratio": 2.43,
+      "graham_number": 337.25,
+      "discount_from_graham": 0.4823,
+      "eps_reported": 20.67,
+      "eps_ttm": 24.61,
+      "book_value": 205.4,
+      "roe": 12.8,
+      "roa": 1.34,
+      "net_margin_ttm": 18.58,
+      "asset_turnover_ttm": 7.21,
+      "net_profit_ttm": 891784670,
+      "revenue_ttm": 4800499860,
+      "shares_outstanding": 36236922,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 635.68,
+      "week52_low": 441.8,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 36457,
+      "trade_turnover": 18046215,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

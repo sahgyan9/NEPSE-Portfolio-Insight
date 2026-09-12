@@ -1,0 +1,49 @@
+{
+  "symbol": "SIFC",
+  "full_name": "Shree Investment Finance Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 520,
+      "pe_ratio": 112.59,
+      "pb_ratio": 3.74,
+      "graham_number": 120.22,
+      "discount_from_graham": 3.3254,
+      "eps_reported": 3.38,
+      "eps_ttm": 4.62,
+      "book_value": 139.08,
+      "roe": 3.3,
+      "roa": 0.46,
+      "net_margin_ttm": 6.49,
+      "asset_turnover_ttm": 7.08,
+      "net_profit_ttm": 46184310,
+      "revenue_ttm": 711821770,
+      "shares_outstanding": 10000007,
+      "dividend_payout_ratio": 1.3858,
+      "dividend_to_ltp": 0.0123,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 658,
+      "week52_low": 459,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3490,
+      "trade_turnover": 1808169,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

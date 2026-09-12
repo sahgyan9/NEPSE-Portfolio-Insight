@@ -1,0 +1,49 @@
+{
+  "symbol": "FMDBL",
+  "full_name": "First Micro Finance Development Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "sector": "Microfinance",
+      "ltp_at_capture": 765.2,
+      "pe_ratio": 53.96,
+      "pb_ratio": 5.58,
+      "graham_number": 209.28,
+      "discount_from_graham": 2.6564,
+      "eps_reported": 14.18,
+      "eps_ttm": 14.18,
+      "book_value": 137.26,
+      "roe": 10.73,
+      "roa": 3.18,
+      "net_margin_ttm": 47.13,
+      "asset_turnover_ttm": 6.76,
+      "net_profit_ttm": 190728220,
+      "revenue_ttm": 404702250,
+      "shares_outstanding": 13448713,
+      "dividend_payout_ratio": 0.4583,
+      "dividend_to_ltp": 0.0085,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 1010.97,
+      "week52_low": 745,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 6078,
+      "trade_turnover": 4635690.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

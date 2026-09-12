@@ -1,0 +1,49 @@
+{
+  "symbol": "MNBBL",
+  "full_name": "Muktinath Bikas Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 372.2,
+      "pe_ratio": 16.97,
+      "pb_ratio": 2.4,
+      "graham_number": 276.68,
+      "discount_from_graham": 0.3453,
+      "eps_reported": 15.71,
+      "eps_ttm": 21.94,
+      "book_value": 155.09,
+      "roe": 14.72,
+      "roa": 1.32,
+      "net_margin_ttm": 17.4,
+      "asset_turnover_ttm": 7.59,
+      "net_profit_ttm": 1755180000,
+      "revenue_ttm": 10087397000,
+      "shares_outstanding": 80007286,
+      "dividend_payout_ratio": 0.8296,
+      "dividend_to_ltp": 0.0489,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 432.77,
+      "week52_low": 342.2,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 20285,
+      "trade_turnover": 7529792,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}
