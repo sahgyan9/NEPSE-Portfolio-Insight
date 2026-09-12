@@ -24,7 +24,7 @@ import {
     refreshDividendAnnouncements,
     PortfolioDividendsResponse,
 } from '@/services/receivedDividendsApi';
-import { fetchStockData, getCachedStockData } from '@/services/sharebazaarApi';
+import { fetchMultipleStockData } from '@/services/sharebazaarApi';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
 import {
     getManualDividends,
@@ -38,6 +38,7 @@ import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { StockHolding, portfolioHoldings as localHoldings } from '@/data/portfolioData';
 import { DynamicGradientBorder } from '@/components/DynamicGradientBorder';
+import { IPOTable } from '@/components/IPOTable';
 
 interface DividendRow {
     id: string;
@@ -124,22 +125,13 @@ const DividendsPage = () => {
         const symbols = portfolioData.companies.map(c => c.symbol);
         
         const loadLTPs = async () => {
+            const stockMap = await fetchMultipleStockData(symbols);
             const newLtpMap = new Map<string, number>();
-            for (const sym of symbols) {
-                const cached = getCachedStockData(sym);
-                if (cached && cached.last_traded_price) {
-                    newLtpMap.set(sym, parseFloat(cached.last_traded_price));
-                } else {
-                    try {
-                        const fresh = await fetchStockData(sym);
-                        if (fresh && fresh.last_traded_price) {
-                            newLtpMap.set(sym, parseFloat(fresh.last_traded_price));
-                        }
-                    } catch (e) {
-                        console.error(`Failed LTP for ${sym}`);
-                    }
+            stockMap.forEach((data, sym) => {
+                if (data && data.ltp > 0) {
+                    newLtpMap.set(sym, data.ltp);
                 }
-            }
+            });
             setLtpMap(newLtpMap);
         };
         loadLTPs();
@@ -580,6 +572,11 @@ const DividendsPage = () => {
                         )}
                     </div>
                 </details>
+
+                {/* IPO & Corporate Issues Pipeline */}
+                <div className="pt-4">
+                    <IPOTable />
+                </div>
             </main>
             <Footer />
         </div>

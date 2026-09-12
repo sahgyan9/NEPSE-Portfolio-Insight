@@ -13,6 +13,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { MarketContextDisplay } from '@/components/MarketContext';
 import { FundamentalsArchiveCard } from '@/components/FundamentalsArchiveCard';
+import { HighLowScannerCard } from '@/components/HighLowScannerCard';
+import { IPOTable } from '@/components/IPOTable';
 import { AIChatbot } from '@/components/AIChatbot';
 import { Button } from '@/components/ui/button';
 import { usePortfolioAnalytics } from '@/hooks/usePortfolio';
@@ -62,6 +64,14 @@ const MarketPage = () => {
 
                 {/* Market Context Display */}
                 <MarketContextDisplay />
+
+                {/* 52-Week High & Low Breakout Scanner */}
+                <HighLowScannerCard />
+
+                {/* IPO & Corporate Issues Pipeline */}
+                <div className="mt-8">
+                    <IPOTable />
+                </div>
 
                 {/* All-company fundamentals archive (build history for later analysis) */}
                 <FundamentalsArchiveCard />
