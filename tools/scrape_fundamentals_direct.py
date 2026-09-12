@@ -16,6 +16,10 @@ db/fundamentals.json stores, with exact values instead of LLM-extracted ones:
     publicFloat       <- stocksGenralInfo.public_holding    (x100 -> percent)
     high52            <- masterData._52_weeks_hi
     low52             <- masterData._52_weeks_lo
+    lastTradeDate     <- latestPrice.created_at (date part)
+    tradeVolume       <- latestPrice.actual_volume / .volume
+    tradeTurnover     <- latestPrice.turn_over
+    capturedAt        <- today, so the UI can age lastTradeDate correctly
 
 Notes:
 - avgVolume120d is NOT provided by NepseAlpha's payload; any existing value
@@ -35,6 +39,7 @@ import json
 import os
 import sys
 import time
+from datetime import datetime
 
 import httpx
 
@@ -59,6 +64,35 @@ def _num(v):
         return float(v)
     except (TypeError, ValueError):
         return None
+
+
+def liquidity_fields(props: dict) -> dict:
+    """When this stock last actually traded, and how thin that trade was.
+
+    peRatio/pbRatio are computed off the last traded price. NEPSE has many
+    thinly-traded names whose "last price" is months old and often set by a
+    single-share trade -- their ratios are arithmetically correct and
+    economically meaningless, and they sweep any cheapness screen. We store the
+    raw facts (trade date, volume, turnover) plus the date we captured them and
+    let the UI age them, rather than freezing a "stale" boolean that itself goes
+    stale the day after it is written.
+    """
+    price = props.get("latestPrice") or {}
+    created = price.get("created_at")   # e.g. "2026-04-07T09:14:59.000000Z"
+    last_trade_date = created[:10] if isinstance(created, str) and len(created) >= 10 else None
+
+    volume = _num(price.get("actual_volume"))
+    if volume is None:
+        volume = _num(price.get("volume"))
+    turnover = _num(price.get("turn_over"))
+
+    fields = {
+        "lastTradeDate": last_trade_date,
+        "tradeVolume": int(volume) if volume is not None else None,
+        "tradeTurnover": round(turnover, 2) if turnover is not None else None,
+        "capturedAt": datetime.now().strftime("%Y-%m-%d"),
+    }
+    return {k: v for k, v in fields.items() if v is not None}
 
 
 def extract_fundamentals(props: dict) -> dict:
@@ -89,7 +123,10 @@ def extract_fundamentals(props: dict) -> dict:
     if fields["sharesOutstanding"] is not None:
         fields["sharesOutstanding"] = int(fields["sharesOutstanding"])
 
-    return {k: v for k, v in fields.items() if v is not None}
+    out = {k: v for k, v in fields.items() if v is not None}
+    # How tradeable the peRatio / pbRatio above really are
+    out.update(liquidity_fields(props))
+    return out
 
 
 def load_db() -> dict:
