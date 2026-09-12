@@ -1,0 +1,49 @@
+{
+  "symbol": "CZBIL",
+  "full_name": "Citizen Bank International Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 208,
+      "pe_ratio": 19.7,
+      "pb_ratio": 1.33,
+      "graham_number": 192.51,
+      "discount_from_graham": 0.0805,
+      "eps_reported": 11.23,
+      "eps_ttm": 10.56,
+      "book_value": 155.96,
+      "roe": 7.09,
+      "roa": 0.67,
+      "net_margin_ttm": 10.6,
+      "asset_turnover_ttm": 6.32,
+      "net_profit_ttm": 1637889050,
+      "revenue_ttm": 15448557930,
+      "shares_outstanding": 155098062,
+      "dividend_payout_ratio": 0.4735,
+      "dividend_to_ltp": 0.024,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 235,
+      "week52_low": 186,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 82252,
+      "trade_turnover": 17017938.8,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

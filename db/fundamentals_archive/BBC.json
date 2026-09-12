@@ -1,0 +1,49 @@
+{
+  "symbol": "BBC",
+  "full_name": "Bishal Bazar Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2077-78-Q2",
+      "fiscal_year": "077-078",
+      "quarter": 2,
+      "sector": "Tradings",
+      "ltp_at_capture": 4300,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "graham_number": 0,
+      "discount_from_graham": null,
+      "eps_reported": 250.25,
+      "eps_ttm": null,
+      "book_value": 0,
+      "roe": 0,
+      "roa": 0,
+      "net_margin_ttm": null,
+      "asset_turnover_ttm": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": 40100000,
+      "dividend_payout_ratio": null,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 98.96,
+      "public_float": 1.04,
+      "week52_high": 5843.84,
+      "week52_low": 4070,
+      "sector_rankings": {
+        "pe_vs_sector": 0,
+        "pb_vs_sector": 0,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 0,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 150,
+      "trade_turnover": 645000,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Tradings"
+}

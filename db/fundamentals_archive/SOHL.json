@@ -1,0 +1,49 @@
+{
+  "symbol": "SOHL",
+  "full_name": "Solu Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 606.3,
+      "pe_ratio": 53.01,
+      "pb_ratio": 4.47,
+      "graham_number": 186.73,
+      "discount_from_graham": 2.2469,
+      "eps_reported": 11.44,
+      "eps_ttm": 11.44,
+      "book_value": 135.49,
+      "roe": 8.44,
+      "roa": 3.44,
+      "net_margin_ttm": 40.62,
+      "asset_turnover_ttm": 8.46,
+      "net_profit_ttm": 1143851019.07,
+      "revenue_ttm": 2815952182.58,
+      "shares_outstanding": 100000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 80,
+      "public_float": 9.7,
+      "week52_high": 849,
+      "week52_low": 330,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 73945,
+      "trade_turnover": 43901146.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

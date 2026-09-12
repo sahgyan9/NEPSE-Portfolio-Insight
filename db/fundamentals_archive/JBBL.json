@@ -1,0 +1,49 @@
+{
+  "symbol": "JBBL",
+  "full_name": "Jyoti Bikas Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 349.6,
+      "pe_ratio": 45.84,
+      "pb_ratio": 2.14,
+      "graham_number": 167.46,
+      "discount_from_graham": 1.0877,
+      "eps_reported": 19.09,
+      "eps_ttm": 7.63,
+      "book_value": 163.43,
+      "roe": 4.96,
+      "roa": 0.46,
+      "net_margin_ttm": 6.65,
+      "asset_turnover_ttm": 6.91,
+      "net_profit_ttm": 335229400,
+      "revenue_ttm": 5038758640,
+      "shares_outstanding": 43957858,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 404.7,
+      "week52_low": 305,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 26251,
+      "trade_turnover": 9114347.2,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

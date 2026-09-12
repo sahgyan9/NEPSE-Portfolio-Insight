@@ -1,35 +1,35 @@
 {
-  "totalValue": 386290.02749999997,
-  "holdingCount": 26,
+  "totalValue": 387290.02749999997,
+  "holdingCount": 27,
   "volatilityScore": 0.214,
   "sectorExposure": [
     {
       "sector": "Commercial Bank",
-      "weight": 0.2334
+      "weight": 0.2328
     },
     {
       "sector": "Mutual Fund",
-      "weight": 0.2058
+      "weight": 0.2052
     },
     {
       "sector": "Hydropower",
-      "weight": 0.1798
+      "weight": 0.1793
     },
     {
       "sector": "Manufacturing",
-      "weight": 0.1404
+      "weight": 0.1426
     },
     {
       "sector": "Microfinance",
-      "weight": 0.0984
+      "weight": 0.0982
     },
     {
       "sector": "Telecom",
-      "weight": 0.0905
+      "weight": 0.0902
     },
     {
       "sector": "Hotels",
-      "weight": 0.0257
+      "weight": 0.0256
     },
     {
       "sector": "Life Insurance",
@@ -45,38 +45,44 @@
     {
       "symbol": "CHCL",
       "type": "OVERVALUED",
-      "message": "CHCL: VERY HIGH P/E (72.27). Consider taking profits if growth slows.",
-      "pe": 72.27
+      "message": "CHCL: VERY HIGH P/E (74.98). Consider taking profits if growth slows.",
+      "pe": 74.98
     },
     {
       "symbol": "CLI",
       "type": "OVERVALUED",
-      "message": "CLI: VERY HIGH P/E (52.87). Consider taking profits if growth slows.",
-      "pe": 52.87
+      "message": "CLI: VERY HIGH P/E (52.64). Consider taking profits if growth slows.",
+      "pe": 52.64
     },
     {
       "symbol": "HRL",
       "type": "OVERVALUED",
-      "message": "HRL: VERY HIGH P/E (176.28). Consider taking profits if growth slows.",
-      "pe": 176.28
+      "message": "HRL: VERY HIGH P/E (181.61). Consider taking profits if growth slows.",
+      "pe": 181.61
     },
     {
       "symbol": "NICA",
       "type": "OVERVALUED",
-      "message": "NICA: VERY HIGH P/E (343.33). Consider taking profits if growth slows.",
-      "pe": 343.33
+      "message": "NICA: VERY HIGH P/E (349.5). Consider taking profits if growth slows.",
+      "pe": 349.5
     },
     {
       "symbol": "NIMB",
       "type": "UNDERVALUED",
-      "message": "NIMB: VALUE ZONE P/E (12.28). Potentially undervalued based on earnings.",
-      "pe": 12.28
+      "message": "NIMB: VALUE ZONE P/E (12.9). Potentially undervalued based on earnings.",
+      "pe": 12.9
     },
     {
-      "symbol": "SGHC",
+      "symbol": "SHL",
       "type": "OVERVALUED",
-      "message": "SGHC: VERY HIGH P/E (52.05). Consider taking profits if growth slows.",
-      "pe": 52.05
+      "message": "SHL: VERY HIGH P/E (78.06). Consider taking profits if growth slows.",
+      "pe": 78.06
+    },
+    {
+      "symbol": "SAPIL",
+      "type": "OVERVALUED",
+      "message": "SAPIL: VERY HIGH P/E (271.56). Consider taking profits if growth slows.",
+      "pe": 271.56
     }
   ]
 }

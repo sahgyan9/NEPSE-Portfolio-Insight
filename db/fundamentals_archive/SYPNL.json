@@ -1,0 +1,49 @@
+{
+  "symbol": "SYPNL",
+  "full_name": "SY Panel Nepal Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 1360,
+      "pe_ratio": 441.64,
+      "pb_ratio": 12.48,
+      "graham_number": 86.88,
+      "discount_from_graham": 14.6541,
+      "eps_reported": 3.08,
+      "eps_ttm": 3.08,
+      "book_value": 108.94,
+      "roe": 2.83,
+      "roa": 2.35,
+      "net_margin_ttm": 5.69,
+      "asset_turnover_ttm": 41.21,
+      "net_profit_ttm": 40282913.42,
+      "revenue_ttm": 707578861.05,
+      "shares_outstanding": 13081371,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 60,
+      "public_float": 36.86,
+      "week52_high": 2132,
+      "week52_low": 351.7,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 28962,
+      "trade_turnover": 38635308,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

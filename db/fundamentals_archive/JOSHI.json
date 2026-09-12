@@ -1,0 +1,49 @@
+{
+  "symbol": "JOSHI",
+  "full_name": "Joshi Hydropower Development Company Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q2",
+      "fiscal_year": "082-083",
+      "quarter": 2,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 263,
+      "pe_ratio": -34.9,
+      "pb_ratio": 3.87,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -7.17,
+      "eps_ttm": -7.53,
+      "book_value": 67.88,
+      "roe": 0,
+      "roa": -9.98,
+      "net_margin_ttm": -358.01,
+      "asset_turnover_ttm": 2.79,
+      "net_profit_ttm": -46173900,
+      "revenue_ttm": 12897380,
+      "shares_outstanding": 6128100,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 380.9,
+      "week52_low": 250.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7969,
+      "trade_turnover": 2103816,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "NESDO",
+  "full_name": "NESDO Sambridha Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1500,
+      "pe_ratio": 17.61,
+      "pb_ratio": 5.22,
+      "graham_number": 742.31,
+      "discount_from_graham": 1.0207,
+      "eps_reported": 65.09,
+      "eps_ttm": 85.18,
+      "book_value": 287.49,
+      "roe": 32.31,
+      "roa": 5.98,
+      "net_margin_ttm": 46.27,
+      "asset_turnover_ttm": 12.92,
+      "net_profit_ttm": 248173580,
+      "revenue_ttm": 536309620,
+      "shares_outstanding": 2913375,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 67.5,
+      "public_float": 32.5,
+      "week52_high": 1811.39,
+      "week52_low": 1428.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 369,
+      "trade_turnover": 553500,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

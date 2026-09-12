@@ -1,0 +1,49 @@
+{
+  "symbol": "CHDC",
+  "full_name": "CEDB Holdings Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Investment",
+      "ltp_at_capture": 2280,
+      "pe_ratio": 33.98,
+      "pb_ratio": 8.86,
+      "graham_number": 623.36,
+      "discount_from_graham": 2.6576,
+      "eps_reported": 61.05,
+      "eps_ttm": 67.11,
+      "book_value": 257.36,
+      "roe": 31.31,
+      "roa": 32.57,
+      "net_margin_ttm": 97.12,
+      "asset_turnover_ttm": 33.54,
+      "net_profit_ttm": 694034600,
+      "revenue_ttm": 714619690,
+      "shares_outstanding": 10342370,
+      "dividend_payout_ratio": 0.1639,
+      "dividend_to_ltp": 0.0048,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 2866.4,
+      "week52_low": 2000,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 20439,
+      "trade_turnover": 45844677,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Investment"
+}

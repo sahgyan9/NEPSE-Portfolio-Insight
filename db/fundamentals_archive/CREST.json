@@ -1,0 +1,49 @@
+{
+  "symbol": "CREST",
+  "full_name": "Crest Micro Life Insurance Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 1197.9,
+      "pe_ratio": 370.05,
+      "pb_ratio": 10.78,
+      "graham_number": 89.98,
+      "discount_from_graham": 12.3125,
+      "eps_reported": 2.15,
+      "eps_ttm": 3.24,
+      "book_value": 111.17,
+      "roe": 2.91,
+      "roa": 2.2,
+      "net_margin_ttm": 10.06,
+      "asset_turnover_ttm": 21.83,
+      "net_profit_ttm": 24278460,
+      "revenue_ttm": 241456349,
+      "shares_outstanding": 7500000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1568.7,
+      "week52_low": 1005.3,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 9303,
+      "trade_turnover": 11160809.1,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

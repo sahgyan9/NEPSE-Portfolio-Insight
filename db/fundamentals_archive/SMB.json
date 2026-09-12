@@ -1,0 +1,49 @@
+{
+  "symbol": "SMB",
+  "full_name": "Support Microfinance Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1835,
+      "pe_ratio": 36.54,
+      "pb_ratio": 10.01,
+      "graham_number": 455.19,
+      "discount_from_graham": 3.0312,
+      "eps_reported": 46.53,
+      "eps_ttm": 50.22,
+      "book_value": 183.37,
+      "roe": 30.46,
+      "roa": 3.12,
+      "net_margin_ttm": 22.06,
+      "asset_turnover_ttm": 14.14,
+      "net_profit_ttm": 67333970,
+      "revenue_ttm": 305256730,
+      "shares_outstanding": 1340755,
+      "dividend_payout_ratio": 0.1991,
+      "dividend_to_ltp": 0.0054,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 2270.45,
+      "week52_low": 1702,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 950,
+      "trade_turnover": 1757405,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

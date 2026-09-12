@@ -1,0 +1,49 @@
+{
+  "symbol": "SMPDA",
+  "full_name": "Sampada Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 766.8,
+      "pe_ratio": 50.82,
+      "pb_ratio": 4.79,
+      "graham_number": 233.09,
+      "discount_from_graham": 2.2896,
+      "eps_reported": 25.2,
+      "eps_ttm": 15.09,
+      "book_value": 160.04,
+      "roe": 9.22,
+      "roa": 0.97,
+      "net_margin_ttm": 10.48,
+      "asset_turnover_ttm": 9.3,
+      "net_profit_ttm": 105748090,
+      "revenue_ttm": 1009153770,
+      "shares_outstanding": 7008584,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 67.68,
+      "public_float": 32.32,
+      "week52_high": 1065.01,
+      "week52_low": 740,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 505,
+      "trade_turnover": 388850,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

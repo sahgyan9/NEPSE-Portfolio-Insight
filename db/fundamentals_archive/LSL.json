@@ -1,0 +1,49 @@
+{
+  "symbol": "LSL",
+  "full_name": "Laxmi Sunrise Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 227.5,
+      "pe_ratio": 13.53,
+      "pb_ratio": 1.3,
+      "graham_number": 257.36,
+      "discount_from_graham": -0.116,
+      "eps_reported": 10.15,
+      "eps_ttm": 16.81,
+      "book_value": 175.08,
+      "roe": 10.02,
+      "roa": 0.99,
+      "net_margin_ttm": 16.83,
+      "asset_turnover_ttm": 5.9,
+      "net_profit_ttm": 4502988000,
+      "revenue_ttm": 26757681000,
+      "shares_outstanding": 267811636,
+      "dividend_payout_ratio": 0.5947,
+      "dividend_to_ltp": 0.044,
+      "promoter_holding": 51.05,
+      "public_float": 48.95,
+      "week52_high": 240,
+      "week52_low": 195.82,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 191885,
+      "trade_turnover": 43845722.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

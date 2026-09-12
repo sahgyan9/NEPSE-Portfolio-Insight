@@ -1,0 +1,49 @@
+{
+  "symbol": "SHLB",
+  "full_name": "Shrijanshil Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1513.9,
+      "pe_ratio": 43.84,
+      "pb_ratio": 5.55,
+      "graham_number": 460.36,
+      "discount_from_graham": 2.2885,
+      "eps_reported": 19.97,
+      "eps_ttm": 34.53,
+      "book_value": 272.78,
+      "roe": 14.03,
+      "roa": 1.27,
+      "net_margin_ttm": 9.94,
+      "asset_turnover_ttm": 12.75,
+      "net_profit_ttm": 37766980,
+      "revenue_ttm": 380098250,
+      "shares_outstanding": 1093750,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 64,
+      "public_float": 36,
+      "week52_high": 2132.25,
+      "week52_low": 1409.7,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 88,
+      "trade_turnover": 132255.2,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

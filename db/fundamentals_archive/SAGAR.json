@@ -1,0 +1,49 @@
+{
+  "symbol": "SAGAR",
+  "full_name": "Sagar Distillery Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 1755,
+      "pe_ratio": -270.34,
+      "pb_ratio": 13.81,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -6.49,
+      "eps_ttm": -6.49,
+      "book_value": 127.08,
+      "roe": 0,
+      "roa": -3.19,
+      "net_margin_ttm": -18.22,
+      "asset_turnover_ttm": 17.52,
+      "net_profit_ttm": -47131147.6,
+      "revenue_ttm": 258672422.39,
+      "shares_outstanding": 7260000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 80,
+      "public_float": 20,
+      "week52_high": 2360,
+      "week52_low": 351.4,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4600,
+      "trade_turnover": 7930400,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

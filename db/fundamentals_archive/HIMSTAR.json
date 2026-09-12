@@ -1,0 +1,49 @@
+{
+  "symbol": "HIMSTAR",
+  "full_name": "Him Star Urja Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 739,
+      "pe_ratio": -29.38,
+      "pb_ratio": 9.36,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -25.16,
+      "eps_ttm": -25.16,
+      "book_value": 78.98,
+      "roe": 0,
+      "roa": -7.27,
+      "net_margin_ttm": -52.84,
+      "asset_turnover_ttm": 13.76,
+      "net_profit_ttm": -93828590.32,
+      "revenue_ttm": 177572929,
+      "shares_outstanding": 3730000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 70,
+      "public_float": 29.5,
+      "week52_high": 1171,
+      "week52_low": 267.5,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4500,
+      "trade_turnover": 3343050,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

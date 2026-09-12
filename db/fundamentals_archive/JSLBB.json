@@ -1,0 +1,49 @@
+{
+  "symbol": "JSLBB",
+  "full_name": "Janautthan Samudayic Laghubitta Bikas Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1010,
+      "pe_ratio": 51.18,
+      "pb_ratio": 5.91,
+      "graham_number": 275.47,
+      "discount_from_graham": 2.6665,
+      "eps_reported": 8.09,
+      "eps_ttm": 19.73,
+      "book_value": 170.91,
+      "roe": 12.16,
+      "roa": 1.43,
+      "net_margin_ttm": 11.19,
+      "asset_turnover_ttm": 12.79,
+      "net_profit_ttm": 33563400,
+      "revenue_ttm": 299842580,
+      "shares_outstanding": 1700919,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 55,
+      "public_float": 45,
+      "week52_high": 1432.27,
+      "week52_low": 970,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 79,
+      "trade_turnover": 80098.1,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

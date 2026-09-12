@@ -1,0 +1,49 @@
+{
+  "symbol": "SBI",
+  "full_name": "Nepal SBI Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 408.1,
+      "pe_ratio": 22.44,
+      "pb_ratio": 2.15,
+      "graham_number": 278.49,
+      "discount_from_graham": 0.4654,
+      "eps_reported": 17.19,
+      "eps_ttm": 18.18,
+      "book_value": 189.57,
+      "roe": 9.9,
+      "roa": 0.85,
+      "net_margin_ttm": 13.77,
+      "asset_turnover_ttm": 6.18,
+      "net_profit_ttm": 2061104450,
+      "revenue_ttm": 14967349910,
+      "shares_outstanding": 113351243,
+      "dividend_payout_ratio": 0.495,
+      "dividend_to_ltp": 0.0221,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 440,
+      "week52_low": 360.48,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 14659,
+      "trade_turnover": 6008724.1,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "NLIC",
+  "full_name": "Nepal Life Insurance Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 755.1,
+      "pe_ratio": 176.35,
+      "pb_ratio": 5.98,
+      "graham_number": 110.32,
+      "discount_from_graham": 5.8446,
+      "eps_reported": 6.4,
+      "eps_ttm": 4.28,
+      "book_value": 126.33,
+      "roe": 3.34,
+      "roa": 0.16,
+      "net_margin_ttm": 0.77,
+      "asset_turnover_ttm": 20.26,
+      "net_profit_ttm": 405934180,
+      "revenue_ttm": 52430638110,
+      "shares_outstanding": 94802013,
+      "dividend_payout_ratio": 4.916,
+      "dividend_to_ltp": 0.0279,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 840.1,
+      "week52_low": 676.19,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3492,
+      "trade_turnover": 2619000,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

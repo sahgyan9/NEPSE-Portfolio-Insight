@@ -1,0 +1,49 @@
+{
+  "symbol": "GRDBL",
+  "full_name": "Green Development Bank Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 1068,
+      "pe_ratio": 78.85,
+      "pb_ratio": 9.14,
+      "graham_number": 188.66,
+      "discount_from_graham": 4.6609,
+      "eps_reported": 7.63,
+      "eps_ttm": 13.54,
+      "book_value": 116.8,
+      "roe": 12.17,
+      "roa": 1.19,
+      "net_margin_ttm": 15.9,
+      "asset_turnover_ttm": 7.51,
+      "net_profit_ttm": 83363590,
+      "revenue_ttm": 524153420,
+      "shares_outstanding": 6154999,
+      "dividend_payout_ratio": 0.5907,
+      "dividend_to_ltp": 0.0075,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 1269.9,
+      "week52_low": 879.86,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4203,
+      "trade_turnover": 4505195.7,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "KSBBL",
+  "full_name": "Kamana Sewa Bikas Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "sector": "Development Banks",
+      "ltp_at_capture": 486,
+      "pe_ratio": 21.76,
+      "pb_ratio": 2.84,
+      "graham_number": 293.17,
+      "discount_from_graham": 0.6577,
+      "eps_reported": 21.23,
+      "eps_ttm": 22.34,
+      "book_value": 171.01,
+      "roe": 14,
+      "roa": 1.18,
+      "net_margin_ttm": 16.71,
+      "asset_turnover_ttm": 7.08,
+      "net_profit_ttm": 862678130,
+      "revenue_ttm": 5161258290,
+      "shares_outstanding": 38619308,
+      "dividend_payout_ratio": 0.7069,
+      "dividend_to_ltp": 0.0325,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 525.01,
+      "week52_low": 413,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 22882,
+      "trade_turnover": 11047429.6,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

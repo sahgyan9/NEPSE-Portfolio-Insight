@@ -1,0 +1,49 @@
+{
+  "symbol": "AHL",
+  "full_name": "Asian Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 420,
+      "pe_ratio": -30.55,
+      "pb_ratio": 5.89,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -19.31,
+      "eps_ttm": -13.75,
+      "book_value": 71.36,
+      "roe": 0,
+      "roa": -3.61,
+      "net_margin_ttm": -50.53,
+      "asset_turnover_ttm": 7.15,
+      "net_profit_ttm": -46750500,
+      "revenue_ttm": 92528540,
+      "shares_outstanding": 3400000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 676.5,
+      "week52_low": 410.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2839,
+      "trade_turnover": 1183863,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

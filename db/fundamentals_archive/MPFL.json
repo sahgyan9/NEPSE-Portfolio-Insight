@@ -1,0 +1,49 @@
+{
+  "symbol": "MPFL",
+  "full_name": "Multipurpose Finance Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 622.3,
+      "pe_ratio": 542.42,
+      "pb_ratio": 5.22,
+      "graham_number": 55.5,
+      "discount_from_graham": 10.2135,
+      "eps_reported": 1.16,
+      "eps_ttm": 1.15,
+      "book_value": 119.31,
+      "roe": 0.96,
+      "roa": 0.17,
+      "net_margin_ttm": 8.66,
+      "asset_turnover_ttm": 1.99,
+      "net_profit_ttm": 7000670,
+      "revenue_ttm": 80815850,
+      "shares_outstanding": 6102000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 730,
+      "week52_low": 498,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3483,
+      "trade_turnover": 2162943,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

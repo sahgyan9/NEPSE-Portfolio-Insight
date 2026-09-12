@@ -1,0 +1,49 @@
+{
+  "symbol": "SMATA",
+  "full_name": "Samata Gharelu Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 742,
+      "pe_ratio": 34.72,
+      "pb_ratio": 5.32,
+      "graham_number": 259.05,
+      "discount_from_graham": 1.8643,
+      "eps_reported": 16.62,
+      "eps_ttm": 21.37,
+      "book_value": 139.56,
+      "roe": 16.07,
+      "roa": 2.21,
+      "net_margin_ttm": 17.43,
+      "asset_turnover_ttm": 12.67,
+      "net_profit_ttm": 141156710,
+      "revenue_ttm": 809713510,
+      "shares_outstanding": 6605041,
+      "dividend_payout_ratio": 0.2527,
+      "dividend_to_ltp": 0.0073,
+      "promoter_holding": 59.11,
+      "public_float": 40.89,
+      "week52_high": 1197.05,
+      "week52_low": 726.2,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 520,
+      "trade_turnover": 384800,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

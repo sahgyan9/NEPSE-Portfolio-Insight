@@ -1,0 +1,49 @@
+{
+  "symbol": "NLG",
+  "full_name": "NLG Insurance Company Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 592,
+      "pe_ratio": 217.39,
+      "pb_ratio": 3.46,
+      "graham_number": 102.34,
+      "discount_from_graham": 4.7848,
+      "eps_reported": 1.74,
+      "eps_ttm": 2.72,
+      "book_value": 170.93,
+      "roe": 1.62,
+      "roa": 0.76,
+      "net_margin_ttm": 2.25,
+      "asset_turnover_ttm": 33.91,
+      "net_profit_ttm": 72649520,
+      "revenue_ttm": 3232944540,
+      "shares_outstanding": 26678332,
+      "dividend_payout_ratio": 2.7027,
+      "dividend_to_ltp": 0.0124,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 871.18,
+      "week52_low": 558,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 10644,
+      "trade_turnover": 6279960,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

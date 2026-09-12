@@ -1,0 +1,49 @@
+{
+  "symbol": "BFC",
+  "full_name": "Best Finance Company Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Finance",
+      "ltp_at_capture": 514,
+      "pe_ratio": 33.64,
+      "pb_ratio": 4.56,
+      "graham_number": 196.84,
+      "discount_from_graham": 1.6112,
+      "eps_reported": 8.8,
+      "eps_ttm": 15.28,
+      "book_value": 112.72,
+      "roe": 13.3,
+      "roa": 1.9,
+      "net_margin_ttm": 25.44,
+      "asset_turnover_ttm": 7.47,
+      "net_profit_ttm": 136035190,
+      "revenue_ttm": 534728480,
+      "shares_outstanding": 8904242,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 60,
+      "public_float": 40,
+      "week52_high": 562.8,
+      "week52_low": 419.8,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 29657,
+      "trade_turnover": 15095413,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Finance"
+}

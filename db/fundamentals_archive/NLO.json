@@ -1,0 +1,49 @@
+{
+  "symbol": "NLO",
+  "full_name": "Nepal Lube Oil Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Manufacturing And Processing",
+      "ltp_at_capture": 269.4,
+      "pe_ratio": 3.65,
+      "pb_ratio": 0.48,
+      "graham_number": 963.82,
+      "discount_from_graham": -0.7205,
+      "eps_reported": 78.19,
+      "eps_ttm": 73.8,
+      "book_value": 559.45,
+      "roe": 14.53,
+      "roa": 5.96,
+      "net_margin_ttm": 4,
+      "asset_turnover_ttm": 148.98,
+      "net_profit_ttm": 64526790,
+      "revenue_ttm": 1613177850,
+      "shares_outstanding": 874352,
+      "dividend_payout_ratio": 0.2846,
+      "dividend_to_ltp": 0.078,
+      "promoter_holding": 67.3,
+      "public_float": 32.7,
+      "week52_high": 269.4,
+      "week52_low": 244.33,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-04-07",
+      "trade_volume": 1,
+      "trade_turnover": 265.5,
+      "days_since_trade": 113,
+      "price_is_stale": true
+    }
+  ],
+  "sector": "Manufacturing And Processing"
+}

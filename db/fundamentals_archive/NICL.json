@@ -1,0 +1,49 @@
+{
+  "symbol": "NICL",
+  "full_name": "Nepal Insurance Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Non Life Insurance",
+      "ltp_at_capture": 510.9,
+      "pe_ratio": 53.36,
+      "pb_ratio": 2.95,
+      "graham_number": 193.08,
+      "discount_from_graham": 1.6461,
+      "eps_reported": 5.55,
+      "eps_ttm": 9.57,
+      "book_value": 173.04,
+      "roe": 5.6,
+      "roa": 3.18,
+      "net_margin_ttm": 12.1,
+      "asset_turnover_ttm": 26.3,
+      "net_profit_ttm": 244025690,
+      "revenue_ttm": 2016627170,
+      "shares_outstanding": 25485750,
+      "dividend_payout_ratio": 0.658,
+      "dividend_to_ltp": 0.0123,
+      "promoter_holding": 50.87,
+      "public_float": 49.13,
+      "week52_high": 671.82,
+      "week52_low": 480.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 24887,
+      "trade_turnover": 12692370,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Non Life Insurance"
+}

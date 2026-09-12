@@ -1,0 +1,49 @@
+{
+  "symbol": "NTC",
+  "full_name": "Nepal Doorsanchar Comapany Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Others",
+      "ltp_at_capture": 861.9,
+      "pe_ratio": 25.44,
+      "pb_ratio": 1.56,
+      "graham_number": 648.05,
+      "discount_from_graham": 0.33,
+      "eps_reported": 46.47,
+      "eps_ttm": 33.88,
+      "book_value": 550.88,
+      "roe": 6.53,
+      "roa": 4.77,
+      "net_margin_ttm": 16.02,
+      "asset_turnover_ttm": 29.78,
+      "net_profit_ttm": 6098899000,
+      "revenue_ttm": 38069723000,
+      "shares_outstanding": 180000000,
+      "dividend_payout_ratio": 0.8854,
+      "dividend_to_ltp": 0.0348,
+      "promoter_holding": 91.52,
+      "public_float": 8.48,
+      "week52_high": 929.41,
+      "week52_low": 808,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 14704,
+      "trade_turnover": 12789539.2,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Others"
+}

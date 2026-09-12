@@ -1,0 +1,49 @@
+{
+  "symbol": "NHDL",
+  "full_name": "Nepal Hydro Developers Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 639.9,
+      "pe_ratio": 47.68,
+      "pb_ratio": 5.18,
+      "graham_number": 193.18,
+      "discount_from_graham": 2.3124,
+      "eps_reported": 16.75,
+      "eps_ttm": 13.42,
+      "book_value": 123.6,
+      "roe": 11.48,
+      "roa": 9.11,
+      "net_margin_ttm": 50.47,
+      "asset_turnover_ttm": 18.04,
+      "net_profit_ttm": 56782000,
+      "revenue_ttm": 112510000,
+      "shares_outstanding": 4231343,
+      "dividend_payout_ratio": 0.6707,
+      "dividend_to_ltp": 0.0141,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 742,
+      "week52_low": 583.76,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 6100,
+      "trade_turnover": 3843000,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

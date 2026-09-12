@@ -1,0 +1,49 @@
+{
+  "symbol": "DDBL",
+  "full_name": "Deprosc Laghubitta Bittiya Sanstha Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 842,
+      "pe_ratio": 18.42,
+      "pb_ratio": 3.97,
+      "graham_number": 467.18,
+      "discount_from_graham": 0.8023,
+      "eps_reported": 44.13,
+      "eps_ttm": 45.7,
+      "book_value": 212.26,
+      "roe": 23.27,
+      "roa": 3.43,
+      "net_margin_ttm": 27.15,
+      "asset_turnover_ttm": 12.65,
+      "net_profit_ttm": 939163400,
+      "revenue_ttm": 3458990450,
+      "shares_outstanding": 20551142,
+      "dividend_payout_ratio": 0.3282,
+      "dividend_to_ltp": 0.0178,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 914.9,
+      "week52_low": 732.73,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4927,
+      "trade_turnover": 4122420.9,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

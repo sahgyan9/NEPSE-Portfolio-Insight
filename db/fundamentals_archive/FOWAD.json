@@ -1,0 +1,49 @@
+{
+  "symbol": "FOWAD",
+  "full_name": "Forward Community Microfinance Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 972.7,
+      "pe_ratio": 60.6,
+      "pb_ratio": 4.06,
+      "graham_number": 294.17,
+      "discount_from_graham": 2.3066,
+      "eps_reported": 18.15,
+      "eps_ttm": 16.05,
+      "book_value": 239.61,
+      "roe": 6.42,
+      "roa": 0.85,
+      "net_margin_ttm": 7.05,
+      "asset_turnover_ttm": 12.03,
+      "net_profit_ttm": 191965600,
+      "revenue_ttm": 2723276920,
+      "shares_outstanding": 11959537,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1300,
+      "week52_low": 951,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 6781,
+      "trade_turnover": 6441950,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

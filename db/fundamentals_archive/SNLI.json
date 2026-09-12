@@ -1,0 +1,49 @@
+{
+  "symbol": "SNLI",
+  "full_name": "Sun Nepal Life Insurance Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 431.7,
+      "pe_ratio": 41.2,
+      "pb_ratio": 3.05,
+      "graham_number": 182.56,
+      "discount_from_graham": 1.3647,
+      "eps_reported": 8.58,
+      "eps_ttm": 10.48,
+      "book_value": 141.38,
+      "roe": 7.2,
+      "roa": 2.93,
+      "net_margin_ttm": 15.71,
+      "asset_turnover_ttm": 18.66,
+      "net_profit_ttm": 553504070,
+      "revenue_ttm": 3524234070,
+      "shares_outstanding": 52827878,
+      "dividend_payout_ratio": 1.9089,
+      "dividend_to_ltp": 0.0463,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 502,
+      "week52_low": 392.38,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2479,
+      "trade_turnover": 1066217.9,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "TPC",
+  "full_name": "Terhathum Power Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 360,
+      "pe_ratio": 44.81,
+      "pb_ratio": 3.58,
+      "graham_number": 134.75,
+      "discount_from_graham": 1.6716,
+      "eps_reported": 10.49,
+      "eps_ttm": 8.03,
+      "book_value": 100.45,
+      "roe": 8.42,
+      "roa": 5.36,
+      "net_margin_ttm": 49.27,
+      "asset_turnover_ttm": 10.87,
+      "net_profit_ttm": 64272690,
+      "revenue_ttm": 130443860,
+      "shares_outstanding": 8000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 429,
+      "week52_low": 275.4,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 10655,
+      "trade_turnover": 3825145,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

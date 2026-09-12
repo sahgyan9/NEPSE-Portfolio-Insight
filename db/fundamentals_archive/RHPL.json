@@ -1,0 +1,49 @@
+{
+  "symbol": "RHPL",
+  "full_name": "RASUWAGADHI HYDROPOWER COMPANY LIMITED",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 262,
+      "pe_ratio": -11.34,
+      "pb_ratio": 3.74,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -24.16,
+      "eps_ttm": -23.1,
+      "book_value": 70.04,
+      "roe": 0,
+      "roa": -6.7,
+      "net_margin_ttm": -139.04,
+      "asset_turnover_ttm": 4.82,
+      "net_profit_ttm": -1580855000,
+      "revenue_ttm": 1136954000,
+      "shares_outstanding": 68421000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 344.33,
+      "week52_low": 253,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 7335,
+      "trade_turnover": 1923237,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

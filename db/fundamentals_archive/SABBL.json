@@ -1,0 +1,49 @@
+{
+  "symbol": "SABBL",
+  "full_name": "Salapa Bikas Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Development Banks",
+      "ltp_at_capture": 1080,
+      "pe_ratio": -1327.04,
+      "pb_ratio": 10.41,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -0.81,
+      "eps_ttm": -0.81,
+      "book_value": 103.75,
+      "roe": 0,
+      "roa": -0.21,
+      "net_margin_ttm": -2.83,
+      "asset_turnover_ttm": 7.28,
+      "net_profit_ttm": -4251416.88,
+      "revenue_ttm": 150403976.27,
+      "shares_outstanding": 5223880,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 67,
+      "public_float": 33,
+      "week52_high": 1848.1,
+      "week52_low": 330,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 21223,
+      "trade_turnover": 23324077,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

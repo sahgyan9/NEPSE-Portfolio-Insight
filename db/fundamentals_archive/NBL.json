@@ -1,0 +1,49 @@
+{
+  "symbol": "NBL",
+  "full_name": "Nepal Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 271.9,
+      "pe_ratio": 10.56,
+      "pb_ratio": 1,
+      "graham_number": 397.49,
+      "discount_from_graham": -0.316,
+      "eps_reported": 25.34,
+      "eps_ttm": 25.74,
+      "book_value": 272.79,
+      "roe": 9.78,
+      "roa": 0.92,
+      "net_margin_ttm": 16.9,
+      "asset_turnover_ttm": 5.46,
+      "net_profit_ttm": 3782496230,
+      "revenue_ttm": 22379289750,
+      "shares_outstanding": 146940229,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 300.97,
+      "week52_low": 230,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 46660,
+      "trade_turnover": 12691520,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "HATHY",
+  "full_name": "Hathway Investment Nepal Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Investment",
+      "ltp_at_capture": 721,
+      "pe_ratio": 473.45,
+      "pb_ratio": 10.69,
+      "graham_number": 48.07,
+      "discount_from_graham": 13.9985,
+      "eps_reported": 0.95,
+      "eps_ttm": 1.52,
+      "book_value": 67.44,
+      "roe": 2.25,
+      "roa": 1.76,
+      "net_margin_ttm": 22.74,
+      "asset_turnover_ttm": 7.73,
+      "net_profit_ttm": 48292750,
+      "revenue_ttm": 212393510,
+      "shares_outstanding": 31711680,
+      "dividend_payout_ratio": 3.9399,
+      "dividend_to_ltp": 0.0083,
+      "promoter_holding": 87.5,
+      "public_float": 12.27,
+      "week52_high": 1191.69,
+      "week52_low": 672.2,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3382,
+      "trade_turnover": 2455332,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Investment"
+}

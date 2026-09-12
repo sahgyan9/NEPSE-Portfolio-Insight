@@ -1,0 +1,49 @@
+{
+  "symbol": "RURU",
+  "full_name": "Ru Ru Jalbidhyut Pariyojana Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 620.2,
+      "pe_ratio": 51.76,
+      "pb_ratio": 4.83,
+      "graham_number": 186,
+      "discount_from_graham": 2.3344,
+      "eps_reported": 13.25,
+      "eps_ttm": 11.98,
+      "book_value": 128.34,
+      "roe": 9.44,
+      "roa": 7.69,
+      "net_margin_ttm": 39.69,
+      "asset_turnover_ttm": 19.37,
+      "net_profit_ttm": 74769830,
+      "revenue_ttm": 188375260,
+      "shares_outstanding": 6240544,
+      "dividend_payout_ratio": 0.8789,
+      "dividend_to_ltp": 0.017,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 754.55,
+      "week52_low": 590.91,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 1271,
+      "trade_turnover": 785478,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

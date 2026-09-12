@@ -1,0 +1,49 @@
+{
+  "symbol": "CLI",
+  "full_name": "Citizen Life Insurance Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 450,
+      "pe_ratio": 52.64,
+      "pb_ratio": 3.43,
+      "graham_number": 158.83,
+      "discount_from_graham": 1.8332,
+      "eps_reported": 9.6,
+      "eps_ttm": 8.55,
+      "book_value": 131.17,
+      "roe": 6.09,
+      "roa": 1.73,
+      "net_margin_ttm": 4.92,
+      "asset_turnover_ttm": 35.26,
+      "net_profit_ttm": 427408990,
+      "revenue_ttm": 8685543510,
+      "shares_outstanding": 49999999,
+      "dividend_payout_ratio": 2.3397,
+      "dividend_to_ltp": 0.0444,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 520.98,
+      "week52_low": 412,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 14337,
+      "trade_turnover": 6408639,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}

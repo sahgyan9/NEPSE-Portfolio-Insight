@@ -1,0 +1,49 @@
+{
+  "symbol": "AKJCL",
+  "full_name": "Ankhu Khola Jalvidhyut Company Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 369,
+      "pe_ratio": 161.52,
+      "pb_ratio": 3.99,
+      "graham_number": 68.93,
+      "discount_from_graham": 4.3535,
+      "eps_reported": 2.56,
+      "eps_ttm": 2.28,
+      "book_value": 92.42,
+      "roe": 2.5,
+      "roa": 1.76,
+      "net_margin_ttm": 20.96,
+      "asset_turnover_ttm": 8.38,
+      "net_profit_ttm": 45692240,
+      "revenue_ttm": 218038610,
+      "shares_outstanding": 20000000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 440,
+      "week52_low": 173,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 235650,
+      "trade_turnover": 86012250,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

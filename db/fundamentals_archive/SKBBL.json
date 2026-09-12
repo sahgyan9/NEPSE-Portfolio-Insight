@@ -1,0 +1,49 @@
+{
+  "symbol": "SKBBL",
+  "full_name": "Sana Kisan Bikas Bank Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 761,
+      "pe_ratio": 45.9,
+      "pb_ratio": 3.48,
+      "graham_number": 285.44,
+      "discount_from_graham": 1.666,
+      "eps_reported": 13.08,
+      "eps_ttm": 16.58,
+      "book_value": 218.4,
+      "roe": 7.82,
+      "roa": 2.01,
+      "net_margin_ttm": 36.78,
+      "asset_turnover_ttm": 5.46,
+      "net_profit_ttm": 816938340,
+      "revenue_ttm": 2221350260,
+      "shares_outstanding": 49271700,
+      "dividend_payout_ratio": 0.9047,
+      "dividend_to_ltp": 0.0197,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 848.56,
+      "week52_low": 711.6,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 5444,
+      "trade_turnover": 4126552,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

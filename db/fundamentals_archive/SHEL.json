@@ -1,0 +1,49 @@
+{
+  "symbol": "SHEL",
+  "full_name": "Singati Hydro Energy Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 306.5,
+      "pe_ratio": 42.35,
+      "pb_ratio": 2.79,
+      "graham_number": 133.73,
+      "discount_from_graham": 1.2919,
+      "eps_reported": 8.96,
+      "eps_ttm": 7.24,
+      "book_value": 109.82,
+      "roe": 6.77,
+      "roa": 3.42,
+      "net_margin_ttm": 30.64,
+      "asset_turnover_ttm": 11.18,
+      "net_profit_ttm": 220380380,
+      "revenue_ttm": 719358780,
+      "shares_outstanding": 30450000,
+      "dividend_payout_ratio": 0.6909,
+      "dividend_to_ltp": 0.0163,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 354.1,
+      "week52_low": 253.33,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 48376,
+      "trade_turnover": 14754680,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

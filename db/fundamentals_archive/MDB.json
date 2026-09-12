@@ -1,0 +1,49 @@
+{
+  "symbol": "MDB",
+  "full_name": "Miteri Development Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "sector": "Development Banks",
+      "ltp_at_capture": 593,
+      "pe_ratio": 51.11,
+      "pb_ratio": 4.14,
+      "graham_number": 193.35,
+      "discount_from_graham": 2.067,
+      "eps_reported": 11.6,
+      "eps_ttm": 11.6,
+      "book_value": 143.2,
+      "roe": 8.25,
+      "roa": 1.44,
+      "net_margin_ttm": 20.95,
+      "asset_turnover_ttm": 6.88,
+      "net_profit_ttm": 141215830,
+      "revenue_ttm": 674168890,
+      "shares_outstanding": 12170999,
+      "dividend_payout_ratio": 0.8619,
+      "dividend_to_ltp": 0.0169,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 718.74,
+      "week52_low": 534,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2683,
+      "trade_turnover": 1582970,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Development Banks"
+}

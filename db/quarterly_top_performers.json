@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T15:27:07.741723",
+  "generatedAt": "2026-09-12T10:08:52.630330",
   "latestPeriod": "FY 2082-83 Q3",
   "periods": {
     "FY 2082-83 Q3": {
@@ -170,8 +170,8 @@
       "Manufacturing": [
         {
           "symbol": "HDL",
-          "score": 82.8,
-          "baseScore": 61.7,
+          "score": 89.0,
+          "baseScore": 66.2,
           "roe": 24.54,
           "eps": 28.89,
           "epsGrowth": 20.8,
@@ -184,8 +184,8 @@
         },
         {
           "symbol": "SARBTM",
-          "score": 65.4,
-          "baseScore": 51.7,
+          "score": 63.3,
+          "baseScore": 50.0,
           "roe": 13.03,
           "eps": 25.02,
           "epsGrowth": 99.13,
@@ -198,8 +198,8 @@
         },
         {
           "symbol": "SHIVM",
-          "score": 52.1,
-          "baseScore": 41.7,
+          "score": 53.1,
+          "baseScore": 42.5,
           "roe": 9.91,
           "eps": 18.11,
           "epsGrowth": 126.83,
@@ -425,23 +425,9 @@
       ],
       "Manufacturing": [
         {
-          "symbol": "SARBTM",
-          "score": 76.0,
-          "baseScore": 60.0,
-          "roe": 13.22,
-          "eps": 24.91,
-          "epsGrowth": 169.58,
-          "epsConsistency": 75.0,
-          "profitGrowth": 169.58,
-          "revenueGrowth": 21.17,
-          "netMargin": 13.49,
-          "qualityModifier": 26.6,
-          "qualityDetail": "ROA: 8.6% (+1.0); Avg Div: 4.0% (+1.6%)"
-        },
-        {
           "symbol": "HDL",
-          "score": 73.9,
-          "baseScore": 55.0,
+          "score": 89.0,
+          "baseScore": 66.2,
           "roe": 24.34,
           "eps": 27.03,
           "epsGrowth": 67.71,
@@ -453,9 +439,23 @@
           "qualityDetail": "ROA: 20.9% (+1.0); Avg Div: 23.3% (+9.3%)"
         },
         {
+          "symbol": "SARBTM",
+          "score": 88.6,
+          "baseScore": 70.0,
+          "roe": 13.22,
+          "eps": 24.91,
+          "epsGrowth": 169.58,
+          "epsConsistency": 75.0,
+          "profitGrowth": 169.58,
+          "revenueGrowth": 21.17,
+          "netMargin": 13.49,
+          "qualityModifier": 26.6,
+          "qualityDetail": "ROA: 8.6% (+1.0); Avg Div: 4.0% (+1.6%)"
+        },
+        {
           "symbol": "SHIVM",
-          "score": 70.8,
-          "baseScore": 56.7,
+          "score": 84.4,
+          "baseScore": 67.5,
           "roe": 10.88,
           "eps": 19.57,
           "epsGrowth": 590.73,
@@ -682,8 +682,8 @@
       "Manufacturing": [
         {
           "symbol": "HDL",
-          "score": 87.3,
-          "baseScore": 65.0,
+          "score": 99.1,
+          "baseScore": 73.8,
           "roe": 21.57,
           "eps": 22.9,
           "epsGrowth": 89.08,
@@ -696,8 +696,8 @@
         },
         {
           "symbol": "SARBTM",
-          "score": 82.3,
-          "baseScore": 65.0,
+          "score": 93.4,
+          "baseScore": 73.8,
           "roe": 13.91,
           "eps": 25.87,
           "epsGrowth": 43.06,
@@ -710,8 +710,8 @@
         },
         {
           "symbol": "SHIVM",
-          "score": 62.5,
-          "baseScore": 50.0,
+          "score": 60.9,
+          "baseScore": 48.8,
           "roe": 9.96,
           "eps": 17.72,
           "epsGrowth": 213.16,

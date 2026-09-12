@@ -1,0 +1,49 @@
+{
+  "symbol": "GILB",
+  "full_name": "Global IME Laghubitta Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1109,
+      "pe_ratio": 23.56,
+      "pb_ratio": 5.16,
+      "graham_number": 476.85,
+      "discount_from_graham": 1.3257,
+      "eps_reported": 45.16,
+      "eps_ttm": 47.07,
+      "book_value": 214.72,
+      "roe": 23.07,
+      "roa": 2.87,
+      "net_margin_ttm": 20.05,
+      "asset_turnover_ttm": 14.3,
+      "net_profit_ttm": 305134620,
+      "revenue_ttm": 1521509230,
+      "shares_outstanding": 6482977,
+      "dividend_payout_ratio": 0.1062,
+      "dividend_to_ltp": 0.0045,
+      "promoter_holding": 70,
+      "public_float": 30,
+      "week52_high": 1349.31,
+      "week52_low": 1060,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 58,
+      "trade_turnover": 64206,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

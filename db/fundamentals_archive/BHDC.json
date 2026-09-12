@@ -1,0 +1,49 @@
+{
+  "symbol": "BHDC",
+  "full_name": "Bindhyabasini Hydropower Development Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 435,
+      "pe_ratio": 46.2,
+      "pb_ratio": 3.7,
+      "graham_number": 157.73,
+      "discount_from_graham": 1.7579,
+      "eps_reported": 13.22,
+      "eps_ttm": 9.42,
+      "book_value": 117.43,
+      "roe": 8.48,
+      "roa": 3.83,
+      "net_margin_ttm": 25.67,
+      "asset_turnover_ttm": 14.93,
+      "net_profit_ttm": 111694470,
+      "revenue_ttm": 435114890,
+      "shares_outstanding": 11862900,
+      "dividend_payout_ratio": 0.531,
+      "dividend_to_ltp": 0.0115,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 584.29,
+      "week52_low": 422.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 4331,
+      "trade_turnover": 1879220.9,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

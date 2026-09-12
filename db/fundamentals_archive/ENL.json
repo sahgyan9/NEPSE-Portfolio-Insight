@@ -1,0 +1,49 @@
+{
+  "symbol": "ENL",
+  "full_name": "Emerging Nepal Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Investment",
+      "ltp_at_capture": 805,
+      "pe_ratio": 296.54,
+      "pb_ratio": 7.28,
+      "graham_number": 82.18,
+      "discount_from_graham": 8.7953,
+      "eps_reported": 4.26,
+      "eps_ttm": 2.71,
+      "book_value": 110.58,
+      "roe": 2.48,
+      "roa": 2.4,
+      "net_margin_ttm": 66.4,
+      "asset_turnover_ttm": 3.62,
+      "net_profit_ttm": 15082620,
+      "revenue_ttm": 22716250,
+      "shares_outstanding": 5556000,
+      "dividend_payout_ratio": 1.8419,
+      "dividend_to_ltp": 0.0062,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 1160.88,
+      "week52_low": 762,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 315,
+      "trade_turnover": 253260,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Investment"
+}

@@ -1,0 +1,49 @@
+{
+  "symbol": "SIKLES",
+  "full_name": "Sikles Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 559.1,
+      "pe_ratio": 49.43,
+      "pb_ratio": 4.98,
+      "graham_number": 169.04,
+      "discount_from_graham": 2.3075,
+      "eps_reported": 16.3,
+      "eps_ttm": 11.31,
+      "book_value": 112.28,
+      "roe": 10.8,
+      "roa": 5.54,
+      "net_margin_ttm": 34.49,
+      "asset_turnover_ttm": 16.05,
+      "net_profit_ttm": 110563060,
+      "revenue_ttm": 320580510,
+      "shares_outstanding": 9775000,
+      "dividend_payout_ratio": 1.3262,
+      "dividend_to_ltp": 0.0268,
+      "promoter_holding": 0,
+      "public_float": 100,
+      "week52_high": 1022.1,
+      "week52_low": 533.04,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 8228,
+      "trade_turnover": 4582996,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

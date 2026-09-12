@@ -1,0 +1,49 @@
+{
+  "symbol": "SANIMA",
+  "full_name": "Sanima Bank Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "sector": "Commercial Banks",
+      "ltp_at_capture": 369.5,
+      "pe_ratio": 14.82,
+      "pb_ratio": 1.96,
+      "graham_number": 325.06,
+      "discount_from_graham": 0.1367,
+      "eps_reported": 22.78,
+      "eps_ttm": 24.92,
+      "book_value": 188.42,
+      "roe": 14.13,
+      "roa": 1.24,
+      "net_margin_ttm": 20.59,
+      "asset_turnover_ttm": 6.02,
+      "net_profit_ttm": 3385144530,
+      "revenue_ttm": 16438839910,
+      "shares_outstanding": 135815254,
+      "dividend_payout_ratio": 0.2957,
+      "dividend_to_ltp": 0.0199,
+      "promoter_holding": 51,
+      "public_float": 49,
+      "week52_high": 389.28,
+      "week52_low": 298,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 118072,
+      "trade_turnover": 44005434.4,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Commercial Banks"
+}

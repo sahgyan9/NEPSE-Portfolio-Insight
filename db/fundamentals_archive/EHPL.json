@@ -1,0 +1,49 @@
+{
+  "symbol": "EHPL",
+  "full_name": "Eastern Hydropower Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 351,
+      "pe_ratio": 80.38,
+      "pb_ratio": 4.52,
+      "graham_number": 87.39,
+      "discount_from_graham": 3.0166,
+      "eps_reported": 6.42,
+      "eps_ttm": 4.37,
+      "book_value": 77.73,
+      "roe": 5.78,
+      "roa": 2.46,
+      "net_margin_ttm": 15.05,
+      "asset_turnover_ttm": 16.32,
+      "net_profit_ttm": 27072410,
+      "revenue_ttm": 179921400,
+      "shares_outstanding": 6200000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 648.48,
+      "week52_low": 328.3,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 5950,
+      "trade_turnover": 2045610,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

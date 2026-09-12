@@ -1,0 +1,49 @@
+{
+  "symbol": "NMFBS",
+  "full_name": "National Microfinance Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 1125,
+      "pe_ratio": 24.44,
+      "pb_ratio": 4.34,
+      "graham_number": 518.38,
+      "discount_from_graham": 1.1702,
+      "eps_reported": 51.59,
+      "eps_ttm": 46.02,
+      "book_value": 259.51,
+      "roe": 20.09,
+      "roa": 2.34,
+      "net_margin_ttm": 19.94,
+      "asset_turnover_ttm": 11.72,
+      "net_profit_ttm": 700171000,
+      "revenue_ttm": 3511314000,
+      "shares_outstanding": 15213624,
+      "dividend_payout_ratio": 0.3259,
+      "dividend_to_ltp": 0.0133,
+      "promoter_holding": 74.03,
+      "public_float": 25.97,
+      "week52_high": 1269.94,
+      "week52_low": 1055.58,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 2302,
+      "trade_turnover": 2578240,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

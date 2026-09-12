@@ -1,0 +1,49 @@
+{
+  "symbol": "HURJA",
+  "full_name": "Himalaya Urja Bikas Company Limited",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 234.1,
+      "pe_ratio": 65.17,
+      "pb_ratio": 2.5,
+      "graham_number": 86.95,
+      "discount_from_graham": 1.6923,
+      "eps_reported": 4.03,
+      "eps_ttm": 3.59,
+      "book_value": 93.55,
+      "roe": 3.86,
+      "roa": 1.98,
+      "net_margin_ttm": 15.71,
+      "asset_turnover_ttm": 12.58,
+      "net_profit_ttm": 71124120,
+      "revenue_ttm": 452737880,
+      "shares_outstanding": 19800000,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 305,
+      "week52_low": 206,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 16560,
+      "trade_turnover": 3878352,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

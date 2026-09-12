@@ -1,0 +1,49 @@
+{
+  "symbol": "GBLBS",
+  "full_name": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Microfinance",
+      "ltp_at_capture": 752,
+      "pe_ratio": 20.47,
+      "pb_ratio": 2.55,
+      "graham_number": 493.9,
+      "discount_from_graham": 0.5226,
+      "eps_reported": 40,
+      "eps_ttm": 36.73,
+      "book_value": 295.18,
+      "roe": 13.02,
+      "roa": 2.46,
+      "net_margin_ttm": 17.6,
+      "asset_turnover_ttm": 14,
+      "net_profit_ttm": 369249380,
+      "revenue_ttm": 2097976150,
+      "shares_outstanding": 10053500,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": 73,
+      "public_float": 27,
+      "week52_high": 925.75,
+      "week52_low": 707,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 3675,
+      "trade_turnover": 2755882.5,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Microfinance"
+}

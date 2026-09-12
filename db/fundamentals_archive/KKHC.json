@@ -1,0 +1,49 @@
+{
+  "symbol": "KKHC",
+  "full_name": "Khanikhola Hydropower Co. Ltd.",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Hydro Power",
+      "ltp_at_capture": 284.7,
+      "pe_ratio": -7971.67,
+      "pb_ratio": 3.21,
+      "graham_number": null,
+      "discount_from_graham": null,
+      "eps_reported": -2.08,
+      "eps_ttm": -0.04,
+      "book_value": 88.57,
+      "roe": 0,
+      "roa": -0.02,
+      "net_margin_ttm": -0.24,
+      "asset_turnover_ttm": 9.42,
+      "net_profit_ttm": -332650,
+      "revenue_ttm": 138240690,
+      "shares_outstanding": 9314286,
+      "dividend_payout_ratio": 0,
+      "dividend_to_ltp": 0,
+      "promoter_holding": null,
+      "public_float": 100,
+      "week52_high": 321,
+      "week52_low": 212,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 720308,
+      "trade_turnover": 212490860,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Hydro Power"
+}

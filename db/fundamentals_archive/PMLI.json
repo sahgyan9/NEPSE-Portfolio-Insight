@@ -1,0 +1,49 @@
+{
+  "symbol": "PMLI",
+  "full_name": "Prabhu Mahalaxmi Life Insurance Ltd",
+  "snapshots": [
+    {
+      "captured_at": "2026-07-29",
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "082-083",
+      "quarter": 3,
+      "sector": "Life Insurance",
+      "ltp_at_capture": 444.3,
+      "pe_ratio": 62.87,
+      "pb_ratio": 3.84,
+      "graham_number": 135.58,
+      "discount_from_graham": 2.2771,
+      "eps_reported": 6.91,
+      "eps_ttm": 7.07,
+      "book_value": 115.6,
+      "roe": 6.3,
+      "roa": 1.72,
+      "net_margin_ttm": 6.15,
+      "asset_turnover_ttm": 28.02,
+      "net_profit_ttm": 375090810,
+      "revenue_ttm": 6103905870,
+      "shares_outstanding": 53077939,
+      "dividend_payout_ratio": 1.1916,
+      "dividend_to_ltp": 0.019,
+      "promoter_holding": 84.67,
+      "public_float": 15.33,
+      "week52_high": 533.11,
+      "week52_low": 433.1,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-07-29",
+      "trade_volume": 5630,
+      "trade_turnover": 2500283,
+      "days_since_trade": 0,
+      "price_is_stale": false
+    }
+  ],
+  "sector": "Life Insurance"
+}
