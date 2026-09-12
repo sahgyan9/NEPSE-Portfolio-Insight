@@ -59,18 +59,95 @@ const API_BASE_URL = import.meta.env.DEV
     ? '/api/sharebazaar'  // Proxied through Vite dev server
     : 'https://sharebazaar.vercel.app/api';  // Direct in production
 
+const NEPSE_SERVER_URL = import.meta.env.DEV
+    ? '/api/nepse-server'
+    : 'http://localhost:8000';
+
+/**
+ * Fast in-memory cache of the full live market snapshot (all 345+ stocks).
+ * Refreshed every 15 seconds to minimize backend network calls.
+ */
+let liveMarketSnapshotCache: Map<string, ShareBazaarResponse> | null = null;
+let liveMarketSnapshotTimestamp = 0;
+const LIVE_MARKET_SNAPSHOT_TTL = 15 * 1000; // 15 seconds
+
+/**
+ * Fetch all live stock prices in a single call from nepse_server (HamroShare CDN stream).
+ * Returns Map of symbol -> ShareBazaarResponse or null if nepse_server is unavailable.
+ */
+async function fetchFromNepseServer(): Promise<Map<string, ShareBazaarResponse> | null> {
+    const now = Date.now();
+    if (liveMarketSnapshotCache && (now - liveMarketSnapshotTimestamp) < LIVE_MARKET_SNAPSHOT_TTL) {
+        return liveMarketSnapshotCache;
+    }
+
+    try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s strict timeout
+
+        const response = await fetch(`${NEPSE_SERVER_URL}/api/live-market`, {
+            signal: controller.signal,
+            headers: { 'Accept': 'application/json' },
+        });
+        clearTimeout(timeoutId);
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        const stocks = data?.stocks;
+        if (!stocks || typeof stocks !== 'object') return null;
+
+        const results = new Map<string, ShareBazaarResponse>();
+        for (const [sym, s] of Object.entries<any>(stocks)) {
+            const symUpper = sym.toUpperCase().trim();
+            results.set(symUpper, {
+                id: symUpper,
+                symbol: symUpper,
+                company_name: s.name || symUpper,
+                ltp: Number(s.ltp) || 0,
+                last_updated: s.updated_at || new Date().toISOString(),
+                change: Number(s.change) || 0,
+                changePercent: Number(s.change_pct) || 0,
+                previousClose: Number(s.previous_close) || 0,
+                volume: Number(s.volume) || 0,
+            });
+        }
+
+        liveMarketSnapshotCache = results;
+        liveMarketSnapshotTimestamp = now;
+        return results;
+    } catch (e) {
+        return null;
+    }
+}
+
 /**
  * Fetch stock data for a single symbol
  * 
+ * Priority:
+ * 1. Local NEPSE Server (HamroShare live market stream, ~5ms)
+ * 2. ShareBazaar Vercel API fallback
+ * 
  * @param symbol - NEPSE stock symbol (e.g., "NABIL", "HBL", "CHCL")
  * @returns ShareBazaarResponse or null if fetch fails
- * 
- * @example
- * const data = await fetchStockData("NABIL");
- * console.log(data.company_name); // "Nabil Bank Limited"
- * console.log(data.ltp);          // 516
  */
 export const fetchStockData = async (symbol: string): Promise<ShareBazaarResponse | null> => {
+    const symUpper = symbol.trim().toUpperCase();
+
+    // 1. Try primary high-speed local server first
+    try {
+        const localMarket = await fetchFromNepseServer();
+        if (localMarket && localMarket.has(symUpper)) {
+            const stock = localMarket.get(symUpper)!;
+            if (stock.ltp > 0) {
+                return stock;
+            }
+        }
+    } catch (err) {
+        // Fall back to ShareBazaar
+    }
+
+    // 2. Fallback: ShareBazaar Vercel API
     try {
         if (import.meta.env.DEV) {
             console.log(`[ShareBazaar] Fetching ${symbol}...`);
@@ -87,17 +164,11 @@ export const fetchStockData = async (symbol: string): Promise<ShareBazaarRespons
         });
         clearTimeout(timeoutId);
 
-        if (import.meta.env.DEV) {
-            console.log(`[ShareBazaar] ${symbol} response status: ${response.status}`);
-        }
         if (!response.ok) {
             console.error(`[ShareBazaar] Failed to fetch data for ${symbol}: ${response.status}`);
             return null;
         }
         const data = await response.json();
-        if (import.meta.env.DEV) {
-            console.log(`[ShareBazaar] ${symbol} data:`, data);
-        }
         return data;
     } catch (error) {
         if (error instanceof Error && error.name === 'AbortError') {
@@ -112,8 +183,9 @@ export const fetchStockData = async (symbol: string): Promise<ShareBazaarRespons
 /**
  * Fetch stock data for multiple symbols in parallel
  * 
- * Uses chunked concurrent batches (max 5 at a time) to prevent
- * rate limiting while achieving high performance.
+ * Priority:
+ * 1. Resolves all available symbols from local NEPSE Server (HamroShare) in ONE call (<5ms)
+ * 2. Only fetches missing/unresolved symbols from ShareBazaar Vercel in batches of 5
  * 
  * @param symbols - Array of NEPSE stock symbols
  * @returns Map of symbol -> ShareBazaarResponse
@@ -122,14 +194,38 @@ export const fetchMultipleStockData = async (
     symbols: string[]
 ): Promise<Map<string, ShareBazaarResponse>> => {
     const results = new Map<string, ShareBazaarResponse>();
-    const batchSize = 5;
+    const normalizedSymbols = symbols.map(s => s.trim().toUpperCase());
 
-    for (let i = 0; i < symbols.length; i += batchSize) {
-        const batch = symbols.slice(i, i + batchSize);
+    // 1. Primary: High-speed local NEPSE Server (backed by HamroShare RSC stream)
+    const localLiveMarket = await fetchFromNepseServer();
+    const remainingToFetch: string[] = [];
+
+    if (localLiveMarket && localLiveMarket.size > 0) {
+        for (const sym of normalizedSymbols) {
+            const found = localLiveMarket.get(sym);
+            if (found && found.ltp > 0) {
+                results.set(sym, found);
+            } else {
+                remainingToFetch.push(sym);
+            }
+        }
+
+        // If all symbols were resolved, return immediately without hitting external web!
+        if (remainingToFetch.length === 0) {
+            return results;
+        }
+    } else {
+        remainingToFetch.push(...normalizedSymbols);
+    }
+
+    // 2. Secondary Fallback: ShareBazaar Vercel API in chunks of 5 for missing symbols
+    const batchSize = 5;
+    for (let i = 0; i < remainingToFetch.length; i += batchSize) {
+        const batch = remainingToFetch.slice(i, i + batchSize);
         const promises = batch.map(async (symbol) => {
             const data = await fetchStockData(symbol);
             if (data) {
-                results.set(symbol, data);
+                results.set(symbol.toUpperCase(), data);
             }
         });
         await Promise.allSettled(promises);
