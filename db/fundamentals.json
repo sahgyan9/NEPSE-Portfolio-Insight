@@ -6,12 +6,13 @@
     "pbRatio": 3.46,
     "sharesOutstanding": 55932287,
     "publicFloat": 100,
-    "high52": 720,
-    "low52": 519.02,
+    "high52": 730.0,
+    "low52": 524.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 40509,
     "tradeTurnover": 25893352.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "JBLB": {
     "eps": 57.77,
@@ -21,12 +22,13 @@
     "sharesOutstanding": 17512248,
     "promoterHolding": 67,
     "publicFloat": 33,
-    "high52": 1456,
-    "low52": 1152.63,
+    "high52": 1644.0,
+    "low52": 1219.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3394,
     "tradeTurnover": 4283228,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "CLI": {
     "eps": 8.55,
@@ -35,13 +37,14 @@
     "pbRatio": 3.43,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 520.98,
-    "low52": 412,
+    "high52": 526.0,
+    "low52": 410.1,
     "sharesOutstanding": 49999999,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14337,
     "tradeTurnover": 6408639,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "NIMB": {
     "eps": 15.72,
@@ -50,13 +53,14 @@
     "pbRatio": 1.02,
     "promoterHolding": 79.45,
     "publicFloat": 20.55,
-    "high52": 242.64,
-    "low52": 184.6,
+    "high52": 232.5,
+    "low52": 181.0,
     "sharesOutstanding": 341285950,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 129360,
     "tradeTurnover": 25807320,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "BHL": {
     "eps": 4.6,
@@ -65,13 +69,14 @@
     "pbRatio": 2.69,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 257.7,
-    "low52": 167,
+    "high52": 264.4,
+    "low52": 164.0,
     "sharesOutstanding": 36559400,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 29231,
     "tradeTurnover": 6226203,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SNLI": {
     "eps": 10.48,
@@ -80,19 +85,21 @@
     "pbRatio": 3.05,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 502,
-    "low52": 392.38,
+    "high52": 528.3,
+    "low52": 375.0,
     "sharesOutstanding": 52827878,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2479,
     "tradeTurnover": 1066217.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "NIBLSF": {
     "eps": 0.0,
     "bookValue": 0.0,
     "peRatio": 0.0,
-    "pbRatio": 0.0
+    "pbRatio": 0.0,
+    "sector": "Mutual Fund"
   },
   "CHCL": {
     "eps": 6.63,
@@ -101,13 +108,14 @@
     "pbRatio": 4.11,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 514.53,
-    "low52": 429.63,
+    "high52": 525.0,
+    "low52": 345.3,
     "sharesOutstanding": 94849886,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 79027,
     "tradeTurnover": 39039338,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SAHAS": {
     "eps": 27.36,
@@ -116,19 +124,24 @@
     "pbRatio": 3.76,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 687,
-    "low52": 487.6,
+    "high52": 716.6,
+    "low52": 535.3,
     "sharesOutstanding": 45738000,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 60590,
     "tradeTurnover": 40219642,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NBF3": {
     "eps": 0.0,
     "bookValue": 0.0,
     "peRatio": 0.0,
-    "pbRatio": 0.0
+    "pbRatio": 0.0,
+    "high52": 10.22,
+    "low52": 8.35,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
   },
   "SGHC": {
     "eps": 6.51,
@@ -136,13 +149,14 @@
     "peRatio": 48.87,
     "pbRatio": 3.8,
     "publicFloat": 100,
-    "high52": 468.06,
-    "low52": 299.9,
+    "high52": 487.6,
+    "low52": 280.0,
     "sharesOutstanding": 15930000,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 171458,
     "tradeTurnover": 55689558.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HRL": {
     "eps": 3.28,
@@ -151,19 +165,21 @@
     "pbRatio": 3.97,
     "promoterHolding": 70,
     "publicFloat": 29.4,
-    "high52": 1103.73,
-    "low52": 553,
+    "high52": 965.0,
+    "low52": 487.1,
     "sharesOutstanding": 108680000,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 66030,
     "tradeTurnover": 39690633,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "CSBY": {
     "eps": 0.0,
     "bookValue": 0.0,
     "peRatio": 0.0,
-    "pbRatio": 0.0
+    "pbRatio": 0.0,
+    "sector": "Mutual Fund"
   },
   "UPPER": {
     "eps": -1.03,
@@ -171,13 +187,14 @@
     "peRatio": -189.68,
     "pbRatio": 4.19,
     "publicFloat": 100,
-    "high52": 238,
-    "low52": 169.1,
+    "high52": 242.6,
+    "low52": 166.0,
     "sharesOutstanding": 211800000,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 48671,
     "tradeTurnover": 9510313.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "GCIL": {
     "eps": -5.27,
@@ -186,13 +203,14 @@
     "pbRatio": 2.13,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 509.03,
-    "low52": 322.5,
+    "high52": 489.9,
+    "low52": 315.5,
     "sharesOutstanding": 50244542,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15185,
     "tradeTurnover": 5436230,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "NTC": {
     "eps": 33.88,
@@ -202,12 +220,13 @@
     "sharesOutstanding": 180000000,
     "promoterHolding": 91.52,
     "publicFloat": 8.48,
-    "high52": 929.41,
-    "low52": 808,
+    "high52": 942.5,
+    "low52": 762.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14704,
     "tradeTurnover": 12789539.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "NICA": {
     "eps": 0.97,
@@ -216,13 +235,14 @@
     "pbRatio": 1.97,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 401,
-    "low52": 306.4,
+    "high52": 411.0,
+    "low52": 302.9,
     "sharesOutstanding": 149175669,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 37121,
     "tradeTurnover": 12580306.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "SARBTM": {
     "eps": 25.02,
@@ -231,13 +251,14 @@
     "pbRatio": 4.04,
     "promoterHolding": 87.1,
     "publicFloat": 12.04,
-    "high52": 958.86,
-    "low52": 771.43,
+    "high52": 942.4,
+    "low52": 750.0,
     "sharesOutstanding": 52242750,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9246,
     "tradeTurnover": 7304340,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "SONA": {
     "eps": 10.02,
@@ -246,25 +267,31 @@
     "pbRatio": 2.08,
     "promoterHolding": 60,
     "publicFloat": 37.58,
-    "high52": 513.07,
-    "low52": 400,
+    "high52": 510.0,
+    "low52": 380.0,
     "sharesOutstanding": 30750500,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15742,
     "tradeTurnover": 6418013.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "NMBSBFE": {
     "eps": null,
     "bookValue": null,
     "peRatio": null,
-    "pbRatio": null
+    "pbRatio": null,
+    "sector": "Mutual Fund"
   },
   "MMF1": {
     "eps": 0.0,
     "bookValue": 0.0,
     "peRatio": 0.0,
-    "pbRatio": 0.0
+    "pbRatio": 0.0,
+    "high52": 10.16,
+    "low52": 8.22,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
   },
   "HBL": {
     "eps": 7.86,
@@ -274,33 +301,39 @@
     "sharesOutstanding": 225816625,
     "promoterHolding": 72.99,
     "publicFloat": 27.01,
-    "high52": 241.78,
-    "low52": 186,
+    "high52": 237.0,
+    "low52": 183.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 45743,
     "tradeTurnover": 9057114,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "KDBY": {
     "eps": 0.0,
     "bookValue": 0.0,
     "peRatio": 0.0,
-    "pbRatio": 0.0
+    "pbRatio": 0.0,
+    "high52": 12.54,
+    "low52": 8.67,
+    "sharesOutstanding": 4000000,
+    "sector": "Mutual Fund"
   },
   "NABIL": {
     "eps": 31.57,
     "bookValue": 243.3,
     "peRatio": 17.68,
     "pbRatio": 2.29,
-    "promoterHolding": 60,
-    "publicFloat": 40,
-    "high52": 560,
-    "low52": 483,
-    "sharesOutstanding": 270569970,
+    "promoterHolding": 58.44,
+    "publicFloat": 41.56,
+    "high52": 568.0,
+    "low52": 471.0,
+    "sharesOutstanding": 270569984,
     "lastTradeDate": "2026-07-28",
     "tradeVolume": 61497,
     "tradeTurnover": 34237335.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "HDL": {
     "eps": 28.89,
@@ -309,19 +342,20 @@
     "pbRatio": 8.86,
     "promoterHolding": 58,
     "publicFloat": 42,
-    "high52": 1271.4,
-    "low52": 1081.67,
+    "high52": 1415.7,
+    "low52": 1097.6,
     "sharesOutstanding": 36880821,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12284,
     "tradeTurnover": 14310860,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "CBBL": {
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 998.03,
-    "low52": 822.22,
+    "high52": 1054.9,
+    "low52": 882.0,
     "eps": 34.99,
     "bookValue": 241.93,
     "peRatio": 26.86,
@@ -330,14 +364,15 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13731,
     "tradeTurnover": 12879678,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SHL": {
     "sharesOutstanding": 117511009,
     "promoterHolding": 69,
     "publicFloat": 31,
-    "high52": 535,
-    "low52": 415.83,
+    "high52": 559.8,
+    "low52": 464.0,
     "eps": 6.42,
     "bookValue": 26.73,
     "peRatio": 78.06,
@@ -345,7 +380,8 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10693,
     "tradeTurnover": 5346500,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "NBL": {
     "eps": 25.74,
@@ -355,12 +391,13 @@
     "sharesOutstanding": 146940229,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 300.97,
-    "low52": 230,
+    "high52": 302.9,
+    "low52": 225.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 46660,
     "tradeTurnover": 12691520,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "NRN": {
     "eps": 29.34,
@@ -370,12 +407,13 @@
     "sharesOutstanding": 17981211,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1694,
-    "low52": 1235,
+    "high52": 2175.0,
+    "low52": 1280.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 90206,
     "tradeTurnover": 126107988,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "SKBBL": {
     "eps": 16.58,
@@ -385,12 +423,13 @@
     "sharesOutstanding": 49271700,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 848.56,
-    "low52": 711.6,
+    "high52": 910.0,
+    "low52": 735.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5444,
     "tradeTurnover": 4126552,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "NLO": {
     "eps": 73.8,
@@ -400,12 +439,13 @@
     "sharesOutstanding": 874352,
     "promoterHolding": 67.3,
     "publicFloat": 32.7,
-    "high52": 269.4,
+    "high52": 293.2,
     "low52": 244.33,
     "lastTradeDate": "2026-04-07",
     "tradeVolume": 1,
     "tradeTurnover": 265.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "ADBL": {
     "eps": 23.61,
@@ -415,12 +455,13 @@
     "sharesOutstanding": 143055190,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 334.9,
-    "low52": 286.9,
+    "high52": 340.0,
+    "low52": 285.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 114881,
     "tradeTurnover": 36888289.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "BHDC": {
     "eps": 9.42,
@@ -429,12 +470,13 @@
     "pbRatio": 3.7,
     "sharesOutstanding": 11862900,
     "publicFloat": 100,
-    "high52": 584.29,
-    "low52": 422.1,
+    "high52": 616.0,
+    "low52": 401.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4331,
     "tradeTurnover": 1879220.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "DORDI": {
     "eps": -0.92,
@@ -443,12 +485,13 @@
     "pbRatio": 2.45,
     "sharesOutstanding": 21085208,
     "publicFloat": 100,
-    "high52": 319.77,
-    "low52": 215,
+    "high52": 327.4,
+    "low52": 213.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6738,
     "tradeTurnover": 1745142,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HHL": {
     "eps": 6.72,
@@ -458,12 +501,13 @@
     "sharesOutstanding": 10950000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 434.15,
-    "low52": 315,
+    "high52": 416.6,
+    "low52": 309.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22933,
     "tradeTurnover": 7797220,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "CZBIL": {
     "eps": 10.56,
@@ -473,12 +517,13 @@
     "sharesOutstanding": 155098062,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 235,
-    "low52": 186,
+    "high52": 238.6,
+    "low52": 183.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 82252,
     "tradeTurnover": 17017938.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "EBL": {
     "eps": 34.91,
@@ -488,12 +533,13 @@
     "sharesOutstanding": 137213756,
     "promoterHolding": 59.23,
     "publicFloat": 40.77,
-    "high52": 726,
-    "low52": 623,
+    "high52": 753.0,
+    "low52": 619.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1195,
     "tradeTurnover": 868765,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "UHEWA": {
     "eps": 17.66,
@@ -503,12 +549,13 @@
     "sharesOutstanding": 5750000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 657,
-    "low52": 460.17,
+    "high52": 692.6,
+    "low52": 521.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 8558,
     "tradeTurnover": 4960216.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "CHDC": {
     "eps": 67.11,
@@ -518,12 +565,13 @@
     "sharesOutstanding": 10342370,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 2866.4,
-    "low52": 2000,
+    "high52": 2717.0,
+    "low52": 1967.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20439,
     "tradeTurnover": 45844677,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "SPHL": {
     "eps": 2.03,
@@ -532,12 +580,13 @@
     "pbRatio": 5.67,
     "sharesOutstanding": 3000000,
     "publicFloat": 100,
-    "high52": 707.13,
-    "low52": 485.6,
+    "high52": 708.0,
+    "low52": 477.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1446,
     "tradeTurnover": 763488,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "USHL": {
     "eps": 45.97,
@@ -547,12 +596,13 @@
     "sharesOutstanding": 2200000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 940,
-    "low52": 480,
+    "high52": 945.0,
+    "low52": 468.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1136,
     "tradeTurnover": 616848,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MBL": {
     "eps": 19.71,
@@ -562,12 +612,13 @@
     "sharesOutstanding": 120862115,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 276,
-    "low52": 207.1,
+    "high52": 284.0,
+    "low52": 205.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19807,
     "tradeTurnover": 5130013,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "WNLB": {
     "eps": 18.68,
@@ -577,12 +628,13 @@
     "sharesOutstanding": 843405,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 2406.21,
-    "low52": 1326,
+    "high52": 2255.0,
+    "low52": 965.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 137,
     "tradeTurnover": 185498,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "PPL": {
     "eps": -2.37,
@@ -592,12 +644,13 @@
     "sharesOutstanding": 9489000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 424,
-    "low52": 279,
+    "high52": 425.0,
+    "low52": 263.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20791,
     "tradeTurnover": 6964985,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NMB": {
     "eps": 17.69,
@@ -607,12 +660,13 @@
     "sharesOutstanding": 192850410,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 269.8,
-    "low52": 221.43,
+    "high52": 272.0,
+    "low52": 230.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 45461,
     "tradeTurnover": 11274328,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "PCBL": {
     "eps": 23.31,
@@ -622,12 +676,13 @@
     "sharesOutstanding": 209547817,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 269,
-    "low52": 214.81,
+    "high52": 275.9,
+    "low52": 225.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 142192,
     "tradeTurnover": 34396244.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "PRVU": {
     "eps": 18.77,
@@ -637,12 +692,13 @@
     "sharesOutstanding": 235424900,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 245.34,
-    "low52": 181.2,
+    "high52": 235.6,
+    "low52": 169.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 130100,
     "tradeTurnover": 25460570,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "SANIMA": {
     "eps": 24.92,
@@ -652,12 +708,13 @@
     "sharesOutstanding": 135815254,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 389.28,
-    "low52": 298,
+    "high52": 390.6,
+    "low52": 295.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 118072,
     "tradeTurnover": 44005434.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "SBI": {
     "eps": 18.18,
@@ -667,12 +724,13 @@
     "sharesOutstanding": 113351243,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 440,
-    "low52": 360.48,
+    "high52": 441.0,
+    "low52": 363.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14659,
     "tradeTurnover": 6008724.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "SBL": {
     "eps": 23.83,
@@ -682,12 +740,13 @@
     "sharesOutstanding": 147944791,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 415.7,
-    "low52": 320.6,
+    "high52": 442.5,
+    "low52": 320.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 91430,
     "tradeTurnover": 37751447,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "SCB": {
     "eps": 29.25,
@@ -697,12 +756,13 @@
     "sharesOutstanding": 100423683,
     "promoterHolding": 72.52,
     "publicFloat": 27.48,
-    "high52": 698.7,
-    "low52": 607,
+    "high52": 712.6,
+    "low52": 594.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12520,
     "tradeTurnover": 8225640,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "CORBL": {
     "eps": 2.68,
@@ -712,12 +772,13 @@
     "sharesOutstanding": 5250000,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 2768,
-    "low52": 1377.9,
+    "high52": 3183.0,
+    "low52": 806.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 137376,
     "tradeTurnover": 180924192,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "EDBL": {
     "eps": 16.24,
@@ -727,12 +788,13 @@
     "sharesOutstanding": 12496945,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 695.13,
-    "low52": 553.4,
+    "high52": 683.4,
+    "low52": 535.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6434,
     "tradeTurnover": 3725286,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "GBBL": {
     "eps": 26.99,
@@ -742,12 +804,13 @@
     "sharesOutstanding": 60213483,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 454.38,
-    "low52": 370,
+    "high52": 450.0,
+    "low52": 367.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 54572,
     "tradeTurnover": 23029384,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "GRDBL": {
     "eps": 13.54,
@@ -757,12 +820,13 @@
     "sharesOutstanding": 6154999,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 1269.9,
-    "low52": 879.86,
+    "high52": 1320.0,
+    "low52": 911.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4203,
     "tradeTurnover": 4505195.7,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "JBBL": {
     "eps": 7.63,
@@ -772,12 +836,13 @@
     "sharesOutstanding": 43957858,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 404.7,
-    "low52": 305,
+    "high52": 395.0,
+    "low52": 295.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26251,
     "tradeTurnover": 9114347.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "SMPDA": {
     "eps": 15.09,
@@ -787,12 +852,13 @@
     "sharesOutstanding": 7008584,
     "promoterHolding": 67.68,
     "publicFloat": 32.32,
-    "high52": 1065.01,
-    "low52": 740,
+    "high52": 1064.0,
+    "low52": 707.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 505,
     "tradeTurnover": 388850,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "KSBBL": {
     "eps": 22.34,
@@ -802,12 +868,13 @@
     "sharesOutstanding": 38619308,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 525.01,
-    "low52": 413,
+    "high52": 534.0,
+    "low52": 404.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22882,
     "tradeTurnover": 11047429.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "LBBL": {
     "eps": 24.61,
@@ -817,12 +884,13 @@
     "sharesOutstanding": 36236922,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 635.68,
-    "low52": 441.8,
+    "high52": 555.0,
+    "low52": 433.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 36457,
     "tradeTurnover": 18046215,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "MDB": {
     "eps": 11.6,
@@ -832,12 +900,13 @@
     "sharesOutstanding": 12170999,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 718.74,
-    "low52": 534,
+    "high52": 705.8,
+    "low52": 530.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2683,
     "tradeTurnover": 1582970,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "MLBL": {
     "eps": 11.75,
@@ -847,12 +916,13 @@
     "sharesOutstanding": 45112810,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 437.59,
-    "low52": 339.05,
+    "high52": 418.0,
+    "low52": 330.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12709,
     "tradeTurnover": 4549822,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "MNBBL": {
     "eps": 21.94,
@@ -862,12 +932,13 @@
     "sharesOutstanding": 80007286,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 432.77,
-    "low52": 342.2,
+    "high52": 467.0,
+    "low52": 314.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20285,
     "tradeTurnover": 7529792,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "SADBL": {
     "eps": 23.83,
@@ -877,12 +948,13 @@
     "sharesOutstanding": 37339415,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 491.66,
-    "low52": 364.76,
+    "high52": 463.0,
+    "low52": 376.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13554,
     "tradeTurnover": 5665572,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "SAPDBL": {
     "eps": 19.59,
@@ -892,12 +964,13 @@
     "sharesOutstanding": 8343384,
     "promoterHolding": 56.75,
     "publicFloat": 43.25,
-    "high52": 1048.3,
-    "low52": 699.4,
+    "high52": 1065.7,
+    "low52": 595.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 66401,
     "tradeTurnover": 54980028,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "SHINE": {
     "eps": 19.18,
@@ -907,12 +980,13 @@
     "sharesOutstanding": 50219727,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 475.73,
-    "low52": 378.64,
+    "high52": 449.7,
+    "low52": 382.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6339,
     "tradeTurnover": 2614203.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "SINDU": {
     "eps": 1.14,
@@ -923,11 +997,12 @@
     "promoterHolding": 51,
     "publicFloat": 49,
     "high52": 919.9,
-    "low52": 618,
+    "low52": 359.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 17327,
     "tradeTurnover": 12302170,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "BFC": {
     "eps": 15.28,
@@ -937,12 +1012,13 @@
     "sharesOutstanding": 8904242,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 562.8,
-    "low52": 419.8,
+    "high52": 562.0,
+    "low52": 411.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 29657,
     "tradeTurnover": 15095413,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "CFCL": {
     "eps": 11.5,
@@ -952,12 +1028,13 @@
     "sharesOutstanding": 9488754,
     "promoterHolding": 51.24,
     "publicFloat": 48.76,
-    "high52": 664,
-    "low52": 462.1,
+    "high52": 699.0,
+    "low52": 445.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 258051,
     "tradeTurnover": 165797767.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "GFCL": {
     "eps": 9.64,
@@ -967,12 +1044,13 @@
     "sharesOutstanding": 9461152,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 726.38,
-    "low52": 550,
+    "high52": 738.0,
+    "low52": 528.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5931,
     "tradeTurnover": 3635703,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "GMFIL": {
     "eps": 4.05,
@@ -982,12 +1060,13 @@
     "sharesOutstanding": 10121760,
     "promoterHolding": 52.34,
     "publicFloat": 47.66,
-    "high52": 538,
-    "low52": 413,
+    "high52": 540.0,
+    "low52": 393.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12422,
     "tradeTurnover": 5774987.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "GUFL": {
     "eps": 7.4,
@@ -997,12 +1076,13 @@
     "sharesOutstanding": 8679938,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 619.9,
+    "high52": 644.0,
     "low52": 460.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 24738,
     "tradeTurnover": 14323302,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "ICFC": {
     "eps": 21.38,
@@ -1012,12 +1092,13 @@
     "sharesOutstanding": 11834709,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 715.56,
-    "low52": 588,
+    "high52": 715.0,
+    "low52": 567.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10039,
     "tradeTurnover": 6204102,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "JFL": {
     "eps": -15.65,
@@ -1027,12 +1108,13 @@
     "sharesOutstanding": 6904728,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 535.86,
-    "low52": 376.2,
+    "high52": 492.0,
+    "low52": 250.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1979,
     "tradeTurnover": 793579,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "MFIL": {
     "eps": 26.8,
@@ -1042,12 +1124,13 @@
     "sharesOutstanding": 13515524,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 900,
-    "low52": 561.3,
+    "high52": 938.0,
+    "low52": 545.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 64463,
     "tradeTurnover": 51041803.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "MPFL": {
     "eps": 1.15,
@@ -1057,12 +1140,13 @@
     "sharesOutstanding": 6102000,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 730,
-    "low52": 498,
+    "high52": 744.0,
+    "low52": 491.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3483,
     "tradeTurnover": 2162943,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "NFS": {
     "eps": -7.55,
@@ -1072,12 +1156,13 @@
     "sharesOutstanding": 7756467,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 792.9,
-    "low52": 555,
+    "high52": 725.0,
+    "low52": 465.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7640,
     "tradeTurnover": 4419740,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "PROFL": {
     "eps": -0.38,
@@ -1087,12 +1172,13 @@
     "sharesOutstanding": 8481060,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 570.39,
-    "low52": 423,
+    "high52": 522.0,
+    "low52": 360.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5664,
     "tradeTurnover": 2446848,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "RLFL": {
     "eps": 22.77,
@@ -1102,12 +1188,13 @@
     "sharesOutstanding": 11214517,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 542.9,
-    "low52": 405,
+    "high52": 514.9,
+    "low52": 398.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13545,
     "tradeTurnover": 6271335,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "SIFC": {
     "eps": 4.62,
@@ -1117,12 +1204,13 @@
     "sharesOutstanding": 10000007,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 658,
-    "low52": 459,
+    "high52": 687.4,
+    "low52": 450.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3490,
     "tradeTurnover": 1808169,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Finance"
   },
   "GLH": {
     "eps": 4.16,
@@ -1131,12 +1219,13 @@
     "pbRatio": 2.28,
     "sharesOutstanding": 18000000,
     "publicFloat": 100,
-    "high52": 321.8,
-    "low52": 232,
+    "high52": 328.2,
+    "low52": 227.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11310,
     "tradeTurnover": 2868216,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "OHL": {
     "eps": -3.76,
@@ -1146,12 +1235,13 @@
     "sharesOutstanding": 11844949,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 917.17,
-    "low52": 665.1,
+    "high52": 785.0,
+    "low52": 590.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3429,
     "tradeTurnover": 2324862,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "TRH": {
     "eps": -0.7,
@@ -1161,12 +1251,13 @@
     "sharesOutstanding": 19621201,
     "promoterHolding": 30.85,
     "publicFloat": 69.15,
-    "high52": 1037.82,
-    "low52": 686.9,
+    "high52": 914.5,
+    "low52": 681.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 544,
     "tradeTurnover": 419097.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "MABEL": {
     "eps": -2.92,
@@ -1176,12 +1267,13 @@
     "sharesOutstanding": 3858240,
     "promoterHolding": 51,
     "publicFloat": 38.22,
-    "high52": 884.8,
-    "low52": 349.4,
+    "high52": 927.0,
+    "low52": 317.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7772,
     "tradeTurnover": 4663200,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "AHPC": {
     "eps": 5.94,
@@ -1191,12 +1283,13 @@
     "sharesOutstanding": 40404028,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 316.9,
-    "low52": 254,
+    "high52": 323.3,
+    "low52": 245.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34737,
     "tradeTurnover": 9319937.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "AKJCL": {
     "eps": 2.28,
@@ -1205,12 +1298,13 @@
     "pbRatio": 3.99,
     "sharesOutstanding": 20000000,
     "publicFloat": 100,
-    "high52": 440,
-    "low52": 173,
+    "high52": 461.4,
+    "low52": 172.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 235650,
     "tradeTurnover": 86012250,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "AKPL": {
     "eps": 7.23,
@@ -1219,12 +1313,13 @@
     "pbRatio": 2.5,
     "sharesOutstanding": 38959421,
     "publicFloat": 100,
-    "high52": 310,
-    "low52": 235,
+    "high52": 317.0,
+    "low52": 227.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34065,
     "tradeTurnover": 8819428.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "API": {
     "eps": 11.48,
@@ -1233,12 +1328,13 @@
     "pbRatio": 2.92,
     "sharesOutstanding": 63797242,
     "publicFloat": 100,
-    "high52": 364.2,
-    "low52": 247.71,
+    "high52": 370.0,
+    "low52": 258.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 110338,
     "tradeTurnover": 36963230,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BARUN": {
     "eps": 2.96,
@@ -1247,12 +1343,13 @@
     "pbRatio": 3.01,
     "sharesOutstanding": 11225324,
     "publicFloat": 100,
-    "high52": 393,
-    "low52": 284.49,
+    "high52": 401.5,
+    "low52": 292.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14521,
     "tradeTurnover": 4732393.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BPCL": {
     "eps": 9.24,
@@ -1262,12 +1359,13 @@
     "sharesOutstanding": 34090650,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 976.24,
-    "low52": 635,
+    "high52": 819.0,
+    "low52": 612.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22232,
     "tradeTurnover": 14673120,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "CHL": {
     "eps": 1.21,
@@ -1276,12 +1374,13 @@
     "pbRatio": 3.08,
     "sharesOutstanding": 7739550,
     "publicFloat": 100,
-    "high52": 328.82,
-    "low52": 227.9,
+    "high52": 332.5,
+    "low52": 223.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7768,
     "tradeTurnover": 2048421.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "DHPL": {
     "eps": 1.06,
@@ -1291,12 +1390,13 @@
     "sharesOutstanding": 2640000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 341.42,
-    "low52": 257.1,
+    "high52": 345.0,
+    "low52": 254.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3008,
     "tradeTurnover": 878336,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "GHL": {
     "eps": -2.59,
@@ -1305,12 +1405,13 @@
     "pbRatio": 2.39,
     "sharesOutstanding": 16500000,
     "publicFloat": 100,
-    "high52": 283.4,
-    "low52": 200.9,
+    "high52": 290.0,
+    "low52": 197.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19141,
     "tradeTurnover": 4356491.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HDHPC": {
     "eps": -3.05,
@@ -1319,12 +1420,13 @@
     "pbRatio": 2.91,
     "sharesOutstanding": 28000000,
     "publicFloat": 100,
-    "high52": 265,
-    "low52": 165,
+    "high52": 274.0,
+    "low52": 162.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 77239,
     "tradeTurnover": 16567765.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HPPL": {
     "eps": 8.81,
@@ -1333,12 +1435,13 @@
     "pbRatio": 3.22,
     "sharesOutstanding": 15981255,
     "publicFloat": 100,
-    "high52": 424.3,
-    "low52": 312.93,
+    "high52": 605.0,
+    "low52": 340.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 573305,
     "tradeTurnover": 226283483.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HURJA": {
     "eps": 3.59,
@@ -1347,12 +1450,13 @@
     "pbRatio": 2.5,
     "sharesOutstanding": 19800000,
     "publicFloat": 100,
-    "high52": 305,
-    "low52": 206,
+    "high52": 312.1,
+    "low52": 204.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 16560,
     "tradeTurnover": 3878352,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "JOSHI": {
     "eps": -7.53,
@@ -1361,12 +1465,13 @@
     "pbRatio": 3.87,
     "sharesOutstanding": 6128100,
     "publicFloat": 100,
-    "high52": 380.9,
-    "low52": 250.1,
+    "high52": 388.6,
+    "low52": 245.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7969,
     "tradeTurnover": 2103816,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "KKHC": {
     "eps": -0.04,
@@ -1375,12 +1480,13 @@
     "pbRatio": 3.21,
     "sharesOutstanding": 9314286,
     "publicFloat": 100,
-    "high52": 321,
-    "low52": 212,
+    "high52": 362.0,
+    "low52": 208.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 720308,
     "tradeTurnover": 212490860,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "KPCL": {
     "eps": 9.55,
@@ -1389,12 +1495,13 @@
     "pbRatio": 4.1,
     "sharesOutstanding": 9993259,
     "publicFloat": 100,
-    "high52": 636.21,
-    "low52": 454,
+    "high52": 658.0,
+    "low52": 440.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4939,
     "tradeTurnover": 2321330,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "LEC": {
     "eps": -0.3,
@@ -1403,12 +1510,13 @@
     "pbRatio": 3.42,
     "sharesOutstanding": 22500000,
     "publicFloat": 100,
-    "high52": 268.8,
-    "low52": 185.9,
+    "high52": 276.0,
+    "low52": 180.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 200185,
     "tradeTurnover": 45421976.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MHNL": {
     "eps": 4.27,
@@ -1417,12 +1525,13 @@
     "pbRatio": 6.61,
     "sharesOutstanding": 12500000,
     "publicFloat": 100,
-    "high52": 323.5,
-    "low52": 226,
+    "high52": 324.0,
+    "low52": 223.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7798,
     "tradeTurnover": 1894914,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NGPL": {
     "eps": 0.89,
@@ -1431,12 +1540,13 @@
     "pbRatio": 2.71,
     "sharesOutstanding": 38876863,
     "publicFloat": 100,
-    "high52": 491,
-    "low52": 334.13,
+    "high52": 502.0,
+    "low52": 343.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 131638,
     "tradeTurnover": 53958416.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NHDL": {
     "eps": 13.42,
@@ -1445,12 +1555,13 @@
     "pbRatio": 5.18,
     "sharesOutstanding": 4231343,
     "publicFloat": 100,
-    "high52": 742,
-    "low52": 583.76,
+    "high52": 796.0,
+    "low52": 606.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6100,
     "tradeTurnover": 3843000,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NHPC": {
     "eps": 1.24,
@@ -1460,12 +1571,13 @@
     "sharesOutstanding": 24671629,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 331.2,
+    "high52": 340.0,
     "low52": 178.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 131654,
     "tradeTurnover": 35230610.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "PMHPL": {
     "eps": 0.85,
@@ -1474,12 +1586,13 @@
     "pbRatio": 3.75,
     "sharesOutstanding": 11000000,
     "publicFloat": 100,
-    "high52": 449.26,
-    "low52": 300,
+    "high52": 428.0,
+    "low52": 287.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7964,
     "tradeTurnover": 2556444,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "PPCL": {
     "eps": 6.82,
@@ -1488,12 +1601,13 @@
     "pbRatio": 3.62,
     "sharesOutstanding": 9625000,
     "publicFloat": 100,
-    "high52": 444.4,
-    "low52": 289,
+    "high52": 462.0,
+    "low52": 284.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7070,
     "tradeTurnover": 2452583,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "RADHI": {
     "eps": 33.86,
@@ -1502,12 +1616,13 @@
     "pbRatio": 4.22,
     "sharesOutstanding": 18389793,
     "publicFloat": 100,
-    "high52": 920,
-    "low52": 631.6,
+    "high52": 940.0,
+    "low52": 618.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 30699,
     "tradeTurnover": 22625163,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "AVYAN": {
     "eps": 53.13,
@@ -1517,12 +1632,13 @@
     "sharesOutstanding": 2500000,
     "promoterHolding": 61,
     "publicFloat": 39,
-    "high52": 1365.7,
-    "low52": 920.6,
+    "high52": 1366.0,
+    "low52": 906.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3775,
     "tradeTurnover": 3824075,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "RHPL": {
     "eps": -23.1,
@@ -1531,12 +1647,13 @@
     "pbRatio": 3.74,
     "sharesOutstanding": 68421000,
     "publicFloat": 100,
-    "high52": 344.33,
-    "low52": 253,
+    "high52": 325.0,
+    "low52": 156.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7335,
     "tradeTurnover": 1923237,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SHPC": {
     "eps": 4.88,
@@ -1545,12 +1662,13 @@
     "pbRatio": 3.83,
     "sharesOutstanding": 37379937,
     "publicFloat": 100,
-    "high52": 631.82,
-    "low52": 483.5,
+    "high52": 588.0,
+    "low52": 475.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9281,
     "tradeTurnover": 4714748,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SJCL": {
     "eps": -0.41,
@@ -1559,12 +1677,13 @@
     "pbRatio": 3.37,
     "sharesOutstanding": 36500000,
     "publicFloat": 100,
-    "high52": 358,
-    "low52": 266,
+    "high52": 365.0,
+    "low52": 214.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4205,
     "tradeTurnover": 1156375,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SPDL": {
     "eps": 5.27,
@@ -1573,12 +1692,13 @@
     "pbRatio": 3.53,
     "sharesOutstanding": 13308487,
     "publicFloat": 100,
-    "high52": 463,
-    "low52": 329.45,
+    "high52": 474.0,
+    "low52": 326.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 112040,
     "tradeTurnover": 43135400,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SSHL": {
     "eps": -4.88,
@@ -1588,12 +1708,13 @@
     "sharesOutstanding": 29528000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 243.9,
-    "low52": 151.5,
+    "high52": 251.0,
+    "low52": 151.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 91376,
     "tradeTurnover": 18686392,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "UMHL": {
     "eps": 5.44,
@@ -1602,12 +1723,13 @@
     "pbRatio": 5.6,
     "sharesOutstanding": 13166350,
     "publicFloat": 100,
-    "high52": 642.06,
-    "low52": 475.7,
+    "high52": 706.0,
+    "low52": 495.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 59984,
     "tradeTurnover": 34844705.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "UNHPL": {
     "eps": 4.5,
@@ -1616,12 +1738,13 @@
     "pbRatio": 3.73,
     "sharesOutstanding": 7500000,
     "publicFloat": 100,
-    "high52": 560,
-    "low52": 376.72,
+    "high52": 571.0,
+    "low52": 340.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19296,
     "tradeTurnover": 7515792,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "UPCL": {
     "eps": 2.17,
@@ -1630,12 +1753,13 @@
     "pbRatio": 3.04,
     "sharesOutstanding": 24851236,
     "publicFloat": 100,
-    "high52": 422,
-    "low52": 341.5,
+    "high52": 430.4,
+    "low52": 318.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 16967,
     "tradeTurnover": 5936753.3,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "ALICL": {
     "eps": 8.04,
@@ -1645,12 +1769,13 @@
     "sharesOutstanding": 52512170,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 502.04,
-    "low52": 418,
+    "high52": 505.0,
+    "low52": 381.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7936,
     "tradeTurnover": 3460096,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "MHL": {
     "eps": 6.85,
@@ -1659,12 +1784,13 @@
     "pbRatio": 4.14,
     "sharesOutstanding": 6467670,
     "publicFloat": 100,
-    "high52": 634.64,
-    "low52": 451.6,
+    "high52": 580.0,
+    "low52": 435.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7960,
     "tradeTurnover": 3773040,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "LICN": {
     "eps": 7.28,
@@ -1674,12 +1800,13 @@
     "sharesOutstanding": 54999999,
     "promoterHolding": 67.34,
     "publicFloat": 32.66,
-    "high52": 950,
-    "low52": 765,
+    "high52": 969.0,
+    "low52": 741.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9284,
     "tradeTurnover": 7333431.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "NLIC": {
     "eps": 4.28,
@@ -1689,12 +1816,13 @@
     "sharesOutstanding": 94802013,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 840.1,
-    "low52": 676.19,
+    "high52": 872.0,
+    "low52": 680.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3492,
     "tradeTurnover": 2619000,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "NLICL": {
     "eps": 7.4,
@@ -1704,12 +1832,13 @@
     "sharesOutstanding": 56916493,
     "promoterHolding": 65,
     "publicFloat": 35,
-    "high52": 632.55,
-    "low52": 528.85,
+    "high52": 644.0,
+    "low52": 538.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5780,
     "tradeTurnover": 3352400,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "SWMF": {
     "eps": 22.5,
@@ -1719,12 +1848,13 @@
     "sharesOutstanding": 11062862,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 855.57,
-    "low52": 607.9,
+    "high52": 754.0,
+    "low52": 571.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2596,
     "tradeTurnover": 1612375.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "USHEC": {
     "eps": 14.61,
@@ -1734,12 +1864,13 @@
     "sharesOutstanding": 13500000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 546.41,
-    "low52": 434,
+    "high52": 539.1,
+    "low52": 432.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3861,
     "tradeTurnover": 1895751,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BNL": {
     "eps": -100.89,
@@ -1749,12 +1880,13 @@
     "sharesOutstanding": 1948887,
     "promoterHolding": 90.78,
     "publicFloat": 9.22,
-    "high52": 17400,
+    "high52": 16921.0,
     "low52": 13872.8,
     "lastTradeDate": "2026-07-28",
     "tradeVolume": 10,
     "tradeTurnover": 147000,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "BNT": {
     "eps": -339.9,
@@ -1764,12 +1896,13 @@
     "sharesOutstanding": 1210000,
     "promoterHolding": 90.78,
     "publicFloat": 9.22,
-    "high52": 12998.5,
-    "low52": 10700,
+    "high52": 12760.0,
+    "low52": 10660.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10,
     "tradeTurnover": 117500,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "UNL": {
     "eps": 2100.98,
@@ -1779,12 +1912,13 @@
     "sharesOutstanding": 921000,
     "promoterHolding": 85,
     "publicFloat": 15,
-    "high52": 49737,
-    "low52": 46000,
+    "high52": 49738.9,
+    "low52": 45200.0,
     "lastTradeDate": "2026-07-28",
     "tradeVolume": 20,
     "tradeTurnover": 960980,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "ALBSL": {
     "eps": 39.86,
@@ -1794,12 +1928,13 @@
     "sharesOutstanding": 8026856,
     "promoterHolding": 67.5,
     "publicFloat": 32.5,
-    "high52": 1295,
-    "low52": 845.48,
+    "high52": 1334.0,
+    "low52": 930.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 580,
     "tradeTurnover": 629242,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "HLBSL": {
     "eps": 34.99,
@@ -1809,12 +1944,13 @@
     "sharesOutstanding": 3410861,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 999.49,
-    "low52": 814.81,
+    "high52": 1005.0,
+    "low52": 830.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 694,
     "tradeTurnover": 610720,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "DDBL": {
     "eps": 45.7,
@@ -1824,12 +1960,13 @@
     "sharesOutstanding": 20551142,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 914.9,
-    "low52": 732.73,
+    "high52": 927.0,
+    "low52": 793.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4927,
     "tradeTurnover": 4122420.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "FMDBL": {
     "eps": 14.18,
@@ -1839,12 +1976,13 @@
     "sharesOutstanding": 13448713,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 1010.97,
-    "low52": 745,
+    "high52": 982.0,
+    "low52": 689.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6078,
     "tradeTurnover": 4635690.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "FOWAD": {
     "eps": 16.05,
@@ -1854,12 +1992,13 @@
     "sharesOutstanding": 11959537,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1300,
-    "low52": 951,
+    "high52": 1364.0,
+    "low52": 834.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6781,
     "tradeTurnover": 6441950,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "BHCL": {
     "eps": 10.42,
@@ -1869,12 +2008,13 @@
     "sharesOutstanding": 9091013,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 669,
-    "low52": 321.3,
+    "high52": 699.0,
+    "low52": 394.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15746,
     "tradeTurnover": 7795844.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "GILB": {
     "eps": 47.07,
@@ -1884,12 +2024,13 @@
     "sharesOutstanding": 6482977,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1349.31,
-    "low52": 1060,
+    "high52": 1350.0,
+    "low52": 1020.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 58,
     "tradeTurnover": 64206,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "GLBSL": {
     "eps": 39.89,
@@ -1899,12 +2040,13 @@
     "sharesOutstanding": 1323580,
     "promoterHolding": 67.74,
     "publicFloat": 32.26,
-    "high52": 2222,
-    "low52": 1715,
+    "high52": 2310.0,
+    "low52": 1585.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 467,
     "tradeTurnover": 845270,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "GMFBS": {
     "eps": 52.94,
@@ -1914,12 +2056,13 @@
     "sharesOutstanding": 1515545,
     "promoterHolding": 67.63,
     "publicFloat": 32.37,
-    "high52": 1743.29,
-    "low52": 1174,
+    "high52": 1688.0,
+    "low52": 1041.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 394,
     "tradeTurnover": 489781.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "ILBS": {
     "eps": 33.95,
@@ -1929,12 +2072,13 @@
     "sharesOutstanding": 4974223,
     "promoterHolding": 67.5,
     "publicFloat": 32.5,
-    "high52": 1267.12,
-    "low52": 840,
+    "high52": 1263.0,
+    "low52": 800.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 58,
     "tradeTurnover": 51446,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "JSLBB": {
     "eps": 19.73,
@@ -1944,12 +2088,13 @@
     "sharesOutstanding": 1700919,
     "promoterHolding": 55,
     "publicFloat": 45,
-    "high52": 1432.27,
-    "low52": 970,
+    "high52": 1308.0,
+    "low52": 907.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 79,
     "tradeTurnover": 80098.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "KMCDB": {
     "eps": 12.22,
@@ -1959,12 +2104,13 @@
     "sharesOutstanding": 4484615,
     "promoterHolding": 54.52,
     "publicFloat": 45.48,
-    "high52": 1057.52,
-    "low52": 760,
+    "high52": 1189.3,
+    "low52": 735.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4767,
     "tradeTurnover": 3737328,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "LLBS": {
     "eps": 6.03,
@@ -1974,12 +2120,13 @@
     "sharesOutstanding": 4416621,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1240.35,
-    "low52": 875,
+    "high52": 1081.9,
+    "low52": 819.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2744,
     "tradeTurnover": 2497040,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "MERO": {
     "eps": 15.83,
@@ -1989,12 +2136,13 @@
     "sharesOutstanding": 14864025,
     "promoterHolding": 59.4,
     "publicFloat": 40.6,
-    "high52": 907.22,
-    "low52": 663,
+    "high52": 866.0,
+    "low52": 584.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2155,
     "tradeTurnover": 1463245,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "MLBBL": {
     "eps": 40.85,
@@ -2004,12 +2152,13 @@
     "sharesOutstanding": 2558436,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 1575,
-    "low52": 1109,
+    "high52": 1661.0,
+    "low52": 894.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1024,
     "tradeTurnover": 1161216,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "NWCL": {
     "eps": -3.49,
@@ -2019,12 +2168,13 @@
     "sharesOutstanding": 6875000,
     "promoterHolding": 80,
     "publicFloat": 19.6,
-    "high52": 1022.78,
-    "low52": 695,
+    "high52": 1045.0,
+    "low52": 575.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2927,
     "tradeTurnover": 2098073.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "RHGCL": {
     "eps": -2.95,
@@ -2034,12 +2184,13 @@
     "sharesOutstanding": 12255876,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 358.5,
-    "low52": 226,
+    "high52": 353.0,
+    "low52": 217.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7317,
     "tradeTurnover": 1939005,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NESDO": {
     "eps": 85.18,
@@ -2049,12 +2200,13 @@
     "sharesOutstanding": 2913375,
     "promoterHolding": 67.5,
     "publicFloat": 32.5,
-    "high52": 1811.39,
-    "low52": 1428.1,
+    "high52": 1682.0,
+    "low52": 1272.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 369,
     "tradeTurnover": 553500,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "MLBSL": {
     "eps": 14.91,
@@ -2064,12 +2216,13 @@
     "sharesOutstanding": 2175625,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 2364.79,
-    "low52": 1665,
+    "high52": 2272.5,
+    "low52": 1026.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 42,
     "tradeTurnover": 70980,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "NMBMF": {
     "eps": 17.09,
@@ -2079,12 +2232,13 @@
     "sharesOutstanding": 7214491,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 812.2,
-    "low52": 593,
+    "high52": 750.0,
+    "low52": 570.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 219,
     "tradeTurnover": 138189,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "DLBS": {
     "eps": 21.19,
@@ -2094,12 +2248,13 @@
     "sharesOutstanding": 1331000,
     "promoterHolding": 67.9,
     "publicFloat": 32.1,
-    "high52": 1610.33,
-    "low52": 1165,
+    "high52": 1495.0,
+    "low52": 955.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 227,
     "tradeTurnover": 272627,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "RURU": {
     "eps": 11.98,
@@ -2109,12 +2264,13 @@
     "sharesOutstanding": 6240544,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 754.55,
-    "low52": 590.91,
+    "high52": 830.0,
+    "low52": 560.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1271,
     "tradeTurnover": 785478,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NUBL": {
     "eps": 18.61,
@@ -2124,12 +2280,13 @@
     "sharesOutstanding": 27426837,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 778.68,
-    "low52": 590.2,
+    "high52": 802.0,
+    "low52": 555.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9169,
     "tradeTurnover": 5712287,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "TSHL": {
     "eps": -6.17,
@@ -2139,12 +2296,13 @@
     "sharesOutstanding": 4925000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 978.95,
-    "low52": 329,
+    "high52": 900.0,
+    "low52": 308.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4284,
     "tradeTurnover": 1640772,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "RSDC": {
     "eps": 13.37,
@@ -2154,12 +2312,13 @@
     "sharesOutstanding": 10340644,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 846.23,
-    "low52": 595,
+    "high52": 763.0,
+    "low52": 578.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5336,
     "tradeTurnover": 3431048,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "PMLI": {
     "eps": 7.07,
@@ -2169,12 +2328,13 @@
     "sharesOutstanding": 53077939,
     "promoterHolding": 84.67,
     "publicFloat": 15.33,
-    "high52": 533.11,
-    "low52": 433.1,
+    "high52": 543.6,
+    "low52": 392.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5630,
     "tradeTurnover": 2500283,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "MKCL": {
     "eps": 7.71,
@@ -2184,12 +2344,13 @@
     "sharesOutstanding": 7560000,
     "promoterHolding": 80,
     "publicFloat": 19.4,
-    "high52": 1676.97,
-    "low52": 1065,
+    "high52": 1616.8,
+    "low52": 810.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 454,
     "tradeTurnover": 519330.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "CKHL": {
     "eps": 0.65,
@@ -2199,12 +2360,13 @@
     "sharesOutstanding": 4000000,
     "promoterHolding": 70,
     "publicFloat": 24.48,
-    "high52": 774,
-    "low52": 539,
+    "high52": 804.0,
+    "low52": 525.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1497,
     "tradeTurnover": 875745,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SLBBL": {
     "eps": 32.35,
@@ -2214,12 +2376,13 @@
     "sharesOutstanding": 8956336,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 1001.43,
-    "low52": 714.22,
+    "high52": 960.6,
+    "low52": 761.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2898,
     "tradeTurnover": 2337526.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "GVL": {
     "eps": 14.85,
@@ -2228,12 +2391,13 @@
     "pbRatio": 3.88,
     "sharesOutstanding": 34375000,
     "publicFloat": 100,
-    "high52": 636.57,
-    "low52": 465.8,
+    "high52": 602.0,
+    "low52": 461.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14835,
     "tradeTurnover": 7209810,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SLBSL": {
     "eps": 42.71,
@@ -2243,12 +2407,13 @@
     "sharesOutstanding": 1708050,
     "promoterHolding": 53.72,
     "publicFloat": 46.28,
-    "high52": 1624.02,
-    "low52": 1092,
+    "high52": 1525.0,
+    "low52": 840.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4335,
     "tradeTurnover": 4670095.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SMB": {
     "eps": 50.22,
@@ -2258,12 +2423,13 @@
     "sharesOutstanding": 1340755,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 2270.45,
-    "low52": 1702,
+    "high52": 2310.3,
+    "low52": 1699.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 950,
     "tradeTurnover": 1757405,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SMFBS": {
     "eps": 52.33,
@@ -2273,12 +2439,13 @@
     "sharesOutstanding": 1534441,
     "promoterHolding": 67.89,
     "publicFloat": 32.11,
-    "high52": 1939.18,
-    "low52": 1454,
+    "high52": 1808.0,
+    "low52": 1285.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 126,
     "tradeTurnover": 193649.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "ENL": {
     "eps": 2.71,
@@ -2288,12 +2455,13 @@
     "sharesOutstanding": 5556000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1160.88,
-    "low52": 762,
+    "high52": 1021.0,
+    "low52": 571.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 315,
     "tradeTurnover": 253260,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "ILI": {
     "eps": 11.7,
@@ -2303,12 +2471,13 @@
     "sharesOutstanding": 50000000,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 484.37,
-    "low52": 401,
+    "high52": 489.6,
+    "low52": 396.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2991,
     "tradeTurnover": 1250238,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "SWBBL": {
     "eps": 36.87,
@@ -2318,12 +2487,13 @@
     "sharesOutstanding": 17500000,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 959.86,
+    "high52": 855.0,
     "low52": 630.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3942,
     "tradeTurnover": 2680560,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "USLB": {
     "eps": 23.83,
@@ -2333,12 +2503,13 @@
     "sharesOutstanding": 2468657,
     "promoterHolding": 62.41,
     "publicFloat": 37.59,
-    "high52": 2650.89,
-    "low52": 1125.6,
+    "high52": 2412.0,
+    "low52": 941.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 273,
     "tradeTurnover": 322686,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "VLBS": {
     "eps": -1.02,
@@ -2348,12 +2519,13 @@
     "sharesOutstanding": 7917220,
     "promoterHolding": 74.39,
     "publicFloat": 25.61,
-    "high52": 979.89,
-    "low52": 645,
+    "high52": 876.0,
+    "low52": 591.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 683,
     "tradeTurnover": 466489,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "RIDI": {
     "eps": 7.58,
@@ -2363,12 +2535,13 @@
     "sharesOutstanding": 23233518,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 386,
-    "low52": 209,
+    "high52": 415.0,
+    "low52": 203.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 389536,
     "tradeTurnover": 144089366.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HEI": {
     "eps": 12.42,
@@ -2378,12 +2551,13 @@
     "sharesOutstanding": 25001577,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 634.65,
-    "low52": 461.1,
+    "high52": 596.0,
+    "low52": 418.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1764,
     "tradeTurnover": 957499.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "RFPL": {
     "eps": 1.31,
@@ -2392,12 +2566,13 @@
     "pbRatio": 2.83,
     "sharesOutstanding": 14000000,
     "publicFloat": 100,
-    "high52": 455.1,
-    "low52": 313,
+    "high52": 464.2,
+    "low52": 306.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20971,
     "tradeTurnover": 7025285,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SALICO": {
     "eps": 10.85,
@@ -2407,12 +2582,13 @@
     "sharesOutstanding": 26226382,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 742.79,
-    "low52": 580,
+    "high52": 695.0,
+    "low52": 512.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15345,
     "tradeTurnover": 9038205,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "NICL": {
     "eps": 9.57,
@@ -2422,12 +2598,13 @@
     "sharesOutstanding": 25485750,
     "promoterHolding": 50.87,
     "publicFloat": 49.13,
-    "high52": 671.82,
-    "low52": 480.1,
+    "high52": 578.0,
+    "low52": 408.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 24887,
     "tradeTurnover": 12692370,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "NIL": {
     "eps": 12.46,
@@ -2437,12 +2614,13 @@
     "sharesOutstanding": 27722782,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 725.02,
-    "low52": 554.37,
+    "high52": 685.0,
+    "low52": 502.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3550,
     "tradeTurnover": 2192125,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "NLG": {
     "eps": 2.72,
@@ -2452,12 +2630,13 @@
     "sharesOutstanding": 26678332,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 871.18,
-    "low52": 558,
+    "high52": 773.7,
+    "low52": 477.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10644,
     "tradeTurnover": 6279960,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "DOLTI": {
     "eps": -2.27,
@@ -2467,12 +2646,13 @@
     "sharesOutstanding": 5364860,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 615.29,
-    "low52": 309,
+    "high52": 596.0,
+    "low52": 275.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11480,
     "tradeTurnover": 3714928,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "RBCL": {
     "eps": 120.36,
@@ -2482,12 +2662,13 @@
     "sharesOutstanding": 2666390,
     "promoterHolding": 87.73,
     "publicFloat": 12.27,
-    "high52": 16599.15,
-    "low52": 14200,
+    "high52": 16261.0,
+    "low52": 13106.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20,
     "tradeTurnover": 291140,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "SICL": {
     "eps": 5.37,
@@ -2497,12 +2678,13 @@
     "sharesOutstanding": 30984849,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 773.01,
-    "low52": 574.53,
+    "high52": 712.2,
+    "low52": 508.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9181,
     "tradeTurnover": 5610509.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "BEDC": {
     "eps": -2.01,
@@ -2512,12 +2694,13 @@
     "sharesOutstanding": 5440534,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 853.95,
-    "low52": 308,
+    "high52": 728.0,
+    "low52": 270.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11327,
     "tradeTurnover": 3648426.7,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "CIT": {
     "eps": 19.7,
@@ -2527,12 +2710,13 @@
     "sharesOutstanding": 68057978,
     "promoterHolding": 80,
     "publicFloat": 20,
-    "high52": 2000.16,
-    "low52": 1670,
+    "high52": 1973.0,
+    "low52": 1621.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2158,
     "tradeTurnover": 3711760,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "HIDCL": {
     "eps": 3.18,
@@ -2542,12 +2726,13 @@
     "sharesOutstanding": 249282101,
     "promoterHolding": 80,
     "publicFloat": 20,
-    "high52": 309.03,
-    "low52": 246.6,
+    "high52": 307.0,
+    "low52": 232.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 31898,
     "tradeTurnover": 8293480,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "NRIC": {
     "eps": 47.14,
@@ -2557,12 +2742,13 @@
     "sharesOutstanding": 134221873,
     "promoterHolding": 84,
     "publicFloat": 16,
-    "high52": 1731.89,
-    "low52": 873.4,
+    "high52": 1599.3,
+    "low52": 780.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15237,
     "tradeTurnover": 14505624,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "BBC": {
     "eps": 0,
@@ -2570,12 +2756,13 @@
     "sharesOutstanding": 40100000,
     "promoterHolding": 98.96,
     "publicFloat": 1.04,
-    "high52": 5843.84,
-    "low52": 4070,
+    "high52": 5600.0,
+    "low52": 3825.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 150,
     "tradeTurnover": 645000,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Tradings"
   },
   "STC": {
     "eps": 28.07,
@@ -2585,12 +2772,13 @@
     "sharesOutstanding": 3863035,
     "promoterHolding": 9.67,
     "publicFloat": 78.74,
-    "high52": 5747.95,
-    "low52": 4429.22,
+    "high52": 6335.9,
+    "low52": 4832.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1391,
     "tradeTurnover": 7219290,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Tradings"
   },
   "NABBC": {
     "eps": -11.86,
@@ -2600,12 +2788,13 @@
     "sharesOutstanding": 5249930,
     "promoterHolding": 71,
     "publicFloat": 29,
-    "high52": 1789.9,
-    "low52": 675.7,
+    "high52": 1835.0,
+    "low52": 662.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4231,
     "tradeTurnover": 3321758.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "MEN": {
     "eps": 22.15,
@@ -2614,12 +2803,13 @@
     "pbRatio": 4.2,
     "sharesOutstanding": 31232588,
     "publicFloat": 100,
-    "high52": 648.1,
-    "low52": 484.17,
+    "high52": 683.4,
+    "low52": 535.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26074,
     "tradeTurnover": 15618326,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NIFRA": {
     "eps": 4.57,
@@ -2629,12 +2819,13 @@
     "sharesOutstanding": 216000000,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 313.57,
-    "low52": 244,
+    "high52": 299.0,
+    "low52": 232.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 29501,
     "tradeTurnover": 7378200.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "UMRH": {
     "eps": 10.09,
@@ -2643,12 +2834,13 @@
     "pbRatio": 4.69,
     "sharesOutstanding": 4838652,
     "publicFloat": 100,
-    "high52": 636.42,
-    "low52": 509.71,
+    "high52": 622.0,
+    "low52": 500.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2783,
     "tradeTurnover": 1486122,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "CGH": {
     "eps": 5.75,
@@ -2657,12 +2849,13 @@
     "pbRatio": 7.87,
     "sharesOutstanding": 16107955,
     "publicFloat": 100,
-    "high52": 1048.42,
-    "low52": 755.2,
+    "high52": 1005.0,
+    "low52": 748.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12078,
     "tradeTurnover": 9541620,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "MSLB": {
     "eps": 50.78,
@@ -2672,12 +2865,13 @@
     "sharesOutstanding": 3874948,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1561.62,
-    "low52": 1206.68,
+    "high52": 1634.0,
+    "low52": 1089.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1042,
     "tradeTurnover": 1255610,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "VLUCL": {
     "eps": -8.28,
@@ -2687,12 +2881,13 @@
     "sharesOutstanding": 19125000,
     "promoterHolding": 80,
     "publicFloat": 9.8,
-    "high52": 647.99,
-    "low52": 424,
+    "high52": 652.0,
+    "low52": 363.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1378,
     "tradeTurnover": 599292.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "ACLBSL": {
     "eps": 34.53,
@@ -2702,12 +2897,13 @@
     "sharesOutstanding": 3671434,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 1204.17,
-    "low52": 905,
+    "high52": 1095.0,
+    "low52": 827.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2420,
     "tradeTurnover": 2241404,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "NICLBSL": {
     "eps": -19.72,
@@ -2717,12 +2913,13 @@
     "sharesOutstanding": 17394400,
     "promoterHolding": 68,
     "publicFloat": 32,
-    "high52": 742.82,
-    "low52": 537,
+    "high52": 679.0,
+    "low52": 499.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4105,
     "tradeTurnover": 2290590,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SMATA": {
     "eps": 21.37,
@@ -2732,12 +2929,13 @@
     "sharesOutstanding": 6605041,
     "promoterHolding": 59.11,
     "publicFloat": 40.89,
-    "high52": 1197.05,
-    "low52": 726.2,
+    "high52": 999.0,
+    "low52": 665.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 520,
     "tradeTurnover": 384800,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "ULBSL": {
     "eps": 40.05,
@@ -2747,12 +2945,13 @@
     "sharesOutstanding": 1061480,
     "promoterHolding": 64,
     "publicFloat": 36,
-    "high52": 4325,
-    "low52": 2760,
+    "high52": 4325.0,
+    "low52": 2310.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 429,
     "tradeTurnover": 1200127.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SHEL": {
     "eps": 7.24,
@@ -2762,12 +2961,13 @@
     "sharesOutstanding": 30450000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 354.1,
-    "low52": 253.33,
+    "high52": 361.0,
+    "low52": 262.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 48376,
     "tradeTurnover": 14754680,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MKJC": {
     "eps": 0.11,
@@ -2777,12 +2977,13 @@
     "sharesOutstanding": 3763198,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 620,
-    "low52": 445,
+    "high52": 635.0,
+    "low52": 252.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3515,
     "tradeTurnover": 1635178,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MLBS": {
     "eps": 15.43,
@@ -2792,12 +2993,13 @@
     "sharesOutstanding": 1093750,
     "promoterHolding": 64,
     "publicFloat": 36,
-    "high52": 1782.41,
-    "low52": 1144,
+    "high52": 1666.0,
+    "low52": 967.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 211,
     "tradeTurnover": 247292,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "TPC": {
     "eps": 8.03,
@@ -2807,12 +3009,13 @@
     "sharesOutstanding": 8000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 429,
-    "low52": 275.4,
+    "high52": 450.0,
+    "low52": 270.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10655,
     "tradeTurnover": 3825145,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SPC": {
     "eps": 2.93,
@@ -2822,12 +3025,13 @@
     "sharesOutstanding": 5000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 569.27,
-    "low52": 410,
+    "high52": 577.0,
+    "low52": 372.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2099,
     "tradeTurnover": 875492.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NYADI": {
     "eps": 6.49,
@@ -2837,12 +3041,13 @@
     "sharesOutstanding": 15000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 465.88,
-    "low52": 349,
+    "high52": 482.0,
+    "low52": 335.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1989,
     "tradeTurnover": 728172.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MBJC": {
     "eps": 1.05,
@@ -2852,12 +3057,13 @@
     "sharesOutstanding": 60000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 330.3,
-    "low52": 266.5,
+    "high52": 333.0,
+    "low52": 248.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 37825,
     "tradeTurnover": 10174925,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BNHC": {
     "eps": 0.02,
@@ -2867,12 +3073,13 @@
     "sharesOutstanding": 8000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 380,
-    "low52": 250.5,
+    "high52": 613.8,
+    "low52": 247.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15036,
     "tradeTurnover": 4297288.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SIKLES": {
     "eps": 11.31,
@@ -2882,12 +3089,13 @@
     "sharesOutstanding": 9775000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1022.1,
-    "low52": 533.04,
+    "high52": 804.0,
+    "low52": 536.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 8228,
     "tradeTurnover": 4582996,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "UAIL": {
     "eps": 1.27,
@@ -2897,12 +3105,13 @@
     "sharesOutstanding": 24089996,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 535.43,
-    "low52": 389.75,
+    "high52": 519.1,
+    "low52": 354.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4635,
     "tradeTurnover": 2072772,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "SMHL": {
     "eps": 12.78,
@@ -2912,12 +3121,13 @@
     "sharesOutstanding": 23152500,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1145.37,
-    "low52": 445,
+    "high52": 978.0,
+    "low52": 443.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 108792,
     "tradeTurnover": 54178416,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "UNLB": {
     "eps": 13.83,
@@ -2927,12 +3137,13 @@
     "sharesOutstanding": 1485750,
     "promoterHolding": 52,
     "publicFloat": 48,
-    "high52": 2440.33,
-    "low52": 1269,
+    "high52": 2306.0,
+    "low52": 1187.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 365,
     "tradeTurnover": 465010,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "KBL": {
     "eps": 22.91,
@@ -2942,12 +3153,13 @@
     "sharesOutstanding": 262258634,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 246.7,
-    "low52": 176.5,
+    "high52": 256.0,
+    "low52": 175.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 259920,
     "tradeTurnover": 57442320,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "KBSH": {
     "eps": 6.66,
@@ -2957,12 +3169,13 @@
     "sharesOutstanding": 1474596,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1890,
-    "low52": 960,
+    "high52": 1907.0,
+    "low52": 779.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 25843,
     "tradeTurnover": 24421635,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SPL": {
     "eps": 6.59,
@@ -2972,12 +3185,13 @@
     "sharesOutstanding": 2000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1021.65,
-    "low52": 641.1,
+    "high52": 1000.0,
+    "low52": 590.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5481,
     "tradeTurnover": 3562650,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SJLIC": {
     "eps": 7.68,
@@ -2987,12 +3201,13 @@
     "sharesOutstanding": 50119477,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 484.9,
-    "low52": 397,
+    "high52": 489.9,
+    "low52": 386.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14879,
     "tradeTurnover": 6174785,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "MHCL": {
     "eps": 7.44,
@@ -3002,12 +3217,13 @@
     "sharesOutstanding": 8025000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 484.58,
-    "low52": 305,
+    "high52": 445.0,
+    "low52": 261.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2486,
     "tradeTurnover": 780852.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "PRIN": {
     "eps": 12.07,
@@ -3017,12 +3233,13 @@
     "sharesOutstanding": 18489393,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 774.26,
-    "low52": 586.84,
+    "high52": 794.9,
+    "low52": 564.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4698,
     "tradeTurnover": 3178666.8,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "SPIL": {
     "eps": 10.68,
@@ -3032,12 +3249,13 @@
     "sharesOutstanding": 28065499,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 863.33,
-    "low52": 630,
+    "high52": 792.0,
+    "low52": 570.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 16998,
     "tradeTurnover": 11898600,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "MCHL": {
     "eps": 1.4,
@@ -3047,12 +3265,13 @@
     "sharesOutstanding": 5425833,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 570.38,
-    "low52": 272.5,
+    "high52": 539.0,
+    "low52": 232.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4227,
     "tradeTurnover": 1197509.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "IGI": {
     "eps": 3.31,
@@ -3062,12 +3281,13 @@
     "sharesOutstanding": 30293350,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 580.29,
-    "low52": 395,
+    "high52": 524.7,
+    "low52": 355.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2536,
     "tradeTurnover": 1118376,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "NADEP": {
     "eps": 22.88,
@@ -3077,12 +3297,13 @@
     "sharesOutstanding": 4857600,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1023.9,
-    "low52": 700.2,
+    "high52": 871.0,
+    "low52": 652.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 155,
     "tradeTurnover": 113041.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "NMFBS": {
     "eps": 46.02,
@@ -3092,12 +3313,13 @@
     "sharesOutstanding": 15213624,
     "promoterHolding": 74.03,
     "publicFloat": 25.97,
-    "high52": 1269.94,
-    "low52": 1055.58,
+    "high52": 1370.0,
+    "low52": 1051.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2302,
     "tradeTurnover": 2578240,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "TAMOR": {
     "eps": 13.36,
@@ -3107,12 +3329,13 @@
     "sharesOutstanding": 33325000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 544.38,
-    "low52": 413,
+    "high52": 528.1,
+    "low52": 396.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 24714,
     "tradeTurnover": 11217684.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "GBIME": {
     "eps": 15.93,
@@ -3122,12 +3345,13 @@
     "sharesOutstanding": 381158529,
     "promoterHolding": 51.2,
     "publicFloat": 48.8,
-    "high52": 270.86,
-    "low52": 221.1,
+    "high52": 270.6,
+    "low52": 218.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 375094,
     "tradeTurnover": 96361648.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "MKHC": {
     "eps": 1.49,
@@ -3137,12 +3361,13 @@
     "sharesOutstanding": 10000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 490.48,
-    "low52": 283.3,
+    "high52": 421.0,
+    "low52": 232.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7635,
     "tradeTurnover": 2214913.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NRM": {
     "eps": -3.37,
@@ -3151,12 +3376,13 @@
     "pbRatio": 3.72,
     "sharesOutstanding": 9675000,
     "publicFloat": 100,
-    "high52": 562.98,
-    "low52": 300,
+    "high52": 470.0,
+    "low52": 270.9,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5942,
     "tradeTurnover": 1854498.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "KDL": {
     "eps": 9.3,
@@ -3166,12 +3392,13 @@
     "sharesOutstanding": 6300000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 1118.1,
-    "low52": 750.1,
+    "high52": 1185.0,
+    "low52": 618.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3243,
     "tradeTurnover": 2542512,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "SMH": {
     "eps": 5.89,
@@ -3181,12 +3408,13 @@
     "sharesOutstanding": 6420000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 776.42,
-    "low52": 490,
+    "high52": 1024.8,
+    "low52": 482.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4422,
     "tradeTurnover": 2237532,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "AHL": {
     "eps": -13.75,
@@ -3195,12 +3423,13 @@
     "pbRatio": 5.89,
     "sharesOutstanding": 3400000,
     "publicFloat": 100,
-    "high52": 676.5,
-    "low52": 410.1,
+    "high52": 699.0,
+    "low52": 350.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2839,
     "tradeTurnover": 1183863,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SGIC": {
     "eps": 7.45,
@@ -3210,12 +3439,13 @@
     "sharesOutstanding": 22575000,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 585.64,
-    "low52": 425.71,
+    "high52": 538.5,
+    "low52": 370.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6341,
     "tradeTurnover": 2916860,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "HIMSTAR": {
     "eps": -25.16,
@@ -3225,12 +3455,13 @@
     "sharesOutstanding": 3730000,
     "promoterHolding": 70,
     "publicFloat": 29.5,
-    "high52": 1171,
-    "low52": 267.5,
+    "high52": 1264.0,
+    "low52": 439.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4500,
     "tradeTurnover": 3343050,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "EHPL": {
     "eps": 4.37,
@@ -3239,12 +3470,13 @@
     "pbRatio": 4.52,
     "sharesOutstanding": 6200000,
     "publicFloat": 100,
-    "high52": 648.48,
-    "low52": 328.3,
+    "high52": 553.8,
+    "low52": 295.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5950,
     "tradeTurnover": 2045610,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SHLB": {
     "eps": 34.53,
@@ -3254,12 +3486,13 @@
     "sharesOutstanding": 1093750,
     "promoterHolding": 64,
     "publicFloat": 36,
-    "high52": 2132.25,
-    "low52": 1409.7,
+    "high52": 1961.0,
+    "low52": 1225.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 88,
     "tradeTurnover": 132255.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "PHCL": {
     "eps": -0.58,
@@ -3268,12 +3501,13 @@
     "pbRatio": 3.01,
     "sharesOutstanding": 32000000,
     "publicFloat": 100,
-    "high52": 541.75,
-    "low52": 254.5,
+    "high52": 420.0,
+    "low52": 249.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 18759,
     "tradeTurnover": 5665218,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BHPL": {
     "eps": -3.5,
@@ -3282,12 +3516,13 @@
     "pbRatio": 9.65,
     "sharesOutstanding": 2500000,
     "publicFloat": 100,
-    "high52": 835.25,
-    "low52": 458.3,
+    "high52": 789.0,
+    "low52": 417.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5072,
     "tradeTurnover": 2394491.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MAKAR": {
     "eps": 10.65,
@@ -3297,12 +3532,13 @@
     "sharesOutstanding": 7600000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 667.73,
-    "low52": 442.5,
+    "high52": 629.3,
+    "low52": 389.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 70620,
     "tradeTurnover": 31072800,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SRLI": {
     "eps": 7.59,
@@ -3312,12 +3548,13 @@
     "sharesOutstanding": 50149240,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 433.25,
-    "low52": 363.9,
+    "high52": 437.7,
+    "low52": 348.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1553,
     "tradeTurnover": 592003.6,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "MKHL": {
     "eps": 3,
@@ -3327,12 +3564,13 @@
     "sharesOutstanding": 3921568,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 945.15,
-    "low52": 465,
+    "high52": 915.0,
+    "low52": 457.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3608,
     "tradeTurnover": 1854512,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SMJC": {
     "eps": 1.77,
@@ -3342,12 +3580,13 @@
     "sharesOutstanding": 11732000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 644.19,
-    "low52": 426.3,
+    "high52": 580.0,
+    "low52": 393.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19125,
     "tradeTurnover": 8502975,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "NMLBBL": {
     "eps": 17.17,
@@ -3357,12 +3596,13 @@
     "sharesOutstanding": 13977643,
     "promoterHolding": 51.49,
     "publicFloat": 48.51,
-    "high52": 795.72,
-    "low52": 525,
+    "high52": 697.6,
+    "low52": 468.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6400,
     "tradeTurnover": 3392640,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "ANLB": {
     "eps": 80.13,
@@ -3372,12 +3612,13 @@
     "sharesOutstanding": 895071,
     "promoterHolding": 67.37,
     "publicFloat": 32.63,
-    "high52": 7200,
-    "low52": 4977.67,
+    "high52": 7560.0,
+    "low52": 4750.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2167,
     "tradeTurnover": 12260886,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "CITY": {
     "eps": -5.44,
@@ -3387,12 +3628,13 @@
     "sharesOutstanding": 30132000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 649,
-    "low52": 341.1,
+    "high52": 649.0,
+    "low52": 327.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 69469,
     "tradeTurnover": 25703530,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "IHL": {
     "eps": 7.44,
@@ -3402,12 +3644,13 @@
     "sharesOutstanding": 6000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 622.9,
-    "low52": 337.5,
+    "high52": 638.0,
+    "low52": 282.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5569,
     "tradeTurnover": 1949150,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HLI": {
     "eps": 3.68,
@@ -3417,12 +3660,13 @@
     "sharesOutstanding": 91432373,
     "promoterHolding": 51,
     "publicFloat": 49,
-    "high52": 449.57,
-    "low52": 317,
+    "high52": 412.9,
+    "low52": 284.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13570,
     "tradeTurnover": 4421106,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "CYCL": {
     "eps": 43.18,
@@ -3432,12 +3676,13 @@
     "sharesOutstanding": 2664243,
     "promoterHolding": 67.5,
     "publicFloat": 32.5,
-    "high52": 1945.14,
-    "low52": 1310.5,
+    "high52": 1768.4,
+    "low52": 1216.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 636,
     "tradeTurnover": 843972,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "MEL": {
     "eps": -3.03,
@@ -3447,12 +3692,13 @@
     "sharesOutstanding": 29000000,
     "promoterHolding": 0,
     "publicFloat": 100,
-    "high52": 327.59,
-    "low52": 210,
+    "high52": 328.0,
+    "low52": 195.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22057,
     "tradeTurnover": 4806220.3,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "RAWA": {
     "eps": 11.11,
@@ -3461,12 +3707,13 @@
     "pbRatio": 5.03,
     "sharesOutstanding": 2800000,
     "publicFloat": 100,
-    "high52": 835,
-    "low52": 406,
+    "high52": 851.7,
+    "low52": 379.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34577,
     "tradeTurnover": 14726344.3,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "LSL": {
     "eps": 16.81,
@@ -3476,12 +3723,13 @@
     "sharesOutstanding": 267811636,
     "promoterHolding": 51.05,
     "publicFloat": 48.95,
-    "high52": 240,
-    "low52": 195.82,
+    "high52": 244.0,
+    "low52": 203.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 191885,
     "tradeTurnover": 43845722.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Commercial Banks"
   },
   "RNLI": {
     "eps": 11.06,
@@ -3492,11 +3740,12 @@
     "promoterHolding": 70,
     "publicFloat": 30,
     "high52": 520.2,
-    "low52": 424,
+    "low52": 402.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12306,
     "tradeTurnover": 5487245.4,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "ULHC": {
     "eps": -5.37,
@@ -3506,12 +3755,13 @@
     "sharesOutstanding": 5098040,
     "promoterHolding": 51,
     "publicFloat": 44.16,
-    "high52": 587.5,
-    "low52": 348,
+    "high52": 599.0,
+    "low52": 260.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4512,
     "tradeTurnover": 1556640,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MEHL": {
     "eps": 0.59,
@@ -3521,12 +3771,13 @@
     "sharesOutstanding": 8000000,
     "promoterHolding": 65,
     "publicFloat": 32.21,
-    "high52": 519,
-    "low52": 292,
+    "high52": 519.0,
+    "low52": 220.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2393,
     "tradeTurnover": 734651,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "HATHY": {
     "eps": 1.52,
@@ -3536,12 +3787,13 @@
     "sharesOutstanding": 31711680,
     "promoterHolding": 87.5,
     "publicFloat": 12.27,
-    "high52": 1191.69,
-    "low52": 672.2,
+    "high52": 1050.0,
+    "low52": 545.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3382,
     "tradeTurnover": 2455332,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Investment"
   },
   "MANDU": {
     "eps": 10.21,
@@ -3551,12 +3803,13 @@
     "sharesOutstanding": 15342350,
     "promoterHolding": 88,
     "publicFloat": 10.37,
-    "high52": 944.34,
-    "low52": 773.1,
+    "high52": 909.0,
+    "low52": 622.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3558,
     "tradeTurnover": 2935350,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BGWT": {
     "eps": 11.9,
@@ -3566,12 +3819,13 @@
     "sharesOutstanding": 6782399,
     "promoterHolding": 75,
     "publicFloat": 14.7,
-    "high52": 856,
-    "low52": 516.1,
+    "high52": 944.0,
+    "low52": 435.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1588,
     "tradeTurnover": 948036,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MSHL": {
     "eps": 17.93,
@@ -3581,12 +3835,13 @@
     "sharesOutstanding": 8606600,
     "promoterHolding": 80,
     "publicFloat": 9.8,
-    "high52": 874,
-    "low52": 585,
+    "high52": 953.7,
+    "low52": 481.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 443,
     "tradeTurnover": 269919.9,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MMKJL": {
     "eps": 30.38,
@@ -3596,12 +3851,13 @@
     "sharesOutstanding": 10000000,
     "promoterHolding": 70,
     "publicFloat": 15.09,
-    "high52": 675,
-    "low52": 430,
+    "high52": 699.9,
+    "low52": 309.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2585,
     "tradeTurnover": 1245970,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "TVCL": {
     "eps": -5.97,
@@ -3610,12 +3866,13 @@
     "pbRatio": 6.26,
     "sharesOutstanding": 17891627,
     "publicFloat": 100,
-    "high52": 676,
-    "low52": 378.4,
+    "high52": 689.0,
+    "low52": 277.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1020,
     "tradeTurnover": 499188,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "MATRI": {
     "eps": 9.04,
@@ -3625,12 +3882,13 @@
     "sharesOutstanding": 6283574,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1257.59,
-    "low52": 813,
+    "high52": 1048.5,
+    "low52": 705.6,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1193,
     "tradeTurnover": 978260,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "GMLI": {
     "eps": 6.31,
@@ -3640,12 +3898,13 @@
     "sharesOutstanding": 7500000,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 2163.69,
-    "low52": 1146.8,
+    "high52": 2142.0,
+    "low52": 905.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1060,
     "tradeTurnover": 1224300,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "NMIC": {
     "eps": 3.56,
@@ -3655,12 +3914,13 @@
     "sharesOutstanding": 7500000,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1700.91,
-    "low52": 885,
+    "high52": 1525.0,
+    "low52": 765.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1591,
     "tradeTurnover": 1492358,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Non Life Insurance"
   },
   "CREST": {
     "eps": 3.24,
@@ -3670,12 +3930,13 @@
     "sharesOutstanding": 7500000,
     "promoterHolding": 70,
     "publicFloat": 30,
-    "high52": 1568.7,
-    "low52": 1005.3,
+    "high52": 1588.0,
+    "low52": 985.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9303,
     "tradeTurnover": 11160809.1,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Life Insurance"
   },
   "OMPL": {
     "eps": -6.6,
@@ -3685,12 +3946,13 @@
     "sharesOutstanding": 6000000,
     "promoterHolding": 70,
     "publicFloat": 29.1,
-    "high52": 1545,
-    "low52": 866,
+    "high52": 1575.9,
+    "low52": 846.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2090,
     "tradeTurnover": 2004310,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "PURE": {
     "eps": 1.95,
@@ -3700,12 +3962,13 @@
     "sharesOutstanding": 8000000,
     "promoterHolding": 80,
     "publicFloat": 20,
-    "high52": 1220,
-    "low52": 715,
+    "high52": 1262.0,
+    "low52": 662.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5344,
     "tradeTurnover": 4601184,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "TTL": {
     "eps": 2.45,
@@ -3715,12 +3978,13 @@
     "sharesOutstanding": 8156097,
     "promoterHolding": 51.3,
     "publicFloat": 47.73,
-    "high52": 1148,
-    "low52": 692.4,
+    "high52": 1173.0,
+    "low52": 665.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9862,
     "tradeTurnover": 7199260,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "SANVI": {
     "eps": -8.49,
@@ -3730,12 +3994,13 @@
     "sharesOutstanding": 8800000,
     "promoterHolding": 56.93,
     "publicFloat": 42.41,
-    "high52": 1015,
-    "low52": 544,
+    "high52": 1060.0,
+    "low52": 536.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9221,
     "tradeTurnover": 5518768.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "DHEL": {
     "eps": -4.33,
@@ -3745,12 +4010,13 @@
     "sharesOutstanding": 10305000,
     "promoterHolding": 61.67,
     "publicFloat": 26.91,
-    "high52": 851,
-    "low52": 442.4,
+    "high52": 918.9,
+    "low52": 402.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 18392,
     "tradeTurnover": 10980024,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SAGAR": {
     "eps": -6.49,
@@ -3760,12 +4026,13 @@
     "sharesOutstanding": 7260000,
     "promoterHolding": 80,
     "publicFloat": 20,
-    "high52": 2360,
-    "low52": 351.4,
+    "high52": 2439.0,
+    "low52": 319.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4600,
     "tradeTurnover": 7930400,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "BUNGAL": {
     "eps": -0.79,
@@ -3775,12 +4042,13 @@
     "sharesOutstanding": 8300000,
     "promoterHolding": 65,
     "publicFloat": 24.25,
-    "high52": 888,
-    "low52": 332.6,
+    "high52": 895.0,
+    "low52": 302.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26811,
     "tradeTurnover": 15898923,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BANDIPUR": {
     "eps": -0.77,
@@ -3790,12 +4058,13 @@
     "sharesOutstanding": 28300000,
     "promoterHolding": 79.29,
     "publicFloat": 18.15,
-    "high52": 1165,
-    "low52": 313.5,
+    "high52": 1233.0,
+    "low52": 285.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13665,
     "tradeTurnover": 9868863,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "SWASTIK": {
     "eps": 21.33,
@@ -3805,12 +4074,13 @@
     "sharesOutstanding": 577500,
     "promoterHolding": 60,
     "publicFloat": 40,
-    "high52": 3270.1,
-    "low52": 407.4,
+    "high52": 3400.0,
+    "low52": 391.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 390,
     "tradeTurnover": 792090,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "JHAPA": {
     "eps": 5.63,
@@ -3820,12 +4090,13 @@
     "sharesOutstanding": 3801900,
     "promoterHolding": 75,
     "publicFloat": 14.7,
-    "high52": 1840,
-    "low52": 311.2,
+    "high52": 1929.0,
+    "low52": 293.4,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3628,
     "tradeTurnover": 4117417.2,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Others"
   },
   "SAIL": {
     "eps": 1.64,
@@ -3835,12 +4106,13 @@
     "sharesOutstanding": 16312500,
     "promoterHolding": 80,
     "publicFloat": 9.24,
-    "high52": 1555,
-    "low52": 331.8,
+    "high52": 1690.0,
+    "low52": 301.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 27594,
     "tradeTurnover": 29801520,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "SYPNL": {
     "eps": 3.08,
@@ -3850,12 +4122,13 @@
     "sharesOutstanding": 13081371,
     "promoterHolding": 60,
     "publicFloat": 36.86,
-    "high52": 2132,
-    "low52": 351.7,
+    "high52": 2255.9,
+    "low52": 319.8,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 28962,
     "tradeTurnover": 38635308,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "GBLBS": {
     "eps": 36.73,
@@ -3865,12 +4138,13 @@
     "sharesOutstanding": 10053500,
     "promoterHolding": 73,
     "publicFloat": 27,
-    "high52": 925.75,
-    "low52": 707,
+    "high52": 868.0,
+    "low52": 610.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3675,
     "tradeTurnover": 2755882.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Microfinance"
   },
   "SABBL": {
     "eps": -0.81,
@@ -3880,12 +4154,13 @@
     "sharesOutstanding": 5223880,
     "promoterHolding": 67,
     "publicFloat": 33,
-    "high52": 1848.1,
-    "low52": 330,
+    "high52": 2000.0,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 21223,
     "tradeTurnover": 23324077,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Development Banks"
   },
   "RSML": {
     "eps": 18.72,
@@ -3895,12 +4170,13 @@
     "sharesOutstanding": 19000000,
     "promoterHolding": 89.86,
     "publicFloat": 5.78,
-    "high52": 4799,
-    "low52": 330,
+    "high52": 5049.0,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 57536,
     "tradeTurnover": 179397248,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "HFIN": {
     "eps": -12.07,
@@ -3910,12 +4186,13 @@
     "sharesOutstanding": 20000000,
     "promoterHolding": 80,
     "publicFloat": 18.6,
-    "high52": 1386,
-    "low52": 111.8,
+    "high52": 1450.6,
+    "low52": 101.7,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 30571,
     "tradeTurnover": 21919407,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hotels And Tourism"
   },
   "SOHL": {
     "eps": 11.44,
@@ -3925,12 +4202,13 @@
     "sharesOutstanding": 100000000,
     "promoterHolding": 80,
     "publicFloat": 9.7,
-    "high52": 849,
-    "low52": 330,
+    "high52": 875.5,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 73945,
     "tradeTurnover": 43901146.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "BJHL": {
     "eps": -3.26,
@@ -3940,12 +4218,13 @@
     "sharesOutstanding": 10000000,
     "promoterHolding": 80,
     "publicFloat": 9.3,
-    "high52": 1286,
-    "low52": 297.1,
+    "high52": 1305.0,
+    "low52": 270.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12305,
     "tradeTurnover": 8914972.5,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SKHL": {
     "eps": 15.63,
@@ -3955,12 +4234,13 @@
     "sharesOutstanding": 15500000,
     "promoterHolding": 80,
     "publicFloat": 9.3,
-    "high52": 1285,
-    "low52": 330,
+    "high52": 1360.0,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5088,
     "tradeTurnover": 4548672,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "RLEL": {
     "eps": 10.56,
@@ -3970,12 +4250,13 @@
     "sharesOutstanding": 11850000,
     "promoterHolding": 78,
     "publicFloat": 11.16,
-    "high52": 1400,
-    "low52": 330,
+    "high52": 1592.3,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4575,
     "tradeTurnover": 4112925,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SKHEL": {
     "eps": -4.37,
@@ -3985,12 +4266,13 @@
     "sharesOutstanding": 6896744,
     "promoterHolding": 80,
     "publicFloat": 9.3,
-    "high52": 1803.8,
-    "low52": 312.7,
+    "high52": 2069.4,
+    "low52": 284.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4249,
     "tradeTurnover": 4198012,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "SIPD": {
     "eps": -6.62,
@@ -4000,12 +4282,13 @@
     "sharesOutstanding": 9800000,
     "promoterHolding": 67.35,
     "publicFloat": 21.06,
-    "high52": 1058.1,
-    "low52": 312.7,
+    "high52": 1216.8,
+    "low52": 284.3,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10073,
     "tradeTurnover": 6849640,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Hydro Power"
   },
   "PCIL": {
     "eps": 2.04,
@@ -4015,12 +4298,13 @@
     "sharesOutstanding": 37500000,
     "promoterHolding": 80,
     "publicFloat": 13.5,
-    "high52": 1117.1,
-    "low52": 330,
+    "high52": 1280.0,
+    "low52": 300.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34043,
     "tradeTurnover": 22604552,
-    "capturedAt": "2026-07-29"
+    "capturedAt": "2026-07-29",
+    "sector": "Manufacturing And Processing"
   },
   "SAPIL": {
     "eps": 5.04,
@@ -4030,11 +4314,3220 @@
     "sharesOutstanding": 3400000,
     "promoterHolding": 75.0,
     "publicFloat": 23.25,
-    "high52": 1394.8,
-    "low52": 345.0,
+    "high52": 1604.0,
+    "low52": 300.0,
     "lastTradeDate": "2026-09-11",
     "tradeVolume": 53992,
     "tradeTurnover": 71141539.3,
-    "capturedAt": "2026-09-12"
+    "capturedAt": "2026-09-12",
+    "sector": "Manufacturing And Processing"
+  },
+  "ACLBSLP": {
+    "high52": 613.0,
+    "low52": 512.0,
+    "sector": "Microfinance"
+  },
+  "ANLBP": {
+    "sector": "Microfinance"
+  },
+  "ACEDBL": {
+    "sharesOutstanding": 10004024,
+    "sector": "Development Banks"
+  },
+  "ACEDPO": {
+    "sharesOutstanding": 1920000,
+    "sector": "Development Banks"
+  },
+  "ADLB": {
+    "sharesOutstanding": 248400,
+    "sector": "Microfinance"
+  },
+  "ADLBP": {
+    "sector": "Microfinance"
+  },
+  "AKBSL": {
+    "sharesOutstanding": 1547000,
+    "sector": "Microfinance"
+  },
+  "AKBSLPO": {
+    "sector": "Microfinance"
+  },
+  "ADBLD83": {
+    "high52": 1132.9,
+    "low52": 1015.0,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "ADBLB": {
+    "high52": 1000.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 6000000,
+    "sector": "Corporate Debenture"
+  },
+  "ADBLB86": {
+    "high52": 1010.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 6000000,
+    "sector": "Corporate Debenture"
+  },
+  "ADBLB87": {
+    "high52": 1016.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 6000000,
+    "sector": "Commercial Banks"
+  },
+  "AIL": {
+    "sharesOutstanding": 10000000,
+    "sector": "Non Life Insurance"
+  },
+  "AILP": {
+    "sector": "Non Life Insurance"
+  },
+  "AEFL": {
+    "sharesOutstanding": 1076400,
+    "sector": "Finance"
+  },
+  "AEFLPO": {
+    "sharesOutstanding": 585000,
+    "sector": "Finance"
+  },
+  "ALDBL": {
+    "sharesOutstanding": 2600753,
+    "sector": "Development Banks"
+  },
+  "ALDBLP": {
+    "sharesOutstanding": 1180000,
+    "sector": "Development Banks"
+  },
+  "APEX": {
+    "sharesOutstanding": 6665596,
+    "sector": "Development Banks"
+  },
+  "APEXPO": {
+    "sharesOutstanding": 6665596,
+    "sector": "Development Banks"
+  },
+  "AFL": {
+    "sharesOutstanding": 1200000,
+    "sector": "Finance"
+  },
+  "APHL": {
+    "high52": 1053.4,
+    "low52": 299.7,
+    "sharesOutstanding": 4700000,
+    "sector": "Hydro Power"
+  },
+  "AMFI": {
+    "sharesOutstanding": 644280,
+    "sector": "Microfinance"
+  },
+  "AMFIPO": {
+    "sharesOutstanding": 600000,
+    "sector": "Microfinance"
+  },
+  "ARDBLP": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "ARDBL": {
+    "sharesOutstanding": 4102600,
+    "sector": "Development Banks"
+  },
+  "AVU": {
+    "high52": 58.0,
+    "low52": 58.0,
+    "sharesOutstanding": 550343,
+    "sector": "Manufacturing And Processing"
+  },
+  "ALBSLP": {
+    "high52": 549.0,
+    "low52": 549.0,
+    "sharesOutstanding": 3339140,
+    "sector": "Microfinance"
+  },
+  "ALICLP": {
+    "high52": 388.0,
+    "low52": 239.0,
+    "sharesOutstanding": 100000,
+    "sector": "Life Insurance"
+  },
+  "AVYANP": {
+    "sector": "Microfinance"
+  },
+  "AXIS": {
+    "sharesOutstanding": 7000000,
+    "sector": "Development Banks"
+  },
+  "BBBLN": {
+    "sharesOutstanding": 2079000,
+    "sector": "Development Banks"
+  },
+  "BBBLNP": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "BGDBLP": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "BGDBL": {
+    "sharesOutstanding": 575000,
+    "sector": "Development Banks"
+  },
+  "BOAN": {
+    "sharesOutstanding": 20000000,
+    "sector": "Commercial Banks"
+  },
+  "BOKD86": {
+    "high52": 1145.0,
+    "low52": 1053.1,
+    "sharesOutstanding": 1600000,
+    "sector": "Corporate Debenture"
+  },
+  "BOKD2079": {
+    "sharesOutstanding": 0,
+    "sector": "Corporate Debenture"
+  },
+  "BOKD86KA": {
+    "high52": 1247.0,
+    "low52": 1096.5,
+    "sharesOutstanding": 1100000,
+    "sector": "Corporate Debenture"
+  },
+  "BOKL": {
+    "sharesOutstanding": 112614336,
+    "sector": "Commercial Banks"
+  },
+  "BOKLPO": {
+    "sharesOutstanding": 2472879,
+    "sector": "Commercial Banks"
+  },
+  "BFCPO": {
+    "high52": 273.8,
+    "low52": 250.0,
+    "sharesOutstanding": 145460,
+    "sector": "Finance"
+  },
+  "BFIL": {
+    "sharesOutstanding": 1001000,
+    "sector": "Finance"
+  },
+  "BFCLPO": {
+    "sharesOutstanding": 2000000,
+    "sector": "Finance"
+  },
+  "BFCL": {
+    "sharesOutstanding": 2110000,
+    "sector": "Finance"
+  },
+  "BHBL": {
+    "sharesOutstanding": 5016002,
+    "sector": "Development Banks"
+  },
+  "BHBLPO": {
+    "sharesOutstanding": 944860,
+    "sector": "Development Banks"
+  },
+  "BBBLPO": {
+    "sharesOutstanding": 1480389,
+    "sector": "Development Banks"
+  },
+  "BBBL": {
+    "sharesOutstanding": 4739319,
+    "sector": "Development Banks"
+  },
+  "BSL": {
+    "high52": 28.0,
+    "low52": 28.0,
+    "sharesOutstanding": 165000,
+    "sector": "Manufacturing And Processing"
+  },
+  "BLDBL": {
+    "sharesOutstanding": 4253578,
+    "sector": "Development Banks"
+  },
+  "BLDBLP": {
+    "sharesOutstanding": 100,
+    "sector": "Development Banks"
+  },
+  "BJM": {
+    "sharesOutstanding": 68750,
+    "sector": "Manufacturing And Processing"
+  },
+  "BJFL": {
+    "sharesOutstanding": 4200000,
+    "sector": "Finance"
+  },
+  "BPWP": {
+    "sector": "Microfinance"
+  },
+  "BPW": {
+    "sharesOutstanding": 300000,
+    "sector": "Microfinance"
+  },
+  "BRTBL": {
+    "sharesOutstanding": 1400000,
+    "sector": "Development Banks"
+  },
+  "BUDBL": {
+    "sharesOutstanding": 10561995,
+    "sector": "Development Banks"
+  },
+  "BUDBLP": {
+    "sharesOutstanding": 300000,
+    "sector": "Development Banks"
+  },
+  "BSM": {
+    "high52": 18.0,
+    "low52": 18.0,
+    "sharesOutstanding": 1306693,
+    "sector": "Manufacturing And Processing"
+  },
+  "CMBFLP": {
+    "sharesOutstanding": 700000,
+    "sector": "Finance"
+  },
+  "CMB": {
+    "high52": 140.0,
+    "low52": 140.0,
+    "sharesOutstanding": 9350695,
+    "sector": "Finance"
+  },
+  "CMF2": {
+    "sharesOutstanding": 56000000,
+    "sector": "Mutual Fund"
+  },
+  "CFCLPO": {
+    "high52": 168.0,
+    "low52": 168.0,
+    "sharesOutstanding": 1500000,
+    "sector": "Finance"
+  },
+  "CCBLPO": {
+    "sharesOutstanding": 21200000,
+    "sector": "Commercial Banks"
+  },
+  "CCBL": {
+    "sharesOutstanding": 100077200,
+    "sector": "Commercial Banks"
+  },
+  "CCBD88": {
+    "high52": 1326.0,
+    "low52": 1137.0,
+    "sharesOutstanding": 2200000,
+    "sector": "Corporate Debenture"
+  },
+  "CGHP": {
+    "sector": "Hotels And Tourism"
+  },
+  "CBBLPO": {
+    "high52": 511.0,
+    "low52": 390.0,
+    "sharesOutstanding": 4255340,
+    "sector": "Microfinance"
+  },
+  "CITPO": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 53137504,
+    "sector": "Investment"
+  },
+  "CLIP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Life Insurance"
+  },
+  "CZBILP": {
+    "high52": 111.0,
+    "low52": 100.0,
+    "sharesOutstanding": 10000,
+    "sector": "Commercial Banks"
+  },
+  "CMF1": {
+    "sharesOutstanding": 82000000,
+    "sector": "Mutual Fund"
+  },
+  "CIZBD86": {
+    "high52": 1320.9,
+    "low52": 1112.3,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "C30MF": {
+    "high52": 10.45,
+    "low52": 8.7,
+    "sharesOutstanding": 75072390,
+    "sector": "Mutual Fund"
+  },
+  "CIZBD90": {
+    "high52": 1315.0,
+    "low52": 1010.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "CSY": {
+    "high52": 10.0,
+    "low52": 8.01,
+    "sharesOutstanding": 125000000,
+    "sector": "Commercial Banks"
+  },
+  "CEFL": {
+    "sharesOutstanding": 4005000,
+    "sector": "Finance"
+  },
+  "CEFLPO": {
+    "sharesOutstanding": 500000,
+    "sector": "Finance"
+  },
+  "CIVIC": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "CBL": {
+    "sharesOutstanding": 95296364,
+    "sector": "Commercial Banks"
+  },
+  "CBLPO": {
+    "sharesOutstanding": 21400000,
+    "sector": "Commercial Banks"
+  },
+  "PSDBLP": {
+    "high52": 143.0,
+    "low52": 143.0,
+    "sharesOutstanding": 1200000,
+    "sector": "Commercial Banks"
+  },
+  "CBLD88": {
+    "high52": 1325.0,
+    "low52": 1118.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "CMBSLP": {
+    "sharesOutstanding": 600000,
+    "sector": "Finance"
+  },
+  "CMBSL": {
+    "sharesOutstanding": 106956899,
+    "sector": "Finance"
+  },
+  "CEDBL": {
+    "sharesOutstanding": 11424000,
+    "sector": "Development Banks"
+  },
+  "CEDBLP": {
+    "sharesOutstanding": 6528000,
+    "sector": "Development Banks"
+  },
+  "CMBF": {
+    "sharesOutstanding": 1501020,
+    "sector": "Finance"
+  },
+  "CMBFPO": {
+    "sharesOutstanding": 450306,
+    "sector": "Finance"
+  },
+  "CTBNL": {
+    "sharesOutstanding": 20000000,
+    "sector": "Commercial Banks"
+  },
+  "CORBLP": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "CSDBL": {
+    "sharesOutstanding": 1124988,
+    "sector": "Development Banks"
+  },
+  "CSDBLP": {
+    "sharesOutstanding": 437500,
+    "sector": "Development Banks"
+  },
+  "CNDBLP": {
+    "sharesOutstanding": 3200000,
+    "sector": "Development Banks"
+  },
+  "CNDBL": {
+    "sharesOutstanding": 3328000,
+    "sector": "Development Banks"
+  },
+  "CRESTP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Life Insurance"
+  },
+  "CFL": {
+    "high52": 117.0,
+    "low52": 117.0,
+    "sharesOutstanding": 700000,
+    "sector": "Finance"
+  },
+  "CYCLP": {
+    "high52": 864.0,
+    "low52": 831.0,
+    "sector": "Microfinance"
+  },
+  "DDBLPO": {
+    "high52": 440.0,
+    "low52": 440.0,
+    "sharesOutstanding": 50000,
+    "sector": "Microfinance"
+  },
+  "DBBL": {
+    "sharesOutstanding": 34487432,
+    "sector": "Development Banks"
+  },
+  "DBBLPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "DLBSP": {
+    "sector": "Microfinance"
+  },
+  "EKBL": {
+    "sharesOutstanding": 2277400,
+    "sector": "Development Banks"
+  },
+  "EKBLPO": {
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "ENLP": {
+    "sector": "Investment"
+  },
+  "EBLPO": {
+    "high52": 145.0,
+    "low52": 145.0,
+    "sharesOutstanding": 100000,
+    "sector": "Commercial Banks"
+  },
+  "EBLCP": {
+    "sharesOutstanding": 2000000,
+    "sector": "Preference Share"
+  },
+  "EBLD85": {
+    "high52": 1250.0,
+    "low52": 1060.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "EBLEB89": {
+    "high52": 1133.0,
+    "low52": 1002.4,
+    "sharesOutstanding": 746830,
+    "sector": "Corporate Debenture"
+  },
+  "EBLD91": {
+    "high52": 1142.4,
+    "low52": 995.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "EBLD2078": {
+    "sharesOutstanding": 0,
+    "sector": "Corporate Debenture"
+  },
+  "EBLD86": {
+    "high52": 1150.0,
+    "low52": 1050.0,
+    "sharesOutstanding": 856783,
+    "sector": "Corporate Debenture"
+  },
+  "ECL": {
+    "high52": 1980.0,
+    "low52": 296.6,
+    "sharesOutstanding": 3000000,
+    "sector": "Manufacturing And Processing"
+  },
+  "EFL": {
+    "sharesOutstanding": 1103966,
+    "sector": "Finance"
+  },
+  "EFLPO": {
+    "sharesOutstanding": 120000,
+    "sector": "Finance"
+  },
+  "EICPO": {
+    "sharesOutstanding": 1012500,
+    "sector": "Non Life Insurance"
+  },
+  "EIC": {
+    "sharesOutstanding": 12546207,
+    "sector": "Non Life Insurance"
+  },
+  "EDBLPO": {
+    "high52": 408.0,
+    "low52": 324.0,
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "FFCL": {
+    "sharesOutstanding": 3963960,
+    "sector": "Finance"
+  },
+  "FMDBLP": {
+    "high52": 280.5,
+    "low52": 280.5,
+    "sharesOutstanding": 2300000,
+    "sector": "Microfinance"
+  },
+  "FHL": {
+    "high52": 75.0,
+    "low52": 75.0,
+    "sharesOutstanding": 262102,
+    "sector": "Manufacturing And Processing"
+  },
+  "FOWADP": {
+    "high52": 660.0,
+    "low52": 550.0,
+    "sharesOutstanding": 1500245,
+    "sector": "Microfinance"
+  },
+  "GMFBSP": {
+    "sector": "Microfinance"
+  },
+  "GDBL": {
+    "sharesOutstanding": 27499993,
+    "sector": "Development Banks"
+  },
+  "FBBLPO": {
+    "sharesOutstanding": 420000,
+    "sector": "Development Banks"
+  },
+  "BSBLPO": {
+    "sharesOutstanding": 2400000,
+    "sector": "Development Banks"
+  },
+  "GDBLPO": {
+    "sharesOutstanding": 3520000,
+    "sector": "Development Banks"
+  },
+  "GDBL1": {
+    "sharesOutstanding": 4576000,
+    "sector": "Development Banks"
+  },
+  "GBBLPO": {
+    "high52": 242.0,
+    "low52": 200.0,
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "GSY": {
+    "high52": 10.46,
+    "low52": 8.5,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "GBBD85": {
+    "high52": 1135.0,
+    "low52": 1045.5,
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "GABLPO": {
+    "sharesOutstanding": 432000,
+    "sector": "Development Banks"
+  },
+  "GABL": {
+    "sharesOutstanding": 594000,
+    "sector": "Development Banks"
+  },
+  "GSDBL": {
+    "sharesOutstanding": 2100000,
+    "sector": "Development Banks"
+  },
+  "GSDBLP": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "GIC": {
+    "sharesOutstanding": 10000000,
+    "sector": "Non Life Insurance"
+  },
+  "GICP": {
+    "sector": "Non Life Insurance"
+  },
+  "GGBSL": {
+    "sharesOutstanding": 276250,
+    "sector": "Microfinance"
+  },
+  "GGBSLP": {
+    "sector": "Microfinance"
+  },
+  "GIBF1": {
+    "high52": 11.67,
+    "low52": 9.3,
+    "sharesOutstanding": 102576360,
+    "sector": "Mutual Fund"
+  },
+  "GBIMEP": {
+    "high52": 131.0,
+    "low52": 100.0,
+    "sharesOutstanding": 100000,
+    "sector": "Commercial Banks"
+  },
+  "GIMES1": {
+    "sharesOutstanding": 100000000,
+    "sector": "Mutual Fund"
+  },
+  "GBD80/81": {
+    "sharesOutstanding": 103105160,
+    "sector": "Corporate Debenture"
+  },
+  "GBIMESY2": {
+    "high52": 10.78,
+    "low52": 8.5,
+    "sharesOutstanding": 150000000,
+    "sector": "Corporate Debenture"
+  },
+  "GBILD84/85": {
+    "high52": 1238.0,
+    "low52": 1067.0,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "GBILD86/87": {
+    "high52": 1202.0,
+    "low52": 1055.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "GILBPO": {
+    "high52": 695.0,
+    "low52": 695.0,
+    "sharesOutstanding": 565000,
+    "sector": "Microfinance"
+  },
+  "GFCLPO": {
+    "high52": 110.0,
+    "low52": 110.0,
+    "sharesOutstanding": 461896,
+    "sector": "Finance"
+  },
+  "GWFD83": {
+    "high52": 1239.0,
+    "low52": 1016.0,
+    "sharesOutstanding": 250000,
+    "sector": "Corporate Debenture"
+  },
+  "GRU": {
+    "high52": 38.0,
+    "low52": 38.0,
+    "sharesOutstanding": 3833400,
+    "sector": "Manufacturing And Processing"
+  },
+  "GFLK": {
+    "sharesOutstanding": 1557085,
+    "sector": "Finance"
+  },
+  "GFLKPO": {
+    "sharesOutstanding": 357300,
+    "sector": "Finance"
+  },
+  "GBLBSP": {
+    "high52": 564.0,
+    "low52": 564.0,
+    "sharesOutstanding": 5575000,
+    "sector": "Microfinance"
+  },
+  "PDBLPO": {
+    "high52": 124.0,
+    "low52": 124.0,
+    "sharesOutstanding": 600000,
+    "sector": "Microfinance"
+  },
+  "GRANDP": {
+    "sharesOutstanding": 1680000,
+    "sector": "Commercial Banks"
+  },
+  "GRAND": {
+    "sharesOutstanding": 20000524,
+    "sector": "Commercial Banks"
+  },
+  "GRDBLP": {
+    "high52": 649.0,
+    "low52": 277.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "GMLIP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Life Insurance"
+  },
+  "GMFILP": {
+    "high52": 264.0,
+    "low52": 264.0,
+    "sharesOutstanding": 100000,
+    "sector": "Finance"
+  },
+  "GULMI": {
+    "sharesOutstanding": 250000,
+    "sector": "Development Banks"
+  },
+  "GLBSLP": {
+    "sector": "Microfinance"
+  },
+  "GLICL": {
+    "sharesOutstanding": 25365630,
+    "sector": "Life Insurance"
+  },
+  "GLICLP": {
+    "sharesOutstanding": 100000,
+    "sector": "Life Insurance"
+  },
+  "GDBNL": {
+    "sharesOutstanding": 5280000,
+    "sector": "Development Banks"
+  },
+  "GUFLPO": {
+    "high52": 331.0,
+    "low52": 298.0,
+    "sharesOutstanding": 198000,
+    "sector": "Finance"
+  },
+  "HAMA": {
+    "sharesOutstanding": 2210000,
+    "sector": "Finance"
+  },
+  "HAMAPO": {
+    "sharesOutstanding": 200000,
+    "sector": "Finance"
+  },
+  "HAMRO": {
+    "sharesOutstanding": 4922395,
+    "sector": "Development Banks"
+  },
+  "HAMROP": {
+    "sharesOutstanding": 601000,
+    "sector": "Development Banks"
+  },
+  "HBT": {
+    "high52": 4.0,
+    "low52": 4.0,
+    "sharesOutstanding": 18650000,
+    "sector": "Manufacturing And Processing"
+  },
+  "HATHPO": {
+    "sharesOutstanding": 1500000,
+    "sector": "Finance"
+  },
+  "HATH": {
+    "sharesOutstanding": 3000000,
+    "sector": "Finance"
+  },
+  "HBLD86": {
+    "high52": 1220.0,
+    "low52": 1112.0,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "H8020": {
+    "high52": 13.18,
+    "low52": 10.0,
+    "sharesOutstanding": 10000000,
+    "sector": "Mutual Fund"
+  },
+  "HBLD83": {
+    "sharesOutstanding": 2569104,
+    "sector": "Corporate Debenture"
+  },
+  "HBLPO": {
+    "high52": 131.0,
+    "low52": 102.0,
+    "sharesOutstanding": 90817407,
+    "sector": "Commercial Banks"
+  },
+  "HEIP": {
+    "high52": 378.0,
+    "low52": 289.5,
+    "sharesOutstanding": 2675044,
+    "sector": "Non Life Insurance"
+  },
+  "HFL": {
+    "high52": 18.0,
+    "low52": 18.0,
+    "sharesOutstanding": 1400000,
+    "sector": "Finance"
+  },
+  "HLBSLP": {
+    "high52": 418.0,
+    "low52": 418.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Microfinance"
+  },
+  "HLIPO": {
+    "high52": 221.5,
+    "low52": 221.5,
+    "sharesOutstanding": 4881600,
+    "sector": "Life Insurance"
+  },
+  "HLICF": {
+    "high52": 10.55,
+    "low52": 7.88,
+    "sharesOutstanding": 500000000,
+    "sector": "Mutual Fund"
+  },
+  "HRLP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Others"
+  },
+  "HTL": {
+    "sharesOutstanding": 480000,
+    "sector": "Manufacturing And Processing"
+  },
+  "HIDCLP": {
+    "high52": 230.6,
+    "low52": 174.4,
+    "sharesOutstanding": 33000000,
+    "sector": "Investment"
+  },
+  "ILIP": {
+    "sector": "Life Insurance"
+  },
+  "ICFCPO": {
+    "high52": 366.0,
+    "low52": 366.0,
+    "sharesOutstanding": 2223340,
+    "sector": "Finance"
+  },
+  "ICFCD83": {
+    "high52": 1272.2,
+    "low52": 843.2,
+    "sharesOutstanding": 200000,
+    "sector": "Corporate Debenture"
+  },
+  "ICFCD88": {
+    "high52": 1216.0,
+    "low52": 1080.0,
+    "sharesOutstanding": 300000,
+    "sector": "Corporate Debenture"
+  },
+  "ICFCD89": {
+    "high52": 1140.0,
+    "low52": 1020.0,
+    "sharesOutstanding": 0,
+    "sector": "Finance"
+  },
+  "IGIPO": {
+    "high52": 340.0,
+    "low52": 340.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Non Life Insurance"
+  },
+  "IMEFI": {
+    "sharesOutstanding": 4318445,
+    "sector": "Finance"
+  },
+  "IMEFIP": {
+    "sharesOutstanding": 1621491,
+    "sector": "Finance"
+  },
+  "IFILPO": {
+    "sharesOutstanding": 200000,
+    "sector": "Finance"
+  },
+  "IFIL": {
+    "sharesOutstanding": 1497300,
+    "sector": "Finance"
+  },
+  "ILBSP": {
+    "high52": 624.0,
+    "low52": 439.4,
+    "sector": "Microfinance"
+  },
+  "IDBLPO": {
+    "sharesOutstanding": 2464000,
+    "sector": "Development Banks"
+  },
+  "IDBL": {
+    "sharesOutstanding": 8112886,
+    "sector": "Development Banks"
+  },
+  "INDB": {
+    "sharesOutstanding": 3175006,
+    "sector": "Development Banks"
+  },
+  "INDBPO": {
+    "sharesOutstanding": 1473212,
+    "sector": "Development Banks"
+  },
+  "INDBL": {
+    "sharesOutstanding": 7040000,
+    "sector": "Development Banks"
+  },
+  "INDBLP": {
+    "sharesOutstanding": 7040000,
+    "sector": "Development Banks"
+  },
+  "ILFC": {
+    "sharesOutstanding": 6480000,
+    "sector": "Finance"
+  },
+  "ILFCPO": {
+    "sharesOutstanding": 6480000,
+    "sector": "Finance"
+  },
+  "JALPAP": {
+    "sector": "Microfinance"
+  },
+  "JALPA": {
+    "sharesOutstanding": 1828000,
+    "sector": "Microfinance"
+  },
+  "JFLPO": {
+    "high52": 349.0,
+    "low52": 349.0,
+    "sharesOutstanding": 240000,
+    "sector": "Finance"
+  },
+  "JBNLPO": {
+    "sharesOutstanding": 20600000,
+    "sector": "Commercial Banks"
+  },
+  "JBNL": {
+    "sharesOutstanding": 80007858,
+    "sector": "Commercial Banks"
+  },
+  "JSLBBP": {
+    "high52": 740.0,
+    "low52": 636.1,
+    "sharesOutstanding": 200000,
+    "sector": "Microfinance"
+  },
+  "JEFLPO": {
+    "sharesOutstanding": 2200000,
+    "sector": "Finance"
+  },
+  "JEFL": {
+    "sharesOutstanding": 8479942,
+    "sector": "Finance"
+  },
+  "JBLBP": {
+    "high52": 716.0,
+    "low52": 100.0,
+    "sharesOutstanding": 6084000,
+    "sector": "Microfinance"
+  },
+  "JHBL": {
+    "sharesOutstanding": 587000,
+    "sector": "Development Banks"
+  },
+  "JHBLPO": {
+    "sharesOutstanding": 400000,
+    "sector": "Development Banks"
+  },
+  "JBBD87": {
+    "high52": 1289.0,
+    "low52": 1095.0,
+    "sharesOutstanding": 1500000,
+    "sector": "Corporate Debenture"
+  },
+  "JBBLPO": {
+    "high52": 187.0,
+    "low52": 179.0,
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "JLI": {
+    "sharesOutstanding": 24200000,
+    "sector": "Life Insurance"
+  },
+  "JLIP": {
+    "sector": "Life Insurance"
+  },
+  "JSM": {
+    "high52": 27.0,
+    "low52": 27.0,
+    "sharesOutstanding": 1270288,
+    "sector": "Manufacturing And Processing"
+  },
+  "KEBL": {
+    "sharesOutstanding": 2842970,
+    "sector": "Development Banks"
+  },
+  "KEBLPO": {
+    "sharesOutstanding": 516000,
+    "sector": "Development Banks"
+  },
+  "KBBL": {
+    "sharesOutstanding": 29239378,
+    "sector": "Development Banks"
+  },
+  "KBBLPO": {
+    "sharesOutstanding": 1008000,
+    "sector": "Development Banks"
+  },
+  "KKBLPO": {
+    "sharesOutstanding": 569250,
+    "sector": "Development Banks"
+  },
+  "KKBL": {
+    "sharesOutstanding": 654637,
+    "sector": "Development Banks"
+  },
+  "KAHL": {
+    "high52": 613.0,
+    "low52": 295.4,
+    "sharesOutstanding": 14000000,
+    "sector": "Hydro Power"
+  },
+  "KMCDBP": {
+    "high52": 605.0,
+    "low52": 587.0,
+    "sharesOutstanding": 500000,
+    "sector": "Microfinance"
+  },
+  "KHPL": {
+    "high52": 1324.8,
+    "low52": 300.0,
+    "sharesOutstanding": 5500000,
+    "sector": "Hydro Power"
+  },
+  "KDLP": {
+    "sector": "Hotels And Tourism"
+  },
+  "KCDBLP": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "KCDBL": {
+    "sharesOutstanding": 1060000,
+    "sector": "Development Banks"
+  },
+  "KSBBLP": {
+    "high52": 269.0,
+    "low52": 165.7,
+    "sharesOutstanding": 2300000,
+    "sector": "Development Banks"
+  },
+  "KSBBLD87": {
+    "high52": 1229.0,
+    "low52": 1047.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "KSBBLPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Development Banks"
+  },
+  "KADBL": {
+    "sharesOutstanding": 5844300,
+    "sector": "Development Banks"
+  },
+  "KADBLP": {
+    "sharesOutstanding": 1980000,
+    "sector": "Development Banks"
+  },
+  "KNBLPO": {
+    "sharesOutstanding": 400000,
+    "sector": "Development Banks"
+  },
+  "KNBL": {
+    "sharesOutstanding": 5150000,
+    "sector": "Development Banks"
+  },
+  "KRBLPO": {
+    "high52": 217.0,
+    "low52": 217.0,
+    "sharesOutstanding": 800000,
+    "sector": "Development Banks"
+  },
+  "KRBL": {
+    "high52": 810.0,
+    "low52": 810.0,
+    "sharesOutstanding": 5028300,
+    "sector": "Development Banks"
+  },
+  "KAFIL": {
+    "sharesOutstanding": 2836960,
+    "sector": "Finance"
+  },
+  "KAFILP": {
+    "sharesOutstanding": 1685208,
+    "sector": "Finance"
+  },
+  "KDBLPO": {
+    "sharesOutstanding": 200000,
+    "sector": "Development Banks"
+  },
+  "KDBL": {
+    "sharesOutstanding": 6799273,
+    "sector": "Development Banks"
+  },
+  "KHDBL": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "KLBS": {
+    "sharesOutstanding": 400000,
+    "sector": "Microfinance"
+  },
+  "KLBSP": {
+    "sector": "Microfinance"
+  },
+  "KBLD86": {
+    "high52": 1387.5,
+    "low52": 1080.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "KEF": {
+    "high52": 11.3,
+    "low52": 8.31,
+    "sharesOutstanding": 100000000,
+    "sector": "Mutual Fund"
+  },
+  "KBLD90": {
+    "high52": 1500.0,
+    "low52": 1187.0,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "KSY": {
+    "high52": 10.26,
+    "low52": 8.21,
+    "sharesOutstanding": 74475070,
+    "sector": "Mutual Fund"
+  },
+  "KBLD89": {
+    "high52": 1379.0,
+    "low52": 1213.2,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "KBLPO": {
+    "high52": 109.0,
+    "low52": 100.0,
+    "sharesOutstanding": 5250000,
+    "sector": "Commercial Banks"
+  },
+  "LFCPO": {
+    "sharesOutstanding": 417656,
+    "sector": "Finance"
+  },
+  "LFC": {
+    "sharesOutstanding": 1878697,
+    "sector": "Finance"
+  },
+  "LUK": {
+    "high52": 10.91,
+    "low52": 8.97,
+    "sharesOutstanding": 65262360,
+    "sector": "Mutual Fund"
+  },
+  "LLBSPO": {
+    "high52": 86.96,
+    "low52": 86.96,
+    "sharesOutstanding": 1000000,
+    "sector": "Microfinance"
+  },
+  "LSLPO": {
+    "high52": 123.0,
+    "low52": 100.0,
+    "sharesOutstanding": 4717008,
+    "sector": "Commercial Banks"
+  },
+  "LEMF": {
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "LVF1": {
+    "sharesOutstanding": 50000000,
+    "sector": "Mutual Fund"
+  },
+  "LSH12": {
+    "high52": 10.0,
+    "low52": 8.55,
+    "sharesOutstanding": 150000000,
+    "sector": "Commercial Banks"
+  },
+  "LVF2": {
+    "high52": 10.3,
+    "low52": 8.76,
+    "sharesOutstanding": 80000000,
+    "sector": "Mutual Fund"
+  },
+  "SFMF": {
+    "high52": 11.01,
+    "low52": 9.02,
+    "sharesOutstanding": 86000000,
+    "sector": "Mutual Fund"
+  },
+  "LBLD86": {
+    "high52": 1240.0,
+    "low52": 1083.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "LBLD88": {
+    "high52": 1166.0,
+    "low52": 1040.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "LICNPO": {
+    "sharesOutstanding": 8555625,
+    "sector": "Life Insurance"
+  },
+  "LBFIL": {
+    "sharesOutstanding": 1665000,
+    "sector": "Finance"
+  },
+  "LUBLPO": {
+    "sharesOutstanding": 5250000,
+    "sector": "Commercial Banks"
+  },
+  "LUBL": {
+    "sharesOutstanding": 20008332,
+    "sector": "Commercial Banks"
+  },
+  "LBBLD89": {
+    "high52": 1346.0,
+    "low52": 1189.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "LBBLPO": {
+    "high52": 261.0,
+    "low52": 261.0,
+    "sharesOutstanding": 6800000,
+    "sector": "Development Banks"
+  },
+  "LFLC": {
+    "sharesOutstanding": 5568750,
+    "sector": "Finance"
+  },
+  "LFLCPO": {
+    "sharesOutstanding": 6000000,
+    "sector": "Finance"
+  },
+  "LGIL": {
+    "sharesOutstanding": 14045481,
+    "sector": "Non Life Insurance"
+  },
+  "LGILPO": {
+    "sharesOutstanding": 2927472,
+    "sector": "Non Life Insurance"
+  },
+  "MBLD87": {
+    "high52": 1171.0,
+    "low52": 1074.0,
+    "sharesOutstanding": 2253496,
+    "sector": "Corporate Debenture"
+  },
+  "MBLD2085": {
+    "high52": 1268.19,
+    "low52": 1121.2,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "MBLEF": {
+    "high52": 10.89,
+    "low52": 8.44,
+    "sharesOutstanding": 121625330,
+    "sector": "Mutual Fund"
+  },
+  "MBLPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "MBLPO": {
+    "high52": 132.0,
+    "low52": 100.0,
+    "sharesOutstanding": 5751559,
+    "sector": "Commercial Banks"
+  },
+  "MGBL": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "MFL": {
+    "sharesOutstanding": 4830000,
+    "sector": "Finance"
+  },
+  "MFLPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Finance"
+  },
+  "MBBL": {
+    "sharesOutstanding": 1314738,
+    "sector": "Development Banks"
+  },
+  "MBBLPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "MLBLPO": {
+    "high52": 232.0,
+    "low52": 193.0,
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "MDBLPO": {
+    "high52": 104.0,
+    "low52": 104.0,
+    "sharesOutstanding": 350000,
+    "sector": "Development Banks"
+  },
+  "MLBLD89": {
+    "high52": 1350.0,
+    "low52": 1200.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "MLBL1": {
+    "sharesOutstanding": 11562225,
+    "sector": "Development Banks"
+  },
+  "MLBSLP": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 2175625,
+    "sector": "Microfinance"
+  },
+  "MSMBS": {
+    "sharesOutstanding": 1464100,
+    "sector": "Microfinance"
+  },
+  "MSMBSP": {
+    "sharesOutstanding": 1100000,
+    "sector": "Microfinance"
+  },
+  "MSLBP": {
+    "high52": 735.0,
+    "low52": 658.0,
+    "sharesOutstanding": 1154804,
+    "sector": "Microfinance"
+  },
+  "MKLB": {
+    "sharesOutstanding": 1484785,
+    "sector": "Microfinance"
+  },
+  "MKLBP": {
+    "sector": "Microfinance"
+  },
+  "MSBBL": {
+    "sharesOutstanding": 2752942,
+    "sector": "Development Banks"
+  },
+  "MSBBLP": {
+    "sharesOutstanding": 1650750,
+    "sector": "Development Banks"
+  },
+  "MFILPO": {
+    "high52": 410.0,
+    "low52": 339.0,
+    "sharesOutstanding": 2506500,
+    "sector": "Finance"
+  },
+  "MFLD85": {
+    "high52": 1203.0,
+    "low52": 1064.0,
+    "sharesOutstanding": 500000,
+    "sector": "Corporate Debenture"
+  },
+  "MLBSP": {
+    "high52": 957.0,
+    "low52": 698.0,
+    "sector": "Microfinance"
+  },
+  "MTBL": {
+    "sharesOutstanding": 484000,
+    "sector": "Development Banks"
+  },
+  "MATRIP": {
+    "high52": 683.0,
+    "low52": 523.5,
+    "sharesOutstanding": 200000,
+    "sector": "Microfinance"
+  },
+  "MEGAPO": {
+    "sharesOutstanding": 26096000,
+    "sector": "Commercial Banks"
+  },
+  "MEGA": {
+    "sharesOutstanding": 167652800,
+    "sector": "Commercial Banks"
+  },
+  "MEROPO": {
+    "high52": 226.0,
+    "low52": 226.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Microfinance"
+  },
+  "METRO": {
+    "sharesOutstanding": 2135200,
+    "sector": "Development Banks"
+  },
+  "MMFDB": {
+    "sharesOutstanding": 6657643,
+    "sector": "Microfinance"
+  },
+  "MMFDBP": {
+    "sharesOutstanding": 200000,
+    "sector": "Microfinance"
+  },
+  "MIDBLP": {
+    "sharesOutstanding": 1150000,
+    "sector": "Development Banks"
+  },
+  "MIDBL": {
+    "sharesOutstanding": 5764010,
+    "sector": "Development Banks"
+  },
+  "MDBPO": {
+    "high52": 359.0,
+    "low52": 318.0,
+    "sharesOutstanding": 10000,
+    "sector": "Development Banks"
+  },
+  "MLBBLP": {
+    "high52": 401.0,
+    "low52": 401.0,
+    "sharesOutstanding": 282900,
+    "sector": "Microfinance"
+  },
+  "MSM": {
+    "sharesOutstanding": 35827,
+    "sector": "Manufacturing And Processing"
+  },
+  "MEPDL": {
+    "high52": 855.0,
+    "low52": 300.0,
+    "sharesOutstanding": 8600000,
+    "sector": "Hydro Power"
+  },
+  "MMDBL": {
+    "sharesOutstanding": 691600,
+    "sector": "Development Banks"
+  },
+  "MMDBLP": {
+    "sharesOutstanding": 260000,
+    "sector": "Development Banks"
+  },
+  "MND84/85": {
+    "high52": 1128.0,
+    "low52": 1042.8,
+    "sharesOutstanding": 1250000,
+    "sector": "Corporate Debenture"
+  },
+  "MNMF1": {
+    "high52": 10.4,
+    "low52": 8.53,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "MNBBLP": {
+    "high52": 250.9,
+    "low52": 236.2,
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "MPFLPO": {
+    "high52": 321.0,
+    "low52": 321.0,
+    "sharesOutstanding": 250000,
+    "sector": "Finance"
+  },
+  "NABILP": {
+    "high52": 301.1,
+    "low52": 301.1,
+    "sharesOutstanding": 10571415,
+    "sector": "Commercial Banks"
+  },
+  "NBF1": {
+    "sharesOutstanding": 75000000,
+    "sector": "Mutual Fund"
+  },
+  "NEF": {
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "NBF2": {
+    "high52": 10.7,
+    "low52": 8.89,
+    "sharesOutstanding": 112000000,
+    "sector": "Mutual Fund"
+  },
+  "NBLD82": {
+    "high52": 1140.0,
+    "low52": 1018.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "NBLD85": {
+    "high52": 1187.0,
+    "low52": 1020.0,
+    "sharesOutstanding": 2207108,
+    "sector": "Corporate Debenture"
+  },
+  "NABILD87": {
+    "high52": 1200.0,
+    "low52": 1087.5,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "NABILD2089": {
+    "high52": 1154.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "NABILPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "NADEPP": {
+    "high52": 291.0,
+    "low52": 291.0,
+    "sharesOutstanding": 1600000,
+    "sector": "Microfinance"
+  },
+  "NBBL": {
+    "sharesOutstanding": 2112757,
+    "sector": "Microfinance"
+  },
+  "NBBLPO": {
+    "sharesOutstanding": 143000,
+    "sector": "Microfinance"
+  },
+  "NBSL": {
+    "sharesOutstanding": 840000,
+    "sector": "Finance"
+  },
+  "NBSLPO": {
+    "sharesOutstanding": 312500,
+    "sector": "Finance"
+  },
+  "NABBCP": {
+    "high52": 1052.0,
+    "low52": 1052.0,
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "NFL": {
+    "sharesOutstanding": 2136517,
+    "sector": "Finance"
+  },
+  "NNFC": {
+    "sharesOutstanding": 8087740,
+    "sector": "Finance"
+  },
+  "NNFCPO": {
+    "sharesOutstanding": 1293176,
+    "sector": "Finance"
+  },
+  "NMFBSP": {
+    "high52": 675.0,
+    "low52": 610.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Microfinance"
+  },
+  "NLICLP": {
+    "high52": 343.0,
+    "low52": 321.0,
+    "sharesOutstanding": 200000,
+    "sector": "Life Insurance"
+  },
+  "00002": {
+    "sharesOutstanding": 400000,
+    "sector": "Life Insurance"
+  },
+  "ESC": {
+    "sharesOutstanding": 77355,
+    "sector": "Others"
+  },
+  "NDFL": {
+    "sharesOutstanding": 1973132,
+    "sector": "Finance"
+  },
+  "NSLB": {
+    "sharesOutstanding": 3610404,
+    "sector": "Microfinance"
+  },
+  "NSLBP": {
+    "sharesOutstanding": 200000,
+    "sector": "Microfinance"
+  },
+  "NILPO": {
+    "high52": 436.0,
+    "low52": 436.0,
+    "sharesOutstanding": 1352216,
+    "sector": "Non Life Insurance"
+  },
+  "NABB": {
+    "sharesOutstanding": 2017075,
+    "sector": "Finance"
+  },
+  "NABBPO": {
+    "sharesOutstanding": 944682,
+    "sector": "Finance"
+  },
+  "NAGRO": {
+    "sharesOutstanding": 652587,
+    "sector": "Microfinance"
+  },
+  "NAGROP": {
+    "sector": "Microfinance"
+  },
+  "NBBPO": {
+    "sharesOutstanding": 18603890,
+    "sector": "Commercial Banks"
+  },
+  "NBB": {
+    "sharesOutstanding": 100853998,
+    "sector": "Commercial Banks"
+  },
+  "NBBD2085": {
+    "high52": 1206.3,
+    "low52": 1083.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "NBFL": {
+    "sharesOutstanding": 500480,
+    "sector": "Finance"
+  },
+  "NBLD87": {
+    "high52": 1225.0,
+    "low52": 1060.0,
+    "sharesOutstanding": 3500000,
+    "sector": "Corporate Debenture"
+  },
+  "NBLP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 146940230,
+    "sector": "Commercial Banks"
+  },
+  "NBBU": {
+    "high52": 64.0,
+    "low52": 64.0,
+    "sharesOutstanding": 210680,
+    "sector": "Manufacturing And Processing"
+  },
+  "NBCK": {
+    "sharesOutstanding": 56018,
+    "sector": "Tradings"
+  },
+  "NCDB": {
+    "sharesOutstanding": 5316588,
+    "sector": "Development Banks"
+  },
+  "NCDBPO": {
+    "sharesOutstanding": 1095000,
+    "sector": "Development Banks"
+  },
+  "NCDBL": {
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "NCCB": {
+    "sharesOutstanding": 115146728,
+    "sector": "Commercial Banks"
+  },
+  "RMBFPO": {
+    "sharesOutstanding": 357500,
+    "sector": "Commercial Banks"
+  },
+  "NCCBPO": {
+    "sharesOutstanding": 6880104,
+    "sector": "Commercial Banks"
+  },
+  "NCCD86": {
+    "high52": 1299.0,
+    "low52": 1052.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "NDB": {
+    "sharesOutstanding": 3200000,
+    "sector": "Development Banks"
+  },
+  "NDBPO": {
+    "sharesOutstanding": 1120000,
+    "sector": "Development Banks"
+  },
+  "NEFLPO": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "NEFL": {
+    "sharesOutstanding": 2640303,
+    "sector": "Finance"
+  },
+  "NFD": {
+    "high52": 34.0,
+    "low52": 34.0,
+    "sharesOutstanding": 491285,
+    "sector": "Others"
+  },
+  "NFSPO": {
+    "high52": 163.0,
+    "low52": 163.0,
+    "sharesOutstanding": 1359599,
+    "sector": "Finance"
+  },
+  "NHMF": {
+    "sharesOutstanding": 1912791,
+    "sector": "Finance"
+  },
+  "NHMFPO": {
+    "sharesOutstanding": 482642,
+    "sector": "Finance"
+  },
+  "NIFRAP": {
+    "high52": 111.0,
+    "low52": 111.0,
+    "sharesOutstanding": 216000000,
+    "sector": "Investment"
+  },
+  "NIFRAGED": {
+    "high52": 1200.2,
+    "low52": 986.0,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "NIFRAUR85/86": {
+    "high52": 1128.0,
+    "low52": 1010.0,
+    "sharesOutstanding": 2289813,
+    "sector": "Corporate Debenture"
+  },
+  "NICLPO": {
+    "high52": 300.0,
+    "low52": 300.0,
+    "sharesOutstanding": 2872093,
+    "sector": "Non Life Insurance"
+  },
+  "NIMBD90": {
+    "high52": 1425.0,
+    "low52": 1140.0,
+    "sharesOutstanding": 4040000,
+    "sector": "Corporate Debenture"
+  },
+  "NIBLSTF": {
+    "high52": 10.85,
+    "low52": 8.0,
+    "sharesOutstanding": 113000000,
+    "sector": "Mutual Fund"
+  },
+  "NIBD84": {
+    "high52": 1130.0,
+    "low52": 1017.2,
+    "sharesOutstanding": 4000000,
+    "sector": "Corporate Debenture"
+  },
+  "NIBSF2": {
+    "high52": 11.13,
+    "low52": 8.1,
+    "sharesOutstanding": 150000000,
+    "sector": "Mutual Fund"
+  },
+  "NIBD2082": {
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "NIBLPF": {
+    "sharesOutstanding": 75000000,
+    "sector": "Mutual Fund"
+  },
+  "NIBSF1": {
+    "sharesOutstanding": 75000000,
+    "sector": "Mutual Fund"
+  },
+  "NIMBPO": {
+    "high52": 174.9,
+    "low52": 135.1,
+    "sharesOutstanding": 183075408,
+    "sector": "Commercial Banks"
+  },
+  "NKU": {
+    "high52": 32.0,
+    "low52": 32.0,
+    "sharesOutstanding": 90000,
+    "sector": "Manufacturing And Processing"
+  },
+  "NLICP": {
+    "high52": 413.0,
+    "low52": 413.0,
+    "sharesOutstanding": 100000,
+    "sector": "Life Insurance"
+  },
+  "NSY": {
+    "high52": 10.19,
+    "low52": 8.85,
+    "sharesOutstanding": 200000000,
+    "sector": "Mutual Fund"
+  },
+  "NMICP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Non Life Insurance"
+  },
+  "NRICP": {
+    "high52": 281.0,
+    "low52": 281.0,
+    "sharesOutstanding": 128135438,
+    "sector": "Others"
+  },
+  "SBIPO": {
+    "high52": 1420.0,
+    "low52": 1420.0,
+    "sharesOutstanding": 6114353,
+    "sector": "Commercial Banks"
+  },
+  "SBIBD86": {
+    "high52": 1222.0,
+    "low52": 1123.0,
+    "sharesOutstanding": 2033888,
+    "sector": "Corporate Debenture"
+  },
+  "SBID89": {
+    "high52": 1266.0,
+    "low52": 1059.5,
+    "sharesOutstanding": 1418366,
+    "sector": "Corporate Debenture"
+  },
+  "SBID2090": {
+    "high52": 1184.5,
+    "low52": 1000.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Commercial Banks"
+  },
+  "SBID83": {
+    "high52": 1226.0,
+    "low52": 1031.0,
+    "sharesOutstanding": 2401482,
+    "sector": "Corporate Debenture"
+  },
+  "NSM": {
+    "high52": 174.0,
+    "low52": 174.0,
+    "sharesOutstanding": 4320000,
+    "sector": "Finance"
+  },
+  "NSMPO": {
+    "high52": 182.0,
+    "low52": 182.0,
+    "sharesOutstanding": 100000,
+    "sector": "Finance"
+  },
+  "NSLMB": {
+    "sharesOutstanding": 3000000,
+    "sector": "Finance"
+  },
+  "NTL": {
+    "high52": 56.0,
+    "low52": 56.0,
+    "sharesOutstanding": 50000,
+    "sector": "Tradings"
+  },
+  "NVG": {
+    "high52": 300.0,
+    "low52": 300.0,
+    "sharesOutstanding": 101250,
+    "sector": "Manufacturing And Processing"
+  },
+  "NWC": {
+    "high52": 95.0,
+    "low52": 95.0,
+    "sharesOutstanding": 41000,
+    "sector": "Tradings"
+  },
+  "NMLBBLP": {
+    "high52": 340.0,
+    "low52": 334.0,
+    "sharesOutstanding": 1250003,
+    "sector": "Microfinance"
+  },
+  "NESDOP": {
+    "sector": "Microfinance"
+  },
+  "NIBLGF": {
+    "high52": 11.81,
+    "low52": 8.2,
+    "sharesOutstanding": 132000000,
+    "sector": "Mutual Fund"
+  },
+  "NICAP": {
+    "high52": 193.0,
+    "low52": 179.0,
+    "sharesOutstanding": 5148000,
+    "sector": "Commercial Banks"
+  },
+  "NICAD85/86": {
+    "high52": 1264.0,
+    "low52": 1097.0,
+    "sharesOutstanding": 2404688,
+    "sector": "Corporate Debenture"
+  },
+  "NICGF": {
+    "sharesOutstanding": 83520000,
+    "sector": "Mutual Fund"
+  },
+  "NICGF2": {
+    "high52": 10.13,
+    "low52": 8.33,
+    "sharesOutstanding": 90500000,
+    "sector": "Mutual Fund"
+  },
+  "NICAD2091": {
+    "high52": 1106.0,
+    "low52": 1005.2,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "NICD83/84": {
+    "sharesOutstanding": 1943698,
+    "sector": "Corporate Debenture"
+  },
+  "NICAD8283": {
+    "sharesOutstanding": 1830000,
+    "sector": "Corporate Debenture"
+  },
+  "NICAD8182": {
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "NICD88": {
+    "high52": 1153.0,
+    "low52": 1043.0,
+    "sharesOutstanding": 1573872,
+    "sector": "Corporate Debenture"
+  },
+  "NICFC": {
+    "high52": 9.89,
+    "low52": 8.37,
+    "sharesOutstanding": 10200000,
+    "sector": "Mutual Fund"
+  },
+  "NICBF": {
+    "high52": 11.2,
+    "low52": 8.45,
+    "sharesOutstanding": 75500000,
+    "sector": "Mutual Fund"
+  },
+  "NICSF": {
+    "high52": 9.97,
+    "low52": 8.04,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "NICLBSLP": {
+    "high52": 504.2,
+    "low52": 504.2,
+    "sector": "Microfinance"
+  },
+  "NCM": {
+    "sharesOutstanding": 2332289,
+    "sector": "Finance"
+  },
+  "NCMMF": {
+    "sharesOutstanding": 10000000,
+    "sector": "Mutual Fund"
+  },
+  "NCMPO": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "NIDC": {
+    "sharesOutstanding": 2978784,
+    "sector": "Development Banks"
+  },
+  "NIDCPO": {
+    "sharesOutstanding": 2978784,
+    "sector": "Development Banks"
+  },
+  "NGBL": {
+    "sharesOutstanding": 1495121,
+    "sector": "Development Banks"
+  },
+  "NUBLPO": {
+    "high52": 600.0,
+    "low52": 600.0,
+    "sharesOutstanding": 3358604,
+    "sector": "Microfinance"
+  },
+  "NLGPO": {
+    "sharesOutstanding": 2846250,
+    "sector": "Non Life Insurance"
+  },
+  "NMBMFP": {
+    "high52": 592.0,
+    "low52": 592.0,
+    "sharesOutstanding": 460000,
+    "sector": "Microfinance"
+  },
+  "NMBSF1": {
+    "sharesOutstanding": 75000000,
+    "sector": "Mutual Fund"
+  },
+  "NMBHF1": {
+    "sharesOutstanding": 1000000000,
+    "sector": "Mutual Fund"
+  },
+  "NMBD2085": {
+    "high52": 1211.0,
+    "low52": 1102.1,
+    "sharesOutstanding": 1684505,
+    "sector": "Corporate Debenture"
+  },
+  "NMBPO": {
+    "high52": 136.0,
+    "low52": 123.0,
+    "sharesOutstanding": 8579999,
+    "sector": "Commercial Banks"
+  },
+  "NMBD87/88": {
+    "high52": 1249.0,
+    "low52": 1065.0,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "NMBEB92/93": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 1500000,
+    "sector": "Commercial Banks"
+  },
+  "NMBHF2": {
+    "high52": 10.2,
+    "low52": 8.36,
+    "sharesOutstanding": 136484000,
+    "sector": "Mutual Fund"
+  },
+  "NMBUR93/94": {
+    "high52": 1000.0,
+    "low52": 903.1,
+    "sharesOutstanding": 2727437,
+    "sector": "Commercial Banks"
+  },
+  "NMBD89/90": {
+    "high52": 1460.0,
+    "low52": 1192.0,
+    "sharesOutstanding": 4000000,
+    "sector": "Corporate Debenture"
+  },
+  "NMBPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "NMB50": {
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "NSIF2": {
+    "high52": 11.45,
+    "low52": 9.75,
+    "sharesOutstanding": 122100000,
+    "sector": "Mutual Fund"
+  },
+  "NRNP": {
+    "sector": "Investment"
+  },
+  "ODBL": {
+    "sharesOutstanding": 25151863,
+    "sector": "Development Banks"
+  },
+  "ODBLPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "OFLPO": {
+    "sharesOutstanding": 100,
+    "sector": "Finance"
+  },
+  "OFL": {
+    "sharesOutstanding": 3257100,
+    "sector": "Finance"
+  },
+  "PADBLP": {
+    "sharesOutstanding": 878400,
+    "sector": "Development Banks"
+  },
+  "PADBL": {
+    "sharesOutstanding": 1089216,
+    "sector": "Development Banks"
+  },
+  "PDBL": {
+    "sharesOutstanding": 3565000,
+    "sector": "Development Banks"
+  },
+  "PFC": {
+    "sharesOutstanding": 3035074,
+    "sector": "Finance"
+  },
+  "PFCPO": {
+    "sharesOutstanding": 506000,
+    "sector": "Finance"
+  },
+  "PFLBS": {
+    "sharesOutstanding": 1100000,
+    "sector": "Finance"
+  },
+  "PFLBSP": {
+    "sharesOutstanding": 300000,
+    "sector": "Finance"
+  },
+  "PBSL": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "PFCL": {
+    "sharesOutstanding": 2956800,
+    "sector": "Finance"
+  },
+  "PFCLPO": {
+    "sharesOutstanding": 338610,
+    "sector": "Finance"
+  },
+  "PFL": {
+    "high52": 443.0,
+    "low52": 351.6,
+    "sharesOutstanding": 10825567,
+    "sector": "Finance"
+  },
+  "PFLPO": {
+    "high52": 221.0,
+    "low52": 221.0,
+    "sharesOutstanding": 1862078,
+    "sector": "Finance"
+  },
+  "KISTPO": {
+    "sharesOutstanding": 1200000,
+    "sector": "Commercial Banks"
+  },
+  "PRFLPO": {
+    "high52": 115.0,
+    "low52": 115.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Commercial Banks"
+  },
+  "PRVUPO": {
+    "high52": 105.0,
+    "low52": 100.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Commercial Banks"
+  },
+  "PBLD87": {
+    "high52": 1150.0,
+    "low52": 1043.0,
+    "sharesOutstanding": 2650000,
+    "sector": "Corporate Debenture"
+  },
+  "PBLD86": {
+    "high52": 1470.0,
+    "low52": 1100.2,
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "PBLD84": {
+    "high52": 1158.4,
+    "low52": 1057.2,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "PSF": {
+    "high52": 13.0,
+    "low52": 9.91,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "PRBBL": {
+    "sharesOutstanding": 7659640,
+    "sector": "Development Banks"
+  },
+  "PRSF": {
+    "high52": 13.61,
+    "low52": 9.85,
+    "sharesOutstanding": 100000000,
+    "sector": "Mutual Fund"
+  },
+  "PRINPO": {
+    "high52": 430.55,
+    "low52": 430.55,
+    "sharesOutstanding": 100000,
+    "sector": "Non Life Insurance"
+  },
+  "PLIP": {
+    "sector": "Life Insurance"
+  },
+  "PMLIP": {
+    "high52": 300.0,
+    "low52": 255.0,
+    "sharesOutstanding": 42960000,
+    "sector": "Life Insurance"
+  },
+  "PFCLL": {
+    "sharesOutstanding": 1266985,
+    "sector": "Finance"
+  },
+  "PCBLP": {
+    "high52": 108.1,
+    "low52": 100.0,
+    "sharesOutstanding": 400000,
+    "sector": "Commercial Banks"
+  },
+  "PBD93": {
+    "high52": 1035.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "PBD88": {
+    "high52": 1285.0,
+    "low52": 1131.0,
+    "sharesOutstanding": 1741884,
+    "sector": "Corporate Debenture"
+  },
+  "PBD84": {
+    "high52": 1182.0,
+    "low52": 1067.0,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "PBD85": {
+    "high52": 1150.0,
+    "low52": 1060.0,
+    "sharesOutstanding": 2447963,
+    "sector": "Corporate Debenture"
+  },
+  "PRBL": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "PRDBLP": {
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "PRDBL": {
+    "sharesOutstanding": 2403500,
+    "sector": "Development Banks"
+  },
+  "PROFLP": {
+    "high52": 261.0,
+    "low52": 118.0,
+    "sharesOutstanding": 180000,
+    "sector": "Finance"
+  },
+  "PFIL": {
+    "sharesOutstanding": 3223713,
+    "sector": "Finance"
+  },
+  "PFILPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Finance"
+  },
+  "PICLPO": {
+    "sharesOutstanding": 1000000,
+    "sector": "Non Life Insurance"
+  },
+  "PICL": {
+    "sharesOutstanding": 12255841,
+    "sector": "Non Life Insurance"
+  },
+  "PDB": {
+    "sharesOutstanding": 1500000,
+    "sector": "Development Banks"
+  },
+  "PURBLP": {
+    "sharesOutstanding": 1356025,
+    "sector": "Development Banks"
+  },
+  "PURBL": {
+    "sharesOutstanding": 5512830,
+    "sector": "Development Banks"
+  },
+  "PGBL": {
+    "sharesOutstanding": 600000,
+    "sector": "Development Banks"
+  },
+  "RJM": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 1806966,
+    "sector": "Manufacturing And Processing"
+  },
+  "RRHP": {
+    "sharesOutstanding": 5600000,
+    "sector": "Hydro Power"
+  },
+  "RBBBL": {
+    "sharesOutstanding": 1437654,
+    "sector": "Development Banks"
+  },
+  "RBBBLP": {
+    "sharesOutstanding": 1250134,
+    "sector": "Development Banks"
+  },
+  "RARA": {
+    "sharesOutstanding": 2001000,
+    "sector": "Development Banks"
+  },
+  "RULB": {
+    "sharesOutstanding": 2600000,
+    "sector": "Microfinance"
+  },
+  "RULBP": {
+    "sector": "Microfinance"
+  },
+  "RBBD83": {
+    "high52": 1100.0,
+    "low52": 1010.3,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "RBBD2088": {
+    "high52": 1157.0,
+    "low52": 994.1,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "RBCLPO": {
+    "high52": 13420.9,
+    "low52": 10554.0,
+    "sharesOutstanding": 1776296,
+    "sector": "Non Life Insurance"
+  },
+  "RMF1": {
+    "high52": 11.02,
+    "low52": 8.65,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "RMF2": {
+    "high52": 10.71,
+    "low52": 8.82,
+    "sharesOutstanding": 84611929,
+    "sector": "Mutual Fund"
+  },
+  "RBBF40": {
+    "high52": 10.36,
+    "low52": 8.73,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "REDBLP": {
+    "sharesOutstanding": 2000000,
+    "sector": "Development Banks"
+  },
+  "REDBL": {
+    "sharesOutstanding": 7885818,
+    "sector": "Development Banks"
+  },
+  "RNLIP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Life Insurance"
+  },
+  "RSY": {
+    "high52": 10.7,
+    "low52": 8.71,
+    "sharesOutstanding": 120000000,
+    "sector": "Mutual Fund"
+  },
+  "RSY2": {
+    "high52": 10.0,
+    "low52": 8.42,
+    "sharesOutstanding": 125000000,
+    "sector": "Life Insurance"
+  },
+  "RLFLPO": {
+    "high52": 274.0,
+    "low52": 268.6,
+    "sharesOutstanding": 2000000,
+    "sector": "Finance"
+  },
+  "RLI": {
+    "sharesOutstanding": 21000000,
+    "sector": "Life Insurance"
+  },
+  "RLIP": {
+    "sector": "Life Insurance"
+  },
+  "RBSL": {
+    "sharesOutstanding": 703800,
+    "sector": "Development Banks"
+  },
+  "RIDIPO": {
+    "sector": "Hydro Power"
+  },
+  "RDBL": {
+    "sharesOutstanding": 2140000,
+    "sector": "Development Banks"
+  },
+  "RMDCPO": {
+    "sharesOutstanding": 5720000,
+    "sector": "Microfinance"
+  },
+  "RMDC": {
+    "sharesOutstanding": 15637436,
+    "sector": "Microfinance"
+  },
+  "RSDCP": {
+    "high52": 366.0,
+    "low52": 310.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Microfinance"
+  },
+  "SABSL": {
+    "sharesOutstanding": 3186000,
+    "sector": "Microfinance"
+  },
+  "SABSLPO": {
+    "high52": 523.0,
+    "low52": 523.0,
+    "sector": "Microfinance"
+  },
+  "SAFL": {
+    "sharesOutstanding": 6647376,
+    "sector": "Finance"
+  },
+  "SAFLPO": {
+    "sharesOutstanding": 3187731,
+    "sector": "Finance"
+  },
+  "SALICOPO": {
+    "high52": 270.0,
+    "low52": 270.0,
+    "sharesOutstanding": 100000,
+    "sector": "Non Life Insurance"
+  },
+  "SHBL": {
+    "sharesOutstanding": 2722707,
+    "sector": "Development Banks"
+  },
+  "SHBLPO": {
+    "sharesOutstanding": 200000,
+    "sector": "Development Banks"
+  },
+  "SBBLJP": {
+    "sharesOutstanding": 100,
+    "sector": "Development Banks"
+  },
+  "SBBLJ": {
+    "sharesOutstanding": 5096682,
+    "sector": "Development Banks"
+  },
+  "SAJHA": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "SAJHAP": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "SABBLP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Development Banks"
+  },
+  "SAMAJ": {
+    "sharesOutstanding": 228500,
+    "sector": "Microfinance"
+  },
+  "SAMAJP": {
+    "sector": "Microfinance"
+  },
+  "SMATAP": {
+    "high52": 593.0,
+    "low52": 421.0,
+    "sharesOutstanding": 316000,
+    "sector": "Microfinance"
+  },
+  "SFC": {
+    "high52": 230.0,
+    "low52": 230.0,
+    "sharesOutstanding": 225000,
+    "sector": "Finance"
+  },
+  "SFCPO": {
+    "sharesOutstanding": 123750,
+    "sector": "Finance"
+  },
+  "SMPDAP": {
+    "high52": 518.0,
+    "low52": 518.0,
+    "sector": "Microfinance"
+  },
+  "000011": {
+    "sharesOutstanding": 360000,
+    "sector": "Finance"
+  },
+  "SFCLP": {
+    "high52": 164.0,
+    "low52": 164.0,
+    "sharesOutstanding": 360000,
+    "sector": "Finance"
+  },
+  "SFCL": {
+    "high52": 452.9,
+    "low52": 359.4,
+    "sharesOutstanding": 8189114,
+    "sector": "Finance"
+  },
+  "SLBSLPO": {
+    "sector": "Microfinance"
+  },
+  "SKBBLP": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 2300000,
+    "sector": "Microfinance"
+  },
+  "SGHL": {
+    "high52": 587.0,
+    "low52": 299.3,
+    "sharesOutstanding": 28500000,
+    "sector": "Hydro Power"
+  },
+  "SNMAPO": {
+    "high52": 180.0,
+    "low52": 167.0,
+    "sharesOutstanding": 5376000,
+    "sector": "Commercial Banks"
+  },
+  "SAND2085": {
+    "high52": 1245.0,
+    "low52": 1086.5,
+    "sharesOutstanding": 2000000,
+    "sector": "Corporate Debenture"
+  },
+  "SAEF": {
+    "sharesOutstanding": 130000000,
+    "sector": "Mutual Fund"
+  },
+  "SAEF2": {
+    "high52": 10.0,
+    "low52": 8.76,
+    "sharesOutstanding": 125000000,
+    "sector": "Commercial Banks"
+  },
+  "SANIMAPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "SBD89": {
+    "high52": 1320.0,
+    "low52": 1135.1,
+    "sharesOutstanding": 5000000,
+    "sector": "Corporate Debenture"
+  },
+  "SBD87": {
+    "high52": 1210.0,
+    "low52": 1055.0,
+    "sharesOutstanding": 3052404,
+    "sector": "Corporate Debenture"
+  },
+  "SLCF": {
+    "high52": 10.7,
+    "low52": 8.6,
+    "sharesOutstanding": 120000000,
+    "sector": "Mutual Fund"
+  },
+  "SGICP": {
+    "high52": 266.0,
+    "low52": 250.0,
+    "sector": "Non Life Insurance"
+  },
+  "SAGF": {
+    "high52": 11.31,
+    "low52": 8.79,
+    "sharesOutstanding": 67253260,
+    "sector": "Mutual Fund"
+  },
+  "SRLIP": {
+    "high52": 218.0,
+    "low52": 197.6,
+    "sector": "Life Insurance"
+  },
+  "SAPDBLP": {
+    "high52": 698.0,
+    "low52": 698.0,
+    "sharesOutstanding": 5542510,
+    "sector": "Development Banks"
+  },
+  "SKDBL": {
+    "sharesOutstanding": 5237653,
+    "sector": "Development Banks"
+  },
+  "SKDBLP": {
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "SETI": {
+    "sharesOutstanding": 1643417,
+    "sector": "Finance"
+  },
+  "SETIPO": {
+    "sharesOutstanding": 560000,
+    "sector": "Finance"
+  },
+  "SEWA": {
+    "sharesOutstanding": 9362214,
+    "sector": "Development Banks"
+  },
+  "SEWAPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "SADBLP": {
+    "high52": 233.0,
+    "low52": 220.0,
+    "sharesOutstanding": 7359999,
+    "sector": "Development Banks"
+  },
+  "SDBD87": {
+    "high52": 1241.0,
+    "low52": 1058.4,
+    "sharesOutstanding": 750000,
+    "sector": "Corporate Debenture"
+  },
+  "SBSL": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "SICLPO": {
+    "high52": 461.0,
+    "low52": 461.0,
+    "sharesOutstanding": 200000,
+    "sector": "Non Life Insurance"
+  },
+  "SHINED": {
+    "high52": 1200.0,
+    "low52": 1000.0,
+    "sharesOutstanding": 1000000,
+    "sector": "Development Banks"
+  },
+  "SHINEP": {
+    "high52": 228.0,
+    "low52": 222.0,
+    "sharesOutstanding": 6333300,
+    "sector": "Development Banks"
+  },
+  "SBPP": {
+    "high52": 50.0,
+    "low52": 50.0,
+    "sharesOutstanding": 3500000,
+    "sector": "Manufacturing And Processing"
+  },
+  "SIFCPO": {
+    "high52": 286.0,
+    "low52": 232.5,
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "SRS": {
+    "high52": 338.0,
+    "low52": 338.0,
+    "sharesOutstanding": 3045990,
+    "sector": "Manufacturing And Processing"
+  },
+  "SFFIL": {
+    "sharesOutstanding": 9630339,
+    "sector": "Finance"
+  },
+  "SFFILP": {
+    "sharesOutstanding": 84000,
+    "sector": "Finance"
+  },
+  "SHLBP": {
+    "sector": "Microfinance"
+  },
+  "SFL": {
+    "sharesOutstanding": 3243140,
+    "sector": "Finance"
+  },
+  "SFLPO": {
+    "sharesOutstanding": 500000,
+    "sector": "Finance"
+  },
+  "SBLD84": {
+    "high52": 1201.0,
+    "low52": 1025.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "SBLD2082": {
+    "sharesOutstanding": 2162559,
+    "sector": "Corporate Debenture"
+  },
+  "SBLD89": {
+    "high52": 1450.0,
+    "low52": 1190.0,
+    "sharesOutstanding": 4000000,
+    "sector": "Corporate Debenture"
+  },
+  "SIGS3": {
+    "high52": 11.58,
+    "low52": 8.5,
+    "sharesOutstanding": 80580000,
+    "sector": "Mutual Fund"
+  },
+  "SBLD2091": {
+    "high52": 1150.0,
+    "low52": 109.0,
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "SBLPNP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sharesOutstanding": 0,
+    "sector": "Commercial Banks"
+  },
+  "SEF2": {
+    "high52": 10.0,
+    "low52": 8.5,
+    "sharesOutstanding": 125000000,
+    "sector": "Commercial Banks"
+  },
+  "SBLPO": {
+    "high52": 223.0,
+    "low52": 169.0,
+    "sharesOutstanding": 3000000,
+    "sector": "Commercial Banks"
+  },
+  "SEOS": {
+    "sharesOutstanding": 100000000,
+    "sector": "Mutual Fund"
+  },
+  "SIGS1": {
+    "sharesOutstanding": 50000000,
+    "sector": "Mutual Fund"
+  },
+  "SEF": {
+    "high52": 11.53,
+    "low52": 8.6,
+    "sharesOutstanding": 150000000,
+    "sector": "Mutual Fund"
+  },
+  "SBLD83": {
+    "sharesOutstanding": 2500000,
+    "sector": "Corporate Debenture"
+  },
+  "SIGS2": {
+    "high52": 11.5,
+    "low52": 8.9,
+    "sharesOutstanding": 120000000,
+    "sector": "Mutual Fund"
+  },
+  "SBLD78": {
+    "sharesOutstanding": 500000,
+    "sector": "Corporate Debenture"
+  },
+  "SDBL": {
+    "sharesOutstanding": 14191676,
+    "sector": "Development Banks"
+  },
+  "SDBLPO": {
+    "sharesOutstanding": 300000,
+    "sector": "Development Banks"
+  },
+  "SIL": {
+    "sharesOutstanding": 14039200,
+    "sector": "Non Life Insurance"
+  },
+  "SILPO": {
+    "sharesOutstanding": 1000000,
+    "sector": "Non Life Insurance"
+  },
+  "SPILPO": {
+    "high52": 426.0,
+    "low52": 426.0,
+    "sharesOutstanding": 5480256,
+    "sector": "Non Life Insurance"
+  },
+  "SINDUP": {
+    "high52": 426.0,
+    "low52": 188.0,
+    "sharesOutstanding": 1075000,
+    "sector": "Development Banks"
+  },
+  "SNORL": {
+    "high52": 1017.1,
+    "low52": 298.7,
+    "sharesOutstanding": 9375000,
+    "sector": "Hydro Power"
+  },
+  "SODBL": {
+    "sharesOutstanding": 90530946,
+    "sector": "Development Banks"
+  },
+  "SODBLP": {
+    "sharesOutstanding": 6000000,
+    "sector": "Development Banks"
+  },
+  "SOPL": {
+    "high52": 1217.0,
+    "low52": 276.5,
+    "sharesOutstanding": 17160000,
+    "sector": "Manufacturing And Processing"
+  },
+  "SPARS": {
+    "sharesOutstanding": 1120291,
+    "sector": "Microfinance"
+  },
+  "SPARSPO": {
+    "sector": "Microfinance"
+  },
+  "SCBPO": {
+    "sharesOutstanding": 22432190,
+    "sector": "Commercial Banks"
+  },
+  "SCBD": {
+    "high52": 1236.0,
+    "low52": 1056.6,
+    "sharesOutstanding": 2400000,
+    "sector": "Corporate Debenture"
+  },
+  "STFL": {
+    "sharesOutstanding": 10018041,
+    "sector": "Finance"
+  },
+  "STFLPO": {
+    "sharesOutstanding": 9437241,
+    "sector": "Finance"
+  },
+  "SLFL": {
+    "sharesOutstanding": 2000000,
+    "sector": "Finance"
+  },
+  "SUBBLP": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "SUBBL": {
+    "sharesOutstanding": 1991252,
+    "sector": "Development Banks"
+  },
+  "SMFDB": {
+    "sharesOutstanding": 5610000,
+    "sector": "Microfinance"
+  },
+  "SMFDBP": {
+    "sharesOutstanding": 352800,
+    "sector": "Microfinance"
+  },
+  "SNLIP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Life Insurance"
+  },
+  "SRBL": {
+    "sharesOutstanding": 101188929,
+    "sector": "Commercial Banks"
+  },
+  "SRBLPO": {
+    "sharesOutstanding": 20000000,
+    "sector": "Commercial Banks"
+  },
+  "SRD80": {
+    "sharesOutstanding": 1000000,
+    "sector": "Corporate Debenture"
+  },
+  "SBCF": {
+    "high52": 11.16,
+    "low52": 8.73,
+    "sharesOutstanding": 125000000,
+    "sector": "Mutual Fund"
+  },
+  "SRBLD83": {
+    "high52": 1125.0,
+    "low52": 1006.1,
+    "sharesOutstanding": 3000000,
+    "sector": "Corporate Debenture"
+  },
+  "SFEF": {
+    "high52": 10.65,
+    "low52": 8.89,
+    "sharesOutstanding": 100000000,
+    "sector": "Mutual Fund"
+  },
+  "SMBPO": {
+    "high52": 986.0,
+    "low52": 750.0,
+    "sharesOutstanding": 600000,
+    "sector": "Microfinance"
+  },
+  "SUPRMP": {
+    "sharesOutstanding": 4704000,
+    "sector": "Development Banks"
+  },
+  "SUPRME": {
+    "sharesOutstanding": 8106000,
+    "sector": "Development Banks"
+  },
+  "SDFL": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "SJLICP": {
+    "high52": 245.0,
+    "low52": 232.0,
+    "sharesOutstanding": 900000,
+    "sector": "Life Insurance"
+  },
+  "SLBS": {
+    "sharesOutstanding": 2976516,
+    "sector": "Microfinance"
+  },
+  "SLBSP": {
+    "sector": "Microfinance"
+  },
+  "SWMFPO": {
+    "high52": 392.0,
+    "low52": 382.0,
+    "sharesOutstanding": 7919848,
+    "sector": "Microfinance"
+  },
+  "SWBBLP": {
+    "high52": 782.0,
+    "low52": 782.0,
+    "sharesOutstanding": 175000,
+    "sector": "Microfinance"
+  },
+  "SMFBSP": {
+    "high52": 490.0,
+    "low52": 490.0,
+    "sector": "Microfinance"
+  },
+  "SDESI": {
+    "sharesOutstanding": 2760000,
+    "sector": "Microfinance"
+  },
+  "SDESIP": {
+    "sharesOutstanding": 1932000,
+    "sector": "Microfinance"
+  },
+  "SLBBLP": {
+    "high52": 496.0,
+    "low52": 443.0,
+    "sharesOutstanding": 536800,
+    "sector": "Microfinance"
+  },
+  "SWASTIKP": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Microfinance"
+  },
+  "SMF": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "SYFL": {
+    "sharesOutstanding": 4744090,
+    "sector": "Finance"
+  },
+  "BFLPO": {
+    "sharesOutstanding": 1000000,
+    "sector": "Finance"
+  },
+  "SYFLPO": {
+    "sharesOutstanding": 500000,
+    "sector": "Finance"
+  },
+  "TPKHL": {
+    "high52": 772.5,
+    "low52": 300.0,
+    "sharesOutstanding": 12000000,
+    "sector": "Hydro Power"
+  },
+  "TRHPR": {
+    "sharesOutstanding": 2121750,
+    "sector": "Preference Share"
+  },
+  "TNBL": {
+    "sharesOutstanding": 11441681,
+    "sector": "Development Banks"
+  },
+  "TNBLPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Development Banks"
+  },
+  "TMDBL": {
+    "sharesOutstanding": 19219148,
+    "sector": "Development Banks"
+  },
+  "TMDBLP": {
+    "sharesOutstanding": 9801765,
+    "sector": "Development Banks"
+  },
+  "TDBLPO": {
+    "sharesOutstanding": 6400000,
+    "sector": "Development Banks"
+  },
+  "TDBL": {
+    "sharesOutstanding": 9197712,
+    "sector": "Development Banks"
+  },
+  "TBBLP": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "TBBL": {
+    "sharesOutstanding": 12300228,
+    "sector": "Development Banks"
+  },
+  "UBBL": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "UFCL": {
+    "sharesOutstanding": 1749028,
+    "sector": "Finance"
+  },
+  "UFCLPO": {
+    "sharesOutstanding": 100,
+    "sector": "Finance"
+  },
+  "ULIP": {
+    "sector": "Life Insurance"
+  },
+  "ULI": {
+    "sharesOutstanding": 23428550,
+    "sector": "Life Insurance"
+  },
+  "UFIL": {
+    "sharesOutstanding": 1115000,
+    "sector": "Finance"
+  },
+  "UFILPO": {
+    "sharesOutstanding": 100000,
+    "sector": "Finance"
+  },
+  "UNLBP": {
+    "high52": 1211.0,
+    "low52": 1211.0,
+    "sector": "Microfinance"
+  },
+  "UAILPO": {
+    "high52": 382.0,
+    "low52": 251.0,
+    "sharesOutstanding": 1500000,
+    "sector": "Non Life Insurance"
+  },
+  "UFL": {
+    "sharesOutstanding": 10408347,
+    "sector": "Finance"
+  },
+  "UFLPO": {
+    "sharesOutstanding": 900000,
+    "sector": "Finance"
+  },
+  "UFLKPO": {
+    "sharesOutstanding": 1313787,
+    "sector": "Finance"
+  },
+  "UFLK": {
+    "sharesOutstanding": 1517424,
+    "sector": "Finance"
+  },
+  "USLBP": {
+    "high52": 100.0,
+    "low52": 100.0,
+    "sharesOutstanding": 550000,
+    "sector": "Microfinance"
+  },
+  "ULBSLPO": {
+    "high52": 0.0,
+    "low52": 0.0,
+    "sector": "Microfinance"
+  },
+  "VFL": {
+    "sharesOutstanding": 1433600,
+    "sector": "Finance"
+  },
+  "VLBSPO": {
+    "high52": 458.0,
+    "low52": 458.0,
+    "sharesOutstanding": 1400000,
+    "sector": "Microfinance"
+  },
+  "WNLBP": {
+    "high52": 1138.0,
+    "low52": 100.0,
+    "sharesOutstanding": 600000,
+    "sector": "Microfinance"
+  },
+  "WDBL": {
+    "sharesOutstanding": 5040681,
+    "sector": "Development Banks"
+  },
+  "WDBLPO": {
+    "sharesOutstanding": 500000,
+    "sector": "Development Banks"
+  },
+  "YHL": {
+    "high52": 600.0,
+    "low52": 600.0,
+    "sharesOutstanding": 2209208,
+    "sector": "Hotels And Tourism"
+  },
+  "YMHL": {
+    "high52": 797.6,
+    "low52": 300.0,
+    "sharesOutstanding": 7000000,
+    "sector": "Hydro Power"
+  },
+  "YFL": {
+    "sharesOutstanding": 2019584,
+    "sector": "Finance"
+  },
+  "YFLPO": {
+    "sharesOutstanding": 8812,
+    "sector": "Finance"
+  },
+  "ZFL": {
+    "sharesOutstanding": 2506350,
+    "sector": "Finance"
+  },
+  "NADDF": {
+    "sector": "Mutual Fund"
+  },
+  "SSIS": {
+    "sector": "Mutual Fund"
+  },
+  "SLK": {
+    "sector": "Mutual Fund"
+  },
+  "NFCF": {
+    "sector": "Mutual Fund"
+  },
+  "KSLY": {
+    "sector": "Mutual Fund"
+  },
+  "NI31": {
+    "sector": "Mutual Fund"
+  },
+  "PSIS": {
+    "sector": "Mutual Fund"
+  },
+  "NICELIS": {
+    "sector": "Mutual Fund"
+  },
+  "MSIP": {
+    "sector": "Mutual Fund"
+  },
+  "SFF": {
+    "sector": "Mutual Fund"
+  },
+  "GSYA": {
+    "sector": "Mutual Fund"
   }
 }
