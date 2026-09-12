@@ -53,5 +53,28 @@ class TestNepseServer(unittest.TestCase):
         self.assertIn('periods', data)
         self.assertIn('latestPeriod', data)
 
+    def test_all_stocks_endpoint(self):
+        response = self.client.get('/api/nepse/all-stocks')
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertIn('stocks', data)
+        self.assertIn('count', data)
+        self.assertGreater(data.get('count', 0), 0)
+
+    def test_investment_ipos_endpoint(self):
+        response = self.client.get('/api/investment/ipos')
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertIn('issues', data)
+        self.assertIn('count', data)
+
+    def test_high_low_scanner_endpoint(self):
+        response = self.client.get('/api/market/high-low-scanner')
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertIn('rows', data)
+        self.assertIn('count', data)
+
+
 if __name__ == '__main__':
     unittest.main()

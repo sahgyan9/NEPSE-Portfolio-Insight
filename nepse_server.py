@@ -184,6 +184,139 @@ class HamroShareMarketFetcher:
 
         return None
 
+    async def get_all_securities(self):
+        """Fetch all 951 NEPSE listed securities from HamroShare /nepse/stocks."""
+        cache_key = 'hamro_all_securities'
+        if cache_key in self._cache and (time.time() - self._cache[cache_key]['timestamp']) < 300:
+            return self._cache[cache_key]['data']
+
+        try:
+            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                resp = await client.get("https://hamroshare.com.np/nepse/stocks", headers=self._headers)
+            if resp.status_code != 200:
+                return []
+
+            text = resp.text
+            pos = text.find('"fiftyTwoHi"')
+            if pos != -1:
+                start = text.rfind('[', 0, pos)
+                bracket_count = 0
+                end = -1
+                for i in range(start, len(text)):
+                    if text[i] == '[':
+                        bracket_count += 1
+                    elif text[i] == ']':
+                        bracket_count -= 1
+                        if bracket_count == 0:
+                            end = i
+                            break
+                if end != -1:
+                    items = json.loads(text[start:end+1])
+                    self._cache[cache_key] = {'data': items, 'timestamp': time.time()}
+                    return items
+        except Exception as e:
+            print(f"[nepse_server] HamroShare all securities fetch failed: {e}")
+        return []
+
+    async def get_ipos(self):
+        """Fetch upcoming and active corporate issues (IPOs, Right Shares, Mutual Funds)."""
+        cache_key = 'hamro_ipos'
+        if cache_key in self._cache and (time.time() - self._cache[cache_key]['timestamp']) < 1800:
+            return self._cache[cache_key]['data']
+
+        try:
+            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                resp = await client.get("https://hamroshare.com.np/investment/upcoming-ipos", headers=self._headers)
+            if resp.status_code != 200:
+                return []
+
+            text = resp.text
+            issue_matches = re.findall(r'"issues":(\[[^\]]+\])', text)
+            all_issues = []
+            seen_keys = set()
+            for im in issue_matches:
+                try:
+                    arr = json.loads(im)
+                    for iss in arr:
+                        comp = iss.get("company", {})
+                        cname = comp.get("companyname") if isinstance(comp, dict) else str(comp or "")
+                        sym = comp.get("symbol") if isinstance(comp, dict) else ""
+                        cname_clean = re.sub(r'<[^>]+>', '', str(cname)).strip()
+                        sym_clean = re.sub(r'<[^>]+>', '', str(sym)).strip().upper()
+                        
+                        unique_id = f"{sym_clean}_{iss.get('opening_date')}_{iss.get('displayable_share_type')}"
+                        if unique_id in seen_keys:
+                            continue
+                        seen_keys.add(unique_id)
+
+                        all_issues.append({
+                            "symbol": sym_clean or None,
+                            "company_name": cname_clean or sym_clean,
+                            "share_type": iss.get("displayable_share_type") or "IPO",
+                            "issue_price": float(iss.get("issue_price") or 100),
+                            "total_units": float(iss.get("total_units") or 0),
+                            "opening_date": iss.get("opening_date"),
+                            "closing_date": iss.get("closing_date"),
+                            "final_date": iss.get("final_date"),
+                            "status": "Upcoming"
+                        })
+                except Exception:
+                    pass
+
+            if all_issues:
+                self._cache[cache_key] = {'data': all_issues, 'timestamp': time.time()}
+                return all_issues
+        except Exception as e:
+            print(f"[nepse_server] HamroShare IPOs fetch failed: {e}")
+        return []
+
+    async def get_high_low_scanner(self):
+        """Fetch 52-week High/Low scanner records."""
+        cache_key = 'hamro_hl_scanner'
+        if cache_key in self._cache and (time.time() - self._cache[cache_key]['timestamp']) < 60:
+            return self._cache[cache_key]['data']
+
+        try:
+            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                resp = await client.get("https://hamroshare.com.np/market-tools/high-low-scanner", headers=self._headers)
+            if resp.status_code != 200:
+                return []
+
+            text = resp.text
+            pos_rows = text.find('"rows"')
+            if pos_rows != -1:
+                start = text.find('[', pos_rows)
+                bracket = 0
+                end = -1
+                for i in range(start, len(text)):
+                    if text[i] == '[':
+                        bracket += 1
+                    elif text[i] == ']':
+                        bracket -= 1
+                        if bracket == 0:
+                            end = i
+                            break
+                if end != -1:
+                    hl_rows = json.loads(text[start:end+1])
+                    parsed_rows = []
+                    for r in hl_rows:
+                        parsed_rows.append({
+                            "symbol": (r.get("symbol") or "").upper().strip(),
+                            "company_name": r.get("companyName"),
+                            "sector": r.get("sector"),
+                            "ltp": float(r.get("ltp") or 0),
+                            "change_pct": float(r.get("changePct") or 0),
+                            "high_52": float(r.get("periodHigh") or 0),
+                            "low_52": float(r.get("periodLow") or 0),
+                            "pct_from_high": round(float(r.get("pctFromHigh") or 0), 2),
+                            "pct_from_low": round(float(r.get("pctFromLow") or 0), 2)
+                        })
+                    self._cache[cache_key] = {'data': parsed_rows, 'timestamp': time.time()}
+                    return parsed_rows
+        except Exception as e:
+            print(f"[nepse_server] HamroShare HL scanner fetch failed: {e}")
+        return []
+
 
 class NepseDataFetcher:
     """Fetches live NEPSE data with dual-source fallback (HamroShare -> AsyncNepse)."""
@@ -419,6 +552,19 @@ class NepseDataFetcher:
             return hs_data.get('stocks', {})
         return {}
 
+    async def get_all_securities(self):
+        """Get all listed securities (950+) from HamroShare"""
+        return await self._hamro.get_all_securities()
+
+    async def get_ipos(self):
+        """Get upcoming and active corporate issues (IPOs, Right Shares, Mutual Funds)"""
+        return await self._hamro.get_ipos()
+
+    async def get_high_low_scanner(self):
+        """Get 52-week High/Low breakout scanner rows"""
+        return await self._hamro.get_high_low_scanner()
+
+
 
 # ============================================================================
 # Merolagani Stock Fundamentals
@@ -514,9 +660,154 @@ class MerolaganiFetcher:
             return {'symbol': symbol, 'error': str(e), 'source': 'error'}
 
 
+class HamroShareCompanyFetcher:
+    """Fetches high-speed company fundamentals directly from HamroShare Next.js RSC streams."""
+
+    def __init__(self):
+        self._cache = {}
+        self._cache_ttl = 900  # Cache for 15 minutes
+        self._headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+            ),
+            "RSC": "1"
+        }
+
+    def _is_cache_valid(self, key: str) -> bool:
+        if key not in self._cache:
+            return False
+        cached_time = self._cache[key].get('timestamp', 0)
+        return (time.time() - cached_time) < self._cache_ttl
+
+    async def get_company_fundamentals(self, symbol: str):
+        symbol = symbol.strip().upper()
+        cache_key = f'hamro_stock_{symbol}'
+        if self._is_cache_valid(cache_key):
+            return self._cache[cache_key]['data']
+
+        url = f"https://hamroshare.com.np/company/{symbol}"
+        try:
+            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+                resp = await client.get(url, headers=self._headers)
+
+            if resp.status_code != 200:
+                return None
+
+            text = resp.text
+            if '"isTradeable"' not in text and '"stockListedShares"' not in text:
+                return None
+
+            def _search_num(pattern, default=None):
+                m = re.search(pattern, text)
+                if m:
+                    try:
+                        return float(m.group(1))
+                    except (ValueError, TypeError):
+                        pass
+                return default
+
+            def _search_str(pattern, default=None):
+                m = re.search(pattern, text)
+                return m.group(1) if m else default
+
+            report_match = re.search(r'"report":\s*(\{[^}]*"eps":\{[^}]*\}[^}]*\})', text)
+            report_data = {}
+            if report_match:
+                try:
+                    report_data = json.loads(report_match.group(1))
+                except Exception:
+                    pass
+
+            eps_val = None
+            eps_qtr = None
+            if "eps" in report_data and isinstance(report_data["eps"], dict):
+                eps_val = report_data["eps"].get("value")
+                eps_qtr = report_data["eps"].get("quarter")
+            else:
+                eps_val = _search_num(r'"eps":\{"value":([-0-9.]+)')
+                eps_qtr = _search_str(r'"eps":\{"value":[-0-9.]+,"quarter":"([^"]+)"\}')
+
+            book_value = report_data.get("bookValue") if report_data.get("bookValue") is not None else _search_num(r'"bookValue":([-0-9.]+)')
+            pe_ratio = report_data.get("peRatio") if report_data.get("peRatio") is not None else _search_num(r'"peRatio":([-0-9.]+)')
+            pb_ratio = report_data.get("pvb") if report_data.get("pvb") is not None else _search_num(r'"pvb":([-0-9.]+)')
+            one_year_yield = report_data.get("oneYearYield") if report_data.get("oneYearYield") is not None else _search_num(r'"oneYearYield":([-0-9.]+)')
+
+            dividend_info = report_data.get("dividend") or {}
+            bonus_info = report_data.get("bonus") or {}
+            dividend_val = dividend_info.get("value") if isinstance(dividend_info, dict) else None
+            bonus_val = bonus_info.get("value") if isinstance(bonus_info, dict) else None
+
+            high_52 = _search_num(r'"fiftyTwoWeekHigh":([-0-9.]+)')
+            low_52 = _search_num(r'"fiftyTwoWeekLow":([-0-9.]+)')
+            market_cap = _search_num(r'"marketCapitalization":([-0-9.]+)') or _search_num(r'"marketCap":([-0-9.]+)')
+            shares_out = _search_num(r'"stockListedShares":([-0-9.]+)') or _search_num(r'"shares":([-0-9.]+)')
+            paid_up = _search_num(r'"paidUpCapital":([-0-9.]+)')
+            promoter_pct = _search_num(r'"promoterPercentage":([-0-9.]+)')
+            public_pct = _search_num(r'"publicPercentage":([-0-9.]+)')
+            last_price = _search_num(r'"lastPrice":([-0-9.]+)') or _search_num(r'"ltp":([-0-9.]+)')
+            sector_desc = _search_str(r'"sectorDescription":"([^"]+)"') or _search_str(r'"sector":"([^"]+)"')
+            company_name = _search_str(r'"name":"([^"]+)"')
+
+            res = {
+                'symbol': symbol,
+                'name': company_name or symbol,
+                'book_value': float(book_value) if book_value is not None else None,
+                'eps': float(eps_val) if eps_val is not None else None,
+                'eps_info': eps_qtr,
+                'pe_ratio': float(pe_ratio) if pe_ratio is not None else None,
+                'pb_ratio': float(pb_ratio) if pb_ratio is not None else None,
+                'last_traded_price': float(last_price) if last_price is not None else None,
+                'market_cap': float(market_cap) if market_cap is not None else None,
+                'shares_outstanding': int(shares_out) if shares_out is not None else None,
+                'paid_up_capital': float(paid_up) if paid_up is not None else None,
+                'promoter_holding': float(promoter_pct) if promoter_pct is not None else None,
+                'public_holding': float(public_pct) if public_pct is not None else None,
+                '52_week_high': float(high_52) if high_52 is not None else None,
+                '52_week_low': float(low_52) if low_52 is not None else None,
+                'roe': None,
+                'dividend_yield': float(dividend_val) if dividend_val is not None else None,
+                'bonus_yield': float(bonus_val) if bonus_val is not None else None,
+                'one_year_yield': float(one_year_yield) if one_year_yield is not None else None,
+                'sector': sector_desc,
+                'source': 'hamroshare',
+                'timestamp': datetime.now().isoformat()
+            }
+
+            if res['book_value'] is not None or res['last_traded_price'] is not None:
+                self._cache[cache_key] = {'data': res, 'timestamp': time.time()}
+                return res
+
+            return None
+        except Exception as e:
+            print(f"[nepse_server] HamroShare company fetch error for {symbol}: {e}")
+            return None
+
+
+class UnifiedFundamentalsFetcher:
+    """Fetches stock fundamentals with dual-source fallback (HamroShare -> Merolagani)."""
+
+    def __init__(self):
+        self._hamro = HamroShareCompanyFetcher()
+        self._merolagani = MerolaganiFetcher()
+
+    async def get_stock_fundamentals(self, symbol: str):
+        symbol = symbol.strip().upper()
+        # 1. Primary: HamroShare (~250ms)
+        try:
+            hamro_data = await self._hamro.get_company_fundamentals(symbol)
+            if hamro_data and (hamro_data.get('book_value') is not None or hamro_data.get('last_traded_price') is not None):
+                return hamro_data
+        except Exception as e:
+            print(f"[nepse_server] HamroShare primary fetch failed for {symbol}: {e}")
+
+        # 2. Secondary: Merolagani fallback
+        return await self._merolagani.get_stock_fundamentals(symbol)
+
+
 # Global instances
 nepse_fetcher = NepseDataFetcher()
-merolagani_fetcher = MerolaganiFetcher()
+merolagani_fetcher = UnifiedFundamentalsFetcher()
 
 
 # Create a thread-safe background asyncio loop
@@ -589,6 +880,28 @@ def get_live_market():
     """Get real-time prices for all 345 NEPSE-listed stocks in one call"""
     stocks = run_async(nepse_fetcher.get_live_market())
     return jsonify({'count': len(stocks), 'stocks': stocks, 'source': 'hamroshare'})
+
+
+@app.route('/api/nepse/all-stocks')
+def get_all_stocks():
+    """Get all listed securities (950+) from HamroShare"""
+    stocks = run_async(nepse_fetcher.get_all_securities())
+    return jsonify({'count': len(stocks), 'stocks': stocks, 'source': 'hamroshare'})
+
+
+@app.route('/api/investment/ipos')
+def get_investment_ipos():
+    """Get upcoming and active corporate issues (IPOs, Right Shares, Mutual Funds)"""
+    ipos = run_async(nepse_fetcher.get_ipos())
+    return jsonify({'count': len(ipos), 'issues': ipos, 'source': 'hamroshare'})
+
+
+@app.route('/api/market/high-low-scanner')
+def get_hl_scanner():
+    """Get 52-week High/Low breakout scanner rows"""
+    rows = run_async(nepse_fetcher.get_high_low_scanner())
+    return jsonify({'count': len(rows), 'rows': rows, 'source': 'hamroshare'})
+
 
 
 @app.route('/api/stocks')
