@@ -141,3 +141,19 @@ Add micro-animations, full JS interactivity, generated images, accessibility pas
 
 ### 🗑️ Deletion & State Management Scoping
 - **Superficial vs. Core Deletions:** If a user requests to "delete" or "remove" an item in the context of an annoying UI element, mislabeled text, or news ticker, assume the scope of deletion is strictly limited to that superficial data layer (e.g., `db/news.json`). NEVER delete core user state records (like financial holdings in `db/portfolio.json` or core configurations) without explicitly confirming the destructive action with the user first, as this causes catastrophic drops in calculated metrics.
+
+### 💰 Dividend Scraping Multi-Source Architecture & Priority
+- **Primary Bulk Source:** Always prioritize `HamroShare` (`https://hamroshare.com.np/investment/proposed-dividend`) via Next.js RSC streaming (pass header `{"RSC": "1"}`). A single request yields 830+ announcements across 6 fiscal years covering 320+ NEPSE companies in ~1 second. It also enriches data with `announcementDateAD`, `bonusListingDateAD`, and `closePrice`.
+- **Secondary Fallback Source:** Use `NepaliPaisa` (`https://nepalipaisa.com/api/GetDividends?stockSymbol=...`) as an automatic per-symbol fallback when a symbol is absent from HamroShare (such as specific mutual funds or recent restructuring), or when Bikram Sambat (`bookClosureDateBS`) is specifically needed.
+- **Non-Destructive Merging:** Never overwrite user `notes` or existing NepaliPaisa `bookClosureDateBS` dates when ingesting HamroShare data. Always preserve `db/manual_dividends.json` as the highest-priority override.
+
+### 🛡️ NepseAlpha Cloudflare & TLS Impersonation
+- **Cloudflare Bot Challenge:** NepseAlpha endpoints (`https://nepsealpha.com/search`, `/ajax/financials-menu/...`) sit behind Cloudflare bot protection. Standard Python HTTP libraries (`httpx`, `requests`) trigger `HTTP 403` due to scripted TLS fingerprints.
+- **curl_cffi Prerequisite:** All direct NepseAlpha scrapers (`tools/scrape_nepsealpha_direct.py`, `tools/scrape_fundamentals_direct.py`, `tools/archive_fundamentals.py`) MUST have `curl_cffi` installed in `.venv` to mimic Chrome's TLS fingerprint (`impersonate="chrome"`). If missing, install `curl_cffi==0.15.0`.
+
+### 📈 Live Market & Index Scraping Priority (HamroShare Primary, AsyncNepse Fallback)
+- **Primary Source:** Use `HamroShare` Next.js RSC streaming (`https://hamroshare.com.np/` and `/nepse/live-market` with header `{"RSC": "1"}`) for live NEPSE index, 13 sub-indices, market summary, and real-time equity prices. It returns all 345+ active stocks in a single ~400ms request and is available 24/7 via CDN caching even when official NEPSE servers 504.
+- **Secondary Fallback:** Retain official `AsyncNepse` (`nepalstock.com/api/nots/...`) as an automated fallback if HamroShare fails or times out.
+- **30-Second TTL Caching:** `nepse_server.py` must maintain an in-memory cache of market index and live stock snapshots for at least 30 seconds to serve concurrent UI requests in <1ms without excessive network traffic.
+
+
