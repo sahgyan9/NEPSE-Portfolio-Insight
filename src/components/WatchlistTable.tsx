@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { ArrowUpDown, Info, Loader2, Plus, RefreshCw, Trash2, TrendingDown, TrendingUp } from "lucide-react";
+import { AlertTriangle, ArrowUpDown, Info, Loader2, Plus, RefreshCw, Trash2, TrendingDown, TrendingUp } from "lucide-react";
 import { TableCell, TableHead, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -17,6 +17,64 @@ interface WatchlistEntry {
   company: string;
   dateAdded: string;
 }
+
+// A price is only meaningful if somebody actually traded at it recently. NEPSE
+// has many thinly-traded names whose "last price" is months old and often set by
+// a single-share trade -- their P/E and P/B are arithmetically correct and
+// economically meaningless, and they sweep any cheapness screen. 5 calendar days
+// ~= one full NEPSE trading week (Sun-Thu), which also absorbs viewing the table
+// on a Friday or Saturday. Kept in sync with STALE_PRICE_DAYS in
+// tools/archive_fundamentals.py.
+const STALE_PRICE_DAYS = 5;
+
+/** Days between the last actual trade and today, or null if unknown. */
+const daysSinceTrade = (lastTradeDate?: string | null): number | null => {
+  if (!lastTradeDate) return null;
+  const then = Date.parse(`${lastTradeDate}T00:00:00Z`);
+  if (Number.isNaN(then)) return null;
+  const today = new Date();
+  const now = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+  return Math.round((now - then) / 86_400_000);
+};
+
+/**
+ * Amber "Stale" chip shown beside the LTP when the last actual trade is older
+ * than STALE_PRICE_DAYS. Renders nothing for normally-traded stocks, so the
+ * table stays quiet and the badge means something when it does appear.
+ */
+const StalePriceBadge = ({ fundamentals }: { fundamentals?: MerolaganiFundamentals | null }) => {
+  const days = daysSinceTrade(fundamentals?.lastTradeDate);
+  if (days === null || days <= STALE_PRICE_DAYS) return null;
+
+  const volume = fundamentals?.tradeVolume;
+  const turnover = fundamentals?.tradeTurnover;
+
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Badge
+          variant="outline"
+          className="h-5 gap-1 border-amber-500/40 bg-amber-500/10 px-1.5 text-[10px] font-medium text-amber-600 dark:text-amber-400"
+        >
+          <AlertTriangle className="h-3 w-3" />
+          Stale
+        </Badge>
+      </TooltipTrigger>
+      <TooltipContent className="max-w-[260px]">
+        <p className="font-medium">Last traded {days} days ago ({fundamentals?.lastTradeDate})</p>
+        {volume != null && (
+          <p className="text-xs text-muted-foreground mt-1">
+            {volume.toLocaleString("en-NP")} share{volume === 1 ? "" : "s"} changed hands
+            {turnover != null && ` \u2014 Rs. ${turnover.toLocaleString("en-NP", { maximumFractionDigits: 0 })} turnover`}
+          </p>
+        )}
+        <p className="text-xs text-muted-foreground mt-1">
+          P/E and P/B are computed from this price, so treat them as indicative only.
+        </p>
+      </TooltipContent>
+    </Tooltip>
+  );
+};
 
 interface EnhancedWatchlistEntry extends WatchlistEntry {
   fundamentals?: MerolaganiFundamentals | null;
@@ -267,7 +325,14 @@ export const WatchlistTable = () => {
                     </Link>
                   </TableCell>
                   <TableCell className="font-mono text-violet-500 font-medium">
-                    {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : formatCurrency(item.ltp ?? item.fundamentals?.lastTradedPrice)}
+                    {item.isLoading ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5">
+                        {formatCurrency(item.ltp ?? item.fundamentals?.lastTradedPrice)}
+                        <StalePriceBadge fundamentals={item.fundamentals} />
+                      </span>
+                    )}
                   </TableCell>
                   <TableCell className="font-mono text-teal-500">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : (item.fundamentals?.eps ?? "N/A")}

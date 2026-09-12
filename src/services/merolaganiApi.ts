@@ -38,6 +38,13 @@ export interface MerolaganiFundamentals {
     roe: number | null;
     dividendYield: number | null;
     sharesOutstanding: number | null;
+    // Liquidity of the price that peRatio/pbRatio are computed from. NEPSE has
+    // thinly-traded names whose "last price" is months old and often set by a
+    // single-share trade; their ratios look cheap but are untradeable. Null when
+    // the source didn't report a trade date.
+    lastTradeDate: string | null;   // "YYYY-MM-DD" of the last actual trade
+    tradeVolume: number | null;     // shares changing hands on that day
+    tradeTurnover: number | null;   // Rs value of that day's trades
     source: 'live' | 'cache' | 'fallback';
     sourceDetails: string;  // Human-readable description of data source
     isLiveData: boolean;    // Quick check if data is live
@@ -183,6 +190,10 @@ const fetchFromPythonApi = async (symbol: string): Promise<MerolaganiFundamental
             roe: data.roe,
             dividendYield: data.dividend_yield,
             sharesOutstanding: data.shares_outstanding,
+            // The Merolagani/Python path doesn't report trade recency
+            lastTradeDate: null,
+            tradeVolume: null,
+            tradeTurnover: null,
             source: 'live',
             sourceDetails: 'Live data scraped from Merolagani.com via local Python API server',
             isLiveData: true,
@@ -258,6 +269,9 @@ export const fetchMerolaganiFundamentals = async (
                     roe: null,
                     dividendYield: null,
                     sharesOutstanding: null,
+                    lastTradeDate: fundData.lastTradeDate ?? null,
+                    tradeVolume: fundData.tradeVolume ?? null,
+                    tradeTurnover: fundData.tradeTurnover ?? null,
                     source: 'live',
                     sourceDetails: 'Scraped via Firecrawl',
                     isLiveData: true,
@@ -292,6 +306,9 @@ export const fetchMerolaganiFundamentals = async (
             roe: staticData.roe,
             dividendYield: null,
             sharesOutstanding: null,
+            lastTradeDate: null,
+            tradeVolume: null,
+            tradeTurnover: null,
             source: 'fallback',
             sourceDetails: 'Hard-coded book values (fallback)',
             isLiveData: false,
@@ -351,6 +368,9 @@ export const fetchMultipleFundamentals = async (
                 roe: null,
                 dividendYield: null,
                 sharesOutstanding: null,
+                lastTradeDate: fundData.lastTradeDate ?? null,
+                tradeVolume: fundData.tradeVolume ?? null,
+                tradeTurnover: fundData.tradeTurnover ?? null,
                 source: 'live',
                 sourceDetails: 'Scraped via Firecrawl',
                 isLiveData: true,
@@ -377,6 +397,9 @@ export const fetchMultipleFundamentals = async (
                     roe: staticData.roe,
                     dividendYield: null,
                     sharesOutstanding: null,
+                    lastTradeDate: null,
+                    tradeVolume: null,
+                    tradeTurnover: null,
                     source: 'fallback',
                     sourceDetails: 'Hard-coded book values (fallback)',
                     isLiveData: false,
