@@ -75,16 +75,23 @@ def _round(v, n=2):
     return round(v, n) if isinstance(v, (int, float)) else None
 
 
+# NepseAlpha OMITS the currently-viewed symbol from its own all_stock_name list,
+# so a single anchor silently loses exactly one company (anchoring on NABIL means
+# NABIL never gets archived). Union two anchors to cover each other's blind spot.
+UNIVERSE_ANCHORS = ("NABIL", "ADBL")
+
+
 def get_universe(client: httpx.Client) -> list:
     """Return every listed symbol from NepseAlpha's embedded all_stock_name."""
-    props = fetch_props(client, "NABIL")  # any valid symbol carries the full list
-    universe = []
-    for item in props.get("all_stock_name", []) or []:
-        sym = (item.get("symbol") or "").upper()
-        info = item.get("stockinfo") or {}
-        if sym:
-            universe.append({"symbol": sym, "full_name": info.get("full_name", "")})
-    return universe
+    universe = {}
+    for anchor in UNIVERSE_ANCHORS:
+        props = fetch_props(client, anchor)
+        for item in props.get("all_stock_name", []) or []:
+            sym = (item.get("symbol") or "").upper()
+            info = item.get("stockinfo") or {}
+            if sym and sym not in universe:
+                universe[sym] = {"symbol": sym, "full_name": info.get("full_name", "")}
+    return [universe[s] for s in sorted(universe)]
 
 
 def latest_quarter_metrics(props: dict) -> dict:
@@ -133,6 +140,45 @@ def latest_quarter_metrics(props: dict) -> dict:
     }
 
 
+# A price is only meaningful if somebody actually traded at it recently. NEPSE
+# has many thinly-traded names whose "last price" is months old and often set by
+# a single-share trade -- their PE/PB are arithmetically correct and economically
+# meaningless, and they sweep any cheapness screen. Flag them instead of trusting
+# them. 5 calendar days ~= one full NEPSE trading week (Sun-Thu), which also
+# absorbs running the collector on a Friday or Saturday.
+STALE_PRICE_DAYS = 5
+
+
+def liquidity_fields(props: dict, captured_at: str) -> dict:
+    """When did this stock last actually trade, and how thin was that trade?"""
+    price = props.get("latestPrice") or {}
+    created = price.get("created_at")          # e.g. "2026-04-07T09:14:59.000000Z"
+    last_trade_date = created[:10] if isinstance(created, str) and len(created) >= 10 else None
+
+    days = None
+    if last_trade_date:
+        try:
+            d0 = datetime.strptime(last_trade_date, "%Y-%m-%d")
+            d1 = datetime.strptime(captured_at, "%Y-%m-%d")
+            days = (d1 - d0).days
+        except ValueError:
+            days = None
+
+    volume = _num(price.get("actual_volume"))
+    if volume is None:
+        volume = _num(price.get("volume"))
+
+    return {
+        "last_trade_date": last_trade_date,
+        "trade_volume": int(volume) if volume is not None else None,
+        "trade_turnover": _round(_num(price.get("turn_over"))),
+        "days_since_trade": days,
+        # None (unknown trade date) is treated as stale: absence of evidence that
+        # the price is fresh is not evidence that it is.
+        "price_is_stale": True if days is None else days > STALE_PRICE_DAYS,
+    }
+
+
 def build_snapshot(props: dict) -> dict:
     """Assemble one dated fundamentals snapshot from a company's page props."""
     master = props.get("masterData") or {}
@@ -146,9 +192,10 @@ def build_snapshot(props: dict) -> dict:
 
     promoter = _num(general.get("promoter_holding"))
     public = _num(general.get("public_holding"))
+    captured_at = datetime.now().strftime("%Y-%m-%d")
 
     snap = {
-        "captured_at": datetime.now().strftime("%Y-%m-%d"),
+        "captured_at": captured_at,
         "reported_quarter": q["reported_quarter"],
         "fiscal_year": q["fiscal_year"],
         "quarter": q["quarter"],
@@ -195,6 +242,8 @@ def build_snapshot(props: dict) -> dict:
             ) if funda.get(k) is not None
         },
     }
+    # How tradeable that ltp_at_capture / pe_ratio / pb_ratio really is
+    snap.update(liquidity_fields(props, captured_at))
     return snap
 
 
