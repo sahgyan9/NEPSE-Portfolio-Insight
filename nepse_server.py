@@ -59,14 +59,141 @@ def add_cors_headers(response):
 # NEPSE Index API
 # ============================================================================
 
+class HamroShareMarketFetcher:
+    """Fetches high-speed live market data and NEPSE index from HamroShare Next.js RSC streams."""
+
+    def __init__(self):
+        self._cache = {}
+        self._cache_ttl = 30  # 30 second cache for live market data
+        self._headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+            ),
+            "RSC": "1"
+        }
+
+    def _is_cache_valid(self, key: str) -> bool:
+        if key not in self._cache:
+            return False
+        cached_time = self._cache[key].get('timestamp', 0)
+        return (time.time() - cached_time) < self._cache_ttl
+
+    async def get_market_data(self):
+        """Fetch both live market stocks and indices, returning normalized payload."""
+        if self._is_cache_valid('hamro_market_data'):
+            return self._cache['hamro_market_data']['data']
+
+        try:
+            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+                lm_task = client.get("https://hamroshare.com.np/nepse/live-market", headers=self._headers)
+                home_task = client.get("https://hamroshare.com.np/", headers=self._headers)
+                r_lm, r_home = await asyncio.gather(lm_task, home_task)
+
+            stocks_by_symbol = {}
+            if r_lm.status_code == 200:
+                lm_text = r_lm.text
+                pos = lm_text.find('"securityId"')
+                if pos != -1:
+                    start = lm_text.rfind('[', 0, pos)
+                    bracket_count = 0
+                    end = -1
+                    for i in range(start, len(lm_text)):
+                        if lm_text[i] == '[':
+                            bracket_count += 1
+                        elif lm_text[i] == ']':
+                            bracket_count -= 1
+                            if bracket_count == 0:
+                                end = i
+                                break
+                    if end != -1:
+                        stock_list = json.loads(lm_text[start:end+1])
+                        for s in stock_list:
+                            sym = (s.get("symbol") or "").upper().strip()
+                            if sym:
+                                ltp = float(s.get("lastTradedPrice") or 0)
+                                prev = float(s.get("previousClose") or 0)
+                                stocks_by_symbol[sym] = {
+                                    "symbol": sym,
+                                    "name": s.get("securityName") or sym,
+                                    "ltp": ltp,
+                                    "change": round(ltp - prev, 2) if (ltp and prev) else 0.0,
+                                    "change_pct": float(s.get("percentageChange") or 0),
+                                    "high": float(s.get("highPrice") or 0),
+                                    "low": float(s.get("lowPrice") or 0),
+                                    "open": float(s.get("openPrice") or 0),
+                                    "previous_close": prev,
+                                    "volume": int(s.get("totalTradeQuantity") or 0),
+                                    "turnover": float(s.get("totalTradeValue") or 0),
+                                    "updated_at": s.get("lastUpdatedDateTime") or "",
+                                    "source": "hamroshare"
+                                }
+
+            nepse_index = None
+            sub_indices = []
+            if r_home.status_code == 200:
+                home_text = r_home.text
+                match_nepse = re.search(r'\{"id":58,[^}]*"index":"NEPSE Index"[^}]*\}', home_text)
+                if match_nepse:
+                    data = json.loads(match_nepse.group(0))
+                    nepse_index = {
+                        "name": "NEPSE Index",
+                        "value": float(data.get("currentValue") or 0),
+                        "change": float(data.get("change") or 0),
+                        "change_pct": float(data.get("perChange") or 0),
+                        "high": float(data.get("high") or 0),
+                        "low": float(data.get("low") or 0),
+                        "previous_close": float(data.get("previousClose") or 0),
+                        "source": "live",
+                        "timestamp": data.get("generatedTime") or datetime.now().isoformat()
+                    }
+
+                matches_sub = re.findall(
+                    r'\{"id":\d+,"index":"([^"]+)","change":([-0-9.]+),"perChange":([-0-9.]+),"currentValue":([-0-9.]+)\}',
+                    home_text
+                )
+                for name, chg, pchg, val in matches_sub:
+                    if name != "NEPSE Index":
+                        sub_indices.append({
+                            "name": name,
+                            "value": float(val),
+                            "change": float(chg),
+                            "change_pct": float(pchg),
+                        })
+
+            # Derive top gainers and losers
+            all_traded = [s for s in stocks_by_symbol.values() if s["ltp"] > 0]
+            all_traded.sort(key=lambda s: s["change_pct"], reverse=True)
+            top_gainers = all_traded[:5]
+            top_losers = sorted([s for s in all_traded if s["change_pct"] < 0], key=lambda s: s["change_pct"])[:5]
+
+            result = {
+                "nepse_index": nepse_index,
+                "sub_indices": sub_indices,
+                "stocks": stocks_by_symbol,
+                "top_gainers": top_gainers,
+                "top_losers": top_losers,
+                "timestamp": datetime.now().isoformat(),
+                "source": "hamroshare"
+            }
+            if nepse_index or stocks_by_symbol:
+                self._cache['hamro_market_data'] = {'data': result, 'timestamp': time.time()}
+                return result
+        except Exception as e:
+            print(f"[nepse_server] HamroShare live fetch warning: {e}")
+
+        return None
+
+
 class NepseDataFetcher:
-    """Fetches live NEPSE data with caching"""
+    """Fetches live NEPSE data with dual-source fallback (HamroShare -> AsyncNepse)."""
     
     def __init__(self):
+        self._hamro = HamroShareMarketFetcher()
         self._nepse = AsyncNepse()
         self._nepse.setTLSVerification(False)
         self._cache = {}
-        self._cache_ttl = 60  # Cache for 60 seconds
+        self._cache_ttl = 30  # Cache for 30 seconds
     
     def _is_cache_valid(self, key: str) -> bool:
         if key not in self._cache:
@@ -75,10 +202,21 @@ class NepseDataFetcher:
         return (time.time() - cached_time) < self._cache_ttl
     
     async def get_nepse_index(self):
-        """Get main NEPSE index"""
+        """Get main NEPSE index (HamroShare primary, AsyncNepse fallback)"""
         if self._is_cache_valid('nepse_index'):
             return self._cache['nepse_index']['data']
         
+        # 1. Primary: HamroShare (~300ms)
+        try:
+            hs_data = await self._hamro.get_market_data()
+            if hs_data and hs_data.get('nepse_index'):
+                result = hs_data['nepse_index']
+                self._cache['nepse_index'] = {'data': result, 'timestamp': time.time()}
+                return result
+        except Exception as e:
+            print(f"[nepse_server] HamroShare index fetch failed: {e}")
+
+        # 2. Fallback: Official NEPSE AsyncNepse
         try:
             raw_data = await asyncio.wait_for(self._nepse.getNepseIndex(), timeout=5.0)
             for idx in raw_data:
@@ -114,15 +252,32 @@ class NepseDataFetcher:
                 self._cache['nepse_index'] = {'data': result, 'timestamp': time.time()}
                 return result
         except Exception as e:
-            print(f"Error fetching NEPSE index: {e}")
+            print(f"[nepse_server] Official NEPSE index fallback error: {e}")
         
         return None
     
     async def get_all_indices(self):
-        """Get all main and sub indices"""
+        """Get all main and sub indices (HamroShare primary, AsyncNepse fallback)"""
         if self._is_cache_valid('all_indices'):
             return self._cache['all_indices']['data']
         
+        # 1. Primary: HamroShare
+        try:
+            hs_data = await self._hamro.get_market_data()
+            if hs_data and hs_data.get('sub_indices'):
+                main_indices = [hs_data['nepse_index']] if hs_data.get('nepse_index') else []
+                result = {
+                    'main_indices': main_indices,
+                    'sub_indices': hs_data['sub_indices'],
+                    'source': 'live',
+                    'timestamp': datetime.now().isoformat()
+                }
+                self._cache['all_indices'] = {'data': result, 'timestamp': time.time()}
+                return result
+        except Exception as e:
+            print(f"[nepse_server] HamroShare indices fetch failed: {e}")
+
+        # 2. Fallback: Official NEPSE AsyncNepse
         try:
             main_raw = await asyncio.wait_for(self._nepse.getNepseIndex(), timeout=3.0)
             sub_raw = await asyncio.wait_for(self._nepse.getNepseSubIndices(), timeout=3.0)
@@ -160,7 +315,7 @@ class NepseDataFetcher:
             self._cache['all_indices'] = {'data': result, 'timestamp': time.time()}
             return result
         except Exception as e:
-            print(f"Error fetching indices: {e}")
+            print(f"[nepse_server] Official NEPSE subindices error: {e}")
         
         return {'main_indices': [], 'sub_indices': [], 'source': 'error'}
     
@@ -181,15 +336,37 @@ class NepseDataFetcher:
             self._cache['market_status'] = {'data': result, 'timestamp': time.time()}
             return result
         except Exception as e:
-            print(f"Error fetching market status: {e}")
+            print(f"[nepse_server] Error fetching market status: {e}")
         
         return {'is_open': False, 'status': 'UNKNOWN', 'source': 'error'}
     
     async def get_market_summary(self):
-        """Get full market summary including top gainers/losers"""
+        """Get full market summary including top gainers/losers (HamroShare primary)"""
         if self._is_cache_valid('market_summary'):
             return self._cache['market_summary']['data']
         
+        # 1. Primary: HamroShare
+        try:
+            hs_data = await self._hamro.get_market_data()
+            if hs_data and hs_data.get('nepse_index'):
+                market_status = await self.get_market_status()
+                main_indices = [hs_data['nepse_index']] if hs_data.get('nepse_index') else []
+                result = {
+                    'nepse_index': hs_data['nepse_index'],
+                    'main_indices': main_indices,
+                    'sub_indices': hs_data.get('sub_indices', []),
+                    'market_status': market_status,
+                    'top_gainers': hs_data.get('top_gainers', []),
+                    'top_losers': hs_data.get('top_losers', []),
+                    'source': 'live',
+                    'timestamp': datetime.now().isoformat()
+                }
+                self._cache['market_summary'] = {'data': result, 'timestamp': time.time()}
+                return result
+        except Exception as e:
+            print(f"[nepse_server] HamroShare market summary failed: {e}")
+
+        # 2. Fallback: Official NEPSE AsyncNepse
         try:
             # Get index data
             nepse_idx = await self.get_nepse_index()
@@ -200,8 +377,6 @@ class NepseDataFetcher:
             top_gainers = await asyncio.wait_for(self._nepse.getTopGainers(), timeout=3.0)
             top_losers = await asyncio.wait_for(self._nepse.getTopLosers(), timeout=3.0)
             
-            # NEPSE's top-gainers/losers payload uses 'ltp' (not
-            # 'lastTradedPrice' like some other endpoints) — accept both.
             gainers = []
             for stock in (top_gainers or [])[:5]:
                 gainers.append({
@@ -234,8 +409,15 @@ class NepseDataFetcher:
             return result
         except Exception as e:
             err_msg = str(e)
-            print(f"Error fetching market summary: {err_msg}")
+            print(f"[nepse_server] Error fetching market summary fallback: {err_msg}")
             return {'source': 'error', 'error': err_msg}
+
+    async def get_live_market(self):
+        """Get live market stock list (all 345 stocks) from HamroShare"""
+        hs_data = await self._hamro.get_market_data()
+        if hs_data:
+            return hs_data.get('stocks', {})
+        return {}
 
 
 # ============================================================================
@@ -402,17 +584,39 @@ def get_stock(symbol: str):
     return jsonify(data)
 
 
+@app.route('/api/live-market')
+def get_live_market():
+    """Get real-time prices for all 345 NEPSE-listed stocks in one call"""
+    stocks = run_async(nepse_fetcher.get_live_market())
+    return jsonify({'count': len(stocks), 'stocks': stocks, 'source': 'hamroshare'})
+
+
 @app.route('/api/stocks')
 def get_stocks():
-    """Get multiple stock fundamentals"""
+    """Get multiple stock fundamentals and live prices"""
     symbols = request.args.get('symbols', '').split(',')
     symbols = [s.strip().upper() for s in symbols if s.strip()]
     
     if not symbols:
         return jsonify({'error': 'No symbols provided'}), 400
     
+    live_stocks = run_async(nepse_fetcher.get_live_market()) or {}
+
+    async def fetch_one(s):
+        fund = await merolagani_fetcher.get_stock_fundamentals(s)
+        if s in live_stocks:
+            ls = live_stocks[s]
+            if fund and isinstance(fund, dict):
+                fund['last_traded_price'] = ls.get('ltp', fund.get('last_traded_price'))
+                fund['point_change'] = ls.get('change', 0)
+                fund['percentage_change'] = ls.get('change_pct', 0)
+                fund['volume'] = ls.get('volume', 0)
+                fund['52_week_high'] = fund.get('52_week_high') or ls.get('high')
+                fund['52_week_low'] = fund.get('52_week_low') or ls.get('low')
+        return fund
+    
     async def fetch_all():
-        tasks = [merolagani_fetcher.get_stock_fundamentals(s) for s in symbols]
+        tasks = [fetch_one(s) for s in symbols]
         return await asyncio.gather(*tasks)
     
     results = run_async(fetch_all())
@@ -984,16 +1188,34 @@ def fetch_quarterly_data(symbol: str):
         python = sys.executable  # use the same venv Python running this server
         project_root = os.path.dirname(os.path.abspath(__file__))
 
-        # Step 1: Scrape NepseAlpha
-        print(f"[nepse_server] Scraping NepseAlpha for {symbol}...")
-        scrape_res = subprocess.run(
-            [python, "tools/scrape_nepsealpha.py", symbol],
-            capture_output=True, text=True, cwd=project_root
-        )
-        if scrape_res.returncode != 0:
+        # Step 1: Scrape NepseAlpha.
+        # The direct scraper talks to NepseAlpha over plain HTTP and needs no
+        # API key; the Firecrawl one burns credits and dies without
+        # FIRECRAWL_API_KEY. Both write the same two markdown files into .tmp/,
+        # so step 2 is unchanged either way. Try keyless first, keep Firecrawl
+        # only as a fallback for the rare page the direct parser can't read.
+        scrapers = [
+            ("direct", "tools/scrape_nepsealpha_direct.py"),
+            ("firecrawl", "tools/scrape_nepsealpha.py"),
+        ]
+        scrape_res = None
+        attempts = []
+        for label, script in scrapers:
+            print(f"[nepse_server] Scraping NepseAlpha for {symbol} via {label}...")
+            scrape_res = subprocess.run(
+                [python, script, symbol],
+                capture_output=True, text=True, cwd=project_root
+            )
+            if scrape_res.returncode == 0:
+                break
             detail = scrape_res.stderr or scrape_res.stdout or "No output"
-            print(f"[nepse_server] Scrape failed for {symbol}: {detail}")
-            return jsonify({'error': f'Scrape failed for {symbol}', 'details': detail}), 500
+            attempts.append(f"[{label}] {detail.strip()}")
+            print(f"[nepse_server] {label} scrape failed for {symbol}: {detail}")
+        else:
+            return jsonify({
+                'error': f'Scrape failed for {symbol}',
+                'details': "\n\n".join(attempts) or "No output",
+            }), 500
 
         # Step 2: Parse and upsert
         print(f"[nepse_server] Parsing markdown for {symbol}...")
