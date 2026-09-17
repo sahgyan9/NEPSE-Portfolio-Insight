@@ -1057,7 +1057,8 @@ def _shares_held_at(transactions, symbol, as_of_date, fallback_qty):
     all_for_symbol = [t for t in transactions if t.get("symbol", "").upper() == symbol]
     if not all_for_symbol:
         return fallback_qty
-    relevant = [t for t in all_for_symbol if (t.get("date", "") or "")[:10] <= as_of_date]
+    as_of = (as_of_date or "")[:10]
+    relevant = [t for t in all_for_symbol if (t.get("date", "") or "")[:10] <= as_of]
     qty = 0.0
     for t in relevant:
         sign = 1 if t.get("type") == "BUY" else -1
@@ -1166,28 +1167,105 @@ def _fy_receive_window(fy):
         return "1900-01-01", "2999-12-31"
 
 
-def compute_portfolio_dividends(fy):
-    """For each holding: merge auto-scraped + manual dividend data for the given
-    profit fiscal year, compute received bonus shares & cash (gross/net), and a
-    share-count timeline for the receiving year (compounding sparkline).
+def _historical_dividend_trend(symbol, transactions, dividend_db, manual_db, current_qty, current_fy):
+    """Builds a chronological multi-year dividend payout trend for the symbol.
+    Includes declared percentages (bonus/cash/total) and computed earnings based
+    on holding quantity at each point in time. Used to power the inline area sparkline chart."""
+    auto_by_fy = {d.get("fiscalYear"): d for d in dividend_db.get(symbol, {}).get("dividends", []) if d.get("fiscalYear")}
+    manual_by_fy = {e.get("fiscalYear"): e for e in manual_db.get("entries", [])
+                    if e.get("symbol", "").upper() == symbol and not e.get("disabled") and e.get("fiscalYear")}
 
-    Assumption (documented in UI): portfolio.json quantity is the pre-bonus
-    quantity; announced bonus shares are shown as additions on top of it.
-    Manual entries (same symbol + fiscalYear) override auto data."""
+    all_fys = set(auto_by_fy.keys()) | set(manual_by_fy.keys())
+    if not all_fys:
+        return []
+
+    def fy_sort_key(fy_str):
+        try:
+            return int(fy_str.split("-")[0].strip())
+        except Exception:
+            return 0
+
+    sorted_fys = sorted(list(all_fys), key=fy_sort_key)
+    recent_fys = sorted_fys[-8:] if len(sorted_fys) > 8 else sorted_fys
+
+    paid_up = _paid_up_value(symbol)
+    points = []
+    for f in recent_fys:
+        m = manual_by_fy.get(f)
+        a = auto_by_fy.get(f)
+        bp = float(m.get("bonusPercent", 0) if m else (a.get("bonusPercent", 0) if a else 0))
+        cp = float(m.get("cashPercent", 0) if m else (a.get("cashPercent", 0) if a else 0))
+        tp = round(bp + cp, 4)
+        bc_ad = (a or {}).get("bookClosureDateAD", "")
+        bc_bs = (a or {}).get("bookClosureDateBS", "")
+
+        date_for_held = bc_ad or _fy_receive_window(f)[1]
+        held_qty = _shares_held_at(transactions, symbol, date_for_held, current_qty) if transactions else current_qty
+
+        earned_bonus = int(held_qty * bp / 100.0) if held_qty > 0 else 0
+        earned_cash = round(held_qty * paid_up * cp / 100.0 * (1 - DIVIDEND_TAX_RATE), 2) if held_qty > 0 else 0.0
+
+        points.append({
+            "fiscalYear": f,
+            "bonusPercent": bp,
+            "cashPercent": cp,
+            "totalPercent": tp,
+            "heldQty": held_qty,
+            "receivedBonus": earned_bonus,
+            "receivedCash": earned_cash,
+            "bookClosureDateAD": bc_ad,
+            "bookClosureDateBS": bc_bs,
+            "isCurrentFy": (f == current_fy),
+        })
+    return points
+
+
+def _normalize_fy(fy_str):
+    try:
+        parts = str(fy_str).split('-')
+        if len(parts) == 2:
+            p1 = int(parts[0])
+            if p1 < 100:
+                p1 += 2000
+            return p1
+    except Exception:
+        pass
+    return 0
+
+
+DEFAULT_DIVIDEND_FY = "082-083"
+
+
+def compute_portfolio_dividends(fy=DEFAULT_DIVIDEND_FY):
+    """For each holding: merge auto-scraped + manual dividend data for the given
+    profit fiscal year (or 'latest' for the newest declared dividend across all years),
+    compute received bonus shares & cash (gross/net), and a share-count timeline for
+    the receiving year (compounding sparkline)."""
+    if not fy or str(fy).lower() in ("recent", "current"):
+        fy = DEFAULT_DIVIDEND_FY
+
+    # Assumption (documented in UI): portfolio.json quantity is the pre-bonus
+    # quantity; announced bonus shares are shown as additions on top of it.
+    # Manual entries (same symbol + fiscalYear) override auto data.
     portfolio = _load_json_file(PORTFOLIO_PATH, {"holdings": []})
     dividend_db = _load_json_file(DIVIDEND_DATA_PATH, {})
     manual_db = load_dividends_db()
     today = datetime.now().strftime("%Y-%m-%d")
-    win_start, win_end = _fy_receive_window(fy)
+    is_latest_mode = (fy or "").strip().lower() in ("latest", "all", "")
 
-    manual_by_symbol = {}
+    active_manual_by_symbol = {}
     for e in manual_db.get("entries", []):
         if e.get("disabled"):
             # Parked, not deleted (see "disabledReason" on the entry) - excluded
             # from the auto+manual merge so the automatic calc takes over.
             continue
-        if (e.get("fiscalYear") or "").strip() == fy:
-            manual_by_symbol[e.get("symbol", "").upper()] = e
+        sym = e.get("symbol", "").upper()
+        if is_latest_mode:
+            cur = active_manual_by_symbol.get(sym)
+            if not cur or _normalize_fy(e.get("fiscalYear", "")) > _normalize_fy(cur.get("fiscalYear", "")):
+                active_manual_by_symbol[sym] = e
+        elif (e.get("fiscalYear") or "").strip() == fy:
+            active_manual_by_symbol[sym] = e
 
     companies = []
     totals = {"cashGross": 0.0, "cashNet": 0.0, "bonusShares": 0, "bonusTaxDue": 0.0, "companiesPaying": 0}
@@ -1197,85 +1275,105 @@ def compute_portfolio_dividends(fy):
         qty = float(h.get("quantity", 0))
         paid_up = _paid_up_value(symbol)
 
-        auto = next((d for d in dividend_db.get(symbol, {}).get("dividends", [])
-                     if d.get("fiscalYear") == fy), None)
-        manual = manual_by_symbol.get(symbol)
+        auto_list = dividend_db.get(symbol, {}).get("dividends", [])
+        manual_entry = active_manual_by_symbol.get(symbol)
 
-        if not auto and not manual:
-            continue
-            
+        if is_latest_mode:
+            sorted_auto = sorted(
+                auto_list,
+                key=lambda d: (_normalize_fy(d.get("fiscalYear", "")), d.get("announcementDateAD", "") or d.get("bookClosureDateAD", "")),
+                reverse=True
+            )
+            latest_auto = sorted_auto[0] if sorted_auto else None
+
+            if manual_entry and latest_auto:
+                man_fy = _normalize_fy(manual_entry.get("fiscalYear", ""))
+                auto_fy = _normalize_fy(latest_auto.get("fiscalYear", ""))
+                if auto_fy > man_fy:
+                    auto = latest_auto
+                    manual = None
+                    company_fy = latest_auto.get("fiscalYear", "")
+                else:
+                    manual = manual_entry
+                    auto = latest_auto if latest_auto.get("fiscalYear") == manual_entry.get("fiscalYear") else None
+                    company_fy = manual_entry.get("fiscalYear", "")
+            elif manual_entry:
+                manual = manual_entry
+                auto = None
+                company_fy = manual_entry.get("fiscalYear", "")
+            elif latest_auto:
+                auto = latest_auto
+                manual = None
+                company_fy = latest_auto.get("fiscalYear", "")
+            else:
+                continue
+        else:
+            company_fy = fy
+            auto = next((d for d in auto_list if d.get("fiscalYear") == fy), None)
+            manual = manual_entry
+
+            if not auto and not manual:
+                continue
+
+        win_start, win_end = _fy_receive_window(company_fy)
         date_added = h.get("dateAdded", "")
         book_closure = (auto or {}).get("bookClosureDateAD", "")
         transactions = portfolio.get("transactions", [])
         has_txn_history = any(t.get("symbol", "").upper() == symbol for t in transactions)
 
-        # Some auto entries are hand-seeded stubs never matched to a live
-        # scrape (no bookClosureDateAD at all, e.g. UPPER 080-081). Without a
-        # real date, approximate eligibility with the end of this FY's
-        # receiving window - otherwise a holding bought well after the fiscal
-        # year ended would skip the holding-period check entirely and always
-        # show up, regardless of whether it was ever owned during that year.
-        eligibility_date = book_closure or win_end
+        if is_latest_mode:
+            calc_qty = qty
+        else:
+            eligibility_date = book_closure or win_end
+            calc_qty = _shares_held_at(transactions, symbol, eligibility_date, qty) if (book_closure or has_txn_history) else qty
 
-        # Use shares actually held on the book closure date (from real buy/sell
-        # history), not today's total - buying more since then doesn't
-        # retroactively entitle you to a bigger historical dividend.
-        calc_qty = _shares_held_at(transactions, symbol, eligibility_date, qty) if (book_closure or has_txn_history) else qty
-
-        # SMART FILTER: skip if not actually holding shares by the book closure
-        # date (or, absent one, by the end of the FY's receiving window).
-        # Prefer real transaction history (accurate) when it exists; only
-        # fall back to the dateAdded heuristic when there's no logged
-        # transaction at all for this symbol (e.g. IPO/mutual-fund lots that
-        # predate any tracked purchase - dateAdded there is the best signal we have).
-        if not manual:
-            if has_txn_history:
-                if calc_qty <= 0:
+            # SMART FILTER: skip if not actually holding shares by the book closure
+            # date (or, absent one, by the end of the FY's receiving window).
+            if not manual:
+                if has_txn_history:
+                    if calc_qty <= 0:
+                        continue
+                elif date_added and eligibility_date < date_added:
                     continue
-            elif date_added and eligibility_date < date_added:
-                continue
 
         bonus_pct = float(manual.get("bonusPercent", 0)) if manual else float(auto.get("bonusPercent", 0))
         cash_pct = float(manual.get("cashPercent", 0)) if manual else float(auto.get("cashPercent", 0))
 
         manual_bonus_override = manual.get("bonusSharesReceived") if manual else None
         if manual_bonus_override is not None:
-            # User-confirmed actual count overrides the computed estimate
-            # entirely (e.g. transaction history still doesn't reach far
-            # enough back to capture pre-tracking lots or interim bonus shares).
             bonus_shares_exact = float(manual_bonus_override)
             bonus_shares = int(bonus_shares_exact)
             fraction_cash = 0.0
         else:
             bonus_shares_exact = calc_qty * bonus_pct / 100.0
-            bonus_shares = int(bonus_shares_exact)  # NEPSE floors fractions (paid as cash)
+            bonus_shares = int(bonus_shares_exact)
             fraction_cash = (bonus_shares_exact - bonus_shares) * paid_up
-        cash_gross = calc_qty * paid_up * cash_pct / 100.0 + fraction_cash
+
+        manual_cash_income = float(manual.get("cashIncome", 0)) if (manual and manual.get("cashIncome") is not None) else None
+        if manual_cash_income is not None and manual_cash_income > 0:
+            cash_gross = manual_cash_income
+        else:
+            cash_gross = calc_qty * paid_up * cash_pct / 100.0 + fraction_cash
+
         cash_net = cash_gross * (1 - DIVIDEND_TAX_RATE)
         bonus_tax_due = bonus_shares_exact * paid_up * DIVIDEND_TAX_RATE
 
         if not book_closure:
-            # Manual-only entries (no auto scrape match) represent dividends the
-            # user already logged as received, not ones still pending closure.
             status = "book-closed" if (manual and not auto) else "announced"
         elif book_closure <= today:
             status = "book-closed"
         else:
             status = "book-closure-upcoming"
 
-        # Sparkline: cumulative bonus shares received via dividends only,
-        # across the whole tracked history - not total share count (that's a
-        # portfolio-holdings concern) and not scoped to just the currently
-        # selected fiscal year (growth from earlier years stays visible
-        # instead of resetting every time the FY dropdown changes).
         timeline = _bonus_share_growth_timeline(symbol, transactions, dividend_db, manual_db, qty, date_added, today)
+        trend = _historical_dividend_trend(symbol, transactions, dividend_db, manual_db, qty, company_fy)
 
         companies.append({
             "symbol": symbol,
             "companyName": h.get("company") or dividend_db.get(symbol, {}).get("companyName", ""),
             "quantity": qty,
             "paidUpValue": paid_up,
-            "fiscalYear": fy,
+            "fiscalYear": company_fy,
             "bonusPercent": bonus_pct,
             "cashPercent": cash_pct,
             "totalPercent": bonus_pct + cash_pct,
@@ -1289,9 +1387,10 @@ def compute_portfolio_dividends(fy):
                 "cashGross": round(cash_gross, 2),
                 "cashNet": round(cash_net, 2),
                 "bonusTaxDue": round(bonus_tax_due, 2),
-                "manualCashIncome": float(manual.get("cashIncome", 0)) if manual else None,
+                "manualCashIncome": manual_cash_income,
             },
             "shareTimeline": timeline,
+            "dividendTrend": trend,
         })
 
         totals["cashGross"] += cash_gross
@@ -1303,14 +1402,17 @@ def compute_portfolio_dividends(fy):
     for k in ("cashGross", "cashNet", "bonusTaxDue"):
         totals[k] = round(totals[k], 2)
     companies.sort(key=lambda c: c["totalPercent"], reverse=True)
-    return {"fiscalYear": fy, "receiveWindow": {"start": win_start, "end": win_end},
+    win_start_res, win_end_res = ("", "") if is_latest_mode else _fy_receive_window(fy)
+    return {"fiscalYear": fy, "receiveWindow": {"start": win_start_res, "end": win_end_res},
             "taxRate": DIVIDEND_TAX_RATE, "totals": totals, "companies": companies}
 
 
 @app.route('/api/dividends/portfolio', methods=['GET'])
 def get_portfolio_dividends():
     """Merged auto+manual dividend view with computed portfolio impact."""
-    fy = request.args.get('fy', '081-082')
+    fy = request.args.get('fy') or DEFAULT_DIVIDEND_FY
+    if str(fy).lower() in ('recent', 'current'):
+        fy = DEFAULT_DIVIDEND_FY
     try:
         return jsonify(compute_portfolio_dividends(fy))
     except Exception:
