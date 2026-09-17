@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/table';
 import { Trash2, PlusCircle, ArrowLeft, Pencil, Check, X, Loader2, RefreshCw, Save, Database, Banknote, Sparkles, TrendingUp, DownloadCloud, Search, Info, HelpCircle, ArrowUpDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { ShareSparkline } from '@/components/ShareSparkline';
+import { DividendSparkline } from '@/components/DividendSparkline';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import {
     fetchPortfolioDividends,
@@ -66,8 +66,8 @@ const DividendsPage = () => {
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const { toast } = useToast();
 
-    // Auto dividends
-    const [fiscalYear, setFiscalYear] = useState('081-082');
+    // Auto dividends - defaults to current year 2026 (FY 082-083)
+    const [fiscalYear, setFiscalYear] = useState('082-083');
     const [portfolioData, setPortfolioData] = useState<PortfolioDividendsResponse | null>(null);
     const [isFetchingAuto, setIsFetchingAuto] = useState(true);
     const [isRefreshingAuto, setIsRefreshingAuto] = useState(false);
@@ -76,7 +76,7 @@ const DividendsPage = () => {
     const [draft, setDraft] = useState<Omit<DividendRow, 'id'>>({
         symbol: '',
         companyName: '',
-        fiscalYear: '081-082',
+        fiscalYear: '082-083',
         bonusPercent: 0,
         cashPercent: 0,
         cashIncome: 0,
@@ -373,9 +373,11 @@ const DividendsPage = () => {
                                                                     value={fiscalYear}
                                                                     onChange={(e) => setFiscalYear(e.target.value)}
                                                                 >
+                                                                    <option value="082-083">082-083 (Current / 2026)</option>
                                                                     <option value="081-082">081-082</option>
                                                                     <option value="080-081">080-081</option>
                                                                     <option value="079-080">079-080</option>
+                                                                    <option value="078-079">078-079</option>
                                                                 </select>
                                                                 <Button variant="outline" size="sm" onClick={handleRefreshAuto} disabled={isRefreshingAuto} className="h-8 gap-2 bg-background">
                                                                     <RefreshCw className={`h-3 w-3 ${isRefreshingAuto ? 'animate-spin' : ''}`} />
@@ -395,7 +397,7 @@ const DividendsPage = () => {
                                                                 <TableHead><SortableHeader label="Shares Added" sortKeyName="bonusShares" colorClass={columnColors.bonusShares} /></TableHead>
                                                                 <TableHead><SortableHeader label="Cash Received" sortKeyName="cashNet" colorClass={columnColors.cashNet} /></TableHead>
                                                                 <TableHead className="hidden md:table-cell"><SortableHeader label="Status" sortKeyName="status" colorClass={columnColors.status} /></TableHead>
-                                                                <TableHead>Bonus Shares (all-time)</TableHead>
+                                                                <TableHead className="text-center font-bold text-foreground">Chart</TableHead>
                                                             </TableRow>
                                                         </TableHeader>
                                                         <TableBody>
@@ -470,13 +472,9 @@ const DividendsPage = () => {
                                                                             {statusLabel[c.status]?.text || c.status}
                                                                         </Badge>
                                                                     </TableCell>
-                                                                    <TableCell className="min-w-[120px]">
-                                                                        <div className="h-[40px] w-full">
-                                                                            <ShareSparkline
-                                                                                timeline={c.shareTimeline}
-                                                                                highlightDate={c.bookClosureDateAD}
-                                                                                currentFyGain={c.received.bonusShares}
-                                                                            />
+                                                                    <TableCell className="min-w-[130px] p-2 text-center">
+                                                                        <div className="flex items-center justify-center">
+                                                                            <DividendSparkline trend={c.dividendTrend} />
                                                                         </div>
                                                                     </TableCell>
                                                                 </TableRow>

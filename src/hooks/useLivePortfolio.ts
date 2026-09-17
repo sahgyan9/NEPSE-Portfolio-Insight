@@ -16,10 +16,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { StockHolding, PortfolioSummary } from '@/data/portfolioData';
 import { getCachedStockData, clearStockDataCache, ShareBazaarResponse } from '@/services/sharebazaarApi';
-import { getHoldings as getDbHoldings, isServerRunning, DBHolding } from '@/services/portfolioDb';
-import { calculateDividendIncome, getPaidUpValue } from '@/services/dividendApi';
-import { getManualDividends, isManualDividendServerAvailable, ManualDividendEntry } from '@/services/manualDividendDb';
+import { getPaidUpValue } from '@/services/dividendApi';
+import { fetchPortfolioDividends, CompanyDividend, PortfolioDividendsResponse, DEFAULT_DIVIDEND_FY } from '@/services/receivedDividendsApi';
 import { companyRegistry, fundamentalData, fallbackPrices } from '@/data/companyRegistry';
+import { getHoldings as getDbHoldings, isServerRunning, DBHolding } from '@/services/portfolioDb';
+import { getManualDividends, isManualDividendServerAvailable } from '@/services/manualDividendDb';
 
 /**
  * Last-known-good price cache (localStorage).
@@ -191,13 +192,16 @@ export interface LivePortfolioData {
     dividendDataLoaded: boolean;
     /** True when the database is connected but holds no positions yet (new user). */
     isEmpty: boolean;
+    dividendFiscalYear: string;
+    setDividendFiscalYear: (fy: string) => void;
 }
 
 /**
  * Hook to fetch and manage live portfolio data
  */
-export const useLivePortfolio = (): LivePortfolioData => {
+export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY): LivePortfolioData => {
     const [holdings, setHoldings] = useState<StockHolding[]>([]);
+    const [dividendFiscalYear, setDividendFiscalYear] = useState<string>(initialFiscalYear);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
@@ -222,19 +226,22 @@ export const useLivePortfolio = (): LivePortfolioData => {
     const buildHoldings = useCallback((
         portfolioData: RawPortfolioItem[],
         stockData: Map<string, ShareBazaarResponse>,
-        dividendData?: Record<string, any>,
-        manualDividends?: Map<string, ManualDividendRow>,
+        portfolioDividends?: PortfolioDividendsResponse | null,
         dynamicFundamentals?: Record<string, any>
     ): StockHolding[] => {
-        // Use passed manual dividend data (fetched asynchronously)
-        const dividendMap = manualDividends || new Map<string, ManualDividendRow>();
+        const dividendMap = new Map<string, CompanyDividend>();
+        if (portfolioDividends?.companies) {
+            for (const c of portfolioDividends.companies) {
+                dividendMap.set(c.symbol.toUpperCase(), c);
+            }
+        }
         const funds = dynamicFundamentals || {};
         const lastKnown = loadLastKnownPrices();
 
         return portfolioData.map((item, index) => {
             const apiData = stockData.get(item.scrip);
             const registryInfo = companyRegistry[item.scrip] || { fullName: item.scrip, sector: "Others" };
-            const manualDividend = dividendMap.get(item.scrip.toUpperCase());
+            const dividendInfo = dividendMap.get(item.scrip.toUpperCase());
 
             // Use API company_name if available and non-empty, otherwise use registry
             // Note: Some mutual funds return empty string from API
@@ -264,28 +271,25 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 ? currentPrice / bookValue
                 : null;
 
-            // Calculate automated dividend average (bonus only)
-            const autoDivs = (dividendData && dividendData[item.scrip]) ? dividendData[item.scrip].dividends || [] : [];
-            let avgBonus = 0;
-            if (autoDivs.length > 0) {
-                avgBonus = autoDivs.reduce((sum: number, d: any) => sum + (Number(d.bonusPercent) || 0), 0) / autoDivs.length;
-            }
-
-            // Use manual dividend entry if available
-            const latestDividendPercent = manualDividend?.cashPercent || 0;
-            const paidUpValue = getPaidUpValue(item.scrip);
-            // Use manual cash income if provided, otherwise calculate from percentage
-            const dividendIncome = manualDividend?.cashIncome ||
-                (latestDividendPercent > 0 ? (latestDividendPercent / 100) * paidUpValue * item.quantity : 0);
-
-            // Use manual bonus data if available - show as percentage (e.g., "12.5%")
-            const latestBonusRatio = manualDividend?.bonusPercent && manualDividend.bonusPercent > 0
-                ? `${manualDividend.bonusPercent}%`
+            // Extract unified dividend info from single source of truth
+            const latestDividendPercent = dividendInfo && dividendInfo.cashPercent > 0
+                ? dividendInfo.cashPercent
                 : null;
-            const bonusShares = manualDividend?.bonusPercent
-                ? Math.floor(item.quantity * (manualDividend.bonusPercent / 100))
-                : 0;
+            const dividendIncome = dividendInfo?.received?.cashGross ?? 0;
+            const latestBonusRatio = dividendInfo && dividendInfo.bonusPercent > 0
+                ? `${dividendInfo.bonusPercent}%`
+                : null;
+            const bonusShares = dividendInfo?.received?.bonusShares ?? 0;
             const bonusShareValue = bonusShares * currentPrice;
+            const latestDividendFiscalYear = dividendInfo?.fiscalYear ?? null;
+            const latestDividendSource = dividendInfo?.source ?? null;
+
+            // Dividend yield: cash yield based on currentPrice, or company fundamental yield
+            const paidUpValue = dividendInfo?.paidUpValue || getPaidUpValue(item.scrip);
+            const calculatedCashYield = (currentPrice > 0 && dividendInfo && dividendInfo.cashPercent > 0)
+                ? ((dividendInfo.cashPercent / 100 * paidUpValue) / currentPrice) * 100
+                : null;
+            const dividendYield = calculatedCashYield ?? (fundamentals?.dividendYield || null);
 
             return {
                 sn: index + 1,
@@ -303,14 +307,16 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 peRatio: fundamentals?.peRatio || null,
                 eps: fundamentals?.eps || null,
                 bookValue,
-                dividendYield: avgBonus > 0 ? avgBonus : (fundamentals?.dividendYield || null),
+                dividendYield,
                 lastModified: item.lastModified,
-                latestDividendPercent: latestDividendPercent > 0 ? latestDividendPercent : null,
+                latestDividendPercent,
                 dividendIncome,
-                totalDividendReceived: dividendIncome, // For now, using latest as total
+                totalDividendReceived: dividendIncome,
                 latestBonusRatio,
                 bonusShares,
                 bonusShareValue,
+                latestDividendFiscalYear,
+                latestDividendSource,
                 grahamNumber: fundamentals?.graham_number || null,
                 earningsYield: fundamentals?.earnings_yield || null,
                 pegRatio: fundamentals?.peg_ratio || null,
@@ -388,9 +394,14 @@ export const useLivePortfolio = (): LivePortfolioData => {
             // back to these instead of stale static prices / zero.
             saveLastKnownPrices(stockData);
 
-            // Fetch manual dividend data from file storage (or localStorage fallback)
-            const manualDividends = await getManualDividendData();
-            console.log('[useLivePortfolio] Loaded manual dividends for', manualDividends.size, 'symbols');
+            // Fetch unified portfolio dividends from backend
+            let portfolioDividends: PortfolioDividendsResponse | null = null;
+            try {
+                portfolioDividends = await fetchPortfolioDividends(dividendFiscalYear);
+                console.log(`[useLivePortfolio] Loaded unified dividends for FY ${dividendFiscalYear}:`, portfolioDividends?.companies?.length ?? 0, 'companies');
+            } catch (e) {
+                console.error('[useLivePortfolio] Failed to fetch portfolio dividends', e);
+            }
 
             // Fetch dynamic fundamentals
             let dynamicFundamentals = {};
@@ -408,24 +419,9 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 console.error('[useLivePortfolio] Failed to fetch dynamic fundamentals', e);
             }
 
-            // Fetch automated dividend data
-            let automatedDividends: Record<string, any> = {};
-            try {
-                const divRes = await fetch(
-                    import.meta.env.DEV
-                        ? '/api/nepse-server/api/dividends/data'
-                        : 'http://localhost:8000/api/dividends/data'
-                );
-                if (divRes.ok) {
-                    automatedDividends = await divRes.json();
-                }
-            } catch (e) {
-                console.error('[useLivePortfolio] Failed to fetch automated dividends', e);
-            }
-            
-            setDividendDataLoaded(Object.keys(automatedDividends).length > 0 || manualDividends.size > 0);
+            setDividendDataLoaded(portfolioDividends ? portfolioDividends.companies.length > 0 : false);
 
-            const newHoldings = buildHoldings(portfolioData, stockData, automatedDividends, manualDividends, dynamicFundamentals);
+            const newHoldings = buildHoldings(portfolioData, stockData, portfolioDividends, dynamicFundamentals);
             setHoldings(newHoldings);
             setLastUpdated(new Date());
 
@@ -435,15 +431,15 @@ export const useLivePortfolio = (): LivePortfolioData => {
                 setError(`Fetched ${stockData.size}/${symbols.length} stocks. Some using cached prices.`);
             }
         } catch (err) {
+            console.error('[useLivePortfolio] Error in fetchData:', err);
             setError('Failed to fetch stock data. Using cached prices.');
             // Use fallback data
-            const fallbackDividends = await getManualDividendData();
-            const newHoldings = buildHoldings(fallbackPortfolioData, new Map(), undefined, fallbackDividends);
+            const newHoldings = buildHoldings(fallbackPortfolioData, new Map(), null);
             setHoldings(newHoldings);
         } finally {
             setIsLoading(false);
         }
-    }, [buildHoldings]);
+    }, [buildHoldings, dividendFiscalYear]);
 
     const refetch = useCallback(async () => {
         clearStockDataCache();
@@ -517,6 +513,8 @@ export const useLivePortfolio = (): LivePortfolioData => {
         isDbConnected,
         dividendDataLoaded,
         isEmpty,
+        dividendFiscalYear,
+        setDividendFiscalYear,
     };
 };
 

@@ -16,6 +16,8 @@ export interface StockFundamentals {
     sector: string | null;
 }
 
+const None = null;
+
 export const BOOK_VALUES: Record<string, StockFundamentals> = {
     "ADBL": {
         symbol: "ADBL",
