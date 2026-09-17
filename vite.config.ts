@@ -5,7 +5,8 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    port: 5173,
+    port: 5175,
+    strictPort: true,
     proxy: {
       '/api/sharebazaar': {
         target: 'https://sharebazaar.vercel.app',

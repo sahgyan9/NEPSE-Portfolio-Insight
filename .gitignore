@@ -38,3 +38,7 @@ db/portfolio_optimization.json
 # Ship db/portfolio.example.json as the empty template instead.
 db/portfolio.json
 db/refresh_meta.json
+
+# Windows shortcuts & local backups
+*.lnk
+db/*backup*.json
