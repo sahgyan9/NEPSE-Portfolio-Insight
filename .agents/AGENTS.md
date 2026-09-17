@@ -156,4 +156,21 @@ Add micro-animations, full JS interactivity, generated images, accessibility pas
 - **Secondary Fallback:** Retain official `AsyncNepse` (`nepalstock.com/api/nots/...`) as an automated fallback if HamroShare fails or times out.
 - **30-Second TTL Caching:** `nepse_server.py` must maintain an in-memory cache of market index and live stock snapshots for at least 30 seconds to serve concurrent UI requests in <1ms without excessive network traffic.
 
+### 🎯 Unified Portfolio Dividend Pipeline & Fiscal Year Scoping
+- **Single Source of Truth:** All dividend calculations across the entire application (Home Page holdings table, summary cards, and Dividends Page) MUST consume from `GET /api/dividends/portfolio` in `nepse_server.py` via `src/services/receivedDividendsApi.ts`. Never re-implement separate client-side dividend parsing or ad-hoc calculations in frontend hooks.
+- **Default to Active Distribution Year:** When computing or displaying stock dividends, default to the current active distribution fiscal year (`082-083`). Do not default to an unconstrained all-time `latest`, which improperly displays historical distributions from 3-4 years ago as current income.
+- **Explicit Header & Period Selection:** Holdings tables displaying dividends must explicitly label the column with the active fiscal year (e.g., `Dividend (082-083)`) and provide interactive segmented toggle buttons (`082-083 (Current)` | `081-082`) to switch between active distributions and past years seamlessly.
+
+### 🔍 Demat Statement Audit Trail Reconciliation
+- **Clearing Record Verification:** When a user reports that a sell or buy order did not execute (e.g., "I tried to sell but it wasn't sold"), never perform a superficial deletion or overwrite without verifying against the official MeroShare Demat statement CSV clearing records (`SET:...`, `TD:...`). Transactions that cleared at the depository level must be preserved, and ledger discrepancies must be resolved by identifying missing buy or corporate action bonus lots to ensure mathematically rigorous reconciliation with depository holdings.
+
+### 🛡️ Strict Typechecking & Import Verification (Vite SWC)
+- **Non-Checking Transpiler:** This project uses `@vitejs/plugin-react-swc`. Vite build and dev commands only strip TypeScript types and do NOT typecheck. After making any edits to hooks, services, or data modules, ALWAYS run `npx tsc -p tsconfig.app.json --noEmit` to catch missing imports, undefined variables, or typing mismatches before concluding work.
+
+### 🚫 Error Attribution & No Silent Demo Portfolio Substitution
+- **Differentiate Code vs Network Errors:** Never wrap orchestration hooks in generic try/catch blocks that label all failures as "Failed to fetch data / network error". Code errors (`ReferenceError`, `TypeError`) must be logged with stack traces (`console.error`) and isolated from external network outages.
+- **Never Overwrite Real Holdings with Demo Scrips:** An API or metadata failure must NEVER silently replace the user's authentic portfolio positions in `db/portfolio.json` with hardcoded demo data (`fallbackPortfolioData`). Doing so generates phantom metrics (such as misleading underperforming stock percentages) on assets the user does not own. Use cached prices on real positions instead.
+
+
+
 
