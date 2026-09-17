@@ -20,8 +20,8 @@ import { useLivePortfolio } from './useLivePortfolio';
  * Hook for complete portfolio analytics with live data from ShareBazaar API
  * Fetches real-time stock prices and correct company names from NEPSE
  */
-export const usePortfolioAnalytics = () => {
-    const { holdings, summary, isLoading, error, lastUpdated, refetch, isDbConnected, isEmpty } = useLivePortfolio();
+export const usePortfolioAnalytics = (initialFiscalYear?: string) => {
+    const { holdings, summary, isLoading, error, lastUpdated, refetch, isDbConnected, isEmpty, dividendFiscalYear, setDividendFiscalYear } = useLivePortfolio(initialFiscalYear);
 
     const sectorData = useMemo(() => {
         const sectorMap: Record<string, number> = {};
@@ -77,6 +77,8 @@ export const usePortfolioAnalytics = () => {
         refetch,
         isDbConnected,
         isEmpty,
+        dividendFiscalYear,
+        setDividendFiscalYear,
     };
 };
 

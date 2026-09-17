@@ -230,7 +230,7 @@ const QuarterlyPage = () => {
       } else {
         setSelectedSymbol(sym.toUpperCase());
       }
-      setNewSymbol('');
+      setStockSearchQuery('');
     } catch (err: any) {
       toast({
         title: `❌ Failed to fetch ${sym}`,

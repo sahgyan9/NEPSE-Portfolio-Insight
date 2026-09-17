@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 
 interface HoldingsTableProps {
   holdings: StockHolding[];
+  dividendFiscalYear?: string;
+  onDividendFiscalYearChange?: (fy: string) => void;
 }
 
 interface EnhancedHolding extends StockHolding {
@@ -25,7 +27,11 @@ interface EnhancedHolding extends StockHolding {
 type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio";
 type SortOrder = "asc" | "desc";
 
-export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
+export const HoldingsTable = ({
+  holdings,
+  dividendFiscalYear = "082-083",
+  onDividendFiscalYearChange,
+}: HoldingsTableProps) => {
   const [sortKey, setSortKey] = useState<SortKey>("currentValue");
   const [sortOrder, setSortOrder] = useState<SortOrder>("desc");
   const [enhancedHoldings, setEnhancedHoldings] = useState<EnhancedHolding[]>([]);
@@ -147,18 +153,78 @@ export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
   return (
     <div className="glass-card overflow-hidden opacity-0 animate-fade-in" style={{ animationDelay: "600ms" }}>
       <div className="p-4 border-b border-border">
-        <h3 className="text-lg font-semibold flex items-center gap-2">
-          Portfolio Holdings
-          <Badge variant="secondary" className="font-mono">
-            {holdings.length} stocks
-          </Badge>
-          {isLoadingFundamentals && (
-            <Badge variant="outline" className="gap-1">
-              <Loader2 className="h-3 w-3 animate-spin" />
-              Loading fundamentals...
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <h3 className="text-lg font-semibold flex items-center gap-2">
+            Portfolio Holdings
+            <Badge variant="secondary" className="font-mono">
+              {holdings.length} stocks
             </Badge>
+            {isLoadingFundamentals && (
+              <Badge variant="outline" className="gap-1">
+                <Loader2 className="h-3 w-3 animate-spin" />
+                Loading fundamentals...
+              </Badge>
+            )}
+          </h3>
+
+          {onDividendFiscalYearChange && (
+            <div className="flex items-center gap-1.5 bg-muted/40 p-1 rounded-lg border border-border text-xs self-start sm:self-auto">
+              <span className="text-muted-foreground font-semibold px-2 uppercase tracking-wider text-[11px]">
+                Dividend FY
+              </span>
+              <button
+                type="button"
+                onClick={() => onDividendFiscalYearChange("082-083")}
+                className={cn(
+                  "px-2.5 py-1 rounded-md font-mono text-xs font-medium transition-all outline-none",
+                  dividendFiscalYear === "082-083"
+                    ? "bg-primary text-primary-foreground shadow-sm font-semibold"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                )}
+              >
+                082-083 (Current)
+              </button>
+              <button
+                type="button"
+                onClick={() => onDividendFiscalYearChange("081-082")}
+                className={cn(
+                  "px-2.5 py-1 rounded-md font-mono text-xs font-medium transition-all outline-none",
+                  dividendFiscalYear === "081-082"
+                    ? "bg-primary text-primary-foreground shadow-sm font-semibold"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                )}
+              >
+                081-082
+              </button>
+              <select
+                value={["082-083", "081-082"].includes(dividendFiscalYear) ? "" : dividendFiscalYear}
+                onChange={(e) => {
+                  if (e.target.value) onDividendFiscalYearChange(e.target.value);
+                }}
+                className={cn(
+                  "h-7 px-2 text-xs rounded-md border border-input bg-background font-mono focus:outline-none cursor-pointer",
+                  !["082-083", "081-082"].includes(dividendFiscalYear)
+                    ? "bg-primary text-primary-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+                title="Select other fiscal years"
+              >
+                <option value="" disabled className="bg-background text-foreground">
+                  More FYs...
+                </option>
+                <option value="080-081" className="bg-background text-foreground">
+                  080-081
+                </option>
+                <option value="079-080" className="bg-background text-foreground">
+                  079-080
+                </option>
+                <option value="latest" className="bg-background text-foreground">
+                  All-Time Latest
+                </option>
+              </select>
+            </div>
           )}
-        </h3>
+        </div>
 
         {/* Search Bar */}
         <div className="mt-3 relative">
@@ -204,14 +270,18 @@ export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <button className={cn("flex items-center gap-1 hover:opacity-80 transition-colors", columnColors.dividend)}>
-                      <SortableHeader label="Dividend" sortKeyName="dividendIncome" colorClass={columnColors.dividend} />
+                      <SortableHeader
+                        label={dividendFiscalYear === "latest" ? "Dividend (Latest)" : `Dividend (${dividendFiscalYear})`}
+                        sortKeyName="dividendIncome"
+                        colorClass={columnColors.dividend}
+                      />
                       <Gift className="h-3 w-3" />
                     </button>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-xs">
                     <p className="text-xs">
-                      <strong>Latest Dividend:</strong><br />
-                      Shows the latest declared cash dividend percentage and estimated income based on your holdings.
+                      <strong>FY {dividendFiscalYear} Dividend:</strong><br />
+                      Shows declared cash and bonus dividends for FY {dividendFiscalYear}. Click the Dividend FY toggle buttons above the table to switch between current (082-083) and past years.
                     </p>
                   </TooltipContent>
                 </Tooltip>
@@ -320,21 +390,26 @@ export const HoldingsTable = ({ holdings }: HoldingsTableProps) => {
                         </div>
                       </TooltipTrigger>
                       <TooltipContent side="top">
-                        <p className="text-xs">
+                        <div className="text-xs space-y-1">
+                          {holding.latestDividendFiscalYear && (
+                            <div className="font-semibold text-primary pb-0.5 border-b border-border/50">
+                              FY {holding.latestDividendFiscalYear} Dividend
+                            </div>
+                          )}
                           {holding.latestDividendPercent && holding.latestDividendPercent > 0 && (
-                            <>
+                            <div>
                               <strong>Cash: {holding.latestDividendPercent}%</strong><br />
-                              Estimated income: Rs. {holding.dividendIncome?.toLocaleString("en-NP") || 0}<br />
-                            </>
+                              Estimated income: Rs. {holding.dividendIncome?.toLocaleString("en-NP") || 0}
+                            </div>
                           )}
                           {holding.latestBonusRatio && (
-                            <>
+                            <div>
                               <strong>Bonus: {holding.latestBonusRatio}</strong><br />
                               Bonus shares: {holding.bonusShares || 0}<br />
                               Value: Rs. {holding.bonusShareValue?.toLocaleString("en-NP") || 0}
-                            </>
+                            </div>
                           )}
-                        </p>
+                        </div>
                       </TooltipContent>
                     </Tooltip>
                   ) : (

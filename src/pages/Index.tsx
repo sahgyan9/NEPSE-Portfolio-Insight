@@ -37,7 +37,9 @@ const Index = () => {
     lastUpdated,
     refetch,
     isDbConnected,
-    isEmpty
+    isEmpty,
+    dividendFiscalYear,
+    setDividendFiscalYear,
   } = usePortfolioAnalytics();
 
   const handleRefresh = async () => {
@@ -148,12 +150,16 @@ const Index = () => {
 
         {/* Summary Cards */}
         <section id="summary">
-          <PortfolioSummaryCards summary={summary} />
+          <PortfolioSummaryCards summary={summary} dividendFiscalYear={dividendFiscalYear} />
         </section>
 
         {/* Holdings Table */}
         <section id="holdings">
-          <HoldingsTable holdings={holdings} />
+          <HoldingsTable
+            holdings={holdings}
+            dividendFiscalYear={dividendFiscalYear}
+            onDividendFiscalYearChange={setDividendFiscalYear}
+          />
         </section>
 
         {/* Watchlist Table */}

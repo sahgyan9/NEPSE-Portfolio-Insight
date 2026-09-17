@@ -20,6 +20,8 @@ export interface StockHolding {
   latestDividendPercent?: number | null;
   dividendIncome?: number;  // Calculated cash dividend income in Rs.
   totalDividendReceived?: number;  // Cumulative dividends received
+  latestDividendFiscalYear?: string | null;  // e.g. "082-083" or "081-082"
+  latestDividendSource?: 'auto' | 'manual' | 'manual-override' | null;
   // Bonus share tracking
   latestBonusRatio?: string | null;  // e.g., "1:1", "7:1"
   bonusShares?: number;  // Number of bonus shares to receive

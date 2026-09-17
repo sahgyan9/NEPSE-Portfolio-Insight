@@ -26,6 +26,19 @@ export interface ReceivedDividend {
     manualCashIncome: number | null;
 }
 
+export interface DividendTrendPoint {
+    fiscalYear: string;
+    bonusPercent: number;
+    cashPercent: number;
+    totalPercent: number;
+    heldQty: number;
+    receivedBonus: number;
+    receivedCash: number;
+    isCurrentFy: boolean;
+    bookClosureDateAD?: string;
+    bookClosureDateBS?: string;
+}
+
 export interface CompanyDividend {
     symbol: string;
     companyName: string;
@@ -41,6 +54,7 @@ export interface CompanyDividend {
     source: 'auto' | 'manual' | 'manual-override';
     received: ReceivedDividend;
     shareTimeline: SharePoint[];
+    dividendTrend?: DividendTrendPoint[];
 }
 
 export interface PortfolioDividendsResponse {
@@ -57,7 +71,9 @@ export interface PortfolioDividendsResponse {
     companies: CompanyDividend[];
 }
 
-export async function fetchPortfolioDividends(fy: string): Promise<PortfolioDividendsResponse> {
+export const DEFAULT_DIVIDEND_FY = '082-083';
+
+export async function fetchPortfolioDividends(fy: string = DEFAULT_DIVIDEND_FY): Promise<PortfolioDividendsResponse> {
     const response = await fetch(`${API_BASE}/dividends/portfolio?fy=${encodeURIComponent(fy)}`, {
         signal: AbortSignal.timeout(15000),
     });

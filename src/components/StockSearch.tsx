@@ -127,7 +127,7 @@ export const StockSearch = () => {
                                 </Button>
                             )}
                         </div>
-                        <Button onClick={handleSearch} disabled={isLoading}>
+                        <Button onClick={() => handleSearch()} disabled={isLoading}>
                             {isLoading ? (
                                 <Loader2 className="h-4 w-4 animate-spin" />
                             ) : (

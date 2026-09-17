@@ -5,6 +5,7 @@ import { DynamicGradientBorder } from "./DynamicGradientBorder";
 
 interface PortfolioSummaryCardsProps {
   summary: PortfolioSummary;
+  dividendFiscalYear?: string;
 }
 
 const StatCard = ({
@@ -102,7 +103,7 @@ const StatCard = ({
   );
 };
 
-export const PortfolioSummaryCards = ({ summary }: PortfolioSummaryCardsProps) => {
+export const PortfolioSummaryCards = ({ summary, dividendFiscalYear }: PortfolioSummaryCardsProps) => {
   const formatCurrency = (value: number) => {
     return `Rs. ${value.toLocaleString("en-NP", { maximumFractionDigits: 0 })}`;
   };
@@ -157,7 +158,7 @@ export const PortfolioSummaryCards = ({ summary }: PortfolioSummaryCardsProps) =
           <StatCard
             title="Total Dividend Value"
             value={formatCurrency(totalDividendValue)}
-            subtitle="Cash dividends received"
+            subtitle={dividendFiscalYear ? `Cash dividends received (FY ${dividendFiscalYear})` : "Cash dividends received"}
             icon={Gift}
             trend="up"
             delay={250}

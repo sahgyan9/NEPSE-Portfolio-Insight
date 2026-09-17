@@ -51,10 +51,10 @@ export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
 
     const getConfidenceLabel = (confidence: string) => {
         switch (confidence) {
-            case 'high': return '🟢 High';
-            case 'medium': return '🟡 Medium';
-            case 'low': return '🟠 Low';
-            default: return '⚪ Unknown';
+            case 'high': return 'High';
+            case 'medium': return 'Medium';
+            case 'low': return 'Low';
+            default: return 'Unknown';
         }
     };
 
