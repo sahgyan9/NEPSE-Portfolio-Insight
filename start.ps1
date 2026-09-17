@@ -81,22 +81,22 @@ if ($ready) {
 Write-Host ""
 
 # 6. Launch Vite dev server in a new background window
-Write-Host "Launching Vite dev server (port 5173)..." -ForegroundColor Cyan
+Write-Host "Launching Vite dev server (port 5175)..." -ForegroundColor Cyan
 Start-Process -FilePath "cmd.exe" -ArgumentList "/c cd /d `"$scriptDir`" && npm run dev" -WindowStyle Minimized
 
-# 7. Poll http://localhost:5173 until Vite is ready (max 45 seconds)
+# 7. Poll http://localhost:5175 until Vite is ready (max 45 seconds)
 Write-Host "Waiting for Vite to be ready..." -ForegroundColor DarkGray
 $viteReady = $false
 for ($j = 0; $j -lt 30; $j++) {
     try {
-        $response = Invoke-WebRequest -Uri "http://localhost:5173" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
+        $response = Invoke-WebRequest -Uri "http://localhost:5175" -UseBasicParsing -TimeoutSec 2 -ErrorAction Stop
         if ($response.StatusCode -ge 100) { $viteReady = $true; break }
     } catch { }
     Start-Sleep -Milliseconds 1500
 }
 
 # 8. Open the app in Chrome (fallback to default browser)
-$appUrl = "http://localhost:5173"
+$appUrl = "http://localhost:5175"
 $chromePaths = @(
     "$env:ProgramFiles\Google\Chrome\Application\chrome.exe",
     "$env:ProgramFiles(x86)\Google\Chrome\Application\chrome.exe",

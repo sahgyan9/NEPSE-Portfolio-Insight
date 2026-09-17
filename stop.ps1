@@ -15,12 +15,12 @@ if (Test-Path $pidsFile) {
         if ($pidsContent) {
             $pidList = $pidsContent.Split(",")
             foreach ($pStr in $pidList) {
-                $pId = 0
-                if ([int]::TryParse($pStr.Trim(), [ref]$pId)) {
-                    $proc = Get-Process -Id $pId -ErrorAction SilentlyContinue
+                $targetPid = 0
+                if ([int]::TryParse($pStr.Trim(), [ref]$targetPid)) {
+                    $proc = Get-Process -Id $targetPid -ErrorAction SilentlyContinue
                     if ($proc) {
-                        Stop-Process -Id $pId -Force -ErrorAction SilentlyContinue
-                        Write-Host "Killed tracked process $($pId): $($proc.Name)" -ForegroundColor Gray
+                        Stop-Process -Id $targetPid -Force -ErrorAction SilentlyContinue
+                        Write-Host "Killed tracked process $($targetPid): $($proc.Name)" -ForegroundColor Gray
                         $killedCount++
                     }
                 }
@@ -45,6 +45,21 @@ foreach ($proc in $pythonProcesses) {
             $killedCount++
         }
     }
+}
+
+# 3. Terminate any processes holding target ports (5001, 8000, 5175)
+foreach ($port in @(5001, 8000, 5175)) {
+    try {
+        $conns = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue | Where-Object { $_.OwningProcess -gt 4 }
+        foreach ($conn in $conns) {
+            $p = Get-Process -Id $conn.OwningProcess -ErrorAction SilentlyContinue
+            if ($p) {
+                Stop-Process -Id $conn.OwningProcess -Force -ErrorAction SilentlyContinue
+                Write-Host "Killed process holding port $port (PID $($conn.OwningProcess): $($p.Name))" -ForegroundColor Gray
+                $killedCount++
+            }
+        }
+    } catch {}
 }
 
 if ($killedCount -gt 0) {

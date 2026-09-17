@@ -18,7 +18,7 @@ WScript.Sleep 2500
 WshShell.Run "cmd /c cd /d """ & scriptDir & """ && npm run dev", 1, False
 
 ' ---------------------------------------------------------------
-' Poll http://localhost:5173 until Vite is ready (max 45 seconds)
+' Poll http://localhost:5175 until Vite is ready (max 45 seconds)
 ' ---------------------------------------------------------------
 Dim maxWait, waited, viteReady
 maxWait = 45000
@@ -35,7 +35,7 @@ Do While waited < maxWait And Not viteReady
         Set http = CreateObject("MSXML2.XMLHTTP.6.0")
     End If
     Err.Clear
-    http.Open "GET", "http://localhost:5173", False
+    http.Open "GET", "http://localhost:5175", False
     http.setTimeouts 1000, 1000, 1000, 1000
     http.Send
     If Err.Number = 0 And http.Status >= 100 Then
@@ -46,4 +46,4 @@ Do While waited < maxWait And Not viteReady
 Loop
 
 ' Open browser once Vite is ready (or after timeout)
-WshShell.Run "http://localhost:5173", 1, False
+WshShell.Run "http://localhost:5175", 1, False
