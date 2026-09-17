@@ -23,14 +23,27 @@ Keep `db/dividend_data.json` current with dividend/bonus announcements for all p
 - `--fy 081-082` → prints a summary for that fiscal year after fetching.
 - Merges into `db/dividend_data.json`: dedupes per symbol by fiscal year, updates in place, preserves any `notes` field, retains existing BS closure dates if missing from HamroShare, sorts newest first. Safe to re-run (idempotent).
 
-## Server Integration
-- `POST /api/dividends/refresh` (nepse_server.py) runs this tool via subprocess.
-- `GET /api/dividends/portfolio?fy=081-082` returns merged per-holding view with computed bonus shares, cash income (gross/net of 5% tax), and share-count timeline.
-- The Dividends page "Refresh Announcements" button calls these.
+## Server & Frontend Unified Architecture
+- `POST /api/dividends/refresh` (`nepse_server.py`) runs `tools/scrape_dividends.py` via subprocess.
+- `GET /api/dividends/portfolio?fy=<FY>` (`nepse_server.py`) is the **Single Source of Truth** for all dividend computations across the entire application:
+  - **Defaults to `082-083`** (current fiscal year distributions).
+  - Explicit fiscal years (e.g. `082-083`, `081-082`, `080-081`, `079-080`) filter to announcements matching that profit year.
+  - `fy=latest` dynamically identifies the newest declared dividend across all fiscal years per stock.
+  - Automatically incorporates active manual overrides from `db/manual_dividends.json` while skipping parked entries (`disabled: true`).
+  - Computes `calc_qty`, `shares_held_at` eligibility, `cashGross`, `cashNet` (5% tax), `bonusShares`, `bonusTaxDue`, and `dividendTrend`.
+- **Frontend Service:** `src/services/receivedDividendsApi.ts` exports `fetchPortfolioDividends(fy = DEFAULT_DIVIDEND_FY)`.
+- **Home Page Integration:**
+  - `src/hooks/useLivePortfolio.ts` fetches from `fetchPortfolioDividends(dividendFiscalYear)` and directly maps `CompanyDividend` into `StockHolding`.
+  - `src/components/HoldingsTable.tsx` displays the active fiscal year in the column header (e.g., `Dividend (082-083)`), provides a segmented toggle group (`082-083 (Current)` | `081-082` | dropdown), and displays clean `-` for holdings with no announcements in the selected year.
+  - `PortfolioSummaryCards` and `DividendTracker` derive total cash dividend income and net growth directly from this unified feed.
+- **Dividends Page Integration:**
+  - `src/pages/DividendsPage.tsx` uses the same `fetchPortfolioDividends(fiscalYear)` service to populate the detailed breakdown, status tags, and historical sparklines.
 
 ## Conventions & Edge Cases
-- Fiscal year normalized to `NNN-NNN` (e.g. `2082/2083` or `FY 2082/83` → `082-083`) to match `manual_dividends.json`.
-- Dual-source resilience: in `auto` mode, HamroShare runs first; symbols missing from HamroShare are queried via NepaliPaisa with 0.6s polite delay.
-- Non-destructive merging: existing user `notes` and previously fetched `bookClosureDateBS` dates are never overwritten.
-- Mutual funds (paid-up Rs 10) often have no corporate dividend entries — logged and gracefully skipped.
-- Manual entries in `manual_dividends.json` override auto data for the same symbol + fiscal year (user corrections always win).
+- **Fiscal Year Scoping:** Never default portfolio overview displays to an unconstrained all-time `latest`. Older payouts (e.g., 3-4 years ago) will mislead users into thinking they represent current-year dividend income. Default to the current/recent active distribution year (`082-083`), label the column header explicitly (`Dividend (082-083)`), and provide a period switcher.
+- **Date Sanitization:** Always sanitize raw announcement dates into standard `YYYY-MM-DD` ISO format, stripping any scraper metadata or status suffixes like `[Closed]`.
+- **Fiscal year normalization:** Normalized to `NNN-NNN` (e.g. `2082/2083` or `FY 2082/83` → `082-083`) to match `manual_dividends.json`.
+- **Dual-source resilience:** In `auto` mode, HamroShare runs first; symbols missing from HamroShare are queried via NepaliPaisa with 0.6s polite delay.
+- **Non-destructive merging:** Existing user `notes` and previously fetched `bookClosureDateBS` dates are never overwritten in `db/dividend_data.json`.
+- **Mutual funds (paid-up Rs 10):** Often have no corporate dividend entries or declare unit cash dividends — handled gracefully with explicit unit face values.
+- **Manual override hierarchy:** Active entries in `manual_dividends.json` override auto data for the same symbol + fiscal year (user corrections always win), while entries marked `disabled: true` are bypassed so automated scraping takes over.

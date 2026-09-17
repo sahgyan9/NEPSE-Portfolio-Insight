@@ -132,16 +132,25 @@ def fetch_hamroshare_bulk(client: httpx.Client):
                 company_names[sym] = cname
 
             fy = normalize_fy(row.get("year") or label)
+            bc_raw = (row.get("bookclose_date") or "").strip()
+            bc_clean = re.sub(r"\s*\[.*?\]", "", bc_raw).strip()
+            dist_raw = (row.get("distribution_date") or "").strip()
+            dist_clean = re.sub(r"\s*\[.*?\]", "", dist_raw).strip()
+            ann_raw = (row.get("announcement_date") or "").strip()
+            ann_clean = re.sub(r"\s*\[.*?\]", "", ann_raw).strip()
+            bl_raw = (row.get("bonus_listing_date") or "").strip()
+            bl_clean = re.sub(r"\s*\[.*?\]", "", bl_raw).strip()
+
             div_item = {
                 "fiscalYear": fy,
                 "bonusPercent": to_float(row.get("bonus_share")),
                 "cashPercent": to_float(row.get("cash_dividend")),
                 "totalPercent": to_float(row.get("total_dividend")),
-                "bookClosureDateAD": (row.get("bookclose_date") or "").strip(),
+                "bookClosureDateAD": bc_clean,
                 "bookClosureDateBS": "",
-                "distributionDateAD": (row.get("distribution_date") or "").strip(),
-                "announcementDateAD": (row.get("announcement_date") or "").strip(),
-                "bonusListingDateAD": (row.get("bonus_listing_date") or "").strip(),
+                "distributionDateAD": dist_clean,
+                "announcementDateAD": ann_clean,
+                "bonusListingDateAD": bl_clean,
                 "closePrice": to_float(row.get("close")) if row.get("close") else None,
                 "status": str(row.get("status", "")).strip(),
                 "source": "hamroshare",
