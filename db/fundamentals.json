@@ -99,7 +99,16 @@
     "bookValue": 0.0,
     "peRatio": 0.0,
     "pbRatio": 0.0,
-    "sector": "Mutual Fund"
+    "sector": "Mutual Fund",
+    "nav": 10.14,
+    "navDate": "17/09/2026",
+    "navChange": 0.03,
+    "navChangePct": 0.3,
+    "lastTradeDate": "17/09/2026",
+    "last_traded_price": 10.14,
+    "capturedAt": "2026-09-18T18:42:04.140123",
+    "fundSize": "NPR11289213669",
+    "sharesOutstanding": "1128921367"
   },
   "CHCL": {
     "eps": 6.63,
