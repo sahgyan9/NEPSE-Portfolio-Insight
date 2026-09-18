@@ -370,6 +370,7 @@ export interface PortfolioHealthResponse {
     strengths: string[];
     warnings: string[];
     recommendations: string[];
+    textSummary?: string;
     calculatedAt: string;
 }
 
