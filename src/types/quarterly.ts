@@ -38,6 +38,7 @@ export interface QuarterlyComputed {
   fixed_asset_turnover?: number | null;
   investment_yield?: number | null;
   combined_ratio?: number | null;
+  gross_margin?: number | null;
 }
 
 export interface QuarterlyYoY {
@@ -61,6 +62,7 @@ export interface QuarterRecord {
   parsed_at: string;
   pdf_filename: string;
   raw: QuarterlyRaw;
+  raw_keys_order?: string[];
   computed: QuarterlyComputed;
   yoy: QuarterlyYoY;
 }

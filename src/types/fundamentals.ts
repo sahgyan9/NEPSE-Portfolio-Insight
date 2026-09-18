@@ -195,6 +195,7 @@ export interface PortfolioHealth {
     strengths: string[];
     warnings: string[];
     recommendations: string[];
+    textSummary?: string;
 }
 
 // ============================================================
