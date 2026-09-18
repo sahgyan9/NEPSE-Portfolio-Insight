@@ -208,6 +208,10 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
     const [isDbConnected, setIsDbConnected] = useState(false);
     const [dividendDataLoaded, setDividendDataLoaded] = useState(false);
     const [isEmpty, setIsEmpty] = useState(false);
+    // All-time accumulated cash dividends across every FY — used only for the
+    // summary card total; kept separate from the per-FY per-company table data.
+    const [allTimeDividendCashNet, setAllTimeDividendCashNet] = useState<number>(0);
+
 
     /**
      * Build holdings array from raw data + API response + dividend data
@@ -280,7 +284,15 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
                 ? `${dividendInfo.bonusPercent}%`
                 : null;
             const bonusShares = dividendInfo?.received?.bonusShares ?? 0;
-            const bonusShareValue = bonusShares * currentPrice;
+            const bonusPercent = dividendInfo?.bonusPercent ?? null;
+            const effectivePrice = currentPrice > 0
+                ? currentPrice
+                : (item.waccRate > 0 ? item.waccRate : (dividendInfo?.paidUpValue || 100));
+            const bonusShareValue = bonusShares > 0
+                ? bonusShares * effectivePrice
+                : ((bonusPercent && bonusPercent > 0) ? (item.quantity * (bonusPercent / 100) * effectivePrice) : 0);
+            const totalDividendValue = dividendIncome + bonusShareValue;
+            const totalDividendPercent = dividendInfo?.totalPercent ?? ((latestDividendPercent || 0) + (bonusPercent || 0));
             const latestDividendFiscalYear = dividendInfo?.fiscalYear ?? null;
             const latestDividendSource = dividendInfo?.source ?? null;
 
@@ -315,6 +327,9 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
                 latestBonusRatio,
                 bonusShares,
                 bonusShareValue,
+                bonusPercent,
+                totalDividendPercent,
+                totalDividendValue,
                 latestDividendFiscalYear,
                 latestDividendSource,
                 grahamNumber: fundamentals?.graham_number || null,
@@ -394,11 +409,30 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
             // back to these instead of stale static prices / zero.
             saveLastKnownPrices(stockData);
 
-            // Fetch unified portfolio dividends from backend
+            // Fetch unified portfolio dividends from backend.
+            // Two parallel requests:
+            //   1. Per selected FY → drives the per-company holdings table column
+            //   2. fy='all'        → drives the Home page summary card (all-time accumulated cash)
             let portfolioDividends: PortfolioDividendsResponse | null = null;
             try {
-                portfolioDividends = await fetchPortfolioDividends(dividendFiscalYear);
-                console.log(`[useLivePortfolio] Loaded unified dividends for FY ${dividendFiscalYear}:`, portfolioDividends?.companies?.length ?? 0, 'companies');
+                const [perFyData, allTimeData] = await Promise.allSettled([
+                    fetchPortfolioDividends(dividendFiscalYear),
+                    fetchPortfolioDividends('all'),
+                ]);
+
+                if (perFyData.status === 'fulfilled') {
+                    portfolioDividends = perFyData.value;
+                    console.log(`[useLivePortfolio] Loaded unified dividends for FY ${dividendFiscalYear}:`, portfolioDividends?.companies?.length ?? 0, 'companies');
+                } else {
+                    console.error('[useLivePortfolio] Failed to fetch portfolio dividends', perFyData.reason);
+                }
+
+                if (allTimeData.status === 'fulfilled') {
+                    setAllTimeDividendCashNet(allTimeData.value.totals.cashNet ?? 0);
+                    console.log(`[useLivePortfolio] All-time accumulated cash net: ${allTimeData.value.totals.cashNet}`);
+                } else {
+                    console.error('[useLivePortfolio] Failed to fetch all-time dividends', allTimeData.reason);
+                }
             } catch (e) {
                 console.error('[useLivePortfolio] Failed to fetch portfolio dividends', e);
             }
@@ -450,10 +484,13 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
     const totalInvested = holdings.reduce((sum, h) => sum + h.totalCost, 0);
     const currentValue = holdings.reduce((sum, h) => sum + h.currentValue, 0);
     const totalGainLoss = holdings.reduce((sum, h) => sum + h.gainLoss, 0);
-    const totalDividendIncome = holdings.reduce((sum, h) => sum + (h.dividendIncome || 0), 0);
     const totalBonusValue = holdings.reduce((sum, h) => sum + (h.bonusShareValue || 0), 0);
-    // Net Growth = Capital Gain + Cash Dividends only (bonus shares already reflected in portfolio value)
-    const netGrowth = totalGainLoss + totalDividendIncome;
+    // Summary card uses all-time accumulated cash net (across all FYs), not just the
+    // currently-selected FY. This gives a true lifetime income figure.
+    // Net Growth = Capital Gain + All-Time Cash Dividends received.
+    // Bonus shares are already reflected in Current Value / Capital Gain, so they are
+    // intentionally excluded to avoid double-counting.
+    const netGrowth = totalGainLoss + allTimeDividendCashNet;
 
     const summary: PortfolioSummary = {
         totalInvested,
@@ -465,14 +502,15 @@ export const useLivePortfolio = (initialFiscalYear: string = DEFAULT_DIVIDEND_FY
         totalHoldings: holdings.length,
         profitableHoldings: holdings.filter(h => h.gainLoss > 0).length,
         unprofitableHoldings: holdings.filter(h => h.gainLoss < 0).length,
-        // Dividend and bonus tracking
-        totalDividendIncome,
+        // All-time accumulated cash dividends across every FY with payouts
+        totalDividendIncome: allTimeDividendCashNet,
         totalBonusValue,
         netGrowth,
         netGrowthPercent: holdings.length > 0 && totalInvested > 0
             ? (netGrowth / totalInvested) * 100
             : 0,
     };
+
 
     // Fetch data on mount
     useEffect(() => {
