@@ -150,7 +150,7 @@ const Index = () => {
 
         {/* Summary Cards */}
         <section id="summary">
-          <PortfolioSummaryCards summary={summary} dividendFiscalYear={dividendFiscalYear} />
+          <PortfolioSummaryCards summary={summary} />
         </section>
 
         {/* Holdings Table */}

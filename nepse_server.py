@@ -1240,9 +1240,60 @@ def compute_portfolio_dividends(fy=DEFAULT_DIVIDEND_FY):
     """For each holding: merge auto-scraped + manual dividend data for the given
     profit fiscal year (or 'latest' for the newest declared dividend across all years),
     compute received bonus shares & cash (gross/net), and a share-count timeline for
-    the receiving year (compounding sparkline)."""
+    the receiving year (compounding sparkline).
+
+    Special fy values:
+      'all' / 'cumulative' / 'lifetime' — returns accumulated totals across every
+      fiscal year that has dividend data (no per-company breakdown in companies[]).
+    """
     if not fy or str(fy).lower() in ("recent", "current"):
         fy = DEFAULT_DIVIDEND_FY
+
+    if str(fy).lower() in ("all", "cumulative", "lifetime"):
+        # Accumulate cash dividends across every fiscal year in the database.
+        # Used by the Home page summary card to show all-time accumulated income.
+        dividend_db = _load_json_file(DIVIDEND_DATA_PATH, {})
+        manual_db = load_dividends_db()
+
+        all_fys: set = set()
+        for _sym, data in dividend_db.items():
+            for d in data.get("dividends", []):
+                if d.get("fiscalYear"):
+                    all_fys.add(d["fiscalYear"])
+        for e in manual_db.get("entries", []):
+            if not e.get("disabled") and e.get("fiscalYear"):
+                all_fys.add(e["fiscalYear"])
+
+        agg = {
+            "cashGross": 0.0,
+            "cashNet": 0.0,
+            "bonusShares": 0,
+            "bonusTaxDue": 0.0,
+            "companiesPaying": 0,
+            "fyCount": 0,
+        }
+        for single_fy in all_fys:
+            res = compute_portfolio_dividends(single_fy)
+            t = res["totals"]
+            if t["companiesPaying"] > 0:
+                agg["cashGross"] += t["cashGross"]
+                agg["cashNet"] += t["cashNet"]
+                agg["bonusShares"] += t["bonusShares"]
+                agg["bonusTaxDue"] += t["bonusTaxDue"]
+                # companiesPaying is not strictly additive across FYs (same
+                # company pays in multiple years), so track FY count instead.
+                agg["fyCount"] += 1
+
+        for k in ("cashGross", "cashNet", "bonusTaxDue"):
+            agg[k] = round(agg[k], 2)
+
+        return {
+            "fiscalYear": "all",
+            "receiveWindow": {"start": "", "end": ""},
+            "taxRate": DIVIDEND_TAX_RATE,
+            "totals": agg,
+            "companies": [],  # per-company breakdown not returned for 'all' mode
+        }
 
     # Assumption (documented in UI): portfolio.json quantity is the pre-bonus
     # quantity; announced bonus shares are shown as additions on top of it.
