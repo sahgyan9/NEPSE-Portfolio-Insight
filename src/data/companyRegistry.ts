@@ -50,7 +50,7 @@ export const companyRegistry: Record<string, CompanyRegistryEntry> = {
     KDBY: { fullName: "Kumari Dhanabriddhi Yojana", sector: "Mutual Fund" },
     MMF1: { fullName: "Mahila Sambriddhi Kosh", sector: "Mutual Fund" },
     NBF3: { fullName: "Nabil Balanced Fund 3", sector: "Mutual Fund" },
-    NIBLSF: { fullName: "NIBL Samriddhi Fund", sector: "Mutual Fund" },
+    NIBLSF: { fullName: "NIBL Sahabhagita Fund", sector: "Mutual Fund" },
     NMBSBFE: { fullName: "NMB Saral Bachat Fund - E", sector: "Mutual Fund" },
 };
 
@@ -78,7 +78,7 @@ Object.entries(dbFundamentals).forEach(([symbol, data]: [string, any]) => {
 export const fallbackPrices: Record<string, number> = {
     BHL: 182.3, CBBL: 1037.7, CHCL: 505.5, CLI: 496.0, CSBY: 10.0,
     GCIL: 454.3, HBL: 198.9, HDL: 1210.0, HRL: 870.0, KDBY: 9.3,
-    MMF1: 8.5, NABIL: 514.9, NBF3: 9.0, NIBLSF: 10.5, NICA: 334.9,
+    MMF1: 8.5, NABIL: 514.9, NBF3: 9.0, NIBLSF: 10.14, NICA: 334.9,
     NIMB: 202.0, NMBSBFE: 10.42, NTC: 866.0, SAHAS: 565.5, SARBTM: 913.9,
     SGHC: 434.0, SNLI: 514.8, SONA: 437.0, UPPER: 183.0,
 };
