@@ -26,6 +26,9 @@ export interface StockHolding {
   latestBonusRatio?: string | null;  // e.g., "1:1", "7:1"
   bonusShares?: number;  // Number of bonus shares to receive
   bonusShareValue?: number;  // Value of bonus shares at current price
+  bonusPercent?: number | null;  // Bonus share percentage (e.g. 10.0)
+  totalDividendPercent?: number | null;  // Combined bonus % + cash %
+  totalDividendValue?: number;  // Total dividend monetary value (Cash Rs + Bonus share value)
   // Derived metrics
   grahamNumber?: number | null;
   earningsYield?: number | null;

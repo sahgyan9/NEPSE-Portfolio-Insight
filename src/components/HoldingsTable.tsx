@@ -24,7 +24,7 @@ interface EnhancedHolding extends StockHolding {
   isLoading?: boolean;
 }
 
-type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio";
+type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio" | "totalDividendValue";
 type SortOrder = "asc" | "desc";
 
 export const HoldingsTable = ({
@@ -90,22 +90,81 @@ export const HoldingsTable = ({
     }
   };
 
-  // Filter holdings based on search query
+  // Filter holdings based on search query (including dividend keywords)
   const filteredHoldings = useMemo(() => {
     if (!searchQuery.trim()) return enhancedHoldings;
 
     const query = searchQuery.toLowerCase().trim();
-    return enhancedHoldings.filter(holding =>
-      holding.scrip.toLowerCase().includes(query) ||
-      holding.fullName.toLowerCase().includes(query) ||
-      holding.sector.toLowerCase().includes(query)
-    );
+    return enhancedHoldings.filter(holding => {
+      const matchesText =
+        holding.scrip.toLowerCase().includes(query) ||
+        holding.fullName.toLowerCase().includes(query) ||
+        holding.sector.toLowerCase().includes(query);
+      if (matchesText) return true;
+
+      // Allow quick filtering by dividend keywords
+      if (query === "dividend" || query === "dividends") {
+        return (
+          (holding.dividendIncome && holding.dividendIncome > 0) ||
+          (holding.bonusShareValue && holding.bonusShareValue > 0) ||
+          (holding.latestDividendPercent && holding.latestDividendPercent > 0) ||
+          !!holding.latestBonusRatio ||
+          (holding.totalDividendValue && holding.totalDividendValue > 0)
+        );
+      }
+      if (query === "bonus") {
+        return (
+          (holding.bonusShares && holding.bonusShares > 0) ||
+          (holding.bonusShareValue && holding.bonusShareValue > 0) ||
+          !!holding.latestBonusRatio
+        );
+      }
+      if (query === "cash" || query === "cash dividend") {
+        return (
+          (holding.dividendIncome && holding.dividendIncome > 0) ||
+          (holding.latestDividendPercent && holding.latestDividendPercent > 0)
+        );
+      }
+
+      return false;
+    });
   }, [enhancedHoldings, searchQuery]);
 
   const sortedHoldings = useMemo(() => {
     return [...filteredHoldings].sort((a, b) => {
-      const aVal = (a as any)[sortKey] ?? 0;
-      const bVal = (b as any)[sortKey] ?? 0;
+      let aVal: any = (a as any)[sortKey] ?? 0;
+      let bVal: any = (b as any)[sortKey] ?? 0;
+
+      // Unified dividend sorting: evaluate both cash income and bonus share value
+      if (sortKey === "dividendIncome" || sortKey === "totalDividendValue") {
+        const getDividendScore = (h: EnhancedHolding): number => {
+          // 1. Total monetary value (cash income + bonus share value)
+          const val = h.totalDividendValue ?? ((h.dividendIncome || 0) + (h.bonusShareValue || 0));
+          if (val > 0) return val;
+
+          // 2. If monetary value is 0 (e.g. price missing or fractional share), evaluate via bonus shares / percentage
+          if (h.bonusShares && h.bonusShares > 0) {
+            const price = h.currentPrice > 0 ? h.currentPrice : (h.waccRate > 0 ? h.waccRate : 100);
+            return h.bonusShares * price;
+          }
+          if (h.totalDividendPercent && h.totalDividendPercent > 0) {
+            const price = h.currentPrice > 0 ? h.currentPrice : (h.waccRate > 0 ? h.waccRate : 100);
+            return (h.quantity * (h.totalDividendPercent / 100)) * price;
+          }
+          if (h.latestBonusRatio) {
+            const pct = parseFloat(h.latestBonusRatio.replace("%", "")) || 0;
+            if (pct > 0) {
+              const price = h.currentPrice > 0 ? h.currentPrice : (h.waccRate > 0 ? h.waccRate : 100);
+              return (h.quantity * (pct / 100)) * price;
+            }
+          }
+          return 0;
+        };
+
+        aVal = getDividendScore(a);
+        bVal = getDividendScore(b);
+      }
+
       if (typeof aVal === "string" && typeof bVal === "string") {
         return sortOrder === "asc" ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
       }
@@ -132,13 +191,25 @@ export const HoldingsTable = ({
     sector: "text-teal-500",
   };
 
-  const SortableHeader = ({ label, sortKeyName, colorClass }: { label: string; sortKeyName: SortKey; colorClass?: string }) => (
+  const SortableHeader = ({
+    label,
+    sortKeyName,
+    colorClass,
+    children,
+  }: {
+    label: string;
+    sortKeyName: SortKey;
+    colorClass?: string;
+    children?: React.ReactNode;
+  }) => (
     <button
+      type="button"
       onClick={() => handleSort(sortKeyName)}
       className={cn("flex items-center gap-1 hover:opacity-80 transition-colors font-semibold", colorClass)}
     >
       {label}
       <ArrowUpDown className="h-3 w-3" />
+      {children}
     </button>
   );
 
@@ -269,14 +340,13 @@ export const HoldingsTable = ({
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button className={cn("flex items-center gap-1 hover:opacity-80 transition-colors", columnColors.dividend)}>
-                      <SortableHeader
-                        label={dividendFiscalYear === "latest" ? "Dividend (Latest)" : `Dividend (${dividendFiscalYear})`}
-                        sortKeyName="dividendIncome"
-                        colorClass={columnColors.dividend}
-                      />
+                    <SortableHeader
+                      label={dividendFiscalYear === "latest" ? "Dividend (Latest)" : `Dividend (${dividendFiscalYear})`}
+                      sortKeyName="totalDividendValue"
+                      colorClass={columnColors.dividend}
+                    >
                       <Gift className="h-3 w-3" />
-                    </button>
+                    </SortableHeader>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-xs">
                     <p className="text-xs">
@@ -289,10 +359,9 @@ export const HoldingsTable = ({
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button className={cn("flex items-center gap-1 hover:opacity-80 transition-colors", columnColors.bookVal)}>
-                      <SortableHeader label="Book Val" sortKeyName="liveBookValue" colorClass={columnColors.bookVal} />
+                    <SortableHeader label="Book Val" sortKeyName="liveBookValue" colorClass={columnColors.bookVal}>
                       <Info className="h-3 w-3" />
-                    </button>
+                    </SortableHeader>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-xs">
                     <p className="text-xs">
@@ -306,10 +375,9 @@ export const HoldingsTable = ({
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button className={cn("flex items-center gap-1 hover:opacity-80 transition-colors", columnColors.pb)}>
-                      <SortableHeader label="P/B" sortKeyName="livePbRatio" colorClass={columnColors.pb} />
+                    <SortableHeader label="P/B" sortKeyName="livePbRatio" colorClass={columnColors.pb}>
                       <Info className="h-3 w-3" />
-                    </button>
+                    </SortableHeader>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-xs">
                     <p className="text-xs">
@@ -383,9 +451,18 @@ export const HoldingsTable = ({
                             </>
                           )}
                           {holding.latestBonusRatio && (
-                            <span className="font-mono font-medium text-xs text-emerald-400">
-                              Bonus: {holding.latestBonusRatio}
-                            </span>
+                            <>
+                              <span className="font-mono font-medium text-xs text-emerald-400">
+                                Bonus: {holding.latestBonusRatio}
+                              </span>
+                              {(!holding.latestDividendPercent || holding.latestDividendPercent === 0) && (
+                                <span className="font-mono text-xs text-muted-foreground">
+                                  {holding.bonusShares
+                                    ? `+${holding.bonusShares} sh (${formatCurrency(holding.bonusShareValue || 0)})`
+                                    : (holding.bonusShareValue ? formatCurrency(holding.bonusShareValue) : "")}
+                                </span>
+                              )}
+                            </>
                           )}
                         </div>
                       </TooltipTrigger>
@@ -407,6 +484,11 @@ export const HoldingsTable = ({
                               <strong>Bonus: {holding.latestBonusRatio}</strong><br />
                               Bonus shares: {holding.bonusShares || 0}<br />
                               Value: Rs. {holding.bonusShareValue?.toLocaleString("en-NP") || 0}
+                            </div>
+                          )}
+                          {(holding.totalDividendValue || 0) > 0 && (
+                            <div className="pt-1 border-t border-border/50 font-semibold text-foreground">
+                              Total Dividend Value: Rs. {(holding.totalDividendValue || ((holding.dividendIncome || 0) + (holding.bonusShareValue || 0))).toLocaleString("en-NP", { maximumFractionDigits: 0 })}
                             </div>
                           )}
                         </div>
