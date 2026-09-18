@@ -75,6 +75,23 @@ class TestNepseServer(unittest.TestCase):
         self.assertIn('rows', data)
         self.assertIn('count', data)
 
+    def test_nav_niblsf_endpoint(self):
+        response = self.client.get('/api/nav/NIBLSF')
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertEqual(data.get('symbol'), 'NIBLSF')
+        self.assertIsNotNone(data.get('nav'))
+        self.assertGreater(data.get('nav'), 0)
+
+    def test_niblsf_stock_endpoint(self):
+        response = self.client.get('/api/stock/NIBLSF')
+        self.assertEqual(response.status_code, 200)
+        data = json.loads(response.data)
+        self.assertEqual(data.get('symbol'), 'NIBLSF')
+        self.assertEqual(data.get('sector'), 'Mutual Fund')
+        self.assertIsNotNone(data.get('last_traded_price'))
+        self.assertGreater(data.get('last_traded_price'), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

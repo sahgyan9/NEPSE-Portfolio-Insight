@@ -31,6 +31,11 @@ import tempfile
 import traceback
 import subprocess
 
+# Add tools directory to sys.path
+tools_dir = os.path.join(os.path.dirname(__file__), "tools")
+if tools_dir not in sys.path:
+    sys.path.insert(0, tools_dir)
+
 # Quarterly PDF modules
 try:
     from pdf_parser import parse_pdf
@@ -318,11 +323,120 @@ class HamroShareMarketFetcher:
         return []
 
 
+# ============================================================================
+# Open-Ended Mutual Fund NAV Fetcher
+# ============================================================================
+
+OPEN_ENDED_MUTUAL_FUNDS = {"NIBLSF"}
+
+
+class OpenEndedFundFetcher:
+    """Fetches and caches daily NAV for open-ended mutual funds (e.g. NIBLSF)."""
+
+    def __init__(self):
+        self._cache = {}
+        self._cache_ttl = 900  # 15 minutes cache for daily NAV
+        self._db_path = os.path.join(os.path.dirname(__file__), "db", "fundamentals.json")
+
+    def _get_db_fallback(self, symbol: str) -> dict:
+        symbol = symbol.upper().strip()
+        try:
+            if os.path.exists(self._db_path):
+                with open(self._db_path, "r", encoding="utf-8-sig") as f:
+                    db = json.load(f)
+                    entry = db.get(symbol, {})
+                    if entry.get("nav"):
+                        nav_val = float(entry["nav"])
+                        chg = float(entry.get("navChange") or 0.0)
+                        return {
+                            "symbol": symbol,
+                            "name": "NIBL Sahabhagita Fund" if symbol == "NIBLSF" else symbol,
+                            "sector": "Mutual Fund",
+                            "nav": nav_val,
+                            "date": entry.get("navDate") or entry.get("lastTradeDate") or "17/09/2026",
+                            "change": chg,
+                            "change_pct": float(entry.get("navChangePct") or 0.0),
+                            "previous_close": round(nav_val - chg, 4),
+                            "source": "fundamentals_db",
+                            "captured_at": entry.get("capturedAt")
+                        }
+        except Exception as e:
+            print(f"[nepse_server] Error reading NAV DB fallback for {symbol}: {e}")
+
+        # Baseline fallback
+        return {
+            "symbol": symbol,
+            "name": "NIBL Sahabhagita Fund" if symbol == "NIBLSF" else symbol,
+            "sector": "Mutual Fund",
+            "nav": 10.14,
+            "date": "17/09/2026",
+            "change": 0.03,
+            "change_pct": 0.30,
+            "previous_close": 10.11,
+            "source": "static_fallback",
+            "captured_at": datetime.now().isoformat()
+        }
+
+    async def get_nav_data(self, symbol: str = "NIBLSF") -> dict:
+        sym = symbol.upper().strip()
+        if sym not in OPEN_ENDED_MUTUAL_FUNDS:
+            return None
+
+        now = time.time()
+        if sym in self._cache and (now - self._cache[sym].get("timestamp", 0)) < self._cache_ttl:
+            return self._cache[sym]["data"]
+
+        loop = asyncio.get_running_loop()
+        try:
+            from fetch_mutual_fund_nav import fetch_niblsf_nav, update_fundamentals_db
+            data = await asyncio.wait_for(loop.run_in_executor(None, fetch_niblsf_nav), timeout=3.0)
+            if data and data.get("nav") is not None:
+                self._cache[sym] = {"data": data, "timestamp": now}
+                try:
+                    update_fundamentals_db(data)
+                except Exception as e:
+                    print(f"[nepse_server] Failed to update fundamentals db for {sym}: {e}")
+                return data
+        except Exception as e:
+            print(f"[nepse_server] Open-ended NAV live fetch warning for {sym}: {e}")
+
+        if sym in self._cache:
+            return self._cache[sym]["data"]
+
+        fallback = self._get_db_fallback(sym)
+        self._cache[sym] = {"data": fallback, "timestamp": now}
+        return fallback
+
+    async def get_live_stock_entry(self, symbol: str = "NIBLSF") -> dict:
+        nav_info = await self.get_nav_data(symbol)
+        if not nav_info or nav_info.get("nav") is None:
+            return None
+        nav_val = float(nav_info["nav"])
+        chg = float(nav_info.get("change") or 0.0)
+        prev = float(nav_info.get("previous_close") or (nav_val - chg))
+        return {
+            "symbol": symbol,
+            "name": nav_info.get("name") or "NIBL Sahabhagita Fund",
+            "ltp": nav_val,
+            "change": chg,
+            "change_pct": float(nav_info.get("change_pct") or 0.0),
+            "high": nav_val,
+            "low": nav_val,
+            "open": prev,
+            "previous_close": prev,
+            "volume": 0,
+            "turnover": 0.0,
+            "updated_at": nav_info.get("date") or "",
+            "source": nav_info.get("source") or "nimbacecapital"
+        }
+
+
 class NepseDataFetcher:
     """Fetches live NEPSE data with dual-source fallback (HamroShare -> AsyncNepse)."""
     
     def __init__(self):
         self._hamro = HamroShareMarketFetcher()
+        self._open_ended = OpenEndedFundFetcher()
         self._nepse = AsyncNepse()
         self._nepse.setTLSVerification(False)
         self._cache = {}
@@ -546,11 +660,22 @@ class NepseDataFetcher:
             return {'source': 'error', 'error': err_msg}
 
     async def get_live_market(self):
-        """Get live market stock list (all 345 stocks) from HamroShare"""
+        """Get live market stock list (all 345 stocks) from HamroShare + open-ended mutual funds"""
+        stocks = {}
         hs_data = await self._hamro.get_market_data()
         if hs_data:
-            return hs_data.get('stocks', {})
-        return {}
+            stocks = dict(hs_data.get('stocks', {}) or {})
+
+        # Enrich with open-ended mutual funds (e.g., NIBLSF)
+        for fund_sym in OPEN_ENDED_MUTUAL_FUNDS:
+            try:
+                fund_stock = await self._open_ended.get_live_stock_entry(fund_sym)
+                if fund_stock:
+                    stocks[fund_sym] = fund_stock
+            except Exception as e:
+                print(f"[nepse_server] Failed to enrich {fund_sym} into live market: {e}")
+
+        return stocks
 
     async def get_all_securities(self):
         """Get all listed securities (950+) from HamroShare"""
@@ -790,9 +915,37 @@ class UnifiedFundamentalsFetcher:
     def __init__(self):
         self._hamro = HamroShareCompanyFetcher()
         self._merolagani = MerolaganiFetcher()
+        self._open_ended = OpenEndedFundFetcher()
 
     async def get_stock_fundamentals(self, symbol: str):
         symbol = symbol.strip().upper()
+
+        # 0. Check open-ended mutual funds (e.g. NIBLSF)
+        if symbol in OPEN_ENDED_MUTUAL_FUNDS:
+            try:
+                nav_data = await self._open_ended.get_nav_data(symbol)
+                if nav_data and nav_data.get('nav') is not None:
+                    nav = float(nav_data['nav'])
+                    chg = float(nav_data.get('change') or 0.0)
+                    return {
+                        'symbol': symbol,
+                        'company_name': nav_data.get('name', 'NIBL Sahabhagita Fund'),
+                        'sector': 'Mutual Fund',
+                        'last_traded_price': nav,
+                        'book_value': nav,
+                        'point_change': chg,
+                        'percentage_change': float(nav_data.get('change_pct') or 0.0),
+                        'nav': nav,
+                        'nav_date': nav_data.get('date'),
+                        'source': nav_data.get('source', 'nimbacecapital'),
+                        'timestamp': datetime.now().isoformat(),
+                        'eps': 0.0,
+                        'pe_ratio': 0.0,
+                        'pb_ratio': 1.0,
+                    }
+            except Exception as e:
+                print(f"[nepse_server] Open-ended fundamentals fetch warning for {symbol}: {e}")
+
         # 1. Primary: HamroShare (~250ms)
         try:
             hamro_data = await self._hamro.get_company_fundamentals(symbol)
@@ -806,6 +959,7 @@ class UnifiedFundamentalsFetcher:
 
 
 # Global instances
+open_ended_fetcher = OpenEndedFundFetcher()
 nepse_fetcher = NepseDataFetcher()
 merolagani_fetcher = UnifiedFundamentalsFetcher()
 
@@ -870,9 +1024,18 @@ def get_market_summary():
 
 @app.route('/api/stock/<symbol>')
 def get_stock(symbol: str):
-    """Get stock fundamentals from Merolagani"""
+    """Get stock fundamentals from Merolagani / HamroShare / OpenEnded"""
     data = run_async(merolagani_fetcher.get_stock_fundamentals(symbol))
     return jsonify(data)
+
+
+@app.route('/api/nav/<symbol>')
+def get_fund_nav(symbol: str):
+    """Get live NAV and fund metadata for open-ended mutual funds"""
+    data = run_async(open_ended_fetcher.get_nav_data(symbol.upper().strip()))
+    if data:
+        return jsonify(data)
+    return jsonify({'error': f'NAV data unavailable for {symbol}'}), 404
 
 
 @app.route('/api/live-market')
