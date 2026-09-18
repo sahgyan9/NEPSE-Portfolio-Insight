@@ -1,808 +1,2483 @@
 {
-  "generatedAt": "2026-09-17T19:09:58.706524",
-  "latestPeriod": "FY 2082-83 Q4",
+  "generatedAt": "2026-09-18T20:09:27.082787",
+  "latestPeriod": "Active (Multi-Factor Leaders)",
+  "algorithm": "Sector Leaders Multi-Factor v2 (QMJ / Piotroski / Bayesian Shrinkage)",
   "periods": {
-    "FY 2082-83 Q4": {
-      "Commercial Bank": [
-        {
-          "symbol": "NABIL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 11.36,
-          "eps": 27.74,
-          "epsGrowth": 5.31,
-          "epsConsistency": 50.0,
-          "profitGrowth": 5.31,
-          "revenueGrowth": -7.2,
-          "netMargin": 19.99,
-          "qualityModifier": 7.4,
-          "qualityDetail": "CAR: 12.4% (-0.1); NPL: 4.20% (-0.5); COF: 3.1% (+1.0); Avg Div: 16.9% (+6.7%)"
-        }
-      ],
-      "Manufacturing": [
-        {
-          "symbol": "SAPIL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 4.5,
-          "eps": 5.04,
-          "epsGrowth": 0.0,
-          "epsConsistency": 100.0,
-          "profitGrowth": 0.0,
-          "revenueGrowth": 0.0,
-          "netMargin": 8.15,
-          "qualityModifier": 11.3,
-          "qualityDetail": "ROA: 3.6% (+0.3); Avg Div: 10.0% (+4.0%)"
-        }
-      ]
-    },
-    "FY 2082-83 Q3": {
+    "Active (Multi-Factor Leaders)": {
       "Microfinance": [
         {
-          "symbol": "AVYAN",
-          "score": 85.9,
-          "baseScore": 75.0,
-          "roe": 39.26,
-          "eps": 53.13,
-          "epsGrowth": 162.62,
-          "epsConsistency": 75.0,
-          "profitGrowth": 162.62,
-          "revenueGrowth": 48.74,
-          "netMargin": 25.67,
-          "qualityModifier": 14.5,
-          "qualityDetail": "NPL: 5.14% (-0.0); COF: 6.3% (+1.0); CD Ratio: 110.3% (+1.0)"
-        },
-        {
-          "symbol": "JBLB",
-          "score": 25.4,
-          "baseScore": 25.0,
-          "roe": 24.33,
-          "eps": 57.77,
-          "epsGrowth": 184.41,
-          "epsConsistency": 100.0,
-          "profitGrowth": 184.41,
-          "revenueGrowth": 43.52,
-          "netMargin": 23.98,
-          "qualityModifier": 1.6,
-          "qualityDetail": "NPL: 4.80% (+0.1); COF: 7.6% (+0.8); CD Ratio: 127.2% (-0.6)"
-        }
-      ],
-      "Hydropower": [
-        {
-          "symbol": "MEN",
-          "score": 87.5,
-          "baseScore": 70.0,
-          "roe": 16.45,
-          "eps": 22.15,
-          "epsGrowth": 92.33,
-          "epsConsistency": 75.0,
-          "profitGrowth": 92.33,
-          "revenueGrowth": 41.38,
-          "netMargin": 47.08,
-          "qualityModifier": 25.0,
-          "qualityDetail": "D/E: 0.64 (+1.0); ROA: 9.4% (+1.0)"
-        },
-        {
-          "symbol": "SAHAS",
-          "score": 69.7,
-          "baseScore": 60.0,
-          "roe": 16.84,
-          "eps": 27.36,
-          "epsGrowth": 62.07,
-          "epsConsistency": 100.0,
-          "profitGrowth": 62.07,
-          "revenueGrowth": 10.51,
-          "netMargin": 44.06,
-          "qualityModifier": 16.2,
-          "qualityDetail": "D/E: 1.28 (+0.2); ROA: 6.9% (+0.6); Avg Div: 14.5% (+5.8%)"
-        },
-        {
-          "symbol": "BHL",
-          "score": 41.9,
-          "baseScore": 54.0,
-          "roe": 5.9,
-          "eps": 4.6,
-          "epsGrowth": 135.2,
-          "epsConsistency": 100.0,
-          "profitGrowth": 172.14,
-          "revenueGrowth": 40.23,
-          "netMargin": 15.14,
-          "qualityModifier": -22.5,
-          "qualityDetail": "D/E: 1.88 (-0.8); ROA: 1.9% (-1.0)"
-        }
-      ],
-      "unknown": [
-        {
           "symbol": "CBBL",
-          "score": 99.5,
-          "baseScore": 100.0,
+          "name": "Chhimek Laghubitta Bikas Bank Limited",
+          "sector": "Microfinance",
+          "score": 70.6,
+          "composite": 70.6,
+          "coverage": 1.0,
+          "rank": 1,
+          "period": "2082-83-Q3",
           "roe": 15.07,
+          "roa": 2.37,
           "eps": 34.99,
+          "bvps": 241.93,
+          "pe": 25.5,
+          "pb": 3.9,
           "epsGrowth": 4.55,
-          "epsConsistency": 75.0,
-          "profitGrowth": 4.55,
-          "revenueGrowth": 7.74,
+          "revGrowth": 7.74,
+          "profitGrowth": 0.0,
           "netMargin": 19.36,
-          "qualityModifier": -0.5,
-          "qualityDetail": "ROA: 2.4% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
+          "divYield": 2.66,
+          "pillars": {
+            "P": 55.4,
+            "G": 34.4,
+            "Y": 85.3,
+            "V": 60.2,
+            "S": 99.4
+          },
+          "checklist": {
+            "passed": 7,
+            "assessable": 9,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                false
+              ],
+              [
+                "Net margin improved YoY",
+                false
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                true
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 12879678.0,
+          "historyDepth": 8
         },
         {
-          "symbol": "SNLI",
-          "score": 0.0,
-          "baseScore": 0.0,
-          "roe": 7.2,
-          "eps": 10.48,
-          "epsGrowth": 2.03,
-          "epsConsistency": 75.0,
-          "profitGrowth": 2.03,
-          "revenueGrowth": 4.34,
-          "netMargin": 15.71,
-          "qualityModifier": 4.9,
-          "qualityDetail": "ROA: 2.9% (-0.0); Avg Div: 14.4% (+5.8%)"
+          "symbol": "JBLB",
+          "name": "Jeevan Bikas Laghubitta Bittiya Sanstha Limited",
+          "sector": "Microfinance",
+          "score": 66.0,
+          "composite": 66.0,
+          "coverage": 1.0,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 24.33,
+          "roa": 3.27,
+          "eps": 57.77,
+          "bvps": 255.24,
+          "pe": 24.2,
+          "pb": 5.3,
+          "epsGrowth": 184.41,
+          "revGrowth": 43.52,
+          "profitGrowth": 0.0,
+          "netMargin": 23.98,
+          "divYield": 1.1,
+          "pillars": {
+            "P": 81.2,
+            "G": 75.8,
+            "Y": 75.7,
+            "V": 52.1,
+            "S": 50.7
+          },
+          "checklist": {
+            "passed": 8,
+            "assessable": 9,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                false
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 4283228.0,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "MSLB",
+          "name": "Mahuli Samudayik Laghubitta Bittiya Sanstha Ltd.",
+          "sector": "Microfinance",
+          "score": 57.8,
+          "composite": 62.6,
+          "coverage": 0.62,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 25.11,
+          "roa": 4.06,
+          "eps": 50.78,
+          "bvps": 210.37,
+          "pe": 24.02,
+          "pb": 5.8,
+          "epsGrowth": 202.8,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 24.13,
+          "divYield": 0.41,
+          "pillars": {
+            "P": 86.8,
+            "G": 86.6,
+            "Y": 60.1,
+            "V": 56.2,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 1255610.0,
+          "historyDepth": 1
+        }
+      ],
+      "Commercial Bank": [
+        {
+          "symbol": "NABIL",
+          "name": "Nabil Bank Limited",
+          "sector": "Commercial Bank",
+          "score": 63.0,
+          "composite": 63.0,
+          "coverage": 1.0,
+          "rank": 1,
+          "period": "2082-83-Q4",
+          "roe": 11.36,
+          "roa": 1.08,
+          "eps": 27.74,
+          "bvps": 247.28,
+          "pe": 20.08,
+          "pb": 2.25,
+          "epsGrowth": 5.31,
+          "revGrowth": -7.2,
+          "profitGrowth": 0.0,
+          "netMargin": 19.99,
+          "divYield": 2.24,
+          "pillars": {
+            "P": 58.9,
+            "G": 53.3,
+            "Y": 57.6,
+            "V": 47.0,
+            "S": 86.4
+          },
+          "checklist": {
+            "passed": 6,
+            "assessable": 8,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                false
+              ],
+              [
+                "ROA improved YoY",
+                false
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                true
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 34237335.1,
+          "historyDepth": 9
+        },
+        {
+          "symbol": "PCBL",
+          "name": "Prime Commercial Bank Ltd.",
+          "sector": "Commercial Bank",
+          "score": 59.1,
+          "composite": 63.4,
+          "coverage": 0.67,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 14.28,
+          "roa": 1.55,
+          "eps": 23.31,
+          "bvps": 171.28,
+          "pe": 10.38,
+          "pb": 1.41,
+          "epsGrowth": 38.58,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 21.99,
+          "divYield": 3.31,
+          "pillars": {
+            "P": 81.9,
+            "G": 75.5,
+            "Y": 56.0,
+            "V": 68.7,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 34396244.8,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "KBL",
+          "name": "Kumari Bank Limited",
+          "sector": "Commercial Bank",
+          "score": 58.2,
+          "composite": 62.3,
+          "coverage": 0.67,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 15.66,
+          "roa": 1.34,
+          "eps": 22.91,
+          "bvps": 158.53,
+          "pe": 9.73,
+          "pb": 1.41,
+          "epsGrowth": 1361.76,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 19.97,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 79.9,
+            "G": 97.2,
+            "Y": 31.4,
+            "V": 68.5,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 57442320.0,
+          "historyDepth": 1
+        }
+      ],
+      "Hydropower": [
+        {
+          "symbol": "MEN",
+          "name": "Mountain Energy Nepal Limited",
+          "sector": "Hydropower",
+          "score": 76.4,
+          "composite": 76.4,
+          "coverage": 1.0,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 16.45,
+          "roa": 9.45,
+          "eps": 22.15,
+          "bvps": 142.24,
+          "pe": 28.5,
+          "pb": 4.2,
+          "epsGrowth": 92.33,
+          "revGrowth": 41.38,
+          "profitGrowth": 0.0,
+          "netMargin": 47.08,
+          "divYield": 3.52,
+          "pillars": {
+            "P": 91.2,
+            "G": 67.3,
+            "Y": 84.0,
+            "V": 57.0,
+            "S": 74.6
+          },
+          "checklist": {
+            "passed": 8,
+            "assessable": 9,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                true
+              ],
+              [
+                "No dilution beyond bonus",
+                false
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 15618326.0,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "SAHAS",
+          "name": "Sahas Urja Limited",
+          "sector": "Hydropower",
+          "score": 72.5,
+          "composite": 72.5,
+          "coverage": 1.0,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 16.84,
+          "roa": 6.89,
+          "eps": 27.36,
+          "bvps": 176.74,
+          "pe": 26.8,
+          "pb": 3.8,
+          "epsGrowth": 62.07,
+          "revGrowth": 10.51,
+          "profitGrowth": 0.0,
+          "netMargin": 44.06,
+          "divYield": 3.31,
+          "pillars": {
+            "P": 88.6,
+            "G": 61.9,
+            "Y": 72.9,
+            "V": 62.9,
+            "S": 67.4
+          },
+          "checklist": {
+            "passed": 8,
+            "assessable": 9,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                true
+              ],
+              [
+                "No dilution beyond bonus",
+                false
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 40219642.0,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "RADHI",
+          "name": "Radhi Bidyut Company Ltd",
+          "sector": "Hydropower",
+          "score": 68.4,
+          "composite": 73.7,
+          "coverage": 0.64,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 22.44,
+          "roa": 18.45,
+          "eps": 33.86,
+          "bvps": 176.26,
+          "pe": 21.97,
+          "pb": 4.22,
+          "epsGrowth": 299.43,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 98.99,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 98.2,
+            "G": 88.0,
+            "Y": 50.4,
+            "V": 60.5,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 22625163.0,
+          "historyDepth": 1
         }
       ],
       "Life Insurance": [
         {
           "symbol": "CLI",
-          "score": 91.4,
-          "baseScore": 100.0,
+          "name": "Citizen Life Insurance Company Limited",
+          "sector": "Life Insurance",
+          "score": 64.5,
+          "composite": 66.5,
+          "coverage": 0.85,
+          "rank": 1,
+          "period": "2082-83-Q3",
           "roe": 6.09,
+          "roa": 1.73,
           "eps": 8.55,
+          "bvps": 131.17,
+          "pe": 53.6,
+          "pb": 3.6,
           "epsGrowth": 6.55,
-          "epsConsistency": 100.0,
-          "profitGrowth": 6.55,
-          "revenueGrowth": 23.13,
+          "revGrowth": 23.13,
+          "profitGrowth": 0.0,
           "netMargin": 4.92,
-          "qualityModifier": -8.6,
-          "qualityDetail": "ROA: 1.7% (-0.5); Avg Div: 10.7% (+4.3%)"
+          "divYield": 4.44,
+          "pillars": {
+            "P": 46.3,
+            "G": 77.6,
+            "Y": 67.4,
+            "V": 44.8,
+            "S": 94.5
+          },
+          "checklist": {
+            "passed": 6,
+            "assessable": 7,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                false
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 6408639.0,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "RNLI",
+          "name": "Reliable Nepal Life Insurance Limited",
+          "sector": "Life Insurance",
+          "score": 54.8,
+          "composite": 59.0,
+          "coverage": 0.64,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 7.44,
+          "roa": 2.53,
+          "eps": 11.06,
+          "bvps": 146.17,
+          "pe": 40.14,
+          "pb": 3.04,
+          "epsGrowth": 0.99,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 24.38,
+          "divYield": 2.7,
+          "pillars": {
+            "P": 77.5,
+            "G": 34.4,
+            "Y": 58.1,
+            "V": 70.4,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 5487245.4,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "ILI",
+          "name": "IME Life Insurance Company Limited",
+          "sector": "Life Insurance",
+          "score": 53.5,
+          "composite": 57.7,
+          "coverage": 0.64,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 8.74,
+          "roa": 2.63,
+          "eps": 11.7,
+          "bvps": 131.49,
+          "pe": 35.82,
+          "pb": 3.19,
+          "epsGrowth": 0.43,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 8.26,
+          "divYield": 5.02,
+          "pillars": {
+            "P": 75.0,
+            "G": 24.2,
+            "Y": 73.2,
+            "V": 70.0,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 1250238.0,
+          "historyDepth": 1
         }
       ],
-      "Commercial Bank": [
+      "Finance": [
         {
-          "symbol": "NABIL",
-          "score": 98.5,
-          "baseScore": 91.7,
-          "roe": 13.15,
-          "eps": 31.57,
-          "epsGrowth": 14.74,
-          "epsConsistency": 50.0,
-          "profitGrowth": 14.74,
-          "revenueGrowth": -6.99,
-          "netMargin": 22.3,
-          "qualityModifier": 7.5,
-          "qualityDetail": "CAR: 12.5% (+0.0); NPL: 4.37% (-0.6); COF: 3.2% (+1.0); Avg Div: 16.9% (+6.7%)"
+          "symbol": "MFIL",
+          "name": "Manjushree Finance Ltd.",
+          "sector": "Finance",
+          "score": 53.2,
+          "composite": 57.0,
+          "coverage": 0.67,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 15.28,
+          "roa": 1.37,
+          "eps": 26.8,
+          "bvps": 182.2,
+          "pe": 29.55,
+          "pb": 4.35,
+          "epsGrowth": 27.93,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 16.61,
+          "divYield": 1.89,
+          "pillars": {
+            "P": 71.1,
+            "G": 50.0,
+            "Y": 76.6,
+            "V": 53.1,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 51041803.4,
+          "historyDepth": 1
         },
         {
-          "symbol": "NIMB",
-          "score": 48.4,
-          "baseScore": 50.0,
-          "roe": 8.03,
-          "eps": 15.72,
-          "epsGrowth": -17.01,
-          "epsConsistency": 50.0,
-          "profitGrowth": -17.01,
-          "revenueGrowth": -11.4,
-          "netMargin": 16.24,
-          "qualityModifier": -3.1,
-          "qualityDetail": "CAR: 12.4% (-0.1); NPL: 8.41% (-1.0); COF: 3.4% (+1.0)"
+          "symbol": "RLFL",
+          "name": "Reliance Finance Ltd.",
+          "sector": "Finance",
+          "score": 52.9,
+          "composite": 57.5,
+          "coverage": 0.6,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 21.56,
+          "roa": 2.45,
+          "eps": 22.77,
+          "bvps": 115.8,
+          "pe": 20.64,
+          "pb": 4.06,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 30.69,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 88.8,
+            "G": null,
+            "Y": 37.7,
+            "V": 59.5,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 6271335.0,
+          "historyDepth": 1
         },
         {
-          "symbol": "HBL",
+          "symbol": "BFC",
+          "name": "Best Finance Company Ltd.",
+          "sector": "Finance",
           "score": 48.0,
-          "baseScore": 50.0,
-          "roe": 4.59,
-          "eps": 7.86,
-          "epsGrowth": 27.71,
-          "epsConsistency": 50.0,
-          "profitGrowth": 27.71,
-          "revenueGrowth": -19.49,
-          "netMargin": 7.4,
-          "qualityModifier": -4.0,
-          "qualityDetail": "CAR: 11.3% (-0.8); NPL: 7.98% (-1.0); COF: 3.9% (+1.0); Avg Div: 16.9% (+6.8%)"
+          "composite": 52.1,
+          "coverage": 0.6,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 13.3,
+          "roa": 1.9,
+          "eps": 15.28,
+          "bvps": 112.72,
+          "pe": 33.64,
+          "pb": 4.56,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 25.44,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 75.0,
+            "G": null,
+            "Y": 40.4,
+            "V": 48.8,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 15095413.0,
+          "historyDepth": 1
         }
       ],
-      "Manufacturing": [
-        {
-          "symbol": "HDL",
-          "score": 89.0,
-          "baseScore": 66.2,
-          "roe": 24.54,
-          "eps": 28.89,
-          "epsGrowth": 20.8,
-          "epsConsistency": 75.0,
-          "profitGrowth": 20.8,
-          "revenueGrowth": 11.71,
-          "netMargin": 14.09,
-          "qualityModifier": 34.3,
-          "qualityDetail": "ROA: 21.1% (+1.0); Avg Div: 23.3% (+9.3%)"
-        },
-        {
-          "symbol": "SARBTM",
-          "score": 63.3,
-          "baseScore": 50.0,
-          "roe": 13.03,
-          "eps": 25.02,
-          "epsGrowth": 99.13,
-          "epsConsistency": 75.0,
-          "profitGrowth": 99.13,
-          "revenueGrowth": 12.99,
-          "netMargin": 13.41,
-          "qualityModifier": 26.6,
-          "qualityDetail": "ROA: 8.4% (+1.0); Avg Div: 4.0% (+1.6%)"
-        },
-        {
-          "symbol": "SHIVM",
-          "score": 53.1,
-          "baseScore": 42.5,
-          "roe": 9.91,
-          "eps": 18.11,
-          "epsGrowth": 126.83,
-          "epsConsistency": 75.0,
-          "profitGrowth": 126.83,
-          "revenueGrowth": 0.22,
-          "netMargin": 13.83,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 7.9% (+1.0)"
-        }
-      ],
-      "Others": [
-        {
-          "symbol": "NTC",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 6.53,
-          "eps": 33.88,
-          "epsGrowth": 57.75,
-          "epsConsistency": 50.0,
-          "profitGrowth": 57.75,
-          "revenueGrowth": 33.23,
-          "netMargin": 16.02,
-          "qualityModifier": 22.7,
-          "qualityDetail": "ROA: 4.8% (+0.9); Avg Div: 1.3% (+0.5%)"
-        },
-        {
-          "symbol": "HRL",
-          "score": 0.0,
-          "baseScore": 0.0,
-          "roe": 2.13,
-          "eps": 3.28,
-          "epsGrowth": -73.42,
-          "epsConsistency": 75.0,
-          "profitGrowth": -73.42,
-          "revenueGrowth": -3.98,
-          "netMargin": 4.92,
-          "qualityModifier": -17.8,
-          "qualityDetail": "ROA: 1.4% (-0.8); Avg Div: 4.2% (+1.7%)"
-        }
-      ],
-      "Hotels": [
+      "Hotels & Tourism": [
         {
           "symbol": "SHL",
-          "score": 100.0,
-          "baseScore": 100.0,
+          "name": "Soaltee Hotel Limited",
+          "sector": "Hotels & Tourism",
+          "score": 65.1,
+          "composite": 66.5,
+          "coverage": 0.89,
+          "rank": 1,
+          "period": "2082-83-Q3",
           "roe": 26.33,
+          "roa": 20.68,
           "eps": 6.42,
+          "bvps": 26.73,
+          "pe": 81.7,
+          "pb": 19.9,
           "epsGrowth": 14.92,
-          "epsConsistency": 100.0,
-          "profitGrowth": 14.92,
-          "revenueGrowth": 15.58,
+          "revGrowth": 15.58,
+          "profitGrowth": 0.0,
           "netMargin": 24.1,
-          "qualityModifier": 25.9,
-          "qualityDetail": "ROA: 20.7% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
-        }
-      ]
-    },
-    "FY 2082-83 Q2": {
-      "Microfinance": [
-        {
-          "symbol": "AVYAN",
-          "score": 88.4,
-          "baseScore": 75.0,
-          "roe": 44.49,
-          "eps": 55.85,
-          "epsGrowth": 122.44,
-          "epsConsistency": 75.0,
-          "profitGrowth": 122.44,
-          "revenueGrowth": 42.67,
-          "netMargin": 27.72,
-          "qualityModifier": 17.8,
-          "qualityDetail": "NPL: 4.15% (+0.3); COF: 6.7% (+1.0); CD Ratio: 109.7% (+1.0)"
+          "divYield": 0.33,
+          "pillars": {
+            "P": 88.4,
+            "G": 53.7,
+            "Y": 67.5,
+            "V": 22.3,
+            "S": 79.1
+          },
+          "checklist": {
+            "passed": 6,
+            "assessable": 8,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                false
+              ],
+              [
+                "Net margin improved YoY",
+                false
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 5346500.0,
+          "historyDepth": 8
         },
         {
-          "symbol": "JBLB",
-          "score": 24.9,
-          "baseScore": 25.0,
-          "roe": 23.32,
-          "eps": 52.76,
-          "epsGrowth": 214.04,
-          "epsConsistency": 100.0,
-          "profitGrowth": 214.04,
-          "revenueGrowth": 42.03,
-          "netMargin": 22.57,
-          "qualityModifier": -0.3,
-          "qualityDetail": "NPL: 5.98% (-0.3); COF: 7.8% (+0.7); CD Ratio: 124.8% (-0.3)"
-        }
-      ],
-      "Hydropower": [
-        {
-          "symbol": "MEN",
-          "score": 85.0,
-          "baseScore": 68.0,
-          "roe": 16.12,
-          "eps": 21.08,
-          "epsGrowth": 80.07,
-          "epsConsistency": 50.0,
-          "profitGrowth": 80.07,
-          "revenueGrowth": 36.13,
-          "netMargin": 46.09,
-          "qualityModifier": 25.0,
-          "qualityDetail": "D/E: 0.64 (+1.0); ROA: 9.1% (+1.0)"
+          "symbol": "KDL",
+          "name": "Kalinchowk Darshan Limited",
+          "sector": "Hotels & Tourism",
+          "score": 59.3,
+          "composite": 63.2,
+          "coverage": 0.69,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 9.14,
+          "roa": 7.6,
+          "eps": 9.3,
+          "bvps": 107.94,
+          "pe": 84.95,
+          "pb": 7.32,
+          "epsGrowth": 162.88,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 65.35,
+          "divYield": 0.63,
+          "pillars": {
+            "P": 71.2,
+            "G": 93.2,
+            "Y": 43.4,
+            "V": 44.9,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 2542512.0,
+          "historyDepth": 1
         },
         {
-          "symbol": "SAHAS",
-          "score": 64.1,
-          "baseScore": 58.0,
-          "roe": 15.32,
-          "eps": 24.0,
-          "epsGrowth": 64.5,
-          "epsConsistency": 100.0,
-          "profitGrowth": 64.5,
-          "revenueGrowth": 8.28,
-          "netMargin": 40.04,
-          "qualityModifier": 10.5,
-          "qualityDetail": "D/E: 1.39 (+0.0); ROA: 6.1% (+0.4); Avg Div: 14.5% (+5.8%)"
-        },
-        {
-          "symbol": "CHCL",
-          "score": 55.2,
-          "baseScore": 45.0,
-          "roe": 6.09,
-          "eps": 7.32,
-          "epsGrowth": 6.24,
-          "epsConsistency": 50.0,
-          "profitGrowth": 6.24,
-          "revenueGrowth": -7.08,
-          "netMargin": 54.03,
-          "qualityModifier": 22.6,
-          "qualityDetail": "D/E: 0.00 (+1.0); ROA: 5.8% (+0.3); Avg Div: 16.9% (+6.7%)"
-        }
-      ],
-      "unknown": [
-        {
-          "symbol": "CBBL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 15.62,
-          "eps": 35.31,
-          "epsGrowth": 18.63,
-          "epsConsistency": 100.0,
-          "profitGrowth": 18.63,
-          "revenueGrowth": 6.77,
-          "netMargin": 19.95,
-          "qualityModifier": 0.1,
-          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
-        },
-        {
-          "symbol": "SNLI",
-          "score": 0.0,
-          "baseScore": 0.0,
-          "roe": 7.29,
-          "eps": 10.33,
-          "epsGrowth": 3.17,
-          "epsConsistency": 50.0,
-          "profitGrowth": 3.17,
-          "revenueGrowth": -2.74,
-          "netMargin": 12.29,
-          "qualityModifier": 6.8,
-          "qualityDetail": "ROA: 3.1% (+0.0); Avg Div: 14.4% (+5.8%)"
-        }
-      ],
-      "Life Insurance": [
-        {
-          "symbol": "CLI",
-          "score": 93.1,
-          "baseScore": 100.0,
-          "roe": 5.96,
-          "eps": 8.51,
-          "epsGrowth": -1.51,
-          "epsConsistency": 75.0,
-          "profitGrowth": -1.51,
-          "revenueGrowth": -0.67,
-          "netMargin": 5.12,
-          "qualityModifier": -6.9,
-          "qualityDetail": "ROA: 1.8% (-0.4); Avg Div: 10.7% (+4.3%)"
-        }
-      ],
-      "Commercial Bank": [
-        {
-          "symbol": "NABIL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 13.58,
-          "eps": 26.96,
-          "epsGrowth": 21.71,
-          "epsConsistency": 50.0,
-          "profitGrowth": 21.71,
-          "revenueGrowth": -8.46,
-          "netMargin": 22.02,
-          "qualityModifier": 9.8,
-          "qualityDetail": "CAR: 12.8% (+0.2); NPL: 4.25% (-0.6); COF: 3.6% (+1.0); Avg Div: 16.9% (+6.7%)"
-        },
-        {
-          "symbol": "NIMB",
-          "score": 65.3,
-          "baseScore": 66.7,
-          "roe": 8.42,
-          "eps": 16.22,
-          "epsGrowth": -11.1,
-          "epsConsistency": 75.0,
-          "profitGrowth": -11.1,
-          "revenueGrowth": -15.45,
-          "netMargin": 16.5,
-          "qualityModifier": -2.1,
-          "qualityDetail": "CAR: 12.6% (+0.0); NPL: 7.90% (-1.0); COF: 3.6% (+1.0)"
-        },
-        {
-          "symbol": "HBL",
-          "score": 25.2,
-          "baseScore": 25.0,
-          "roe": 3.34,
-          "eps": 5.7,
-          "epsGrowth": -54.91,
-          "epsConsistency": 25.0,
-          "profitGrowth": -54.91,
-          "revenueGrowth": -21.98,
-          "netMargin": 5.17,
-          "qualityModifier": 0.9,
-          "qualityDetail": "CAR: 11.7% (-0.5); NPL: 4.65% (-0.8); COF: 4.0% (+1.0); Avg Div: 16.9% (+6.8%)"
-        }
-      ],
-      "Manufacturing": [
-        {
-          "symbol": "HDL",
-          "score": 89.0,
-          "baseScore": 66.2,
-          "roe": 24.34,
-          "eps": 27.03,
-          "epsGrowth": 67.71,
-          "epsConsistency": 75.0,
-          "profitGrowth": 67.71,
-          "revenueGrowth": 39.96,
-          "netMargin": 13.47,
-          "qualityModifier": 34.3,
-          "qualityDetail": "ROA: 20.9% (+1.0); Avg Div: 23.3% (+9.3%)"
-        },
-        {
-          "symbol": "SARBTM",
-          "score": 88.6,
-          "baseScore": 70.0,
-          "roe": 13.22,
-          "eps": 24.91,
-          "epsGrowth": 169.58,
-          "epsConsistency": 75.0,
-          "profitGrowth": 169.58,
-          "revenueGrowth": 21.17,
-          "netMargin": 13.49,
-          "qualityModifier": 26.6,
-          "qualityDetail": "ROA: 8.6% (+1.0); Avg Div: 4.0% (+1.6%)"
-        },
-        {
-          "symbol": "SHIVM",
-          "score": 84.4,
-          "baseScore": 67.5,
-          "roe": 10.88,
-          "eps": 19.57,
-          "epsGrowth": 590.73,
-          "epsConsistency": 100.0,
-          "profitGrowth": 590.73,
-          "revenueGrowth": 3.65,
-          "netMargin": 14.1,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 8.7% (+1.0)"
+          "symbol": "CGH",
+          "name": "Chandragiri Hills Limited",
+          "sector": "Hotels & Tourism",
+          "score": 33.5,
+          "composite": 36.4,
+          "coverage": 0.6,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 5.75,
+          "roa": 2.44,
+          "eps": 5.75,
+          "bvps": 100.2,
+          "pe": 137.03,
+          "pb": 7.87,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 12.82,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 29.3,
+            "G": null,
+            "Y": 14.6,
+            "V": 36.4,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 9541620.0,
+          "historyDepth": 1
         }
       ],
-      "Others": [
+      "Investment": [
         {
-          "symbol": "HRL",
-          "score": 100.0,
-          "baseScore": 80.0,
-          "roe": 8.45,
-          "eps": 13.07,
-          "epsGrowth": 9.48,
-          "epsConsistency": 100.0,
-          "profitGrowth": 9.48,
-          "revenueGrowth": 6.76,
-          "netMargin": 17.92,
-          "qualityModifier": 26.7,
-          "qualityDetail": "ROA: 5.8% (+1.0); Avg Div: 4.2% (+1.7%)"
-        },
-        {
-          "symbol": "NTC",
-          "score": 21.0,
-          "baseScore": 20.0,
-          "roe": 4.57,
-          "eps": 23.32,
-          "epsGrowth": -21.12,
-          "epsConsistency": 25.0,
-          "profitGrowth": -21.12,
-          "revenueGrowth": 7.41,
-          "netMargin": 11.42,
-          "qualityModifier": 4.9,
-          "qualityDetail": "ROA: 3.4% (+0.2); Avg Div: 1.3% (+0.5%)"
-        }
-      ],
-      "Hotels": [
-        {
-          "symbol": "SHL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 26.35,
-          "eps": 6.1,
-          "epsGrowth": 12.01,
-          "epsConsistency": 100.0,
-          "profitGrowth": 12.01,
-          "revenueGrowth": 12.9,
-          "netMargin": 23.8,
-          "qualityModifier": 25.9,
-          "qualityDetail": "ROA: 20.3% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
-        }
-      ]
-    },
-    "FY 2082-83 Q1": {
-      "Microfinance": [
-        {
-          "symbol": "AVYAN",
-          "score": 79.5,
-          "baseScore": 75.0,
-          "roe": 37.44,
-          "eps": 42.85,
-          "epsGrowth": 210.45,
-          "epsConsistency": 75.0,
-          "profitGrowth": 210.45,
-          "revenueGrowth": 65.74,
-          "netMargin": 24.81,
-          "qualityModifier": 6.0,
-          "qualityDetail": "NPL: 7.69% (-0.9); COF: 7.0% (+1.0); CD Ratio: 107.9% (+1.0)"
-        },
-        {
-          "symbol": "JBLB",
-          "score": 25.3,
-          "baseScore": 25.0,
-          "roe": 20.76,
-          "eps": 44.93,
-          "epsGrowth": 220.63,
-          "epsConsistency": 100.0,
-          "profitGrowth": 220.63,
-          "revenueGrowth": 48.73,
-          "netMargin": 19.05,
-          "qualityModifier": 1.4,
-          "qualityDetail": "NPL: 4.62% (+0.1); COF: 8.0% (+0.6); CD Ratio: 126.8% (-0.6)"
-        }
-      ],
-      "Hydropower": [
-        {
-          "symbol": "MEN",
-          "score": 100.0,
-          "baseScore": 80.0,
-          "roe": 19.1,
-          "eps": 23.92,
-          "epsGrowth": 204.4,
-          "epsConsistency": 75.0,
-          "profitGrowth": 204.4,
-          "revenueGrowth": 41.96,
-          "netMargin": 51.22,
-          "qualityModifier": 25.0,
-          "qualityDetail": "D/E: 0.69 (+1.0); ROA: 10.4% (+1.0)"
-        },
-        {
-          "symbol": "SAHAS",
-          "score": 57.4,
-          "baseScore": 53.0,
-          "roe": 14.46,
-          "eps": 21.81,
-          "epsGrowth": 111.56,
-          "epsConsistency": 100.0,
-          "profitGrowth": 111.56,
-          "revenueGrowth": 11.86,
-          "netMargin": 36.8,
-          "qualityModifier": 8.4,
-          "qualityDetail": "D/E: 1.40 (-0.0); ROA: 5.6% (+0.2); Avg Div: 14.5% (+5.8%)"
-        },
-        {
-          "symbol": "UPPER",
-          "score": 51.8,
-          "baseScore": 69.0,
-          "roe": 59.4,
-          "eps": -0.36,
-          "epsGrowth": 97.51,
-          "epsConsistency": 50.0,
-          "profitGrowth": 97.51,
-          "revenueGrowth": 47.77,
-          "netMargin": -0.92,
-          "qualityModifier": -25.0,
-          "qualityDetail": "D/E: 6.31 (-1.0); ROA: -0.1% (-1.0)"
-        }
-      ],
-      "unknown": [
-        {
-          "symbol": "CBBL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 15.53,
-          "eps": 34.4,
-          "epsGrowth": 22.33,
-          "epsConsistency": 100.0,
-          "profitGrowth": 22.33,
-          "revenueGrowth": 5.89,
-          "netMargin": 19.82,
-          "qualityModifier": 0.2,
-          "qualityDetail": "ROA: 2.5% (-0.3); Op Profit Growth: +5.6% (-0.4); Avg Div: 22.3% (+8.9%)"
-        },
-        {
-          "symbol": "SNLI",
-          "score": 0.0,
-          "baseScore": 0.0,
-          "roe": 8.43,
-          "eps": 11.65,
-          "epsGrowth": 6.92,
-          "epsConsistency": 50.0,
-          "profitGrowth": 6.92,
-          "revenueGrowth": -8.92,
-          "netMargin": 16.48,
-          "qualityModifier": 13.6,
-          "qualityDetail": "ROA: 3.6% (+0.3); Avg Div: 14.4% (+5.8%)"
-        }
-      ],
-      "Life Insurance": [
-        {
-          "symbol": "CLI",
-          "score": 95.1,
-          "baseScore": 100.0,
-          "roe": 5.83,
-          "eps": 8.51,
-          "epsGrowth": 10.76,
-          "epsConsistency": 75.0,
-          "profitGrowth": 10.76,
-          "revenueGrowth": 24.38,
-          "netMargin": 5.3,
-          "qualityModifier": -4.9,
-          "qualityDetail": "ROA: 1.9% (-0.4); Avg Div: 10.7% (+4.3%)"
-        }
-      ],
-      "Commercial Bank": [
-        {
-          "symbol": "NABIL",
-          "score": 99.8,
-          "baseScore": 91.7,
-          "roe": 10.96,
-          "eps": 25.24,
-          "epsGrowth": -10.71,
-          "epsConsistency": 25.0,
-          "profitGrowth": -10.71,
-          "revenueGrowth": -12.31,
-          "netMargin": 17.31,
-          "qualityModifier": 8.8,
-          "qualityDetail": "CAR: 12.7% (+0.1); NPL: 4.31% (-0.6); COF: 4.1% (+1.0); Avg Div: 16.9% (+6.7%)"
-        },
-        {
-          "symbol": "NIMB",
-          "score": 78.0,
-          "baseScore": 75.0,
-          "roe": 8.21,
-          "eps": 15.64,
-          "epsGrowth": 3.84,
-          "epsConsistency": 75.0,
-          "profitGrowth": 3.84,
-          "revenueGrowth": -16.38,
-          "netMargin": 15.42,
-          "qualityModifier": 4.0,
-          "qualityDetail": "CAR: 13.5% (+0.7); NPL: 6.63% (-1.0); COF: 3.9% (+1.0)"
-        },
-        {
-          "symbol": "HBL",
-          "score": 34.3,
-          "baseScore": 33.3,
-          "roe": 3.87,
-          "eps": 6.59,
-          "epsGrowth": -40.64,
-          "epsConsistency": 50.0,
-          "profitGrowth": -40.64,
-          "revenueGrowth": -21.89,
-          "netMargin": 5.65,
-          "qualityModifier": 2.9,
-          "qualityDetail": "CAR: 12.3% (-0.1); NPL: 7.39% (-1.0); COF: 4.3% (+1.0); Avg Div: 16.9% (+6.8%)"
-        }
-      ],
-      "Manufacturing": [
-        {
-          "symbol": "HDL",
-          "score": 99.1,
-          "baseScore": 73.8,
-          "roe": 21.57,
-          "eps": 22.9,
-          "epsGrowth": 89.08,
-          "epsConsistency": 75.0,
-          "profitGrowth": 89.08,
-          "revenueGrowth": 45.4,
-          "netMargin": 12.44,
-          "qualityModifier": 34.3,
-          "qualityDetail": "ROA: 18.4% (+1.0); Avg Div: 23.3% (+9.3%)"
-        },
-        {
-          "symbol": "SARBTM",
-          "score": 93.4,
-          "baseScore": 73.8,
-          "roe": 13.91,
-          "eps": 25.87,
-          "epsGrowth": 43.06,
-          "epsConsistency": 100.0,
-          "profitGrowth": 50.21,
-          "revenueGrowth": 73.02,
-          "netMargin": 13.42,
-          "qualityModifier": 26.6,
-          "qualityDetail": "ROA: 9.0% (+1.0); Avg Div: 4.0% (+1.6%)"
-        },
-        {
-          "symbol": "SHIVM",
+          "symbol": "CHDC",
+          "name": "CEDB Holdings Limited",
+          "sector": "Investment",
           "score": 60.9,
-          "baseScore": 48.8,
-          "roe": 9.96,
-          "eps": 17.72,
-          "epsGrowth": 213.16,
-          "epsConsistency": 75.0,
-          "profitGrowth": 213.16,
-          "revenueGrowth": 2.69,
-          "netMargin": 12.56,
-          "qualityModifier": 25.0,
-          "qualityDetail": "ROA: 8.0% (+1.0)"
+          "composite": 64.9,
+          "coverage": 0.69,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 31.31,
+          "roa": 32.57,
+          "eps": 67.11,
+          "bvps": 257.36,
+          "pe": 33.98,
+          "pb": 8.86,
+          "epsGrowth": 34.14,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 97.12,
+          "divYield": 0.48,
+          "pillars": {
+            "P": 96.9,
+            "G": 65.2,
+            "Y": 28.6,
+            "V": 56.7,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 45844677.0,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "NRN",
+          "name": "NRN Infrastructure and Development Limited",
+          "sector": "Investment",
+          "score": 59.2,
+          "composite": 64.3,
+          "coverage": 0.6,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 17.88,
+          "roa": 15.31,
+          "eps": 29.34,
+          "bvps": 172.44,
+          "pe": 48.4,
+          "pb": 8.23,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 57.17,
+          "divYield": 2.96,
+          "pillars": {
+            "P": 81.8,
+            "G": null,
+            "Y": 77.1,
+            "V": 54.8,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 126107988.0,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "CIT",
+          "name": "Citizen Investment Trust",
+          "sector": "Investment",
+          "score": 48.6,
+          "composite": 51.8,
+          "coverage": 0.69,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 13.18,
+          "roa": 0.42,
+          "eps": 19.7,
+          "bvps": 147.11,
+          "pe": 87.17,
+          "pb": 11.67,
+          "epsGrowth": 9.68,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 298.33,
+          "divYield": 0.76,
+          "pillars": {
+            "P": 61.1,
+            "G": 47.5,
+            "Y": 60.1,
+            "V": 33.1,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 3711760.0,
+          "historyDepth": 1
+        }
+      ],
+      "Development Bank": [
+        {
+          "symbol": "GBBL",
+          "name": "Garima Bikas Bank Limited",
+          "sector": "Development Bank",
+          "score": 57.2,
+          "composite": 61.2,
+          "coverage": 0.67,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 17.22,
+          "roa": 1.56,
+          "eps": 26.99,
+          "bvps": 167.58,
+          "pe": 15.49,
+          "pb": 2.49,
+          "epsGrowth": 42.91,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 21.06,
+          "divYield": 2.39,
+          "pillars": {
+            "P": 81.8,
+            "G": 53.6,
+            "Y": 66.0,
+            "V": 66.6,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 23029384.0,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "MNBBL",
+          "name": "Muktinath Bikas Bank Ltd.",
+          "sector": "Development Bank",
+          "score": 53.5,
+          "composite": 57.4,
+          "coverage": 0.67,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 14.72,
+          "roa": 1.32,
+          "eps": 21.94,
+          "bvps": 155.09,
+          "pe": 16.97,
+          "pb": 2.4,
+          "epsGrowth": 30.04,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 17.4,
+          "divYield": 4.89,
+          "pillars": {
+            "P": 63.3,
+            "G": 43.8,
+            "Y": 83.3,
+            "V": 70.2,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 7529792.0,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "LBBL",
+          "name": "Lumbini Bikas Bank Ltd.",
+          "sector": "Development Bank",
+          "score": 51.5,
+          "composite": 55.2,
+          "coverage": 0.67,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 12.8,
+          "roa": 1.34,
+          "eps": 24.61,
+          "bvps": 205.4,
+          "pe": 20.31,
+          "pb": 2.43,
+          "epsGrowth": 1028.25,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 18.58,
+          "divYield": 0.0,
+          "pillars": {
+            "P": 59.6,
+            "G": 93.4,
+            "Y": 30.9,
+            "V": 66.1,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 18046215.0,
+          "historyDepth": 1
+        }
+      ],
+      "Manufacturing": [
+        {
+          "symbol": "HDL",
+          "name": "Himalayan Distillery Limited",
+          "sector": "Manufacturing",
+          "score": 68.9,
+          "composite": 70.0,
+          "coverage": 0.92,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 24.54,
+          "roa": 21.06,
+          "eps": 28.89,
+          "bvps": 131.8,
+          "pe": 39.7,
+          "pb": 8.7,
+          "epsGrowth": 20.8,
+          "revGrowth": 11.71,
+          "profitGrowth": 0.0,
+          "netMargin": 14.09,
+          "divYield": 2.14,
+          "pillars": {
+            "P": 85.5,
+            "G": 53.1,
+            "Y": 80.2,
+            "V": 36.3,
+            "S": 80.0
+          },
+          "checklist": {
+            "passed": 7,
+            "assessable": 8,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                false
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 14310860.0,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "SHIVM",
+          "name": "SHIVAM CEMENTS LTD",
+          "sector": "Manufacturing",
+          "score": 64.0,
+          "composite": 64.0,
+          "coverage": 1.0,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 9.91,
+          "roa": 7.89,
+          "eps": 18.11,
+          "bvps": 185.31,
+          "pe": 34.6,
+          "pb": 3.8,
+          "epsGrowth": 126.83,
+          "revGrowth": 0.22,
+          "profitGrowth": 0.0,
+          "netMargin": 13.83,
+          "divYield": 1.95,
+          "pillars": {
+            "P": 66.7,
+            "G": 51.1,
+            "Y": 66.0,
+            "V": 59.0,
+            "S": 77.7
+          },
+          "checklist": {
+            "passed": 9,
+            "assessable": 9,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                true
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 25893352.8,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "UNL",
+          "name": "Unilever Nepal Limited",
+          "sector": "Manufacturing",
+          "score": 63.7,
+          "composite": 67.1,
+          "coverage": 0.74,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 39.26,
+          "roa": 24.29,
+          "eps": 2100.98,
+          "bvps": 5114.98,
+          "pe": 22.85,
+          "pb": 9.38,
+          "epsGrowth": -5.58,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 103.33,
+          "divYield": 3.84,
+          "pillars": {
+            "P": 99.6,
+            "G": 10.1,
+            "Y": 91.6,
+            "V": 60.3,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                false
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 960980.0,
+          "historyDepth": 1
+        }
+      ],
+      "Non-Life Insurance": [
+        {
+          "symbol": "PRIN",
+          "name": "Prabhu Insurance Ltd.",
+          "sector": "Non-Life Insurance",
+          "score": 57.6,
+          "composite": 62.0,
+          "coverage": 0.64,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 6.48,
+          "roa": 3.04,
+          "eps": 12.07,
+          "bvps": 192.78,
+          "pe": 56.24,
+          "pb": 3.52,
+          "epsGrowth": 5.63,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 12.87,
+          "divYield": 1.33,
+          "pillars": {
+            "P": 76.7,
+            "G": 69.1,
+            "Y": 57.8,
+            "V": 46.1,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 3178666.8,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "NICL",
+          "name": "Nepal Insurance Co. Ltd.",
+          "sector": "Non-Life Insurance",
+          "score": 52.3,
+          "composite": 56.4,
+          "coverage": 0.64,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 5.6,
+          "roa": 3.18,
+          "eps": 9.57,
+          "bvps": 173.04,
+          "pe": 53.36,
+          "pb": 2.95,
+          "epsGrowth": -40.59,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 12.1,
+          "divYield": 1.23,
+          "pillars": {
+            "P": 67.7,
+            "G": 49.9,
+            "Y": 52.8,
+            "V": 55.2,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                false
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 12692370.0,
+          "historyDepth": 1
+        },
+        {
+          "symbol": "NIL",
+          "name": "Neco Insurance Co. Ltd.",
+          "sector": "Non-Life Insurance",
+          "score": 51.5,
+          "composite": 55.5,
+          "coverage": 0.64,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 5.64,
+          "roa": 2.98,
+          "eps": 12.46,
+          "bvps": 223.11,
+          "pe": 49.92,
+          "pb": 2.79,
+          "epsGrowth": -55.61,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 10.62,
+          "divYield": 2.54,
+          "pillars": {
+            "P": 63.2,
+            "G": 36.6,
+            "Y": 79.0,
+            "V": 58.9,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                false
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 2192125.0,
+          "historyDepth": 1
         }
       ],
       "Others": [
         {
-          "symbol": "HRL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 8.51,
-          "eps": 12.97,
-          "epsGrowth": 55.67,
-          "epsConsistency": 100.0,
-          "profitGrowth": 55.67,
-          "revenueGrowth": 54.58,
-          "netMargin": 18.24,
-          "qualityModifier": 26.7,
-          "qualityDetail": "ROA: 5.8% (+1.0); Avg Div: 4.2% (+1.7%)"
+          "symbol": "NRIC",
+          "name": "Nepal Reinsurance Company Limited",
+          "sector": "Others",
+          "score": 60.5,
+          "composite": 65.8,
+          "coverage": 0.6,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 39.37,
+          "roa": 16.8,
+          "eps": 47.14,
+          "bvps": 109.2,
+          "pe": 20.22,
+          "pb": 8.73,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 57.42,
+          "divYield": 0.52,
+          "pillars": {
+            "P": 99.0,
+            "G": null,
+            "Y": 48.4,
+            "V": 58.7,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 14505624.0,
+          "historyDepth": 1
         },
         {
           "symbol": "NTC",
-          "score": 0.0,
-          "baseScore": 0.0,
-          "roe": 2.46,
-          "eps": 12.52,
-          "epsGrowth": -64.39,
-          "epsConsistency": 0.0,
-          "profitGrowth": -64.39,
-          "revenueGrowth": -0.07,
-          "netMargin": 6.53,
-          "qualityModifier": -14.3,
-          "qualityDetail": "ROA: 1.8% (-0.6); Avg Div: 1.3% (+0.5%)"
+          "name": "Nepal Doorsanchar Comapany Limited",
+          "sector": "Others",
+          "score": 56.7,
+          "composite": 57.9,
+          "coverage": 0.89,
+          "rank": 2,
+          "period": "2082-83-Q3",
+          "roe": 6.53,
+          "roa": 4.77,
+          "eps": 33.88,
+          "bvps": 550.88,
+          "pe": 38.2,
+          "pb": 1.6,
+          "epsGrowth": 57.75,
+          "revGrowth": 33.23,
+          "profitGrowth": 0.0,
+          "netMargin": 16.02,
+          "divYield": 3.48,
+          "pillars": {
+            "P": 61.3,
+            "G": 58.6,
+            "Y": 88.2,
+            "V": 65.4,
+            "S": 24.0
+          },
+          "checklist": {
+            "passed": 8,
+            "assessable": 8,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                true
+              ],
+              [
+                "ROA improved YoY",
+                true
+              ],
+              [
+                "Net margin improved YoY",
+                true
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                true
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 12789539.2,
+          "historyDepth": 8
+        },
+        {
+          "symbol": "MKCL",
+          "name": "Muktinath Krishi Company Limited",
+          "sector": "Others",
+          "score": 46.0,
+          "composite": 50.0,
+          "coverage": 0.6,
+          "rank": 3,
+          "period": "2082-83-Q3",
+          "roe": 7.52,
+          "roa": 4.54,
+          "eps": 7.71,
+          "bvps": 103.75,
+          "pe": 147.65,
+          "pb": 10.98,
+          "epsGrowth": 0.0,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 8.2,
+          "divYield": 0.7,
+          "pillars": {
+            "P": 57.2,
+            "G": null,
+            "Y": 49.7,
+            "V": 35.9,
+            "S": null
+          },
+          "checklist": {
+            "passed": 3,
+            "assessable": 3,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                null
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 519330.6,
+          "historyDepth": 1
         }
       ],
-      "Hotels": [
+      "Trading": [
         {
-          "symbol": "SHL",
-          "score": 100.0,
-          "baseScore": 100.0,
-          "roe": 25.62,
-          "eps": 5.73,
-          "epsGrowth": 8.6,
-          "epsConsistency": 100.0,
-          "profitGrowth": 8.6,
-          "revenueGrowth": 10.39,
-          "netMargin": 23.34,
-          "qualityModifier": 25.9,
-          "qualityDetail": "ROA: 19.8% (+1.0); Op Profit Growth: +15.1% (+0.5); Avg Div: 17.7% (+7.1%)"
+          "symbol": "STC",
+          "name": "Salt Trading Corporation",
+          "sector": "Trading",
+          "score": 41.1,
+          "composite": 43.8,
+          "coverage": 0.69,
+          "rank": 1,
+          "period": "2082-83-Q3",
+          "roe": 3.0,
+          "roa": 1.1,
+          "eps": 28.07,
+          "bvps": 454.95,
+          "pe": 185.24,
+          "pb": 11.43,
+          "epsGrowth": 94.47,
+          "revGrowth": 0.0,
+          "profitGrowth": 0.0,
+          "netMargin": 1.26,
+          "divYield": 0.19,
+          "pillars": {
+            "P": 20.5,
+            "G": 72.2,
+            "Y": 55.3,
+            "V": 32.7,
+            "S": null
+          },
+          "checklist": {
+            "passed": 4,
+            "assessable": 4,
+            "items": [
+              [
+                "ROE > 0",
+                true
+              ],
+              [
+                "ROA > 0",
+                true
+              ],
+              [
+                "EPS TTM grew YoY",
+                true
+              ],
+              [
+                "Revenue TTM grew YoY",
+                null
+              ],
+              [
+                "ROA improved YoY",
+                null
+              ],
+              [
+                "Net margin improved YoY",
+                null
+              ],
+              [
+                "Leverage not rising / within ceiling",
+                null
+              ],
+              [
+                "No dilution beyond bonus",
+                null
+              ],
+              [
+                "Pays a dividend",
+                true
+              ]
+            ]
+          },
+          "turnover": 7219290.0,
+          "historyDepth": 1
         }
       ]
     }
-  }
+  },
+  "excludedCount": 57,
+  "eligibleCount": 213
 }
