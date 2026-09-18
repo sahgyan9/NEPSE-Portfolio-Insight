@@ -126,7 +126,7 @@ const companyInfo: Record<string, { fullName: string; sector: string }> = {
   KDBY: { fullName: "Kumari Dhanabriddhi Yojana", sector: "Mutual Fund" },
   MMF1: { fullName: "Mahila Sambriddhi Kosh", sector: "Mutual Fund" },
   NBF3: { fullName: "Nabil Balanced Fund 3", sector: "Mutual Fund" },
-  NIBLSF: { fullName: "NIBL Samriddhi Fund", sector: "Mutual Fund" },
+  NIBLSF: { fullName: "NIBL Sahabhagita Fund", sector: "Mutual Fund" },
   NMBSBFE: { fullName: "NMB Saral Bachat Fund - E", sector: "Mutual Fund" },
 };
 
@@ -147,7 +147,7 @@ const rawPortfolioData = [
   { scrip: "MMF1", quantity: 120, waccRate: 10.0, totalCost: 1200.0, currentPrice: 8.5, currentValue: 1020.0, lastModified: "2024-09-22" },
   { scrip: "NABIL", quantity: 70, waccRate: 528.53, totalCost: 36996.75, currentPrice: 514.9, currentValue: 36043.0, lastModified: "2025-11-13" },
   { scrip: "NBF3", quantity: 100, waccRate: 10.0, totalCost: 1000.0, currentPrice: 9.0, currentValue: 900.0, lastModified: "2024-09-22" },
-  { scrip: "NIBLSF", quantity: 3671, waccRate: 10.0, totalCost: 36710.0, currentPrice: 10.5, currentValue: 38545.5, lastModified: "2025-05-13" },
+  { scrip: "NIBLSF", quantity: 3671, waccRate: 10.0, totalCost: 36710.0, currentPrice: 10.14, currentValue: 37223.94, lastModified: "2025-05-13" },
   { scrip: "NICA", quantity: 20, waccRate: 433.16, totalCost: 8663.18, currentPrice: 334.9, currentValue: 6698.0, lastModified: "2024-12-13" },
   { scrip: "NIMB", quantity: 75, waccRate: 215.48, totalCost: 16161.36, currentPrice: 202.0, currentValue: 15150.0, lastModified: "2025-11-13" },
   { scrip: "NMBSBFE", quantity: 100, waccRate: 10.0, totalCost: 1000.0, currentPrice: 10.42, currentValue: 1042.0, lastModified: "2024-09-22" },
