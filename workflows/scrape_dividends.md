@@ -28,14 +28,17 @@ Keep `db/dividend_data.json` current with dividend/bonus announcements for all p
 - `GET /api/dividends/portfolio?fy=<FY>` (`nepse_server.py`) is the **Single Source of Truth** for all dividend computations across the entire application:
   - **Defaults to `082-083`** (current fiscal year distributions).
   - Explicit fiscal years (e.g. `082-083`, `081-082`, `080-081`, `079-080`) filter to announcements matching that profit year.
+  - `fy=all` (or `cumulative`/`lifetime`) aggregates eligible cash dividends across every historical fiscal year in the database.
   - `fy=latest` dynamically identifies the newest declared dividend across all fiscal years per stock.
   - Automatically incorporates active manual overrides from `db/manual_dividends.json` while skipping parked entries (`disabled: true`).
   - Computes `calc_qty`, `shares_held_at` eligibility, `cashGross`, `cashNet` (5% tax), `bonusShares`, `bonusTaxDue`, and `dividendTrend`.
 - **Frontend Service:** `src/services/receivedDividendsApi.ts` exports `fetchPortfolioDividends(fy = DEFAULT_DIVIDEND_FY)`.
 - **Home Page Integration:**
-  - `src/hooks/useLivePortfolio.ts` fetches from `fetchPortfolioDividends(dividendFiscalYear)` and directly maps `CompanyDividend` into `StockHolding`.
+  - `src/hooks/useLivePortfolio.ts` dispatches two parallel calls via `Promise.allSettled`:
+    1. `fetchPortfolioDividends(dividendFiscalYear)` → populates per-company dividend values for the `HoldingsTable`.
+    2. `fetchPortfolioDividends('all')` → retrieves all-time accumulated net cash to populate `summary.totalDividendIncome` and compute `netGrowth = totalGainLoss + allTimeDividendCashNet`.
   - `src/components/HoldingsTable.tsx` displays the active fiscal year in the column header (e.g., `Dividend (082-083)`), provides a segmented toggle group (`082-083 (Current)` | `081-082` | dropdown), and displays clean `-` for holdings with no announcements in the selected year.
-  - `PortfolioSummaryCards` and `DividendTracker` derive total cash dividend income and net growth directly from this unified feed.
+  - `PortfolioSummaryCards` renders the **"Total Cash Dividends"** card with all-time accumulated cash received (after 5% tax) and Net Growth.
 - **Dividends Page Integration:**
   - `src/pages/DividendsPage.tsx` uses the same `fetchPortfolioDividends(fiscalYear)` service to populate the detailed breakdown, status tags, and historical sparklines.
 
