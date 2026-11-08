@@ -56,8 +56,10 @@ TOP_N = 3
 # ---------------------------------------------------------------- integrity
 
 def sha256(path):
+    """SHA-256 of the file with CRLF normalised to LF, so a Windows checkout
+    (core.autocrlf=true) hashes the same as the LF original."""
     with open(path, "rb") as f:
-        return hashlib.sha256(f.read()).hexdigest()
+        return hashlib.sha256(f.read().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def check_frozen():
