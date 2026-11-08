@@ -1,7 +1,8 @@
 # Phase 2 results: Sector Leaders backtest (first run, 2026-11-07)
 
 Rules: [PHASE2_PREREGISTRATION.md](PHASE2_PREREGISTRATION.md). No rule was changed after
-seeing these numbers. Reproduce with `python tools/backtest_sector_leaders.py`
+seeing these numbers. Produced with frozen scorer v1; re-run under v2 (checklist fix, see the
+deviation log) on 2026-11-08 gave identical results at all three lags. Reproduce with `python tools/backtest_sector_leaders.py`
 (output in `.tmp/backtest/`).
 
 Sample: 15 quarterly periods, entry 2022-12-18 to exit 2026-09-15 (3.74 years),

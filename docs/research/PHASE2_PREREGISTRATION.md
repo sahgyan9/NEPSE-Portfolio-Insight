@@ -105,3 +105,9 @@ not read the long files through the buggy path.
 `test_frozen_algorithm_unchanged` now fail on purpose. `FROZEN` in
 `tools/backtest_sector_leaders.py` has not been updated; whether the study adopts the fixed
 version is an open decision.
+
+**Decision (2026-11-08): adopted as frozen v2.** `FROZEN` now holds
+`ece6ac96dbd20c631c8c836920b6c15f46936b3548e3276cffd9bac9c1f47c58` for
+`tools/score_sector_leaders.py` (`quarterly_db.py` unchanged). The backtest was re-run under v2
+at lags 45, 60 and 90 and compared with the v1 output: summaries, holdings and every per-period
+figure are identical, confirming the "no effect" statement above.
