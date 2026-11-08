@@ -81,7 +81,9 @@ def fetch_company_news(symbol: str, pages: int = 1) -> list:
             )
             if not next_link or not page_items:
                 break
-            url = next_link
+            # The site emits the cursor link as "/?company=...&cursor=..." (path dropped),
+            # so keep only its query string and re-attach it to the listing URL.
+            url = f"{BASE_URL}?{next_link.split('?', 1)[1]}"
 
     return items
 
