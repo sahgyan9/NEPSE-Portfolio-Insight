@@ -1,0 +1,111 @@
+{
+  "symbol": "SKHL",
+  "sector": "Hydropower",
+  "company_name": "Super Khudi Hydropower Limited",
+  "quarters": [
+    {
+      "symbol": "SKHL",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T10:21:37.556838",
+      "raw": {
+        "Paid Up Capital": 1550000000.0,
+        "Reserve and Surplus": 591950580.0,
+        "Total Equity": 2141950580.0,
+        "Borrowings": 3176537370.0,
+        "Current Liabilities": 547638500.0,
+        "Current Assets": 392804970.0,
+        "Total Assets": 5536003340.0,
+        "Revenue": 1510443560.0,
+        "Gross Profit": 196100050.0,
+        "Operating Profit": 181833830.0,
+        "Net Profit": 181775160.0,
+        "Number of Shares": 15500000.0,
+        "EPS Reported": 15.64,
+        "Book Value Reported": 138.19,
+        "ROE Reported": 11.32
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 15.63266376,
+        "bvps": 138.19036,
+        "roe_ttm": 11.31241264586,
+        "roa_ttm": 4.3769173065564,
+        "net_profit_ttm": 242306288.28,
+        "revenue_ttm": 2013421265.48,
+        "graham_number": 220.47
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "SKHL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:21:37.556829",
+      "raw": {
+        "Paid Up Capital": 1550000000.0,
+        "Reserve and Surplus": 701970090.0,
+        "Total Equity": 2251970090.0,
+        "Borrowings": 3553386270.0,
+        "Current Liabilities": 1138670760.0,
+        "Current Assets": 372020610.0,
+        "Total Assets": 6397469230.0,
+        "Revenue": 2394577020.0,
+        "Operating Profit": 296040270.0,
+        "Net Profit": 295976510.0,
+        "Number of Shares": 15500000.0,
+        "EPS Reported": 19.1,
+        "Book Value Reported": 145.29,
+        "ROE Reported": 13.14
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 19.095258709677,
+        "bvps": 145.2883929032258,
+        "roe_ttm": 13.143003600017,
+        "roa_ttm": 4.6264624237982,
+        "net_profit_ttm": 295976510.0,
+        "revenue_ttm": 2394577020.0,
+        "graham_number": 249.84
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T10:21:37.557366"
+}

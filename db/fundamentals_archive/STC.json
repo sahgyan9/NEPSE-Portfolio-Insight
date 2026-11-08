@@ -43,7 +43,50 @@
       "trade_turnover": 7219290,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 144.58,
+      "pb_ratio": 11.07,
+      "eps_ttm": 38.83,
+      "book_value": 507.67,
+      "roe": 7.65,
+      "roa": null,
+      "graham_number": 665.99,
+      "net_profit_ttm": 136979840.0,
+      "revenue_ttm": 12225697.49,
+      "shares_outstanding": 3527886.51,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Trading",
+      "name": "Salt Trading Corporation",
+      "discount_from_graham": 8.0516,
+      "eps_reported": 38.83,
+      "net_margin_ttm": 1.5,
+      "asset_turnover_ttm": 91.66,
+      "dividend_payout_ratio": 0.282,
+      "dividend_to_ltp": 0.0018,
+      "promoter_holding": 9.67,
+      "public_float": 78.74,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 347,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Tradings"
+  "sector": "Trading"
 }

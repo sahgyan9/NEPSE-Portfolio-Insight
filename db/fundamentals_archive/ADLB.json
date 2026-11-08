@@ -1,0 +1,29 @@
+{
+  "symbol": "ADLB",
+  "full_name": "Adarsha Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 880.6,
+      "pb_ratio": 9.36,
+      "eps_ttm": 1.34,
+      "book_value": 126.13,
+      "roe": 1.07,
+      "roa": null,
+      "graham_number": 61.67,
+      "net_profit_ttm": 250560.0,
+      "revenue_ttm": 31130510.0,
+      "shares_outstanding": 248400.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Adarsha Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

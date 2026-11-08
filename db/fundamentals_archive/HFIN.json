@@ -43,7 +43,49 @@
       "trade_turnover": 21919407,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 514.9,
+      "pe_ratio": -42.106793672336,
+      "pb_ratio": 4.7995140270668,
+      "eps_ttm": -12.2284305,
+      "book_value": 107.281695,
+      "roe": 0.0,
+      "roa": -5.555129201326,
+      "graham_number": null,
+      "shares_outstanding": 20000000.0,
+      "week52_high": 1386.0,
+      "week52_low": 111.8,
+      "captured_at": "2026-11-07",
+      "sector": "Hotels",
+      "discount_from_graham": null,
+      "eps_reported": -12.23,
+      "net_margin_ttm": -128.49,
+      "asset_turnover_ttm": 4.32,
+      "net_profit_ttm": -244568610.0,
+      "revenue_ttm": 190335460.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 80.0,
+      "public_float": 19.6,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 23250,
+      "trade_turnover": 12592847.1,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hotels"
+  "sector": "Hotels & Tourism"
 }

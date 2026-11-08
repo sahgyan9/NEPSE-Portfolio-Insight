@@ -1,10 +1,11 @@
 {
-  "last_run": "2026-07-29T12:07:08.326902",
+  "last_run": "2026-10-30T08:32:56.864934",
   "last_source": "browser_harvest",
   "last_stats": {
-    "new": 0,
-    "updated": 269,
-    "fundamentals": 269,
-    "skipped": 0
+    "new": 5,
+    "updated": 273,
+    "skipped_funds": 0,
+    "no_data": 6,
+    "failed": 0
   }
 }

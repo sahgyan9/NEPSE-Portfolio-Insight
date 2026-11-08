@@ -75,22 +75,124 @@ def check_duplicate(symbol: str, fy: str, quarter: int) -> bool:
     return False
 
 
-def save_quarter(symbol: str, quarter_data: dict, allow_overwrite: bool = False):
+def normalize_sector(s: str | None, name: str | None = None) -> str:
+    """Normalize NEPSE sector strings to canonical names used across the platform."""
+    res = "Others"
+    if s:
+        t = s.lower().strip()
+        if "development" in t:
+            res = "Development Bank"
+        elif "bank" in t:
+            res = "Commercial Bank"
+        elif "microfinance" in t or "laghubitta" in t or "bittiya" in t:
+            res = "Microfinance"
+        elif ("non" in t and "insurance" in t) or "reinsurance" in t:
+            res = "Non-Life Insurance"
+        elif "insurance" in t or "beema" in t or "bima" in t:
+            res = "Life Insurance"
+        elif "hydro" in t:
+            res = "Hydropower"
+        elif any(k in t for k in ("manufactur", "distiller", "cement", "processing", "spinning", "lube")):
+            res = "Manufacturing"
+        elif "hotel" in t or "tourism" in t:
+            res = "Hotels & Tourism"
+        elif "invest" in t:
+            res = "Investment"
+        elif "trad" in t:
+            res = "Trading"
+        elif "finance" in t:
+            res = "Finance"
+        elif "fund" in t or "mutual" in t:
+            res = "Mutual Fund"
+        elif "debenture" in t or "bond" in t or "preference" in t:
+            res = "Debt"
+
+    # Company name resolution (resolves 'Others' and corrects obvious misclassifications)
+    if name:
+        nt = name.lower().strip()
+        # High confidence mutual funds / bonds
+        if any(k in nt for k in ("mutual fund", "balanced fund", "equity fund", "growth fund", "stable fund", "flexi cap fund", "large cap fund", "focused equity fund", "bluechip fund", "samriddhi yojana", "sammunat yojana", "dhanabriddhi yojana", "sabal yojana", "santulit yojana", "unnati kosh", "yojana", "fund")):
+            return "Mutual Fund"
+        if "debenture" in nt or "bond" in nt:
+            return "Debt"
+        if "laghubitta" in nt or "microfinance" in nt or "bittiya" in nt:
+            return "Microfinance"
+        if "development bank" in nt or "bikas bank" in nt or "bikash bank" in nt:
+            return "Development Bank"
+        if "bank" in nt and "world bank" not in nt:
+            return "Commercial Bank"
+        if "finance" in nt:
+            return "Finance"
+        if "life insurance" in nt or "jeewan beema" in nt:
+            return "Life Insurance"
+        if any(k in nt for k in ("non-life", "general insurance", "reinsurance", "micro insurance", "nirjiban beema", "beema company")):
+            return "Non-Life Insurance"
+        if "insurance" in nt or "beema" in nt:
+            return "Life Insurance" if "life" in nt else "Non-Life Insurance"
+        if any(k in nt for k in ("hydropower", "hydro", "power", "urja", "energy", "jalbidhyut", "jalvidhyut", "jalavidyut", "jalavidhyut", "jal bidyut", "jal vidhyut", "bidyut", "vidhyut", "rivers limited", "green ventures")):
+            return "Hydropower"
+        if any(k in nt for k in ("distillery", "cement", "lube", "bottlers", "steel", "spinning", "rubber", "manufacturing", "paints", "minerals", "colour", "pharmaceuticals", "agritech", "panel", "unilever")):
+            return "Manufacturing"
+        if any(k in nt for k in ("hotel", "resort", "tourism", "cablecar", "darshan", "chandragiri")):
+            return "Hotels & Tourism"
+        if any(k in nt for k in ("trading", "bishal bazar")):
+            return "Trading"
+        if any(k in nt for k in ("investment", "holdings", "capital", "trust", "infrastructure and development")):
+            return "Investment"
+
+    return res
+
+
+def _merge_quarter_record(existing: dict, incoming: dict):
+    """Deep-merge incoming quarter metrics into existing quarter without data loss."""
+    # Merge computed ratios
+    ex_computed = existing.setdefault("computed", {})
+    for k, v in (incoming.get("computed") or {}).items():
+        if v is not None or k not in ex_computed:
+            ex_computed[k] = v
+
+    # Merge raw balance sheet / P&L fields
+    ex_raw = existing.setdefault("raw", {})
+    for k, v in (incoming.get("raw") or {}).items():
+        if v is not None or k not in ex_raw:
+            ex_raw[k] = v
+
+    # Merge YoY growth
+    ex_yoy = existing.setdefault("yoy", {})
+    for k, v in (incoming.get("yoy") or {}).items():
+        if v is not None or k not in ex_yoy:
+            ex_yoy[k] = v
+
+    # Merge raw_keys_order preserving sequence
+    existing_keys = existing.get("raw_keys_order") or list(ex_raw.keys())
+    incoming_keys = incoming.get("raw_keys_order") or list((incoming.get("raw") or {}).keys())
+    for k in incoming_keys:
+        if k not in existing_keys:
+            existing_keys.append(k)
+    existing["raw_keys_order"] = existing_keys
+
+    # Refresh timestamp and label
+    if incoming.get("quarter_label"):
+        existing["quarter_label"] = incoming["quarter_label"]
+    existing["parsed_at"] = incoming.get("parsed_at") or datetime.now().isoformat()
+    if incoming.get("sector"):
+        existing["sector"] = normalize_sector(incoming["sector"])
+
+
+def save_quarter(symbol: str, quarter_data: dict, allow_overwrite: bool = False, merge: bool = True):
     """
-    Save a parsed quarter to the database.
+    Save or merge a parsed quarter to the database.
 
     Args:
-        symbol:         NEPSE stock symbol (e.g. "SAHAS")
-        quarter_data:   Result dict from pdf_parser.parse_pdf()
-        allow_overwrite: If True, replaces existing quarter (use with caution)
-
-    Raises:
-        DuplicateQuarterError: if quarter already exists and allow_overwrite=False
+        symbol:          NEPSE stock symbol (e.g. "SAHAS")
+        quarter_data:    Dictionary with fy, quarter, computed, raw, yoy
+        allow_overwrite: If True, allows updating existing quarter
+        merge:           If True, deep-merges rather than fully replacing existing quarter
     """
     fy      = quarter_data["fy"]
     quarter = quarter_data["quarter"]
 
-    if not allow_overwrite and check_duplicate(symbol, fy, quarter):
+    if not allow_overwrite and not merge and check_duplicate(symbol, fy, quarter):
         raise DuplicateQuarterError(
             f"{symbol} – {quarter_data.get('quarter_label', f'Q{quarter} FY {fy}')} "
             f"already exists in the database."
@@ -99,21 +201,72 @@ def save_quarter(symbol: str, quarter_data: dict, allow_overwrite: bool = False)
     data = load_symbol_data(symbol)
 
     # Update company-level metadata from latest parse
-    data["symbol"]       = symbol.upper()
-    data["sector"]       = quarter_data.get("sector", data.get("sector"))
-    data["company_name"] = quarter_data.get("company_name", data.get("company_name"))
+    data["symbol"] = symbol.upper()
+    sec = quarter_data.get("sector") or data.get("sector")
+    if sec:
+        data["sector"] = normalize_sector(sec)
+    if quarter_data.get("company_name"):
+        data["company_name"] = quarter_data["company_name"]
 
-    # Remove old entry if overwriting
-    if allow_overwrite:
-        data["quarters"] = [
-            q for q in data["quarters"]
-            if not (q["fy"] == fy and q["quarter"] == quarter)
-        ]
+    # Check if quarter already exists
+    existing_q = next((q for q in data["quarters"]
+                       if q.get("fy") == fy and q.get("quarter") == quarter), None)
 
-    # Append and re-sort
-    data["quarters"].append(quarter_data)
+    if existing_q:
+        if merge:
+            _merge_quarter_record(existing_q, quarter_data)
+        elif allow_overwrite:
+            data["quarters"] = [
+                q for q in data["quarters"]
+                if not (q.get("fy") == fy and q.get("quarter") == quarter)
+            ]
+            data["quarters"].append(quarter_data)
+    else:
+        # Normalize quarter record sector before appending
+        if quarter_data.get("sector"):
+            quarter_data["sector"] = normalize_sector(quarter_data["sector"])
+        data["quarters"].append(quarter_data)
+
     data["quarters"].sort(key=_sort_key)
+    save_symbol_data(symbol, data)
+    return data
 
+
+def upsert_quarters(symbol: str, quarters_list: list, company_name: str | None = None,
+                    sector: str | None = None) -> dict:
+    """
+    Batch upsert multiple quarters for a symbol, preserving existing quarters,
+    appending new quarters chronologically, and deep-merging matching quarters.
+    """
+    if not quarters_list:
+        return load_symbol_data(symbol)
+
+    data = load_symbol_data(symbol)
+    data["symbol"] = symbol.upper()
+    if company_name:
+        data["company_name"] = company_name
+    if sector:
+        data["sector"] = normalize_sector(sector)
+
+    # Index existing quarters by (fy, quarter)
+    by_key = {(q.get("fy"), q.get("quarter")): q for q in data.get("quarters", [])}
+
+    for incoming in quarters_list:
+        fy = incoming.get("fy")
+        q = incoming.get("quarter")
+        if not fy or not q:
+            continue
+        key = (fy, q)
+        if key in by_key:
+            _merge_quarter_record(by_key[key], incoming)
+        else:
+            if sector and not incoming.get("sector"):
+                incoming["sector"] = normalize_sector(sector)
+            elif incoming.get("sector"):
+                incoming["sector"] = normalize_sector(incoming["sector"])
+            by_key[key] = incoming
+
+    data["quarters"] = sorted(by_key.values(), key=_sort_key)
     save_symbol_data(symbol, data)
     return data
 

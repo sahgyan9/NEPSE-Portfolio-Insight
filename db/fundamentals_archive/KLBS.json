@@ -1,0 +1,29 @@
+{
+  "symbol": "KLBS",
+  "full_name": "Khaptad Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": -28.06,
+      "pb_ratio": 10.3,
+      "eps_ttm": -29.79,
+      "book_value": 81.2,
+      "roe": -37.0,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -8936840.0,
+      "revenue_ttm": 33016560.0,
+      "shares_outstanding": 400000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Khaptad Laghubitta Bittiya Sanstha Ltd"
+    }
+  ]
+}

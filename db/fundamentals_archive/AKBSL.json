@@ -1,0 +1,29 @@
+{
+  "symbol": "AKBSL",
+  "full_name": "Adhikhola Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q2",
+      "fiscal_year": "2079-80",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": 62.95,
+      "pb_ratio": 5.93,
+      "eps_ttm": 18.99,
+      "book_value": 171.38,
+      "roe": 11.08,
+      "roa": null,
+      "graham_number": 270.6,
+      "net_profit_ttm": 11296210.0,
+      "revenue_ttm": 98407910.0,
+      "shares_outstanding": 1190000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Adhikhola Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

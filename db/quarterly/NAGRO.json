@@ -1,0 +1,142 @@
+{
+  "symbol": "NAGRO",
+  "sector": "Microfinance",
+  "company_name": "Nepal Agro Laghubitta Bittiya Sanstha Limited",
+  "quarters": [
+    {
+      "symbol": "NAGRO",
+      "fy": "2076-77",
+      "quarter": 4,
+      "quarter_label": "Q4 76-77",
+      "parsed_at": "2026-11-07T09:21:32.049945",
+      "raw": {
+        "Paid Up Capital": 57244470.0,
+        "Reserve and Surplus": 21112370.0,
+        "Total Equity": 78356840.0,
+        "Total Assets": 866603120.0,
+        "Deposits from Customers": 250078510.0,
+        "Borrowings": 499620860.0,
+        "Loans and Advances to Customers": 723813370.0,
+        "Investments": 1000000.0,
+        "Interest Income": 121488990.0,
+        "Net Interest Income": 47015590.0,
+        "Total Operating Income": 64095.68,
+        "Net Profit": 10971720.0,
+        "Number of Shares": 572444.7,
+        "EPS(Rs.)": 19.17,
+        "Book Value(Rs.)": 136.88,
+        "ROE": 14.0,
+        "CAR": 9.57,
+        "NPL": 1.55
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Total Assets",
+        "Deposits from Customers",
+        "Borrowings",
+        "Loans and Advances to Customers",
+        "Investments",
+        "Interest Income",
+        "Net Interest Income",
+        "Total Operating Income",
+        "Net Profit",
+        "Number of Shares",
+        "EPS(Rs.)",
+        "Book Value(Rs.)",
+        "ROE",
+        "CAR",
+        "NPL"
+      ],
+      "computed": {
+        "eps_ttm": 19.17,
+        "bvps": 136.88,
+        "roe_ttm": 14.0,
+        "roa_ttm": null,
+        "net_profit_ttm": 10971720.0,
+        "revenue_ttm": 121488990.0,
+        "graham_number": 242.98
+      },
+      "yoy": {},
+      "sector": "Microfinance"
+    },
+    {
+      "symbol": "NAGRO",
+      "fy": "2077-78",
+      "quarter": 1,
+      "quarter_label": "Q1 77-78",
+      "parsed_at": "2026-11-07T09:21:32.049783",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Microfinance"
+    },
+    {
+      "symbol": "NAGRO",
+      "fy": "2077-78",
+      "quarter": 2,
+      "quarter_label": "Q2 77-78",
+      "parsed_at": "2026-11-07T09:21:32.049770",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Microfinance"
+    },
+    {
+      "symbol": "NAGRO",
+      "fy": "2077-78",
+      "quarter": 3,
+      "quarter_label": "Q3 77-78",
+      "parsed_at": "2026-11-07T09:21:32.049755",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Microfinance"
+    },
+    {
+      "symbol": "NAGRO",
+      "fy": "2077-78",
+      "quarter": 4,
+      "quarter_label": "Q4 77-78",
+      "parsed_at": "2026-11-07T09:21:32.049726",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Microfinance"
+    }
+  ],
+  "last_updated": "2026-11-07T09:21:32.051159"
+}

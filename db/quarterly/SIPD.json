@@ -1,0 +1,110 @@
+{
+  "symbol": "SIPD",
+  "sector": "Hydropower",
+  "company_name": "Shikhar power Development Limited",
+  "quarters": [
+    {
+      "symbol": "SIPD",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T10:20:29.632309",
+      "raw": {
+        "Paid Up Capital": 980000000.0,
+        "Reserve and Surplus": -33493070.0,
+        "Total Equity": 946506930.0,
+        "Borrowings": 667823430.0,
+        "Current Liabilities": 3898520.0,
+        "Current Assets": 248243220.0,
+        "Total Assets": 1619186250.0,
+        "Revenue": 25836350.0,
+        "Gross Profit": 23611870.0,
+        "Operating Profit": -10537640.0,
+        "Net Profit": -48664510.0,
+        "Number of Shares": 9800000.0,
+        "EPS Reported": -6.62,
+        "Book Value Reported": 96.58,
+        "ROE Reported": -6.86
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -6.6193665132653,
+        "bvps": 96.58233979591837,
+        "roe_ttm": 0.0,
+        "roa_ttm": -4.0063205718304,
+        "net_profit_ttm": -64869791.83,
+        "revenue_ttm": 34428030.84
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "SIPD",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:20:29.632299",
+      "raw": {
+        "Paid Up Capital": 980000000.0,
+        "Reserve and Surplus": -61564610.0,
+        "Total Equity": 918435390.0,
+        "Borrowings": 667473430.0,
+        "Current Liabilities": 5348690.0,
+        "Current Assets": 229949100.0,
+        "Total Assets": 1591075810.0,
+        "Revenue": 36322790.0,
+        "Gross Profit": 27223460.0,
+        "Operating Profit": -25742890.0,
+        "Net Profit": -75784400.0,
+        "Number of Shares": 9800000.0,
+        "EPS Reported": -7.73,
+        "Book Value Reported": 93.72,
+        "ROE Reported": -8.25
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -7.7331020408163,
+        "bvps": 93.71789693877551,
+        "roe_ttm": 0.0,
+        "roa_ttm": -4.7630917096276,
+        "net_profit_ttm": -75784400.0,
+        "revenue_ttm": 36322790.0
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T10:20:29.632816"
+}

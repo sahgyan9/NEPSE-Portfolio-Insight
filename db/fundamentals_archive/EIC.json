@@ -1,0 +1,29 @@
+{
+  "symbol": "EIC",
+  "full_name": "Everest Insurance Co. Ltd.",
+  "sector": "Non-Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2078-79-Q3",
+      "fiscal_year": "2078-79",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 88.97,
+      "pb_ratio": 4.2,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Everest Insurance Co. Ltd."
+    }
+  ]
+}

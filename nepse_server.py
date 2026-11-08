@@ -1803,9 +1803,99 @@ def upload_quarterly_pdf():
         except Exception:
             pass
 
+_quarterly_sync_lock = threading.Lock()
+
+
+def _trigger_quarterly_sync(symbols: list | None = None, force: bool = False):
+    """Run full or targeted harvest in background thread with single-instance lock."""
+    if not _quarterly_sync_lock.acquire(blocking=False):
+        print("[nepse_server] Quarterly sync already running in another thread.")
+        return False, "Quarterly sync is already in progress."
+    try:
+        python = sys.executable
+        project_root = os.path.dirname(os.path.abspath(__file__))
+        script = os.path.join(project_root, "tools", "harvest_all_quarterly.py")
+        cmd = [python, script]
+        if symbols:
+            cmd.extend(["--symbols"] + [s.upper() for s in symbols])
+        else:
+            cmd.append("--all")
+        if force:
+            cmd.append("--force")
+        print(f"[nepse_server] Launching quarterly harvest: {' '.join(cmd)}")
+        subprocess.run(cmd, cwd=project_root)
+        return True, "Sync completed successfully."
+    except Exception as e:
+        print(f"[nepse_server] Quarterly sync error: {e}")
+        return False, str(e)
+    finally:
+        _quarterly_sync_lock.release()
+
+
+def _quarterly_sync_loop():
+    """Background daemon: checks every 6 hours if quarterly sync is needed (>7 days old)."""
+    time.sleep(60)  # wait for initial startup
+    while True:
+        try:
+            status_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "db", "quarterly_sync_status.json")
+            needs_sync = True
+            if os.path.exists(status_file):
+                try:
+                    with open(status_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    last_sync = data.get("last_sync")
+                    if last_sync:
+                        last_dt = datetime.fromisoformat(last_sync)
+                        # Fresh within 7 days and has indexed the bulk universe
+                        if (datetime.now() - last_dt).days < 7 and data.get("synced", 0) >= 200:
+                            needs_sync = False
+                except Exception:
+                    pass
+            if needs_sync:
+                print("[QuarterlySync] Sync is due or incomplete -- starting background harvest...")
+                # 1. Prioritize active portfolio holdings first
+                try:
+                    portfolio = _load_json_file(PORTFOLIO_PATH, {"holdings": []})
+                    port_symbols = sorted({h["symbol"].upper() for h in portfolio.get("holdings", []) if h.get("symbol")})
+                    if port_symbols:
+                        print(f"[QuarterlySync] Syncing {len(port_symbols)} portfolio holdings first: {', '.join(port_symbols[:8])}...")
+                        _trigger_quarterly_sync(symbols=port_symbols, force=True)
+                except Exception as e:
+                    print(f"[QuarterlySync] Portfolio priority sync error: {e}")
+                # 2. Sync general market universe in background
+                _trigger_quarterly_sync(force=False)
+        except Exception:
+            print(f"[QuarterlySync] error: {traceback.format_exc()}")
+        time.sleep(6 * 3600)  # check every 6 hours
+
+
+@app.route('/api/quarterly/sync-status', methods=['GET'])
+def get_quarterly_sync_status():
+    """Return live sync status and progress of the quarterly harvester."""
+    status_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "db", "quarterly_sync_status.json")
+    if os.path.exists(status_file):
+        try:
+            with open(status_file, "r", encoding="utf-8") as f:
+                return jsonify(json.load(f))
+        except Exception as e:
+            return jsonify({"status": "error", "error": str(e)}), 500
+    return jsonify({"status": "idle", "last_sync": None, "total": 0, "synced": 0})
+
+
+@app.route('/api/quarterly/sync-all', methods=['POST', 'OPTIONS'])
+def trigger_quarterly_sync_all():
+    """Trigger an asynchronous background harvest for the entire NEPSE universe."""
+    if request.method == 'OPTIONS':
+        return '', 204
+    force = request.args.get('force', 'false').lower() == 'true'
+    t = threading.Thread(target=_trigger_quarterly_sync, kwargs={"force": force}, daemon=True)
+    t.start()
+    return jsonify({"message": "Quarterly harvest started in background", "status": "running"}), 202
+
+
 @app.route('/api/quarterly/fetch/<symbol>', methods=['POST', 'OPTIONS'])
 def fetch_quarterly_data(symbol: str):
-    """Scrape NepseAlpha, parse the markdown, and upsert quarterly data."""
+    """Harvest quarterly data and balance sheets for a specific symbol using HamroShare + fallback."""
     if request.method == 'OPTIONS':
         return '', 204
     
@@ -1814,50 +1904,19 @@ def fetch_quarterly_data(symbol: str):
 
     symbol = symbol.upper()
     try:
-        python = sys.executable  # use the same venv Python running this server
+        python = sys.executable
         project_root = os.path.dirname(os.path.abspath(__file__))
-
-        # Step 1: Scrape NepseAlpha.
-        # The direct scraper talks to NepseAlpha over plain HTTP and needs no
-        # API key; the Firecrawl one burns credits and dies without
-        # FIRECRAWL_API_KEY. Both write the same two markdown files into .tmp/,
-        # so step 2 is unchanged either way. Try keyless first, keep Firecrawl
-        # only as a fallback for the rare page the direct parser can't read.
-        scrapers = [
-            ("direct", "tools/scrape_nepsealpha_direct.py"),
-            ("firecrawl", "tools/scrape_nepsealpha.py"),
-        ]
-        scrape_res = None
-        attempts = []
-        for label, script in scrapers:
-            print(f"[nepse_server] Scraping NepseAlpha for {symbol} via {label}...")
-            scrape_res = subprocess.run(
-                [python, script, symbol],
-                capture_output=True, text=True, cwd=project_root
-            )
-            if scrape_res.returncode == 0:
-                break
-            detail = scrape_res.stderr or scrape_res.stdout or "No output"
-            attempts.append(f"[{label}] {detail.strip()}")
-            print(f"[nepse_server] {label} scrape failed for {symbol}: {detail}")
-        else:
-            return jsonify({
-                'error': f'Scrape failed for {symbol}',
-                'details': "\n\n".join(attempts) or "No output",
-            }), 500
-
-        # Step 2: Parse and upsert
-        print(f"[nepse_server] Parsing markdown for {symbol}...")
-        parse_res = subprocess.run(
-            [python, "tools/parse_nepsealpha_md.py", symbol],
+        script = os.path.join(project_root, "tools", "harvest_all_quarterly.py")
+        print(f"[nepse_server] Fetching quarterly data for {symbol}...")
+        res = subprocess.run(
+            [python, script, "--symbols", symbol, "--force"],
             capture_output=True, text=True, cwd=project_root
         )
-        if parse_res.returncode != 0:
-            detail = parse_res.stderr or parse_res.stdout or "No output"
-            print(f"[nepse_server] Parse failed for {symbol}: {detail}")
-            return jsonify({'error': f'Parse failed for {symbol}', 'details': detail}), 500
+        if res.returncode != 0:
+            detail = res.stderr or res.stdout or "Harvest process failed"
+            return jsonify({'error': f'Failed to fetch data for {symbol}', 'details': detail}), 500
 
-        return jsonify({'message': f'Successfully fetched data for {symbol}', 'details': parse_res.stdout}), 200
+        return jsonify({'message': f'Successfully fetched data for {symbol}', 'details': res.stdout}), 200
 
     except Exception as e:
         print(f"[nepse_server] Unexpected error for {symbol}: {traceback.format_exc()}")
@@ -2092,7 +2151,7 @@ if __name__ == '__main__':
     print("  GET/POST /api/manual-dividends - Get/Set manual dividends")
     print("  POST /api/manual-dividends/add - Add manual dividend entry")
     print("\n" + "=" * 60)
-    print("Starting server on http://localhost:8000")
+    print("Starting server on http://localhost:8002")
     print("=" * 60 + "\n")
 
     # Kick off warmup in background so first browser request finds cached data
@@ -2103,4 +2162,8 @@ if __name__ == '__main__':
     daily_refresh_thread = threading.Thread(target=_daily_refresh_loop, daemon=True)
     daily_refresh_thread.start()
 
-    app.run(host='0.0.0.0', port=8000, debug=False, threaded=True)
+    # Periodic background harvest of quarterly fundamentals & balance sheets
+    quarterly_sync_thread = threading.Thread(target=_quarterly_sync_loop, daemon=True)
+    quarterly_sync_thread.start()
+
+    app.run(host='0.0.0.0', port=8002, debug=False, threaded=True)

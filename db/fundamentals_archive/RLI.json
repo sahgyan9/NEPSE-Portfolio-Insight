@@ -1,0 +1,29 @@
+{
+  "symbol": "RLI",
+  "full_name": "Reliance Life Insurance Limited",
+  "sector": "Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": null,
+      "pb_ratio": 3.2,
+      "eps_ttm": 9.29,
+      "book_value": 120.75,
+      "roe": 7.7,
+      "roa": null,
+      "graham_number": 158.87,
+      "net_profit_ttm": 146357000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 21000000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Life Insurance",
+      "name": "Reliance Life Insurance Limited"
+    }
+  ]
+}

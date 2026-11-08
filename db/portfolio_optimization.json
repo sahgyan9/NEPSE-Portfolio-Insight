@@ -43,46 +43,46 @@
   "suggestion": "BALANCED: Your portfolio has a healthy mix of defensive and growth variance.",
   "valuationWarnings": [
     {
-      "symbol": "CHCL",
-      "type": "OVERVALUED",
-      "message": "CHCL: VERY HIGH P/E (74.98). Consider taking profits if growth slows.",
-      "pe": 74.98
-    },
-    {
       "symbol": "CLI",
       "type": "OVERVALUED",
-      "message": "CLI: VERY HIGH P/E (52.64). Consider taking profits if growth slows.",
-      "pe": 52.64
-    },
-    {
-      "symbol": "HRL",
-      "type": "OVERVALUED",
-      "message": "HRL: VERY HIGH P/E (181.61). Consider taking profits if growth slows.",
-      "pe": 181.61
+      "message": "CLI: VERY HIGH P/E (56.550025711792). Consider taking profits if growth slows.",
+      "pe": 56.550025711792
     },
     {
       "symbol": "NICA",
       "type": "OVERVALUED",
-      "message": "NICA: VERY HIGH P/E (349.5). Consider taking profits if growth slows.",
-      "pe": 349.5
+      "message": "NICA: VERY HIGH P/E (101.75). Consider taking profits if growth slows.",
+      "pe": 101.75
     },
     {
       "symbol": "NIMB",
       "type": "UNDERVALUED",
-      "message": "NIMB: VALUE ZONE P/E (12.9). Potentially undervalued based on earnings.",
-      "pe": 12.9
+      "message": "NIMB: VALUE ZONE P/E (14.81). Potentially undervalued based on earnings.",
+      "pe": 14.81
+    },
+    {
+      "symbol": "SGHC",
+      "type": "UNDERVALUED",
+      "message": "SGHC: VALUE ZONE P/E (9.7). Potentially undervalued based on earnings.",
+      "pe": 9.7
+    },
+    {
+      "symbol": "SNLI",
+      "type": "OVERVALUED",
+      "message": "SNLI: VERY HIGH P/E (52.499811220533). Consider taking profits if growth slows.",
+      "pe": 52.499811220533
     },
     {
       "symbol": "SHL",
       "type": "OVERVALUED",
-      "message": "SHL: VERY HIGH P/E (78.06). Consider taking profits if growth slows.",
-      "pe": 78.06
+      "message": "SHL: VERY HIGH P/E (84.1). Consider taking profits if growth slows.",
+      "pe": 84.1
     },
     {
       "symbol": "SAPIL",
       "type": "OVERVALUED",
-      "message": "SAPIL: VERY HIGH P/E (271.56). Consider taking profits if growth slows.",
-      "pe": 271.56
+      "message": "SAPIL: VERY HIGH P/E (235.24275252057). Consider taking profits if growth slows.",
+      "pe": 235.24275252057
     }
   ]
 }

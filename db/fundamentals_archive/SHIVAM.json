@@ -1,0 +1,24 @@
+{
+  "symbol": "SHIVAM",
+  "full_name": "Shivam Hydropower",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 685.0,
+      "pe_ratio": 48.839871499431,
+      "pb_ratio": 3.6290199006198,
+      "eps_ttm": 14.025425927011,
+      "book_value": 188.75619830108994,
+      "roe": 7.5738066049701995,
+      "roa": 6.0503122389769,
+      "graham_number": 244.06,
+      "shares_outstanding": 55932287.125,
+      "week52_high": 720.0,
+      "week52_low": 566.24390243902,
+      "captured_at": "2026-11-07"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "symbol": "PPCL",
-  "full_name": "Panchthar Power Company Limited",
+  "full_name": "Panchthar Power Compant Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,72 @@
       "trade_turnover": 2452583,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "ltp_at_capture": 346.3,
+      "pe_ratio": 39.14,
+      "pb_ratio": 3.51,
+      "eps_ttm": 8.85,
+      "book_value": 98.65,
+      "roe": 9.19,
+      "roa": 2.91,
+      "graham_number": 140.14,
+      "net_profit_ttm": 85163270.0,
+      "revenue_ttm": 377816870.0,
+      "shares_outstanding": 9625000,
+      "week52_high": 444.4,
+      "week52_low": 303.0,
+      "trade_turnover": 4927911.1,
+      "captured_at": "2026-10-30",
+      "sector": "Hydro Power",
+      "name": "Panchthar Power Company Ltd",
+      "discount_from_graham": 1.4711,
+      "eps_reported": 8.85,
+      "net_margin_ttm": 22.54,
+      "asset_turnover_ttm": 12.91,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 14345,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 10.39,
+      "pb_ratio": 3.21,
+      "eps_ttm": 33.07,
+      "book_value": 106.92,
+      "roe": 30.93,
+      "roa": null,
+      "graham_number": 282.06,
+      "net_profit_ttm": 79578100.0,
+      "revenue_ttm": 144265240.0,
+      "shares_outstanding": 9625000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Panchthar Power Company Ltd"
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

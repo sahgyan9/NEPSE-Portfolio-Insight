@@ -1,0 +1,24 @@
+{
+  "symbol": "SOPL",
+  "full_name": "Sopan Pharmaceuticals Limited",
+  "sector": "Manufacturing",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 608.0,
+      "pe_ratio": 1168.5550313831,
+      "pb_ratio": 5.0080255860279,
+      "eps_ttm": 0.5203006993007,
+      "book_value": 121.40513053613054,
+      "roe": 0.4285656602839,
+      "roa": 0.32967625181044,
+      "graham_number": 37.7,
+      "shares_outstanding": 17160000.0,
+      "week52_high": 1120.0,
+      "week52_low": 304.1,
+      "captured_at": "2026-11-07"
+    }
+  ]
+}

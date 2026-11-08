@@ -1,0 +1,29 @@
+{
+  "symbol": "BPW",
+  "full_name": "Bpw Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2080-81-Q2",
+      "fiscal_year": "2080-81",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": -42.32,
+      "pb_ratio": 13.92,
+      "eps_ttm": -26.97,
+      "book_value": 82.0,
+      "roe": -32.88,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -4044830.0,
+      "revenue_ttm": 13461490.0,
+      "shares_outstanding": 300000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "BPW Laghubitta Bittiya Sanstha"
+    }
+  ]
+}

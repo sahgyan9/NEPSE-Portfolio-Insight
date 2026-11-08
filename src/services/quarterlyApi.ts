@@ -1,5 +1,5 @@
 // src/services/quarterlyApi.ts
-// API service layer for quarterly financial report endpoints (Flask :8000)
+// API service layer for quarterly financial report endpoints (Flask :8002)
 
 import type {
   UploadResponse,
@@ -9,7 +9,7 @@ import type {
 
 const BASE = import.meta.env.DEV
   ? '/api/nepse-server'
-  : 'http://localhost:8000';
+  : 'http://localhost:8002';
 
 // ── Upload PDF ──────────────────────────────────────────────────────────────
 export async function uploadQuarterlyPdf(

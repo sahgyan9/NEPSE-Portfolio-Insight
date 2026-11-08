@@ -1,0 +1,60 @@
+{
+  "symbol": "YMHL",
+  "sector": "Hydropower",
+  "company_name": "Yambaling Hydropower Limited",
+  "quarters": [
+    {
+      "symbol": "YMHL",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-07T10:38:38.916601",
+      "raw": {
+        "Paid Up Capital": 700000000.0,
+        "Reserve and Surplus": -34426580.0,
+        "Total Equity": 665573420.0,
+        "Borrowings": 1159691920.0,
+        "Current Liabilities": 111908530.0,
+        "Current Assets": 42562450.0,
+        "Total Assets": 1872109900.0,
+        "Revenue": 69975850.0,
+        "Gross Profit": 62454280.0,
+        "Operating Profit": 44127470.0,
+        "Net Profit": 19115260.0,
+        "Number of Shares": 7000000.0,
+        "EPS Reported": 10.92,
+        "Book Value Reported": 95.08,
+        "ROE Reported": 11.49
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 10.923005714286,
+        "bvps": 95.08191714285714,
+        "roe_ttm": 11.487994818062,
+        "roa_ttm": 4.0842174917188,
+        "net_profit_ttm": 76461040.0,
+        "revenue_ttm": 279903400.0,
+        "graham_number": 152.87
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    }
+  ],
+  "last_updated": "2026-11-07T10:38:38.917348"
+}

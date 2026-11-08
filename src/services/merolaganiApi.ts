@@ -147,7 +147,7 @@ const FALLBACK_FUNDAMENTALS: Record<string, Partial<MerolaganiFundamentals>> = {
 
 const PYTHON_API_URL = import.meta.env.DEV
     ? '/api/nepse-server'
-    : 'http://localhost:8000'; // Local Python API server
+    : 'http://localhost:8002'; // Local Python API server
 
 /**
  * Fetch from local Python API server
@@ -238,7 +238,7 @@ export const fetchMerolaganiFundamentals = async (
         return cached;
     }
 
-    // Try Python API (Port 8000) first for live scraped data
+    // Try Python API (Port 8002) first for live scraped data
     const pythonData = await fetchFromPythonApi(normalizedSymbol);
     if (pythonData) {
         setCachedData(normalizedSymbol, pythonData);

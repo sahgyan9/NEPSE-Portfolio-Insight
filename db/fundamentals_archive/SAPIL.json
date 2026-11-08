@@ -1,0 +1,49 @@
+{
+  "symbol": "SAPIL",
+  "full_name": "Sarvottam Paints Industries Limited",
+  "sector": "Manufacturing",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 1078.9,
+      "pe_ratio": 235.24275252057,
+      "pb_ratio": 10.587328657183,
+      "eps_ttm": 4.5863262032086,
+      "book_value": 101.90483689839573,
+      "roe": 4.5005971677099,
+      "roa": 3.5813567157699,
+      "graham_number": 102.55,
+      "shares_outstanding": 3740000.0,
+      "week52_high": 1312.7272727273,
+      "week52_low": 313.63636363636,
+      "captured_at": "2026-11-07",
+      "sector": "Manufacturing And Processing",
+      "discount_from_graham": 10.1559,
+      "eps_reported": 5.04,
+      "net_margin_ttm": 8.15,
+      "asset_turnover_ttm": 43.92,
+      "net_profit_ttm": 17152860.0,
+      "revenue_ttm": 210348800.0,
+      "dividend_payout_ratio": 2.1804,
+      "dividend_to_ltp": 0.0087,
+      "promoter_holding": 75.0,
+      "public_float": 23.25,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 13466,
+      "trade_turnover": 15283797.8,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ]
+}

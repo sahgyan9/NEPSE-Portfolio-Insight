@@ -1,0 +1,29 @@
+{
+  "symbol": "RRHP",
+  "full_name": "Rairang Hydropower Development Company Ltd.",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2078-79-Q3",
+      "fiscal_year": "2078-79",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 43.02,
+      "pb_ratio": 5.1,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Rairang Hydropower Development Company Ltd."
+    }
+  ]
+}

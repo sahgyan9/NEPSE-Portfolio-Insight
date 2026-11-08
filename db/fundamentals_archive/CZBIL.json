@@ -1,6 +1,6 @@
 {
   "symbol": "CZBIL",
-  "full_name": "Citizen Bank International Limited",
+  "full_name": "Citizens Bank International Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,72 @@
       "trade_turnover": 17017938.8,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "ltp_at_capture": 225.5,
+      "pe_ratio": 17.3,
+      "pb_ratio": 1.46,
+      "eps_ttm": 13.04,
+      "book_value": 154.61,
+      "roe": 8.9,
+      "roa": 0.84,
+      "graham_number": 212.95,
+      "net_profit_ttm": 2098603030.0,
+      "revenue_ttm": 15011949880.0,
+      "shares_outstanding": 160991788,
+      "week52_high": 226.4,
+      "week52_low": 179.19,
+      "trade_turnover": 112513573.8,
+      "captured_at": "2026-10-30",
+      "sector": "Commercial Banks",
+      "name": "Citizens Bank International Limited",
+      "discount_from_graham": 0.0589,
+      "eps_reported": 13.53,
+      "net_margin_ttm": 13.98,
+      "asset_turnover_ttm": 5.98,
+      "dividend_payout_ratio": 0.3069,
+      "dividend_to_ltp": 0.0177,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 505551,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 81.72,
+      "pb_ratio": 1.41,
+      "eps_ttm": 2.68,
+      "book_value": 155.43,
+      "roe": 1.72,
+      "roa": null,
+      "graham_number": 96.81,
+      "net_profit_ttm": 107703270.0,
+      "revenue_ttm": 3633065150.0,
+      "shares_outstanding": 160967472.32,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Citizens Bank International Limited"
     }
   ],
-  "sector": "Commercial Banks"
+  "sector": "Commercial Bank"
 }

@@ -1,6 +1,6 @@
 {
   "symbol": "AHPC",
-  "full_name": "Arun Valley Hydropower Development Co. Ltd.",
+  "full_name": "Arun Valley Hydropower Development Company Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 9319937.1,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 79.32,
+      "pb_ratio": 2.36,
+      "eps_ttm": 3.41,
+      "book_value": 109.71,
+      "roe": 3.11,
+      "roa": null,
+      "graham_number": 91.75,
+      "net_profit_ttm": 137892440.0,
+      "revenue_ttm": 332510120.0,
+      "shares_outstanding": 40404031.5,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Arun Valley Hydropower Development Company Limited",
+      "discount_from_graham": 2.0659,
+      "eps_reported": 3.41,
+      "net_margin_ttm": 41.47,
+      "asset_turnover_ttm": 6.98,
+      "dividend_payout_ratio": 1.5383,
+      "dividend_to_ltp": 0.0187,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 114708,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

@@ -1,0 +1,29 @@
+{
+  "symbol": "MKLB",
+  "full_name": "Manakamana Smart Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2080-81-Q3",
+      "fiscal_year": "2080-81",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": -118.44,
+      "pb_ratio": 11.21,
+      "eps_ttm": -9.87,
+      "book_value": 104.29,
+      "roe": -9.47,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -10993000.0,
+      "revenue_ttm": 75999700.0,
+      "shares_outstanding": 1484784.1,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Manakamana Smart Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

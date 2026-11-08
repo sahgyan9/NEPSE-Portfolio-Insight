@@ -1,0 +1,29 @@
+{
+  "symbol": "SRBL",
+  "full_name": "Sunrise Bank Limited",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 11.22,
+      "pb_ratio": 0.99,
+      "eps_ttm": 15.43,
+      "book_value": 175.14,
+      "roe": 9.0,
+      "roa": null,
+      "graham_number": 246.59,
+      "net_profit_ttm": 1170968480.0,
+      "revenue_ttm": 13391938720.0,
+      "shares_outstanding": 101188928.09,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Sunrise Bank Limited"
+    }
+  ]
+}

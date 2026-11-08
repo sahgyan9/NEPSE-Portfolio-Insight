@@ -1,6 +1,6 @@
 {
   "symbol": "SIPD",
-  "full_name": "Shikhar Power Development Limited",
+  "full_name": "Shikhar power Development Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 6849640,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 498.0,
+      "pe_ratio": -64.398477786985,
+      "pb_ratio": 5.3138196253522,
+      "eps_ttm": -7.7331020408163,
+      "book_value": 93.71789693877551,
+      "roe": 0.0,
+      "roa": -4.7630917096276,
+      "graham_number": null,
+      "shares_outstanding": 9800000.0,
+      "week52_high": 1058.1,
+      "week52_low": 312.7,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": null,
+      "eps_reported": -7.73,
+      "net_margin_ttm": -208.64,
+      "asset_turnover_ttm": 2.28,
+      "net_profit_ttm": -75784400.0,
+      "revenue_ttm": 36322790.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 67.35,
+      "public_float": 21.06,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 9077,
+      "trade_turnover": 4820644.0,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

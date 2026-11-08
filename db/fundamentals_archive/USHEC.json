@@ -43,7 +43,50 @@
       "trade_turnover": 1895751,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 13.12,
+      "pb_ratio": 4.03,
+      "eps_ttm": 15.46,
+      "book_value": 119.02,
+      "roe": 12.99,
+      "roa": null,
+      "graham_number": 203.47,
+      "net_profit_ttm": 208763010.0,
+      "revenue_ttm": 738286140.0,
+      "shares_outstanding": 13500000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Upper solu Electric company Limited",
+      "discount_from_graham": 1.6187,
+      "eps_reported": 15.46,
+      "net_margin_ttm": 455.87,
+      "asset_turnover_ttm": 0.95,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 51182,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

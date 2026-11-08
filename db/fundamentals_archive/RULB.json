@@ -1,0 +1,29 @@
+{
+  "symbol": "RULB",
+  "full_name": "Rastra Utthan Laghubitta Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 39.53,
+      "pb_ratio": 4.19,
+      "eps_ttm": 19.1,
+      "book_value": 180.17,
+      "roe": 11.0,
+      "roa": null,
+      "graham_number": 278.26,
+      "net_profit_ttm": 37238920.0,
+      "revenue_ttm": 393783690.0,
+      "shares_outstanding": 2599550.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Rastra Utthan Laghubitta Sanstha Limited"
+    }
+  ]
+}

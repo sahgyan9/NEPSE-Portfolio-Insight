@@ -1,0 +1,29 @@
+{
+  "symbol": "KRBL",
+  "full_name": "Karnali Development Bank Limited",
+  "sector": "Development Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2081-82-Q1",
+      "fiscal_year": "2081-82",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": -51.36,
+      "pb_ratio": 8.31,
+      "eps_ttm": -15.77,
+      "book_value": 97.5,
+      "roe": -16.18,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -19829010.0,
+      "revenue_ttm": 88526080.0,
+      "shares_outstanding": 5028300.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Development Bank",
+      "name": "Karnali Development Bank Limited"
+    }
+  ]
+}

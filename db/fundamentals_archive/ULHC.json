@@ -1,6 +1,6 @@
 {
   "symbol": "ULHC",
-  "full_name": "Upper Lohore Hydropower Company Limited",
+  "full_name": "Upper Lohore Khola Hydropower Company Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,66 @@
       "trade_turnover": 1556640,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "ltp_at_capture": 323.0,
+      "pe_ratio": -56.75,
+      "pb_ratio": 3.65,
+      "eps_ttm": -5.69,
+      "book_value": 88.51,
+      "roe": 0.0,
+      "roa": -2.39,
+      "graham_number": null,
+      "shares_outstanding": 5098040,
+      "week52_high": 587.5,
+      "week52_low": 260.0,
+      "captured_at": "2026-10-30",
+      "sector": "Hydro Power",
+      "discount_from_graham": null,
+      "eps_reported": -5.69,
+      "net_margin_ttm": -56.05,
+      "asset_turnover_ttm": 4.27,
+      "net_profit_ttm": -29018590.0,
+      "revenue_ttm": 51768690.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 7095,
+      "trade_turnover": 2283834.4,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": 320.0,
+      "pe_ratio": -83.365073979178,
+      "pb_ratio": 3.6345658275649,
+      "eps_ttm": -3.8385379479172,
+      "book_value": 88.04352849330331,
+      "roe": 0.0,
+      "roa": -1.5995149720403001,
+      "graham_number": null,
+      "shares_outstanding": 5098040.0,
+      "week52_high": 587.5,
+      "week52_low": 260.0,
+      "captured_at": "2026-11-07"
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

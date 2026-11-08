@@ -1,6 +1,6 @@
 {
   "symbol": "NMBMF",
-  "full_name": "NMB Microfinance Bittiya Sanstha Ltd.",
+  "full_name": "NMB  Microfinance Bittiya Sanstha Ltd.",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 219,
       "trade_turnover": 138189,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 18.67,
+      "pb_ratio": 3.86,
+      "eps_ttm": 20.43,
+      "book_value": 150.76,
+      "roe": 13.55,
+      "roa": null,
+      "graham_number": 263.25,
+      "net_profit_ttm": 147401960.0,
+      "revenue_ttm": 1034684570.0,
+      "shares_outstanding": 7214491.49,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "NMB  Microfinance Bittiya Sanstha Ltd.",
+      "discount_from_graham": 1.3053,
+      "eps_reported": 20.43,
+      "net_margin_ttm": 14.25,
+      "asset_turnover_ttm": 12.24,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 60.0,
+      "public_float": 40.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 2205,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

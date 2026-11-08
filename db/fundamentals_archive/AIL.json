@@ -1,0 +1,29 @@
+{
+  "symbol": "AIL",
+  "full_name": "Ajod Insurance Limited",
+  "sector": "Non-Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 32.28,
+      "pb_ratio": 3.68,
+      "eps_ttm": 13.97,
+      "book_value": 144.81,
+      "roe": 9.65,
+      "roa": null,
+      "graham_number": 213.35,
+      "net_profit_ttm": 104762000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 10000000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Ajod Insurance Ltd"
+    }
+  ]
+}

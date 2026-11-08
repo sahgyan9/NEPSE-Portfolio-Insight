@@ -43,7 +43,50 @@
       "trade_turnover": 6226203,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 29.15,
+      "pb_ratio": 2.77,
+      "eps_ttm": 7.72,
+      "book_value": 81.22,
+      "roe": 9.51,
+      "roa": null,
+      "graham_number": 118.78,
+      "net_profit_ttm": 282314690.0,
+      "revenue_ttm": 1247027270.0,
+      "shares_outstanding": 36559400.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Balephi Hydropower Limited",
+      "discount_from_graham": 0.974,
+      "eps_reported": 7.72,
+      "net_margin_ttm": 22.64,
+      "asset_turnover_ttm": 14.34,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 531201,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

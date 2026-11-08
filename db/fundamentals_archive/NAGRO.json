@@ -1,0 +1,29 @@
+{
+  "symbol": "NAGRO",
+  "full_name": "Nepal Agro Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2077-78-Q4",
+      "fiscal_year": "2077-78",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 15.67,
+      "pb_ratio": 4.41,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Nepal Agro Laghubitta Bittiya Sanstha Ltd."
+    }
+  ]
+}

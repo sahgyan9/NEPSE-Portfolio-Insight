@@ -1,6 +1,6 @@
 {
   "symbol": "MABEL",
-  "full_name": "Mabilung Energy Ltd",
+  "full_name": "Mabilung Energy Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 4663200,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 502.0,
+      "pe_ratio": -431.83123047733,
+      "pb_ratio": 4.9108842165994,
+      "eps_ttm": -1.1624911876918,
+      "book_value": 102.22191724724226,
+      "roe": 0.0,
+      "roa": -0.35888756529166,
+      "graham_number": null,
+      "shares_outstanding": 3858240.0,
+      "week52_high": 884.8,
+      "week52_low": 422.7,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": null,
+      "eps_reported": -1.16,
+      "net_margin_ttm": -3.57,
+      "asset_turnover_ttm": 10.05,
+      "net_profit_ttm": -4485170.0,
+      "revenue_ttm": 125649510.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 51.0,
+      "public_float": 38.22,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 3929,
+      "trade_turnover": 2076987.6,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

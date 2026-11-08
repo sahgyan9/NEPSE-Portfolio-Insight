@@ -1,6 +1,6 @@
 {
   "symbol": "HIDCL",
-  "full_name": "Hydroelectricity Investment and Development Company Ltd",
+  "full_name": "Hydorelectricity Investment and Development Company Ltd",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 31898,
       "trade_turnover": 8293480,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 92.27,
+      "pb_ratio": 2.24,
+      "eps_ttm": 2.73,
+      "book_value": 112.65,
+      "roe": 2.42,
+      "roa": null,
+      "graham_number": 83.18,
+      "net_profit_ttm": 679337000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 249282110.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Investment",
+      "name": "Hydorelectricity Investment and Development Company Ltd",
+      "discount_from_graham": 2.1116,
+      "eps_reported": 2.73,
+      "net_margin_ttm": 65.68,
+      "asset_turnover_ttm": 3.59,
+      "dividend_payout_ratio": 1.2843,
+      "dividend_to_ltp": 0.0135,
+      "promoter_holding": 80.0,
+      "public_float": 20.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 78630,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

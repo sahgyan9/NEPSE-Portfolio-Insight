@@ -1,0 +1,110 @@
+{
+  "symbol": "SKHEL",
+  "sector": "Hydropower",
+  "company_name": "Suryakunda Hydro Electric Limited",
+  "quarters": [
+    {
+      "symbol": "SKHEL",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T10:21:36.528141",
+      "raw": {
+        "Paid Up Capital": 689674400.0,
+        "Reserve and Surplus": -55737910.0,
+        "Total Equity": 633936490.0,
+        "Borrowings": 1723494950.0,
+        "Current Liabilities": 157864560.0,
+        "Current Assets": 123961780.0,
+        "Total Assets": 2437335990.0,
+        "Revenue": 171683760.0,
+        "Gross Profit": 152905160.0,
+        "Operating Profit": 76154180.0,
+        "Net Profit": -22608470.0,
+        "Number of Shares": 6896744.0,
+        "EPS Reported": -4.37,
+        "Book Value Reported": 91.92,
+        "ROE Reported": -4.76
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -4.3697562951445,
+        "bvps": 91.91822836979306,
+        "roe_ttm": 0.0,
+        "roa_ttm": -1.2364766545789,
+        "net_profit_ttm": -30137090.51,
+        "revenue_ttm": 228854452.08
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "SKHEL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:21:36.528131",
+      "raw": {
+        "Paid Up Capital": 689674400.0,
+        "Reserve and Surplus": -66334149.99999999,
+        "Total Equity": 623340250.0,
+        "Borrowings": 1750004210.0,
+        "Current Liabilities": 176940150.0,
+        "Current Assets": 152565270.0,
+        "Total Assets": 2457998960.0,
+        "Revenue": 248685840.0,
+        "Gross Profit": 201548830.0,
+        "Operating Profit": 97524200.0,
+        "Net Profit": -33191180.0,
+        "Number of Shares": 6896744.0,
+        "EPS Reported": -4.81,
+        "Book Value Reported": 90.38,
+        "ROE Reported": -5.32
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -4.8125869250765,
+        "bvps": 90.38181640495863,
+        "roe_ttm": 0.0,
+        "roa_ttm": -1.350333362224,
+        "net_profit_ttm": -33191180.0,
+        "revenue_ttm": 248685840.0
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T10:21:36.528888"
+}

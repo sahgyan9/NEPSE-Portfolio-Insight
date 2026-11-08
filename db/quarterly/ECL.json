@@ -1,0 +1,60 @@
+{
+  "symbol": "ECL",
+  "sector": "Manufacturing",
+  "company_name": "Everest Colour Limited",
+  "quarters": [
+    {
+      "symbol": "ECL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:04:46.205323",
+      "raw": {
+        "Paid Up Capital": 300000000.0,
+        "Reserve and Surplus": 49900530.0,
+        "Total Equity": 349900530.0,
+        "Borrowings": 17462620.0,
+        "Current Liabilities": 53676480.0,
+        "Current Assets": 286961240.0,
+        "Total Assets": 414972790.0,
+        "Revenue from Operation": 172641.59,
+        "Gross Profit": 91257160.0,
+        "Total Operating Profit": 28942840.0,
+        "Net Profit": 22130080.0,
+        "Number of Shares": 3000000.0,
+        "EPS Reported": 7.38,
+        "Book Value Reported": 116.63,
+        "ROE Reported": 6.32
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operation",
+        "Gross Profit",
+        "Total Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 7.3766933333333,
+        "bvps": 116.63351,
+        "roe_ttm": 6.3246774733379,
+        "roa_ttm": 5.3328990558634,
+        "net_profit_ttm": 22130080.0,
+        "revenue_ttm": 172641590.0,
+        "graham_number": 139.13
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T09:04:46.205824"
+}

@@ -1,0 +1,29 @@
+{
+  "symbol": "NSLB",
+  "full_name": "Naya Sarathi Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 97.27,
+      "pb_ratio": 4.51,
+      "eps_ttm": 8.49,
+      "book_value": 164.11,
+      "roe": 5.0,
+      "roa": null,
+      "graham_number": 177.06,
+      "net_profit_ttm": 19314580.0,
+      "revenue_ttm": 483520760.0,
+      "shares_outstanding": 3033952.6,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Naya Sarathi Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

@@ -72,7 +72,7 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
         return () => clearInterval(interval);
     }, [fetchData, marketData?.nepseIndex]);
 
-    if (isLoading) {
+    if (isLoading && !marketData) {
         return <MarketContextSkeleton compact={compact} />;
     }
 

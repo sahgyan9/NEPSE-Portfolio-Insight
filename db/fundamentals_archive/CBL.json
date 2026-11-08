@@ -1,0 +1,29 @@
+{
+  "symbol": "CBL",
+  "full_name": "Civil Bank Ltd",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q2",
+      "fiscal_year": "2079-80",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": 16.01,
+      "pb_ratio": 1.59,
+      "eps_ttm": 14.04,
+      "book_value": 135.96,
+      "roe": 10.32,
+      "roa": null,
+      "graham_number": 207.24,
+      "net_profit_ttm": 637022000.0,
+      "revenue_ttm": 6819261000.0,
+      "shares_outstanding": 90758440.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Civil Bank Ltd"
+    }
+  ]
+}

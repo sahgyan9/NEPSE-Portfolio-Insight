@@ -1,0 +1,112 @@
+{
+  "symbol": "PCIL",
+  "sector": "Manufacturing",
+  "company_name": "Palpa Cement Industries Limited",
+  "quarters": [
+    {
+      "symbol": "PCIL",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T09:59:10.663981",
+      "raw": {
+        "Paid Up Capital": 3750000000.0,
+        "Reserve and Surplus": 1109240320.0,
+        "Total Equity": 4859240320.0,
+        "Borrowings": 5394346880.0,
+        "Current Liabilities": 1243362790.0,
+        "Current Assets": 2849550540.0,
+        "Total Assets": 10991929800.0,
+        "Revenue from Operation": 3403945.9,
+        "Gross Profit": 579702400.0,
+        "Total Operating Profit": 380825700.0,
+        "Net Profit": 57311540.0,
+        "Number of Shares": 37500000.0,
+        "EPS Reported": 2.04,
+        "Book Value Reported": 129.58,
+        "ROE Reported": 1.57
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operation",
+        "Gross Profit",
+        "Total Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 2.0372342085333,
+        "bvps": 129.57974186666667,
+        "roe_ttm": 1.5721857284061997,
+        "roa_ttm": 0.69502156773236,
+        "net_profit_ttm": 76396282.82,
+        "revenue_ttm": 4537459884.7,
+        "graham_number": 77.07
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "PCIL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:59:10.663953",
+      "raw": {
+        "Paid Up Capital": 3750000000.0,
+        "Reserve and Surplus": 1093256570.0,
+        "Total Equity": 4843256570.0,
+        "Borrowings": 4911386700.0,
+        "Current Liabilities": 695614990.0,
+        "Current Assets": 2215551740.0,
+        "Total Assets": 10315081000.0,
+        "Revenue from Operation": 4765939.97,
+        "Gross Profit": 773466390.0,
+        "Total Operating Profit": 429397650.0,
+        "Net Profit": 39992670.0,
+        "Number of Shares": 37500000.0,
+        "EPS Reported": 1.07,
+        "Book Value Reported": 129.15,
+        "ROE Reported": 0.83
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operation",
+        "Gross Profit",
+        "Total Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 1.0664712,
+        "bvps": 129.15350853333334,
+        "roe_ttm": 0.8257392401575799,
+        "roa_ttm": 0.38771067333354003,
+        "net_profit_ttm": 39992670.0,
+        "revenue_ttm": 4765939970.0,
+        "graham_number": 55.67
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T09:59:10.665178"
+}

@@ -1,0 +1,29 @@
+{
+  "symbol": "GGBSL",
+  "full_name": "Ghodighoda Laghubitta Bittiya Sanstha Ltd.",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q2",
+      "fiscal_year": "2079-80",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": -76.36,
+      "pb_ratio": 12.07,
+      "eps_ttm": 12.91,
+      "book_value": 344.23,
+      "roe": 3.75,
+      "roa": null,
+      "graham_number": 316.21,
+      "net_profit_ttm": 7141530.0,
+      "revenue_ttm": 271775860.0,
+      "shares_outstanding": 1106325.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "ghodighoda laghubitta bittiya sanstha ltd"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "symbol": "SAPIL",
-  "sector": "MANUFACTURE",
-  "company_name": null,
+  "sector": "Manufacturing",
+  "company_name": "Sarvottam Paints Industries Limited",
   "quarters": [
     {
       "symbol": "SAPIL",
@@ -9,19 +9,19 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-09-12T10:11:17.367881",
+      "parsed_at": "2026-11-07T09:58:43.239444",
       "computed": {
-        "roe_ttm": 4.5,
-        "roa_ttm": 3.58,
+        "roe_ttm": 4.5005971677099,
+        "roa_ttm": 3.5813567157699,
         "net_margin": 8.15,
         "asset_turnover": 43.92,
-        "eps_ttm": 5.04,
-        "bvps": 112.1,
+        "eps_ttm": 4.5863262032086,
+        "bvps": 101.90483689839573,
         "net_profit_till_qtr": 17200000.0,
         "revenue_till_qtr": 210300000.0,
-        "net_profit_ttm": 17200000.0,
-        "revenue_ttm": 210300000.0,
-        "graham_number": 112.75,
+        "net_profit_ttm": 17152860.0,
+        "revenue_ttm": 210348800.0,
+        "graham_number": 102.55,
         "earnings_yield": null,
         "peg_ratio": null,
         "dupont_net_margin": 8.18,
@@ -77,5 +77,5 @@
       "yoy": {}
     }
   ],
-  "last_updated": "2026-09-12T10:11:17.372611"
+  "last_updated": "2026-11-07T09:58:43.240852"
 }

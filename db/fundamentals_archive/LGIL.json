@@ -1,0 +1,29 @@
+{
+  "symbol": "LGIL",
+  "full_name": "Lumbini General Insurance Co. Ltd.",
+  "sector": "Non-Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 34.22,
+      "pb_ratio": 4.15,
+      "eps_ttm": 11.85,
+      "book_value": 187.85,
+      "roe": 6.31,
+      "roa": null,
+      "graham_number": 223.8,
+      "net_profit_ttm": 116700000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 13128000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Lumbini General Insurance Co. Ltd."
+    }
+  ]
+}

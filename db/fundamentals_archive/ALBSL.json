@@ -1,6 +1,6 @@
 {
   "symbol": "ALBSL",
-  "full_name": "Asha Laghubitta Bittiya Sanstha Ltd",
+  "full_name": "Asha Laghubitta Bittiya Sanstha Ltd.",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 580,
       "trade_turnover": 629242,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 35.84,
+      "pb_ratio": 6.7,
+      "eps_ttm": 32.63,
+      "book_value": 174.67,
+      "roe": 18.68,
+      "roa": null,
+      "graham_number": 358.1,
+      "net_profit_ttm": 261939320.0,
+      "revenue_ttm": 1537326330.0,
+      "shares_outstanding": 8026856.77,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Asha Laghubitta Bittiya Sanstha Ltd.",
+      "discount_from_graham": 2.3927,
+      "eps_reported": 32.63,
+      "net_margin_ttm": 17.04,
+      "asset_turnover_ttm": 13.16,
+      "dividend_payout_ratio": 0.2911,
+      "dividend_to_ltp": 0.0078,
+      "promoter_holding": 67.5,
+      "public_float": 32.5,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 13838,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

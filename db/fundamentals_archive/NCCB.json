@@ -1,0 +1,29 @@
+{
+  "symbol": "NCCB",
+  "full_name": "Nepal Credit And Commercial Bank Limited",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q1",
+      "fiscal_year": "2079-80",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 10.53,
+      "pb_ratio": 1.28,
+      "eps_ttm": 18.56,
+      "book_value": 148.94,
+      "roe": 12.46,
+      "roa": null,
+      "graham_number": 249.39,
+      "net_profit_ttm": 516836160.0,
+      "revenue_ttm": 4112393440.0,
+      "shares_outstanding": 111396780.14,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Nepal Credit And Commercial Bank Limited"
+    }
+  ]
+}

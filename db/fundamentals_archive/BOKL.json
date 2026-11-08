@@ -1,0 +1,29 @@
+{
+  "symbol": "BOKL",
+  "full_name": "Bank Of Kathmandu Ltd.",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q1",
+      "fiscal_year": "2079-80",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 20.79,
+      "pb_ratio": 1.22,
+      "eps_ttm": 10.57,
+      "book_value": 174.77,
+      "roe": 6.05,
+      "roa": null,
+      "graham_number": 203.87,
+      "net_profit_ttm": 280615310.0,
+      "revenue_ttm": 3630354680.0,
+      "shares_outstanding": 106239940.72,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Bank of Kathmandu Ltd."
+    }
+  ]
+}

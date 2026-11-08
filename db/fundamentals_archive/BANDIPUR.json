@@ -1,6 +1,6 @@
 {
   "symbol": "BANDIPUR",
-  "full_name": "Bandipur Cable Car and Tourism Limited",
+  "full_name": "Bandipur Cablecar and Tourism Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 9868863,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 553.0,
+      "pe_ratio": -1146.4296728662,
+      "pb_ratio": 6.0493550901744,
+      "eps_ttm": -0.48236713780919,
+      "book_value": 91.41470318021202,
+      "roe": 0.0,
+      "roa": -0.35180275074594,
+      "graham_number": null,
+      "shares_outstanding": 28300000.0,
+      "week52_high": 1165.0,
+      "week52_low": 313.5,
+      "captured_at": "2026-11-07",
+      "sector": "Hotels",
+      "discount_from_graham": null,
+      "eps_reported": -0.48,
+      "net_margin_ttm": -75.9,
+      "asset_turnover_ttm": 0.46,
+      "net_profit_ttm": -13650990.0,
+      "revenue_ttm": 17985050.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 79.29,
+      "public_float": 18.15,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 27315,
+      "trade_turnover": 15793015.2,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hotels"
+  "sector": "Hotels & Tourism"
 }

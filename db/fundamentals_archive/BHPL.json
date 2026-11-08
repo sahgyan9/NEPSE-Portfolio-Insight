@@ -43,7 +43,50 @@
       "trade_turnover": 2394491.2,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": -1430.0,
+      "pb_ratio": 8.57,
+      "eps_ttm": -0.3,
+      "book_value": 50.03,
+      "roe": -0.59,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -742200.0,
+      "revenue_ttm": 30261210.0,
+      "shares_outstanding": 2500000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Barahi Hydropower Public Limited",
+      "discount_from_graham": null,
+      "eps_reported": -0.3,
+      "net_margin_ttm": -2.45,
+      "asset_turnover_ttm": 8.22,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 1635,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

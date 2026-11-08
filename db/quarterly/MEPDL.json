@@ -1,0 +1,60 @@
+{
+  "symbol": "MEPDL",
+  "sector": "Hydropower",
+  "company_name": "Mount Everest Power Development Limited",
+  "quarters": [
+    {
+      "symbol": "MEPDL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:33:08.009980",
+      "raw": {
+        "Paid Up Capital": 860000000.0,
+        "Reserve and Surplus": 97878820.0,
+        "Total Equity": 957878820.0,
+        "Borrowings": 1316083500.0,
+        "Current Liabilities": 28789880.0,
+        "Current Assets": 47524830.0,
+        "Total Assets": 2277952200.0,
+        "Revenue": 337036220.0,
+        "Gross Profit": 291498820.0,
+        "Operating Profit": 205356510.0,
+        "Net Profit": 86778360.0,
+        "Number of Shares": 8600000.0,
+        "EPS Reported": 10.09,
+        "Book Value Reported": 111.38,
+        "ROE Reported": 9.06
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 10.090506976744,
+        "bvps": 111.38125813953488,
+        "roe_ttm": 9.059429876526599,
+        "roa_ttm": 3.8094899445212,
+        "net_profit_ttm": 86778360.0,
+        "revenue_ttm": 337036220.0,
+        "graham_number": 159.02
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T09:33:08.010554"
+}

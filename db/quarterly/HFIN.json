@@ -1,0 +1,107 @@
+{
+  "symbol": "HFIN",
+  "sector": "Hotels & Tourism",
+  "company_name": "Hotel Forest Inn Limited",
+  "quarters": [
+    {
+      "symbol": "HFIN",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T09:16:00.567901",
+      "raw": {
+        "Paid Up Capital": 2000000000.0,
+        "Reserve and Surplus": 210234820.0,
+        "Total Equity": 2210234820.0,
+        "Loans and Borrowings": 1896222290.0,
+        "Current Liabilities": 196846550.0,
+        "Current Assets": 293004660.0,
+        "Total Assets": 4409939750.0,
+        "Revenue from Operations": 131976.88,
+        "Net Profit": -181089690.0,
+        "Number of Shares": 20000000.0,
+        "EPS Reported": -12.07,
+        "Book Value Reported": 110.51,
+        "ROE Reported": -10.92
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Loans and Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operations",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -12.0696278385,
+        "bvps": 110.511741,
+        "roe_ttm": 0.0,
+        "roa_ttm": -5.4738289059391,
+        "net_profit_ttm": -241392556.77,
+        "revenue_ttm": 175925181.04
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "HFIN",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:16:00.567877",
+      "raw": {
+        "Paid Up Capital": 2000000000.0,
+        "Reserve and Surplus": 145633900.0,
+        "Total Equity": 2145633900.0,
+        "Loans and Borrowings": 1936397550.0,
+        "Current Liabilities": 158834110.0,
+        "Current Assets": 294902300.0,
+        "Total Assets": 4402572850.0,
+        "Revenue from Operations": 190335.46,
+        "Gross Profit": 117998820.0,
+        "Net Profit": -244568610.0,
+        "Number of Shares": 20000000.0,
+        "EPS Reported": -12.23,
+        "Book Value Reported": 107.28,
+        "ROE Reported": -11.4
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Loans and Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operations",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -12.2284305,
+        "bvps": 107.281695,
+        "roe_ttm": 0.0,
+        "roa_ttm": -5.555129201326,
+        "net_profit_ttm": -244568610.0,
+        "revenue_ttm": 190335460.0
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T09:16:00.568927"
+}

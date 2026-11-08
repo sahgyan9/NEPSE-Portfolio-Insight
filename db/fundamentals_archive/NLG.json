@@ -43,7 +43,50 @@
       "trade_turnover": 6279960,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 228.11,
+      "pb_ratio": 2.98,
+      "eps_ttm": 2.17,
+      "book_value": 166.36,
+      "roe": 1.3,
+      "roa": null,
+      "graham_number": 90.13,
+      "net_profit_ttm": 57812130.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 26678334.09,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "NLG Insurance Company Ltd.",
+      "discount_from_graham": 4.8181,
+      "eps_reported": 2.17,
+      "net_margin_ttm": 1.44,
+      "asset_turnover_ttm": 42.76,
+      "dividend_payout_ratio": 3.3964,
+      "dividend_to_ltp": 0.014,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 17133,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Non Life Insurance"
+  "sector": "Non-Life Insurance"
 }

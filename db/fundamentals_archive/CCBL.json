@@ -1,0 +1,29 @@
+{
+  "symbol": "CCBL",
+  "full_name": "Century Commercial Bank Ltd.",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q1",
+      "fiscal_year": "2079-80",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 15.67,
+      "pb_ratio": 1.54,
+      "eps_ttm": 13.34,
+      "book_value": 130.52,
+      "roe": 10.22,
+      "roa": null,
+      "graham_number": 197.93,
+      "net_profit_ttm": 318515000.0,
+      "revenue_ttm": 3306941000.0,
+      "shares_outstanding": 95539090.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Century Commercial Bank Ltd."
+    }
+  ]
+}
