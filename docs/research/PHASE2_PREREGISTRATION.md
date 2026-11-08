@@ -23,7 +23,9 @@ reported as "inconclusive", not as "the algorithm works" or "it does not work".
 | `tools/score_sector_leaders.py` | `76ee5142044a8992fd1ea7e90d3e068778d58ea6d685d2706a6bd5e80383f455` |
 | `quarterly_db.py` (sector naming) | `14c723ec2de32ba6a2415ef44e8285ac7cbf5c8b7a3cce7c751dbfb88cf338a2` |
 
-The backtest imports `gate`, `score_universe` and `eps_trend` from that file unchanged. Weights,
+Hashes are over the file content with CRLF line endings normalised to LF, so a Windows
+checkout verifies the same. The backtest imports `gate`, `score_universe` and `eps_trend`
+from that file unchanged. Weights,
 gates, shrinkage (k = 8), the 35.0 unverified-safety default and the 0.80 + 0.20 x coverage
 haircut are all used as-is. The backtest refuses to run if either hash differs.
 
