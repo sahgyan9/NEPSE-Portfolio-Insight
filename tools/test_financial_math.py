@@ -187,7 +187,7 @@ def test_derived_metrics_calculation(mock_quarterly):
     }])
     
     from tools.compute_derived_metrics import calculate_derived_metrics
-    calculate_derived_metrics()
+    calculate_derived_metrics(["NABIL"])
     
     # Read computed data
     quarterly_path = os.path.join(project_root, "db", "quarterly", "NABIL.json")
@@ -297,7 +297,7 @@ def test_derived_metrics_calculation(mock_quarterly):
         }
     ])
     
-    calculate_derived_metrics()
+    calculate_derived_metrics(["NABIL"])
     
     with open(quarterly_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -347,7 +347,7 @@ def test_derived_metrics_calculation(mock_quarterly):
         "yoy": {}
     }])
     
-    calculate_derived_metrics()
+    calculate_derived_metrics(["UPPER"])
     
     upper_path = os.path.join(project_root, "db", "quarterly", "UPPER.json")
     with open(upper_path, "r", encoding="utf-8") as f:
@@ -376,7 +376,7 @@ def test_derived_metrics_calculation(mock_quarterly):
         "yoy": {}
     }])
     
-    calculate_derived_metrics()
+    calculate_derived_metrics(["CLI"])
     
     cli_path = os.path.join(project_root, "db", "quarterly", "CLI.json")
     with open(cli_path, "r", encoding="utf-8") as f:
