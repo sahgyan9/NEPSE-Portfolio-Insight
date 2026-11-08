@@ -80,9 +80,9 @@ class Prices:
         self.calendar = calendar      # sorted union of all session dates
 
     @classmethod
-    def load(cls, symbols=None):
+    def load(cls, symbols=None, prices_dir=None):
         series, cal = {}, set()
-        for path in glob.glob(os.path.join(PRICES_DIR, "*.json")):
+        for path in glob.glob(os.path.join(prices_dir or PRICES_DIR, "*.json")):
             if os.path.basename(path).startswith("_"):
                 continue
             with open(path, encoding="utf-8") as f:
@@ -132,9 +132,9 @@ class Prices:
         return p1 / p0 - 1.0
 
 
-def load_quarterly():
+def load_quarterly(quarterly_dir=None):
     docs = {}
-    for path in glob.glob(os.path.join(QUARTERLY_DIR, "*.json")):
+    for path in glob.glob(os.path.join(quarterly_dir or QUARTERLY_DIR, "*.json")):
         with open(path, encoding="utf-8") as f:
             doc = json.load(f)
         sym = (doc.get("symbol") or os.path.basename(path)[:-5]).upper()
@@ -150,8 +150,8 @@ def load_quarterly():
     return docs
 
 
-def load_dividends():
-    raw = SL.load_json(DIVIDENDS_PATH, {}) or {}
+def load_dividends(path=None):
+    raw = SL.load_json(path or DIVIDENDS_PATH, {}) or {}
     out = {}
     for sym, d in raw.items():
         rows = [r for r in (d.get("dividends") or []) if r.get("announcementDateAD")]
@@ -289,6 +289,11 @@ def ew(rets):
 
 # ---------------------------------------------------------------- backtest
 
+def rebalance_date(fy: str, quarter: int) -> date:
+    """Calendar rebalance date of a fiscal quarter: its 60-day availability date."""
+    return quarter_end(fy, quarter) + timedelta(days=CALENDAR_LAG)
+
+
 def rebalance_dates():
     out = []
     y = int(FIRST_FY[:4])
@@ -297,9 +302,83 @@ def rebalance_dates():
         if fy > LAST_FY:
             break
         for q in (1, 2, 3, 4):
-            out.append(quarter_end(fy, q) + timedelta(days=CALENDAR_LAG))
+            out.append(rebalance_date(fy, q))
         y += 1
     return out
+
+
+def signal_and_entry(rebalance: date, prices: Prices):
+    """Signal = last session on or before the rebalance date; entry = the next session.
+    Either is None when the price data does not reach it."""
+    signal = prices.session_on_or_before(rebalance.isoformat())
+    entry = prices.session_after(signal) if signal else None
+    return signal, entry
+
+
+def score_at(signal: date, lag: int, prices: Prices, docs: dict, dividends: dict):
+    """Point-in-time records for every company on `signal`, scored by the frozen code.
+    Returns (recs, results, leaders, excluded); holdings are holdings_of(leaders)."""
+    recs = {}
+    for sym, doc in docs.items():
+        rec = build_record(sym, doc, signal, lag, prices, dividends)
+        if rec:
+            recs[sym] = rec
+    results, leaders, excluded = SL.score_universe(recs, top_n=TOP_N)
+    return recs, results, leaders, excluded
+
+
+def holdings_of(leaders: dict):
+    return [x["symbol"] for xs in leaders.values() for x in xs]
+
+
+def evaluate_period(universe: dict, eligible: dict, holdings: list, entry: str, exit_: str,
+                    prices: Prices, prev_weights: dict):
+    """Returns, benchmarks, cost and IC of one holding period.
+
+    universe:     {symbol: price_is_stale} for every company with a record on the signal date
+    eligible:     {symbol: (sector, score)} for every company that passed the gates
+    holdings:     symbols bought (top N per sector)
+    prev_weights: drifted weights carried over from the previous period ({} = start from cash)
+    Returns (metrics dict, drifted weights at exit)."""
+    rets = {s: prices.period_return(s, entry, exit_) for s in universe}
+    port_gross = ew([rets[s] for s in holdings])
+
+    # benchmarks
+    sec_of = {s: sec for s, (sec, _) in eligible.items()}
+    by_sec = defaultdict(list)
+    for s in eligible:
+        by_sec[sec_of[s]].append(s)
+    sec_mean = {sec: ew([rets[s] for s in syms]) for sec, syms in by_sec.items()}
+    hold_secs = defaultdict(int)
+    for s in holdings:
+        hold_secs[sec_of[s]] += 1
+    matched = sum(n * sec_mean[sec] for sec, n in hold_secs.items() if sec_mean[sec] is not None) / len(holdings)
+    bench_eligible = ew([rets[s] for s in eligible])
+    bench_all = ew([rets[s] for s in universe if not universe[s]])
+
+    # costs: trade from drifted previous weights to new equal weights
+    new_w = {s: 1.0 / len(holdings) for s in holdings}
+    traded = sum(abs(new_w.get(s, 0.0) - prev_weights.get(s, 0.0)) for s in set(new_w) | set(prev_weights))
+    cost = COST_PER_SIDE * traded
+    port_net = port_gross - cost
+    grown = {s: w * (1 + (rets[s] or 0.0)) for s, w in new_w.items()}
+    tot = sum(grown.values())
+    drifted = {s: v / tot for s, v in grown.items()} if tot else {}
+
+    # sector-neutral information coefficient
+    xs, ys = [], []
+    for s in eligible:
+        if rets[s] is not None and sec_mean[sec_of[s]] is not None:
+            xs.append(eligible[s][1])
+            ys.append(rets[s] - sec_mean[sec_of[s]])
+    ic = spearman(xs, ys)
+
+    metrics = {
+        "port_gross": port_gross, "port_net": port_net, "cost": cost,
+        "bench_sector_matched": matched, "bench_eligible": bench_eligible, "bench_all": bench_all,
+        "excess_vs_matched": port_gross - matched, "ic": ic,
+    }
+    return metrics, drifted
 
 
 def run(lag: int, prices: Prices, docs: dict, dividends: dict):
@@ -307,62 +386,20 @@ def run(lag: int, prices: Prices, docs: dict, dividends: dict):
     last_price_day = prices.calendar[-1]
     periods, prev_weights = [], {}
     for d0, d1 in zip(dates, dates[1:]):
-        signal = prices.session_on_or_before(d0.isoformat())
-        entry = prices.session_after(signal)
-        exit_signal = prices.session_on_or_before(d1.isoformat())
-        exit_ = prices.session_after(exit_signal) if exit_signal else None
+        signal, entry = signal_and_entry(d0, prices)
+        _, exit_ = signal_and_entry(d1, prices)
         if not entry or not exit_ or exit_ > last_price_day or d1.isoformat() > last_price_day:
             continue                                   # incomplete period: excluded by rule
-        sig = date.fromisoformat(signal)
-        recs = {}
-        for sym, doc in docs.items():
-            rec = build_record(sym, doc, sig, lag, prices, dividends)
-            if rec:
-                recs[sym] = rec
-        results, leaders, excluded = SL.score_universe(recs, top_n=TOP_N)
-
-        rets = {s: prices.period_return(s, entry, exit_) for s in recs}
-        eligible = list(results)
-        holdings = [x["symbol"] for xs in leaders.values() for x in xs]
-        port_gross = ew([rets[s] for s in holdings])
-
-        # benchmarks
-        sec_of = {s: results[s]["sector"] for s in eligible}
-        by_sec = defaultdict(list)
-        for s in eligible:
-            by_sec[sec_of[s]].append(s)
-        sec_mean = {sec: ew([rets[s] for s in syms]) for sec, syms in by_sec.items()}
-        hold_secs = defaultdict(int)
-        for s in holdings:
-            hold_secs[sec_of[s]] += 1
-        matched = sum(n * sec_mean[sec] for sec, n in hold_secs.items() if sec_mean[sec] is not None) / len(holdings)
-        bench_eligible = ew([rets[s] for s in eligible])
-        bench_all = ew([rets[s] for s in recs if not recs[s]["price_is_stale"]])
-
-        # costs: trade from drifted previous weights to new equal weights
-        new_w = {s: 1.0 / len(holdings) for s in holdings}
-        traded = sum(abs(new_w.get(s, 0.0) - prev_weights.get(s, 0.0)) for s in set(new_w) | set(prev_weights))
-        cost = COST_PER_SIDE * traded
-        port_net = port_gross - cost
-        grown = {s: w * (1 + (rets[s] or 0.0)) for s, w in new_w.items()}
-        tot = sum(grown.values())
-        prev_weights = {s: v / tot for s, v in grown.items()} if tot else {}
-
-        # sector-neutral information coefficient
-        xs, ys = [], []
-        for s in eligible:
-            if rets[s] is not None and sec_mean[sec_of[s]] is not None:
-                xs.append(results[s]["score"])
-                ys.append(rets[s] - sec_mean[sec_of[s]])
-        ic = spearman(xs, ys)
-
+        recs, results, leaders, excluded = score_at(date.fromisoformat(signal), lag, prices, docs, dividends)
+        holdings = holdings_of(leaders)
+        metrics, prev_weights = evaluate_period(
+            {s: r["price_is_stale"] for s, r in recs.items()},
+            {s: (r["sector"], r["score"]) for s, r in results.items()},
+            holdings, entry, exit_, prices, prev_weights)
         periods.append({
             "rebalance": d0.isoformat(), "signal": signal, "entry": entry, "exit": exit_,
-            "universe": len(recs), "eligible": len(eligible), "excluded": len(excluded),
-            "holdings": holdings, "n_holdings": len(holdings),
-            "port_gross": port_gross, "port_net": port_net, "cost": cost,
-            "bench_sector_matched": matched, "bench_eligible": bench_eligible, "bench_all": bench_all,
-            "excess_vs_matched": port_gross - matched, "ic": ic,
+            "universe": len(recs), "eligible": len(results), "excluded": len(excluded),
+            "holdings": holdings, "n_holdings": len(holdings), **metrics,
         })
     return periods
 
