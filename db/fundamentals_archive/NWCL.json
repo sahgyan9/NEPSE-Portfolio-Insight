@@ -1,6 +1,6 @@
 {
   "symbol": "NWCL",
-  "full_name": "Nepal Warehousing Company Ltd",
+  "full_name": "Nepal Warehousing Company Limited ",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,48 @@
       "trade_volume": 2927,
       "trade_turnover": 2098073.6,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 513.3,
+      "pe_ratio": -78.533188147843,
+      "pb_ratio": 4.9876694683994,
+      "eps_ttm": -6.5360901818182,
+      "book_value": 102.91379636363637,
+      "roe": 0.0,
+      "roa": -2.6040154626559,
+      "graham_number": null,
+      "shares_outstanding": 6875000.0,
+      "week52_high": 1020.0,
+      "week52_low": 503.1,
+      "captured_at": "2026-11-07",
+      "sector": "Others",
+      "discount_from_graham": null,
+      "eps_reported": -6.54,
+      "net_margin_ttm": -14.16,
+      "asset_turnover_ttm": 18.39,
+      "net_profit_ttm": -44935620.0,
+      "revenue_ttm": 317286850.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 80.0,
+      "public_float": 19.6,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 2294,
+      "trade_turnover": 1186777.6,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

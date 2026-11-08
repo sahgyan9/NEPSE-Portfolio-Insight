@@ -1,0 +1,29 @@
+{
+  "symbol": "SAMAJ",
+  "full_name": "Samaj Laghubittya Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2081-82-Q4",
+      "fiscal_year": "2081-82",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 30.21,
+      "pb_ratio": 7.25,
+      "eps_ttm": 62.1,
+      "book_value": 258.84,
+      "roe": 23.99,
+      "roa": null,
+      "graham_number": 601.39,
+      "net_profit_ttm": 14190940.0,
+      "revenue_ttm": 57637030.0,
+      "shares_outstanding": 228500.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Samaj Laghubitta Bittiya Sanstha Ltd"
+    }
+  ]
+}

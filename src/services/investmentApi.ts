@@ -7,7 +7,7 @@
 
 const NEPSE_SERVER_URL = import.meta.env.DEV
     ? '/api/nepse-server'
-    : 'http://localhost:8000';
+    : 'http://localhost:8002';
 
 export interface CorporateIssue {
     symbol: string | null;

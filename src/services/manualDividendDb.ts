@@ -9,7 +9,7 @@
 
 const API_BASE = import.meta.env.DEV
     ? '/api/nepse-server/api'
-    : 'http://localhost:8000/api';
+    : 'http://localhost:8002/api';
 
 export interface ManualDividendEntry {
     id: string;

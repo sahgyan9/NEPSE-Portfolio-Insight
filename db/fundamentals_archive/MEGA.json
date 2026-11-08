@@ -1,0 +1,29 @@
+{
+  "symbol": "MEGA",
+  "full_name": "Mega  Bank Nepal Ltd.",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q1",
+      "fiscal_year": "2079-80",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 18.02,
+      "pb_ratio": 1.63,
+      "eps_ttm": 12.63,
+      "book_value": 135.63,
+      "roe": 9.32,
+      "roa": null,
+      "graham_number": 196.32,
+      "net_profit_ttm": 509169280.0,
+      "revenue_ttm": 5601808690.0,
+      "shares_outstanding": 161204614.53,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Mega  Bank Nepal Ltd."
+    }
+  ]
+}

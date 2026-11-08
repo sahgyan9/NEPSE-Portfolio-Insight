@@ -1,0 +1,60 @@
+{
+  "symbol": "SOPL",
+  "sector": "Manufacturing",
+  "company_name": "Sopan Pharmaceuticals Limited",
+  "quarters": [
+    {
+      "symbol": "SOPL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:25:24.921159",
+      "raw": {
+        "Paid Up Capital": 1716000000.0,
+        "Reserve and Surplus": 367312040.0,
+        "Total Equity": 2083312040.0,
+        "Borrowings": 423354380.0,
+        "Current Liabilities": 129805150.0,
+        "Current Assets": 1019115510.0,
+        "Total Assets": 2708220550.0,
+        "Revenue from Operation": 511472.51,
+        "Gross Profit": 231155210.0,
+        "Total Operating Profit": 38289090.0,
+        "Net Profit": 8928360.0,
+        "Number of Shares": 17160000.0,
+        "EPS Reported": 0.52,
+        "Book Value Reported": 121.41,
+        "ROE Reported": 0.43
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operation",
+        "Gross Profit",
+        "Total Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 0.5203006993007,
+        "bvps": 121.40513053613054,
+        "roe_ttm": 0.4285656602839,
+        "roa_ttm": 0.32967625181044,
+        "net_profit_ttm": 8928360.0,
+        "revenue_ttm": 511472510.0,
+        "graham_number": 37.7
+      },
+      "yoy": {},
+      "sector": "Manufacturing"
+    }
+  ],
+  "last_updated": "2026-11-07T10:25:24.921786"
+}

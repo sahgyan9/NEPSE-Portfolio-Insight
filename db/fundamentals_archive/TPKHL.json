@@ -1,0 +1,49 @@
+{
+  "symbol": "TPKHL",
+  "full_name": "Taksar Pikhuwa Khola Hydropower Limited",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 426.1,
+      "pe_ratio": 143.72748109241,
+      "pb_ratio": 4.1593466087195,
+      "eps_ttm": 2.9646383333333,
+      "book_value": 102.443975,
+      "roe": 2.8939118511687,
+      "roa": 1.7049220106222,
+      "graham_number": 82.66,
+      "shares_outstanding": 12000000.0,
+      "week52_high": 693.6,
+      "week52_low": 345.0,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": 4.4413,
+      "eps_reported": 2.96,
+      "net_margin_ttm": 14.22,
+      "asset_turnover_ttm": 11.99,
+      "net_profit_ttm": 35575660.0,
+      "revenue_ttm": 250247770.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 64.74,
+      "public_float": 23.49,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 32195,
+      "trade_turnover": 14475114.1,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ]
+}

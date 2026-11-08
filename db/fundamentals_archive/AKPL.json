@@ -43,7 +43,50 @@
       "trade_turnover": 8819428.5,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 124.98,
+      "pb_ratio": 2.52,
+      "eps_ttm": 2.05,
+      "book_value": 101.77,
+      "roe": 2.01,
+      "roa": null,
+      "graham_number": 68.51,
+      "net_profit_ttm": 79681700.0,
+      "revenue_ttm": 694262690.0,
+      "shares_outstanding": 38959421.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Arun Kabeli Power Ltd.",
+      "discount_from_graham": 2.8855,
+      "eps_reported": 2.05,
+      "net_margin_ttm": 11.48,
+      "asset_turnover_ttm": 9.92,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 139301,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

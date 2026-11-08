@@ -1,0 +1,29 @@
+{
+  "symbol": "RMDC",
+  "full_name": "Rmdc Laghubitta Bittiya Sanstha Ltd.",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 33.12,
+      "pb_ratio": 3.38,
+      "eps_ttm": 23.4,
+      "book_value": 229.41,
+      "roe": 10.2,
+      "roa": null,
+      "graham_number": 347.54,
+      "net_profit_ttm": 274469820.0,
+      "revenue_ttm": 1195544780.0,
+      "shares_outstanding": 15637435.72,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "RMDC Laghubitta Bittiya Sanstha Ltd."
+    }
+  ]
+}

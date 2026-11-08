@@ -43,7 +43,50 @@
       "trade_turnover": 11898600,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 52.1,
+      "pb_ratio": 2.33,
+      "eps_ttm": 11.65,
+      "book_value": 260.26,
+      "roe": 4.47,
+      "roa": null,
+      "graham_number": 261.19,
+      "net_profit_ttm": 326852230.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 28065499.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Siddhartha Premier Insurance Limited",
+      "discount_from_graham": 1.3626,
+      "eps_reported": 11.65,
+      "net_margin_ttm": 8.62,
+      "asset_turnover_ttm": 17.75,
+      "dividend_payout_ratio": 2.1467,
+      "dividend_to_ltp": 0.0405,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 9916,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Non Life Insurance"
+  "sector": "Non-Life Insurance"
 }

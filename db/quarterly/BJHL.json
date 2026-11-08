@@ -1,0 +1,110 @@
+{
+  "symbol": "BJHL",
+  "sector": "Hydropower",
+  "company_name": "Bhujung Hydropower Limited",
+  "quarters": [
+    {
+      "symbol": "BJHL",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T08:54:50.118194",
+      "raw": {
+        "Paid Up Capital": 1000000000.0,
+        "Reserve and Surplus": -111828480.0,
+        "Total Equity": 888171520.0,
+        "Borrowings": 925533520.0,
+        "Current Liabilities": 2585280.0,
+        "Current Assets": 124730550.0,
+        "Total Assets": 1825403010.0,
+        "Revenue": 124093860.0,
+        "Gross Profit": 103377240.0,
+        "Operating Profit": 41941070.0,
+        "Net Profit": -24428840.0,
+        "Number of Shares": 10000000.0,
+        "EPS Reported": -3.26,
+        "Book Value Reported": 88.82,
+        "ROE Reported": -3.67
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -3.256364372,
+        "bvps": 88.817152,
+        "roe_ttm": 0.0,
+        "roa_ttm": -1.7839153075572,
+        "net_profit_ttm": -32563643.72,
+        "revenue_ttm": 165417115.38
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "BJHL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T08:54:50.118166",
+      "raw": {
+        "Paid Up Capital": 1000000000.0,
+        "Reserve and Surplus": -110505370.0,
+        "Total Equity": 889494630.0,
+        "Borrowings": 886578880.0,
+        "Current Liabilities": 37418070.0,
+        "Current Assets": 96179750.0,
+        "Total Assets": 1822133290.0,
+        "Revenue": 170084200.0,
+        "Gross Profit": 131337170.00000001,
+        "Operating Profit": 59642700.0,
+        "Net Profit": -25992360.0,
+        "Number of Shares": 10000000.0,
+        "EPS Reported": -2.6,
+        "Book Value Reported": 88.95,
+        "ROE Reported": -2.92
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": -2.599236,
+        "bvps": 88.949463,
+        "roe_ttm": 0.0,
+        "roa_ttm": -1.426479618294,
+        "net_profit_ttm": -25992360.0,
+        "revenue_ttm": 170084200.0
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T08:54:50.119532"
+}

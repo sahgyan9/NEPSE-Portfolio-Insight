@@ -1,6 +1,6 @@
 {
   "symbol": "CYCL",
-  "full_name": "Cyc Nepal Laghubitta Bittiya Sanstha Limited",
+  "full_name": "CYC Nepal Laghubitta Bittiya Sanstha Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 636,
       "trade_turnover": 843972,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 12.31,
+      "pb_ratio": 3.81,
+      "eps_ttm": 110.66,
+      "book_value": 357.75,
+      "roe": 30.93,
+      "roa": null,
+      "graham_number": 943.79,
+      "net_profit_ttm": 294812210.0,
+      "revenue_ttm": 869494130.0,
+      "shares_outstanding": 2664243.9,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "CYC Nepal laghubitta Bittiya Sanstha Limited",
+      "discount_from_graham": 0.5258,
+      "eps_reported": 110.66,
+      "net_margin_ttm": 33.91,
+      "asset_turnover_ttm": 11.86,
+      "dividend_payout_ratio": 0.1153,
+      "dividend_to_ltp": 0.0089,
+      "promoter_holding": 67.5,
+      "public_float": 32.5,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 5193,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

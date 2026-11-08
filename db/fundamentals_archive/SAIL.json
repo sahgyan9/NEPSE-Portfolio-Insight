@@ -1,6 +1,6 @@
 {
   "symbol": "SAIL",
-  "full_name": "Shreenagar Agritech Industries Ltd",
+  "full_name": "Shreenagar Agritech Industries Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 29801520,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 902.0,
+      "pe_ratio": 825.03608231813,
+      "pb_ratio": 8.3342876628807,
+      "eps_ttm": 1.0932855172414,
+      "book_value": 108.22760582375479,
+      "roe": 1.0101725053604,
+      "roa": 0.5837476428992,
+      "graham_number": 51.6,
+      "shares_outstanding": 16312500.0,
+      "week52_high": 1555.0,
+      "week52_low": 331.8,
+      "captured_at": "2026-11-07",
+      "sector": "Manufacturing And Processing",
+      "discount_from_graham": 17.1405,
+      "eps_reported": 1.09,
+      "net_margin_ttm": 0.99,
+      "asset_turnover_ttm": 59.13,
+      "net_profit_ttm": 17834220.0,
+      "revenue_ttm": 1806347010.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 80.0,
+      "public_float": 9.24,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 6850,
+      "trade_turnover": 6364119.2,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Manufacturing And Processing"
+  "sector": "Manufacturing"
 }

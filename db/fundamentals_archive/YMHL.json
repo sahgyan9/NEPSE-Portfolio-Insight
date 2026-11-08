@@ -1,0 +1,24 @@
+{
+  "symbol": "YMHL",
+  "full_name": "Yambaling Hydropower Limited",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": 441.0,
+      "pe_ratio": 40.373502636113,
+      "pb_ratio": 4.638105890707,
+      "eps_ttm": 10.923005714286,
+      "book_value": 95.08191714285714,
+      "roe": 11.487994818062,
+      "roa": 4.0842174917188,
+      "graham_number": 152.87,
+      "shares_outstanding": 7000000.0,
+      "week52_high": 693.6,
+      "week52_low": 345.0,
+      "captured_at": "2026-11-07"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "symbol": "SFCL",
+  "full_name": "Samriddhi Finance Company Limited",
+  "sector": "Finance",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q3",
+      "fiscal_year": "2082-83",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 3083.33,
+      "pb_ratio": 6.14,
+      "eps_ttm": 0.12,
+      "book_value": 60.3,
+      "roe": 0.2,
+      "roa": null,
+      "graham_number": 12.76,
+      "net_profit_ttm": 740640.0,
+      "revenue_ttm": 191808630.0,
+      "shares_outstanding": 8189114.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Finance",
+      "name": "Samriddhi Finance Company Limited"
+    }
+  ]
+}

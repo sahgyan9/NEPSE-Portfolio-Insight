@@ -1,0 +1,29 @@
+{
+  "symbol": "SABSL",
+  "full_name": "Sabaiko Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2080-81-Q3",
+      "fiscal_year": "2080-81",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 126.67,
+      "pb_ratio": 7.52,
+      "eps_ttm": 8.25,
+      "book_value": 138.96,
+      "roe": 5.94,
+      "roa": null,
+      "graham_number": 160.61,
+      "net_profit_ttm": 19717360.0,
+      "revenue_ttm": 425199480.0,
+      "shares_outstanding": 3186000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Sabaiko Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "symbol": "MOLUNG",
+  "full_name": "Molung",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 283.5,
+      "pe_ratio": 39.422719366433,
+      "pb_ratio": 3.2482136582774,
+      "eps_ttm": 7.1912847352025,
+      "book_value": 87.2787414330218,
+      "roe": 8.3833197149199,
+      "roa": 4.9846352126302,
+      "graham_number": 118.84,
+      "shares_outstanding": 8025000.0,
+      "week52_high": 417.7,
+      "week52_low": 274.0,
+      "captured_at": "2026-11-07"
+    }
+  ]
+}

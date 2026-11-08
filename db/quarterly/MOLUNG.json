@@ -1,0 +1,167 @@
+{
+  "symbol": "MOLUNG",
+  "sector": "Hydropower",
+  "company_name": "Molung",
+  "quarters": [
+    {
+      "symbol": "MOLUNG",
+      "fy": "2081-82",
+      "quarter": 1,
+      "quarter_label": "Q1 81-82",
+      "parsed_at": "2026-11-07T09:18:09.536804",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": -1.1319563862928,
+        "bvps": 80.77816199376947,
+        "roe_ttm": 0.0,
+        "roa_ttm": -0.74218043370064,
+        "net_profit_ttm": -9083950.0,
+        "revenue_ttm": 22227220.0
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2081-82",
+      "quarter": 2,
+      "quarter_label": "Q2 81-82",
+      "parsed_at": "2026-11-07T09:18:09.536800",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 3.4740373831776,
+        "bvps": 81.67224548286605,
+        "roe_ttm": 4.3774067599948,
+        "roa_ttm": 2.3041338343618,
+        "net_profit_ttm": 27879150.0,
+        "revenue_ttm": 96660660.0,
+        "graham_number": 79.9
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2081-82",
+      "quarter": 3,
+      "quarter_label": "Q3 81-82",
+      "parsed_at": "2026-11-07T09:18:09.536796",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 5.0636510903427,
+        "bvps": 80.42598629283489,
+        "roe_ttm": 6.37018091036,
+        "roa_ttm": 3.389368499255,
+        "net_profit_ttm": 40635800.0,
+        "revenue_ttm": 134809980.0,
+        "graham_number": 95.72
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2081-82",
+      "quarter": 4,
+      "quarter_label": "Q4 81-82",
+      "parsed_at": "2026-11-07T09:18:09.536792",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 3.4049121495327,
+        "bvps": 80.06808224299066,
+        "roe_ttm": 4.2562260804752,
+        "roa_ttm": 2.2950939621417,
+        "net_profit_ttm": 27324420.0,
+        "revenue_ttm": 161210760.0,
+        "graham_number": 78.32
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2082-83",
+      "quarter": 1,
+      "quarter_label": "Q1 82-83",
+      "parsed_at": "2026-11-07T09:18:09.536785",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 4.3786866043614,
+        "bvps": 85.17620809968848,
+        "roe_ttm": 5.3644507308996,
+        "roa_ttm": 2.965549338102,
+        "net_profit_ttm": 35138960.0,
+        "revenue_ttm": 166053680.0,
+        "graham_number": 91.61
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2082-83",
+      "quarter": 2,
+      "quarter_label": "Q2 82-83",
+      "parsed_at": "2026-11-07T09:18:09.536781",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 6.7997433021807,
+        "bvps": 88.49136199376947,
+        "roe_ttm": 8.176033221413501,
+        "roa_ttm": 4.6429519088897,
+        "net_profit_ttm": 54567940.0,
+        "revenue_ttm": 183354090.0,
+        "graham_number": 116.36
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T09:18:09.536776",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 7.4446043613707,
+        "bvps": 87.88996510903426,
+        "roe_ttm": 8.8195427945661,
+        "roa_ttm": 5.1292756437107,
+        "net_profit_ttm": 59742950.0,
+        "revenue_ttm": 181844250.0,
+        "graham_number": 121.33
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:18:09.536765",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 7.1912847352025,
+        "bvps": 87.2787414330218,
+        "roe_ttm": 8.3833197149199,
+        "roa_ttm": 4.9846352126302,
+        "net_profit_ttm": 57710060.0,
+        "revenue_ttm": 182721890.0,
+        "graham_number": 118.84
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    }
+  ],
+  "last_updated": "2026-11-07T09:18:09.537412"
+}

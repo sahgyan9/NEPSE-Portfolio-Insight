@@ -1,6 +1,6 @@
 {
   "symbol": "SCB",
-  "full_name": "Standard Chartered Bank Limited",
+  "full_name": "Standard Chartered Bank  Nepal Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,72 @@
       "trade_turnover": 8225640,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "082-083",
+      "quarter": 4,
+      "ltp_at_capture": 683.0,
+      "pe_ratio": 24.06,
+      "pb_ratio": 3.03,
+      "eps_ttm": 28.38,
+      "book_value": 225.77,
+      "roe": 12.96,
+      "roa": 1.69,
+      "graham_number": 379.71,
+      "net_profit_ttm": 2850210000.0,
+      "revenue_ttm": 7423825000.0,
+      "shares_outstanding": 100423683,
+      "week52_high": 698.7,
+      "week52_low": 621.0,
+      "trade_turnover": 21600733.5,
+      "captured_at": "2026-10-30",
+      "sector": "Commercial Banks",
+      "name": "Standard Chartered Bank  Nepal Limited",
+      "discount_from_graham": 0.7988,
+      "eps_reported": 28.38,
+      "net_margin_ttm": 38.39,
+      "asset_turnover_ttm": 4.41,
+      "dividend_payout_ratio": 0.5637,
+      "dividend_to_ltp": 0.0234,
+      "promoter_holding": 72.52,
+      "public_float": 27.48,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 31742,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 25.12,
+      "pb_ratio": 2.89,
+      "eps_ttm": 26.74,
+      "book_value": 232.09,
+      "roe": 11.52,
+      "roa": null,
+      "graham_number": 373.68,
+      "net_profit_ttm": 671443000.0,
+      "revenue_ttm": 1897141000.0,
+      "shares_outstanding": 100423680.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Standard Chartered Bank  Nepal Limited"
     }
   ],
-  "sector": "Commercial Banks"
+  "sector": "Commercial Bank"
 }

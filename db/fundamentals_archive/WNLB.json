@@ -1,6 +1,6 @@
 {
   "symbol": "WNLB",
-  "full_name": "Wean Nepal Laghubitta Bittiya Sanstha Ltd.",
+  "full_name": "Wean Nepal Laghubitta Bittiya Sanstha Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,6 +43,28 @@
       "trade_turnover": 185498,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 106.67,
+      "pb_ratio": 8.07,
+      "eps_ttm": 9.89,
+      "book_value": 130.74,
+      "roe": 7.57,
+      "roa": null,
+      "graham_number": 170.57,
+      "net_profit_ttm": 8342760.0,
+      "revenue_ttm": 116663770.0,
+      "shares_outstanding": 843405.5,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Wean Nepal Laghubitta Bittiya Sanstha Limited"
     }
   ],
   "sector": "Microfinance"

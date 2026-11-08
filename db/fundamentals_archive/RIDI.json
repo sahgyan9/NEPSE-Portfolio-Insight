@@ -1,6 +1,6 @@
 {
   "symbol": "RIDI",
-  "full_name": "Ridi Power Company Ltd.",
+  "full_name": "Ridi Power Company Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 144089366.4,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 710.0,
+      "pb_ratio": 3.27,
+      "eps_ttm": 2.04,
+      "book_value": 102.03,
+      "roe": 2.0,
+      "roa": null,
+      "graham_number": 68.43,
+      "net_profit_ttm": 47336060.0,
+      "revenue_ttm": 364781730.0,
+      "shares_outstanding": 23233518.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Ridi Power Company Limited",
+      "discount_from_graham": 3.9716,
+      "eps_reported": 2.04,
+      "net_margin_ttm": 12.98,
+      "asset_turnover_ttm": 9.65,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 195246,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

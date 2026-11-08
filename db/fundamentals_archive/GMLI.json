@@ -1,6 +1,6 @@
 {
   "symbol": "GMLI",
-  "full_name": "Guardian Micro Life Insurance Limited",
+  "full_name": "Guardian Micro Life Insurance Limited ",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,48 @@
       "trade_volume": 1060,
       "trade_turnover": 1224300,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 886.0,
+      "pe_ratio": 413.54073640746,
+      "pb_ratio": 8.2586088726937,
+      "eps_ttm": 2.1424733333333,
+      "book_value": 107.28199066666667,
+      "roe": 2.0019976731174003,
+      "roa": 1.4126116559952,
+      "graham_number": 71.91,
+      "shares_outstanding": 7500000.0,
+      "week52_high": 1929.9,
+      "week52_low": 886.0,
+      "captured_at": "2026-11-07",
+      "sector": "Life Insurance",
+      "discount_from_graham": 11.7639,
+      "eps_reported": 2.14,
+      "net_margin_ttm": 2.75,
+      "asset_turnover_ttm": 51.37,
+      "net_profit_ttm": 16068550.0,
+      "revenue_ttm": 584361910.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 70.0,
+      "public_float": 30.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 1316,
+      "trade_turnover": 1190449.0,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

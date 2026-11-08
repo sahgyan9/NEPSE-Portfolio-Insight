@@ -43,7 +43,50 @@
       "trade_turnover": 1183863,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 9.53,
+      "pb_ratio": 4.89,
+      "eps_ttm": -17.41,
+      "book_value": 68.43,
+      "roe": -25.44,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -59183630.0,
+      "revenue_ttm": 81461840.0,
+      "shares_outstanding": 3400000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Asian Hydropower Limited",
+      "discount_from_graham": null,
+      "eps_reported": -17.41,
+      "net_margin_ttm": -72.65,
+      "asset_turnover_ttm": 6.25,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 2827,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

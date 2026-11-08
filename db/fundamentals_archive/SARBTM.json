@@ -43,7 +43,49 @@
       "trade_turnover": 7304340,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 806.0,
+      "pe_ratio": 38.022881531074,
+      "pb_ratio": 4.0337279598335,
+      "eps_ttm": 21.197762177527,
+      "book_value": 199.81516057251963,
+      "roe": 10.867640981487,
+      "roa": 6.9923779071074,
+      "graham_number": 308.71,
+      "shares_outstanding": 52242750.0,
+      "week52_high": 924.0,
+      "week52_low": 772.0,
+      "captured_at": "2026-11-07",
+      "sector": "Manufacturing And Processing",
+      "discount_from_graham": 1.6595,
+      "eps_reported": 21.2,
+      "net_margin_ttm": 10.8,
+      "asset_turnover_ttm": 64.77,
+      "net_profit_ttm": 1107429390.0,
+      "revenue_ttm": 10258527800.0,
+      "dividend_payout_ratio": 0.9435,
+      "dividend_to_ltp": 0.0244,
+      "promoter_holding": 87.1,
+      "public_float": 12.04,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 26586,
+      "trade_turnover": 21729093.1,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Manufacturing And Processing"
+  "sector": "Manufacturing"
 }

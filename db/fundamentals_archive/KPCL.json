@@ -43,7 +43,50 @@
       "trade_turnover": 2321330,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 42.04,
+      "pb_ratio": 3.77,
+      "eps_ttm": 11.24,
+      "book_value": 125.18,
+      "roe": 8.98,
+      "roa": null,
+      "graham_number": 177.93,
+      "net_profit_ttm": 104989950.0,
+      "revenue_ttm": 199249370.0,
+      "shares_outstanding": 9339495.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Kalika power Company Ltd",
+      "discount_from_graham": 1.7223,
+      "eps_reported": 11.24,
+      "net_margin_ttm": 52.69,
+      "asset_turnover_ttm": 16.28,
+      "dividend_payout_ratio": 0.6227,
+      "dividend_to_ltp": 0.0145,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 11870,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

@@ -1,0 +1,29 @@
+{
+  "symbol": "ULI",
+  "full_name": "Union Life Insurance Company Limited",
+  "sector": "Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": null,
+      "pb_ratio": 3.68,
+      "eps_ttm": 7.38,
+      "book_value": 107.38,
+      "roe": 6.87,
+      "roa": null,
+      "graham_number": 133.53,
+      "net_profit_ttm": 129590650.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 23428550.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Life Insurance",
+      "name": "UnionLife Insurance Co. Ltd."
+    }
+  ]
+}

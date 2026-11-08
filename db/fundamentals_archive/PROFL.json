@@ -1,6 +1,6 @@
 {
   "symbol": "PROFL",
-  "full_name": "ProgressiveFinance Limited",
+  "full_name": "Progressive Finance Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 5664,
       "trade_turnover": 2446848,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": -18.43,
+      "pb_ratio": 4.79,
+      "eps_ttm": 5.92,
+      "book_value": 83.84,
+      "roe": 7.06,
+      "roa": null,
+      "graham_number": 105.68,
+      "net_profit_ttm": 50169590.0,
+      "revenue_ttm": 541990320.0,
+      "shares_outstanding": 8481060.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Finance",
+      "name": "Progressive Finance Limited",
+      "discount_from_graham": 2.6872,
+      "eps_reported": 5.92,
+      "net_margin_ttm": 9.26,
+      "asset_turnover_ttm": 6.42,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 20286,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

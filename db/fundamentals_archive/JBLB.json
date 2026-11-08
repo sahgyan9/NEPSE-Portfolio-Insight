@@ -1,6 +1,6 @@
 {
   "symbol": "JBLB",
-  "full_name": "Jeevan Bikas Laghubitta Bittiya Sanstha Limited",
+  "full_name": "Jeevan Bikas Laghubitta  Bittya Sanstha Ltd",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 3394,
       "trade_turnover": 4283228,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 20.86,
+      "pb_ratio": 4.6,
+      "eps_ttm": 61.8,
+      "book_value": 279.95,
+      "roe": 22.07,
+      "roa": null,
+      "graham_number": 623.92,
+      "net_profit_ttm": 1082224430.0,
+      "revenue_ttm": 4225066130.0,
+      "shares_outstanding": 17512355.62,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Jeevan Bikas Laghubitta Bittiya Sanstha Ltd",
+      "discount_from_graham": 1.0788,
+      "eps_reported": 61.8,
+      "net_margin_ttm": 25.61,
+      "asset_turnover_ttm": 13.28,
+      "dividend_payout_ratio": 0.2265,
+      "dividend_to_ltp": 0.0108,
+      "promoter_holding": 67.0,
+      "public_float": 33.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 3146,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

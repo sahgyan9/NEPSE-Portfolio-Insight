@@ -7,7 +7,7 @@
  * 
  * Requirements:
  *   Run: python nepse_server.py
- *   This starts a Flask server on http://localhost:8000
+ *   This starts a Flask server on http://localhost:8002
  */
 
 // ============================================================
@@ -16,7 +16,7 @@
 
 const NEPSE_SERVER_URL = import.meta.env.DEV
     ? '/api/nepse-server'
-    : 'http://localhost:8000';
+    : 'http://localhost:8002';
 const CACHE_TTL_MS = 60 * 1000; // 1 minute cache
 
 // ============================================================

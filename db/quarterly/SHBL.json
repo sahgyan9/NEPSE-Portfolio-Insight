@@ -1,0 +1,136 @@
+{
+  "symbol": "SHBL",
+  "sector": "Development Bank",
+  "company_name": "Sahara Bikas Bank Ltd.",
+  "quarters": [
+    {
+      "symbol": "SHBL",
+      "fy": "2076-77",
+      "quarter": 4,
+      "quarter_label": "Q4 76-77",
+      "parsed_at": "2026-11-07T10:04:30.576566",
+      "raw": {
+        "Paid Up Capital": 163367000.0,
+        "Reserves": 75427260.0,
+        "Total Equity": 247531750.0,
+        "Total Assets": 1153621400.0,
+        "Deposits from Customers": 853876330.0,
+        "Loans and Advances to Customers": 725162880.0,
+        "Net Interest Income": 48276400.0,
+        "Total Operating Income": 61230.21,
+        "Net Profit": 12587340.0,
+        "Number of Shares": 1633669.3,
+        "EPS(Rs.)": 7.7,
+        "Book Value(Rs.)": 151.52,
+        "ROE": 5.09,
+        "CAR": 28.66,
+        "NPL": 4.57
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserves",
+        "Total Equity",
+        "Total Assets",
+        "Deposits from Customers",
+        "Loans and Advances to Customers",
+        "Net Interest Income",
+        "Total Operating Income",
+        "Net Profit",
+        "Number of Shares",
+        "EPS(Rs.)",
+        "Book Value(Rs.)",
+        "ROE",
+        "CAR",
+        "NPL"
+      ],
+      "computed": {
+        "eps_ttm": 7.7,
+        "bvps": 151.52,
+        "roe_ttm": 5.09,
+        "roa_ttm": null,
+        "net_profit_ttm": 12587340.0,
+        "revenue_ttm": 61230.21,
+        "graham_number": 162.02
+      },
+      "yoy": {},
+      "sector": "Development Bank"
+    },
+    {
+      "symbol": "SHBL",
+      "fy": "2077-78",
+      "quarter": 1,
+      "quarter_label": "Q1 77-78",
+      "parsed_at": "2026-11-07T10:04:30.576511",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Development Bank"
+    },
+    {
+      "symbol": "SHBL",
+      "fy": "2077-78",
+      "quarter": 2,
+      "quarter_label": "Q2 77-78",
+      "parsed_at": "2026-11-07T10:04:30.576506",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Development Bank"
+    },
+    {
+      "symbol": "SHBL",
+      "fy": "2077-78",
+      "quarter": 3,
+      "quarter_label": "Q3 77-78",
+      "parsed_at": "2026-11-07T10:04:30.576500",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Development Bank"
+    },
+    {
+      "symbol": "SHBL",
+      "fy": "2077-78",
+      "quarter": 4,
+      "quarter_label": "Q4 77-78",
+      "parsed_at": "2026-11-07T10:04:30.576489",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Development Bank"
+    }
+  ],
+  "last_updated": "2026-11-07T10:04:30.577260"
+}

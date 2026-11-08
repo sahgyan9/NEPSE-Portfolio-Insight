@@ -1,6 +1,6 @@
 {
   "symbol": "UMRH",
-  "full_name": "United Idi-Mardi and R.B. Hydropower Limited",
+  "full_name": "United IDI Mardi RB Hydropower Limited.",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 1486122,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 19.81,
+      "pb_ratio": 4.33,
+      "eps_ttm": 11.53,
+      "book_value": 112.0,
+      "roe": 10.29,
+      "roa": null,
+      "graham_number": 170.46,
+      "net_profit_ttm": 55777790.0,
+      "revenue_ttm": 180288540.0,
+      "shares_outstanding": 4838652.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "United Idi Mardi & RB Hydropower Ltd",
+      "discount_from_graham": 2.0568,
+      "eps_reported": 11.53,
+      "net_margin_ttm": 47.69,
+      "asset_turnover_ttm": 8.47,
+      "dividend_payout_ratio": 0.4337,
+      "dividend_to_ltp": 0.0096,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 8371,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

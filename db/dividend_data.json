@@ -16,7 +16,7 @@
                 "source": "hamroshare",
                 "announcementDateAD": "2025-12-18",
                 "bonusListingDateAD": "2026-03-13",
-                "closePrice": 408.0
+                "closePrice": 416.0
             },
             {
                 "fiscalYear": "079-080",
@@ -31,7 +31,7 @@
                 "source": "hamroshare",
                 "announcementDateAD": "2024-02-25",
                 "bonusListingDateAD": "2024-08-13",
-                "closePrice": 408.0
+                "closePrice": 416.0
             }
         ]
     },
@@ -47,12 +47,12 @@
                 "bookClosureDateAD": "2026-09-30",
                 "bookClosureDateBS": "",
                 "distributionDateAD": "",
-                "status": "0",
+                "status": "1",
                 "source": "hamroshare",
                 "notes": "",
                 "announcementDateAD": "2026-09-07",
                 "bonusListingDateAD": "",
-                "closePrice": 560.0
+                "closePrice": 549.0
             },
             {
                 "fiscalYear": "081-082",
@@ -97,7 +97,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-11-23",
                 "bonusListingDateAD": "",
-                "closePrice": 560.0
+                "closePrice": 549.0
             },
             {
                 "fiscalYear": "078-079",
@@ -112,7 +112,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-12-12",
                 "bonusListingDateAD": "2023-03-10",
-                "closePrice": 560.0
+                "closePrice": 549.0
             },
             {
                 "fiscalYear": "077-078",
@@ -127,7 +127,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-11-03",
                 "bonusListingDateAD": "2022-03-29",
-                "closePrice": 560.0
+                "closePrice": 549.0
             },
             {
                 "fiscalYear": "076-077",
@@ -142,7 +142,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-12-22",
                 "bonusListingDateAD": "2021-03-10",
-                "closePrice": 560.0
+                "closePrice": 549.0
             },
             {
                 "fiscalYear": "075-076",
@@ -298,7 +298,7 @@
                 "source": "hamroshare",
                 "announcementDateAD": "2022-12-20",
                 "bonusListingDateAD": "2023-02-17",
-                "closePrice": 194.4
+                "closePrice": 200.9
             },
             {
                 "fiscalYear": "077-078",
@@ -313,7 +313,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-10-08",
                 "bonusListingDateAD": "2022-08-10",
-                "closePrice": 194.4
+                "closePrice": 200.9
             },
             {
                 "fiscalYear": "076-077",
@@ -328,7 +328,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-11-30",
                 "bonusListingDateAD": "2021-03-14",
-                "closePrice": 194.4
+                "closePrice": 200.9
             },
             {
                 "fiscalYear": "075-076",
@@ -462,7 +462,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-11-11",
                 "bonusListingDateAD": "2026-02-09",
-                "closePrice": 691.9
+                "closePrice": 722.0
             },
             {
                 "fiscalYear": "080-081",
@@ -483,6 +483,21 @@
         "companyName": "Chhimek Laghubitta Bittiya Sanstha Limited",
         "dividends": [
             {
+                "fiscalYear": "082-083",
+                "bonusPercent": 11.9631,
+                "cashPercent": 13.0369,
+                "totalPercent": 25.0,
+                "bookClosureDateAD": "",
+                "bookClosureDateBS": "",
+                "distributionDateAD": "",
+                "announcementDateAD": "2026-11-05",
+                "bonusListingDateAD": "",
+                "closePrice": 987.0,
+                "status": "-1",
+                "source": "hamroshare",
+                "notes": ""
+            },
+            {
                 "fiscalYear": "081-082",
                 "bonusPercent": 12.5,
                 "cashPercent": 12.5,
@@ -495,7 +510,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-12-16",
                 "bonusListingDateAD": "2026-03-13",
-                "closePrice": 956.9
+                "closePrice": 994.0
             },
             {
                 "fiscalYear": "080-081",
@@ -522,7 +537,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-12-12",
                 "bonusListingDateAD": "2024-03-04",
-                "closePrice": 956.9
+                "closePrice": 987.0
             },
             {
                 "fiscalYear": "078-079",
@@ -537,7 +552,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-01-12",
                 "bonusListingDateAD": "2023-05-24",
-                "closePrice": 956.9
+                "closePrice": 987.0
             },
             {
                 "fiscalYear": "077-078",
@@ -552,7 +567,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-11-18",
                 "bonusListingDateAD": "2022-04-17",
-                "closePrice": 956.9
+                "closePrice": 987.0
             },
             {
                 "fiscalYear": "076-077",
@@ -567,7 +582,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-12-03",
                 "bonusListingDateAD": "2021-03-07",
-                "closePrice": 956.9
+                "closePrice": 987.0
             },
             {
                 "fiscalYear": "075-076",
@@ -696,7 +711,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-10-17",
                 "bonusListingDateAD": "2026-01-01",
-                "closePrice": 1217.0
+                "closePrice": 1309.0
             },
             {
                 "fiscalYear": "080-081",
@@ -723,7 +738,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-12-04",
                 "bonusListingDateAD": "2024-02-09",
-                "closePrice": 1217.0
+                "closePrice": 1299.0
             },
             {
                 "fiscalYear": "078-079",
@@ -738,7 +753,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-11-25",
                 "bonusListingDateAD": "2023-02-16",
-                "closePrice": 1217.0
+                "closePrice": 1299.0
             },
             {
                 "fiscalYear": "077-078",
@@ -753,7 +768,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-12-22",
                 "bonusListingDateAD": "2022-02-13",
-                "closePrice": 1217.0
+                "closePrice": 1299.0
             },
             {
                 "fiscalYear": "076-077",
@@ -768,7 +783,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-12-18",
                 "bonusListingDateAD": "2021-02-15",
-                "closePrice": 1217.0
+                "closePrice": 1299.0
             },
             {
                 "fiscalYear": "075-076",
@@ -861,7 +876,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-12-24",
                 "bonusListingDateAD": "",
-                "closePrice": 890.0
+                "closePrice": 937.5
             },
             {
                 "fiscalYear": "080-081",
@@ -888,7 +903,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-12-22",
                 "bonusListingDateAD": "",
-                "closePrice": 892.0
+                "closePrice": 937.5
             },
             {
                 "fiscalYear": "078-079",
@@ -903,7 +918,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-12-22",
                 "bonusListingDateAD": "",
-                "closePrice": 892.0
+                "closePrice": 937.5
             },
             {
                 "fiscalYear": "077-078",
@@ -918,7 +933,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-03-15",
                 "bonusListingDateAD": "2022-08-09",
-                "closePrice": 892.0
+                "closePrice": 937.5
             },
             {
                 "fiscalYear": "076-077",
@@ -933,7 +948,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-03-03",
                 "bonusListingDateAD": "",
-                "closePrice": 892.0
+                "closePrice": 937.5
             },
             {
                 "fiscalYear": "075-076",
@@ -1088,7 +1103,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-12-24",
                 "bonusListingDateAD": "2026-08-27",
-                "closePrice": 354.9
+                "closePrice": 338.0
             },
             {
                 "fiscalYear": "080-081",
@@ -1115,7 +1130,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-12-10",
                 "bonusListingDateAD": "2024-02-14",
-                "closePrice": 359.0
+                "closePrice": 338.0
             },
             {
                 "fiscalYear": "078-079",
@@ -1130,7 +1145,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-12-07",
                 "bonusListingDateAD": "2023-03-13",
-                "closePrice": 359.0
+                "closePrice": 338.0
             },
             {
                 "fiscalYear": "077-078",
@@ -1145,7 +1160,7 @@
                 "notes": "",
                 "announcementDateAD": "2021-12-10",
                 "bonusListingDateAD": "2022-03-06",
-                "closePrice": 359.0
+                "closePrice": 338.0
             },
             {
                 "fiscalYear": "076-077",
@@ -1160,7 +1175,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-12-01",
                 "bonusListingDateAD": "2021-02-03",
-                "closePrice": 359.0
+                "closePrice": 338.0
             },
             {
                 "fiscalYear": "075-076",
@@ -1289,7 +1304,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-12-10",
                 "bonusListingDateAD": "",
-                "closePrice": 433.0
+                "closePrice": 442.0
             },
             {
                 "fiscalYear": "080-081",
@@ -1316,7 +1331,7 @@
                 "notes": "",
                 "announcementDateAD": "2024-01-02",
                 "bonusListingDateAD": "2024-02-29",
-                "closePrice": 433.0
+                "closePrice": 442.0
             }
         ]
     },
@@ -1342,7 +1357,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-11-30",
                 "bonusListingDateAD": "2026-03-03",
-                "closePrice": 379.0
+                "closePrice": 380.0
             },
             {
                 "fiscalYear": "079-080",
@@ -1357,7 +1372,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-12-22",
                 "bonusListingDateAD": "2024-03-21",
-                "closePrice": 379.0
+                "closePrice": 380.0
             }
         ]
     },
@@ -1390,7 +1405,7 @@
                 "notes": "",
                 "announcementDateAD": "2024-02-09",
                 "bonusListingDateAD": "2024-05-05",
-                "closePrice": 519.0
+                "closePrice": 507.5
             }
         ]
     },
@@ -1411,7 +1426,7 @@
                 "notes": "",
                 "announcementDateAD": "2026-08-07",
                 "bonusListingDateAD": "",
-                "closePrice": 10.15
+                "closePrice": 10.4
             },
             {
                 "fiscalYear": "081-082",
@@ -1450,7 +1465,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-08-11",
                 "bonusListingDateAD": "",
-                "closePrice": 10.12
+                "closePrice": 10.4
             }
         ]
     },
@@ -1487,12 +1502,12 @@
                 "bookClosureDateAD": "2026-09-23",
                 "bookClosureDateBS": "2083-06-07",
                 "distributionDateAD": "",
-                "status": "0",
+                "status": "1",
                 "source": "hamroshare",
                 "notes": "",
                 "announcementDateAD": "2026-09-04",
                 "bonusListingDateAD": "",
-                "closePrice": 9.41
+                "closePrice": 9.08
             },
             {
                 "fiscalYear": "081-082",
@@ -1603,7 +1618,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-09-15",
                 "bonusListingDateAD": "2024-01-05",
-                "closePrice": 325.0
+                "closePrice": 348.0
             },
             {
                 "fiscalYear": "076-077",
@@ -1618,7 +1633,7 @@
                 "notes": "",
                 "announcementDateAD": "2020-10-21",
                 "bonusListingDateAD": "2021-01-15",
-                "closePrice": 325.0
+                "closePrice": 348.0
             },
             {
                 "fiscalYear": "075-076",
@@ -1749,7 +1764,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-11-19",
                 "bonusListingDateAD": "2026-03-13",
-                "closePrice": 805.0
+                "closePrice": 806.0
             },
             {
                 "fiscalYear": "080-081",
@@ -1776,7 +1791,7 @@
                 "notes": "",
                 "announcementDateAD": "2024-04-02",
                 "bonusListingDateAD": "",
-                "closePrice": 805.0
+                "closePrice": 806.0
             }
         ]
     },
@@ -1802,7 +1817,7 @@
                 "notes": "",
                 "announcementDateAD": "2025-10-29",
                 "bonusListingDateAD": "2026-03-01",
-                "closePrice": 515.0
+                "closePrice": 520.0
             },
             {
                 "fiscalYear": "080-081",
@@ -1829,7 +1844,7 @@
                 "notes": "",
                 "announcementDateAD": "2023-11-20",
                 "bonusListingDateAD": "2024-03-06",
-                "closePrice": 515.0
+                "closePrice": 545.0
             },
             {
                 "fiscalYear": "078-079",
@@ -1844,7 +1859,7 @@
                 "notes": "",
                 "announcementDateAD": "2022-10-19",
                 "bonusListingDateAD": "2023-02-27",
-                "closePrice": 515.0
+                "closePrice": 545.0
             },
             {
                 "fiscalYear": "075-076",
@@ -1968,15 +1983,15 @@
             {
                 "fiscalYear": "082-083",
                 "bonusPercent": 10.0,
-                "cashPercent": 0.0,
-                "totalPercent": 10.0,
+                "cashPercent": 0.5263,
+                "totalPercent": 10.5263,
                 "bookClosureDateAD": "2026-09-29",
                 "bookClosureDateBS": "",
                 "distributionDateAD": "",
                 "announcementDateAD": "2026-09-14",
                 "bonusListingDateAD": "",
-                "closePrice": 1400.0,
-                "status": "0",
+                "closePrice": 1078.9,
+                "status": "1",
                 "source": "hamroshare",
                 "notes": ""
             }

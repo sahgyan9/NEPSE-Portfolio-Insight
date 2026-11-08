@@ -1,0 +1,168 @@
+{
+  "symbol": "SHIVAM",
+  "sector": "Hydropower",
+  "company_name": "Shivam Hydropower",
+  "quarters": [
+    {
+      "symbol": "SHIVAM",
+      "fy": "2081-82",
+      "quarter": 1,
+      "quarter_label": "Q1 81-82",
+      "parsed_at": "2026-11-07T10:04:38.966908",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 5.6575841301251,
+        "bvps": 170.11775235894217,
+        "roe_ttm": 3.3710492562022,
+        "roa_ttm": 2.6274752358954,
+        "net_profit_ttm": 316441620.0,
+        "revenue_ttm": 7684829840.0,
+        "graham_number": 147.16
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2081-82",
+      "quarter": 2,
+      "quarter_label": "Q2 81-82",
+      "parsed_at": "2026-11-07T10:04:38.966893",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 2.8326179411531,
+        "bvps": 171.03369005134348,
+        "roe_ttm": 1.6684665796749,
+        "roa_ttm": 1.3150456169287001,
+        "net_profit_ttm": 158434800.0,
+        "revenue_ttm": 7487750890.0,
+        "graham_number": 104.41
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2081-82",
+      "quarter": 3,
+      "quarter_label": "Q3 81-82",
+      "parsed_at": "2026-11-07T10:04:38.966877",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 7.9826421008347,
+        "bvps": 176.68578558059457,
+        "roe_ttm": 4.658061670933201,
+        "roa_ttm": 3.6989568482163997,
+        "net_profit_ttm": 446487430.0,
+        "revenue_ttm": 7305578990.0,
+        "graham_number": 178.14
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2081-82",
+      "quarter": 4,
+      "quarter_label": "Q4 81-82",
+      "parsed_at": "2026-11-07T10:04:38.966861",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 14.197667229758,
+        "bvps": 183.96885535905037,
+        "roe_ttm": 8.1437533385078,
+        "roa_ttm": 6.5419864139883,
+        "net_profit_ttm": 794108000.0,
+        "revenue_ttm": 7764296400.0,
+        "graham_number": 242.42
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2082-83",
+      "quarter": 1,
+      "quarter_label": "Q1 82-83",
+      "parsed_at": "2026-11-07T10:04:38.966844",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 17.71745392398,
+        "bvps": 187.49494878625526,
+        "roe_ttm": 9.9614490952635,
+        "roa_ttm": 8.036491347733001,
+        "net_profit_ttm": 990977720.0,
+        "revenue_ttm": 7891225440.0,
+        "graham_number": 273.39
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2082-83",
+      "quarter": 2,
+      "quarter_label": "Q2 82-83",
+      "parsed_at": "2026-11-07T10:04:38.966827",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 19.565845350723,
+        "bvps": 180.38487747607908,
+        "roe_ttm": 10.875132247046,
+        "roa_ttm": 8.6769337845894,
+        "net_profit_ttm": 1094362480.0,
+        "revenue_ttm": 7760886120.0,
+        "graham_number": 281.8
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T10:04:38.966810",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 18.106769132052,
+        "bvps": 185.3116808335772,
+        "roe_ttm": 9.9069023658822,
+        "roa_ttm": 7.8869287138679995,
+        "net_profit_ttm": 1012753010.0,
+        "revenue_ttm": 7321741680.0,
+        "graham_number": 274.77
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "SHIVAM",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:04:38.966781",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 14.025425927011,
+        "bvps": 188.75619830108994,
+        "roe_ttm": 7.5738066049701995,
+        "roa_ttm": 6.0503122389769,
+        "net_profit_ttm": 784474150.0,
+        "revenue_ttm": 6922657420.0,
+        "graham_number": 244.06
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    }
+  ],
+  "last_updated": "2026-11-07T10:04:38.968369"
+}

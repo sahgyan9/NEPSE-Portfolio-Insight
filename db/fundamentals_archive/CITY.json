@@ -1,6 +1,6 @@
 {
   "symbol": "CITY",
-  "full_name": "City Hotel Limited",
+  "full_name": "CITY HOTEL LIMITED ",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 25703530,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": -56.08,
+      "pb_ratio": 3.35,
+      "eps_ttm": -5.74,
+      "book_value": 96.13,
+      "roe": -5.98,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -173090730.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 30132000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hotels & Tourism",
+      "name": "CITY HOTEL LIMITED ",
+      "discount_from_graham": null,
+      "eps_reported": -5.74,
+      "net_margin_ttm": -34.21,
+      "asset_turnover_ttm": 8.91,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 73961,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hotels"
+  "sector": "Hotels & Tourism"
 }

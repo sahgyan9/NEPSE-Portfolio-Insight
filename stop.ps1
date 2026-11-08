@@ -47,8 +47,8 @@ foreach ($proc in $pythonProcesses) {
     }
 }
 
-# 3. Terminate any processes holding target ports (5001, 8000, 5175)
-foreach ($port in @(5001, 8000, 5175)) {
+# 3. Terminate any processes holding target ports (5001, 8002, 5175)
+foreach ($port in @(5001, 8002, 5175)) {
     try {
         $conns = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue | Where-Object { $_.OwningProcess -gt 4 }
         foreach ($conn in $conns) {

@@ -1,0 +1,29 @@
+{
+  "symbol": "RHPC",
+  "full_name": "Ridi Hydropower Development Company Ltd.",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2078-79-Q3",
+      "fiscal_year": "2078-79",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "eps_ttm": 110.17,
+      "book_value": 182.68,
+      "roe": 60.31,
+      "roa": null,
+      "graham_number": 672.93,
+      "net_profit_ttm": 483840880.0,
+      "revenue_ttm": 108278860.0,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": null,
+      "name": "Ridi Hydropower Development Company Ltd."
+    }
+  ]
+}

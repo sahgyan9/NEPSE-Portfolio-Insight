@@ -1,0 +1,49 @@
+{
+  "symbol": "KHPL",
+  "full_name": "Kalinchock Hydropower Limited",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 621.0,
+      "pe_ratio": 563.30153578214,
+      "pb_ratio": 5.8415752478527,
+      "eps_ttm": 1.1024290909091,
+      "book_value": 106.30694181818181,
+      "roe": 1.0370245555503,
+      "roa": 0.44131660793931005,
+      "graham_number": 51.35,
+      "shares_outstanding": 5500000.0,
+      "week52_high": 1193.2,
+      "week52_low": 327.7,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": 11.9112,
+      "eps_reported": 1.1,
+      "net_margin_ttm": 3.12,
+      "asset_turnover_ttm": 14.14,
+      "net_profit_ttm": 6063360.0,
+      "revenue_ttm": 194270490.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 75.0,
+      "public_float": 13.9,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 14642,
+      "trade_turnover": 9617897.5,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ]
+}

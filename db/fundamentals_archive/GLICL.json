@@ -1,0 +1,29 @@
+{
+  "symbol": "GLICL",
+  "full_name": "Gurans Life Insurance Company Ltd.",
+  "sector": "Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": null,
+      "pb_ratio": 2.9,
+      "eps_ttm": 9.6,
+      "book_value": 133.76,
+      "roe": 7.18,
+      "roa": null,
+      "graham_number": 169.98,
+      "net_profit_ttm": 161227000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 22393700.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Life Insurance",
+      "name": "Gurans Life Insurance Company Ltd."
+    }
+  ]
+}

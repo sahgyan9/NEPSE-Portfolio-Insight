@@ -1,0 +1,29 @@
+{
+  "symbol": "MMFDB",
+  "full_name": "Mirmire Laghubitta Bittya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2080-81-Q2",
+      "fiscal_year": "2080-81",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": 56.75,
+      "pb_ratio": 3.53,
+      "eps_ttm": 10.22,
+      "book_value": 164.41,
+      "roe": 6.21,
+      "roa": null,
+      "graham_number": 194.44,
+      "net_profit_ttm": 34005420.0,
+      "revenue_ttm": 570450430.0,
+      "shares_outstanding": 6657642.73,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Mirmire Laghubitta Bittya Sanstha Limited"
+    }
+  ]
+}

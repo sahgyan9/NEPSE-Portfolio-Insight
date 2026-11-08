@@ -1,0 +1,29 @@
+{
+  "symbol": "SMFDB",
+  "full_name": "Summit Micro Finance Development Bank Ltd.",
+  "sector": "Development Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 104.54,
+      "pb_ratio": 7.55,
+      "eps_ttm": 10.51,
+      "book_value": 131.9,
+      "roe": 8.0,
+      "roa": null,
+      "graham_number": 176.61,
+      "net_profit_ttm": 44221340.0,
+      "revenue_ttm": 631140390.0,
+      "shares_outstanding": 5610000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Summit Micro Finance Development Bank Ltd."
+    }
+  ]
+}

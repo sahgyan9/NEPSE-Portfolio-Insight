@@ -43,7 +43,50 @@
       "trade_turnover": 4960216.8,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 31.46,
+      "pb_ratio": 4.96,
+      "eps_ttm": 18.91,
+      "book_value": 119.99,
+      "roe": 15.76,
+      "roa": null,
+      "graham_number": 225.95,
+      "net_profit_ttm": 108703990.0,
+      "revenue_ttm": 262559470.0,
+      "shares_outstanding": 5750000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Upper Hewakhola Hydropower company Limited",
+      "discount_from_graham": 1.647,
+      "eps_reported": 18.91,
+      "net_margin_ttm": 64.25,
+      "asset_turnover_ttm": 10.69,
+      "dividend_payout_ratio": 0.7934,
+      "dividend_to_ltp": 0.0251,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 19889,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

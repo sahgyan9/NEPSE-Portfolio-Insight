@@ -1,6 +1,6 @@
 {
   "symbol": "CBBL",
-  "full_name": "Chhimek Laghubitta Bikas Bank Limited",
+  "full_name": "Chhimek Laghubitta Bittiya Sanstha Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 13731,
       "trade_turnover": 12879678,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 32.65,
+      "pb_ratio": 3.8,
+      "eps_ttm": 35.91,
+      "book_value": 251.06,
+      "roe": 14.3,
+      "roa": null,
+      "graham_number": 450.39,
+      "net_profit_ttm": 1298965530.0,
+      "revenue_ttm": 6717349500.0,
+      "shares_outstanding": 36172641.02,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Chhimek Laghubitta Bittiya Sanstha Limited",
+      "discount_from_graham": 1.207,
+      "eps_reported": 35.91,
+      "net_margin_ttm": 19.34,
+      "asset_turnover_ttm": 12.2,
+      "dividend_payout_ratio": 0.6962,
+      "dividend_to_ltp": 0.0252,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 1,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 19691,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

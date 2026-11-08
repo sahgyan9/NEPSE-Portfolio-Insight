@@ -1,0 +1,29 @@
+{
+  "symbol": "JALPA",
+  "full_name": "Jalpa Samudayik Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2080-81-Q3",
+      "fiscal_year": "2080-81",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 314.87,
+      "pb_ratio": 5.15,
+      "eps_ttm": 4.58,
+      "book_value": 280.24,
+      "roe": 1.63,
+      "roa": null,
+      "graham_number": 169.94,
+      "net_profit_ttm": 6281790.0,
+      "revenue_ttm": 513720160.0,
+      "shares_outstanding": 1828000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Jalpa Samudayik Laghubitta Sanstha Limited"
+    }
+  ]
+}

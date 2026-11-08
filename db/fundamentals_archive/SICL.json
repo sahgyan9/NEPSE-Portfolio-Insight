@@ -43,7 +43,50 @@
       "trade_turnover": 5610509.1,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 127.11,
+      "pb_ratio": 2.77,
+      "eps_ttm": 4.19,
+      "book_value": 191.95,
+      "roe": 2.19,
+      "roa": null,
+      "graham_number": 134.52,
+      "net_profit_ttm": 130089120.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 31015678.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Shikhar Insurance Co. Ltd.",
+      "discount_from_graham": 3.0345,
+      "eps_reported": 4.19,
+      "net_margin_ttm": 2.09,
+      "asset_turnover_ttm": 40.93,
+      "dividend_payout_ratio": 1.4305,
+      "dividend_to_ltp": 0.011,
+      "promoter_holding": 51.0,
+      "public_float": 49.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 3117,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Non Life Insurance"
+  "sector": "Non-Life Insurance"
 }

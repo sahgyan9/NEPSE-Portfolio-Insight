@@ -1,0 +1,29 @@
+{
+  "symbol": "SPARS",
+  "full_name": "Sparsha Laghubitta Bittiya Sanstha Limited",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2077-78-Q3",
+      "fiscal_year": "2077-78",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 23.23,
+      "pb_ratio": 6.83,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Sparsha Laghubitta Bittiya Sanstha Limited"
+    }
+  ]
+}

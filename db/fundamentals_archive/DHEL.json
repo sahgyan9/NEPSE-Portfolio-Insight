@@ -43,7 +43,49 @@
       "trade_turnover": 10980024,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 508.0,
+      "pe_ratio": -51.415150720798,
+      "pb_ratio": 4.300051875566,
+      "eps_ttm": -9.8803561377972,
+      "book_value": 118.13810965550704,
+      "roe": 0.0,
+      "roa": -3.5288951718109,
+      "graham_number": null,
+      "shares_outstanding": 10305000.0,
+      "week52_high": 851.0,
+      "week52_low": 442.4,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": null,
+      "eps_reported": -9.88,
+      "net_margin_ttm": -89.2,
+      "asset_turnover_ttm": 3.96,
+      "net_profit_ttm": -101817070.0,
+      "revenue_ttm": 114145560.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 61.67,
+      "public_float": 26.91,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 21650,
+      "trade_turnover": 11254501.1,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

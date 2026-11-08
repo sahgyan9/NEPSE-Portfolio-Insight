@@ -1,6 +1,6 @@
 {
   "symbol": "UNLB",
-  "full_name": "Unique Nepal Laghubitta Bittiya Sanstha Ltd.",
+  "full_name": "Unique Nepal Laghubitta Bittiya Sanstha Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -42,6 +42,49 @@
       "trade_volume": 365,
       "trade_turnover": 465010,
       "days_since_trade": 0,
+      "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 53.89,
+      "pb_ratio": 4.85,
+      "eps_ttm": 34.39,
+      "book_value": 247.59,
+      "roe": 13.89,
+      "roa": null,
+      "graham_number": 437.7,
+      "net_profit_ttm": 51097790.0,
+      "revenue_ttm": 510745660.0,
+      "shares_outstanding": 1485750.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Unique Nepal Laghubitta Bittiya Sanstha Limited",
+      "discount_from_graham": 1.8211,
+      "eps_reported": 34.39,
+      "net_margin_ttm": 13.66,
+      "asset_turnover_ttm": 9.86,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 52.0,
+      "public_float": 48.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 480,
+      "days_since_trade": 1,
       "price_is_stale": false
     }
   ],

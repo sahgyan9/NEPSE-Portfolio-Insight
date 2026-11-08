@@ -1,6 +1,6 @@
 {
   "symbol": "JHAPA",
-  "full_name": "Jhapa Energy limited",
+  "full_name": "Jhapa Energy Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 4117417.2,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 907.0,
+      "pe_ratio": 235.26480501051,
+      "pb_ratio": 8.8970845222738,
+      "eps_ttm": 3.855230279597,
+      "book_value": 101.94350719377154,
+      "roe": 3.7817320452485004,
+      "roa": 1.7489309466882998,
+      "graham_number": 94.04,
+      "shares_outstanding": 3801900.0,
+      "week52_high": 1840.0,
+      "week52_low": 311.2,
+      "captured_at": "2026-11-07",
+      "sector": "Others",
+      "discount_from_graham": 9.0068,
+      "eps_reported": 3.86,
+      "net_margin_ttm": 13.71,
+      "asset_turnover_ttm": 12.76,
+      "net_profit_ttm": 14657200.0,
+      "revenue_ttm": 106942830.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 75.0,
+      "public_float": 14.7,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 1685,
+      "trade_turnover": 1598697.9,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Others"
+  "sector": "Hydropower"
 }

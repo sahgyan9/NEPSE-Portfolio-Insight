@@ -72,7 +72,7 @@ export const clearDividendCache = (): void => {
 
 const PYTHON_API_URL = import.meta.env.DEV
     ? '/api/nepse-server'
-    : 'http://localhost:8000';
+    : 'http://localhost:8002';
 
 /**
  * Fetch dividend history for a single stock

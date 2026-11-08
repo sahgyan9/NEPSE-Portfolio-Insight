@@ -118,9 +118,9 @@ function Open-InChrome {
 # ------------------------------------------------------------------
 Log-Message "STEP 1: Performing fast warm check..."
 $isWarmDb     = Test-PortOpen 5001
-$isWarmServer = Test-PortOpen 8000
+$isWarmServer = Test-PortOpen 8002
 $isWarmVite   = Test-PortOpen 5175
-Log-Message "Warm status: DB(:5001)=$isWarmDb, Server(:8000)=$isWarmServer, Vite(:5175)=$isWarmVite"
+Log-Message "Warm status: DB(:5001)=$isWarmDb, Server(:8002)=$isWarmServer, Vite(:5175)=$isWarmVite"
 
 if ($isWarmDb -and $isWarmServer -and $isWarmVite) {
     Log-Message "All services active - opening browser at http://localhost:5175"
@@ -292,8 +292,8 @@ if (-not $isWarmDb) {
 }
 
 if (-not $isWarmServer) {
-    Log-Message "Starting NEPSE Market API (:8000)..."
-    Update-Splash "Starting NEPSE Market API (:8000)..."
+    Log-Message "Starting NEPSE Market API (:8002)..."
+    Update-Splash "Starting NEPSE Market API (:8002)..."
     $pServer = Start-Process -FilePath $venvPython -ArgumentList "`"$ProjectRoot\nepse_server.py`"" -WorkingDirectory $ProjectRoot -WindowStyle Hidden -PassThru
     Log-Message "NEPSE Server launched with PID: $($pServer.Id)"
 }
@@ -314,7 +314,7 @@ for ($i = 0; $i -lt 40; $i++) {
     [System.Windows.Forms.Application]::DoEvents()
     
     if (-not $isWarmDb)     { $isWarmDb = Test-PortOpen 5001 }
-    if (-not $isWarmServer) { $isWarmServer = Test-PortOpen 8000 }
+    if (-not $isWarmServer) { $isWarmServer = Test-PortOpen 8002 }
     if (-not $isWarmVite)   {
         try {
             $res = Invoke-WebRequest -Uri "http://localhost:5175" -UseBasicParsing -TimeoutSec 1 -ErrorAction SilentlyContinue
@@ -324,7 +324,7 @@ for ($i = 0; $i -lt 40; $i++) {
     }
 
     if ($i % 5 -eq 0) {
-        Log-Message "Polling iteration $($i) - DB(:5001)=$isWarmDb, Server(:8000)=$isWarmServer, Vite(:5175)=$isWarmVite"
+        Log-Message "Polling iteration $($i) - DB(:5001)=$isWarmDb, Server(:8002)=$isWarmServer, Vite(:5175)=$isWarmVite"
     }
 
     if ($isWarmDb -and $isWarmServer -and $isWarmVite) {
@@ -336,7 +336,7 @@ for ($i = 0; $i -lt 40; $i++) {
     if ($i -eq 4) {
         Update-Splash "Connecting to database (:5001)..."
     } elseif ($i -eq 10) {
-        Update-Splash "Connecting to NEPSE live engine (:8000)..."
+        Update-Splash "Connecting to NEPSE live engine (:8002)..."
     } elseif ($i -eq 16) {
         Update-Splash "Warming dashboard interface (:5175)..."
     }
@@ -370,7 +370,7 @@ if ($allReady) {
 
     $missingParts = @()
     if (-not $isWarmDb)     { $missingParts += "Portfolio Database (port 5001)" }
-    if (-not $isWarmServer) { $missingParts += "NEPSE Server (port 8000)" }
+    if (-not $isWarmServer) { $missingParts += "NEPSE Server (port 8002)" }
     if (-not $isWarmVite)   { $missingParts += "Dashboard UI (port 5175)" }
     $missingText = $missingParts -join ", "
     Log-Message "Startup failed. Missing: $missingText"

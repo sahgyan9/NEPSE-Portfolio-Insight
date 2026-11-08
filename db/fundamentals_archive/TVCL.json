@@ -1,6 +1,6 @@
 {
   "symbol": "TVCL",
-  "full_name": "Trishuli Jal Vidhyut Company Limited",
+  "full_name": "Trishuli Jal Vidhyut Company Limited ",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 499188,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 287.0,
+      "pe_ratio": -39.002568143827,
+      "pb_ratio": 3.770455414786,
+      "eps_ttm": -7.3584898035856,
+      "book_value": 76.11812590980753,
+      "roe": 0.0,
+      "roa": -1.7227278579568999,
+      "graham_number": null,
+      "shares_outstanding": 17891627.7,
+      "week52_high": 676.0,
+      "week52_low": 272.0,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": null,
+      "eps_reported": -7.36,
+      "net_margin_ttm": -48063.43,
+      "asset_turnover_ttm": 0.0,
+      "net_profit_ttm": -131655360.0,
+      "revenue_ttm": 273920.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 0,
+        "roa_vs_sector": 2,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 5530,
+      "trade_turnover": 1558468.0,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

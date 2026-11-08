@@ -1,0 +1,60 @@
+{
+  "symbol": "TPKHL",
+  "sector": "Hydropower",
+  "company_name": "Taksar Pikhuwa Khola Hydropower Limited",
+  "quarters": [
+    {
+      "symbol": "TPKHL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:31:43.566437",
+      "raw": {
+        "Paid Up Capital": 1200000000.0,
+        "Reserve and Surplus": 29327700.0,
+        "Total Equity": 1229327700.0,
+        "Borrowings": 845312450.0,
+        "Current Liabilities": 52003760.0,
+        "Current Assets": 447074490.0,
+        "Total Assets": 2086644420.0,
+        "Revenue": 250247770.0,
+        "Gross Profit": 233612870.0,
+        "Operating Profit": 138365090.0,
+        "Net Profit": 35575660.0,
+        "Number of Shares": 12000000.0,
+        "EPS Reported": 2.96,
+        "Book Value Reported": 102.44,
+        "ROE Reported": 2.89
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 2.9646383333333,
+        "bvps": 102.443975,
+        "roe_ttm": 2.8939118511687,
+        "roa_ttm": 1.7049220106222,
+        "net_profit_ttm": 35575660.0,
+        "revenue_ttm": 250247770.0,
+        "graham_number": 82.66
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T10:31:43.567093"
+}

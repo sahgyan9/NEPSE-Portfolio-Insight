@@ -106,40 +106,14 @@ def num(v):
     except ValueError:
         return None
 
-
-def normalize_sector(s):
-    if not s:
+try:
+    import sys
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+    from quarterly_db import normalize_sector
+except ImportError:
+    def normalize_sector(s: str | None, name: str | None = None) -> str:
         return "Others"
-    t = s.lower()
-    if "development" in t:
-        return "Development Bank"
-    if "bank" in t:
-        return "Commercial Bank"
-    if "microfinance" in t or "laghubitta" in t:
-        return "Microfinance"
-    if "non" in t and "insurance" in t:
-        return "Non-Life Insurance"
-    if "reinsurance" in t:
-        return "Non-Life Insurance"
-    if "insurance" in t:
-        return "Life Insurance"
-    if "hydro" in t:
-        return "Hydropower"
-    if "manufactur" in t or "distiller" in t or "cement" in t:
-        return "Manufacturing"
-    if "hotel" in t or "tourism" in t:
-        return "Hotels & Tourism"
-    if "invest" in t:
-        return "Investment"
-    if "trad" in t:
-        return "Trading"
-    if "finance" in t:
-        return "Finance"
-    if "fund" in t or "mutual" in t:
-        return "Mutual Fund"
-    if "debenture" in t or "bond" in t or "preference" in t:
-        return "Debt"
-    return "Others"
 
 
 def clip(v, lo, hi):
@@ -218,10 +192,11 @@ def load_universe():
             continue
         s = snaps[-1]
         sym = doc.get("symbol") or os.path.basename(path)[:-5]
-        sector = normalize_sector(s.get("sector") or doc.get("sector"))
+        name = doc.get("full_name") or doc.get("company_name")
+        sector = normalize_sector(s.get("sector") or doc.get("sector"), name)
         pe = num(s.get("pe_ratio"))
         recs[sym] = {
-            "symbol": sym, "name": doc.get("full_name"), "sector": sector,
+            "symbol": sym, "name": name, "sector": sector,
             "period": s.get("reported_quarter"), "captured_at": s.get("captured_at"),
             "ltp": num(s.get("ltp_at_capture")),
             "eps_ttm": num(s.get("eps_ttm")), "bvps": num(s.get("book_value")),
@@ -251,18 +226,22 @@ def load_universe():
         if not qs:
             continue
         sym = (doc.get("symbol") or os.path.basename(path)[:-5]).upper()
+        comp_name = doc.get("company_name") or recs.get(sym, {}).get("name")
+        sec_inferred = normalize_sector(doc.get("sector"), comp_name)
         qs = sorted(qs, key=lambda q: (q.get("fy", ""), q.get("quarter", 0)))
         last = qs[-1]
         c, r, y = last.get("computed", {}), last.get("raw", {}), last.get("yoy", {})
-        rec = recs.get(sym) or {"symbol": sym, "name": doc.get("company_name"),
-                                "sector": normalize_sector(doc.get("sector")),
+        rec = recs.get(sym) or {"symbol": sym, "name": comp_name,
+                                "sector": sec_inferred,
                                 "quarters": 0, "promoter": None, "turnover": None,
                                 "days_since_trade": None, "price_is_stale": False,
                                 "payout_ratio": None, "div_yield": None,
                                 "graham_discount": None, "ltp": None,
                                 "bonus_avg5": None, "bonus_years_frac": None}
-        if rec.get("sector") in (None, "Others") and doc.get("sector"):
-            rec["sector"] = normalize_sector(doc.get("sector"))
+        if comp_name and (not rec.get("name") or rec.get("name") == sym or len(comp_name) > len(str(rec.get("name") or ""))):
+            rec["name"] = comp_name
+        if sec_inferred != "Others" or rec.get("sector") in (None, "Others"):
+            rec["sector"] = sec_inferred
         rec["period"] = f"{last.get('fy')}-Q{last.get('quarter')}"
         rec["history_depth"] = len(qs)
 

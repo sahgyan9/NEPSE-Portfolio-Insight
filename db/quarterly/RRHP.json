@@ -1,0 +1,165 @@
+{
+  "symbol": "RRHP",
+  "sector": "Hydropower",
+  "company_name": "Rairang Hydropower Development Company Ltd.",
+  "quarters": [
+    {
+      "symbol": "RRHP",
+      "fy": "2077-78",
+      "quarter": 3,
+      "quarter_label": "Q3 77-78",
+      "parsed_at": "2026-11-07T09:54:06.125722",
+      "raw": {
+        "Paid Up Capital": 560000000.0,
+        "Reserve and Surplus": 54883870.0,
+        "Total Equity": 614883870.0,
+        "Borrowings": 1313829670.0,
+        "Current Liabilities": 98497680.0,
+        "Current Assets": 72966640.0,
+        "Total Assets": 1928713540.0,
+        "Revenue": 170161040.0,
+        "Operating Profit": 143900.79,
+        "Net Profit": 38521490.0,
+        "Number of Shares": 5600000.0,
+        "EPS(Rs.)": 9.17,
+        "Book Value(Rs.)": 109.8,
+        "ROE": 8.35
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS(Rs.)",
+        "Book Value(Rs.)",
+        "ROE"
+      ],
+      "computed": {
+        "eps_ttm": 9.17,
+        "bvps": 109.8,
+        "roe_ttm": 8.35,
+        "roa_ttm": null,
+        "net_profit_ttm": 38521490.0,
+        "revenue_ttm": 170161040.0,
+        "graham_number": 150.51
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "RRHP",
+      "fy": "2077-78",
+      "quarter": 4,
+      "quarter_label": "Q4 77-78",
+      "parsed_at": "2026-11-07T09:54:06.125610",
+      "raw": {
+        "Paid Up Capital": 560000000.0,
+        "Reserve and Surplus": 75381330.0,
+        "Total Equity": 635381330.0,
+        "Borrowings": 1308229840.0,
+        "Current Liabilities": 112497340.0,
+        "Current Assets": 104692850.0,
+        "Total Assets": 1943611170.0,
+        "Revenue": 230361770.0,
+        "Operating Profit": 198407.51,
+        "Net Profit": 59018950.0,
+        "Number of Shares": 5600000.0,
+        "EPS(Rs.)": 10.54,
+        "Book Value(Rs.)": 113.46,
+        "ROE": 9.29
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS(Rs.)",
+        "Book Value(Rs.)",
+        "ROE"
+      ],
+      "computed": {
+        "eps_ttm": 10.54,
+        "bvps": 113.46,
+        "roe_ttm": 9.29,
+        "roa_ttm": null,
+        "net_profit_ttm": 59018950.0,
+        "revenue_ttm": 230361770.0,
+        "graham_number": 164.03
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "RRHP",
+      "fy": "2078-79",
+      "quarter": 1,
+      "quarter_label": "Q1 78-79",
+      "parsed_at": "2026-11-07T09:54:06.125463",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "RRHP",
+      "fy": "2078-79",
+      "quarter": 2,
+      "quarter_label": "Q2 78-79",
+      "parsed_at": "2026-11-07T09:54:06.125446",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    },
+    {
+      "symbol": "RRHP",
+      "fy": "2078-79",
+      "quarter": 3,
+      "quarter_label": "Q3 78-79",
+      "parsed_at": "2026-11-07T09:54:06.125412",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": null,
+        "bvps": null,
+        "roe_ttm": null,
+        "roa_ttm": null,
+        "net_profit_ttm": null,
+        "revenue_ttm": null
+      },
+      "yoy": {},
+      "sector": "Hydropower"
+    }
+  ],
+  "last_updated": "2026-11-07T09:54:06.127086"
+}

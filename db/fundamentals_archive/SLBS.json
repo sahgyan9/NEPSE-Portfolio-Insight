@@ -1,0 +1,29 @@
+{
+  "symbol": "SLBS",
+  "full_name": "Suryodaya Laghubitta Bittiya Sanstha Ltd.",
+  "sector": "Microfinance",
+  "snapshots": [
+    {
+      "reported_quarter": "2078-79-Q2",
+      "fiscal_year": "2078-79",
+      "quarter": 2,
+      "ltp_at_capture": null,
+      "pe_ratio": 99.19,
+      "pb_ratio": 10.35,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Microfinance",
+      "name": "Suryodaya Laghubitta Bittiya Sanstha Ltd."
+    }
+  ]
+}

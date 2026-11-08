@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => ({
         secure: true,
       },
       '/api/nepse-server': {
-        target: 'http://localhost:8000',
+        target: 'http://localhost:8002',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/nepse-server/, ''),
         secure: false,

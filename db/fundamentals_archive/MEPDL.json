@@ -1,0 +1,49 @@
+{
+  "symbol": "MEPDL",
+  "full_name": "Mount Everest Power Development Limited",
+  "sector": "Hydropower",
+  "snapshots": [
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 568.0,
+      "pe_ratio": 56.290531418203,
+      "pb_ratio": 5.0996012209563,
+      "eps_ttm": 10.090506976744,
+      "book_value": 111.38125813953488,
+      "roe": 9.059429876526599,
+      "roa": 3.8094899445212,
+      "graham_number": 159.02,
+      "shares_outstanding": 8600000.0,
+      "week52_high": 797.6,
+      "week52_low": 345.0,
+      "captured_at": "2026-11-07",
+      "sector": "Hydro Power",
+      "discount_from_graham": 2.7668,
+      "eps_reported": 10.09,
+      "net_margin_ttm": 25.75,
+      "asset_turnover_ttm": 14.8,
+      "net_profit_ttm": 86778360.0,
+      "revenue_ttm": 337036220.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 70.0,
+      "public_float": 18.6,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 0
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 15605,
+      "trade_turnover": 9222044.0,
+      "days_since_trade": 1,
+      "price_is_stale": false
+    }
+  ]
+}

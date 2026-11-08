@@ -43,7 +43,50 @@
       "trade_turnover": 22625163,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 36.75,
+      "pb_ratio": 4.27,
+      "eps_ttm": 19.75,
+      "book_value": 170.14,
+      "roe": 11.61,
+      "roa": null,
+      "graham_number": 274.97,
+      "net_profit_ttm": 363251020.0,
+      "revenue_ttm": 584951290.0,
+      "shares_outstanding": 18389793.17,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Radhi Bidyut Company Ltd",
+      "discount_from_graham": 1.6583,
+      "eps_reported": 19.75,
+      "net_margin_ttm": 62.1,
+      "asset_turnover_ttm": 16.55,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 46069,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

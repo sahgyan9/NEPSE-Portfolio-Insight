@@ -1,0 +1,29 @@
+{
+  "symbol": "NBB",
+  "full_name": "Nepal Bangladesh Bank Limited",
+  "sector": "Commercial Bank",
+  "snapshots": [
+    {
+      "reported_quarter": "2078-79-Q3",
+      "fiscal_year": "2078-79",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 27.16,
+      "pb_ratio": 2.49,
+      "eps_ttm": null,
+      "book_value": null,
+      "roe": null,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": null,
+      "revenue_ttm": null,
+      "shares_outstanding": null,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Commercial Bank",
+      "name": "Nepal Bangladesh Bank Limited"
+    }
+  ]
+}

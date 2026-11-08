@@ -43,7 +43,50 @@
       "trade_turnover": 7515792,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 81.93,
+      "pb_ratio": 3.4,
+      "eps_ttm": 4.36,
+      "book_value": 105.02,
+      "roe": 4.15,
+      "roa": null,
+      "graham_number": 101.5,
+      "net_profit_ttm": 32678580.0,
+      "revenue_ttm": 81315960.0,
+      "shares_outstanding": 7500000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Union Hydropower Limited",
+      "discount_from_graham": 2.686,
+      "eps_reported": 4.36,
+      "net_margin_ttm": 61.01,
+      "asset_turnover_ttm": 8.72,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 40897,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

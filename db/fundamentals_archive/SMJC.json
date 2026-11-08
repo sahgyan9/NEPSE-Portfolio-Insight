@@ -1,6 +1,6 @@
 {
   "symbol": "SMJC",
-  "full_name": "Sagarmatha Jalbidhyut Company Limited",
+  "full_name": "Sagarmatha Jalabidhyut Company Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 8502975,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 78.88,
+      "pb_ratio": 3.8,
+      "eps_ttm": 3.78,
+      "book_value": 109.59,
+      "roe": 3.45,
+      "roa": null,
+      "graham_number": 96.54,
+      "net_profit_ttm": 44387810.0,
+      "revenue_ttm": 223447150.0,
+      "shares_outstanding": 11732000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Sagarmatha Jalabidhyut Company Limited",
+      "discount_from_graham": 3.5886,
+      "eps_reported": 3.78,
+      "net_margin_ttm": 31.2,
+      "asset_turnover_ttm": 5.67,
+      "dividend_payout_ratio": 1.2555,
+      "dividend_to_ltp": 0.0107,
+      "promoter_holding": 0.0,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 50404,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

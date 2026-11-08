@@ -1,0 +1,112 @@
+{
+  "symbol": "RLEL",
+  "sector": "Hydropower",
+  "company_name": "Ridge Line Energy Limited",
+  "quarters": [
+    {
+      "symbol": "RLEL",
+      "fy": "2082-83",
+      "quarter": 3,
+      "quarter_label": "Q3 82-83",
+      "parsed_at": "2026-11-07T10:09:27.919745",
+      "raw": {
+        "Paid Up Capital": 1185000000.0,
+        "Reserve and Surplus": 296947430.0,
+        "Total Equity": 1481947430.0,
+        "Borrowings": 1183909870.0,
+        "Current Liabilities": 41345900.0,
+        "Current Assets": 228201310.0,
+        "Total Assets": 2675015710.0,
+        "Revenue": 236826500.0,
+        "Gross Profit": 214629170.0,
+        "Operating Profit": 150661750.0,
+        "Net Profit": 93909250.0,
+        "Number of Shares": 11850000.0,
+        "EPS Reported": 10.57,
+        "Book Value Reported": 125.06,
+        "ROE Reported": 8.45
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 10.563800021097,
+        "bvps": 125.05885485232068,
+        "roe_ttm": 8.447062811802999,
+        "roa_ttm": 4.6796371992148,
+        "net_profit_ttm": 125181030.25,
+        "revenue_ttm": 315638270.7,
+        "graham_number": 172.41
+      },
+      "yoy": {},
+      "sector": "Others"
+    },
+    {
+      "symbol": "RLEL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T10:09:27.919736",
+      "raw": {
+        "Paid Up Capital": 1185000000.0,
+        "Reserve and Surplus": 346076360.0,
+        "Total Equity": 1531076360.0,
+        "Borrowings": 1125189570.0,
+        "Current Liabilities": 49015390.0,
+        "Current Assets": 132277370.0,
+        "Total Assets": 2667659510.0,
+        "Revenue": 337276470.0,
+        "Gross Profit": 306273320.0,
+        "Operating Profit": 219403050.0,
+        "Net Profit": 144992240.0,
+        "Number of Shares": 11850000.0,
+        "EPS Reported": 12.24,
+        "Book Value Reported": 129.2,
+        "ROE Reported": 9.47
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 12.235632067511,
+        "bvps": 129.20475611814345,
+        "roe_ttm": 9.46995484928,
+        "roa_ttm": 5.435185392156701,
+        "net_profit_ttm": 144992240.0,
+        "revenue_ttm": 337276470.0,
+        "graham_number": 188.6
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T10:09:27.920230"
+}

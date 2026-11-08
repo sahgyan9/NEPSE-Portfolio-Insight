@@ -61,7 +61,7 @@ const API_BASE_URL = import.meta.env.DEV
 
 const NEPSE_SERVER_URL = import.meta.env.DEV
     ? '/api/nepse-server'
-    : 'http://localhost:8000';
+    : 'http://localhost:8002';
 
 /**
  * Fast in-memory cache of the full live market snapshot (all 345+ stocks).

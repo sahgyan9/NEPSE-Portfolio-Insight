@@ -1,0 +1,59 @@
+{
+  "symbol": "KHPL",
+  "sector": "Hydropower",
+  "company_name": "Kalinchock Hydropower Limited",
+  "quarters": [
+    {
+      "symbol": "KHPL",
+      "fy": "2082-83",
+      "quarter": 4,
+      "quarter_label": "Q4 82-83",
+      "parsed_at": "2026-11-07T09:27:53.271730",
+      "raw": {
+        "Paid Up Capital": 550000000.0,
+        "Reserve and Surplus": 34688180.0,
+        "Total Equity": 584688180.0,
+        "Borrowings": 645948620.0,
+        "Current Liabilities": 117505070.0,
+        "Current Assets": 82258190.0,
+        "Total Assets": 1373925180.0,
+        "Revenue": 194270490.0,
+        "Gross Profit": 9265460.0,
+        "Net Profit": 6063360.0,
+        "Number of Shares": 5500000.0,
+        "EPS Reported": 1.1,
+        "Book Value Reported": 106.31,
+        "ROE Reported": 1.04
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 1.1024290909091,
+        "bvps": 106.30694181818181,
+        "roe_ttm": 1.0370245555503,
+        "roa_ttm": 0.44131660793931005,
+        "net_profit_ttm": 6063360.0,
+        "revenue_ttm": 194270490.0,
+        "graham_number": 51.35
+      },
+      "yoy": {},
+      "sector": "Others"
+    }
+  ],
+  "last_updated": "2026-11-07T09:27:53.272203"
+}

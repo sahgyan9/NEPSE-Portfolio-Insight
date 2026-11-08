@@ -1,0 +1,29 @@
+{
+  "symbol": "GIC",
+  "full_name": "General Insurance Company Nepal Ltd",
+  "sector": "Non-Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q1",
+      "fiscal_year": "2079-80",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 49.01,
+      "pb_ratio": 3.24,
+      "eps_ttm": 7.55,
+      "book_value": 129.05,
+      "roe": 5.85,
+      "roa": null,
+      "graham_number": 148.06,
+      "net_profit_ttm": 18879000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 10000000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "General Insurance Company Nepal Ltd"
+    }
+  ]
+}

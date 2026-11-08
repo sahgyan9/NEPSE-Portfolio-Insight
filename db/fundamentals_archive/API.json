@@ -1,6 +1,6 @@
 {
   "symbol": "API",
-  "full_name": "API Power Company Limited",
+  "full_name": "API POWER COMPANY LIMITED",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,50 @@
       "trade_turnover": 36963230,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 22.16,
+      "pb_ratio": 2.79,
+      "eps_ttm": 15.06,
+      "book_value": 119.51,
+      "roe": 12.6,
+      "roa": null,
+      "graham_number": 201.24,
+      "net_profit_ttm": 960605090.0,
+      "revenue_ttm": 1780391130.0,
+      "shares_outstanding": 63797241.99,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "API POWER COMPANY LIMITED",
+      "discount_from_graham": 0.7295,
+      "eps_reported": 15.06,
+      "net_margin_ttm": 53.95,
+      "asset_turnover_ttm": 11.92,
+      "dividend_payout_ratio": 0.3321,
+      "dividend_to_ltp": 0.0144,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 1,
+        "yoy_vs_sector": 1
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 427889,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

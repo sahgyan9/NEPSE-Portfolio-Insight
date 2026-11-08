@@ -1,6 +1,6 @@
 {
   "symbol": "PURE",
-  "full_name": "Pure Energy Ltd",
+  "full_name": "Pure Energy Limited",
   "snapshots": [
     {
       "captured_at": "2026-07-29",
@@ -43,7 +43,49 @@
       "trade_turnover": 4601184,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": 740.0,
+      "pe_ratio": 233.97591075716,
+      "pb_ratio": 7.1399311322284,
+      "eps_ttm": 3.16271875,
+      "book_value": 103.64245625,
+      "roe": 3.0515667656227,
+      "roa": 1.0858917291679,
+      "graham_number": 85.88,
+      "shares_outstanding": 8000000.0,
+      "week52_high": 1220.0,
+      "week52_low": 662.0,
+      "captured_at": "2026-11-07",
+      "sector": "Others",
+      "discount_from_graham": 8.1698,
+      "eps_reported": 3.16,
+      "net_margin_ttm": 10.21,
+      "asset_turnover_ttm": 10.64,
+      "net_profit_ttm": 25301750.0,
+      "revenue_ttm": 247805070.0,
+      "dividend_payout_ratio": 0.0,
+      "dividend_to_ltp": 0.0,
+      "promoter_holding": 80.0,
+      "public_float": 20.0,
+      "sector_rankings": {
+        "pe_vs_sector": 2,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 0,
+        "peg_vs_sector": 0,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 6999,
+      "trade_turnover": 5476766.9,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Others"
+  "sector": "Hydropower"
 }

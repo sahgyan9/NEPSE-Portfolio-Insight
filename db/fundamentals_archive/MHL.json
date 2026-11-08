@@ -43,7 +43,50 @@
       "trade_turnover": 3773040,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 58.22,
+      "pb_ratio": 4.4,
+      "eps_ttm": 8.76,
+      "book_value": 115.85,
+      "roe": 7.56,
+      "roa": null,
+      "graham_number": 151.11,
+      "net_profit_ttm": 56658890.0,
+      "revenue_ttm": 121708660.0,
+      "shares_outstanding": 6467670.85,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hydropower",
+      "name": "Mandakini Hydropower Limited",
+      "discount_from_graham": 2.1758,
+      "eps_reported": 8.76,
+      "net_margin_ttm": 46.55,
+      "asset_turnover_ttm": 11.96,
+      "dividend_payout_ratio": 0.5708,
+      "dividend_to_ltp": 0.0104,
+      "promoter_holding": null,
+      "public_float": 100.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 1,
+        "roe_vs_sector": 2,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 10630,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hydro Power"
+  "sector": "Hydropower"
 }

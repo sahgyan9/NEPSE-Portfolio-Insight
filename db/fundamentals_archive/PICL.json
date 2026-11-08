@@ -1,0 +1,29 @@
+{
+  "symbol": "PICL",
+  "full_name": "Prudential Insurance Co. Ltd.",
+  "sector": "Non-Life Insurance",
+  "snapshots": [
+    {
+      "reported_quarter": "2079-80-Q3",
+      "fiscal_year": "2079-80",
+      "quarter": 3,
+      "ltp_at_capture": null,
+      "pe_ratio": 33.66,
+      "pb_ratio": 2.96,
+      "eps_ttm": 10.92,
+      "book_value": 183.27,
+      "roe": 5.96,
+      "roa": null,
+      "graham_number": 212.2,
+      "net_profit_ttm": 100390000.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 12255840.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Non-Life Insurance",
+      "name": "Prudential Insurance Co. Ltd."
+    }
+  ]
+}

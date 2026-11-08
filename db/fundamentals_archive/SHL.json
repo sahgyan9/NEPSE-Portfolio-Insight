@@ -43,7 +43,50 @@
       "trade_turnover": 5346500,
       "days_since_trade": 0,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2082-83-Q4",
+      "fiscal_year": "2082-83",
+      "quarter": 4,
+      "ltp_at_capture": null,
+      "pe_ratio": 84.1,
+      "pb_ratio": 19.11,
+      "eps_ttm": 6.48,
+      "book_value": 28.52,
+      "roe": 22.71,
+      "roa": null,
+      "graham_number": 64.48,
+      "net_profit_ttm": 761106090.0,
+      "revenue_ttm": null,
+      "shares_outstanding": 117515254.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-07",
+      "sector": "Hotels & Tourism",
+      "name": "Soaltee Hotel Limited",
+      "discount_from_graham": 7.3556,
+      "eps_reported": 6.48,
+      "net_margin_ttm": 24.18,
+      "asset_turnover_ttm": 101.15,
+      "dividend_payout_ratio": 0.2548,
+      "dividend_to_ltp": 0.0031,
+      "promoter_holding": 69.0,
+      "public_float": 31.0,
+      "sector_rankings": {
+        "pe_vs_sector": 1,
+        "pb_vs_sector": 2,
+        "roe_vs_sector": 1,
+        "roa_vs_sector": 1,
+        "dividend_yield_vs_sector": 2,
+        "peg_vs_sector": 2,
+        "yoy_vs_sector": 2
+      },
+      "last_trade_date": "2026-10-29",
+      "trade_volume": 158058,
+      "days_since_trade": 1,
+      "price_is_stale": false
     }
   ],
-  "sector": "Hotels"
+  "sector": "Hotels & Tourism"
 }
