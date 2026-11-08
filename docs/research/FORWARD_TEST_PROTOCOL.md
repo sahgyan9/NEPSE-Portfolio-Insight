@@ -126,6 +126,17 @@ again, and the gap is a deviation. Output: `.tmp/forward_test_summary.json` and 
   being real rather than design knowledge; an IC near zero would support the opposite. Either
   way the result is stated with its sample size.
 
+## Validation run (2026-11-08, before any live record)
+
+`record --date 2026-06-12 --out-dir <temp folder>` was run for the last complete Phase 2 period
+and compared with `.tmp/backtest/sector_leaders_lag60.json` (regenerated the same day). Result:
+the 33 holdings match exactly, in the same order; signal (2026-06-12), entry (2026-06-15) and
+exit (2026-09-15) sessions match; universe 314, eligible 178 and excluded 136 match. `evaluate`
+on that record reproduced the backtest's gross return, all three benchmarks, excess return and
+IC (0.3149) to the last floating-point digit. Only the cost differs (0.50% against 0.23%), by
+design: a forward chain starts from cash, while the backtest carried weights from the previous
+quarter. The validation record was not written to `db/research/forward_test/`.
+
 ## Known limitations
 
 - **Short horizon:** about 4 periods per year.
