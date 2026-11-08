@@ -2,15 +2,23 @@ import os
 import json
 import math
 
-def calculate_derived_metrics():
+def calculate_derived_metrics(symbols=None):
+    """Recompute derived ratios and write them back into db/quarterly/<SYM>.json.
+
+    symbols: optional list of symbols to process. Default (None) processes every file.
+    Tests must pass the symbols they mocked, otherwise they rewrite the real dataset.
+    """
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     quarterly_dir = os.path.join(project_root, "db", "quarterly")
-    
+
     if not os.path.exists(quarterly_dir):
         print(f"Error: quarterly directory {quarterly_dir} does not exist.")
         return
-        
+
     files = [f for f in os.listdir(quarterly_dir) if f.endswith(".json")]
+    if symbols is not None:
+        wanted = {f"{s.upper()}.json" for s in symbols}
+        files = [f for f in files if f in wanted]
     print(f"Found {len(files)} quarterly data files to process.")
     
     for filename in files:
