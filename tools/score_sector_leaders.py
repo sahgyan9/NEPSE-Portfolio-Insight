@@ -178,6 +178,26 @@ def eps_trend(series):
     return growth, consistency, cv
 
 
+def prior_fy(fy):
+    """'2083-84' -> '2082-83'. Returns None for anything not shaped 'YYYY-YY'."""
+    m = re.fullmatch(r"(\d{4})-(\d{2})", str(fy or ""))
+    if not m:
+        return None
+    start = int(m.group(1))
+    return f"{start - 1}-{start % 100:02d}"
+
+
+def prior_year_quarter(qs, last):
+    """The same quarter of the immediately preceding fiscal year, or None.
+    Never falls back to an older year: a comparison against data several
+    years old would mislabel the 'YoY' checklist items."""
+    want_fy = prior_fy(last.get("fy"))
+    if want_fy is None:
+        return None
+    return next((q for q in qs if q.get("fy") == want_fy
+                 and q.get("quarter") == last.get("quarter")), None)
+
+
 # ----------------------------------------------------------------------------
 # Loading: build one unified record per symbol
 # ----------------------------------------------------------------------------
@@ -285,8 +305,7 @@ def load_universe():
         if equity and equity > 0:
             rec["de"] = (borrow or 0.0) / equity if borrow is not None else None
         # prior-year comparables for the checklist
-        prev = next((q for q in qs if q.get("quarter") == last.get("quarter")
-                     and q.get("fy") != last.get("fy")), None)
+        prev = prior_year_quarter(qs, last)
         if prev:
             pc, pr = prev.get("computed", {}), prev.get("raw", {})
             rec["roa_prev"] = num(pc.get("roa_ttm"))
