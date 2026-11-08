@@ -36,7 +36,9 @@ from tools import score_sector_leaders as SL  # noqa: E402
 from tools.report_availability import quarter_end  # noqa: E402
 
 FROZEN = {
-    "tools/score_sector_leaders.py": "76ee5142044a8992fd1ea7e90d3e068778d58ea6d685d2706a6bd5e80383f455",
+    # v2 (2026-11-08): checklist prior-year fix, see the deviation log in
+    # docs/research/PHASE2_PREREGISTRATION.md. v1 was 76ee5142...f455.
+    "tools/score_sector_leaders.py": "ece6ac96dbd20c631c8c836920b6c15f46936b3548e3276cffd9bac9c1f47c58",
     "quarterly_db.py": "14c723ec2de32ba6a2415ef44e8285ac7cbf5c8b7a3cce7c751dbfb88cf338a2",
 }
 PRICES_DIR = os.path.join(ROOT, "db", "prices")

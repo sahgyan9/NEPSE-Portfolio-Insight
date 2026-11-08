@@ -9,6 +9,10 @@ lxml==6.1.1
 pdfplumber==0.11.10
 httpx==0.28.1
 
+# Nepali (Bikram Sambat) calendar: exact fiscal quarter-end dates for
+# tools/report_availability.py and the research backtest
+nepali-datetime==1.0.8.5
+
 # Chrome TLS impersonation — lets the NepseAlpha scrapers get past Cloudflare's
 # bot-check (plain httpx/requests get 403'd). The scrapers fall back to httpx
 # if this isn't installed, but installing it is strongly recommended.
