@@ -60,7 +60,7 @@ export const HighLowScannerCard = () => {
                                 onClick={() => setViewMode('near_high')}
                                 className="h-8 text-xs gap-1.5"
                             >
-                                <TrendingUp className="h-3.5 w-3.5 text-emerald-500" />
+                                <TrendingUp className="h-3.5 w-3.5 text-emerald-700" />
                                 Near 52w High
                             </Button>
                             <Button
@@ -69,7 +69,7 @@ export const HighLowScannerCard = () => {
                                 onClick={() => setViewMode('near_low')}
                                 className="h-8 text-xs gap-1.5"
                             >
-                                <TrendingDown className="h-3.5 w-3.5 text-rose-500" />
+                                <TrendingDown className="h-3.5 w-3.5 text-rose-700" />
                                 Near 52w Low
                             </Button>
                         </div>
@@ -139,7 +139,7 @@ export const HighLowScannerCard = () => {
                                                     variant="outline"
                                                     className={`font-mono text-xs ${
                                                         isBreakout
-                                                            ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold'
+                                                            ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-700 dark:text-emerald-700 font-semibold'
                                                             : 'text-muted-foreground'
                                                     }`}
                                                 >
@@ -154,7 +154,7 @@ export const HighLowScannerCard = () => {
                                                     variant="outline"
                                                     className={`font-mono text-xs ${
                                                         isBottom
-                                                            ? 'border-rose-500/50 bg-rose-500/10 text-rose-600 dark:text-rose-400 font-semibold'
+                                                            ? 'border-rose-500/50 bg-rose-500/10 text-rose-700 dark:text-rose-700 font-semibold'
                                                             : 'text-muted-foreground'
                                                     }`}
                                                 >

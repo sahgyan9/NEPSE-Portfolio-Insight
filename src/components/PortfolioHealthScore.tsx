@@ -1,24 +1,11 @@
 /**
- * Portfolio Health Score Component
- * =================================
- * 
- * Visual representation of portfolio health with:
- * - Circular gauge for overall score
- * - Individual metric indicators
- * - Educational tooltips
- * - Grade badge
+ * Portfolio Health Score
+ * Grade, score and five pillar bars, then plain lists of strengths and things to look at.
  */
 
 import { useMemo, useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
-import { Badge } from '@/components/ui/badge';
+import { Explain } from '@/components/Explain';
+import { Skeleton } from '@/components/ui/skeleton';
 import { StockHolding } from '@/data/portfolioData';
 import {
     calculatePortfolioHealth,
@@ -27,8 +14,9 @@ import {
     getHealthBgColor,
 } from '@/lib/valuationScoring';
 import { getPortfolioHealth, PortfolioHealthResponse } from '@/services/portfolioDb';
+import { StatusIcon } from '@/components/StatusIcon';
 import { HealthIndicator, MetricHealth } from '@/types/fundamentals';
-import { Info, TrendingUp, Shield, PieChart, Building2, Coins } from 'lucide-react';
+import { Check, TriangleAlert, ArrowRight } from 'lucide-react';
 
 interface PortfolioHealthScoreProps {
     holdings: StockHolding[];
@@ -94,35 +82,35 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                         pillars.structure.name,
                         pillars.structure.score,
                         pillars.structure.description,
-                        '📊',
+                        'diversification',
                         getStatusFromScore(pillars.structure.score)
                     ),
                     valuation: createIndicator(
                         pillars.valuation.name,
                         pillars.valuation.score,
                         pillars.valuation.description,
-                        '💎',
+                        'valuation',
                         getStatusFromScore(pillars.valuation.score)
                     ),
                     dividendQuality: createIndicator(
                         pillars.dividend.name,
                         pillars.dividend.score,
                         pillars.dividend.description,
-                        '💰',
+                        'dividend',
                         getStatusFromScore(pillars.dividend.score)
                     ),
                     concentration: createIndicator(
                         pillars.fundamentals.name,
                         pillars.fundamentals.score,
                         pillars.fundamentals.description,
-                        '🏢',
+                        'concentration',
                         getStatusFromScore(pillars.fundamentals.score)
                     ),
                     sectorBalance: createIndicator(
                         pillars.volatility.name,
                         pillars.volatility.score,
                         pillars.volatility.description,
-                        '⚡',
+                        'sector',
                         getStatusFromScore(pillars.volatility.score)
                     ),
                 },
@@ -134,193 +122,93 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
         return calculatePortfolioHealth(holdings);
     }, [holdings, serverHealth]);
 
-    // Icon mapping for indicators
-    const iconMap: Record<string, React.ReactNode> = {
-        diversification: <PieChart className="w-4 h-4" />,
-        valuation: <TrendingUp className="w-4 h-4" />,
-        dividendQuality: <Coins className="w-4 h-4" />,
-        concentration: <Building2 className="w-4 h-4" />,
-        sectorBalance: <Shield className="w-4 h-4" />,
-    };
+    const pillars = Object.values(health.indicators);
+    const gradeColor = getGradeColor(health.grade);
 
     return (
-        <Card className="w-full">
-            <CardHeader className="pb-2">
-                <div className="flex items-center justify-between">
-                    <div>
-                        <CardTitle className="text-xl font-bold">Portfolio Health Score</CardTitle>
-                        <CardDescription>Comprehensive assessment of your portfolio</CardDescription>
-                    </div>
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <Info className="w-4 h-4 text-muted-foreground" />
-                            </TooltipTrigger>
-                            <TooltipContent className="max-w-xs">
-                                <p>
-                                    Health score is calculated based on diversification, valuation metrics,
-                                    dividend quality, concentration risk, and sector balance.
-                                </p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+        <section className="surface p-4 sm:p-5">
+            <header className="mb-4 flex items-start justify-between gap-2">
+                <div>
+                    <h3 className="flex items-center gap-1.5 text-base font-semibold">
+                        How healthy is the portfolio overall?
+                        <Explain term="healthScore" />
+                    </h3>
+                    <p className="mt-0.5 text-xs text-muted-foreground">Five checks, each scored 0 to 100.</p>
                 </div>
-            </CardHeader>
-            <CardContent>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {/* Main Score Gauge */}
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="relative w-40 h-40">
-                            {/* Background circle */}
-                            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="45"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="8"
-                                    className="text-muted/20"
-                                />
-                                {/* Progress circle */}
-                                <circle
-                                    cx="50"
-                                    cy="50"
-                                    r="45"
-                                    fill="none"
-                                    stroke={getGradeColor(health.grade)}
-                                    strokeWidth="8"
-                                    strokeLinecap="round"
-                                    strokeDasharray={`${health.overallScore * 2.83} 283`}
-                                    className="transition-all duration-1000 ease-out"
-                                />
-                            </svg>
-                            {/* Center content */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                <span
-                                    className="text-4xl font-bold"
-                                    style={{ color: getGradeColor(health.grade) }}
-                                >
-                                    {health.grade}
-                                </span>
-                                <span className="text-sm text-muted-foreground">
-                                    {health.overallScore}/100
-                                </span>
-                            </div>
+            </header>
+
+            {loading && !serverHealth ? (
+                <Skeleton className="h-48 w-full" />
+            ) : (
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-[160px_1fr]">
+                    <div className="flex flex-col items-start justify-center">
+                        <div className="flex items-baseline gap-2">
+                            <span className="text-5xl font-bold leading-none" style={{ color: gradeColor }}>
+                                {health.grade}
+                            </span>
+                            <span className="font-mono text-sm text-muted-foreground">{health.overallScore}/100</span>
                         </div>
-                        <Badge
-                            className="mt-4 text-sm"
-                            style={{
-                                backgroundColor: `${getGradeColor(health.grade)}20`,
-                                color: getGradeColor(health.grade),
-                            }}
-                        >
-                            {health.status === 'excellent' && '🌟 Excellent'}
-                            {health.status === 'good' && '✅ Good'}
-                            {health.status === 'fair' && '⚖️ Fair'}
-                            {health.status === 'poor' && '⚠️ Needs Attention'}
-                            {health.status === 'critical' && '🚨 Critical'}
-                        </Badge>
+                        <p className="mt-2 text-sm capitalize text-muted-foreground">{health.status.replace('-', ' ')}</p>
                     </div>
 
-                    {/* Individual Indicators & Summary */}
-                    <div className="lg:col-span-2 space-y-4">
-                        {health.textSummary && (
-                            <div className="p-4 rounded-xl bg-card border border-border/50 text-sm text-foreground leading-relaxed shadow-inner">
-                                <p className="font-semibold text-primary mb-1 flex items-center gap-1.5">
-                                    <Shield className="w-4 h-4 text-primary" /> Health Assessment
-                                </p>
-                                <p className="text-muted-foreground">{health.textSummary}</p>
-                            </div>
-                        )}
-                        
-                        <h4 className="font-semibold text-sm text-muted-foreground mb-3 uppercase tracking-wider">
-                            Health Breakdown
-                        </h4>
-                        
-                        {Object.entries(health.indicators).map(([key, indicator]) => (
-                            <div key={key} className="space-y-1">
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <span className={indicator.bgColor + ' p-1.5 rounded-md'}>
-                                            {iconMap[key]}
-                                        </span>
-                                        <TooltipProvider>
-                                            <Tooltip>
-                                                <TooltipTrigger className="flex items-center gap-1">
-                                                    <span className="text-sm font-medium">{indicator.name}</span>
-                                                    <Info className="w-3 h-3 text-muted-foreground" />
-                                                </TooltipTrigger>
-                                                <TooltipContent className="max-w-xs">
-                                                    <p className="text-sm">{indicator.description}</p>
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </div>
-                                    <span
-                                        className="text-sm font-bold"
-                                        style={{ color: indicator.color }}
-                                    >
-                                        {indicator.label}
+                    <ul className="space-y-3">
+                        {pillars.map((p) => (
+                            <li key={p.name}>
+                                <div className="mb-1 flex items-center justify-between text-sm">
+                                    <span className="flex items-center gap-1.5 font-medium">
+                                        <span style={{ color: p.color }}><StatusIcon name={p.icon} className="h-4 w-4" /></span>
+                                        {p.name}
                                     </span>
+                                    <span className="font-mono text-muted-foreground">{p.value}</span>
                                 </div>
-                                <Progress
-                                    value={indicator.value}
-                                    className="h-2"
-                                    style={{
-                                        ['--progress-color' as any]: indicator.color,
-                                    }}
-                                />
-                            </div>
+                                <div className="h-2 w-full overflow-hidden rounded-full bg-muted" role="img" aria-label={`${p.name}: ${p.value} out of 100`}>
+                                    <div className="h-full rounded-full" style={{ width: `${Math.min(100, Math.max(0, p.value))}%`, background: p.color }} />
+                                </div>
+                                <p className="mt-1 text-xs text-muted-foreground">{p.description}</p>
+                            </li>
                         ))}
+                    </ul>
+                </div>
+            )}
+
+            {health.textSummary && (
+                <p className="mt-5 rounded-md border border-border bg-muted/50 p-3 text-sm leading-relaxed">
+                    {health.textSummary}
+                </p>
+            )}
+
+            <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+                {health.strengths.length > 0 && (
+                    <div>
+                        <h4 className="mb-2 text-sm font-semibold">Strengths</h4>
+                        <ul className="space-y-1.5 text-sm text-muted-foreground">
+                            {health.strengths.map((t, i) => (
+                                <li key={i} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />{t}</li>
+                            ))}
+                        </ul>
                     </div>
-                </div>
-
-                {/* Insights Section */}
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Strengths */}
-                    {health.strengths.length > 0 && (
-                        <div className="p-4 rounded-lg bg-green-500/10 border border-green-500/20">
-                            <h5 className="font-semibold text-green-600 dark:text-green-400 flex items-center gap-2 mb-2">
-                                <span>💪</span> Strengths
-                            </h5>
-                            <ul className="space-y-1.5">
-                                {health.strengths.map((s, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {s}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
-                    {/* Warnings */}
-                    {health.warnings.length > 0 && (
-                        <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                            <h5 className="font-semibold text-yellow-600 dark:text-yellow-400 flex items-center gap-2 mb-2">
-                                <span>⚠️</span> Warnings
-                            </h5>
-                            <ul className="space-y-1.5">
-                                {health.warnings.map((w, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {w}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-
-                    {/* Recommendations */}
-                    {health.recommendations.length > 0 && (
-                        <div className="p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                            <h5 className="font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-2 mb-2">
-                                <span>💡</span> Recommendations
-                            </h5>
-                            <ul className="space-y-1.5">
-                                {health.recommendations.map((r, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground leading-relaxed">• {r}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </CardContent>
-        </Card>
+                )}
+                {health.warnings.length > 0 && (
+                    <div>
+                        <h4 className="mb-2 text-sm font-semibold">Worth a closer look</h4>
+                        <ul className="space-y-1.5 text-sm text-muted-foreground">
+                            {health.warnings.map((t, i) => (
+                                <li key={i} className="flex gap-2"><TriangleAlert className="mt-0.5 h-4 w-4 shrink-0 text-warning" />{t}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                {health.recommendations.length > 0 && (
+                    <div>
+                        <h4 className="mb-2 text-sm font-semibold">Things to consider</h4>
+                        <ul className="space-y-1.5 text-sm text-muted-foreground">
+                            {health.recommendations.map((t, i) => (
+                                <li key={i} className="flex gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{t}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        </section>
     );
 };

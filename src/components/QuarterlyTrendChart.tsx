@@ -54,34 +54,34 @@ const toCr = (v: number | null) => v !== null ? +(v / 10_000_000).toFixed(2) : n
 
 const METRICS: MetricDef[] = [
   // Scale metrics (Cr)
-  { key: 'revenue',   label: 'Revenue (Cr)',        group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Revenue', 'Interest Income', 'revenue'])), unit: 'Cr', color: '#3b82f6', defaultOn: true },
-  { key: 'net_profit',label: 'Net Profit (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Net Profit', 'net_profit'])),       unit: 'Cr', color: '#22c55e', defaultOn: true },
-  { key: 'gross_profit',label:'Gross Profit (Cr)',   group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Gross Profit', 'gross_profit'])),     unit: 'Cr', color: '#a855f7', defaultOn: false },
-  { key: 'op_profit', label: 'Oper. Profit (Cr)',    group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Operating Profit', 'operating_profit', 'op_profit'])), unit: 'Cr', color: '#f59e0b', defaultOn: false },
-  { key: 'total_equity', label: 'Total Equity (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Equity', 'total_equity'])),     unit: 'Cr', color: '#06b6d4', defaultOn: false },
-  { key: 'total_assets', label: 'Total Assets (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Assets', 'total_assets'])),     unit: 'Cr', color: '#64748b', defaultOn: false },
-  { key: 'borrowings',label: 'Borrowings (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Borrowings', 'lt_loan', 'borrowings'])), unit: 'Cr', color: '#ef4444', defaultOn: false },
+  { key: 'revenue',   label: 'Revenue (Cr)',        group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Revenue', 'Interest Income', 'revenue'])), unit: 'Cr', color: 'hsl(var(--sector-1))', defaultOn: true },
+  { key: 'net_profit',label: 'Net Profit (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Net Profit', 'net_profit'])),       unit: 'Cr', color: 'hsl(var(--status-1))', defaultOn: true },
+  { key: 'gross_profit',label:'Gross Profit (Cr)',   group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Gross Profit', 'gross_profit'])),     unit: 'Cr', color: 'hsl(var(--sector-4))', defaultOn: false },
+  { key: 'op_profit', label: 'Oper. Profit (Cr)',    group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Operating Profit', 'operating_profit', 'op_profit'])), unit: 'Cr', color: 'hsl(var(--chart-caution))', defaultOn: false },
+  { key: 'total_equity', label: 'Total Equity (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Equity', 'total_equity'])),     unit: 'Cr', color: 'hsl(var(--sector-6))', defaultOn: false },
+  { key: 'total_assets', label: 'Total Assets (Cr)', group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Total Assets', 'total_assets'])),     unit: 'Cr', color: 'hsl(var(--chart-axis))', defaultOn: false },
+  { key: 'borrowings',label: 'Borrowings (Cr)',      group: 'scale',   getValue: q => toCr(getRawMetric(q, ['Borrowings', 'lt_loan', 'borrowings'])), unit: 'Cr', color: 'hsl(var(--status-5))', defaultOn: false },
   // Ratio / per-share metrics
-  { key: 'eps_ttm',   label: 'EPS TTM',              group: 'ratios',  getValue: q => q.computed.eps_ttm,           unit: 'Rs', color: '#14b8a6', defaultOn: true },
-  { key: 'bvps',      label: 'BVPS',                 group: 'ratios',  getValue: q => q.computed.bvps,              unit: 'Rs', color: '#ec4899', defaultOn: false },
+  { key: 'eps_ttm',   label: 'EPS TTM',              group: 'ratios',  getValue: q => q.computed.eps_ttm,           unit: 'Rs', color: 'hsl(var(--sector-3))', defaultOn: true },
+  { key: 'bvps',      label: 'BVPS',                 group: 'ratios',  getValue: q => q.computed.bvps,              unit: 'Rs', color: 'hsl(var(--sector-7))', defaultOn: false },
   // Profitability %
-  { key: 'roe_ttm',   label: 'ROE TTM %',            group: 'profitability', getValue: q => q.computed.roe_ttm,    unit: '%',  color: '#f59e0b', defaultOn: true },
-  { key: 'roa_ttm',   label: 'ROA TTM %',            group: 'profitability', getValue: q => q.computed.roa_ttm,    unit: '%',  color: '#a855f7', defaultOn: false },
-  { key: 'net_margin',label: 'Net Margin %',          group: 'profitability', getValue: q => q.computed.net_margin, unit: '%',  color: '#06b6d4', defaultOn: false },
-  { key: 'gross_margin',label:'Gross Margin %',       group: 'profitability', getValue: q => q.computed.gross_margin,unit: '%', color: '#64748b', defaultOn: false },
+  { key: 'roe_ttm',   label: 'ROE TTM %',            group: 'profitability', getValue: q => q.computed.roe_ttm,    unit: '%',  color: 'hsl(var(--chart-caution))', defaultOn: true },
+  { key: 'roa_ttm',   label: 'ROA TTM %',            group: 'profitability', getValue: q => q.computed.roa_ttm,    unit: '%',  color: 'hsl(var(--sector-4))', defaultOn: false },
+  { key: 'net_margin',label: 'Net Margin %',          group: 'profitability', getValue: q => q.computed.net_margin, unit: '%',  color: 'hsl(var(--sector-6))', defaultOn: false },
+  { key: 'gross_margin',label:'Gross Margin %',       group: 'profitability', getValue: q => q.computed.gross_margin,unit: '%', color: 'hsl(var(--chart-axis))', defaultOn: false },
 ];
 
 const GROUP_LABELS: Record<MetricGroup, string> = {
-  scale: '📊 Scale (Cr)',
-  ratios: '💰 Per Share (Rs)',
-  profitability: '📈 Profitability (%)',
+  scale: 'Scale (Cr)',
+  ratios: 'Per Share (Rs)',
+  profitability: 'Profitability (%)',
 };
 
 // ── Custom Tooltip ────────────────────────────────────────────────────────────
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (!active || !payload?.length) return null;
   return (
-    <div className="bg-card border border-border rounded-lg p-3 shadow-lg text-sm">
+    <div className="bg-card border border-border rounded-lg p-3 shadow-sm text-sm">
       <p className="font-semibold text-foreground mb-2">{label}</p>
       {payload.map((entry: any) => (
         <div key={entry.dataKey} className="flex items-center gap-2 mb-1">
@@ -212,7 +212,7 @@ export const QuarterlyTrendChart = ({ quarters, companyName }: QuarterlyTrendCha
                 onClick={() => toggleMetric(m.key)}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-all
                   ${activeMetrics.has(m.key)
-                    ? 'text-white border-transparent'
+                    ? 'text-card border-transparent'
                     : 'bg-transparent border-border text-muted-foreground hover:border-primary/40'
                   }`}
                 style={activeMetrics.has(m.key) ? { background: m.color, borderColor: m.color } : {}}

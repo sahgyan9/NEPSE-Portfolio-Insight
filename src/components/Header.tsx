@@ -5,7 +5,14 @@ import {
   Gift,
   FileBarChart,
   Brain,
+  ShieldAlert,
+  ClipboardCheck,
   Menu,
+  Briefcase,
+  Keyboard,
+  Sun,
+  Moon,
+  Monitor,
   TrendingUp,
   Activity,
   MoreHorizontal,
@@ -17,9 +24,15 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Keys } from "@/components/Kbd";
+import { useTheme, type ThemePreference } from "@/hooks/useTheme";
+import { EVENT_OPEN_HELP, findShortcut } from "@/lib/shortcuts";
 import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
 import { NewsTicker } from "./NewsTicker";
@@ -29,20 +42,57 @@ interface HeaderProps {
   isRefreshing: boolean;
 }
 
-// Primary destinations — always visible in the bar.
+// Primary destinations, always visible in the bar.
 const navItems = [
-  { path: "/", label: "Home", icon: BarChart3 },
-  { path: "/quarterly", label: "Quarterly", icon: FileBarChart },
+  { path: "/", label: "Overview", icon: BarChart3 },
+  { path: "/", to: "/#holdings", section: "holdings", label: "Holdings", icon: Briefcase },
+  { path: "/risk", label: "Risk", icon: ShieldAlert },
+  { path: "/research", label: "Research", icon: ClipboardCheck },
   { path: "/dividends", label: "Dividends", icon: Gift },
-  { path: "/intelligence", label: "Intelligence", icon: Brain },
+  { path: "/quarterly", label: "Quarterly", icon: FileBarChart },
 ];
 
-// Secondary destinations — grouped under "More" on desktop, listed inline on mobile.
+// Secondary destinations, grouped under "More" on desktop and listed inline on mobile.
 const moreItems = [
-  { path: "/fundamentals", label: "Fundamentals", icon: TrendingUp },
+  { path: "/fundamentals", label: "Valuation", icon: TrendingUp },
   { path: "/market", label: "Market", icon: Activity },
-  { path: "/misc", label: "Misc", icon: MoreHorizontal },
+  { path: "/intelligence", label: "Sector screen", icon: Brain },
+  { path: "/misc", label: "Tools", icon: MoreHorizontal },
 ];
+
+const ThemeMenu = () => {
+  const { theme, resolvedTheme, setTheme } = useTheme();
+  const Icon = resolvedTheme === "dark" ? Moon : Sun;
+  return (
+    <DropdownMenu>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon" aria-label="Theme">
+              <Icon className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+        </TooltipTrigger>
+        <TooltipContent className="flex items-center gap-2">
+          Theme <Keys keys={["t"]} />
+        </TooltipContent>
+      </Tooltip>
+      <DropdownMenuContent align="end" className="w-36">
+        <DropdownMenuRadioGroup value={theme} onValueChange={(v) => setTheme(v as ThemePreference)}>
+          <DropdownMenuRadioItem value="light" className="gap-2">
+            <Sun className="h-4 w-4" /> Light
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="dark" className="gap-2">
+            <Moon className="h-4 w-4" /> Dark
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="system" className="gap-2">
+            <Monitor className="h-4 w-4" /> System
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
 
 export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
   const location = useLocation();
@@ -50,19 +100,14 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-card">
         <div className="container flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-6">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="p-2 rounded-xl bg-primary/10 flex items-center justify-center">
-                <img src="/favicon.svg" alt="NEPSE Portfolio Insight" className="h-6 w-6" />
-              </div>
+              <img src="/favicon.svg" alt="" className="h-7 w-7" />
               <div>
-                <h1 className="text-xl font-bold tracking-tight">
-                  <span className="text-primary">NEPSE</span> Portfolio
-                </h1>
-                <p className="text-xs text-muted-foreground hidden sm:block">Intelligent Investment Analysis</p>
+                <h1 className="hidden whitespace-nowrap text-base font-semibold tracking-tight min-[1400px]:block">NEPSE Portfolio Insight</h1>
               </div>
             </Link>
 
@@ -70,21 +115,31 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = location.pathname === item.path;
+                const isActive = location.pathname === item.path && !item.section && !(item.path === "/" && location.hash);
+                const sc = findShortcut(item.path, item.section);
                 return (
-                  <Link key={item.path} to={item.path}>
-                    <Button
-                      variant={isActive ? "secondary" : "ghost"}
-                      size="sm"
-                      className={cn(
-                        "gap-2",
-                        isActive && "bg-primary/10 text-primary"
-                      )}
-                    >
-                      <Icon className="h-4 w-4" />
-                      {item.label}
-                    </Button>
-                  </Link>
+                  <Tooltip key={item.label}>
+                    <TooltipTrigger asChild>
+                      <Link to={item.to ?? item.path}>
+                        <Button
+                          variant={isActive ? "secondary" : "ghost"}
+                          size="sm"
+                          className={cn(
+                            "gap-2",
+                            isActive && "bg-primary/10 text-primary"
+                          )}
+                        >
+                          <Icon className="h-4 w-4" />
+                          {item.label}
+                        </Button>
+                      </Link>
+                    </TooltipTrigger>
+                    {sc && (
+                      <TooltipContent className="flex items-center gap-2">
+                        {item.label} <Keys keys={sc.keys} />
+                      </TooltipContent>
+                    )}
+                  </Tooltip>
                 );
               })}
 
@@ -131,9 +186,23 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
             <Button
               variant="ghost"
               size="icon"
+              className="hidden md:inline-flex"
+              aria-label="Keyboard shortcuts"
+              title="Keyboard shortcuts (?)"
+              onClick={() => window.dispatchEvent(new CustomEvent(EVENT_OPEN_HELP))}
+            >
+              <Keyboard className="h-4 w-4" />
+            </Button>
+
+            <ThemeMenu />
+
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Refresh data"
               onClick={onRefresh}
               disabled={isRefreshing}
-              className="hover:bg-primary/10 animate-fade-in"
+              className="hover:bg-primary/10 "
             >
               <RefreshCw className={`h-4 w-4 ${isRefreshing ? "animate-spin" : ""}`} />
             </Button>
@@ -142,27 +211,22 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
             <div className="lg:hidden flex items-center">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                  <Button variant="ghost" size="icon" aria-label="Open menu">
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-[280px] bg-card border-r border-border/40 p-0 flex flex-col">
-                  <div className="p-6 border-b border-border/40 flex items-center gap-3">
-                    <div className="p-2 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <img src="/favicon.svg" alt="Logo" className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-bold tracking-tight">NEPSE Portfolio</h2>
-                      <p className="text-xs text-muted-foreground">Investment Analysis</p>
-                    </div>
+                <SheetContent side="left" className="w-[280px] bg-card border-r border-border p-0 flex flex-col">
+                  <div className="p-5 border-b border-border flex items-center gap-3">
+                    <img src="/favicon.svg" alt="" className="h-7 w-7" />
+                    <h2 className="text-base font-semibold tracking-tight">NEPSE Portfolio Insight</h2>
                   </div>
                   <nav className="flex-1 py-4 px-2 space-y-1">
                     {[...navItems, ...moreItems].map((item) => {
                       const Icon = item.icon;
-                      const isActive = location.pathname === item.path;
+                      const isActive = location.pathname === item.path && !("section" in item);
                       return (
-                        <SheetClose asChild key={item.path}>
-                          <Link to={item.path} className="block">
+                        <SheetClose asChild key={item.label}>
+                          <Link to={"to" in item && item.to ? item.to : item.path} className="block">
                             <Button
                               variant={isActive ? "secondary" : "ghost"}
                               className={cn(

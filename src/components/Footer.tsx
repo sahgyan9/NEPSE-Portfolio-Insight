@@ -61,7 +61,7 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
                 size="sm"
                 className={cn(
                   "gap-2",
-                  effectiveApiKey && "border-green-500/50 hover:bg-green-500/10 text-green-500 hover:text-green-600"
+                  effectiveApiKey && "border-green-500/50 hover:bg-green-500/10 text-green-700 hover:text-green-700"
                 )}
               >
                 <Key className="h-4 w-4" />

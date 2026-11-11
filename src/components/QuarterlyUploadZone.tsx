@@ -148,7 +148,7 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Parsing */}
         {isParsing && (
           <>
-            <Loader2 className="w-10 h-10 text-blue-500 animate-spin" />
+            <Loader2 className="w-10 h-10 text-blue-700 animate-spin" />
             <div className="text-center">
               <p className="font-semibold">Parsing PDF…</p>
               <p className="text-sm text-muted-foreground mt-1 max-w-xs truncate">{(state as { filename: string }).filename}</p>
@@ -160,9 +160,9 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Success */}
         {state.phase === 'success' && (
           <>
-            <CheckCircle2 className="w-10 h-10 text-green-500" />
+            <CheckCircle2 className="w-10 h-10 text-green-700" />
             <div className="text-center">
-              <p className="font-semibold text-green-600">Saved successfully!</p>
+              <p className="font-semibold text-green-700">Saved successfully!</p>
               <p className="text-sm font-mono font-bold mt-1">
                 {state.result.symbol} – {state.result.quarter_label}
               </p>
@@ -177,9 +177,9 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Duplicate */}
         {state.phase === 'duplicate' && (
           <>
-            <AlertTriangle className="w-10 h-10 text-yellow-500" />
+            <AlertTriangle className="w-10 h-10 text-yellow-700" />
             <div className="text-center">
-              <p className="font-semibold text-yellow-600">Already exists</p>
+              <p className="font-semibold text-yellow-700">Already exists</p>
               <p className="text-sm mt-1">
                 <span className="font-mono font-bold">{state.symbol}</span> – {state.quarter_label}
               </p>
@@ -194,9 +194,9 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Error */}
         {state.phase === 'error' && (
           <>
-            <XCircle className="w-10 h-10 text-red-500" />
+            <XCircle className="w-10 h-10 text-red-700" />
             <div className="text-center">
-              <p className="font-semibold text-red-600">Error</p>
+              <p className="font-semibold text-red-700">Error</p>
               <p className="text-sm text-muted-foreground mt-1 max-w-xs">{state.message}</p>
             </div>
             <Button size="sm" variant="outline" onClick={reset} className="mt-2">
@@ -222,7 +222,7 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-yellow-500" />
+              <HelpCircle className="w-5 h-5 text-yellow-700" />
               Company Not Recognized
             </DialogTitle>
           </DialogHeader>
@@ -236,7 +236,7 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="confirm-symbol">NEPSE Symbol <span className="text-red-500">*</span></Label>
+                <Label htmlFor="confirm-symbol">NEPSE Symbol <span className="text-red-700">*</span></Label>
                 <Input
                   id="confirm-symbol"
                   placeholder="e.g. SAHAS, UPPER, CHCL"

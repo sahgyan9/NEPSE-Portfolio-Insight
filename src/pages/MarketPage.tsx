@@ -78,7 +78,7 @@ const MarketPage = () => {
 
                 {/* Educational Note */}
                 <div className="mt-8 p-4 rounded-lg bg-muted/50 border">
-                    <h4 className="font-semibold mb-2">📊 Understanding NEPSE Market</h4>
+                    <h4 className="font-semibold mb-2">Understanding the NEPSE market</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                         <div>
                             <p className="font-medium text-foreground mb-1">Market Hours</p>

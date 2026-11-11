@@ -34,12 +34,12 @@ export const IPOTable = () => {
             return <Badge variant="outline" className="text-muted-foreground border-border">Pipeline</Badge>;
         }
         if (todayStr < opening_date) {
-            return <Badge variant="secondary" className="bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20">Upcoming</Badge>;
+            return <Badge variant="secondary" className="bg-blue-500/10 text-blue-700 dark:text-blue-700 border-blue-500/20">Upcoming</Badge>;
         }
         if (closing_date && todayStr > closing_date) {
             return <Badge variant="outline" className="text-muted-foreground bg-muted/40">Closed</Badge>;
         }
-        return <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white animate-pulse">Open Now</Badge>;
+        return <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white">Open Now</Badge>;
     };
 
     const formatShareType = (type: string) => {
@@ -70,7 +70,7 @@ export const IPOTable = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
                         <CardTitle className="text-xl flex items-center gap-2">
-                            <Sparkles className="h-5 w-5 text-emerald-500" />
+                            <Sparkles className="h-5 w-5 text-emerald-700" />
                             IPO & Corporate Issues Pipeline
                         </CardTitle>
                         <CardDescription>

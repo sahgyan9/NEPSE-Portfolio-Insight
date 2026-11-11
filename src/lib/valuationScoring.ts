@@ -227,12 +227,12 @@ export const healthToScore = (health: MetricHealth): number => {
  */
 export const getHealthColor = (health: MetricHealth): string => {
     const colors: Record<MetricHealth, string> = {
-        excellent: '#22c55e', // green-500
-        good: '#84cc16',      // lime-500
-        fair: '#eab308',      // yellow-500
-        poor: '#f97316',      // orange-500
-        critical: '#ef4444',  // red-500
-        unknown: '#6b7280',   // gray-500
+        excellent: 'hsl(var(--status-1))', // green-700
+        good: 'hsl(var(--status-2))',      // lime-700
+        fair: 'hsl(var(--status-3))',      // yellow-700
+        poor: 'hsl(var(--status-4))',      // orange-700
+        critical: 'hsl(var(--status-5))',  // red-700
+        unknown: 'hsl(var(--chart-axis))',   // slate-500
     };
     return colors[health];
 };
@@ -257,12 +257,12 @@ export const getHealthBgColor = (health: MetricHealth): string => {
  */
 export const getHealthIcon = (health: MetricHealth): string => {
     const icons: Record<MetricHealth, string> = {
-        excellent: '🟢',
-        good: '🟡',
-        fair: '🟠',
-        poor: '🔴',
-        critical: '⛔',
-        unknown: '⚪',
+        excellent: 'excellent',
+        good: 'good',
+        fair: 'fair',
+        poor: 'poor',
+        critical: 'critical',
+        unknown: 'unknown',
     };
     return icons[health];
 };
@@ -273,8 +273,8 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
             overallScore: 0,
             status: 'unknown',
             label: 'Mutual Fund (Not Rated)',
-            color: '#6b7280', // gray-500
-            icon: '⚪',
+            color: 'hsl(var(--status-0))', // gray-500
+            icon: 'unknown',
             breakdown: {
                 peScore: 0,
                 pbScore: 0,
@@ -285,23 +285,47 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
         };
     }
 
-    const peHealth = getMetricHealth(holding.peRatio, PE_THRESHOLDS);
-    const pbHealth = getMetricHealth(holding.pbRatio, PB_THRESHOLDS);
+    // Scrapers store 0 when a ratio is unavailable; a real P/E or P/B is never exactly 0.
+    const known = (v: number | null | undefined): number | null =>
+        v === null || v === undefined || isNaN(v) || v === 0 ? null : v;
+
+    const peHealth = getMetricHealth(known(holding.peRatio), PE_THRESHOLDS);
+    const pbHealth = getMetricHealth(known(holding.pbRatio), PB_THRESHOLDS);
     const dividendHealth = getMetricHealth(holding.dividendYield, DIVIDEND_THRESHOLDS);
-    const epsHealth = holding.eps !== null && holding.eps > 0 ? 'good' : 'poor';
+    const epsValue = known(holding.eps);
+    const epsHealth: MetricHealth = epsValue === null ? 'unknown' : epsValue > 0 ? 'good' : 'poor';
 
     const peScore = healthToScore(peHealth);
     const pbScore = healthToScore(pbHealth);
     const dividendScore = healthToScore(dividendHealth);
-    const epsScore = healthToScore(epsHealth as MetricHealth);
+    const epsScore = healthToScore(epsHealth);
 
-    // Weighted average (P/E and P/B are more important for value investing)
-    const weights = { pe: 0.35, pb: 0.30, dividend: 0.20, eps: 0.15 };
+    // Weighted average over the metrics that are actually available. Missing data is
+    // left out and the remaining weights are rescaled; scoring it as 0 would label a
+    // stock "overvalued" only because a number was not scraped.
+    const parts: Array<[MetricHealth, number, number]> = [
+        [peHealth, peScore, 0.35],
+        [pbHealth, pbScore, 0.30],
+        [dividendHealth, dividendScore, 0.20],
+        [epsHealth, epsScore, 0.15],
+    ];
+    const available = parts.filter(([health]) => health !== 'unknown');
+    const availableWeight = available.reduce((sum, [, , w]) => sum + w, 0);
+
+    if (availableWeight < 0.3) {
+        return {
+            overallScore: 0,
+            status: 'unknown',
+            label: 'Not enough data',
+            color: 'hsl(var(--status-0))',
+            icon: 'unknown',
+            breakdown: { peScore, pbScore, dividendScore, epsScore },
+            recommendations: ['Not enough fundamental data to rate this stock yet.'],
+        };
+    }
+
     const overallScore = Math.round(
-        peScore * weights.pe +
-        pbScore * weights.pb +
-        dividendScore * weights.dividend +
-        epsScore * weights.eps
+        available.reduce((sum, [, score, w]) => sum + score * w, 0) / availableWeight
     );
 
     // Determine status
@@ -313,28 +337,28 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
     if (overallScore >= 80) {
         status = 'excellent';
         label = 'Excellent Value';
-        color = '#22c55e';
-        icon = '🌟';
+        color = 'hsl(var(--status-1))';
+        icon = 'excellent';
     } else if (overallScore >= 65) {
         status = 'good';
         label = 'Good Value';
-        color = '#84cc16';
-        icon = '✅';
+        color = 'hsl(var(--status-2))';
+        icon = 'good';
     } else if (overallScore >= 50) {
         status = 'fair';
         label = 'Fair Value';
-        color = '#eab308';
-        icon = '⚖️';
+        color = 'hsl(var(--status-3))';
+        icon = 'fair';
     } else if (overallScore >= 35) {
         status = 'overvalued';
         label = 'Overvalued';
-        color = '#f97316';
-        icon = '⚠️';
+        color = 'hsl(var(--status-4))';
+        icon = 'overvalued';
     } else {
         status = 'highly-overvalued';
         label = 'Highly Overvalued';
-        color = '#ef4444';
-        icon = '🚫';
+        color = 'hsl(var(--status-5))';
+        icon = 'highly-overvalued';
     }
 
     // Generate recommendations
@@ -410,10 +434,15 @@ export const calculatePortfolioHealth = (holdings: StockHolding[]): PortfolioHea
     const diversificationScore = Math.round((1 - hhi) * 100);
 
     // 2. Valuation Score (average of all holdings)
-    const valuationScores = holdings.map(h => calculateValuationScore(h).overallScore);
-    const avgValuationScore = Math.round(
-        valuationScores.reduce((a, b) => a + b, 0) / valuationScores.length
-    );
+    // Value-weighted over rated holdings only: mutual funds and stocks without data are
+    // not counted as zeros, and a large position matters more than a small one.
+    const rated = holdings
+        .map(h => ({ value: h.currentValue, score: calculateValuationScore(h) }))
+        .filter(r => r.score.status !== 'unknown' && r.value > 0);
+    const ratedValue = rated.reduce((sum, r) => sum + r.value, 0);
+    const avgValuationScore = ratedValue > 0
+        ? Math.round(rated.reduce((sum, r) => sum + r.score.overallScore * r.value, 0) / ratedValue)
+        : 60;
 
     // 3. Dividend Quality Score
     const dividendYields = holdings
@@ -483,31 +512,31 @@ export const calculatePortfolioHealth = (holdings: StockHolding[]): PortfolioHea
             'Diversification',
             diversificationScore,
             'How well-spread your investments are across different stocks',
-            '📊'
+            'diversification'
         ),
         valuation: createIndicator(
             'Valuation Quality',
             avgValuationScore,
             'Average fundamental value score of your holdings',
-            '💎'
+            'valuation'
         ),
         dividendQuality: createIndicator(
             'Dividend Quality',
             dividendScore,
             'Income generation potential from dividends',
-            '💰'
+            'dividend'
         ),
         concentration: createIndicator(
             'Low Concentration',
             concentrationScore,
             'Risk from having too much in single stocks',
-            '⚖️'
+            'concentration'
         ),
         sectorBalance: createIndicator(
             'Sector Balance',
             sectorBalanceScore,
             'Distribution across different market sectors',
-            '🏢'
+            'sector'
         ),
     };
 
@@ -655,11 +684,11 @@ export const calculateDividendProjections = (holdings: StockHolding[]): Portfoli
  * Get grade color
  */
 export const getGradeColor = (grade: string): string => {
-    if (grade.startsWith('A')) return '#22c55e';
-    if (grade.startsWith('B')) return '#84cc16';
-    if (grade === 'C') return '#eab308';
-    if (grade === 'D') return '#f97316';
-    return '#ef4444';
+    if (grade.startsWith('A')) return 'hsl(var(--status-1))';
+    if (grade.startsWith('B')) return 'hsl(var(--status-2))';
+    if (grade === 'C') return 'hsl(var(--status-3))';
+    if (grade === 'D') return 'hsl(var(--status-4))';
+    return 'hsl(var(--status-5))';
 };
 
 /**

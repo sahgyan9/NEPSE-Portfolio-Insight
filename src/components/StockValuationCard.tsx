@@ -9,6 +9,8 @@
  * - Health indicators
  */
 
+import { StockResearchBlock } from "@/components/research/StockResearchBlock";
+import { StatusIcon } from "@/components/StatusIcon";
 import { useMemo } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -32,7 +34,6 @@ import {
 } from '@/lib/valuationScoring';
 import { Info, TrendingUp, TrendingDown, Minus } from 'lucide-react';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
-import { DynamicGradientBorder } from '@/components/DynamicGradientBorder';
 
 interface StockValuationCardProps {
     holding: StockHolding;
@@ -53,9 +54,9 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
     };
 
     const getGainIcon = () => {
-        if (holding.gainLossPercent > 0) return <TrendingUp className="w-4 h-4 text-green-500" />;
-        if (holding.gainLossPercent < 0) return <TrendingDown className="w-4 h-4 text-red-500" />;
-        return <Minus className="w-4 h-4 text-gray-500" />;
+        if (holding.gainLossPercent > 0) return <TrendingUp className="w-4 h-4 text-green-700" />;
+        if (holding.gainLossPercent < 0) return <TrendingDown className="w-4 h-4 text-red-700" />;
+        return <Minus className="w-4 h-4 text-muted-foreground" />;
     };
 
     const sectorAverages = useMemo(() => {
@@ -73,8 +74,7 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
     const hasGovernance = (holding.promoterHolding !== null && holding.promoterHolding !== undefined) || (holding.avgVolume120d !== null && holding.avgVolume120d !== undefined);
 
     return (
-        <Card className="w-full hover:shadow-lg transition-shadow relative overflow-hidden">
-            <DynamicGradientBorder />
+        <Card className="w-full relative overflow-hidden">
             <CardHeader className="pb-2 relative z-10">
                 <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -97,11 +97,11 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
                                     <Badge
                                         className="text-sm font-bold px-3 py-1"
                                         style={{
-                                            backgroundColor: `${valuation.color}20`,
+                                            backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
                                             color: valuation.color,
                                         }}
                                     >
-                                        {valuation.icon} {valuation.overallScore}
+                                        <span className="inline-flex items-center gap-1"><StatusIcon name={valuation.icon} />{valuation.overallScore}</span>
                                     </Badge>
                                 </TooltipTrigger>
                                 <TooltipContent className="max-w-xs">
@@ -130,7 +130,7 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
                         {getGainIcon()}
                         <div>
                             <span className="text-xs text-muted-foreground">Gain/Loss</span>
-                            <p className={`text-lg font-bold ${holding.gainLossPercent >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                            <p className={`text-lg font-bold ${holding.gainLossPercent >= 0 ? 'text-green-700' : 'text-red-700'}`}>
                                 {holding.gainLossPercent >= 0 ? '+' : ''}{holding.gainLossPercent.toFixed(2)}%
                             </p>
                         </div>
@@ -322,6 +322,7 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
                         )}
                     </>
                 )}
+                <StockResearchBlock symbol={holding.scrip} sector={holding.sector} narrow className="mt-4" />
             </CardContent>
         </Card>
     );
@@ -358,12 +359,12 @@ const MetricItem = ({ label, value, health, subValue, education }: MetricItemPro
                             <TooltipContent className="max-w-xs">
                                 <p className="font-semibold mb-1">{education.term}</p>
                                 <p className="text-sm mb-2">{education.definition}</p>
-                                <p className="text-xs text-green-500">✓ Good: {education.goodRange}</p>
-                                <p className="text-xs text-yellow-500">⚠ Warning: {education.warningThreshold}</p>
+                                <p className="text-xs text-green-700">Good: {education.goodRange}</p>
+                                <p className="text-xs text-yellow-700">Watch: {education.warningThreshold}</p>
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
-                    <span className="text-xs">{healthIcon}</span>
+                    <span style={{ color: healthColor }}><StatusIcon name={healthIcon} /></span>
                 </div>
                 <p className="text-lg font-bold" style={{ color: healthColor }}>
                     {value}
@@ -386,11 +387,11 @@ interface ScoreBarProps {
 
 const ScoreBar = ({ label, score }: ScoreBarProps) => {
     const getScoreColor = (s: number) => {
-        if (s >= 80) return '#22c55e';
-        if (s >= 60) return '#84cc16';
-        if (s >= 40) return '#eab308';
-        if (s >= 20) return '#f97316';
-        return '#ef4444';
+        if (s >= 80) return 'hsl(var(--status-1))';
+        if (s >= 60) return 'hsl(var(--status-2))';
+        if (s >= 40) return 'hsl(var(--status-3))';
+        if (s >= 20) return 'hsl(var(--status-4))';
+        return 'hsl(var(--status-5))';
     };
 
     return (
@@ -424,11 +425,11 @@ export const StockValuationBadge = ({ holding }: { holding: StockHolding }) => {
                     <Badge
                         className="text-xs cursor-help"
                         style={{
-                            backgroundColor: `${valuation.color}20`,
+                            backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
                             color: valuation.color,
                         }}
                     >
-                        {valuation.icon} {valuation.overallScore}
+                        <span className="inline-flex items-center gap-1"><StatusIcon name={valuation.icon} />{valuation.overallScore}</span>
                     </Badge>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs">

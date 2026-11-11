@@ -1,11 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Design tokens. Light theme only.
+ * page #f8fafc, card #ffffff, border #e2e8f0, text #0f172a, muted text #64748b.
+ */
 @layer base {
   :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Single accent: deep blue */
+    --primary: 224 76% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 40%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 70% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 72% 27%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 28 90% 34%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 76% 40%;
+
+    --radius: 0.5rem;
+
+    --chart-positive: 142 72% 27%;
+    --chart-negative: 0 70% 42%;
+    --chart-1: 224 76% 40%;
+    --chart-2: 28 90% 44%;
+    --chart-3: 173 80% 28%;
+    --chart-4: 280 45% 45%;
+    --chart-5: 340 65% 45%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 224 76% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 224 76% 40%;
+
+    /* Portfolio semantics */
+    --profit: 142 72% 27%;
+    --loss: 0 70% 42%;
+    --hold: 28 90% 34%;
+    --buy: 224 76% 40%;
+    --sell: 0 70% 42%;
+
+    /* Chart colours (read by Recharts through hsl(var(--token))) */
+    --chart-grid: 214 32% 91%;
+    --chart-axis: 215 16% 40%;
+    --chart-text: 222 47% 11%;
+    --chart-accent: 226 71% 40%;
+    --chart-accent-soft: 222 86% 77%;
+    --chart-market: 215 16% 47%;
+    --chart-gain: 142 72% 29%;
+    --chart-loss: 0 70% 42%;
+    --chart-caution: 26 90% 37%;
+    --chart-cursor: 210 40% 96%;
+
+    /* Categorical sector palette (Okabe-Ito based) */
+    --sector-1: 209 91% 36%;
+    --sector-2: 29 100% 38%;
+    --sector-3: 172 100% 25%;
+    --sector-4: 310 40% 39%;
+    --sector-5: 49 100% 33%;
+    --sector-6: 199 68% 51%;
+    --sector-7: 341 55% 46%;
+    --sector-8: 215 14% 34%;
+    --sector-9: 80 61% 33%;
+    --sector-10: 258 47% 56%;
+    --sector-other: 215 16% 62%;
+
+    /* Status scale: excellent .. critical, unknown */
+    --status-1: 142 72% 29%;
+    --status-2: 80 70% 28%;
+    --status-3: 40 90% 32%;
+    --status-4: 21 90% 38%;
+    --status-5: 0 70% 42%;
+    --status-0: 215 16% 47%;
+
+    /* Correlation heat scale ends; the midpoint is the card colour */
+    --heat-hot: 8 80% 40%;
+    --heat-cold: 215 70% 38%;
+
+    --kbd-border: 214 32% 91%;
+    --overlay: 222 47% 11% / 0.5;
+    color-scheme: light;
+  }
+
+  /* Dark theme: the app's original emerald-black palette (deep green-black surfaces,
+     emerald primary, gold for caution). Flat surfaces, no glow. */
+  .dark {
     --background: 160 20% 4%;
     --foreground: 150 20% 95%;
 
@@ -22,30 +132,31 @@
     --secondary-foreground: 150 20% 95%;
 
     --muted: 160 12% 12%;
-    --muted-foreground: 150 10% 55%;
+    --muted-foreground: 150 10% 60%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 160 20% 4%;
+    --accent: 160 15% 15%;
+    --accent-foreground: 150 20% 95%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 72% 58%;
     --destructive-foreground: 150 20% 95%;
 
     --success: 142 71% 45%;
     --success-foreground: 160 20% 4%;
 
+    --warning: 45 93% 58%;
+    --warning-foreground: 160 20% 4%;
+
     --border: 160 12% 18%;
     --input: 160 12% 18%;
     --ring: 158 64% 52%;
-
-    --radius: 0.75rem;
 
     --chart-positive: 142 71% 45%;
-    --chart-negative: 0 72% 51%;
+    --chart-negative: 0 72% 58%;
     --chart-1: 158 64% 52%;
     --chart-2: 45 93% 58%;
-    --chart-3: 200 70% 50%;
-    --chart-4: 280 60% 55%;
-    --chart-5: 340 65% 50%;
+    --chart-3: 200 70% 55%;
+    --chart-4: 280 60% 65%;
+    --chart-5: 340 65% 60%;
 
     --sidebar-background: 160 15% 6%;
     --sidebar-foreground: 150 20% 95%;
@@ -56,53 +167,48 @@
     --sidebar-border: 160 12% 15%;
     --sidebar-ring: 158 64% 52%;
 
-    /* Custom portfolio colors */
     --profit: 142 71% 45%;
-    --loss: 0 72% 51%;
+    --loss: 0 72% 58%;
     --hold: 45 93% 58%;
     --buy: 158 64% 52%;
-    --sell: 0 72% 51%;
+    --sell: 0 72% 58%;
 
-    /* Gradient definitions */
-    --gradient-card: linear-gradient(135deg, hsl(160 15% 8%) 0%, hsl(160 12% 6%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(158 64% 42%) 100%);
-    --gradient-profit: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 35%) 100%);
-    --gradient-loss: linear-gradient(135deg, hsl(0 72% 51%) 0%, hsl(0 72% 41%) 100%);
+    --chart-grid: 160 12% 16%;
+    --chart-axis: 150 10% 60%;
+    --chart-text: 150 20% 95%;
+    --chart-accent: 158 64% 52%;
+    --chart-accent-soft: 158 40% 28%;
+    --chart-market: 150 8% 62%;
+    --chart-gain: 142 71% 45%;
+    --chart-loss: 0 72% 58%;
+    --chart-caution: 45 93% 58%;
+    --chart-cursor: 160 15% 13%;
 
-    /* Glow effects */
-    --glow-primary: 0 0 40px hsl(158 64% 52% / 0.3);
-    --glow-profit: 0 0 30px hsl(142 71% 45% / 0.3);
-    --glow-loss: 0 0 30px hsl(0 72% 51% / 0.3);
-  }
+    --sector-1: 158 64% 52%;
+    --sector-2: 29 95% 58%;
+    --sector-3: 200 75% 58%;
+    --sector-4: 310 45% 68%;
+    --sector-5: 49 85% 55%;
+    --sector-6: 180 55% 45%;
+    --sector-7: 341 70% 68%;
+    --sector-8: 150 8% 68%;
+    --sector-9: 80 50% 55%;
+    --sector-10: 258 70% 74%;
+    --sector-other: 150 8% 50%;
 
-  .dark {
-    --background: 160 20% 4%;
-    --foreground: 150 20% 95%;
-    --card: 160 15% 8%;
-    --card-foreground: 150 20% 95%;
-    --popover: 160 15% 8%;
-    --popover-foreground: 150 20% 95%;
-    --primary: 158 64% 52%;
-    --primary-foreground: 160 20% 4%;
-    --secondary: 160 15% 15%;
-    --secondary-foreground: 150 20% 95%;
-    --muted: 160 12% 12%;
-    --muted-foreground: 150 10% 55%;
-    --accent: 45 93% 58%;
-    --accent-foreground: 160 20% 4%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 150 20% 95%;
-    --border: 160 12% 18%;
-    --input: 160 12% 18%;
-    --ring: 158 64% 52%;
-    --sidebar-background: 160 15% 6%;
-    --sidebar-foreground: 150 20% 95%;
-    --sidebar-primary: 158 64% 52%;
-    --sidebar-primary-foreground: 160 20% 4%;
-    --sidebar-accent: 160 15% 12%;
-    --sidebar-accent-foreground: 150 20% 95%;
-    --sidebar-border: 160 12% 15%;
-    --sidebar-ring: 158 64% 52%;
+    --status-1: 142 71% 45%;
+    --status-2: 80 55% 55%;
+    --status-3: 45 93% 58%;
+    --status-4: 25 92% 60%;
+    --status-5: 0 72% 58%;
+    --status-0: 150 8% 62%;
+
+    --heat-hot: 8 80% 58%;
+    --heat-cold: 200 75% 58%;
+
+    --kbd-border: 160 12% 24%;
+    --overlay: 160 20% 2% / 0.7;
+    color-scheme: dark;
   }
 }
 
@@ -112,30 +218,37 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
   .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Anything that shows a number */
+  .num,
+  table td,
+  table th {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 }
 
+/* Sections reached by shortcuts or links land below the sticky header (64px) with some air. */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
 @layer components {
-  .glass-card {
-    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl;
-  }
-
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-
-  .glow-profit {
-    box-shadow: var(--glow-profit);
-  }
-
-  .glow-loss {
-    box-shadow: var(--glow-loss);
+  /* Flat panel: 1px border, at most a very soft shadow */
+  .surface {
+    @apply bg-card border border-border rounded-lg;
+    box-shadow: 0 1px 2px 0 hsl(var(--foreground) / 0.04);
   }
 
   .text-profit {
@@ -155,52 +268,28 @@
   }
 
   .recommendation-buy {
-    @apply bg-primary/20 text-primary border-primary/30;
+    @apply bg-primary/10 text-primary border-primary/30;
   }
 
   .recommendation-sell {
-    @apply bg-destructive/20 text-destructive border-destructive/30;
+    @apply bg-destructive/10 text-destructive border-destructive/30;
   }
 
   .recommendation-hold {
-    @apply bg-accent/20 text-accent border-accent/30;
+    @apply bg-warning/10 text-warning border-warning/30;
   }
 
   .recommendation-add {
-    @apply bg-success/20 text-success border-success/30;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  .stat-card {
-    @apply glass-card p-6 transition-all duration-300 hover:scale-[1.02] hover:border-primary/30;
+    @apply bg-success/10 text-success border-success/30;
   }
 
   .table-row-hover {
-    @apply transition-colors duration-200 hover:bg-secondary/50;
+    @apply hover:bg-muted;
   }
 
   .scrollbar-thin {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--muted)) transparent;
+    scrollbar-color: hsl(var(--border)) transparent;
   }
 
   .scrollbar-thin::-webkit-scrollbar {
@@ -213,23 +302,39 @@
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: hsl(var(--muted));
+    background: hsl(var(--border));
     border-radius: 3px;
   }
 
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground));
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 
-@layer utilities {
-  .text-gradient-primary {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
-  }
 
-  .text-gradient-profit {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-profit);
+/* Dark theme: fixed Tailwind text colours used across older components map to readable tokens. */
+.dark .text-green-700, .dark .text-emerald-700, .dark .text-lime-700, .dark .text-green-800, .dark .text-emerald-800 { color: hsl(var(--success)); }
+.dark .text-red-700, .dark .text-rose-700, .dark .text-red-800 { color: hsl(var(--destructive)); }
+.dark .text-amber-700, .dark .text-yellow-700, .dark .text-orange-700, .dark .text-amber-800, .dark .text-yellow-800 { color: hsl(var(--warning)); }
+.dark .text-blue-700, .dark .text-indigo-700, .dark .text-sky-700, .dark .text-cyan-700, .dark .text-teal-700 { color: hsl(var(--primary)); }
+.dark .text-purple-700, .dark .text-pink-700 { color: hsl(var(--sector-10)); }
+.dark .text-slate-400, .dark .text-slate-500, .dark .text-slate-600, .dark .text-gray-500, .dark .text-gray-600 { color: hsl(var(--muted-foreground)); }
+
+::selection {
+  background: hsl(var(--primary) / 0.25);
+}
+
+* {
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

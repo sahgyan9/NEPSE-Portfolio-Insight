@@ -26,7 +26,7 @@ const PerformerCard = ({
   return (
     <div
       className={cn(
-        "flex items-center gap-3 p-3 rounded-lg border transition-all duration-200 hover:scale-[1.02]",
+        "flex items-center gap-3 p-3 rounded-lg border transition-all duration-200",
         isTop
           ? "bg-success/5 border-success/20 hover:border-success/40"
           : "bg-destructive/5 border-destructive/20 hover:border-destructive/40"
@@ -77,8 +77,8 @@ export const TopPerformers = ({
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
       {/* Top Performers */}
       <div
-        className="glass-card p-4 opacity-0 animate-fade-in"
-        style={{ animationDelay: "1000ms" }}
+        className="surface p-4 "
+       
       >
         <div className="flex items-center gap-2 mb-4">
           <div className="p-2 rounded-lg bg-success/10">
@@ -103,8 +103,8 @@ export const TopPerformers = ({
 
       {/* Worst Performers */}
       <div
-        className="glass-card p-4 opacity-0 animate-fade-in"
-        style={{ animationDelay: "1100ms" }}
+        className="surface p-4 "
+       
       >
         <div className="flex items-center gap-2 mb-4">
           <div className="p-2 rounded-lg bg-destructive/10">

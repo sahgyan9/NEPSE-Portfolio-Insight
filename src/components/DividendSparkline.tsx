@@ -110,8 +110,8 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
         );
     }
 
-    const strokeColor = '#84cc16'; // Lime/green matching reference image
-    const fillColor = 'rgba(132, 204, 22, 0.22)';
+    const strokeColor = 'hsl(var(--status-2))'; // Lime/green matching reference image
+    const fillColor = 'hsl(var(--status-2) / 0.22)';
     const hoveredPoint = hoverIdx !== null && hoverIdx >= 0 && hoverIdx < points.length ? points[hoverIdx] : null;
 
     const hoveredX = hoverIdx !== null ? (points.length === 1 ? width / 2 : getX(hoverIdx)) : 0;
@@ -162,7 +162,7 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
                         cx={dot.cx}
                         cy={dot.cy}
                         r={dot.point.isCurrentFy ? 3.0 : 2.0}
-                        fill={dot.point.isCurrentFy ? '#65a30d' : strokeColor}
+                        fill={dot.point.isCurrentFy ? 'hsl(var(--status-2))' : strokeColor}
                         opacity={hoverIdx === null || hoverIdx === dot.idx ? 1 : 0.4}
                     />
                 ))}
@@ -184,7 +184,7 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
                             cx={hoveredX}
                             cy={hoveredY}
                             r={4.5}
-                            fill="#ffffff"
+                            fill="hsl(var(--card))"
                             stroke={strokeColor}
                             strokeWidth={2.2}
                         />
@@ -195,7 +195,7 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
             {/* Interactive Hover Tooltip */}
             {hoveredPoint && (
                 <div
-                    className="absolute z-50 pointer-events-none rounded-md border border-border bg-popover/95 backdrop-blur-sm px-2.5 py-1.5 text-left text-[11px] shadow-lg whitespace-nowrap -translate-x-1/2 -translate-y-full transition-opacity duration-150"
+                    className="absolute z-50 pointer-events-none rounded-md border border-border bg-popover/95 px-2.5 py-1.5 text-left text-[11px] shadow-sm whitespace-nowrap -translate-x-1/2 -translate-y-full transition-opacity duration-150"
                     style={{
                         left: Math.max(20, Math.min(width - 20, hoveredX)),
                         top: -6,
@@ -204,13 +204,13 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
                     <div className="flex items-center justify-between gap-2 pb-0.5 border-b border-border/50 font-semibold text-foreground">
                         <span>FY {hoveredPoint.fiscalYear}</span>
                         {hoveredPoint.isCurrentFy && (
-                            <span className="text-[9px] font-normal px-1 py-0 rounded bg-emerald-500/10 text-emerald-600 font-mono">
+                            <span className="text-[9px] font-normal px-1 py-0 rounded bg-emerald-500/10 text-emerald-700 font-mono">
                                 Selected
                             </span>
                         )}
                     </div>
                     <div className="pt-1 space-y-0.5 font-mono">
-                        <div className="text-emerald-600 font-bold">
+                        <div className="text-emerald-700 font-bold">
                             {hoveredPoint.totalPercent.toFixed(2)}% Total
                         </div>
                         <div className="text-[10px] text-muted-foreground flex gap-2">

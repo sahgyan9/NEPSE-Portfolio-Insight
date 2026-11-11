@@ -8,28 +8,28 @@
  * Sector colors for consistent visualization across all charts
  */
 export const SECTOR_COLORS: Record<string, string> = {
-    'Commercial Bank': '#3b82f6',      // Blue
-    'Development Bank': '#06b6d4',      // Cyan
-    'Hydropower': '#22c55e',            // Green
-    'Life Insurance': '#a855f7',        // Purple
-    'Non-Life Insurance': '#ec4899',    // Pink
-    'Manufacturing': '#f97316',         // Orange
-    'Mutual Fund': '#eab308',           // Yellow
-    'Telecom': '#14b8a6',               // Teal
-    'Investment': '#6366f1',            // Indigo
-    'Other': '#64748b',                 // Slate
+    'Commercial Bank': 'hsl(var(--sector-1))',      // Blue
+    'Development Bank': 'hsl(var(--sector-6))',      // Cyan
+    'Hydropower': 'hsl(var(--status-1))',            // Green
+    'Life Insurance': 'hsl(var(--sector-4))',        // Purple
+    'Non-Life Insurance': 'hsl(var(--sector-7))',    // Pink
+    'Manufacturing': 'hsl(var(--status-4))',         // Orange
+    'Mutual Fund': 'hsl(var(--status-3))',           // Yellow
+    'Telecom': 'hsl(var(--sector-3))',               // Teal
+    'Investment': 'hsl(var(--sector-10))',            // Indigo
+    'Other': 'hsl(var(--chart-axis))',                 // Slate
 } as const;
 
 /**
  * Chart color palette for consistent theming
  */
 export const CHART_COLORS = {
-    positive: '#22c55e',   // Green for gains
-    negative: '#ef4444',   // Red for losses
-    neutral: '#64748b',    // Gray for neutral
-    primary: '#3b82f6',    // Primary blue
-    secondary: '#8b5cf6',  // Secondary purple
-    accent: '#f59e0b',     // Accent amber
+    positive: 'hsl(var(--status-1))',   // Green for gains
+    negative: 'hsl(var(--status-5))',   // Red for losses
+    neutral: 'hsl(var(--chart-axis))',    // Gray for neutral
+    primary: 'hsl(var(--sector-1))',    // Primary blue
+    secondary: 'hsl(var(--sector-10))',  // Secondary purple
+    accent: 'hsl(var(--chart-caution))',     // Accent amber
 } as const;
 
 /**

@@ -172,7 +172,7 @@ const fetchFromPythonApi = async (symbol: string): Promise<MerolaganiFundamental
             pythonApiAvailable: true,
             lastChecked: new Date().toISOString(),
             activeSource: 'live',
-            message: '✅ Live data from Merolagani.com via Python API',
+            message: 'Live data from Merolagani.com via Python API',
         };
 
         return {
@@ -205,7 +205,7 @@ const fetchFromPythonApi = async (symbol: string): Promise<MerolaganiFundamental
             pythonApiAvailable: false,
             lastChecked: new Date().toISOString(),
             activeSource: 'fallback',
-            message: '⚠️ Python API unavailable - using static fallback data',
+            message: 'Python API unavailable - using static fallback data',
         };
         console.log('[Merolagani] Python API not available, using fallback');
         return null;
@@ -289,7 +289,7 @@ export const fetchMerolaganiFundamentals = async (
     const staticData = getStaticFundamentals(normalizedSymbol);
 
     if (staticData && staticData.bookValue !== null) {
-        console.log(`[Merolagani] 📚 Static fallback for ${normalizedSymbol}: ${staticData.bookValue}`);
+        console.log(`[Merolagani] Static fallback for ${normalizedSymbol}: ${staticData.bookValue}`);
 
         const data: MerolaganiFundamentals = {
             symbol: normalizedSymbol,
@@ -319,7 +319,7 @@ export const fetchMerolaganiFundamentals = async (
         return data;
     }
 
-    console.log(`[Merolagani] ⚠️ No static data available for ${normalizedSymbol}`);
+    console.log(`[Merolagani] No static data available for ${normalizedSymbol}`);
     return null;
 };
 
@@ -473,8 +473,8 @@ export const checkDataSourceStatus = async (): Promise<DataSourceStatus> => {
         lastChecked: new Date().toISOString(),
         activeSource: isAvailable ? 'live' : 'fallback',
         message: isAvailable
-            ? '✅ Live data available from Merolagani.com'
-            : '⚠️ Using static fallback data. Run: python merolagani_server.py for live data',
+            ? 'Live data available from Merolagani.com'
+            : 'Using static fallback data. Run: python merolagani_server.py for live data',
     };
 
     console.log(`[Merolagani] Data source: ${pythonApiStatus.message}`);
@@ -488,10 +488,10 @@ export const checkDataSourceStatus = async (): Promise<DataSourceStatus> => {
 export const getSourceLabel = (source: 'live' | 'cache' | 'fallback'): { label: string; color: string; icon: string } => {
     switch (source) {
         case 'live':
-            return { label: 'Live Data', color: 'green', icon: '🟢' };
+            return { label: 'Live Data', color: 'green', icon: 'excellent' };
         case 'cache':
-            return { label: 'Cached', color: 'blue', icon: '🔵' };
+            return { label: 'Cached', color: 'blue', icon: 'good' };
         case 'fallback':
-            return { label: 'Static Data', color: 'orange', icon: '🟠' };
+            return { label: 'Static Data', color: 'orange', icon: 'poor' };
     }
 };

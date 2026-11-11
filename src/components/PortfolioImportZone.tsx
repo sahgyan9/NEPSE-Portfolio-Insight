@@ -105,7 +105,7 @@ export const PortfolioImportZone = ({ onImported, mode = 'replace' }: PortfolioI
 
         {isParsing && (
           <>
-            <Loader2 className="w-10 h-10 text-blue-500 animate-spin" />
+            <Loader2 className="w-10 h-10 text-blue-700 animate-spin" />
             <div className="text-center">
               <p className="font-semibold">Importing…</p>
               <p className="text-sm text-muted-foreground mt-1 max-w-xs truncate">{state.filename}</p>
@@ -115,9 +115,9 @@ export const PortfolioImportZone = ({ onImported, mode = 'replace' }: PortfolioI
 
         {state.phase === 'success' && (
           <>
-            <CheckCircle2 className="w-10 h-10 text-green-500" />
+            <CheckCircle2 className="w-10 h-10 text-green-700" />
             <div className="text-center">
-              <p className="font-semibold text-green-600">
+              <p className="font-semibold text-green-700">
                 Imported {state.result.imported} holding{state.result.imported === 1 ? '' : 's'}
               </p>
               {state.result.skipped > 0 && (
@@ -135,9 +135,9 @@ export const PortfolioImportZone = ({ onImported, mode = 'replace' }: PortfolioI
 
         {state.phase === 'error' && (
           <>
-            <XCircle className="w-10 h-10 text-red-500" />
+            <XCircle className="w-10 h-10 text-red-700" />
             <div className="text-center">
-              <p className="font-semibold text-red-600">Import failed</p>
+              <p className="font-semibold text-red-700">Import failed</p>
               <p className="text-sm text-muted-foreground mt-1 max-w-xs">{state.message}</p>
             </div>
             <Button size="sm" variant="outline" onClick={reset} className="mt-2">

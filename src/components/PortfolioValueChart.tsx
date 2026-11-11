@@ -149,7 +149,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
       const gainLossPercent = investedData?.value ? ((gainLoss / investedData.value) * 100).toFixed(2) : "0";
 
       return (
-        <div className="bg-card border border-border rounded-lg p-3 shadow-xl min-w-[200px]">
+        <div className="bg-card border border-border rounded-lg p-3 shadow-sm min-w-[200px]">
           <p className="font-semibold text-foreground border-b border-border pb-2 mb-2">
             {dataPoint?.displayDate || label}
           </p>
@@ -162,7 +162,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
               <span>Invested:</span>
               <span>Rs. {investedData?.value?.toLocaleString("en-NP")}</span>
             </p>
-            <p className={`text-sm flex justify-between ${gainLoss >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+            <p className={`text-sm flex justify-between ${gainLoss >= 0 ? 'text-green-700' : 'text-red-700'}`}>
               <span>Gain/Loss:</span>
               <span className="font-medium">
                 {gainLoss >= 0 ? '+' : ''}Rs. {gainLoss.toLocaleString("en-NP")} ({gainLossPercent}%)
@@ -176,7 +176,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
               {transactions.buys.length > 0 && (
                 <div className="mb-1">
                   {transactions.buys.map((tx, idx) => (
-                    <p key={`buy-${idx}`} className="text-xs text-green-500 flex items-center gap-1">
+                    <p key={`buy-${idx}`} className="text-xs text-green-700 flex items-center gap-1">
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500"></span>
                       Bought {tx.quantity} {tx.symbol} @ Rs. {tx.price.toLocaleString("en-NP")}
                     </p>
@@ -186,7 +186,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
               {transactions.sells.length > 0 && (
                 <div>
                   {transactions.sells.map((tx, idx) => (
-                    <p key={`sell-${idx}`} className="text-xs text-red-500 flex items-center gap-1">
+                    <p key={`sell-${idx}`} className="text-xs text-red-700 flex items-center gap-1">
                       <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-500"></span>
                       Sold {tx.quantity} {tx.symbol} @ Rs. {tx.price.toLocaleString("en-NP")}
                     </p>
@@ -202,7 +202,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
   };
 
   return (
-    <div className="glass-card p-4 h-[300px] opacity-0 animate-fade-in" style={{ animationDelay: "650ms" }}>
+    <div className="surface p-4 h-[300px] ">
       <div className="flex items-center justify-between mb-4">
         <div>
           <h3 className="text-lg font-semibold">Portfolio Value Trend</h3>
@@ -213,8 +213,8 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
         <div className="flex items-center gap-4 text-xs">
           {isDbConnected && (
             <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-green-500 text-[10px]">DB Connected</span>
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-green-700 text-[10px]">DB Connected</span>
             </div>
           )}
           <div className="flex items-center gap-1">
@@ -231,26 +231,26 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
         <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="valueGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="hsl(158, 64%, 52%)" stopOpacity={0.4} />
-              <stop offset="95%" stopColor="hsl(158, 64%, 52%)" stopOpacity={0} />
+              <stop offset="5%" stopColor="hsl(var(--chart-accent))" stopOpacity={0.4} />
+              <stop offset="95%" stopColor="hsl(var(--chart-accent))" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(160, 12%, 18%)" />
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
           <XAxis
             dataKey="month"
-            tick={{ fill: "hsl(150, 10%, 55%)", fontSize: 12 }}
-            axisLine={{ stroke: "hsl(160, 12%, 18%)" }}
+            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 12 }}
+            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
           />
           <YAxis
             tickFormatter={(value) => `${(value / 1000).toFixed(0)}K`}
-            tick={{ fill: "hsl(150, 10%, 55%)", fontSize: 12 }}
-            axisLine={{ stroke: "hsl(160, 12%, 18%)" }}
+            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 12 }}
+            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
           />
           <Tooltip content={<CustomTooltip />} />
           <Area
             type="monotone"
             dataKey="invested"
-            stroke="hsl(150, 10%, 35%)"
+            stroke="hsl(var(--chart-axis))"
             strokeWidth={1}
             strokeDasharray="5 5"
             fill="none"
@@ -258,7 +258,7 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
           <Area
             type="monotone"
             dataKey="value"
-            stroke="hsl(158, 64%, 52%)"
+            stroke="hsl(var(--chart-accent))"
             strokeWidth={2}
             fill="url(#valueGradient)"
           />
