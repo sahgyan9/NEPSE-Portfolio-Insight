@@ -34,3 +34,15 @@ For cases where transaction history still doesn't reach far enough back (pre-dat
 - Transaction `date` is the AD trade date only (no time) from the bill; existing manually-entered transactions use a full timestamp (when the user logged it, not the trade date) — both formats coexist fine since only the first 10 characters (`YYYY-MM-DD`) are compared.
 - SELL bills have two extra columns (`Base Price`, `CGT`) between `SEBON Comm` and `Eff Rate` that PURCHASE bills don't have — the parser regex treats them as optional.
 - Re-running this is idempotent in intent but not automatic — there's no dedup key stored yet beyond `billNo`; check for already-imported bill numbers before re-merging if running this again later.
+
+## IPO, rights, bonus and fund units (added 2026-11-11)
+Bills never cover these, but MeroShare does. Export **My Transaction History** from MeroShare as CSV and run:
+
+1. `python tools/import_meroshare_history.py "<path to CSV>"` for a dry run. Every holding should show `ok` (rows add up to the holding quantity). Investigate any `MISMATCH` before applying.
+2. Add `--apply` to write. It backs up `db/portfolio.json` first and is safe to re-run (rows it created carry a `source` starting `meroshare:` and are rebuilt each time).
+
+What it records: IPO/FPO and rights as paid purchases, bonus shares and fund dividend units at price 0. MeroShare has no prices, so an IPO price is taken from an existing hand-entered row or backed out of the holding's average cost (MeroShare WACC counts bonus shares at Rs. 100, Rs. 10 for funds). Checked against known IPO prices on first use (GCIL 435, HRL 206).
+
+Not covered: SIP purchases of open-ended funds (`CA-Rearrangement ... PUR`). MeroShare truncates fractional units and has no NAV; enter those from the fund's SIP statement (date, units, total paid including the charge). Dividend units (`DREP`) for such a fund are entered as a BUY at price 0.
+
+Side effects to know: symbols that previously had no transaction rows now replay their real history in `nepse_server.py`, so past dividends are credited on the shares actually held at each book closure. `_bonus_share_growth_timeline` ignores rows flagged as free shares (`_is_free_share_txn`) so bonus shares are not counted twice. Restart `nepse_server.py` after code changes.

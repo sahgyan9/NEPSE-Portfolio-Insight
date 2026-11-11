@@ -5,132 +5,48 @@ import math
 import subprocess
 from datetime import datetime
 
-# Sector volatility heuristics
-SECTOR_VOLATILITY = {
-    "Commercial Bank": 0.15,
-    "Development Bank": 0.20,
-    "Life Insurance": 0.22,
-    "Non-Life Insurance": 0.25,
-    "Microfinance": 0.35,
-    "Hydropower": 0.40,
-    "Finance": 0.30,
-    "Manufacturing": 0.18,
-    "Hotels": 0.38,
-    "Investment": 0.25,
-    "Trading": 0.30,
-    "Telecom": 0.12,
-    "Mutual Fund": 0.10,
-    "Others": 0.25
-}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import portfolio_common as pc  # noqa: E402
+import portfolio_risk  # noqa: E402
 
-# Known sectors for portfolio stocks
-SECTOR_MAPPING = {
-    "BHL": "Hydropower",
-    "CHCL": "Hydropower",
-    "SAHAS": "Hydropower",
-    "SGHC": "Hydropower",
-    "UPPER": "Hydropower",
-    "MEN": "Hydropower",
-    "HBL": "Commercial Bank",
-    "NABIL": "Commercial Bank",
-    "NICA": "Commercial Bank",
-    "NIMB": "Commercial Bank",
-    "CBBL": "Microfinance",
-    "JBLB": "Microfinance",
-    "CLI": "Life Insurance",
-    "SNLI": "Life Insurance",
-    "HRL": "Non-Life Insurance",
-    "HDL": "Manufacturing",
-    "GCIL": "Manufacturing",
-    "SARBTM": "Manufacturing",
-    "SHIVM": "Manufacturing",
-    "SONA": "Trading",
-    "NTC": "Telecom",
-    "SHL": "Hotels",
-    "CSY": "Mutual Fund",
-    "CSBY": "Mutual Fund",
-    "KDBY": "Mutual Fund",
-    "MMF1": "Mutual Fund",
-    "NBF3": "Mutual Fund",
-    "NIBLSF": "Mutual Fund",
-    "NMBSBFE": "Mutual Fund"
-}
+normalize_sector = pc.normalize_sector
+load_json = pc.load_json
 
-def normalize_sector(sector):
-    if not sector:
-        return "Others"
-    s = sector.strip().lower()
-    if "bank" in s:
-        if "development" in s:
-            return "Development Bank"
-        return "Commercial Bank"
-    if "microfinance" in s or "laghubitta" in s:
-        return "Microfinance"
-    if "life insurance" in s:
-        return "Life Insurance"
-    if "non-life" in s or "non life" in s or "reinsurance" in s:
-        return "Non-Life Insurance"
-    if "insurance" in s:
-        return "Life Insurance" # default fallback
-    if "hydro" in s:
-        return "Hydropower"
-    if "manufactur" in s or "distiller" in s or "cement" in s:
-        return "Manufacturing"
-    if "hotel" in s or "tourism" in s:
-        return "Hotels"
-    if "invest" in s:
-        return "Investment"
-    if "trade" in s or "oil" in s:
-        return "Trading"
-    if "telecom" in s or "phone" in s or "communication" in s:
-        return "Telecom"
-    if "mutual" in s or "fund" in s:
-        return "Mutual Fund"
-    return sector.title()
 
-def load_json(filepath):
-    if not os.path.exists(filepath):
+def get_sector_averages(fundamentals_data, db_dir=None):
+    """Typical (median) P/E and P/B per sector. Medians are used because a few loss-recovery
+    companies with P/E in the hundreds otherwise distort a sector mean."""
+    return {sector: {"pe": m["pe"], "pb": m["pb"]}
+            for sector, m in pc.sector_medians(fundamentals_data).items() if m["pe"]}
+
+
+def first_value(mapping, *keys):
+    """First key present with a non-null value (0 is a real value, unlike with `or`)."""
+    for key in keys:
+        if mapping.get(key) is not None:
+            return mapping[key]
+    return None
+
+
+def plausible_percent(value, ceiling):
+    """Guard against a known scraper fault: some quarterly reports lose the decimal point
+    (CAR 11.12 stored as 1112). A value above `ceiling` is rescaled by 100 when that lands
+    in range, otherwise treated as unknown rather than raising a false alarm."""
+    if not isinstance(value, (int, float)):
         return None
-    with open(filepath, 'r', encoding='utf-8') as f:
-        try:
-            return json.load(f)
-        except Exception:
-            return None
+    if value <= ceiling:
+        return float(value)
+    if value / 100.0 <= ceiling:
+        return value / 100.0
+    return None
 
 
-def get_sector_averages(fundamentals_data, db_dir):
-    sector_pe = {}
-    sector_pb = {}
-    
-    for sym, fund in fundamentals_data.items():
-        sector = SECTOR_MAPPING.get(sym)
-        if not sector:
-            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
-            q_data = load_json(q_path)
-            if q_data and q_data.get("sector"):
-                sector = q_data["sector"]
-        if not sector:
-            continue
-            
-        normalized = normalize_sector(sector)
-        if normalized == "Mutual Fund":
-            continue
-            
-        pe = fund.get("peRatio")
-        pb = fund.get("pbRatio")
-        
-        if pe is not None and pe > 0:
-            sector_pe.setdefault(normalized, []).append(pe)
-        if pb is not None and pb > 0:
-            sector_pb.setdefault(normalized, []).append(pb)
-            
-    averages = {}
-    for sect in sector_pe:
-        averages[sect] = {
-            "pe": sum(sector_pe[sect]) / len(sector_pe[sect]) if sector_pe[sect] else 20.0,
-            "pb": sum(sector_pb[sect]) / len(sector_pb[sect]) if sector_pb.get(sect) else 2.0
-        }
-    return averages
+def score_between(value, best, worst):
+    """Linear 100..0 score: `best` or better scores 100, `worst` or beyond scores 0."""
+    if best == worst:
+        return 100.0
+    return max(0.0, min(100.0, 100.0 * (worst - value) / (worst - best)))
+
 
 def calculate_health():
     db_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db")
@@ -153,26 +69,17 @@ def calculate_health():
         qty = h.get("quantity", 0)
         avg_cost = h.get("avgCost", 0)
         
-        # Look up price in valueHistory or fundamentals or default
-        price = avg_cost # default
+        # Current price: last traded close on file, then scraped LTP/NAV, then cost.
         fund = fundamentals_data.get(sym, {})
-        if fund.get("peRatio") and fund.get("eps"):
-            price = fund["peRatio"] * fund["eps"]
-            
+        price, _price_source = pc.current_price(sym, avg_cost, fundamentals_data)
+        if not price:
+            price = avg_cost
+
         current_value = qty * price
         total_value += current_value
         
-        # Determine sector dynamically
-        sector = SECTOR_MAPPING.get(sym)
-        if not sector:
-            # Try to read from quarterly report
-            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
-            q_data = load_json(q_path)
-            if q_data and q_data.get("sector"):
-                sector = q_data["sector"]
-        
-        normalized_sector = normalize_sector(sector)
-        
+        normalized_sector = pc.resolve_sector(sym, fundamentals_data)
+
         holdings_processed.append({
             "symbol": sym,
             "quantity": qty,
@@ -202,14 +109,18 @@ def calculate_health():
         sector_weights[h["sector"]] = sector_weights.get(h["sector"], 0.0) + h["weight"]
         
     hhi = sum(w**2 for w in sector_weights.values())
-    diversification_score = max(0, min(100, round((1.0 - hhi) * 125)))  # scale to make it reach 100 more easily
+    effective_sectors = 1.0 / hhi if hhi > 0 else 1.0
+    diversification_score = round(score_between(effective_sectors, 6.0, 1.0))
 
-    max_weight = max(h["weight"] for h in holdings_processed) if holdings_processed else 0
+    # Single-company concentration: mutual funds are excluded because a fund is itself
+    # a diversified basket (e.g. an open-ended fund bought by SIP).
+    single_names = [h for h in holdings_processed if h["sector"] != "Mutual Fund"]
+    max_weight = max((h["weight"] for h in single_names), default=0)
     concentration_score = 100
     if max_weight > 0.25:
         penalty = (max_weight - 0.25) * 200
         concentration_score = max(0, min(100, round(100 - penalty)))
-        max_stock = next((h["symbol"] for h in holdings_processed if h["weight"] == max_weight), "Unknown")
+        max_stock = next((h["symbol"] for h in single_names if h["weight"] == max_weight), "Unknown")
         target_allocation = 0.20
         excess_weight = max_weight - target_allocation
         trim_value = total_value * excess_weight
@@ -267,7 +178,8 @@ def calculate_health():
                 car = raw.get("CAR")
                 if car is None:
                     # try fallback key lowercase
-                    car = raw.get("car") or computed.get("car")
+                    car = first_value(raw, "car") or computed.get("car")
+                car = plausible_percent(car, 60.0)
                 
                 car_score = 50.0
                 if car is not None:
@@ -289,7 +201,7 @@ def calculate_health():
                         car_score = 80.0
                 
                 # CD Ratio Score
-                cd = raw.get("CD ratio") or raw.get("cd_ratio") or raw.get("CD Ratio")
+                cd = plausible_percent(first_value(raw, "Credit To Deposit Ratio", "CD ratio", "CD Ratio", "cd_ratio"), 200.0)
                 cd_score = 70.0
                 if cd is not None:
                     if sector == "Commercial Bank":
@@ -318,7 +230,7 @@ def calculate_health():
                             )
                 
                 # Cost of Funds (COF) Score
-                cof = raw.get("Cost of funds") or raw.get("Cost of Funds") or raw.get("cost_of_funds")
+                cof = plausible_percent(first_value(raw, "Cost of funds", "Cost of Funds", "cost_of_funds"), 25.0)
                 cof_score = 70.0
                 if cof is not None:
                     if cof < 6.5: cof_score = 100.0
@@ -328,7 +240,7 @@ def calculate_health():
                         warnings.append(f"Margin Squeeze: {sym} Cost of Funds is very high at {cof:.2f}%.")
                 
                 # NPL Score
-                npl = raw.get("NPL") or raw.get("npl")
+                npl = plausible_percent(first_value(raw, "NPL", "npl"), 40.0)
                 npl_score = 70.0
                 if npl is not None:
                     if npl < 1.5: npl_score = 100.0
@@ -413,7 +325,7 @@ def calculate_health():
 
         # Check promoter holdings and average volume if available in fundamentals.json
         fund = fundamentals_data.get(sym, {})
-        promoter_holding = fund.get("promoterHolding")
+        promoter_holding = fund.get("promoterHolding") or None  # 0 means "not captured"
         avg_volume_120d = fund.get("avgVolume120d")
         
         # 1. Promoter holding check
@@ -460,15 +372,20 @@ def calculate_health():
     # Pillar 3: Valuation Margin of Safety (20% weight)
     # ---------------------------------------------------------
     valuation_scores = []
-    
+    valuation_weights = []
+
     for h in holdings_processed:
         sym = h["symbol"]
         weight = h["weight"]
+        if h["sector"] == "Mutual Fund":
+            continue  # a fund has no P/E; judging it on one would only add noise
         fund = fundamentals_data.get(sym, {})
-        
+
         pe = fund.get("peRatio")
         pb = fund.get("pbRatio")
-        
+        if pe == 0: pe = None  # scrapers write 0 for "not available"
+        if pb == 0: pb = None
+
         # PE Score
         pe_score = 60
         if pe is not None:
@@ -494,20 +411,24 @@ def calculate_health():
         q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
         q_data = load_json(q_path)
         latest_q = q_data["quarters"][-1] if q_data and q_data.get("quarters") else None
-        growth = 0.0
+        growth = None
         if latest_q:
-            growth = latest_q.get("yoy", {}).get("net_profit_ttm") or latest_q.get("yoy", {}).get("Net Profit") or 0.0
-            
+            yoy = latest_q.get("yoy", {})
+            growth = yoy.get("net_profit_ttm")
+            if growth is None:
+                growth = yoy.get("Net Profit")
+
+        # Unknown growth stays neutral; only a reported profit decline is penalised.
         peg_score = 60
-        if pe and pe > 0 and growth > 0:
+        if growth is not None and growth <= 0:
+            peg_score = 20
+        elif growth is not None and pe and pe > 0:
             peg = pe / growth
             if peg < 1.0: peg_score = 100
             elif peg <= 1.5: peg_score = 80
             elif peg <= 2.5: peg_score = 50
             else: peg_score = 20
-        elif growth <= 0:
-            peg_score = 20
-            
+
         scrip_val_score = 0.40 * pe_score + 0.30 * pb_score + 0.30 * peg_score
             
         # Relative Valuation premium check
@@ -516,7 +437,7 @@ def calculate_health():
             avg_pe = sect_avg.get("pe")
             if avg_pe and pe > 1.5 * avg_pe:
                 warnings.append(
-                    f"Relative Overvaluation Warning: {sym} P/E ({pe:.1f}) is more than 50% higher than its sector average P/E ({avg_pe:.1f}). "
+                    f"Relative Overvaluation Warning: {sym} P/E ({pe:.1f}) is more than 50% higher than its sector median P/E ({avg_pe:.1f}). "
                     f"Paying an extreme premium relative to industry peers decreases your safety margin."
                 )
                 recommendations.append(
@@ -525,12 +446,13 @@ def calculate_health():
                 scrip_val_score = max(0.0, scrip_val_score - 15.0)
 
         valuation_scores.append(scrip_val_score)
+        valuation_weights.append(weight)
 
-    if holdings_processed:
-        valuation_score = round(sum(s * h["weight"] for s, h in zip(valuation_scores, holdings_processed)))
+    if valuation_weights and sum(valuation_weights) > 0:
+        valuation_score = round(sum(v * w for v, w in zip(valuation_scores, valuation_weights)) / sum(valuation_weights))
     else:
         valuation_score = 60
-        
+
     if valuation_score >= 75:
         strengths.append("High Margin of Safety: Portfolio is priced reasonably relative to its earnings power.")
     elif valuation_score < 50:
@@ -615,44 +537,41 @@ def calculate_health():
     # ---------------------------------------------------------
     # Pillar 5: Market Risk & Volatility (20% weight)
     # ---------------------------------------------------------
-    weighted_vol = sum(SECTOR_VOLATILITY.get(h["sector"], 0.25) * h["weight"] for h in holdings_processed)
-    vol_score = round((1.0 - weighted_vol) * 100)
-    
-    # Check valueHistory for drawdown
+    # Measured from price history (tools/portfolio_risk.py): how much the portfolio swings
+    # compared with the market, and the deepest fall the current mix would have taken.
+    risk_summary = None
+    volatility_score = 60  # neutral when no price history is available
+    try:
+        risk = portfolio_risk.analyze(portfolio_data, fundamentals_data)
+    except Exception as exc:  # the health score must still be produced without it
+        print(f"[Health Algorithm] Risk engine unavailable: {exc}")
+        risk = {"error": str(exc)}
+    if "error" not in risk:
+        rp = risk["portfolio"]
+        ratio = rp.get("volatilityVsMarket")
+        vol_score = score_between(ratio, 0.6, 1.6) if ratio is not None else 60.0
+        drawdown_score = score_between(rp["maxDrawdown"], 0.10, 0.50)
+        volatility_score = round(vol_score * 0.6 + drawdown_score * 0.4)
+        risk_summary = {
+            "volatility": rp["volatility"], "marketVolatility": risk["market"]["volatility"],
+            "volatilityVsMarket": ratio, "beta": rp["beta"], "maxDrawdown": rp["maxDrawdown"],
+            "weeklyVar95": rp["weeklyVar95"], "riskLevel": risk["riskLevel"],
+            "measuredWeight": risk["coverage"]["measuredWeight"],
+        }
+        for finding in risk["findings"]:
+            if finding["severity"] in ("high", "medium") and finding["code"] != "concentration":
+                warnings.append(f"{finding['title']}. {finding['detail']}")
+        if ratio is not None and ratio <= 0.9:
+            strengths.append(
+                f"The portfolio swings less than the market (about {ratio:.1f}x market volatility).")
+
     history = portfolio_data.get("valueHistory", [])
-    trend_score = 80.0
-    
     if history:
-        # Parse history
         vals = [pt["value"] for pt in history if pt.get("value", 0) > 0]
         invested = [pt["invested"] for pt in history if pt.get("invested", 0) > 0]
-        
-        if vals:
-            current = vals[-1]
-            inv = invested[-1] if invested else current
-            
-            # Loss check
-            if current < inv:
-                loss_pct = (inv - current) / inv * 100
-                trend_score -= min(40, loss_pct * 2)
-                warnings.append(f"Current portfolio value is resting at {loss_pct:.1f}% below total invested cost.")
-            else:
-                gain_pct = (current - inv) / inv * 100
-                trend_score += min(20, gain_pct * 0.5)
-                
-            # Standard Deviation check (Volatility)
-            if len(vals) > 5:
-                mean = sum(vals) / len(vals)
-                variance = sum((x - mean) ** 2 for x in vals) / len(vals)
-                std_dev = math.sqrt(variance)
-                cov = std_dev / mean if mean > 0 else 0
-                
-                if cov > 0.15:
-                    trend_score -= 15
-                    warnings.append(f"Historical portfolio volatility is high (CoV={cov*100:.1f}%).")
-                    
-    trend_score = max(0, min(100, trend_score))
-    volatility_score = round(vol_score * 0.6 + trend_score * 0.4)
+        if vals and invested and vals[-1] < invested[-1]:
+            loss_pct = (invested[-1] - vals[-1]) / invested[-1] * 100
+            warnings.append(f"Current portfolio value is resting at {loss_pct:.1f}% below total invested cost.")
 
     # ---------------------------------------------------------
     # NRB Margin Lending Cap Warning (Rs. 25 Crores)
@@ -741,7 +660,7 @@ def calculate_health():
             "volatility": {
                 "name": "Market Risk & Drawdown",
                 "score": volatility_score,
-                "description": "Volatility scores combined with historical drawdown metrics."
+                "description": "Measured price swings against the market and the deepest historical fall of the current mix."
             }
         },
         "holdings": [
@@ -752,6 +671,7 @@ def calculate_health():
                 "currentValue": round(h["currentValue"], 2)
             } for h in holdings_processed
         ],
+        "risk": risk_summary,
         "strengths": strengths,
         "warnings": warnings,
         "recommendations": recommendations,

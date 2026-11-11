@@ -1207,6 +1207,13 @@ def _paid_up_value(symbol):
     return 10 if symbol.upper() in MUTUAL_FUND_SYMBOLS else 100
 
 
+def _is_free_share_txn(txn):
+    """Rows recording shares received without paying cash (bonus shares, fund units paid
+    as a dividend). tools/import_meroshare_history.py writes these with such a source."""
+    source = str(txn.get("source") or "").lower()
+    return "bonus" in source or "dividend-reinvestment" in source or "dividend-units" in source
+
+
 def _shares_held_at(transactions, symbol, as_of_date, fallback_qty):
     """Replay BUY/SELL transactions to estimate shares held on a past date,
     since buying more since then shouldn't inflate a historical dividend.
@@ -1303,7 +1310,11 @@ def _bonus_share_growth_timeline(symbol, transactions, dividend_db, manual_db, c
         if override is not None:
             granted = int(override)
         else:
-            held_from_txns = _shares_held_at(transactions, symbol, date, current_qty)
+            # Bonus shares that are logged as transaction rows (imported from MeroShare
+            # history) are left out here: this timeline adds its own running bonus total,
+            # so counting those rows too would double them.
+            held_from_txns = _shares_held_at(
+                [t for t in transactions if not _is_free_share_txn(t)], symbol, date, current_qty)
             base = held_from_txns + cumulative_bonus
             granted = int(base * bpct / 100.0)
         cumulative_bonus += granted
