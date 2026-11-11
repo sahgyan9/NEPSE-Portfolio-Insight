@@ -371,6 +371,16 @@ export interface PortfolioHealthResponse {
     warnings: string[];
     recommendations: string[];
     textSummary?: string;
+    risk?: {
+        volatility: number;
+        marketVolatility: number;
+        volatilityVsMarket: number;
+        beta: number;
+        maxDrawdown: number;
+        weeklyVar95: number;
+        riskLevel: string;
+        measuredWeight: number;
+    };
     calculatedAt: string;
 }
 

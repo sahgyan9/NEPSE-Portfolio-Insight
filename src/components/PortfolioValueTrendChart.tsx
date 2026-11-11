@@ -74,6 +74,8 @@ const getDividendsForDate = (dateStr: string): any[] => {
 
 interface PortfolioValueTrendChartProps {
     summary: PortfolioSummary;
+    /** False while live prices are still loading. A partly priced portfolio must not be drawn or saved as today's value. */
+    ready?: boolean;
 }
 
 interface TransactionMarker {
@@ -108,7 +110,7 @@ const TIME_PERIODS: { label: string; value: TimePeriod; description: string }[] 
     { label: "ALL", value: "all", description: "All time" },
 ];
 
-export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartProps) => {
+export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioValueTrendChartProps) => {
     const [chartData, setChartData] = useState<ChartDataPoint[]>([]);
     const [isDbConnected, setIsDbConnected] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -213,7 +215,10 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                     });
 
                 // Update the last point with current actual values if it exists
-                if (data.length > 0) {
+                // Live prices arrive after the history does; until then currentValue is 0
+                // and must not be drawn (or recorded) as a 100% loss.
+                const hasLiveValue = ready && summary.currentValue > 0;
+                if (data.length > 0 && hasLiveValue) {
                     const lastPoint = data[data.length - 1];
                     lastPoint.value = Math.round(summary.currentValue);
                     lastPoint.invested = Math.round(summary.totalInvested);
@@ -224,9 +229,11 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                 setChartData(data);
 
                 // Record today's value to the database
-                await recordPortfolioValue(summary.currentValue).catch(() => {
-                    // Silently fail if recording doesn't work
-                });
+                if (hasLiveValue) {
+                    await recordPortfolioValue(summary.currentValue).catch(() => {
+                        // Silently fail if recording doesn't work
+                    });
+                }
             }
         } catch (error) {
             console.log("Database not connected, using simulated data");
@@ -235,7 +242,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
         } finally {
             setLoading(false);
         }
-    }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod]);
+    }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod, ready]);
 
     const generateSimulatedData = useCallback(() => {
         const now = new Date();
@@ -301,7 +308,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
         }
 
         setChartData(data);
-    }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod]);
+    }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod, ready]);
 
     useEffect(() => {
         fetchData();
@@ -347,7 +354,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
             const dividendsOnDate = getDividendsForDate(dataPoint?.date || "");
 
             return (
-                <div className="bg-card border border-border rounded-lg p-3 shadow-xl min-w-[250px]">
+                <div className="bg-card border border-border rounded-lg p-3 shadow-sm min-w-[250px]">
                     <p className="font-semibold text-foreground border-b border-border pb-2 mb-2">
                         {dataPoint?.fullDate}
                     </p>
@@ -365,7 +372,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                         <p
                             className={cn(
                                 "text-sm flex justify-between",
-                                gainLoss >= 0 ? "text-green-500" : "text-red-500"
+                                gainLoss >= 0 ? "text-green-700" : "text-red-700"
                             )}
                         >
                             <span>Capital Gain/Loss:</span>
@@ -375,7 +382,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                             </span>
                         </p>
                         {dividendIncome > 0 && (
-                            <p className="text-sm text-purple-500 flex justify-between">
+                            <p className="text-sm text-purple-700 flex justify-between">
                                 <span>Dividend Income:</span>
                                 <span className="font-medium">
                                     +Rs. {dividendIncome.toLocaleString("en-NP")}
@@ -386,7 +393,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                             <p
                                 className={cn(
                                     "text-sm flex justify-between font-semibold border-t border-border pt-1 mt-1",
-                                    totalReturn >= 0 ? "text-emerald-400" : "text-red-500"
+                                    totalReturn >= 0 ? "text-emerald-700" : "text-red-700"
                                 )}
                             >
                                 <span>Total Return:</span>
@@ -410,7 +417,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                                         key={idx}
                                         className={cn(
                                             "text-xs flex items-center gap-1 py-0.5",
-                                            tx.type === "BUY" ? "text-green-500" : "text-red-500"
+                                            tx.type === "BUY" ? "text-green-700" : "text-red-700"
                                         )}
                                     >
                                         {tx.type === "BUY" ? (
@@ -430,7 +437,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
 
                     {dividendsOnDate.length > 0 && (
                         <div className="border-t border-border mt-2 pt-2">
-                            <p className="text-xs font-medium text-purple-400 mb-1 flex items-center gap-1">
+                            <p className="text-xs font-medium text-purple-700 mb-1 flex items-center gap-1">
                                 <Gift className="w-3 h-3" />
                                 Dividends added on this date:
                             </p>
@@ -440,12 +447,12 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                                         <p className="font-medium text-foreground">{div.symbol}</p>
                                         <div className="ml-2 space-y-0.5">
                                             {div.cashPercent > 0 && (
-                                                <p className="text-green-400">
+                                                <p className="text-green-700">
                                                     Cash: {div.cashPercent}% (Rs. {div.cashIncome.toLocaleString("en-NP")})
                                                 </p>
                                             )}
                                             {div.bonusPercent > 0 && (
-                                                <p className="text-amber-400">
+                                                <p className="text-amber-700">
                                                     Bonus: {div.bonusPercent}%
                                                 </p>
                                             )}
@@ -469,10 +476,10 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
 
         const hasBoth = payload.hasBuy && payload.hasSell;
         const color = hasBoth
-            ? "#eab308" // yellow for both
+            ? "hsl(var(--status-3))" // yellow for both
             : payload.hasBuy
-                ? "#22c55e" // green for buy
-                : "#ef4444"; // red for sell
+                ? "hsl(var(--status-1))" // green for buy
+                : "hsl(var(--status-5))"; // red for sell
 
         return (
             <g>
@@ -498,8 +505,8 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
 
     return (
         <div
-            className="glass-card p-4 h-[380px] opacity-0 animate-fade-in relative"
-            style={{ animationDelay: "650ms", zIndex: 10 }}
+            className="surface p-4 h-[380px]  relative"
+           
         >
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
@@ -508,9 +515,9 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                         <h3 className="text-lg font-semibold flex items-center gap-2">
                             Portfolio Value Trend
                             {isPositiveChange ? (
-                                <TrendingUp className="w-5 h-5 text-green-500" />
+                                <TrendingUp className="w-5 h-5 text-green-700" />
                             ) : (
-                                <TrendingDown className="w-5 h-5 text-red-500" />
+                                <TrendingDown className="w-5 h-5 text-red-700" />
                             )}
                         </h3>
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -523,8 +530,8 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                             </span>
                             {isDbConnected && (
                                 <div className="flex items-center gap-1">
-                                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                    <span className="text-green-500">Connected</span>
+                                    <div className="w-2 h-2 rounded-full bg-green-500" />
+                                    <span className="text-green-700">Connected</span>
                                 </div>
                             )}
                         </div>
@@ -537,10 +544,10 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                     {getTotalDividendIncome() > 0 && (
                         <div className="text-right hidden sm:block">
                             <p className="text-xs text-muted-foreground flex items-center gap-1 justify-end">
-                                <Gift className="w-3 h-3 text-purple-500" />
+                                <Gift className="w-3 h-3 text-purple-700" />
                                 Dividend Income
                             </p>
-                            <p className="text-sm font-semibold text-purple-500">
+                            <p className="text-sm font-semibold text-purple-700">
                                 +Rs. {getTotalDividendIncome().toLocaleString("en-NP")}
                             </p>
                         </div>
@@ -552,7 +559,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                         <p
                             className={cn(
                                 "text-sm font-semibold",
-                                isPositiveChange ? "text-green-500" : "text-red-500"
+                                isPositiveChange ? "text-green-700" : "text-red-700"
                             )}
                         >
                             {isPositiveChange ? "+" : ""}Rs. {Math.abs(periodChange).toLocaleString("en-NP")}{" "}
@@ -624,21 +631,21 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                             <linearGradient id="valueTrendGradient" x1="0" y1="0" x2="0" y2="1">
                                 <stop
                                     offset="5%"
-                                    stopColor={isPositiveChange ? "hsl(158, 64%, 52%)" : "hsl(0, 84%, 60%)"}
+                                    stopColor={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
                                     stopOpacity={0.4}
                                 />
                                 <stop
                                     offset="95%"
-                                    stopColor={isPositiveChange ? "hsl(158, 64%, 52%)" : "hsl(0, 84%, 60%)"}
+                                    stopColor={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
                                     stopOpacity={0}
                                 />
                             </linearGradient>
                         </defs>
-                        <CartesianGrid strokeDasharray="3 3" stroke="hsl(160, 12%, 18%)" />
+                        <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
                         <XAxis
                             dataKey="displayDate"
-                            tick={{ fill: "hsl(150, 10%, 55%)", fontSize: 11 }}
-                            axisLine={{ stroke: "hsl(160, 12%, 18%)" }}
+                            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
+                            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
                             tickLine={false}
                             interval="preserveStartEnd"
                         />
@@ -650,8 +657,8 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                                         ? `${(value / 1000).toFixed(0)}K`
                                         : value.toString()
                             }
-                            tick={{ fill: "hsl(150, 10%, 55%)", fontSize: 11 }}
-                            axisLine={{ stroke: "hsl(160, 12%, 18%)" }}
+                            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
+                            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
                             tickLine={false}
                             width={50}
                         />
@@ -664,7 +671,7 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                         <Area
                             type="monotone"
                             dataKey="invested"
-                            stroke="hsl(150, 10%, 35%)"
+                            stroke="hsl(var(--chart-axis))"
                             strokeWidth={1}
                             strokeDasharray="5 5"
                             fill="none"
@@ -674,13 +681,13 @@ export const PortfolioValueTrendChart = ({ summary }: PortfolioValueTrendChartPr
                         <Area
                             type="monotone"
                             dataKey="value"
-                            stroke={isPositiveChange ? "hsl(158, 64%, 52%)" : "hsl(0, 84%, 60%)"}
+                            stroke={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
                             strokeWidth={2}
                             fill="url(#valueTrendGradient)"
                             dot={<CustomDot />}
                             activeDot={{
                                 r: 6,
-                                stroke: isPositiveChange ? "hsl(158, 64%, 52%)" : "hsl(0, 84%, 60%)",
+                                stroke: isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))",
                                 strokeWidth: 2,
                                 fill: "hsl(var(--card))",
                             }}

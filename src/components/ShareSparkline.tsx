@@ -78,8 +78,8 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34, highlightDa
 
     if (!linePath || !x || !y) return <span className="text-xs text-muted-foreground">-</span>;
 
-    const color = grew ? 'hsl(152 76% 40%)' : 'hsl(215 15% 55%)';
-    const currentFyColor = 'hsl(38 92% 50%)';
+    const color = grew ? 'hsl(var(--chart-gain))' : 'hsl(var(--chart-market))';
+    const currentFyColor = 'hsl(var(--chart-caution))';
     const hovered = hoverIdx !== null ? points[hoverIdx] : null;
 
     return (
@@ -145,7 +145,7 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34, highlightDa
                 )}
             </div>
             <div className="flex flex-col text-[10px] font-mono whitespace-nowrap leading-tight">
-                <span className={grew ? 'text-emerald-500' : 'text-muted-foreground'}>{last} lifetime</span>
+                <span className={grew ? 'text-emerald-700' : 'text-muted-foreground'}>{last} lifetime</span>
                 {!!currentFyGain && (
                     <span style={{ color: currentFyColor }}>+{currentFyGain} this FY</span>
                 )}

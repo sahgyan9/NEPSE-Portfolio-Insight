@@ -204,8 +204,8 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
                             </>
                         ) : (
                             <>
-                                <AlertCircle className="h-4 w-4 text-yellow-500" />
-                                <span className="text-yellow-500">
+                                <AlertCircle className="h-4 w-4 text-yellow-700" />
+                                <span className="text-yellow-700">
                                     Database not connected. Close this and re-open the app using its launcher.
                                 </span>
                             </>
@@ -215,7 +215,7 @@ export const PortfolioManager = ({ onPortfolioChange }: PortfolioManagerProps) =
 
                 {!isConnected ? (
                     <div className="p-8 text-center space-y-4">
-                        <AlertCircle className="h-12 w-12 mx-auto text-yellow-500" />
+                        <AlertCircle className="h-12 w-12 mx-auto text-yellow-700" />
                         <h3 className="text-lg font-semibold">Local services aren't running</h3>
                         <p className="text-muted-foreground max-w-md mx-auto">
                             Your portfolio is stored on your own computer. Close the app and re-open it

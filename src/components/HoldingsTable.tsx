@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState, useEffect, useMemo } from "react";
 import { ArrowUpDown, TrendingUp, TrendingDown, Info, Loader2, Search, X, Gift } from "lucide-react";
 import { TableCell, TableHead, TableRow } from "@/components/ui/table";
@@ -177,41 +178,46 @@ export const HoldingsTable = ({
 
   // Color scheme for different columns (avoiding green which is used for Gain/Loss)
   const columnColors = {
-    index: "text-slate-400",
+    index: "text-muted-foreground",
     symbol: "text-primary",
     company: "text-muted-foreground",
-    qty: "text-cyan-500",
-    avgCost: "text-amber-500",
+    qty: "text-cyan-700",
+    avgCost: "text-amber-700",
     ltp: "text-violet-500",
-    value: "text-blue-500",
+    value: "text-blue-700",
     gainLoss: "", // Uses success/destructive based on value
-    dividend: "text-amber-400",
-    bookVal: "text-pink-500",
-    pb: "text-orange-500",
-    sector: "text-teal-500",
+    dividend: "text-amber-700",
+    bookVal: "text-pink-700",
+    pb: "text-orange-700",
+    sector: "text-teal-700",
   };
 
-  const SortableHeader = ({
-    label,
-    sortKeyName,
-    colorClass,
-    children,
-  }: {
-    label: string;
-    sortKeyName: SortKey;
-    colorClass?: string;
-    children?: React.ReactNode;
-  }) => (
+  // forwardRef and prop spreading let Radix TooltipTrigger asChild attach its ref and handlers.
+  const SortableHeader = React.forwardRef<
+    HTMLButtonElement,
+    {
+      label: string;
+      sortKeyName: SortKey;
+      colorClass?: string;
+      children?: React.ReactNode;
+    } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">
+  >(({ label, sortKeyName, colorClass, children, className, onClick, ...rest }, ref) => (
     <button
+      ref={ref}
       type="button"
-      onClick={() => handleSort(sortKeyName)}
-      className={cn("flex items-center gap-1 hover:opacity-80 transition-colors font-semibold", colorClass)}
+      {...rest}
+      onClick={(e) => {
+        onClick?.(e);
+        handleSort(sortKeyName);
+      }}
+      className={cn("flex items-center gap-1 hover:opacity-80 transition-colors font-semibold", colorClass, className)}
     >
       {label}
       <ArrowUpDown className="h-3 w-3" />
       {children}
     </button>
-  );
+  ));
+  SortableHeader.displayName = "SortableHeader";
 
   const getPBRatioColor = (pb: number | null) => {
     if (!pb) return "text-muted-foreground";
@@ -222,7 +228,7 @@ export const HoldingsTable = ({
   };
 
   return (
-    <div className="glass-card overflow-hidden opacity-0 animate-fade-in" style={{ animationDelay: "600ms" }}>
+    <div className="surface overflow-hidden ">
       <div className="p-4 border-b border-border">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <h3 className="text-lg font-semibold flex items-center gap-2">
@@ -336,7 +342,7 @@ export const HoldingsTable = ({
               <TableHead><SortableHeader label="Avg. Cost" sortKeyName="waccRate" colorClass={columnColors.avgCost} /></TableHead>
               <TableHead><SortableHeader label="LTP" sortKeyName="currentPrice" colorClass={columnColors.ltp} /></TableHead>
               <TableHead><SortableHeader label="Value" sortKeyName="currentValue" colorClass={columnColors.value} /></TableHead>
-              <TableHead><SortableHeader label="Gain/Loss" sortKeyName="gainLossPercent" colorClass="text-emerald-500" /></TableHead>
+              <TableHead><SortableHeader label="Gain/Loss" sortKeyName="gainLossPercent" colorClass="text-emerald-700" /></TableHead>
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -452,7 +458,7 @@ export const HoldingsTable = ({
                           )}
                           {holding.latestBonusRatio && (
                             <>
-                              <span className="font-mono font-medium text-xs text-emerald-400">
+                              <span className="font-mono font-medium text-xs text-emerald-700">
                                 Bonus: {holding.latestBonusRatio}
                               </span>
                               {(!holding.latestDividendPercent || holding.latestDividendPercent === 0) && (

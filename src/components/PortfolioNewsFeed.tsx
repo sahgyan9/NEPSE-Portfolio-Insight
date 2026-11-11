@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { dedupeNews } from "@/lib/newsDedupe";
 import { Newspaper, ExternalLink, Loader2, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -147,12 +148,14 @@ export const PortfolioNewsFeed = ({ holdings }: PortfolioNewsFeedProps) => {
     });
 
     // Sort by date (newest first). Sharesansar dates might be strings like "May 10, 2024" or "2024-05-10"
-    return allNews.sort((a, b) => {
+    const sorted = allNews.sort((a, b) => {
       const dateA = new Date(a.news.date).getTime();
       const dateB = new Date(b.news.date).getTime();
       if (isNaN(dateA) || isNaN(dateB)) return 0; // Fallback if date is weird
       return dateB - dateA;
-    }).slice(0, 50); // limit total rendered to prevent extreme lag
+    });
+    // One row per article, listing every symbol it is attached to
+    return dedupeNews(sorted).slice(0, 50); // limit total rendered to prevent extreme lag
   }, [newsDb, holdings, watchlistSymbols]);
 
   const allActiveSymbolsArray = useMemo(() => Array.from(new Set([
@@ -164,14 +167,14 @@ export const PortfolioNewsFeed = ({ holdings }: PortfolioNewsFeedProps) => {
     if (!searchQuery.trim()) return activeNews;
     const query = searchQuery.toLowerCase();
     return activeNews.filter(item => 
-      item.symbol.toLowerCase().includes(query) || 
+      item.symbols.some(sym => sym.toLowerCase().includes(query)) || 
       item.news.headline.toLowerCase().includes(query)
     );
   }, [activeNews, searchQuery]);
 
   if (isLoading) {
     return (
-      <Card className="glass-card opacity-0 animate-fade-in" style={{ animationDelay: "800ms" }}>
+      <Card className="surface ">
         <CardHeader>
           <CardTitle className="text-lg flex items-center gap-2">
             <Newspaper className="w-5 h-5 text-primary" />
@@ -186,7 +189,7 @@ export const PortfolioNewsFeed = ({ holdings }: PortfolioNewsFeedProps) => {
   }
 
   return (
-    <Card className="glass-card opacity-0 animate-fade-in h-[500px] flex flex-col" style={{ animationDelay: "800ms" }}>
+    <Card className="surface  h-[500px] flex flex-col">
       <CardHeader className="pb-3 border-b border-border space-y-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg flex items-center gap-2">
@@ -276,24 +279,28 @@ export const PortfolioNewsFeed = ({ holdings }: PortfolioNewsFeedProps) => {
         ) : (
           <div className="divide-y divide-border">
             {filteredActiveNews.map((item, i) => (
-              <a 
-                key={`${item.symbol}-${i}`}
-                href={item.news.link}
-                target="_blank"
-                rel="noreferrer"
-                className="flex flex-col p-4 hover:bg-muted/50 transition-colors gap-2 group block"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <StockSymbolLink symbol={item.symbol} />
+              <div key={`${item.symbols.join('-')}-${i}`} className="flex flex-col p-4 gap-2">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    {item.symbols.map(sym => (
+                      <StockSymbolLink key={sym} symbol={sym} />
+                    ))}
                     <span className="text-xs text-muted-foreground">{item.news.date}</span>
                   </div>
-                  <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary transition-colors" />
+                  {item.url && (
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" aria-label="Open article" className="text-muted-foreground hover:text-primary">
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
-                <h4 className="text-sm font-medium leading-snug group-hover:text-primary transition-colors">
-                  {item.news.headline}
-                </h4>
-              </a>
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium leading-snug hover:text-primary hover:underline">
+                    {item.news.headline}
+                  </a>
+                ) : (
+                  <h4 className="text-sm font-medium leading-snug">{item.news.headline}</h4>
+                )}
+              </div>
             ))}
           </div>
         )}

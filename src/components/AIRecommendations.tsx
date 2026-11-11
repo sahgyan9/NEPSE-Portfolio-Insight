@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, TrendingUp, TrendingDown, Pause, Plus, Loader2, RefreshCw, Sparkles } from "lucide-react";
+import { Brain, TrendingUp, TrendingDown, Pause, Plus, Loader2, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -166,15 +166,17 @@ Focus on:
   };
 
   return (
-    <div className="glass-card p-4 opacity-0 animate-fade-in" style={{ animationDelay: "900ms" }}>
+    <div className="surface p-4 ">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <div className="p-2 rounded-lg bg-primary/10">
             <Brain className="h-5 w-5 text-primary" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">AI Investment Advisor</h3>
-            <p className="text-xs text-muted-foreground">Powered by Intelligent Investor principles</p>
+            <h3 className="text-lg font-semibold">AI second opinion</h3>
+            <p className="text-xs text-muted-foreground">
+              Generated text, not advice. It can be wrong and does not know your goals or finances.
+            </p>
           </div>
         </div>
         <Button
@@ -195,8 +197,7 @@ Focus on:
             </>
           ) : (
             <>
-              <Sparkles className="h-4 w-4" />
-              Generate Analysis
+              Run analysis
             </>
           )}
         </Button>
@@ -227,7 +228,7 @@ Focus on:
                   <div
                     key={index}
                     className={cn(
-                      "p-3 rounded-lg border transition-all duration-200 hover:scale-[1.01]",
+                      "p-3 rounded-lg border transition-all duration-200",
                       getActionClass(rec.action)
                     )}
                   >
@@ -260,7 +261,7 @@ Focus on:
             {/* Risk Warnings */}
             {analysis.riskWarnings.length > 0 && (
               <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/30">
-                <h4 className="font-semibold text-destructive mb-2">⚠️ Risk Warnings</h4>
+                <h4 className="font-semibold text-destructive mb-2">Risk Warnings</h4>
                 <ul className="space-y-1">
                   {analysis.riskWarnings.map((warning, index) => (
                     <li key={index} className="text-sm text-foreground/80 flex items-start gap-2">
@@ -274,7 +275,7 @@ Focus on:
 
             {/* Long Term Outlook */}
             <div className="p-4 rounded-lg bg-primary/10 border border-primary/30">
-              <h4 className="font-semibold text-primary mb-2">🎯 20-Year Outlook</h4>
+              <h4 className="font-semibold text-primary mb-2">20-Year Outlook</h4>
               <p className="text-sm text-foreground/90">{analysis.longTermOutlook}</p>
             </div>
           </div>

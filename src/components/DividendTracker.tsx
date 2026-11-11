@@ -42,10 +42,10 @@ export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
 
     const getConfidenceColor = (confidence: string) => {
         switch (confidence) {
-            case 'high': return '#22c55e';
-            case 'medium': return '#eab308';
-            case 'low': return '#f97316';
-            default: return '#6b7280';
+            case 'high': return 'hsl(var(--status-1))';
+            case 'medium': return 'hsl(var(--status-3))';
+            case 'low': return 'hsl(var(--status-4))';
+            default: return 'hsl(var(--status-0))';
         }
     };
 
@@ -91,48 +91,48 @@ export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
                 {/* Summary Cards */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                     {/* Total Expected Cash */}
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/20">
+                    <div className="p-4 rounded-xl bg-muted/50 border border-green-500/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <PiggyBank className="w-4 h-4 text-green-500" />
+                            <PiggyBank className="w-4 h-4 text-green-700" />
                             <span className="text-xs font-medium text-muted-foreground">Expected Cash</span>
                         </div>
-                        <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        <p className="text-2xl font-bold text-green-700 dark:text-green-700">
                             {formatCurrency(dividendData.totalExpectedCashDividend)}
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">Annual estimate</p>
                     </div>
 
                     {/* Bonus Value */}
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20">
+                    <div className="p-4 rounded-xl bg-muted/50 border border-purple-500/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <Gift className="w-4 h-4 text-purple-500" />
+                            <Gift className="w-4 h-4 text-purple-700" />
                             <span className="text-xs font-medium text-muted-foreground">Bonus Value</span>
                         </div>
-                        <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                        <p className="text-2xl font-bold text-purple-700 dark:text-purple-700">
                             {formatCurrency(dividendData.totalExpectedBonusValue)}
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">In bonus shares</p>
                     </div>
 
                     {/* Portfolio Yield */}
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/20">
+                    <div className="p-4 rounded-xl bg-muted/50 border border-blue-500/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <TrendingUp className="w-4 h-4 text-blue-500" />
+                            <TrendingUp className="w-4 h-4 text-blue-700" />
                             <span className="text-xs font-medium text-muted-foreground">Portfolio Yield</span>
                         </div>
-                        <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        <p className="text-2xl font-bold text-blue-700 dark:text-blue-700">
                             {dividendData.portfolioDividendYield.toFixed(2)}%
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">Current value basis</p>
                     </div>
 
                     {/* Yield on Cost */}
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/20">
+                    <div className="p-4 rounded-xl bg-muted/50 border border-amber-500/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <Calendar className="w-4 h-4 text-amber-500" />
+                            <Calendar className="w-4 h-4 text-amber-700" />
                             <span className="text-xs font-medium text-muted-foreground">Yield on Cost</span>
                         </div>
-                        <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                        <p className="text-2xl font-bold text-amber-700 dark:text-amber-700">
                             {dividendData.yieldOnCost.toFixed(2)}%
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">Based on purchase price</p>
@@ -162,7 +162,7 @@ export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
                 {/* Educational Note */}
                 <div className="mt-6 p-4 rounded-lg bg-muted/50 border">
                     <h5 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                        📚 Understanding Dividends in Nepal
+                        Understanding Dividends in Nepal
                     </h5>
                     <div className="space-y-2 text-xs text-muted-foreground">
                         <p>
@@ -202,10 +202,10 @@ interface DividendProjectionRowProps {
 const DividendProjectionRow = ({ dividend }: DividendProjectionRowProps) => {
     const getConfidenceColor = (confidence: string) => {
         switch (confidence) {
-            case 'high': return 'bg-green-500/10 text-green-600 border-green-500/20';
-            case 'medium': return 'bg-yellow-500/10 text-yellow-600 border-yellow-500/20';
-            case 'low': return 'bg-orange-500/10 text-orange-600 border-orange-500/20';
-            default: return 'bg-gray-500/10 text-gray-600 border-gray-500/20';
+            case 'high': return 'bg-green-500/10 text-green-700 border-green-500/20';
+            case 'medium': return 'bg-yellow-500/10 text-yellow-700 border-yellow-500/20';
+            case 'low': return 'bg-orange-500/10 text-orange-700 border-orange-500/20';
+            default: return 'bg-muted text-muted-foreground border-border';
         }
     };
 
@@ -228,7 +228,7 @@ const DividendProjectionRow = ({ dividend }: DividendProjectionRowProps) => {
                 </div>
 
                 <div className="text-right">
-                    <p className="text-lg font-bold text-green-600 dark:text-green-400">
+                    <p className="text-lg font-bold text-green-700 dark:text-green-700">
                         Rs. {dividend.expectedCashAmount.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                     </p>
                     <p className="text-xs text-muted-foreground">
@@ -275,12 +275,12 @@ export const DividendSummaryCard = ({ holdings }: DividendTrackerProps) => {
         <Card>
             <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
-                    <Coins className="w-4 h-4 text-green-500" />
+                    <Coins className="w-4 h-4 text-green-700" />
                     Dividend Income
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                <div className="text-3xl font-bold text-green-700 dark:text-green-700">
                     Rs. {dividendData.totalExpectedCashDividend.toLocaleString(undefined, { maximumFractionDigits: 0 })}
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -292,7 +292,7 @@ export const DividendSummaryCard = ({ holdings }: DividendTrackerProps) => {
                 </div>
                 <div className="flex items-center justify-between text-sm mt-1">
                     <span className="text-muted-foreground">Yield on Cost</span>
-                    <span className="font-medium text-amber-600">{dividendData.yieldOnCost.toFixed(2)}%</span>
+                    <span className="font-medium text-amber-700">{dividendData.yieldOnCost.toFixed(2)}%</span>
                 </div>
             </CardContent>
         </Card>

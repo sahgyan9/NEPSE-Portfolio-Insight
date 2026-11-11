@@ -100,7 +100,7 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
         <div className="space-y-4">
             {/* Main Index Card */}
             <Card className="overflow-hidden">
-                <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-6">
+                <div className="bg-muted/50 p-6">
                     <div className="flex items-center justify-between">
                         <div>
                             <div className="flex items-center gap-2 mb-1">
@@ -113,7 +113,7 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
                                         <span className="text-4xl font-bold">
                                             {marketData.nepseIndex.index.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                         </span>
-                                        <div className={`flex items-center gap-1 ${marketData.nepseIndex.change >= 0 ? 'text-green-500' : 'text-red-500'
+                                        <div className={`flex items-center gap-1 ${marketData.nepseIndex.change >= 0 ? 'text-green-700' : 'text-red-700'
                                             }`}>
                                             {marketData.nepseIndex.change >= 0 ? (
                                                 <ArrowUpRight className="w-5 h-5" />
@@ -241,8 +241,8 @@ const CompactMarketWidget = ({
                 <Badge
                     variant="outline"
                     className={data.nepseIndex.change >= 0
-                        ? 'bg-green-500/10 text-green-600 border-green-500/20'
-                        : 'bg-red-500/10 text-red-600 border-red-500/20'
+                        ? 'bg-green-500/10 text-green-700 border-green-500/20'
+                        : 'bg-red-500/10 text-red-700 border-red-500/20'
                     }
                 >
                     {data.nepseIndex.change >= 0 ? (
@@ -301,9 +301,9 @@ const TopMoversCard = ({
         <CardHeader className="pb-2">
             <CardTitle className="text-lg flex items-center gap-2">
                 {type === 'gainer' ? (
-                    <TrendingUp className="w-4 h-4 text-green-500" />
+                    <TrendingUp className="w-4 h-4 text-green-700" />
                 ) : (
-                    <TrendingDown className="w-4 h-4 text-red-500" />
+                    <TrendingDown className="w-4 h-4 text-red-700" />
                 )}
                 {title}
             </CardTitle>
@@ -327,7 +327,7 @@ const TopMoversCard = ({
                             </div>
                             <div className="text-right">
                                 <p className="font-medium">Rs. {stock.ltp.toLocaleString()}</p>
-                                <p className={`text-sm ${type === 'gainer' ? 'text-green-500' : 'text-red-500'}`}>
+                                <p className={`text-sm ${type === 'gainer' ? 'text-green-700' : 'text-red-700'}`}>
                                     {stock.percentChange >= 0 ? '+' : ''}
                                     {stock.percentChange.toFixed(2)}%
                                 </p>
@@ -353,7 +353,7 @@ const SubIndexItem = ({
     <div className="p-3 rounded-lg border bg-card hover:bg-muted/30 transition-colors">
         <p className="text-xs text-muted-foreground truncate">{index.name}</p>
         <p className="font-semibold">{index.value.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-        <div className={`flex items-center gap-1 text-xs ${index.change >= 0 ? 'text-green-500' : 'text-red-500'
+        <div className={`flex items-center gap-1 text-xs ${index.change >= 0 ? 'text-green-700' : 'text-red-700'
             }`}>
             {index.change >= 0 ? (
                 <ArrowUpRight className="w-3 h-3" />

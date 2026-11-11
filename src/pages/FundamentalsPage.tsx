@@ -363,13 +363,13 @@ const FundamentalsPage = () => {
                                             
                                             if (isStrongBuy) {
                                                 signalText = "Strong Buy (Deep Value)";
-                                                signalColor = "text-green-600 bg-green-500/10 border-green-500/20";
+                                                signalColor = "text-green-700 bg-green-500/10 border-green-500/20";
                                             } else if (isGrahamUndervalued) {
                                                 signalText = "Undervalued";
                                                 signalColor = "text-lime-600 bg-lime-500/10 border-lime-500/20";
                                             } else if (h.grahamNumber && h.currentPrice > h.grahamNumber * 1.5) {
                                                 signalText = "Overvalued";
-                                                signalColor = "text-red-500 bg-red-500/10 border-red-500/20";
+                                                signalColor = "text-red-700 bg-red-500/10 border-red-500/20";
                                             }
                                             
                                             const discountPercent = h.grahamNumber 
@@ -384,7 +384,7 @@ const FundamentalsPage = () => {
                                                     <td className="p-3 text-right font-mono">
                                                         {h.grahamNumber ? `Rs. ${h.grahamNumber.toFixed(2)}` : '—'}
                                                     </td>
-                                                    <td className={`p-3 text-right font-mono font-semibold ${discountPercent !== null && discountPercent > 0 ? 'text-green-500' : 'text-muted-foreground'}`}>
+                                                    <td className={`p-3 text-right font-mono font-semibold ${discountPercent !== null && discountPercent > 0 ? 'text-green-700' : 'text-muted-foreground'}`}>
                                                         {discountPercent !== null ? `${discountPercent.toFixed(1)}%` : '—'}
                                                     </td>
                                                     <td className="p-3 text-right font-mono">
@@ -461,8 +461,8 @@ const QuickStatCard = ({
     benchmark: string;
 }) => {
     const statusColors = {
-        good: 'bg-green-500/10 border-green-500/20 text-green-600',
-        warning: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-600',
+        good: 'bg-green-500/10 border-green-500/20 text-green-700',
+        warning: 'bg-yellow-500/10 border-yellow-500/20 text-yellow-700',
         neutral: 'bg-muted border-border text-foreground',
     };
 

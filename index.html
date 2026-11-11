@@ -3,23 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEPSE Portfolio Tracker | Intelligent Investment Analysis</title>
-    <meta name="description" content="Track your NEPSE portfolio with AI-powered investment recommendations based on The Intelligent Investor principles. Visualize holdings, sector allocation, and get long-term investment suggestions." />
+    <title>NEPSE Portfolio Insight</title>
+    <meta name="description" content="Track your NEPSE portfolio: value, risk, sector mix and dividends in one place." />
     <meta name="author" content="NEPSE Portfolio Tracker" />
     <meta name="keywords" content="NEPSE, Nepal Stock Exchange, portfolio tracker, investment analysis, stock market, dividend, P/B ratio" />
 
-    <meta property="og:title" content="NEPSE Portfolio Tracker | Intelligent Investment Analysis" />
-    <meta property="og:description" content="Track your NEPSE portfolio with AI-powered investment recommendations based on value investing principles." />
+    <meta property="og:title" content="NEPSE Portfolio Insight" />
+    <meta property="og:description" content="Track your NEPSE portfolio: value, risk, sector mix and dividends in one place." />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@NEPSE" />
     
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f8fafc" />
+    <script>
+      (function () {
+        try {
+          var p = localStorage.getItem("pi_theme");
+          if (p !== "dark" && p !== "system") p = "light";
+          var dark = p === "dark" || (p === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          var r = document.documentElement;
+          if (dark) r.classList.add("dark");
+          r.style.colorScheme = dark ? "dark" : "light";
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute("content", dark ? "#080c0a" : "#f8fafc");
+        } catch (e) {}
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="/" />
   </head>
 
-  <body class="dark">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,4 +1,6 @@
-import { useState, useCallback } from "react";
+import { EVENT_OPEN_SEARCH } from "@/lib/shortcuts";
+import { StockResearchBlock } from "@/components/research/StockResearchBlock";
+import { useState, useCallback, useEffect } from "react";
 import { Search, X, Loader2, BookOpen, TrendingUp, Building2, DollarSign, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +18,12 @@ import { toast } from "@/hooks/use-toast";
 
 export const StockSearch = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const open = () => setIsOpen(true);
+        window.addEventListener(EVENT_OPEN_SEARCH, open);
+        return () => window.removeEventListener(EVENT_OPEN_SEARCH, open);
+    }, []);
     const [searchQuery, setSearchQuery] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [stockData, setStockData] = useState<MerolaganiFundamentals | null>(null);
@@ -169,7 +177,7 @@ export const StockSearch = () => {
                                 </div>
                                 <Badge
                                     variant={stockData.isLiveData ? "default" : "outline"}
-                                    className={stockData.isLiveData ? "bg-green-500" : ""}
+                                    className={stockData.isLiveData ? "bg-success" : ""}
                                 >
                                     {stockData.source === "live" ? "Live" : stockData.source === "cache" ? "Cached" : "Fallback"}
                                 </Badge>
@@ -261,10 +269,10 @@ export const StockSearch = () => {
                                 <Card>
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
-                                            <TrendingUp className="h-4 w-4 text-green-500" />
+                                            <TrendingUp className="h-4 w-4 text-green-700" />
                                             <span className="text-xs text-muted-foreground">52W High</span>
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 text-green-600">
+                                        <p className="text-lg font-semibold mt-1 text-green-700">
                                             Rs. {formatNumber(stockData.week52High)}
                                         </p>
                                     </CardContent>
@@ -274,10 +282,10 @@ export const StockSearch = () => {
                                 <Card>
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
-                                            <TrendingUp className="h-4 w-4 text-red-500 rotate-180" />
+                                            <TrendingUp className="h-4 w-4 text-red-700 rotate-180" />
                                             <span className="text-xs text-muted-foreground">52W Low</span>
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 text-red-600">
+                                        <p className="text-lg font-semibold mt-1 text-red-700">
                                             Rs. {formatNumber(stockData.week52Low)}
                                         </p>
                                     </CardContent>
@@ -313,6 +321,8 @@ export const StockSearch = () => {
                                     </Card>
                                 )}
                             </div>
+
+                            <StockResearchBlock symbol={stockData.symbol} sector={stockData.sector} narrow />
 
                             {/* Source Info */}
                             <p className="text-xs text-muted-foreground text-center">

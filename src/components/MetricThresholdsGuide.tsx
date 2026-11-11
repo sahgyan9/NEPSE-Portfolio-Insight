@@ -41,11 +41,11 @@ export const MetricThresholdsGuide = () => {
                     icon={<TrendingUp className="w-5 h-5" />}
                     education={METRIC_EDUCATION.peRatio}
                     thresholds={[
-                        { range: '< 10', label: 'Excellent', color: '#22c55e', description: 'Potentially undervalued' },
-                        { range: '10-15', label: 'Good', color: '#84cc16', description: 'Fairly priced' },
-                        { range: '15-25', label: 'Fair', color: '#eab308', description: 'Average valuation' },
-                        { range: '25-35', label: 'High', color: '#f97316', description: 'Expensive' },
-                        { range: '> 35', label: 'Very High', color: '#ef4444', description: 'Significantly overvalued' },
+                        { range: '< 10', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'Potentially undervalued' },
+                        { range: '10-15', label: 'Good', color: 'hsl(var(--status-2))', description: 'Fairly priced' },
+                        { range: '15-25', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Average valuation' },
+                        { range: '25-35', label: 'High', color: 'hsl(var(--status-4))', description: 'Expensive' },
+                        { range: '> 35', label: 'Very High', color: 'hsl(var(--status-5))', description: 'Significantly overvalued' },
                     ]}
                     lowerIsBetter={true}
                     nepseAverage="15-20"
@@ -57,11 +57,11 @@ export const MetricThresholdsGuide = () => {
                     icon={<BarChart3 className="w-5 h-5" />}
                     education={METRIC_EDUCATION.pbRatio}
                     thresholds={[
-                        { range: '< 1.0', label: 'Excellent', color: '#22c55e', description: 'Below book value' },
-                        { range: '1.0-1.5', label: 'Good', color: '#84cc16', description: 'Near book value' },
-                        { range: '1.5-2.5', label: 'Fair', color: '#eab308', description: 'Moderate premium' },
-                        { range: '2.5-4.0', label: 'High', color: '#f97316', description: 'Significant premium' },
-                        { range: '> 4.0', label: 'Very High', color: '#ef4444', description: 'Large premium' },
+                        { range: '< 1.0', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'Below book value' },
+                        { range: '1.0-1.5', label: 'Good', color: 'hsl(var(--status-2))', description: 'Near book value' },
+                        { range: '1.5-2.5', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate premium' },
+                        { range: '2.5-4.0', label: 'High', color: 'hsl(var(--status-4))', description: 'Significant premium' },
+                        { range: '> 4.0', label: 'Very High', color: 'hsl(var(--status-5))', description: 'Large premium' },
                     ]}
                     lowerIsBetter={true}
                     nepseAverage="0.8-1.5 (Banks)"
@@ -73,11 +73,11 @@ export const MetricThresholdsGuide = () => {
                     icon={<Coins className="w-5 h-5" />}
                     education={METRIC_EDUCATION.dividendYield}
                     thresholds={[
-                        { range: '> 6%', label: 'Excellent', color: '#22c55e', description: 'High income' },
-                        { range: '4-6%', label: 'Good', color: '#84cc16', description: 'Good income' },
-                        { range: '2-4%', label: 'Fair', color: '#eab308', description: 'Moderate income' },
-                        { range: '1-2%', label: 'Low', color: '#f97316', description: 'Low income' },
-                        { range: '< 1%', label: 'Very Low', color: '#ef4444', description: 'Minimal income' },
+                        { range: '> 6%', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'High income' },
+                        { range: '4-6%', label: 'Good', color: 'hsl(var(--status-2))', description: 'Good income' },
+                        { range: '2-4%', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate income' },
+                        { range: '1-2%', label: 'Low', color: 'hsl(var(--status-4))', description: 'Low income' },
+                        { range: '< 1%', label: 'Very Low', color: 'hsl(var(--status-5))', description: 'Minimal income' },
                     ]}
                     lowerIsBetter={false}
                     nepseAverage="3-5%"
@@ -89,11 +89,11 @@ export const MetricThresholdsGuide = () => {
                     icon={<TrendingUp className="w-5 h-5" />}
                     education={METRIC_EDUCATION.eps}
                     thresholds={[
-                        { range: '> Rs 50', label: 'Excellent', color: '#22c55e', description: 'High profitability' },
-                        { range: 'Rs 30-50', label: 'Good', color: '#84cc16', description: 'Good profitability' },
-                        { range: 'Rs 15-30', label: 'Fair', color: '#eab308', description: 'Moderate' },
-                        { range: 'Rs 5-15', label: 'Low', color: '#f97316', description: 'Low profitability' },
-                        { range: '< Rs 5', label: 'Very Low', color: '#ef4444', description: 'Poor profitability' },
+                        { range: '> Rs 50', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'High profitability' },
+                        { range: 'Rs 30-50', label: 'Good', color: 'hsl(var(--status-2))', description: 'Good profitability' },
+                        { range: 'Rs 15-30', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate' },
+                        { range: 'Rs 5-15', label: 'Low', color: 'hsl(var(--status-4))', description: 'Low profitability' },
+                        { range: '< Rs 5', label: 'Very Low', color: 'hsl(var(--status-5))', description: 'Poor profitability' },
                     ]}
                     lowerIsBetter={false}
                     nepseAverage="Varies by sector"
@@ -101,37 +101,37 @@ export const MetricThresholdsGuide = () => {
 
                 {/* Educational Notes */}
                 <div className="mt-8 p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                    <h4 className="font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-2 mb-3">
+                    <h4 className="font-semibold text-blue-700 dark:text-blue-700 flex items-center gap-2 mb-3">
                         <Info className="w-4 h-4" />
                         Important Notes for Nepal Market
                     </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                         <li className="flex items-start gap-2">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-700 mt-1">•</span>
                             <span>
                                 <strong>Sector Matters:</strong> Banks typically have lower P/B ratios (0.7-1.5) while manufacturing might have higher ones. Compare within sectors.
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-700 mt-1">•</span>
                             <span>
                                 <strong>Growth vs Value:</strong> High P/E might be justified for fast-growing companies. Consider growth prospects.
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-700 mt-1">•</span>
                             <span>
                                 <strong>Dividend Sustainability:</strong> Very high dividend yields (&gt;10%) may indicate unsustainable payouts or falling stock prices.
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-700 mt-1">•</span>
                             <span>
                                 <strong>Face Value:</strong> Nepal uses Rs. 100 face value. Dividends are calculated on face value, not market price.
                             </span>
                         </li>
                         <li className="flex items-start gap-2">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-700 mt-1">•</span>
                             <span>
                                 <strong>Book Value Importance:</strong> For financial institutions, book value is crucial as it represents net asset backing.
                             </span>
@@ -210,7 +210,7 @@ const MetricExplainer = ({
                                             className="flex-1 flex items-center justify-center cursor-help transition-opacity hover:opacity-80"
                                             style={{ backgroundColor: threshold.color }}
                                         >
-                                            <span className="text-xs font-medium text-white drop-shadow-sm">
+                                            <span className="text-xs font-medium text-card">
                                                 {threshold.range}
                                             </span>
                                         </div>
@@ -236,10 +236,10 @@ const MetricExplainer = ({
                 {/* Quick reference badges */}
                 <div className="mt-3 flex flex-wrap gap-2">
                     <Badge variant="outline" className="text-xs bg-green-500/10 border-green-500/20">
-                        ✓ Good: {education.goodRange}
+                        Good: {education.goodRange}
                     </Badge>
                     <Badge variant="outline" className="text-xs bg-yellow-500/10 border-yellow-500/20">
-                        ⚠ Warning: {education.warningThreshold}
+                        Watch: {education.warningThreshold}
                     </Badge>
                 </div>
             </div>
@@ -267,8 +267,8 @@ export const MetricTooltipContent = ({
             <p className="font-semibold mb-1">{edu.term}</p>
             <p className="text-sm text-muted-foreground mb-2">{edu.definition}</p>
             <div className="space-y-1">
-                <p className="text-xs text-green-500">✓ Good: {edu.goodRange}</p>
-                <p className="text-xs text-yellow-500">⚠ Warning: {edu.warningThreshold}</p>
+                <p className="text-xs text-green-700">Good: {edu.goodRange}</p>
+                <p className="text-xs text-yellow-700">Watch: {edu.warningThreshold}</p>
             </div>
         </div>
     );

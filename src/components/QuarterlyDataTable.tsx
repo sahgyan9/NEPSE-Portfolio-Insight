@@ -56,7 +56,7 @@ const YoYChip = ({ value }: { value: number | null | undefined }) => {
   const zero = Math.abs(value) < 0.01;
   if (zero) return <span className="text-xs text-muted-foreground">{value.toFixed(2)} %</span>;
   return (
-    <span className={`text-xs ${up ? 'text-green-500' : 'text-red-500'}`}>
+    <span className={`text-xs ${up ? 'text-green-700' : 'text-red-700'}`}>
       {value.toFixed(2)} %
     </span>
   );
@@ -513,15 +513,13 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
                             {(row.education.goodRange || row.education.warningThreshold) && (
                               <div className="border-t border-border/40 pt-1.5 space-y-1 font-normal">
                                 {row.education.goodRange && (
-                                  <p className="text-green-500 flex items-start gap-1">
-                                    <span>✓</span>
+                                  <p className="text-green-700 flex items-start gap-1">
                                     <span><strong>Good:</strong> {row.education.goodRange}</span>
                                   </p>
                                 )}
                                 {row.education.warningThreshold && (
-                                  <p className="text-yellow-500 flex items-start gap-1">
-                                    <span>⚠</span>
-                                    <span><strong>Warning:</strong> {row.education.warningThreshold}</span>
+                                  <p className="text-yellow-700 flex items-start gap-1">
+                                    <span><strong>Watch:</strong> {row.education.warningThreshold}</span>
                                   </p>
                                 )}
                               </div>
@@ -529,7 +527,7 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
                             
                             {row.education.growthTip && (
                               <div className="border-t border-border/40 pt-1.5 font-normal">
-                                <p className="text-blue-500 font-semibold mb-0.5">Trend & Growth:</p>
+                                <p className="text-blue-700 font-semibold mb-0.5">Trend & Growth:</p>
                                 <p className="text-muted-foreground leading-relaxed">{row.education.growthTip}</p>
                               </div>
                             )}
@@ -576,10 +574,10 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
       </div>
 
       {mode === 'screen1' && hasDuPont && (
-        <div className="mt-6 p-5 rounded-lg border border-border bg-card/50 backdrop-blur-sm space-y-4">
+        <div className="mt-6 p-5 rounded-lg border border-border bg-card/50 space-y-4">
           <div className="flex items-center justify-between border-b border-border/50 pb-3">
             <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
-              <span>📊</span> DuPont ROE Analysis (Latest Quarter: {latestQ.quarter_label})
+              DuPont ROE Analysis (Latest Quarter: {latestQ.quarter_label})
             </h4>
             <Badge className="font-bold text-xs bg-primary/10 text-primary border-primary/20" variant="outline">
               ROE: {latestQ.computed.dupont_roe}%
@@ -590,7 +588,7 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
                 <span className="text-muted-foreground font-medium">Net Profit Margin</span>
-                <span className="font-mono font-semibold text-emerald-500">{latestQ.computed.dupont_net_margin}%</span>
+                <span className="font-mono font-semibold text-emerald-700">{latestQ.computed.dupont_net_margin}%</span>
               </div>
               <div className="h-2 rounded-full bg-muted overflow-hidden">
                 <div className="h-full bg-emerald-500 rounded-full" style={{ width: `${Math.min(100, Math.max(0, latestQ.computed.dupont_net_margin || 0))}%` }} />
@@ -601,7 +599,7 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
                 <span className="text-muted-foreground font-medium">Asset Turnover</span>
-                <span className="font-mono font-semibold text-indigo-500">{latestQ.computed.dupont_asset_turnover}x</span>
+                <span className="font-mono font-semibold text-indigo-700">{latestQ.computed.dupont_asset_turnover}x</span>
               </div>
               <div className="h-2 rounded-full bg-muted overflow-hidden">
                 <div className="h-full bg-indigo-500 rounded-full" style={{ width: `${Math.min(100, (latestQ.computed.dupont_asset_turnover || 0) * 100)}%` }} />
@@ -612,7 +610,7 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
                 <span className="text-muted-foreground font-medium">Equity Multiplier</span>
-                <span className="font-mono font-semibold text-amber-500">{latestQ.computed.dupont_equity_multiplier}x</span>
+                <span className="font-mono font-semibold text-amber-700">{latestQ.computed.dupont_equity_multiplier}x</span>
               </div>
               <div className="h-2 rounded-full bg-muted overflow-hidden">
                 <div className="h-full bg-amber-500 rounded-full" style={{ width: `${Math.min(100, ((latestQ.computed.dupont_equity_multiplier || 1) / 15) * 100)}%` }} />
@@ -623,11 +621,11 @@ export const QuarterlyDataTable = ({ quarters, mode }: QuarterlyDataTableProps) 
           
           <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] text-muted-foreground border-t border-border/50 pt-3 font-mono">
             <span>Formula: ROE ({latestQ.computed.dupont_roe}%) =</span>
-            <span className="text-emerald-500">Margin ({latestQ.computed.dupont_net_margin}%)</span>
+            <span className="text-emerald-700">Margin ({latestQ.computed.dupont_net_margin}%)</span>
             <span>×</span>
-            <span className="text-indigo-500">Asset Turnover ({latestQ.computed.dupont_asset_turnover}x)</span>
+            <span className="text-indigo-700">Asset Turnover ({latestQ.computed.dupont_asset_turnover}x)</span>
             <span>×</span>
-            <span className="text-amber-500">Leverage ({latestQ.computed.dupont_equity_multiplier}x)</span>
+            <span className="text-amber-700">Leverage ({latestQ.computed.dupont_equity_multiplier}x)</span>
           </div>
         </div>
       )}

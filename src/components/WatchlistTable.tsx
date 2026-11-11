@@ -54,7 +54,7 @@ const StalePriceBadge = ({ fundamentals }: { fundamentals?: MerolaganiFundamenta
       <TooltipTrigger asChild>
         <Badge
           variant="outline"
-          className="h-5 gap-1 border-amber-500/40 bg-amber-500/10 px-1.5 text-[10px] font-medium text-amber-600 dark:text-amber-400"
+          className="h-5 gap-1 border-amber-500/40 bg-amber-500/10 px-1.5 text-[10px] font-medium text-amber-700 dark:text-amber-700"
         >
           <AlertTriangle className="h-3 w-3" />
           Stale
@@ -241,7 +241,7 @@ export const WatchlistTable = () => {
   };
 
   return (
-    <div className="glass-card overflow-hidden opacity-0 animate-fade-in mt-6" style={{ animationDelay: "700ms" }}>
+    <div className="surface overflow-hidden  mt-6">
       <div className="p-4 border-b border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h3 className="text-lg font-semibold flex items-center gap-2">
           Watchlist
@@ -288,14 +288,14 @@ export const WatchlistTable = () => {
         <table className="w-full caption-bottom text-sm">
           <thead className="sticky top-0 bg-card z-10 shadow-sm [&_tr]:border-b">
             <tr className="border-b transition-colors bg-card">
-              <TableHead className="w-12 text-slate-400">#</TableHead>
+              <TableHead className="w-12 text-muted-foreground">#</TableHead>
               <TableHead className="text-primary font-semibold">Symbol</TableHead>
               <TableHead className="hidden lg:table-cell text-muted-foreground font-semibold">Company</TableHead>
               <TableHead className="text-violet-500 font-semibold">LTP</TableHead>
-              <TableHead className="text-teal-500 font-semibold">EPS</TableHead>
-              <TableHead className="text-pink-500 font-semibold">Book Val</TableHead>
-              <TableHead className="text-orange-500 font-semibold">P/B</TableHead>
-              <TableHead className="text-blue-500 font-semibold hidden md:table-cell">P/E</TableHead>
+              <TableHead className="text-teal-700 font-semibold">EPS</TableHead>
+              <TableHead className="text-pink-700 font-semibold">Book Val</TableHead>
+              <TableHead className="text-orange-700 font-semibold">P/B</TableHead>
+              <TableHead className="text-blue-700 font-semibold hidden md:table-cell">P/E</TableHead>
               <TableHead className="w-12 text-right"></TableHead>
             </tr>
           </thead>
@@ -309,7 +309,7 @@ export const WatchlistTable = () => {
             ) : (
               enhancedWatchlist.map((item, index) => (
                 <TableRow key={item.symbol} className="table-row-hover">
-                  <TableCell className="font-mono text-slate-400">{index + 1}</TableCell>
+                  <TableCell className="font-mono text-muted-foreground">{index + 1}</TableCell>
                   <TableCell>
                     <StockSymbolLink symbol={item.symbol} className="font-semibold text-primary" />
                   </TableCell>
@@ -334,16 +334,16 @@ export const WatchlistTable = () => {
                       </span>
                     )}
                   </TableCell>
-                  <TableCell className="font-mono text-teal-500">
+                  <TableCell className="font-mono text-teal-700">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : (item.fundamentals?.eps ?? "N/A")}
                   </TableCell>
-                  <TableCell className="font-mono text-pink-500">
+                  <TableCell className="font-mono text-pink-700">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : formatCurrency(item.fundamentals?.bookValue)}
                   </TableCell>
-                  <TableCell className="font-mono text-orange-500">
+                  <TableCell className="font-mono text-orange-700">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : (item.fundamentals?.pbRatio?.toFixed(2) ?? "N/A")}
                   </TableCell>
-                  <TableCell className="font-mono text-blue-500 hidden md:table-cell">
+                  <TableCell className="font-mono text-blue-700 hidden md:table-cell">
                     {item.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : (item.fundamentals?.peRatio?.toFixed(2) ?? "N/A")}
                   </TableCell>
                   <TableCell className="text-right">

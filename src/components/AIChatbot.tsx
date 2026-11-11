@@ -255,7 +255,7 @@ GUIDELINES:
         return (
             <Button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 z-50"
+                className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-sm bg-primary hover:bg-primary/90 z-50"
                 size="icon"
             >
                 <MessageCircle className="h-6 w-6" />
@@ -266,18 +266,18 @@ GUIDELINES:
     return (
         <div
             className={cn(
-                "fixed bottom-6 right-6 z-50 flex flex-col bg-card border border-border rounded-xl shadow-2xl transition-all duration-300",
-                isMinimized ? "w-80 h-14" : "w-96 h-[600px] max-h-[80vh]"
+                "fixed bottom-6 right-6 z-50 flex flex-col bg-card border border-border rounded-xl shadow-sm transition-all duration-300",
+                isMinimized ? "w-80 max-w-[calc(100vw-3rem)] h-14" : "w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[80vh]"
             )}
         >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-t-xl">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-muted/50 rounded-t-xl">
                 <div className="flex items-center gap-2">
-                    <div className="p-1.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600">
-                        <Bot className="h-4 w-4 text-white" />
+                    <div className="p-1.5 rounded-full bg-primary hover:bg-primary/90">
+                        <Bot className="h-4 w-4 text-primary-foreground" />
                     </div>
                     <div>
-                        <h3 className="font-semibold text-sm">Portfolio AI Assistant</h3>
+                        <h3 className="font-semibold text-sm">AI second opinion</h3>
                         {!isMinimized && (
                             <p className="text-xs text-muted-foreground">
                                 Ask about your portfolio or investing
@@ -326,10 +326,10 @@ GUIDELINES:
                     <ScrollArea ref={scrollAreaRef} className="flex-1 p-4">
                         {messages.length === 0 ? (
                             <div className="flex flex-col items-center justify-center h-full text-center px-4">
-                                <div className="p-4 rounded-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 mb-4">
-                                    <Bot className="h-8 w-8 text-blue-500" />
+                                <div className="p-4 rounded-full bg-muted/50 mb-4">
+                                    <Bot className="h-8 w-8 text-blue-700" />
                                 </div>
-                                <h4 className="font-semibold mb-2">Welcome! 👋</h4>
+                                <h4 className="font-semibold mb-2">Welcome</h4>
                                 <p className="text-sm text-muted-foreground mb-4">
                                     I'm your AI portfolio assistant. Ask me anything about your
                                     investments or general finance questions.
@@ -344,18 +344,18 @@ GUIDELINES:
                                             setTimeout(() => sendMessage(), 100);
                                         }}
                                     >
-                                        📊 What's my portfolio performance?
+                                        What's my portfolio performance?
                                     </Button>
                                     <Button
                                         variant="outline"
                                         size="sm"
                                         className="text-xs justify-start"
                                         onClick={() => {
-                                            setInput("Which stocks should I consider selling?");
+                                            setInput("Which of my holdings look weakest, and why?");
                                             setTimeout(() => sendMessage(), 100);
                                         }}
                                     >
-                                        📈 Which stocks should I sell?
+                                        Which holdings look weakest?
                                     </Button>
                                     <Button
                                         variant="outline"
@@ -366,7 +366,7 @@ GUIDELINES:
                                             setTimeout(() => sendMessage(), 100);
                                         }}
                                     >
-                                        📚 Explain P/E ratio
+                                        Explain P/E ratio
                                     </Button>
                                 </div>
                             </div>
@@ -382,8 +382,8 @@ GUIDELINES:
                                     >
                                         {message.role === "assistant" && (
                                             <div className="flex-shrink-0 mt-1">
-                                                <div className="p-1.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600">
-                                                    <Bot className="h-3 w-3 text-white" />
+                                                <div className="p-1.5 rounded-full bg-primary hover:bg-primary/90">
+                                                    <Bot className="h-3 w-3 text-primary-foreground" />
                                                 </div>
                                             </div>
                                         )}
@@ -391,7 +391,7 @@ GUIDELINES:
                                             className={cn(
                                                 "max-w-[85%] rounded-xl px-3 py-2",
                                                 message.role === "user"
-                                                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                                                    ? "bg-primary hover:bg-primary/90 text-primary-foreground"
                                                     : "bg-muted"
                                             )}
                                         >
@@ -405,7 +405,7 @@ GUIDELINES:
                                                 className={cn(
                                                     "text-[10px] mt-1",
                                                     message.role === "user"
-                                                        ? "text-white/70"
+                                                        ? "text-primary-foreground/70"
                                                         : "text-muted-foreground"
                                                 )}
                                             >
@@ -414,8 +414,8 @@ GUIDELINES:
                                         </div>
                                         {message.role === "user" && (
                                             <div className="flex-shrink-0 mt-1">
-                                                <div className="p-1.5 rounded-full bg-blue-600">
-                                                    <User className="h-3 w-3 text-white" />
+                                                <div className="p-1.5 rounded-full bg-primary">
+                                                    <User className="h-3 w-3 text-primary-foreground" />
                                                 </div>
                                             </div>
                                         )}
@@ -424,8 +424,8 @@ GUIDELINES:
                                 {isLoading && (
                                     <div className="flex gap-3">
                                         <div className="flex-shrink-0 mt-1">
-                                            <div className="p-1.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600">
-                                                <Bot className="h-3 w-3 text-white" />
+                                            <div className="p-1.5 rounded-full bg-primary hover:bg-primary/90">
+                                                <Bot className="h-3 w-3 text-primary-foreground" />
                                             </div>
                                         </div>
                                         <div className="bg-muted rounded-xl px-4 py-3">
@@ -458,7 +458,7 @@ GUIDELINES:
                                 onClick={sendMessage}
                                 disabled={!input.trim() || isLoading}
                                 size="icon"
-                                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                                className="bg-primary hover:bg-primary/90"
                             >
                                 {isLoading ? (
                                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -468,7 +468,7 @@ GUIDELINES:
                             </Button>
                         </div>
                         <p className="text-[10px] text-muted-foreground text-center mt-2">
-                            Powered by Gemini 2.5 Flash • Not financial advice
+                            Generated text from Gemini, not advice. It can be wrong.
                         </p>
                     </div>
                 </>

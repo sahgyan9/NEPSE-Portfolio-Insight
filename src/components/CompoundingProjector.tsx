@@ -54,12 +54,12 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
             const gainPercent = ((gain / summary.currentValue) * 100).toFixed(1);
 
             return (
-                <div className="bg-card border border-border rounded-lg p-3 shadow-xl">
+                <div className="bg-card border border-border rounded-lg p-3 shadow-sm">
                     <p className="font-semibold text-foreground">{label}</p>
                     <p className="text-sm text-primary">
                         Projected: Rs. {projected?.toLocaleString("en-NP")}
                     </p>
-                    <p className="text-sm text-green-500">
+                    <p className="text-sm text-green-700">
                         Growth: +Rs. {gain?.toLocaleString("en-NP")} ({gainPercent}%)
                     </p>
                 </div>
@@ -98,11 +98,11 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                     </div>
 
                     <div className="text-center p-3 bg-green-500/5 rounded-lg">
-                        <div className="flex items-center justify-center gap-1 text-green-500 mb-1">
+                        <div className="flex items-center justify-center gap-1 text-green-700 mb-1">
                             <TrendingUp className="h-4 w-4" />
                             <span className="text-xs font-medium">Total Growth</span>
                         </div>
-                        <p className="text-lg font-bold text-green-500">
+                        <p className="text-lg font-bold text-green-700">
                             +Rs. {Math.round(totalGrowth / 1000)}K
                         </p>
                         <p className="text-xs text-muted-foreground">
@@ -111,7 +111,7 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                     </div>
 
                     <div className="text-center p-3 bg-amber-500/5 rounded-lg">
-                        <div className="flex items-center justify-center gap-1 text-amber-500 mb-1">
+                        <div className="flex items-center justify-center gap-1 text-amber-700 mb-1">
                             <Clock className="h-4 w-4" />
                             <span className="text-xs font-medium">Doubling Time</span>
                         </div>
@@ -204,13 +204,13 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                 </div>
 
                 {/* Insight */}
-                <div className="text-center p-4 border border-border rounded-lg bg-gradient-to-r from-primary/5 to-green-500/5">
+                <div className="text-center p-4 border border-border rounded-lg bg-muted/50">
                     <p className="text-sm text-muted-foreground">
-                        💡 <strong className="text-foreground">Compound Interest Insight:</strong>{" "}
+                        <strong className="text-foreground">How compounding works:</strong>{" "}
                         At {assumedCAGR.toFixed(1)}% annual return, your Rs.{" "}
                         {(summary.currentValue / 1000).toFixed(0)}K will grow to Rs.{" "}
                         {(finalValue / 1000).toFixed(0)}K in {projectionYears} years —{" "}
-                        <span className="text-green-500 font-medium">
+                        <span className="text-green-700 font-medium">
                             that's Rs. {(totalGrowth / 1000).toFixed(0)}K in pure growth!
                         </span>
                     </p>
