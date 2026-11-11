@@ -48,3 +48,6 @@ db/quarterly_sync_status.json
 
 # Local debugging scripts
 scratch/
+
+# Analytics output regenerated on demand (contains personal holdings)
+db/portfolio_risk.json

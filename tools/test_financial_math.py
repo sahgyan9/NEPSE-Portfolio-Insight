@@ -98,8 +98,12 @@ def test_hydropower_leverage_metrics(mock_portfolio, mock_fundamentals, mock_qua
     warnings = health["warnings"]
     assert any("Debt-to-Equity is 5.0" in w or "UPPER" in w and "leverage" in w.lower() for w in warnings)
 
-def test_portfolio_diversification_hhi(mock_portfolio, mock_fundamentals):
+def test_portfolio_diversification_hhi(mock_portfolio, mock_fundamentals, monkeypatch):
     """Test Herfindahl-Hirschman Index (HHI) for diversification scores."""
+    # Holdings are valued at the last traded price on file. Hide the price files so every
+    # holding is valued at its cost (100) and the intended weights below hold.
+    import portfolio_common
+    monkeypatch.setattr(portfolio_common, "latest_close", lambda symbol: (None, None))
     # Case A: Well-diversified across 5 stocks in 5 different sectors (weight = 20% each)
     mock_portfolio([
         {"symbol": "NABIL", "quantity": 100, "avgCost": 100.0}, # Commercial Bank

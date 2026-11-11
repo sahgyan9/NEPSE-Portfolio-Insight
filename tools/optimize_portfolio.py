@@ -1,203 +1,107 @@
+"""
+Portfolio analysis for the Intelligence page.
+
+Runs the measured risk engine (tools/portfolio_risk.py) and a sector-relative valuation
+check, then writes db/portfolio_optimization.json. The file keeps the original top-level
+keys (totalValue, holdingCount, volatilityScore, sectorExposure, suggestion,
+valuationWarnings) so existing screens keep working, and adds the full report under "risk".
+
+Earlier versions used a fixed volatility guess per sector and weighted holdings at cost.
+Both are replaced: volatility is measured from price history and weights use current prices.
+"""
+
 import json
 import os
-import argparse
-import math
+import sys
 
-def load_json(filepath):
-    if not os.path.exists(filepath):
-        return None
-    with open(filepath, 'r', encoding='utf-8') as f:
-        return json.load(f)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import portfolio_common as pc  # noqa: E402
+import portfolio_risk  # noqa: E402
 
-# Sector volatility heuristics (based on frontier market models from arXiv q-fin)
-# Lower is less volatile.
-SECTOR_VOLATILITY = {
-    "Commercial Bank": 0.15,
-    "Development Bank": 0.20,
-    "Life Insurance": 0.22,
-    "Non-Life Insurance": 0.25,
-    "Microfinance": 0.35,
-    "Hydropower": 0.40,
-    "Finance": 0.30,
-    "Manufacturing": 0.18,
-    "Hotels": 0.38,
-    "Investment": 0.25,
-    "Trading": 0.30,
-    "Telecom": 0.12,
-    "Mutual Fund": 0.10,
-    "Others": 0.25
-}
+# Kept for callers that imported these from here.
+SYMBOL_SECTOR = pc.SYMBOL_SECTOR
+normalize_sector = pc.normalize_sector
+load_json = pc.load_json
 
-# Authoritative symbol -> sector map (kept in sync with
-# src/data/companyRegistry.ts). Used as the PRIMARY source because the scraped
-# quarterly JSONs mislabel several scrips (e.g. CBBL/SNLI as "unknown", HRL/NTC
-# as "Others") and mutual funds have no quarterly file at all.
-SYMBOL_SECTOR = {
-    # Hydropower
-    "BHL": "Hydropower", "CHCL": "Hydropower", "SAHAS": "Hydropower",
-    "SGHC": "Hydropower", "UPPER": "Hydropower", "MEN": "Hydropower",
-    # Commercial Banks
-    "HBL": "Commercial Bank", "NABIL": "Commercial Bank", "NICA": "Commercial Bank",
-    "NIMB": "Commercial Bank", "NBL": "Commercial Bank",
-    # Microfinance
-    "CBBL": "Microfinance", "AVYAN": "Microfinance", "JBLB": "Microfinance",
-    "SKBBL": "Microfinance",
-    # Hotel / Tourism
-    "SHL": "Hotel",
-    # Life Insurance
-    "CLI": "Life Insurance", "SNLI": "Life Insurance",
-    # Non-Life Insurance / Reinsurance
-    "HRL": "Non-Life Insurance",
-    # Manufacturing & Processing
-    "HDL": "Manufacturing", "GCIL": "Manufacturing", "SARBTM": "Manufacturing",
-    "SONA": "Manufacturing", "SHIVM": "Manufacturing",
-    # Telecom
-    "NTC": "Telecom",
-    # Mutual Funds
-    "CSBY": "Mutual Fund", "CSY": "Mutual Fund", "KDBY": "Mutual Fund",
-    "MMF1": "Mutual Fund", "NBF3": "Mutual Fund", "NIBLSF": "Mutual Fund",
-    "NMBSBFE": "Mutual Fund",
-}
+OUTPUT_PATH = os.path.join(pc.DB_DIR, "portfolio_optimization.json")
 
 
-def normalize_sector(sector):
-    if not sector:
-        return "Others"
-    s = sector.strip().lower()
-    if "bank" in s:
-        if "development" in s:
-            return "Development Bank"
-        return "Commercial Bank"
-    if "microfinance" in s or "laghubitta" in s:
-        return "Microfinance"
-    # Check non-life/reinsurance BEFORE life, since "non-life insurance"
-    # contains the substring "life insurance".
-    if "non-life" in s or "non life" in s or "reinsurance" in s:
-        return "Non-Life Insurance"
-    if "life insurance" in s:
-        return "Life Insurance"
-    if "insurance" in s:
-        return "Life Insurance" # default fallback
-    if "hydro" in s:
-        return "Hydropower"
-    if "manufactur" in s or "distiller" in s or "cement" in s:
-        return "Manufacturing"
-    if "hotel" in s or "tourism" in s:
-        return "Hotels"
-    if "invest" in s:
-        return "Investment"
-    if "trade" in s or "oil" in s:
-        return "Trading"
-    if "telecom" in s or "phone" in s or "communication" in s:
-        return "Telecom"
-    if "mutual" in s or "fund" in s:
-        return "Mutual Fund"
-    return sector.title()
+def valuation_checks(holdings, fundamentals):
+    """Compare each holding's P/E with the median of its own sector.
+
+    A bank at P/E 18 and a hydropower company at P/E 18 are not equally priced, so a single
+    cut-off for every sector misleads. Loss-making companies are flagged separately because
+    a negative P/E has no meaning."""
+    medians = pc.sector_medians(fundamentals)
+    out = []
+    for h in holdings:
+        sym = h["symbol"].upper()
+        fund = fundamentals.get(sym) or {}
+        sector = pc.resolve_sector(sym, fundamentals)
+        if sector == "Mutual Fund":
+            continue
+        pe, eps = fund.get("peRatio"), fund.get("eps")
+        median_pe = (medians.get(sector) or {}).get("pe")
+        if isinstance(eps, (int, float)) and eps < 0:
+            out.append({"symbol": sym, "type": "LOSS_MAKING", "pe": pe, "sectorMedianPe": median_pe,
+                        "message": f"{sym} reported a loss (EPS {eps:.2f}). Price is not supported by current earnings."})
+            continue
+        if not isinstance(pe, (int, float)) or pe <= 0 or not median_pe:
+            continue
+        ratio = pe / median_pe
+        if ratio >= 1.5:
+            out.append({"symbol": sym, "type": "OVERVALUED", "pe": pe, "sectorMedianPe": round(median_pe, 1),
+                        "message": f"{sym} trades at P/E {pe:.1f}, {ratio:.1f}x the {sector} median of {median_pe:.1f}. "
+                                   "The price assumes faster profit growth than its peers."})
+        elif ratio <= 0.7:
+            out.append({"symbol": sym, "type": "UNDERVALUED", "pe": pe, "sectorMedianPe": round(median_pe, 1),
+                        "message": f"{sym} trades at P/E {pe:.1f}, below the {sector} median of {median_pe:.1f}. "
+                                   "Cheap against peers; check whether profits are expected to fall."})
+    return out
+
 
 def analyze_portfolio():
-    print("="*60)
-    print("QUANTITATIVE PORTFOLIO OPTIMIZATION (MPT HEURISTIC)")
-    print("="*60)
-    
-    db_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "db")
-    portfolio_data = load_json(os.path.join(db_dir, "portfolio.json"))
-    fundamentals_data = load_json(os.path.join(db_dir, "fundamentals.json"))
-    
-    if not portfolio_data or "holdings" not in portfolio_data or not portfolio_data["holdings"]:
+    portfolio = pc.load_json(os.path.join(pc.DB_DIR, "portfolio.json"))
+    fundamentals = pc.load_json(os.path.join(pc.DB_DIR, "fundamentals.json")) or {}
+    if not portfolio or not portfolio.get("holdings"):
         print("No holdings found in portfolio.json.")
-        return
-        
-    holdings = portfolio_data["holdings"]
-    fundamentals = fundamentals_data if fundamentals_data else {}
-    
-    total_value = sum([h.get("quantity", 0) * h.get("avgCost", 0) for h in holdings])
-    if total_value == 0:
-        print("Total portfolio value is zero.")
-        return
-        
-    print(f"\nAnalyzing {len(holdings)} holdings. Total Value: Rs. {total_value:,.2f}")
-    
-    # Calculate current weights and risk profile
-    portfolio_volatility = 0
-    sector_exposure = {}
-    
-    for h in holdings:
-        sym = h["symbol"]
-        value = h.get("quantity", 0) * h.get("avgCost", 0)
-        weight = value / total_value
-        
-        # Sector resolution order: authoritative map -> fundamentals -> quarterly.
-        # The map wins first because scraped sources mislabel several scrips.
-        sector = SYMBOL_SECTOR.get(sym.upper())
+        return None
 
-        if not sector:
-            fund = fundamentals.get(sym, {})
-            sector = fund.get("sector")
+    risk = portfolio_risk.analyze(portfolio, fundamentals)
+    if "error" in risk:
+        print(risk["error"])
+        return None
+    with open(portfolio_risk.OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(risk, f, indent=2)
 
-        if not sector:
-            # Fallback to quarterly JSON sector
-            q_path = os.path.join(db_dir, "quarterly", f"{sym}.json")
-            q_data = load_json(q_path)
-            if q_data and q_data.get("sector"):
-                sector = q_data["sector"]
-                
-        normalized_sector = normalize_sector(sector)
-        vol = SECTOR_VOLATILITY.get(normalized_sector, 0.25)
-            
-        sector_exposure[normalized_sector] = sector_exposure.get(normalized_sector, 0.0) + weight
-        portfolio_volatility += (weight * vol)
-        
-    print(f"\nCurrent Portfolio Volatility Score: {portfolio_volatility:.3f} (Lower is safer)")
-    print("\nSector Exposure:")
-    for sec, w in sorted(sector_exposure.items(), key=lambda x: x[1], reverse=True):
-        print(f"  - {sec}: {w*100:.1f}%")
-        
-    # Simple Optimization Suggestion
-    print("\n[OPTIMIZATION SUGGESTIONS]")
-    if portfolio_volatility > 0.30:
-        print("[WARN] HIGH RISK: Your portfolio is heavily tilted towards highly volatile sectors (e.g. Hydropower, Microfinance).")
-        print("   Suggestion: Consider rebalancing 15-20% of your capital into Commercial Banks or Manufacturing to reduce variance drag.")
-        suggestion_text = "HIGH RISK: Your portfolio is heavily tilted towards highly volatile sectors (e.g. Hydropower, Microfinance). Suggestion: Consider rebalancing 15-20% of your capital into Commercial Banks or Manufacturing to reduce variance drag."
-    elif portfolio_volatility < 0.18:
-        print("[WARN] LOW VOLATILITY: Your portfolio is extremely defensive.")
-        print("   Suggestion: If you have a long time horizon, you are sacrificing expected returns. Consider adding 10% exposure to high-beta sectors like Hydropower or Microfinance.")
-        suggestion_text = "LOW VOLATILITY: Your portfolio is extremely defensive. Suggestion: If you have a long time horizon, you are sacrificing expected returns. Consider adding 10% exposure to high-beta sectors like Hydropower or Microfinance."
-    else:
-        print("[OK] BALANCED: Your portfolio has a healthy mix of defensive and growth variance.")
-        suggestion_text = "BALANCED: Your portfolio has a healthy mix of defensive and growth variance."
-        
-    # Stock-specific PE check
-    valuation_warnings = []
-    print("\n[VALUATION CHECK]")
-    for h in holdings:
-        sym = h["symbol"]
-        fund = fundamentals.get(sym, {})
-        pe = fund.get("peRatio")
-        if pe is not None:
-            if pe > 50:
-                msg = f"{sym}: VERY HIGH P/E ({pe}). Consider taking profits if growth slows."
-                print(f"  - {msg}")
-                valuation_warnings.append({"symbol": sym, "type": "OVERVALUED", "message": msg, "pe": pe})
-            elif pe > 0 and pe < 15:
-                msg = f"{sym}: VALUE ZONE P/E ({pe}). Potentially undervalued based on earnings."
-                print(f"  - {msg}")
-                valuation_warnings.append({"symbol": sym, "type": "UNDERVALUED", "message": msg, "pe": pe})
+    p = risk["portfolio"]
+    top = [f for f in risk["findings"] if f["severity"] in ("high", "medium")][:2]
+    suggestion = (
+        f"Risk is {risk['riskLevel'].lower()}: estimated yearly swing {p['volatility'] * 100:.0f}% "
+        f"against {risk['market']['volatility'] * 100:.0f}% for the market. "
+    )
+    suggestion += " ".join(f"{f['title']}." for f in top) if top else "No concentration problems found."
 
-    # Save Structured JSON Output
     output = {
-        "totalValue": total_value,
-        "holdingCount": len(holdings),
-        "volatilityScore": round(portfolio_volatility, 3),
-        "sectorExposure": [{"sector": k, "weight": round(v, 4)} for k, v in sorted(sector_exposure.items(), key=lambda x: x[1], reverse=True)],
-        "suggestion": suggestion_text,
-        "valuationWarnings": valuation_warnings
+        "totalValue": p["value"],
+        "holdingCount": p["holdingCount"],
+        "volatilityScore": p["volatility"],
+        "sectorExposure": [{"sector": s["sector"], "weight": s["weight"], "riskShare": s["riskShare"]}
+                           for s in risk["sectors"]],
+        "suggestion": suggestion,
+        "valuationWarnings": valuation_checks(portfolio["holdings"], fundamentals),
+        "risk": risk,
     }
-    
-    output_path = os.path.join(db_dir, "portfolio_optimization.json")
-    with open(output_path, "w", encoding="utf-8") as f:
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
-        
-    print(f"\nOptimization data saved to {output_path}")
+
+    print(f"Analysed {p['holdingCount']} holdings worth Rs. {p['value']:,.0f}")
+    print(suggestion)
+    for w in output["valuationWarnings"]:
+        print(f"  - {w['message']}")
+    print(f"Saved to {OUTPUT_PATH}")
+    return output
+
 
 if __name__ == "__main__":
     analyze_portfolio()
