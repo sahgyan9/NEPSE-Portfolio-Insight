@@ -3,6 +3,7 @@
 // Features: stock selector, PDF upload zone, trend charts, data table, delete quarters
 
 import { StockResearchBlock } from "@/components/research/StockResearchBlock";
+import { EpsInsightCard } from "@/components/research/EpsInsightCard";
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
@@ -557,6 +558,10 @@ const QuarterlyPage = () => {
                   </TabsContent>
 
                   {/* Balance Sheet table */}
+                <ErrorBoundary label="EPS insights">
+                  <EpsInsightCard symbol={selectedSymbol} className="mb-5" />
+                </ErrorBoundary>
+
                   <TabsContent value="screen2" className="rounded-xl border border-border bg-card p-5 relative overflow-hidden">
                     <div className="relative z-10">
                       <h3 className="font-semibold mb-4">Balance Sheet + P&L (Rs Crore)</h3>

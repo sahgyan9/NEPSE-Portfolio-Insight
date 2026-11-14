@@ -576,7 +576,19 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             period = query.get("period", ["all"])[0]
             history = get_value_history_by_period(db, period)
             self._send_json({"history": history, "period": period})
-        
+
+        elif path == "/api/eps-insights":
+            try:
+                script_path = os.path.join(os.path.dirname(__file__), "tools", "eps_insights.py")
+                subprocess.run([sys.executable, script_path], check=True)
+
+                db_path = os.path.join(os.path.dirname(__file__), "db", "eps_insights.json")
+                with open(db_path, "r", encoding="utf-8") as f:
+                    eps_data = json.load(f)
+            except Exception as e:
+                eps_data = {"error": str(e)}
+            self._send_json({"insights": eps_data})
+
         elif path == "/api/value-history/stats":
             # Get statistics for a period (min, max, avg, change)
             db = load_db()

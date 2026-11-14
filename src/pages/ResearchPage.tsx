@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { AIChatbot } from "@/components/AIChatbot";
 import { ResearchSteps } from "@/components/research/ResearchSteps";
 import { SectorResearchPanel } from "@/components/research/SectorResearchPanel";
+import { EpsHoldingsTable } from "@/components/research/EpsHoldingsTable";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
 import { useApiKey } from "@/hooks/useApiKey";
@@ -30,6 +31,14 @@ const ResearchPage = () => {
         <section className="space-y-3">
           <h2 className="text-lg font-semibold">The six steps</h2>
           <ResearchSteps />
+        </section>
+
+        <section className="space-y-3">
+          <div>
+            <h2 className="text-lg font-semibold">Your holdings: earnings check</h2>
+            <p className="text-sm text-muted-foreground">What each holding earns against the price you paid.</p>
+          </div>
+          <EpsHoldingsTable />
         </section>
 
         <section className="space-y-3">

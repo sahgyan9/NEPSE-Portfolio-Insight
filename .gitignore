@@ -51,3 +51,6 @@ scratch/
 
 # Analytics output regenerated on demand (contains personal holdings)
 db/portfolio_risk.json
+
+# Personal holdings-based EPS analysis (regenerated on demand)
+db/eps_insights.json
