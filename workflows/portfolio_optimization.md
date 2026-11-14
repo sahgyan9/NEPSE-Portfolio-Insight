@@ -21,3 +21,18 @@
 - XIRR excludes cash dividends and fees. Purchases without a broker bill are assumed made at average cost on the holding's `dateAdded`.
 - Known data fault (2026-11-11): some quarterly files store percentage ratios without the decimal point (CAR 11.12 as 1112; seen in NICA, NABIL, SFCL). `portfolio_health.py` rescales these defensively. The source data in `db/quarterly/` was left untouched because it is the research dataset.
 - First run after price files change takes about 10 seconds (it parses every price file); later runs use a cache in `.tmp/` and take under a second.
+
+## EPS insights (earnings per share against your cost)
+
+**Tool**: `tools/eps_insights.py` (run with `.venv/Scripts/python.exe`). Tests: `tools/test_eps_insights.py`.
+**Output**: `db/eps_insights.json` (gitignored, holds personal holdings). Endpoint: `GET /api/eps-insights` on `portfolio_db.py` (port 5001; restart the server after pulling this change). The Quarterly page shows a "Your position: earnings" card for held stocks and the Research page shows a "Your holdings: earnings check" table.
+
+**What it does**: for each non-fund holding with a file in `db/quarterly/`, it builds true trailing-12-month (TTM) EPS from year-to-date net profit, then works out P/E at your average cost, earnings yield on cost, your share of yearly profit, profit versus the same period last year, the sector median TTM P/E, and plain-English flags (loss, falling or rising profit, seasonal distortion, expensive at cost, cheap versus sector). Thresholds are named constants at the top of the tool.
+
+**The TTM vs annualized trap**: in the quarterly data `raw["Net Profit"]` is year-to-date (Q1 = 3 months, Q4 = full year), and `computed["eps_ttm"]` is NOT trailing 12 months. It is the NEPSE annualized figure (year-to-date scaled to a year). After Q1 it can mislead badly: NIMB Q1 83-84 shows 0.53 annualized but 8.05 TTM; hydropower SGHC shows 34.22 annualized but 13.58 TTM because the monsoon Q1 is its best quarter. TTM = previous Q4 year-to-date minus same quarter last year plus this year-to-date. If a previous-year quarter is missing, TTM is None and only the annualized figure is shown. Never rename the mislabeled fields; `db/quarterly/` is the frozen research dataset.
+
+**Notes**:
+- Share count: `Number of Shares`, else `Paid Up Capital / 100`, else `sharesOutstanding` in `db/fundamentals.json`.
+- Price is the latest close in `db/prices`; the Quarterly card prefers the live LTP when the quote has loaded.
+- Sector median needs at least 3 companies with 0 < P/E < 500. Mutual funds are skipped (no EPS).
+- A company whose latest report repeats an earlier quarter's figures (NIMB Q1 83-84 profit equals Q1 82-83 exactly) will show a misleading year-on-year change; check the source report.

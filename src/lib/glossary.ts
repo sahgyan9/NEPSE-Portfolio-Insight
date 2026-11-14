@@ -76,6 +76,26 @@ export const GLOSSARY = {
     title: "Earnings per share",
     text: "The company's profit divided by its number of shares.",
   },
+  ttmEps: {
+    title: "EPS for the last 12 months (TTM)",
+    text: "Profit over the most recent 12 months divided by the number of shares. It is built from the last full year plus this year's quarters minus the same quarters a year ago, so it always covers a full year.",
+  },
+  annualizedEps: {
+    title: "Annualized EPS",
+    text: "The year-to-date profit scaled up to a full year, the figure NEPSE sites show. After the first quarter it multiplies three months by four, so it overstates seasonal firms such as hydropower (the monsoon quarter earns the most) and understates a weak start. Prefer the 12-month figure.",
+  },
+  peAtCost: {
+    title: "P/E at your cost",
+    text: "The price you paid per share divided by the last 12 months' EPS. It tells you how many years of today's profit it took to earn back what you paid. A lower number means you paid less for each rupee of profit.",
+  },
+  yieldOnCost: {
+    title: "Earnings yield on your cost",
+    text: "The last 12 months' EPS divided by the price you paid. 5% means each rupee you put in earns 5 paisa of company profit a year. It is profit, not cash paid to you; dividends are usually a part of it.",
+  },
+  shareOfProfit: {
+    title: "Your share of yearly profit",
+    text: "Your number of shares times the last 12 months' EPS. It is your slice of what the company earned, not money paid out to you.",
+  },
   dividendYield: {
     title: "Dividend yield",
     text: "Cash dividend per year divided by the current price. Bonus shares are not counted here.",
