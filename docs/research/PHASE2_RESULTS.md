@@ -16,8 +16,9 @@ Two scorer versions are reported:
 
 Earlier runs are kept at the end of this file. Reproduce with `python tools/backtest_sector_leaders.py`
 (output in `.tmp/backtest/`). The code in the repository is v3. v3 also changed `build_record()`
-in the backtest, so v2 is reproduced from the commit before v3 was adopted (see the v3 entry in
-the deviation log), run on the current data files.
+in the backtest, so v2 is reproduced with `tools/score_sector_leaders.py` and
+`tools/backtest_sector_leaders.py` from commit `42fbc75` (the last commit under v2) and the data
+files of commit `70d3884`.
 
 Sample: 15 quarterly periods, entry 2022-12-18 to exit 2026-09-15 (3.74 years),
 about 163 eligible companies per rebalance, about 32 held (top 3 in each sector).
