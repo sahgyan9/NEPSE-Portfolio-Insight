@@ -1118,7 +1118,7 @@
         "Total Assets": 2210594000.0,
         "Revenue": 283277000.0,
         "Gross Profit": 267858000.0,
-        "Operating Profit": 147428.0,
+        "Operating Profit": 147428000.0,
         "Net Profit": 75562000.0,
         "Number of Shares": 13166350.0,
         "EPS Reported": 5.74,
@@ -1171,7 +1171,14 @@
         "Book Value Reported": -1.61,
         "ROE Reported": 37.91
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:21:59.515166"

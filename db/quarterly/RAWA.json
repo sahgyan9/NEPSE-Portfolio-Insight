@@ -19,7 +19,7 @@
         "Total Assets": 723432580.0,
         "Revenue": 13972280.0,
         "Gross Profit": 12365380.0,
-        "Operating Profit": 1159.81,
+        "Operating Profit": 1159810.0,
         "Net Profit": -31351700.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": -44.79,
@@ -52,7 +52,14 @@
         "revenue_ttm": 13972280.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -70,7 +77,7 @@
         "Total Assets": 716454730.0,
         "Revenue": 14707910.0,
         "Gross Profit": 12839040.0,
-        "Operating Profit": 712.89,
+        "Operating Profit": 712890.0,
         "Net Profit": -834370.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": -1.19,
@@ -103,7 +110,14 @@
         "revenue_ttm": 14707910.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -121,7 +135,7 @@
         "Total Assets": 705158340.0,
         "Revenue": 26458080.0,
         "Gross Profit": 24659410.0,
-        "Operating Profit": 14429.92,
+        "Operating Profit": 14429920.0,
         "Net Profit": -517560.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": -0.37,
@@ -154,7 +168,14 @@
         "revenue_ttm": 26458080.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -172,7 +193,7 @@
         "Total Assets": 692518520.0,
         "Revenue": 18873640.0,
         "Gross Profit": 17062610.0,
-        "Operating Profit": 9404.05,
+        "Operating Profit": 9404050.0,
         "Net Profit": 2162130.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": 1.03,
@@ -206,7 +227,14 @@
         "graham_number": 43.03
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -224,7 +252,7 @@
         "Total Assets": 678188570.0,
         "Revenue": 17178650.0,
         "Gross Profit": 14826750.0,
-        "Operating Profit": 5566.88,
+        "Operating Profit": 5566880.0,
         "Net Profit": -4654240.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": -1.66,
@@ -277,7 +305,14 @@
         "Book Value(Rs.)": -7.05,
         "ROE": 96.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -295,7 +330,7 @@
         "Total Assets": 678183210.0,
         "Revenue": 28206100.0,
         "Gross Profit": 21941820.0,
-        "Operating Profit": 13821.16,
+        "Operating Profit": 13821160.0,
         "Net Profit": 4007180.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 5.72,
@@ -346,7 +381,14 @@
         "Net Profit": 580.26,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -364,7 +406,7 @@
         "Total Assets": 670297520.0,
         "Revenue": 55045600.0,
         "Gross Profit": 48149530.0,
-        "Operating Profit": 31865.29,
+        "Operating Profit": 31865290.0,
         "Net Profit": 13496020.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 9.64,
@@ -415,7 +457,14 @@
         "Net Profit": 2707.62,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -433,7 +482,7 @@
         "Total Assets": 661759120.0,
         "Revenue": 73596830.0,
         "Gross Profit": 64258040.0,
-        "Operating Profit": 40273.35,
+        "Operating Profit": 40273350.0,
         "Net Profit": 13983550.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 6.66,
@@ -484,7 +533,14 @@
         "Net Profit": 546.75,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -502,7 +558,7 @@
         "Total Assets": 662558550.0,
         "Revenue": 96754900.0,
         "Gross Profit": 83808100.0,
-        "Operating Profit": 52295.16,
+        "Operating Profit": 52295160.0,
         "Net Profit": 18277340.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 6.53,
@@ -553,7 +609,14 @@
         "Net Profit": 492.7,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -571,7 +634,7 @@
         "Total Assets": 657541010.0,
         "Revenue": 30911350.0,
         "Gross Profit": 27340630.0,
-        "Operating Profit": 19318.84,
+        "Operating Profit": 19318840.0,
         "Net Profit": 13402180.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 19.15,
@@ -625,7 +688,14 @@
         "Book Value Reported": 11.69,
         "ROE Reported": 199.38
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -643,7 +713,7 @@
         "Total Assets": 664617830.0,
         "Revenue": 59426470.0,
         "Gross Profit": 52137370.0,
-        "Operating Profit": 36350.81,
+        "Operating Profit": 36350810.0,
         "Net Profit": 22449660.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 16.04,
@@ -697,7 +767,14 @@
         "Book Value Reported": 12.94,
         "ROE Reported": 47.29
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -715,7 +792,7 @@
         "Total Assets": 655252270.0,
         "Revenue": 80893570.0,
         "Gross Profit": 70702540.0,
-        "Operating Profit": 47047.19,
+        "Operating Profit": 47047190.0,
         "Net Profit": 26811950.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 12.77,
@@ -769,7 +846,14 @@
         "Book Value Reported": 14.78,
         "ROE Reported": 67.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RAWA",
@@ -787,7 +871,7 @@
         "Total Assets": 652219490.0,
         "Revenue": 104782960.0,
         "Gross Profit": 89983610.0,
-        "Operating Profit": 57885.14,
+        "Operating Profit": 57885140.0,
         "Net Profit": 31262960.0,
         "Number of Shares": 2800000.0,
         "EPS Reported": 11.17,
@@ -841,7 +925,14 @@
         "Book Value Reported": 14.56,
         "ROE Reported": 49.31
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:50:17.255137"

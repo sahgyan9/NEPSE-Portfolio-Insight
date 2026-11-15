@@ -20,7 +20,7 @@
         "Investments": 1000000.0,
         "Interest Income": 121488990.0,
         "Net Interest Income": 47015590.0,
-        "Total Operating Income": 64095.68,
+        "Total Operating Income": 64095680.0,
         "Net Profit": 10971720.0,
         "Number of Shares": 572444.7,
         "EPS(Rs.)": 19.17,
@@ -59,7 +59,14 @@
         "graham_number": 242.98
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NAGRO",

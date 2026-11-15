@@ -1047,7 +1047,7 @@
         "Total Assets": 1057013690.0,
         "Revenue": 118014620.0,
         "Gross Profit": 83215160.0,
-        "Operating Profit": 73341.1,
+        "Operating Profit": 73341100.0,
         "Net Profit": 62031670.0,
         "Number of Shares": 6240544.24,
         "EPS Reported": 13.25,
@@ -1100,7 +1100,14 @@
         "Book Value Reported": -1.78,
         "ROE Reported": -18.21
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RURU",
@@ -1118,7 +1125,7 @@
         "Total Assets": 1038362870.0,
         "Revenue": 140255310.0,
         "Gross Profit": 92156690.0,
-        "Operating Profit": 78746.01,
+        "Operating Profit": 78746010.0,
         "Net Profit": 64909120.0,
         "Number of Shares": 6240544.24,
         "EPS Reported": 10.4,
@@ -1171,7 +1178,14 @@
         "Book Value Reported": -6.28,
         "ROE Reported": -24.15
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:54:37.985262"

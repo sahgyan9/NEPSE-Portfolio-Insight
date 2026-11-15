@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T09:00:38.348273",
+      "parsed_at": "2026-11-14T21:09:52.210997",
       "raw": {
         "EPS(Rs.)": 12.16
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T09:00:38.348254",
+      "parsed_at": "2026-11-14T21:09:52.210988",
       "raw": {
         "Paid Up Capital": 923476000.0,
         "Reserves": 98904000.0,
@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 5204641000.0,
         "Interest Income": 137808000.0,
         "Net Interest Income": 44678000.0,
-        "Total Operating Income": 53270.0,
-        "Operating Profit": 26667.0,
+        "Total Operating Income": 53270000.0,
+        "Operating Profit": 26667000.0,
         "Net Profit": 16954000.0,
         "Number of Shares": 9234760.0,
         "EPS(Rs.)": 7.34,
@@ -88,14 +88,22 @@
         "graham_number": 135.22
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T09:00:38.347487",
+      "parsed_at": "2026-11-14T21:09:52.210944",
       "raw": {
         "Paid Up Capital": 923476000.0,
         "Reserves": 162627000.0,
@@ -105,8 +113,8 @@
         "Loans and Advances to Customers": 5485258000.0,
         "Interest Income": 333691000.0,
         "Net Interest Income": 158077000.0,
-        "Total Operating Income": 176816.0,
-        "Operating Profit": 93505.0,
+        "Total Operating Income": 176816000.0,
+        "Operating Profit": 93505000.0,
         "Net Profit": 80677000.0,
         "Number of Shares": 9234760.0,
         "EPS(Rs.)": 17.47,
@@ -152,14 +160,22 @@
         "graham_number": 215.01
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T09:00:38.347196",
+      "parsed_at": "2026-11-14T21:09:52.210901",
       "raw": {
         "Paid Up Capital": 923476000.0,
         "Reserves": 164029000.0,
@@ -169,8 +185,8 @@
         "Loans and Advances to Customers": 5969609000.0,
         "Interest Income": 491536000.0,
         "Net Interest Income": 237722000.0,
-        "Total Operating Income": 275040.0,
-        "Operating Profit": 93592.0,
+        "Total Operating Income": 275040000.0,
+        "Operating Profit": 93592000.0,
         "Net Profit": 82079000.0,
         "Number of Shares": 9234760.0,
         "EPS(Rs.)": 11.85,
@@ -216,14 +232,22 @@
         "graham_number": 177.19
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T09:00:38.346935",
+      "parsed_at": "2026-11-14T21:09:52.210857",
       "raw": {
         "Paid Up Capital": 923476000.0,
         "Reserves": 234097000.0,
@@ -233,8 +257,8 @@
         "Loans and Advances to Customers": 6009533000.0,
         "Interest Income": 672055000.0,
         "Net Interest Income": 331066000.0,
-        "Total Operating Income": 374533.0,
-        "Operating Profit": 163833.0,
+        "Total Operating Income": 374533000.0,
+        "Operating Profit": 163833000.0,
         "Net Profit": 152147000.0,
         "Number of Shares": 9234760.0,
         "EPS(Rs.)": 16.45,
@@ -283,14 +307,22 @@
         "eps_ttm": 35.28,
         "EPS(Rs.)": 35.28
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T09:00:38.346817",
+      "parsed_at": "2026-11-14T21:09:52.210757",
       "raw": {
         "Paid Up Capital": 987026000.0,
         "Reserves": 307208000.0,
@@ -300,8 +332,8 @@
         "Loans and Advances to Customers": 6767682000.0,
         "Interest Income": 192720000.0,
         "Net Interest Income": 99405000.0,
-        "Total Operating Income": 114759.0,
-        "Operating Profit": 39828.0,
+        "Total Operating Income": 114759000.0,
+        "Operating Profit": 39828000.0,
         "Net Profit": 43576000.0,
         "Number of Shares": 9870260.0,
         "EPS(Rs.)": 17.66,
@@ -373,14 +405,22 @@
         "Base Rate": -7.25,
         "Interest Spread Rate": 6.53
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T09:00:38.346697",
+      "parsed_at": "2026-11-14T21:09:52.210628",
       "raw": {
         "Paid Up Capital": 1101941000.0,
         "Reserves": 282868000.0,
@@ -391,8 +431,8 @@
         "Loans and Advances to Customers": 8017620000.0,
         "Interest Income": 415008000.0,
         "Net Interest Income": 225916000.0,
-        "Total Operating Income": 265171.0,
-        "Operating Profit": 148246.0,
+        "Total Operating Income": 265171000.0,
+        "Operating Profit": 148246000.0,
         "Net Profit": 135432000.0,
         "Number of Shares": 11019410.0,
         "EPS(Rs.)": 24.58,
@@ -465,14 +505,22 @@
         "Base Rate": 7.56,
         "Interest Spread Rate": -6.34
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T09:00:38.346572",
+      "parsed_at": "2026-11-14T21:09:52.210492",
       "raw": {
         "Paid Up Capital": 1101941000.0,
         "Reserves": 340094000.0,
@@ -482,8 +530,8 @@
         "Loans and Advances to Customers": 8384743000.0,
         "Interest Income": 698327000.0,
         "Net Interest Income": 356124000.0,
-        "Total Operating Income": 416496.0,
-        "Operating Profit": 237446.0,
+        "Total Operating Income": 416496000.0,
+        "Operating Profit": 237446000.0,
         "Net Profit": 192658000.0,
         "Number of Shares": 11019410.0,
         "EPS(Rs.)": 23.31,
@@ -555,14 +603,22 @@
         "Base Rate": 37.34,
         "Interest Spread Rate": -6.35
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:00:38.346452",
+      "parsed_at": "2026-11-14T21:09:52.210359",
       "raw": {
         "Paid Up Capital": 2129053000.0,
         "Reserves": 461414000.0,
@@ -572,8 +628,8 @@
         "Loans and Advances to Customers": 9138221000.0,
         "Interest Income": 1032386000.0,
         "Net Interest Income": 509510000.0,
-        "Total Operating Income": 595606.0,
-        "Operating Profit": 317005.0,
+        "Total Operating Income": 595606000.0,
+        "Operating Profit": 317005000.0,
         "Net Profit": 261820000.0,
         "Number of Shares": 21290530.0,
         "EPS(Rs.)": 10.73,
@@ -645,14 +701,22 @@
         "Base Rate": 56.37,
         "Interest Spread Rate": -0.99
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:00:38.346330",
+      "parsed_at": "2026-11-14T21:09:52.210175",
       "raw": {
         "Paid Up Capital": 4267753290.0,
         "Retained Earnings": 99790980.0,
@@ -666,15 +730,15 @@
         "Investment Securities": 6676139070.0,
         "Interest Income": 4270015250.0,
         "Net Interest Income": 1375834110.0,
-        "Total Operating Income": 1623606.78,
-        "Operating Profit": 736652.21,
+        "Total Operating Income": 1623606780.0,
+        "Operating Profit": 736652210.0,
         "Net Profit": 515732360.0,
         "Distributable Profit": 99790980.0,
         "Number of Shares": 42677532.87,
         "EPS(Rs.)": 16.11,
         "Book Value(Rs.)": 128.59,
         "ROE": 12.53,
-        "CAR": 1496.0,
+        "CAR": 14.96,
         "NPL": 1.37,
         "Cost of funds": 8.22,
         "Credit To Deposit Ratio": 88.5,
@@ -745,14 +809,25 @@
         "Base Rate": 28.12,
         "Interest Spread Rate": -34.44
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "CAR"
+      ]
     },
     {
       "symbol": "JBBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:00:38.346183",
+      "parsed_at": "2026-11-14T21:09:52.210015",
       "raw": {
         "Paid Up Capital": 4267753290.0,
         "Retained Earnings": 353014300.0,
@@ -766,8 +841,8 @@
         "Investment Securities": 7004424670.0,
         "Interest Income": 6235258880.0,
         "Net Interest Income": 1950265250.0,
-        "Total Operating Income": 2257272.49,
-        "Operating Profit": 1002043.39,
+        "Total Operating Income": 2257272490.0,
+        "Operating Profit": 1002043390.0,
         "Net Profit": 701503730.0,
         "Distributable Profit": 353014300.0,
         "Number of Shares": 42677532.87,
@@ -846,14 +921,22 @@
         "Base Rate": 28.23,
         "Interest Spread Rate": -18.36
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:00:38.346035",
+      "parsed_at": "2026-11-14T21:09:52.209834",
       "raw": {
         "Paid Up Capital": 4267753290.0,
         "Retained Earnings": 130707000.0,
@@ -867,8 +950,8 @@
         "Investment Securities": 6996937680.0,
         "Interest Income": 2010894520.0,
         "Net Interest Income": 596365820.0,
-        "Total Operating Income": 667638.47,
-        "Operating Profit": 142997.63,
+        "Total Operating Income": 667638470.0,
+        "Operating Profit": 142997630.0,
         "Net Profit": 100098340.0,
         "Distributable Profit": 130707000.0,
         "Number of Shares": 42677532.87,
@@ -946,14 +1029,22 @@
         "Base Rate": 12.76,
         "Interest Spread Rate": -17.57
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:00:38.345886",
+      "parsed_at": "2026-11-14T21:09:52.209687",
       "raw": {
         "Paid Up Capital": 4267753290.0,
         "Retained Earnings": 22690000.0,
@@ -966,8 +1057,8 @@
         "Investment Securities": 7110350000.0,
         "Interest Income": 4081668700.0,
         "Net Interest Income": 1151398510.0,
-        "Total Operating Income": 1280623.71,
-        "Operating Profit": 49656.49,
+        "Total Operating Income": 1280623710.0,
+        "Operating Profit": 49656490.0,
         "Net Profit": 34759540.0,
         "Distributable Profit": 22690000.0,
         "Number of Shares": 42677532.87,
@@ -1044,14 +1135,22 @@
         "Base Rate": 2.9,
         "Interest Spread Rate": -16.89
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:00:38.345741",
+      "parsed_at": "2026-11-14T21:09:52.209545",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -270675070.0,
@@ -1064,8 +1163,8 @@
         "Investment Securities": 7168767700.0,
         "Interest Income": 6110990160.0,
         "Net Interest Income": 1677505360.0,
-        "Total Operating Income": 1893632.52,
-        "Operating Profit": 287886.01,
+        "Total Operating Income": 1893632520.0,
+        "Operating Profit": 287886010.0,
         "Net Profit": 201618530.0,
         "Distributable Profit": -270675070.0,
         "Number of Shares": 43957858.86,
@@ -1139,21 +1238,29 @@
         "EPS(Rs.)": -62.01,
         "Book Value(Rs.)": -0.61,
         "ROE": -60.1,
-        "CAR": -99.16,
+        "CAR": -16.18,
         "NPL": 183.94,
         "Cost of funds": 22.02,
         "Credit To Deposit Ratio": -1.25,
         "Base Rate": 24.61,
         "Interest Spread Rate": 21.21
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:00:38.345598",
+      "parsed_at": "2026-11-14T21:09:52.209452",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": 227889220.0,
@@ -1166,8 +1273,8 @@
         "Investment Securities": 8008891880.0,
         "Interest Income": 8337429580.0,
         "Net Interest Income": 2368916690.0,
-        "Total Operating Income": 2679515.0,
-        "Operating Profit": 790028.93,
+        "Total Operating Income": 2679515000.0,
+        "Operating Profit": 790028930.0,
         "Net Profit": 553201170.0,
         "Distributable Profit": 227889220.0,
         "Number of Shares": 43957858.86,
@@ -1248,14 +1355,22 @@
         "Base Rate": 9.16,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:00:38.345456",
+      "parsed_at": "2026-11-14T21:09:52.209372",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -131564280.0,
@@ -1268,8 +1383,8 @@
         "Investment Securities": 10794996820.0,
         "Interest Income": 2104715590.0,
         "Net Interest Income": 573991650.0,
-        "Total Operating Income": 668541.1,
-        "Operating Profit": 72575.45,
+        "Total Operating Income": 668541100.0,
+        "Operating Profit": 72575450.0,
         "Net Profit": 50802810.0,
         "Distributable Profit": -131564280.0,
         "Number of Shares": 43957858.86,
@@ -1350,14 +1465,22 @@
         "Base Rate": -3.96,
         "Interest Spread Rate": -3.16
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:00:38.345312",
+      "parsed_at": "2026-11-14T21:09:52.209281",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -248495120.0,
@@ -1370,8 +1493,8 @@
         "Investment Securities": 11462247710.0,
         "Interest Income": 4044932490.0,
         "Net Interest Income": 1124231510.0,
-        "Total Operating Income": 1283557.49,
-        "Operating Profit": 147342.91,
+        "Total Operating Income": 1283557490.0,
+        "Operating Profit": 147342910.0,
         "Net Profit": 101034750.0,
         "Distributable Profit": -248495120.0,
         "Number of Shares": 43957858.86,
@@ -1452,14 +1575,22 @@
         "Base Rate": -12.77,
         "Interest Spread Rate": -7.65
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:00:38.345172",
+      "parsed_at": "2026-11-14T21:09:52.209199",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -286658470.0,
@@ -1472,8 +1603,8 @@
         "Investment Securities": 11278617135000.0,
         "Interest Income": 5882070870.0,
         "Net Interest Income": 1706859270.0,
-        "Total Operating Income": 1922793.54,
-        "Operating Profit": 220769.59,
+        "Total Operating Income": 1922793540.0,
+        "Operating Profit": 220769590.0,
         "Net Profit": 152433420.0,
         "Distributable Profit": -286658470.0,
         "Number of Shares": 43957858.86,
@@ -1554,14 +1685,22 @@
         "Base Rate": -21.17,
         "Interest Spread Rate": -4.58
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:00:38.345025",
+      "parsed_at": "2026-11-14T21:09:52.209081",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -405293110.0,
@@ -1574,8 +1713,8 @@
         "Investment Securities": 14729872630.0,
         "Interest Income": 7786554550.0,
         "Net Interest Income": 2365512480.0,
-        "Total Operating Income": 2657971.61,
-        "Operating Profit": 444927.37,
+        "Total Operating Income": 2657971610.0,
+        "Operating Profit": 444927370.0,
         "Net Profit": 246501750.0,
         "Distributable Profit": -405293110.0,
         "Number of Shares": 43957858.86,
@@ -1656,14 +1795,22 @@
         "Base Rate": 0.0,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:00:38.344882",
+      "parsed_at": "2026-11-14T21:09:52.208937",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -299175300.0,
@@ -1676,8 +1823,8 @@
         "Investment Securities": 12855510830.0,
         "Interest Income": 1641568250.0,
         "Net Interest Income": 574899750.0,
-        "Total Operating Income": 686634.39,
-        "Operating Profit": 215930.27,
+        "Total Operating Income": 686634390.0,
+        "Operating Profit": 215930270.0,
         "Net Profit": 151190310.0,
         "Distributable Profit": -299175300.0,
         "Number of Shares": 43957858.86,
@@ -1758,14 +1905,22 @@
         "Base Rate": -25.97,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:00:38.344732",
+      "parsed_at": "2026-11-14T21:09:52.208794",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Retained Earnings": -441069310.0,
@@ -1778,8 +1933,8 @@
         "Investment Securities": 13783524980.0,
         "Interest Income": 3090366740.0,
         "Net Interest Income": 1119155680.0,
-        "Total Operating Income": 1314423.43,
-        "Operating Profit": 357275.83,
+        "Total Operating Income": 1314423430.0,
+        "Operating Profit": 357275830.0,
         "Net Profit": 250132050.0,
         "Distributable Profit": -441069310.0,
         "Number of Shares": 43957858.86,
@@ -1857,14 +2012,22 @@
         "Base Rate": -29.74,
         "Interest Spread Rate": -7.19
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:00:38.344591",
+      "parsed_at": "2026-11-14T21:09:52.208651",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -1879,8 +2042,8 @@
         "Investment Securities": 13456560700.0,
         "Interest Income": 4385137550.0,
         "Net Interest Income": 1584139740.0,
-        "Total Operating Income": 1851280.42,
-        "Operating Profit": 437961.24,
+        "Total Operating Income": 1851280420.0,
+        "Operating Profit": 437961240.0,
         "Net Profit": 306611840.0,
         "Distributable Profit": -568776600.0,
         "Number of Shares": 43957858.86,
@@ -1960,14 +2123,22 @@
         "Base Rate": -24.75,
         "Interest Spread Rate": -12.45
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:00:38.344436",
+      "parsed_at": "2026-11-14T21:09:52.208492",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -1982,8 +2153,8 @@
         "Investment Securities": 12667082800.0,
         "Interest Income": 5732834940.0,
         "Net Interest Income": 2094868660.0,
-        "Total Operating Income": 2469956.63,
-        "Operating Profit": 17628.38,
+        "Total Operating Income": 2469956630.0,
+        "Operating Profit": 17628380.0,
         "Net Profit": 12378840.0,
         "Distributable Profit": -780455460.0,
         "Number of Shares": 43957858.86,
@@ -2063,14 +2234,22 @@
         "Base Rate": -41.4,
         "Interest Spread Rate": -13.54
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:00:38.344282",
+      "parsed_at": "2026-11-14T21:09:52.208287",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -2085,8 +2264,8 @@
         "Investment Securities": 15247565670.0,
         "Interest Income": 1283529070.0,
         "Net Interest Income": 525976920.0,
-        "Total Operating Income": 679856.36,
-        "Operating Profit": 100477.87,
+        "Total Operating Income": 679856360.0,
+        "Operating Profit": 100477870.0,
         "Net Profit": 70334510.0,
         "Distributable Profit": -778515360.0,
         "Number of Shares": 43957858.86,
@@ -2166,14 +2345,22 @@
         "Base Rate": -23.46,
         "Interest Spread Rate": -13.32
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:00:38.344122",
+      "parsed_at": "2026-11-14T21:09:52.208129",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -2188,8 +2375,8 @@
         "Investment Securities": 12867048920.0,
         "Interest Income": 2469738750.0,
         "Net Interest Income": 1034196180.0,
-        "Total Operating Income": 1282513.47,
-        "Operating Profit": 444461.92,
+        "Total Operating Income": 1282513470.0,
+        "Operating Profit": 444461920.0,
         "Net Profit": 311271400.0,
         "Distributable Profit": -772606560.0,
         "Number of Shares": 43957858.86,
@@ -2272,14 +2459,22 @@
         "Base Rate": -20.84,
         "Interest Spread Rate": -9.86
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:00:38.343962",
+      "parsed_at": "2026-11-14T21:09:52.207969",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -2294,8 +2489,8 @@
         "Investment Securities": 12950083710.0,
         "Interest Income": 3691061250.0,
         "Net Interest Income": 1596533950.0,
-        "Total Operating Income": 1965493.62,
-        "Operating Profit": 899020.48,
+        "Total Operating Income": 1965493620.0,
+        "Operating Profit": 899020480.0,
         "Net Profit": 629462400.0,
         "Distributable Profit": -434844920.0,
         "Number of Shares": 43957858.86,
@@ -2378,14 +2573,22 @@
         "Base Rate": -20.77,
         "Interest Spread Rate": 3.99
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:00:38.343798",
+      "parsed_at": "2026-11-14T21:09:52.207802",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -2400,8 +2603,8 @@
         "Investment Securities": 12182192880.0,
         "Interest Income": 5135795930.0,
         "Net Interest Income": 2341970480.0,
-        "Total Operating Income": 2813566.6,
-        "Operating Profit": 1793750.3,
+        "Total Operating Income": 2813566600.0,
+        "Operating Profit": 1793750300.0,
         "Net Profit": 1005952990.0,
         "Distributable Profit": 144364300.0,
         "Number of Shares": 43957858.86,
@@ -2484,14 +2687,22 @@
         "Base Rate": -17.28,
         "Interest Spread Rate": 4.8
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JBBL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:00:38.343612",
+      "parsed_at": "2026-11-14T21:09:52.207612",
       "raw": {
         "Paid Up Capital": 4395785890.0,
         "Share Premium": 0.0,
@@ -2506,8 +2717,8 @@
         "Investment Securities": 9272664590.0,
         "Interest Income": 1272985360.0,
         "Net Interest Income": 631807590.0,
-        "Total Operating Income": 773252.98,
-        "Operating Profit": 285944.93,
+        "Total Operating Income": 773252980.0,
+        "Operating Profit": 285944930.0,
         "Net Profit": 200161450.0,
         "Distributable Profit": 220994430.0,
         "Number of Shares": 43957858.86,
@@ -2590,8 +2801,16 @@
         "Base Rate": -15.78,
         "Interest Spread Rate": 8.56
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:00:38.352677"
+  "last_updated": "2026-11-14T21:09:52.214722"
 }

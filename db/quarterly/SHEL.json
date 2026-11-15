@@ -117,7 +117,7 @@
         "Total Assets": 6145580830.0,
         "Revenue": 260191600.0,
         "Gross Profit": 254235770.0,
-        "Operating Profit": 42120.97,
+        "Operating Profit": 42120970.0,
         "Net Profit": 42989870.0,
         "Number of Shares": 14500000.0,
         "EPS(Rs.)": 11.86,
@@ -151,7 +151,14 @@
         "graham_number": 163.23
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHEL",
@@ -350,7 +357,7 @@
         "Current Assets": 213779350.0,
         "Total Assets": 5948837680.0,
         "Revenue": 264326830.0,
-        "Operating Profit": 258440.24,
+        "Operating Profit": 258440240.0,
         "Net Profit": 52835080.0,
         "Number of Shares": 14500000.0,
         "EPS(Rs.)": 14.58,
@@ -402,7 +409,14 @@
         "Book Value(Rs.)": -9.57,
         "ROE": 2835.59
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHEL",
@@ -618,7 +632,7 @@
         "Current Assets": 224185640.0,
         "Total Assets": 6532444350.0,
         "Revenue": 265793130.0,
-        "Operating Profit": 258321.13,
+        "Operating Profit": 258321130.0,
         "Net Profit": 112563040.0,
         "Number of Shares": 29000000.0,
         "EPS(Rs.)": 15.53,
@@ -670,7 +684,14 @@
         "Book Value(Rs.)": 13.2,
         "ROE": -5.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHEL",
@@ -688,7 +709,7 @@
         "Total Assets": 6447670000.0,
         "Revenue": 436712890.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 427978.63,
+        "Operating Profit": 427978630.0,
         "Net Profit": 142866950.0,
         "Number of Shares": 29000000.0,
         "EPS Reported": 9.85,
@@ -737,7 +758,14 @@
         "Net Profit": 3278.33,
         "Number of Shares": 51.54
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHEL",
@@ -1029,7 +1057,7 @@
         "Total Assets": 6457411730.0,
         "Revenue": 578716940.0,
         "Gross Profit": 566696500.0,
-        "Operating Profit": 362895.19,
+        "Operating Profit": 362895190.0,
         "Net Profit": 204713100.0,
         "Number of Shares": 30450000.0,
         "EPS Reported": 8.96,
@@ -1081,7 +1109,14 @@
         "Book Value Reported": 0.76,
         "ROE Reported": 43.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHEL",
@@ -1099,7 +1134,7 @@
         "Total Assets": 6405186630.0,
         "Revenue": 702238650.0,
         "Gross Profit": 685247780.0,
-        "Operating Profit": 421928.45,
+        "Operating Profit": 421928450.0,
         "Net Profit": 206462190.0,
         "Number of Shares": 30450000.0,
         "EPS Reported": 6.78,
@@ -1151,7 +1186,14 @@
         "Book Value Reported": 0.26,
         "ROE Reported": 30.72
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:04:33.198826"

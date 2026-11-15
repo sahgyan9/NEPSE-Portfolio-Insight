@@ -38,8 +38,8 @@
         "Loans and Advances to Customers": 395848660.0,
         "Interest Income": 12760180.0,
         "Net Interest Income": 2616360.0,
-        "Total Operating Income": 3766.2,
-        "Operating Profit": -7771.93,
+        "Total Operating Income": 3766200.0,
+        "Operating Profit": -7771930.0,
         "Net Profit": -3377990.0,
         "Number of Shares": 228500.0,
         "EPS(Rs.)": -59.13,
@@ -81,7 +81,15 @@
         "revenue_ttm": 12760180.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -99,8 +107,8 @@
         "Loans and Advances to Customers": 417124260.0,
         "Interest Income": 28063290.0,
         "Net Interest Income": 6706270.0,
-        "Total Operating Income": 9424.44,
-        "Operating Profit": -18840.31,
+        "Total Operating Income": 9424440.0,
+        "Operating Profit": -18840310.0,
         "Net Profit": -1670490.0,
         "Number of Shares": 228500.0,
         "EPS(Rs.)": -14.62,
@@ -142,7 +150,15 @@
         "revenue_ttm": 28063290.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -160,8 +176,8 @@
         "Loans and Advances to Customers": 424385280.0,
         "Interest Income": 41734570.0,
         "Net Interest Income": 3899060.0,
-        "Total Operating Income": 14257.08,
-        "Operating Profit": -24316.76,
+        "Total Operating Income": 14257080.0,
+        "Operating Profit": -24316760.0,
         "Net Profit": -2298620.0,
         "Number of Shares": 228500.0,
         "EPS(Rs.)": -13.41,
@@ -203,7 +219,15 @@
         "revenue_ttm": 41734570.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -221,8 +245,8 @@
         "Loans and Advances to Customers": 442731250.0,
         "Interest Income": 62826430.0,
         "Net Interest Income": 20264650.0,
-        "Total Operating Income": 26942.64,
-        "Operating Profit": 23033.7,
+        "Total Operating Income": 26942640.0,
+        "Operating Profit": 23033700.0,
         "Net Profit": 5130530.0,
         "Number of Shares": 228500.0,
         "EPS(Rs.)": 22.45,
@@ -265,7 +289,15 @@
         "graham_number": 340.83
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -283,8 +315,8 @@
         "Loans and Advances to Customers": 436391990.0,
         "Interest Income": 11493940.0,
         "Net Interest Income": 2001040.0,
-        "Total Operating Income": 3089.77,
-        "Operating Profit": -8850.34,
+        "Total Operating Income": 3089770.0,
+        "Operating Profit": -8850340.0,
         "Net Profit": -4212310.0,
         "Number of Shares": 228500.0,
         "EPS(Rs.)": -73.74,
@@ -351,7 +383,15 @@
         "Cost of funds": -49.35,
         "CD ratio": 9.97
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -371,8 +411,8 @@
         "Investments": 0.0,
         "Interest Income": 27429010.0,
         "Net Interest Income": 10645420.0,
-        "Total Operating Income": 12869.94,
-        "Operating Profit": -9531.26,
+        "Total Operating Income": 12869940.0,
+        "Operating Profit": -9531260.0,
         "Net Profit": 12470.0,
         "Number of Shares": 228500.0,
         "EPS Reported": 0.11,
@@ -439,7 +479,15 @@
         "Cost of funds": 394.7,
         "CD ratio": 5.19
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -459,8 +507,8 @@
         "Investments": 0.0,
         "Interest Income": 42552210.0,
         "Net Interest Income": 17772620.0,
-        "Total Operating Income": 22178.97,
-        "Operating Profit": -10692.59,
+        "Total Operating Income": 22178970.0,
+        "Operating Profit": -10692590.0,
         "Net Profit": 3921940.0,
         "Number of Shares": 228500.0,
         "EPS Reported": 22.89,
@@ -527,7 +575,15 @@
         "Cost of funds": -26.64,
         "CD ratio": 0.47
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAMAJ",
@@ -547,8 +603,8 @@
         "Investments": 0.0,
         "Interest Income": 57637030.0,
         "Net Interest Income": 24392430.0,
-        "Total Operating Income": 30260.09,
-        "Operating Profit": -14016.77,
+        "Total Operating Income": 30260090.0,
+        "Operating Profit": -14016770.0,
         "Net Profit": 14190940.0,
         "Number of Shares": 228500.0,
         "EPS Reported": 62.1,
@@ -615,7 +671,15 @@
         "Cost of funds": -85.87,
         "CD ratio": 30.32
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:57:49.266649"

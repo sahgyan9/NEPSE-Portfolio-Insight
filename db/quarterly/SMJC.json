@@ -19,7 +19,7 @@
         "Total Assets": 2383924440.0,
         "Revenue": 198768350.0,
         "Gross Profit": 183009000.0,
-        "Operating Profit": 170556.01,
+        "Operating Profit": 170556010.0,
         "Net Profit": 46857950.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 5.58,
@@ -53,7 +53,14 @@
         "graham_number": 114.55
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -71,7 +78,7 @@
         "Total Assets": 2608036610.0,
         "Revenue": 255025660.0,
         "Gross Profit": 221474280.0,
-        "Operating Profit": 231941.5,
+        "Operating Profit": 231941500.0,
         "Net Profit": 63540610.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 5.67,
@@ -105,7 +112,14 @@
         "graham_number": 115.91
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -123,7 +137,7 @@
         "Total Assets": 2362673080.0,
         "Revenue": 107758300.0,
         "Gross Profit": 101604390.0,
-        "Operating Profit": 105004.31,
+        "Operating Profit": 105004310.0,
         "Net Profit": 54227340.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 19.37,
@@ -157,7 +171,14 @@
         "graham_number": 218.93
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -175,7 +196,7 @@
         "Total Assets": 2354238950.0,
         "Revenue": 163335300.0,
         "Gross Profit": 152395130.0,
-        "Operating Profit": 154467.73,
+        "Operating Profit": 154467730.0,
         "Net Profit": 65928440.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 11.77,
@@ -209,7 +230,14 @@
         "graham_number": 171.47
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -227,7 +255,7 @@
         "Total Assets": 2330201820.0,
         "Revenue": 198962950.0,
         "Gross Profit": 177258020.0,
-        "Operating Profit": 178829.14,
+        "Operating Profit": 178829140.0,
         "Net Profit": 51868680.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 6.17,
@@ -281,7 +309,14 @@
         "Book Value(Rs.)": 5.18,
         "ROE": 5.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -299,7 +334,7 @@
         "Total Assets": 2314366290.0,
         "Revenue": 264157520.0,
         "Gross Profit": 220822820.0,
-        "Operating Profit": 223803.54,
+        "Operating Profit": 223803540.0,
         "Net Profit": 49971190.0,
         "Number of Shares": 11200000.0,
         "EPS(Rs.)": 4.46,
@@ -353,7 +388,14 @@
         "Book Value(Rs.)": 4.02,
         "ROE": -24.49
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -371,7 +413,7 @@
         "Total Assets": 2321005780.0,
         "Revenue": 87135340.0,
         "Gross Profit": 80904610.0,
-        "Operating Profit": 78687.42,
+        "Operating Profit": 78687420.0,
         "Net Profit": 38685140.0,
         "Number of Shares": 11200000.0,
         "EPS Reported": 13.82,
@@ -422,7 +464,14 @@
         "Net Profit": -28.66,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -440,7 +489,7 @@
         "Total Assets": 2415487970.0,
         "Revenue": 136250600.0,
         "Gross Profit": 118422860.0,
-        "Operating Profit": 113759.4,
+        "Operating Profit": 113759400.0,
         "Net Profit": 37351980.0,
         "Number of Shares": 11200000.0,
         "EPS Reported": 6.67,
@@ -491,7 +540,14 @@
         "Net Profit": -43.34,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -509,7 +565,7 @@
         "Total Assets": 2592308560.0,
         "Revenue": 178920940.0,
         "Gross Profit": 155477550.0,
-        "Operating Profit": 148283.99,
+        "Operating Profit": 148283990.0,
         "Net Profit": 31572020.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 3.59,
@@ -560,7 +616,14 @@
         "Net Profit": -39.13,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -578,7 +641,7 @@
         "Total Assets": 2559639300.0,
         "Revenue": 232432250.0,
         "Gross Profit": 194454140.0,
-        "Operating Profit": 183952.07,
+        "Operating Profit": 183952070.0,
         "Net Profit": 25564050.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 2.18,
@@ -629,7 +692,14 @@
         "Net Profit": -48.84,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -647,7 +717,7 @@
         "Total Assets": 2513134150.0,
         "Revenue": 81157390.0,
         "Gross Profit": 74238410.0,
-        "Operating Profit": 72735.38,
+        "Operating Profit": 72735380.0,
         "Net Profit": 30686540.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 10.46,
@@ -701,7 +771,14 @@
         "Book Value Reported": -4.77,
         "ROE Reported": -20.45
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -719,7 +796,7 @@
         "Total Assets": 2468904850.0,
         "Revenue": 122668690.0,
         "Gross Profit": 106579420.0,
-        "Operating Profit": 102630.46,
+        "Operating Profit": 102630460.0,
         "Net Profit": 22593610.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 3.85,
@@ -773,7 +850,14 @@
         "Book Value Reported": -5.29,
         "ROE Reported": -38.91
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -791,7 +875,7 @@
         "Total Assets": 2461554340.0,
         "Revenue": 173757060.0,
         "Gross Profit": 151608940.0,
-        "Operating Profit": 100481.08,
+        "Operating Profit": 100481080.0,
         "Net Profit": 26829350.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 3.05,
@@ -845,7 +929,14 @@
         "Book Value Reported": 0.77,
         "ROE Reported": -15.82
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMJC",
@@ -863,7 +954,7 @@
         "Total Assets": 2586660140.0,
         "Revenue": 223447150.0,
         "Gross Profit": 177073930.0,
-        "Operating Profit": 142505.26,
+        "Operating Profit": 142505260.0,
         "Net Profit": 44387810.0,
         "Number of Shares": 11732000.0,
         "EPS Reported": 3.78,
@@ -917,7 +1008,14 @@
         "Book Value Reported": 2.79,
         "ROE Reported": 69.12
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:09:14.730223"

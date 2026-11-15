@@ -8,7 +8,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:57:09.984053",
+      "parsed_at": "2026-11-14T21:06:19.757515",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -9208670.0,
@@ -53,7 +53,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:57:09.983982",
+      "parsed_at": "2026-11-14T21:06:19.757483",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -9528500.0,
@@ -98,7 +98,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:57:09.983911",
+      "parsed_at": "2026-11-14T21:06:19.757451",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -10195290.0,
@@ -143,7 +143,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:57:09.983839",
+      "parsed_at": "2026-11-14T21:06:19.757420",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -8589680.0,
@@ -191,7 +191,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:57:09.983803",
+      "parsed_at": "2026-11-14T21:06:19.757384",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -14347040.0,
@@ -256,7 +256,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:57:09.983774",
+      "parsed_at": "2026-11-14T21:06:19.757346",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -30857620.0,
@@ -267,7 +267,7 @@
         "Total Assets": 2505273660.0,
         "Revenue": 72020480.0,
         "Gross Profit": 67267930.0,
-        "Operating Profit": 38269.4,
+        "Operating Profit": 38269400.0,
         "Net Profit": 104180.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 0.07,
@@ -314,14 +314,21 @@
         "Net Profit": 176.05,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:57:09.983745",
+      "parsed_at": "2026-11-14T21:06:19.757311",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -33958130.0,
@@ -332,7 +339,7 @@
         "Total Assets": 2493480570.0,
         "Revenue": 138996250.0,
         "Gross Profit": 111504760.0,
-        "Operating Profit": 67255.71,
+        "Operating Profit": 67255710.0,
         "Net Profit": -2996330.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -1.0,
@@ -378,14 +385,21 @@
         "Net Profit": -272.78,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:57:09.983715",
+      "parsed_at": "2026-11-14T21:06:19.757275",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -60536610.0,
@@ -396,7 +410,7 @@
         "Total Assets": 2482512350.0,
         "Revenue": 192639680.0,
         "Gross Profit": 165270790.0,
-        "Operating Profit": 71116.55,
+        "Operating Profit": 71116550.0,
         "Net Profit": -29574810.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -6.57,
@@ -444,14 +458,21 @@
         "Net Profit": -3788.41,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:57:09.983686",
+      "parsed_at": "2026-11-14T21:06:19.757240",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -27760310.0,
@@ -462,7 +483,7 @@
         "Total Assets": 2501069440.0,
         "Revenue": 288015410.0,
         "Gross Profit": 256553890.0,
-        "Operating Profit": 137273.3,
+        "Operating Profit": 137273300.0,
         "Net Profit": 3201490.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 0.53,
@@ -512,14 +533,21 @@
         "Net Profit": 164.6,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:57:09.983655",
+      "parsed_at": "2026-11-14T21:06:19.757204",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -19795890.0,
@@ -530,7 +558,7 @@
         "Total Assets": 2455732150.0,
         "Revenue": 79458830.0,
         "Gross Profit": 69998160.0,
-        "Operating Profit": 36154.36,
+        "Operating Profit": 36154360.0,
         "Net Profit": 5601890.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 3.73,
@@ -584,14 +612,21 @@
         "Book Value Reported": 1.94,
         "ROE Reported": 5414.29
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:57:09.983625",
+      "parsed_at": "2026-11-14T21:06:19.757169",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -11885970.0,
@@ -602,7 +637,7 @@
         "Total Assets": 2434780140.0,
         "Revenue": 155065230.0,
         "Gross Profit": 130773140.0,
-        "Operating Profit": 73443.0,
+        "Operating Profit": 73443000.0,
         "Net Profit": 13511820.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 4.5,
@@ -656,14 +691,21 @@
         "Book Value Reported": 3.9,
         "ROE Reported": 533.02
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:57:09.983593",
+      "parsed_at": "2026-11-14T21:06:19.757132",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -13645370.0,
@@ -674,7 +716,7 @@
         "Total Assets": 2418459420.0,
         "Revenue": 218138040.0,
         "Gross Profit": 179338510.0,
-        "Operating Profit": 97968.86,
+        "Operating Profit": 97968860.0,
         "Net Profit": 11871120.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 2.64,
@@ -728,14 +770,21 @@
         "Book Value Reported": 8.7,
         "ROE Reported": 136.94
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:57:09.983560",
+      "parsed_at": "2026-11-14T21:06:19.757094",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -56816510.0,
@@ -746,7 +795,7 @@
         "Total Assets": 2359184240.0,
         "Revenue": 255661010.0,
         "Gross Profit": 185825440.0,
-        "Operating Profit": 80752.73,
+        "Operating Profit": 80752730.0,
         "Net Profit": -31418730.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -5.24,
@@ -799,14 +848,21 @@
         "Book Value Reported": -5.07,
         "ROE Reported": -1132.14
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "IHL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:57:09.983522",
+      "parsed_at": "2026-11-14T21:06:19.757049",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -53977800.0,
@@ -817,7 +873,7 @@
         "Total Assets": 2350823850.0,
         "Revenue": 69178910.0,
         "Gross Profit": 35723770.0,
-        "Operating Profit": 12408.74,
+        "Operating Profit": 12408740.0,
         "Net Profit": 7524370.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 5.02,
@@ -871,8 +927,15 @@
         "Book Value Reported": -5.89,
         "ROE Reported": 42.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:57:09.986582"
+  "last_updated": "2026-11-14T21:06:19.759561"
 }

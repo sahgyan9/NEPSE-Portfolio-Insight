@@ -8,7 +8,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:43:40.032236",
+      "parsed_at": "2026-11-14T20:52:40.704486",
       "raw": {
         "EPS(Rs.)": 0.33
       },
@@ -31,7 +31,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:43:40.032216",
+      "parsed_at": "2026-11-14T20:52:40.704466",
       "raw": {
         "Paid Up Capital": 844451000.0,
         "Reserve and Surplus": 1732960000.0,
@@ -43,8 +43,8 @@
         "Investments": 182000000.0,
         "Interest Income": 2189083000.0,
         "Net Interest Income": 1111574000.0,
-        "Total Operating Income": 1434331.0,
-        "Operating Profit": 1049013.0,
+        "Total Operating Income": 1434331000.0,
+        "Operating Profit": 1049013000.0,
         "Net Profit": 709128000.0,
         "Number of Shares": 8444510.0,
         "EPS(Rs.)": 111.97,
@@ -88,14 +88,22 @@
         "graham_number": 876.9
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:43:40.032091",
+      "parsed_at": "2026-11-14T20:52:40.704334",
       "raw": {
         "Paid Up Capital": 844450990.0,
         "Reserve and Surplus": 1847931730.0,
@@ -107,8 +115,8 @@
         "Investments": 182000000.0,
         "Interest Income": 2968784620.0,
         "Net Interest Income": 1361180910.0,
-        "Total Operating Income": 1767072.28,
-        "Operating Profit": 1200299.11,
+        "Total Operating Income": 1767072280.0,
+        "Operating Profit": 1200299110.0,
         "Net Profit": 845375550.0,
         "Number of Shares": 8444509.9,
         "EPS(Rs.)": 100.11,
@@ -152,14 +160,22 @@
         "graham_number": 847.44
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:43:40.031963",
+      "parsed_at": "2026-11-14T20:52:40.704212",
       "raw": {
         "Paid Up Capital": 844451000.0,
         "Reserve and Surplus": 1892155000.0,
@@ -171,8 +187,8 @@
         "Investments": 2000000.0,
         "Interest Income": 714265000.0,
         "Net Interest Income": 206631000.0,
-        "Total Operating Income": 280636.0,
-        "Operating Profit": -48560.0,
+        "Total Operating Income": 280636000.0,
+        "Operating Profit": -48560000.0,
         "Net Profit": 30377000.0,
         "Number of Shares": 8444510.0,
         "EPS(Rs.)": 14.39,
@@ -216,14 +232,22 @@
         "graham_number": 323.92
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:43:40.031831",
+      "parsed_at": "2026-11-14T20:52:40.704087",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1708521810.0,
@@ -235,8 +259,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1517329820.0,
         "Net Interest Income": 508037330.0,
-        "Total Operating Income": 675683.94,
-        "Operating Profit": 177180.97,
+        "Total Operating Income": 675683940.0,
+        "Operating Profit": 177180970.0,
         "Net Profit": 124030530.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 23.5,
@@ -281,14 +305,22 @@
         "eps_ttm": 7021.21,
         "EPS(Rs.)": 7021.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:43:40.031711",
+      "parsed_at": "2026-11-14T20:52:40.704013",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1673954480.0,
@@ -300,8 +332,8 @@
         "Investments": 2000000.0,
         "Interest Income": 2226299040.0,
         "Net Interest Income": 732699400.0,
-        "Total Operating Income": 980702.17,
-        "Operating Profit": 62745.51,
+        "Total Operating Income": 980702170.0,
+        "Operating Profit": 62745510.0,
         "Net Profit": 43630810.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 5.51,
@@ -368,14 +400,22 @@
         "NPL": 216.13,
         "Cost of funds": 20.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:43:40.031590",
+      "parsed_at": "2026-11-14T20:52:40.703968",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1855676080.0,
@@ -387,8 +427,8 @@
         "Investments": 408330.0,
         "Interest Income": 2998448100.0,
         "Net Interest Income": 1155790610.0,
-        "Total Operating Income": 1337933.0,
-        "Operating Profit": 374362.5,
+        "Total Operating Income": 1337933000.0,
+        "Operating Profit": 374362500.0,
         "Net Profit": 221469360.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 20.98,
@@ -458,14 +498,22 @@
         "Cost of funds": 6.63,
         "CD ratio": -53.92
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:43:40.031466",
+      "parsed_at": "2026-11-14T20:52:40.703921",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1748874230.0,
@@ -477,8 +525,8 @@
         "Investments": 408330.0,
         "Interest Income": 704195380.0,
         "Net Interest Income": 269523330.0,
-        "Total Operating Income": 316111.54,
-        "Operating Profit": -105154.14,
+        "Total Operating Income": 316111540.0,
+        "Operating Profit": -105154140.0,
         "Net Profit": -110985980.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": -42.06,
@@ -547,14 +595,22 @@
         "Cost of funds": -4.93,
         "CD ratio": -55.43
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:43:40.031339",
+      "parsed_at": "2026-11-14T20:52:40.703875",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1646807220.0,
@@ -566,8 +622,8 @@
         "Investments": 408330.0,
         "Interest Income": 1407067210.0,
         "Net Interest Income": 569980280.0,
-        "Total Operating Income": 654575.52,
-        "Operating Profit": -19345.22,
+        "Total Operating Income": 654575520.0,
+        "Operating Profit": -19345220.0,
         "Net Profit": -25879960.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": -4.9,
@@ -635,14 +691,22 @@
         "NPL": 102.36,
         "Cost of funds": -6.79
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:43:40.031216",
+      "parsed_at": "2026-11-14T20:52:40.703828",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1787503660.0,
@@ -654,8 +718,8 @@
         "Investments": 408330.0,
         "Interest Income": 2127594170.0,
         "Net Interest Income": 878213240.0,
-        "Total Operating Income": 1020414.93,
-        "Operating Profit": 175704.34,
+        "Total Operating Income": 1020414930.0,
+        "Operating Profit": 175704340.0,
         "Net Profit": 116563140.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 14.72,
@@ -724,14 +788,22 @@
         "NPL": 40.48,
         "Cost of funds": -7.09
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:43:40.031093",
+      "parsed_at": "2026-11-14T20:52:40.703781",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 1994604860.0,
@@ -743,8 +815,8 @@
         "Investments": 408330.0,
         "Interest Income": 2894437140.0,
         "Net Interest Income": 1217298360.0,
-        "Total Operating Income": 1413977.51,
-        "Operating Profit": 463533.96,
+        "Total Operating Income": 1413977510.0,
+        "Operating Profit": 463533960.0,
         "Net Profit": 321397380.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 30.45,
@@ -814,14 +886,22 @@
         "Cost of funds": -6.03,
         "CD ratio": -4.11
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:43:40.030967",
+      "parsed_at": "2026-11-14T20:52:40.703734",
       "raw": {
         "Paid Up Capital": 1055563730.0,
         "Reserve and Surplus": 2001087540.0,
@@ -833,8 +913,8 @@
         "Investments": 1336780.0,
         "Interest Income": 691087880.0,
         "Net Interest Income": 280813560.0,
-        "Total Operating Income": 319247.87,
-        "Operating Profit": 59310.04,
+        "Total Operating Income": 319247870.0,
+        "Operating Profit": 59310040.0,
         "Net Profit": 41619990.0,
         "Number of Shares": 10555637.34,
         "EPS(Rs.)": 15.77,
@@ -904,14 +984,22 @@
         "Cost of funds": -15.0,
         "CD ratio": 3.02
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:43:40.030840",
+      "parsed_at": "2026-11-14T20:52:40.703686",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 1817111450.0,
@@ -924,8 +1012,8 @@
         "Investments": 1336780.0,
         "Interest Income": 1263415160.0,
         "Net Interest Income": 466092110.0,
-        "Total Operating Income": 553948.35,
-        "Operating Profit": 12499.37,
+        "Total Operating Income": 553948350.0,
+        "Operating Profit": 12499370.0,
         "Net Profit": 8852520.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 1.48,
@@ -993,14 +1081,22 @@
         "Cost of funds": -15.8,
         "CD ratio": 0.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:43:40.030708",
+      "parsed_at": "2026-11-14T20:52:40.703632",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 1837212960.0,
@@ -1013,8 +1109,8 @@
         "Investments": 0.0,
         "Interest Income": 2058461910.0,
         "Net Interest Income": 881701460.0,
-        "Total Operating Income": 1024592.8,
-        "Operating Profit": 185970.11,
+        "Total Operating Income": 1024592800.0,
+        "Operating Profit": 185970110.0,
         "Net Profit": 36180530.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 4.03,
@@ -1082,14 +1178,22 @@
         "Cost of funds": -10.0,
         "CD ratio": -2.06
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:43:40.030573",
+      "parsed_at": "2026-11-14T20:52:40.703580",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 1789741490.0,
@@ -1102,8 +1206,8 @@
         "Investments": 1195690.0,
         "Interest Income": 2625949200.0,
         "Net Interest Income": 1055248020.0,
-        "Total Operating Income": 1258096.87,
-        "Operating Profit": 124625.06,
+        "Total Operating Income": 1258096870.0,
+        "Operating Profit": 124625060.0,
         "Net Profit": 65310430.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 5.46,
@@ -1171,14 +1275,22 @@
         "Cost of funds": -11.38,
         "CD ratio": 3.47
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:43:40.030437",
+      "parsed_at": "2026-11-14T20:52:40.703529",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 2054516160.0,
@@ -1191,8 +1303,8 @@
         "Investments": 1195690.0,
         "Interest Income": 707666540.0,
         "Net Interest Income": 333955370.0,
-        "Total Operating Income": 374567.36,
-        "Operating Profit": 81647.92,
+        "Total Operating Income": 374567360.0,
+        "Operating Profit": 81647920.0,
         "Net Profit": 57153550.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 19.12,
@@ -1260,14 +1372,22 @@
         "Cost of funds": -14.71,
         "CD ratio": 2.37
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:43:40.030303",
+      "parsed_at": "2026-11-14T20:52:40.703476",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 0.0,
@@ -1284,8 +1404,8 @@
         "Interest Income": 1437582460.0,
         "Net Interest Income": 718244260.0,
         "Investment Securities": 1195690.0,
-        "Total Operating Income": 815993.28,
-        "Operating Profit": 273193.46,
+        "Total Operating Income": 815993280.0,
+        "Operating Profit": 273193460.0,
         "Net Profit": 191235420.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 31.98,
@@ -1368,14 +1488,22 @@
         "Cost of funds": -15.96,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:43:40.030113",
+      "parsed_at": "2026-11-14T20:52:40.703400",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 1669611270.0,
@@ -1388,8 +1516,8 @@
         "Investments": 1195690.0,
         "Interest Income": 2155789630.0,
         "Net Interest Income": 1084474500.0,
-        "Total Operating Income": 1251403.78,
-        "Operating Profit": 232406.92,
+        "Total Operating Income": 1251403780.0,
+        "Operating Profit": 232406920.0,
         "Net Profit": 162835700.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 18.15,
@@ -1459,14 +1587,22 @@
         "Cost of funds": -15.92,
         "CD ratio": -0.37
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "FOWAD",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:43:40.029951",
+      "parsed_at": "2026-11-14T20:52:40.703336",
       "raw": {
         "Paid Up Capital": 1195953710.0,
         "Reserve and Surplus": 2135642790.0,
@@ -1479,8 +1615,8 @@
         "Investments": 933840.0,
         "Interest Income": 2958558770.0,
         "Net Interest Income": 1517725670.0,
-        "Total Operating Income": 1753502.89,
-        "Operating Profit": 888561.68,
+        "Total Operating Income": 1753502890.0,
+        "Operating Profit": 888561680.0,
         "Net Profit": 623582580.0,
         "Number of Shares": 11959537.1,
         "EPS Reported": 52.14,
@@ -1551,8 +1687,16 @@
         "Cost of funds": -18.79,
         "CD ratio": -1.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:43:40.034457"
+  "last_updated": "2026-11-14T20:52:40.706880"
 }

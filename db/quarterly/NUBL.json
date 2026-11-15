@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 7373926000.0,
         "Interest Income": 341833000.0,
         "Net Interest Income": 242041000.0,
-        "Total Operating Income": 277676.0,
-        "Operating Profit": 123534.0,
+        "Total Operating Income": 277676000.0,
+        "Operating Profit": 123534000.0,
         "Net Profit": 79967000.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 63.97,
@@ -86,7 +86,15 @@
         "graham_number": 496.67
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -104,8 +112,8 @@
         "Loans and Advances to Customers": 7871750000.0,
         "Interest Income": 697053000.0,
         "Net Interest Income": 489576000.0,
-        "Total Operating Income": 562682.0,
-        "Operating Profit": 213281.0,
+        "Total Operating Income": 562682000.0,
+        "Operating Profit": 213281000.0,
         "Net Profit": 141306000.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 56.52,
@@ -148,7 +156,15 @@
         "graham_number": 482.89
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -166,8 +182,8 @@
         "Loans and Advances to Customers": 9068779000.0,
         "Interest Income": 1088976000.0,
         "Net Interest Income": 769049000.0,
-        "Total Operating Income": 891763.0,
-        "Operating Profit": 384013.0,
+        "Total Operating Income": 891763000.0,
+        "Operating Profit": 384013000.0,
         "Net Profit": 251171000.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 66.98,
@@ -210,7 +226,15 @@
         "graham_number": 556.57
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -228,8 +252,8 @@
         "Loans and Advances to Customers": 10107338000.0,
         "Interest Income": 1554914000.0,
         "Net Interest Income": 1100377000.0,
-        "Total Operating Income": 1279521.0,
-        "Operating Profit": 623261.0,
+        "Total Operating Income": 1279521000.0,
+        "Operating Profit": 623261000.0,
         "Net Profit": 404676000.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 67.18,
@@ -275,7 +299,15 @@
         "eps_ttm": 20.46,
         "EPS(Rs.)": 20.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -293,8 +325,8 @@
         "Loans and Advances to Customers": 10831787000.0,
         "Interest Income": 501507000.0,
         "Net Interest Income": 359753000.0,
-        "Total Operating Income": 414208.0,
-        "Operating Profit": 245851.0,
+        "Total Operating Income": 414208000.0,
+        "Operating Profit": 245851000.0,
         "Net Profit": 157080000.0,
         "Number of Shares": 6000000.0,
         "EPS(Rs.)": 41.89,
@@ -362,7 +394,15 @@
         "Cost of funds": 4.01,
         "CD ratio": -4.47
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -380,8 +420,8 @@
         "Loans and Advances to Customers": 11542105000.0,
         "Interest Income": 1035567000.0,
         "Net Interest Income": 731461000.0,
-        "Total Operating Income": 841240.0,
-        "Operating Profit": 469557.0,
+        "Total Operating Income": 841240000.0,
+        "Operating Profit": 469557000.0,
         "Net Profit": 301330000.0,
         "Number of Shares": 6000000.0,
         "EPS(Rs.)": 100.44,
@@ -449,7 +489,15 @@
         "Cost of funds": 15.98,
         "CD ratio": -4.7
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -467,8 +515,8 @@
         "Loans and Advances to Customers": 12037034000.0,
         "Interest Income": 1598940000.0,
         "Net Interest Income": 1074762000.0,
-        "Total Operating Income": 1237857.0,
-        "Operating Profit": 691020.0,
+        "Total Operating Income": 1237857000.0,
+        "Operating Profit": 691020000.0,
         "Net Profit": 447207000.0,
         "Number of Shares": 6000000.0,
         "EPS(Rs.)": 99.38,
@@ -536,7 +584,15 @@
         "Cost of funds": 51.92,
         "CD ratio": -11.38
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -554,8 +610,8 @@
         "Loans and Advances to Customers": 12328428000.0,
         "Interest Income": 2208872000.0,
         "Net Interest Income": 1419271000.0,
-        "Total Operating Income": 1632499.0,
-        "Operating Profit": 898537.0,
+        "Total Operating Income": 1632499000.0,
+        "Operating Profit": 898537000.0,
         "Net Profit": 583410000.0,
         "Number of Shares": 6000000.0,
         "EPS(Rs.)": 57.14,
@@ -623,7 +679,15 @@
         "Cost of funds": 73.09,
         "CD ratio": -17.15
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -642,8 +706,8 @@
         "Investments": 293510000.0,
         "Interest Income": 2865276850.0,
         "Net Interest Income": 1569792970.0,
-        "Total Operating Income": 1966502.82,
-        "Operating Profit": 1146386.6,
+        "Total Operating Income": 1966502820.0,
+        "Operating Profit": 1146386600.0,
         "Net Profit": 802697650.0,
         "Number of Shares": 21950250.0,
         "EPS(Rs.)": 48.76,
@@ -709,7 +773,15 @@
         "NPL": 1010.0,
         "Cost of funds": 39.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -728,8 +800,8 @@
         "Investments": 293510000.0,
         "Interest Income": 3923496660.0,
         "Net Interest Income": 2097407110.0,
-        "Total Operating Income": 2609204.96,
-        "Operating Profit": 1470685.43,
+        "Total Operating Income": 2609204960.0,
+        "Operating Profit": 1470685430.0,
         "Net Profit": 1028281460.0,
         "Number of Shares": 21950250.0,
         "EPS(Rs.)": 46.85,
@@ -795,7 +867,15 @@
         "NPL": 1103.85,
         "Cost of funds": 27.88
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -814,8 +894,8 @@
         "Investments": 293510000.0,
         "Interest Income": 1002381180.0,
         "Net Interest Income": 480076130.0,
-        "Total Operating Income": 573814.91,
-        "Operating Profit": 46500.83,
+        "Total Operating Income": 573814910.0,
+        "Operating Profit": 46500830.0,
         "Net Profit": 32550580.0,
         "Number of Shares": 21950250.0,
         "EPS(Rs.)": 5.93,
@@ -881,7 +961,15 @@
         "NPL": 2756.0,
         "Cost of funds": 8.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -900,8 +988,8 @@
         "Investments": 293510000.0,
         "Interest Income": 1991090520.0,
         "Net Interest Income": 966831560.0,
-        "Total Operating Income": 1148016.38,
-        "Operating Profit": 239340.67,
+        "Total Operating Income": 1148016380.0,
+        "Operating Profit": 239340670.0,
         "Net Profit": 168534580.0,
         "Number of Shares": 21950250.0,
         "EPS(Rs.)": 15.36,
@@ -967,7 +1055,15 @@
         "NPL": 2603.23,
         "Cost of funds": -7.17
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -986,8 +1082,8 @@
         "Investments": 293510000.0,
         "Interest Income": 2936665450.0,
         "Net Interest Income": 1409752510.0,
-        "Total Operating Income": 1678665.33,
-        "Operating Profit": 816667.02,
+        "Total Operating Income": 1678665330.0,
+        "Operating Profit": 816667020.0,
         "Net Profit": 44024310.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": 0.22,
@@ -1054,7 +1150,15 @@
         "NPL": 263.06,
         "Cost of funds": 10.42
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1073,8 +1177,8 @@
         "Investments": 293510000.0,
         "Interest Income": 4007919980.0,
         "Net Interest Income": 2005984940.0,
-        "Total Operating Income": 2141704.49,
-        "Operating Profit": 313798.87,
+        "Total Operating Income": 2141704490.0,
+        "Operating Profit": 313798870.0,
         "Net Profit": 1031050.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": 0.04,
@@ -1143,7 +1247,15 @@
         "NPL": 215.34,
         "Cost of funds": 5.32
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1162,8 +1274,8 @@
         "Investments": 293510000.0,
         "Interest Income": 886972630.0,
         "Net Interest Income": 430079820.0,
-        "Total Operating Income": 496655.2,
-        "Operating Profit": -143374.96,
+        "Total Operating Income": 496655200.0,
+        "Operating Profit": -143374960.0,
         "Net Profit": -143010960.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": -21.9,
@@ -1231,7 +1343,15 @@
         "NPL": 72.97,
         "Cost of funds": -6.74
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1250,8 +1370,8 @@
         "Investments": 293510000.0,
         "Interest Income": 1820591380.0,
         "Net Interest Income": 898331190.0,
-        "Total Operating Income": 1085039.21,
-        "Operating Profit": 35938.46,
+        "Total Operating Income": 1085039210.0,
+        "Operating Profit": 35938460.0,
         "Net Profit": 25593300.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": 1.96,
@@ -1320,7 +1440,15 @@
         "NPL": 39.62,
         "Cost of funds": -3.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1339,8 +1467,8 @@
         "Investments": 301735000.0,
         "Interest Income": 2764559980.0,
         "Net Interest Income": 1363740600.0,
-        "Total Operating Income": 1724874.79,
-        "Operating Profit": 432002.53,
+        "Total Operating Income": 1724874790.0,
+        "Operating Profit": 432002530.0,
         "Net Profit": 175860120.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": 8.98,
@@ -1409,7 +1537,15 @@
         "NPL": -10.92,
         "Cost of funds": -1.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1428,8 +1564,8 @@
         "Investments": 193510000.0,
         "Interest Income": 3717074680.0,
         "Net Interest Income": 1805886880.0,
-        "Total Operating Income": 2238913.93,
-        "Operating Profit": 717897.65,
+        "Total Operating Income": 2238913930.0,
+        "Operating Profit": 717897650.0,
         "Net Profit": 506466450.0,
         "Number of Shares": 26120797.5,
         "EPS(Rs.)": 19.39,
@@ -1499,7 +1635,15 @@
         "Cost of funds": 1.2,
         "CD ratio": 0.25
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1519,8 +1663,8 @@
         "Investments": 503510000.0,
         "Interest Income": 1048328820.0,
         "Net Interest Income": 562237280.0,
-        "Total Operating Income": 639051.03,
-        "Operating Profit": -19565.57,
+        "Total Operating Income": 639051030.0,
+        "Operating Profit": -19565570.0,
         "Net Profit": -19558440.0,
         "Number of Shares": 26120797.5,
         "EPS Reported": -3.0,
@@ -1587,7 +1731,15 @@
         "Cost of funds": 5.98,
         "CD ratio": 3.58
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1607,8 +1759,8 @@
         "Investments": 358083870.0,
         "Interest Income": 1749528610.0,
         "Net Interest Income": 813082340.0,
-        "Total Operating Income": 1290761.6,
-        "Operating Profit": 201158.06,
+        "Total Operating Income": 1290761600.0,
+        "Operating Profit": 201158060.0,
         "Net Profit": 136020320.0,
         "Number of Shares": 26120797.5,
         "EPS Reported": 10.41,
@@ -1676,7 +1828,15 @@
         "Cost of funds": 3.44,
         "CD ratio": 5.39
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1696,8 +1856,8 @@
         "Investments": 358914090.0,
         "Interest Income": 2553488050.0,
         "Net Interest Income": 1196995590.0,
-        "Total Operating Income": 2102643.24,
-        "Operating Profit": 872316.7,
+        "Total Operating Income": 2102643240.0,
+        "Operating Profit": 872316700.0,
         "Net Profit": 480582300.0,
         "Number of Shares": 26120797.5,
         "EPS Reported": 24.53,
@@ -1765,7 +1925,15 @@
         "Cost of funds": 0.36,
         "CD ratio": 9.76
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1785,8 +1953,8 @@
         "Investments": 356666410.0,
         "Interest Income": 3560017270.0,
         "Net Interest Income": 1766185010.0,
-        "Total Operating Income": 2680005.31,
-        "Operating Profit": 1381121.45,
+        "Total Operating Income": 2680005310.0,
+        "Operating Profit": 1381121450.0,
         "Net Profit": 836078480.0,
         "Number of Shares": 26120797.5,
         "EPS Reported": 32.01,
@@ -1854,7 +2022,15 @@
         "Cost of funds": -2.14,
         "CD ratio": 8.23
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1874,8 +2050,8 @@
         "Investments": 357593950.0,
         "Interest Income": 877500640.0,
         "Net Interest Income": 433956570.0,
-        "Total Operating Income": 515894.99,
-        "Operating Profit": 196814.86,
+        "Total Operating Income": 515894990.0,
+        "Operating Profit": 196814860.0,
         "Net Profit": 126176350.0,
         "Number of Shares": 26120797.5,
         "EPS Reported": 19.32,
@@ -1946,7 +2122,15 @@
         "Cost of funds": -5.17,
         "CD ratio": 6.14
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -1970,8 +2154,8 @@
         "Interest Income": 1786797270.0,
         "Net Interest Income": 873090530.0,
         "Investment Securities": 356571140.0,
-        "Total Operating Income": 1088924.35,
-        "Operating Profit": 292469.19,
+        "Total Operating Income": 1088924350.0,
+        "Operating Profit": 292469190.0,
         "Net Profit": 119738140.0,
         "Number of Shares": 27426837.38,
         "EPS Reported": 8.73,
@@ -2054,7 +2238,15 @@
         "Cost of funds": -4.39,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -2074,8 +2266,8 @@
         "Investments": 385456730.0,
         "Interest Income": 2707896640.0,
         "Net Interest Income": 1394568110.0,
-        "Total Operating Income": 1664026.79,
-        "Operating Profit": 377220.74,
+        "Total Operating Income": 1664026790.0,
+        "Operating Profit": 377220740.0,
         "Net Profit": 155021710.0,
         "Number of Shares": 27426837.38,
         "EPS Reported": 7.54,
@@ -2146,7 +2338,15 @@
         "Cost of funds": -2.54,
         "CD ratio": 1.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NUBL",
@@ -2166,8 +2366,8 @@
         "Investments": 348805090.0,
         "Interest Income": 3678963160.0,
         "Net Interest Income": 1884586710.0,
-        "Total Operating Income": 2249492.53,
-        "Operating Profit": 704983.5,
+        "Total Operating Income": 2249492530.0,
+        "Operating Profit": 704983500.0,
         "Net Profit": 350980630.0,
         "Number of Shares": 27426837.38,
         "EPS Reported": 12.8,
@@ -2238,7 +2438,15 @@
         "Cost of funds": -2.31,
         "CD ratio": -0.31
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:39:43.766760"

@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:21:36.245991",
+      "parsed_at": "2026-11-14T20:30:43.151303",
       "raw": {
         "Paid Up Capital": 1855210500.0,
         "Reserve and Surplus": 232832720.0,
@@ -18,7 +18,7 @@
         "Current Assets": 167663670.0,
         "Total Assets": 5631067310.0,
         "Revenue": 592560650.0,
-        "Operating Profit": 548350.98,
+        "Operating Profit": 548350980.0,
         "Net Profit": 224330940.0,
         "Number of Shares": 18552105.0,
         "EPS(Rs.)": 16.12,
@@ -51,14 +51,21 @@
         "graham_number": 202.04
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKPL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:21:36.245945",
+      "parsed_at": "2026-11-14T20:30:43.151242",
       "raw": {
         "Paid Up Capital": 1855210500.0,
         "Reserve and Surplus": 258043340.0,
@@ -68,7 +75,7 @@
         "Current Assets": 166453100.0,
         "Total Assets": 5651538130.0,
         "Revenue": 751099300.0,
-        "Operating Profit": 692819.79,
+        "Operating Profit": 692819790.0,
         "Net Profit": 249541560.0,
         "Number of Shares": 18552105.0,
         "EPS(Rs.)": 13.45,
@@ -101,14 +108,21 @@
         "graham_number": 185.67
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKPL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:21:36.245910",
+      "parsed_at": "2026-11-14T20:30:43.151178",
       "raw": {
         "Paid Up Capital": 1855210500.0,
         "Reserve and Surplus": 308089670.0,
@@ -118,7 +132,7 @@
         "Current Assets": 150883160.0,
         "Total Assets": 5541552060.0,
         "Revenue": 275189240.0,
-        "Operating Profit": 225179.88,
+        "Operating Profit": 225179880.0,
         "Net Profit": 97422300.0,
         "Number of Shares": 18552105.0,
         "EPS(Rs.)": 21.01,
@@ -151,14 +165,21 @@
         "graham_number": 234.79
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKPL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:21:36.245866",
+      "parsed_at": "2026-11-14T20:30:43.151116",
       "raw": {
         "Paid Up Capital": 1855210500.0,
         "Reserve and Surplus": 362035420.0,
@@ -208,7 +229,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:21:36.245829",
+      "parsed_at": "2026-11-14T20:30:43.151055",
       "raw": {
         "Paid Up Capital": 1855210500.0,
         "Reserve and Surplus": 354239620.0,
@@ -276,7 +297,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:21:36.245792",
+      "parsed_at": "2026-11-14T20:30:43.150993",
       "raw": {
         "Paid Up Capital": 2040731600.0,
         "Reserve and Surplus": 16054240.0,
@@ -344,7 +365,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:21:36.245755",
+      "parsed_at": "2026-11-14T20:30:43.150930",
       "raw": {
         "Paid Up Capital": 2040731600.0,
         "Reserve and Surplus": -143359950.0,
@@ -407,7 +428,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:21:36.245721",
+      "parsed_at": "2026-11-14T20:30:43.150871",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -181535760.0,
@@ -471,7 +492,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:21:36.245687",
+      "parsed_at": "2026-11-14T20:30:43.150812",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": 71288890.0,
@@ -539,7 +560,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:21:36.245647",
+      "parsed_at": "2026-11-14T20:30:43.150749",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -172955090.0,
@@ -607,7 +628,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:21:36.245610",
+      "parsed_at": "2026-11-14T20:30:43.150684",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -96422350.0,
@@ -674,7 +695,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:21:36.245560",
+      "parsed_at": "2026-11-14T20:30:43.150602",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -120863000.0,
@@ -740,7 +761,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:21:36.245521",
+      "parsed_at": "2026-11-14T20:30:43.150535",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -147602330.0,
@@ -808,7 +829,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:21:36.245482",
+      "parsed_at": "2026-11-14T20:30:43.150467",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": -9645190.0,
@@ -876,7 +897,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:21:36.245442",
+      "parsed_at": "2026-11-14T20:30:43.150399",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": 47288800.0,
@@ -944,7 +965,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:21:36.245402",
+      "parsed_at": "2026-11-14T20:30:43.150331",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": 143770330.0,
@@ -1015,7 +1036,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:21:36.245360",
+      "parsed_at": "2026-11-14T20:30:43.150260",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": 133062780.0,
@@ -1026,7 +1047,7 @@
         "Total Assets": 7441625990.0,
         "Revenue": 498284730.0,
         "Gross Profit": 447270460.0,
-        "Operating Profit": 268567.68,
+        "Operating Profit": 268567680.0,
         "Net Profit": 143780050.0,
         "Number of Shares": 38959421.0,
         "EPS Reported": 4.92,
@@ -1079,14 +1100,21 @@
         "Book Value Reported": 7.49,
         "ROE Reported": 313.91
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKPL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:21:36.245312",
+      "parsed_at": "2026-11-14T20:30:43.150177",
       "raw": {
         "Paid Up Capital": 3895942100.0,
         "Reserve and Surplus": 68964420.0,
@@ -1097,7 +1125,7 @@
         "Total Assets": 7316444410.0,
         "Revenue": 694262690.0,
         "Gross Profit": 536557720.0,
-        "Operating Profit": 225973.87,
+        "Operating Profit": 225973870.0,
         "Net Profit": 79681700.0,
         "Number of Shares": 38959421.0,
         "EPS Reported": 2.05,
@@ -1150,8 +1178,15 @@
         "Book Value Reported": 2.03,
         "ROE Reported": -54.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:21:36.247488"
+  "last_updated": "2026-11-14T20:30:43.152963"
 }

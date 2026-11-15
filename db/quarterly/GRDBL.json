@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:51:03.719273",
+      "parsed_at": "2026-11-14T20:59:53.057564",
       "raw": {
         "EPS(Rs.)": -5.02
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:51:03.719243",
+      "parsed_at": "2026-11-14T20:59:53.057540",
       "raw": {
         "Paid Up Capital": 55000000.0,
         "Reserves": -9352000.0,
@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 216691000.0,
         "Interest Income": 7524000.0,
         "Net Interest Income": 2020000.0,
-        "Total Operating Income": 2580.0,
-        "Operating Profit": 71.0,
+        "Total Operating Income": 2580000.0,
+        "Operating Profit": 71000.0,
         "Net Profit": 71000.0,
         "Number of Shares": 550000.0,
         "EPS(Rs.)": 0.51,
@@ -82,14 +82,22 @@
         "graham_number": 30.86
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:51:03.719117",
+      "parsed_at": "2026-11-14T20:59:53.057422",
       "raw": {
         "Paid Up Capital": 55000000.0,
         "Reserves": -9279000.0,
@@ -99,8 +107,8 @@
         "Loans and Advances to Customers": 264204000.0,
         "Interest Income": 15584000.0,
         "Net Interest Income": 4446000.0,
-        "Total Operating Income": 5719.0,
-        "Operating Profit": 144.0,
+        "Total Operating Income": 5719000.0,
+        "Operating Profit": 144000.0,
         "Net Profit": 144000.0,
         "Number of Shares": 550000.0,
         "EPS(Rs.)": 0.52,
@@ -140,14 +148,22 @@
         "graham_number": 31.18
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:51:03.718987",
+      "parsed_at": "2026-11-14T20:59:53.057304",
       "raw": {
         "Paid Up Capital": 55000000.0,
         "Reserves": -8193000.0,
@@ -157,8 +173,8 @@
         "Loans and Advances to Customers": 269879000.0,
         "Interest Income": 23867000.0,
         "Net Interest Income": 7173000.0,
-        "Total Operating Income": 9364.0,
-        "Operating Profit": 1115.0,
+        "Total Operating Income": 9364000.0,
+        "Operating Profit": 1115000.0,
         "Net Profit": 1300000.0,
         "Number of Shares": 550000.0,
         "EPS(Rs.)": 3.15,
@@ -200,14 +216,22 @@
         "graham_number": 77.66
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:51:03.718850",
+      "parsed_at": "2026-11-14T20:59:53.057182",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserves": -8334000.0,
@@ -217,8 +241,8 @@
         "Loans and Advances to Customers": 307749000.0,
         "Interest Income": 33239000.0,
         "Net Interest Income": 11298000.0,
-        "Total Operating Income": 14165.0,
-        "Operating Profit": 857.0,
+        "Total Operating Income": 14165000.0,
+        "Operating Profit": 857000.0,
         "Net Profit": 1159000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": -2.76,
@@ -262,14 +286,22 @@
         "eps_ttm": 45.02,
         "EPS(Rs.)": 45.02
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T08:51:03.718711",
+      "parsed_at": "2026-11-14T20:59:53.057064",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserves": -6827000.0,
@@ -279,8 +311,8 @@
         "Loans and Advances to Customers": 300480000.0,
         "Interest Income": 9972000.0,
         "Net Interest Income": 4386000.0,
-        "Total Operating Income": 5251.0,
-        "Operating Profit": 1329.0,
+        "Total Operating Income": 5251000.0,
+        "Operating Profit": 1329000.0,
         "Net Profit": 1507000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 6.02,
@@ -345,14 +377,22 @@
         "Cost of funds": -16.34,
         "Credit To Deposit Ratio": 6.86
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T08:51:03.718568",
+      "parsed_at": "2026-11-14T20:59:53.056938",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserves": -6205000.0,
@@ -362,8 +402,8 @@
         "Loans and Advances to Customers": 304223000.0,
         "Interest Income": 20044000.0,
         "Net Interest Income": 9435000.0,
-        "Total Operating Income": 10806.0,
-        "Operating Profit": 3464.0,
+        "Total Operating Income": 10806000.0,
+        "Operating Profit": 3464000.0,
         "Net Profit": 3887000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 7.77,
@@ -428,14 +468,22 @@
         "Cost of funds": 4.0,
         "Credit To Deposit Ratio": 27.89
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T08:51:03.718419",
+      "parsed_at": "2026-11-14T20:59:53.056815",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserves": -7966000.0,
@@ -445,8 +493,8 @@
         "Loans and Advances to Customers": 296371000.0,
         "Interest Income": 30751000.0,
         "Net Interest Income": 13963000.0,
-        "Total Operating Income": 15966.0,
-        "Operating Profit": 1603.0,
+        "Total Operating Income": 15966000.0,
+        "Operating Profit": 1603000.0,
         "Net Profit": 2126000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 2.83,
@@ -512,14 +560,22 @@
         "Cost of funds": 46.53,
         "Credit To Deposit Ratio": -2.42
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:51:03.718226",
+      "parsed_at": "2026-11-14T20:59:53.056692",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserves": -7035000.0,
@@ -529,8 +585,8 @@
         "Loans and Advances to Customers": 361715000.0,
         "Interest Income": 44690000.0,
         "Net Interest Income": 20147000.0,
-        "Total Operating Income": 23410.0,
-        "Operating Profit": -1539.0,
+        "Total Operating Income": 23410000.0,
+        "Operating Profit": -1539000.0,
         "Net Profit": 3057000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 2.45,
@@ -596,14 +652,22 @@
         "Cost of funds": 22.29,
         "Credit To Deposit Ratio": -11.27
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:51:03.718024",
+      "parsed_at": "2026-11-14T20:59:53.056566",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -617,8 +681,8 @@
         "Investment Securities": 125005300.0,
         "Interest Income": 211486970.0,
         "Net Interest Income": 86891530.0,
-        "Total Operating Income": 97815.97,
-        "Operating Profit": 13678.87,
+        "Total Operating Income": 97815970.0,
+        "Operating Profit": 13678870.0,
         "Net Profit": 9575210.0,
         "Distributable Profit": 11429210.0,
         "Number of Shares": 5190000.0,
@@ -694,14 +758,22 @@
         "Cost of funds": 40.0,
         "Credit To Deposit Ratio": 29.92
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:51:03.717761",
+      "parsed_at": "2026-11-14T20:59:53.056419",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -715,8 +787,8 @@
         "Investment Securities": 141242900.0,
         "Interest Income": 319969960.0,
         "Net Interest Income": 120513910.0,
-        "Total Operating Income": 133919.44,
-        "Operating Profit": 36504.21,
+        "Total Operating Income": 133919440.0,
+        "Operating Profit": 36504210.0,
         "Net Profit": 24187980.0,
         "Distributable Profit": 26947040.0,
         "Number of Shares": 5190000.0,
@@ -792,14 +864,22 @@
         "Cost of funds": 38.18,
         "Credit To Deposit Ratio": 6.05
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:51:03.717491",
+      "parsed_at": "2026-11-14T20:59:53.056364",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -813,8 +893,8 @@
         "Investment Securities": 174255270.0,
         "Interest Income": 117247800.0,
         "Net Interest Income": 37040270.0,
-        "Total Operating Income": 41657.6,
-        "Operating Profit": -17836.81,
+        "Total Operating Income": 41657600.0,
+        "Operating Profit": -17836810.0,
         "Net Profit": -17836810.0,
         "Distributable Profit": 632910.0,
         "Number of Shares": 5190000.0,
@@ -889,14 +969,22 @@
         "Cost of funds": 13.02,
         "Credit To Deposit Ratio": 22.84
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:51:03.717237",
+      "parsed_at": "2026-11-14T20:59:53.056309",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1800.0,
@@ -910,8 +998,8 @@
         "Investment Securities": 305411000.0,
         "Interest Income": 245914540.0,
         "Net Interest Income": 77978900.0,
-        "Total Operating Income": 86779.8,
-        "Operating Profit": 4041.61,
+        "Total Operating Income": 86779800.0,
+        "Operating Profit": 4041610.0,
         "Net Profit": 2829130.0,
         "Distributable Profit": 12821000.0,
         "Number of Shares": 5190000.0,
@@ -987,14 +1075,22 @@
         "Cost of funds": 38.2,
         "Credit To Deposit Ratio": 29.61
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:51:03.716961",
+      "parsed_at": "2026-11-14T20:59:53.056252",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -1008,8 +1104,8 @@
         "Investment Securities": 321832600.0,
         "Interest Income": 382224610.0,
         "Net Interest Income": 118713680.0,
-        "Total Operating Income": 132019.01,
-        "Operating Profit": 14844.25,
+        "Total Operating Income": 132019010.0,
+        "Operating Profit": 14844250.0,
         "Net Profit": 10390970.0,
         "Distributable Profit": 9471000.0,
         "Number of Shares": 5190000.0,
@@ -1089,14 +1185,22 @@
         "Base Rate": 12.81,
         "Interest Spread Rate": 6.82
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:51:03.716698",
+      "parsed_at": "2026-11-14T20:59:53.056197",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -1111,8 +1215,8 @@
         "Investment Securities": 491871480.0,
         "Interest Income": 526855630.0,
         "Net Interest Income": 162136370.0,
-        "Total Operating Income": 180686.68,
-        "Operating Profit": 28246.78,
+        "Total Operating Income": 180686680.0,
+        "Operating Profit": 28246780.0,
         "Net Profit": 18489110.0,
         "Distributable Profit": 22158020.0,
         "Number of Shares": 5190000.0,
@@ -1196,14 +1300,22 @@
         "Base Rate": 3.68,
         "Interest Spread Rate": -0.43
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:51:03.716448",
+      "parsed_at": "2026-11-14T20:59:53.056140",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -1218,8 +1330,8 @@
         "Investment Securities": 479685290.0,
         "Interest Income": 146934330.0,
         "Net Interest Income": 45148590.0,
-        "Total Operating Income": 50358.52,
-        "Operating Profit": 10894.07,
+        "Total Operating Income": 50358520.0,
+        "Operating Profit": 10894070.0,
         "Net Profit": 7619130.0,
         "Distributable Profit": 16554800.0,
         "Number of Shares": 5190000.0,
@@ -1303,14 +1415,22 @@
         "Base Rate": -6.72,
         "Interest Spread Rate": 13.37
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:51:03.716209",
+      "parsed_at": "2026-11-14T20:59:53.056083",
       "raw": {
         "Paid Up Capital": 519000000.0,
         "Share Premium": 1810.0,
@@ -1325,8 +1445,8 @@
         "Investment Securities": 437181430.0,
         "Interest Income": 281354300.0,
         "Net Interest Income": 81850620.0,
-        "Total Operating Income": 91331.37,
-        "Operating Profit": 18011.32,
+        "Total Operating Income": 91331370.0,
+        "Operating Profit": 18011320.0,
         "Net Profit": 12601210.0,
         "Distributable Profit": 22271440.0,
         "Number of Shares": 5190000.0,
@@ -1410,14 +1530,22 @@
         "Base Rate": -12.55,
         "Interest Spread Rate": -7.13
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:51:03.715930",
+      "parsed_at": "2026-11-14T20:59:53.056024",
       "raw": {
         "Paid Up Capital": 538722000.0,
         "Share Premium": 1810.0,
@@ -1432,8 +1560,8 @@
         "Investment Securities": 761273500.0,
         "Interest Income": 426675600.0,
         "Net Interest Income": 132416490.0,
-        "Total Operating Income": 148278.85,
-        "Operating Profit": 25903.07,
+        "Total Operating Income": 148278850.0,
+        "Operating Profit": 25903070.0,
         "Net Profit": 18125430.0,
         "Distributable Profit": 3921800.0,
         "Number of Shares": 5387220.0,
@@ -1516,14 +1644,22 @@
         "Base Rate": -20.21,
         "Interest Spread Rate": 0.88
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:51:03.715660",
+      "parsed_at": "2026-11-14T20:59:53.055966",
       "raw": {
         "Paid Up Capital": 538722000.0,
         "Share Premium": 1810.0,
@@ -1538,8 +1674,8 @@
         "Investment Securities": 649461460.0,
         "Interest Income": 564691890.0,
         "Net Interest Income": 171612950.0,
-        "Total Operating Income": 195391.41,
-        "Operating Profit": 57134.28,
+        "Total Operating Income": 195391410.0,
+        "Operating Profit": 57134280.0,
         "Net Profit": 38661250.0,
         "Distributable Profit": 34469790.0,
         "Number of Shares": 5387220.0,
@@ -1624,14 +1760,22 @@
         "Base Rate": -24.21,
         "Interest Spread Rate": -1.31
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:51:03.715403",
+      "parsed_at": "2026-11-14T20:59:53.055905",
       "raw": {
         "Paid Up Capital": 538722000.0,
         "Share Premium": 1810.0,
@@ -1646,8 +1790,8 @@
         "Investment Securities": 823609700.0,
         "Interest Income": 136885090.0,
         "Net Interest Income": 47617260.0,
-        "Total Operating Income": 53547.59,
-        "Operating Profit": -15672.69,
+        "Total Operating Income": 53547590.0,
+        "Operating Profit": -15672690.0,
         "Net Profit": -15672690.0,
         "Distributable Profit": 12640560.0,
         "Number of Shares": 5387220.0,
@@ -1731,14 +1875,22 @@
         "Base Rate": -23.71,
         "Interest Spread Rate": -2.62
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:51:03.715137",
+      "parsed_at": "2026-11-14T20:59:53.055847",
       "raw": {
         "Paid Up Capital": 538722000.0,
         "Share Premium": 1810.0,
@@ -1753,8 +1905,8 @@
         "Investment Securities": 1243108830.0,
         "Interest Income": 256169410.0,
         "Net Interest Income": 85985980.0,
-        "Total Operating Income": 99674.93,
-        "Operating Profit": 12470.54,
+        "Total Operating Income": 99674930.0,
+        "Operating Profit": 12470540.0,
         "Net Profit": 8729380.0,
         "Distributable Profit": 32584030.0,
         "Number of Shares": 5387220.0,
@@ -1836,14 +1988,22 @@
         "Base Rate": -26.88,
         "Interest Spread Rate": 3.39
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:51:03.714863",
+      "parsed_at": "2026-11-14T20:59:53.055791",
       "raw": {
         "Paid Up Capital": 569698500.0,
         "Share Premium": 1810.0,
@@ -1858,8 +2018,8 @@
         "Investment Securities": 582210830.0,
         "Interest Income": 388106790.0,
         "Net Interest Income": 135630540.0,
-        "Total Operating Income": 156814.9,
-        "Operating Profit": 30407.01,
+        "Total Operating Income": 156814900.0,
+        "Operating Profit": 30407010.0,
         "Net Profit": 21284910.0,
         "Distributable Profit": 22109600.0,
         "Number of Shares": 5696985.0,
@@ -1941,14 +2101,22 @@
         "Base Rate": -24.49,
         "Interest Spread Rate": -1.53
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:51:03.714592",
+      "parsed_at": "2026-11-14T20:59:53.055732",
       "raw": {
         "Paid Up Capital": 569698500.0,
         "Share Premium": 1810.0,
@@ -1963,8 +2131,8 @@
         "Investment Securities": 1330004900.0,
         "Interest Income": 540508500.0,
         "Net Interest Income": 202042950.0,
-        "Total Operating Income": 233020.89,
-        "Operating Profit": 98723.99,
+        "Total Operating Income": 233020890.0,
+        "Operating Profit": 98723990.0,
         "Net Profit": 69408400.0,
         "Distributable Profit": 60781760.0,
         "Number of Shares": 5696985.0,
@@ -2046,14 +2214,22 @@
         "Base Rate": -18.41,
         "Interest Spread Rate": -3.76
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:51:03.714317",
+      "parsed_at": "2026-11-14T20:59:53.055676",
       "raw": {
         "Paid Up Capital": 569698500.0,
         "Share Premium": 1810.0,
@@ -2068,8 +2244,8 @@
         "Investment Securities": 1268023770.0,
         "Interest Income": 126750410.0,
         "Net Interest Income": 46101860.0,
-        "Total Operating Income": -247.67,
-        "Operating Profit": -30156.65,
+        "Total Operating Income": -247670.0,
+        "Operating Profit": -30156650.0,
         "Net Profit": -30156650.0,
         "Distributable Profit": 24808960.0,
         "Number of Shares": 5696985.0,
@@ -2150,14 +2326,22 @@
         "Base Rate": -23.08,
         "Interest Spread Rate": 1.57
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:51:03.714019",
+      "parsed_at": "2026-11-14T20:59:53.055618",
       "raw": {
         "Paid Up Capital": 615500000.0,
         "Share Premium": 1810.0,
@@ -2172,8 +2356,8 @@
         "Investment Securities": 824991260.0,
         "Interest Income": 252060060.0,
         "Net Interest Income": 104445480.0,
-        "Total Operating Income": 119972.05,
-        "Operating Profit": 15718.43,
+        "Total Operating Income": 119972050.0,
+        "Operating Profit": 15718430.0,
         "Net Profit": 11002900.0,
         "Distributable Profit": 9233520.0,
         "Number of Shares": 6155000.0,
@@ -2258,14 +2442,22 @@
         "Base Rate": -15.07,
         "Interest Spread Rate": -14.41
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:51:03.713727",
+      "parsed_at": "2026-11-14T20:59:53.055559",
       "raw": {
         "Paid Up Capital": 615500000.0,
         "Share Premium": 1810.0,
@@ -2280,8 +2472,8 @@
         "Investment Securities": 826190160.0,
         "Interest Income": 371751710.0,
         "Net Interest Income": 167005740.0,
-        "Total Operating Income": 189228.61,
-        "Operating Profit": 50343.0,
+        "Total Operating Income": 189228610.0,
+        "Operating Profit": 50343000.0,
         "Net Profit": 35240100.0,
         "Distributable Profit": 27487600.0,
         "Number of Shares": 6155000.0,
@@ -2365,14 +2557,22 @@
         "Base Rate": -9.91,
         "Interest Spread Rate": -7.54
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:51:03.713435",
+      "parsed_at": "2026-11-14T20:59:53.055492",
       "raw": {
         "Paid Up Capital": 615500000.0,
         "Share Premium": 1810.0,
@@ -2387,8 +2587,8 @@
         "Investment Securities": 926190160.0,
         "Interest Income": 508432020.0,
         "Net Interest Income": 246145880.0,
-        "Total Operating Income": 276395.22,
-        "Operating Profit": 103408.3,
+        "Total Operating Income": 276395220.0,
+        "Operating Profit": 103408300.0,
         "Net Profit": 72385810.0,
         "Distributable Profit": 58242460.0,
         "Number of Shares": 6155000.0,
@@ -2473,14 +2673,22 @@
         "Base Rate": -15.21,
         "Interest Spread Rate": 5.06
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GRDBL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:51:03.713109",
+      "parsed_at": "2026-11-14T20:59:53.055423",
       "raw": {
         "Paid Up Capital": 615500000.0,
         "Share Premium": 1810.0,
@@ -2495,8 +2703,8 @@
         "Investment Securities": 1030885190.0,
         "Interest Income": 119903970.0,
         "Net Interest Income": 61565580.0,
-        "Total Operating Income": 67878.14,
-        "Operating Profit": 1706.41,
+        "Total Operating Income": 67878140.0,
+        "Operating Profit": 1706410.0,
         "Net Profit": 4928660.0,
         "Distributable Profit": 63958140.0,
         "Number of Shares": 6155000.0,
@@ -2581,8 +2789,16 @@
         "Base Rate": -20.8,
         "Interest Spread Rate": -8.17
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:51:03.722443"
+  "last_updated": "2026-11-14T20:59:53.062331"
 }

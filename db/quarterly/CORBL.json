@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:38:02.010333",
+      "parsed_at": "2026-11-14T20:46:58.894100",
       "raw": {
         "Paid Up Capital": 487988000.0,
         "Retained Earnings": 48662660.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 906961900.0,
         "Interest Income": 68518410.0,
         "Net Interest Income": 35255300.0,
-        "Total Operating Income": 41907.03,
-        "Operating Profit": 10403.07,
+        "Total Operating Income": 41907030.0,
+        "Operating Profit": 10403070.0,
         "Net Profit": 7523090.0,
         "Distributable Profit": 48662660.0,
         "Number of Shares": 4879880.0,
@@ -69,14 +69,22 @@
         "graham_number": 79.69
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:38:02.010204",
+      "parsed_at": "2026-11-14T20:46:58.893970",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Share Premium": 23921250.0,
@@ -88,8 +96,8 @@
         "Loans and Advances to Customers": 937340710.0,
         "Interest Income": 106574310.0,
         "Net Interest Income": 57254410.0,
-        "Total Operating Income": 64734.73,
-        "Operating Profit": 14640.27,
+        "Total Operating Income": 64734730.0,
+        "Operating Profit": 14640270.0,
         "Net Profit": 10489130.0,
         "Distributable Profit": 57858650.0,
         "Number of Shares": 5000000.0,
@@ -139,14 +147,22 @@
         "graham_number": 82.12
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:38:02.010069",
+      "parsed_at": "2026-11-14T20:46:58.893829",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Share Premium": 23921250.0,
@@ -158,8 +174,8 @@
         "Loans and Advances to Customers": 944959460.0,
         "Interest Income": 36495710.0,
         "Net Interest Income": 18847240.0,
-        "Total Operating Income": 19165.05,
-        "Operating Profit": 12247.88,
+        "Total Operating Income": 19165050.0,
+        "Operating Profit": 12247880.0,
         "Net Profit": 8573520.0,
         "Distributable Profit": 67461360.0,
         "Number of Shares": 5000000.0,
@@ -209,14 +225,22 @@
         "graham_number": 149.42
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:38:02.009924",
+      "parsed_at": "2026-11-14T20:46:58.893696",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Share Premium": 23921000.0,
@@ -228,8 +252,8 @@
         "Loans and Advances to Customers": 981557000.0,
         "Interest Income": 81655200.0,
         "Net Interest Income": 40576000.0,
-        "Total Operating Income": 41151.9,
-        "Operating Profit": 16782.28,
+        "Total Operating Income": 41151900.0,
+        "Operating Profit": 16782280.0,
         "Net Profit": 11747600.0,
         "Distributable Profit": 66440000.0,
         "Number of Shares": 5000000.0,
@@ -279,14 +303,22 @@
         "graham_number": 123.44
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:38:02.009785",
+      "parsed_at": "2026-11-14T20:46:58.893557",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Share Premium": 23921250.0,
@@ -298,8 +330,8 @@
         "Loans and Advances to Customers": 1119503710.0,
         "Interest Income": 127591690.0,
         "Net Interest Income": 61610660.0,
-        "Total Operating Income": 63602.56,
-        "Operating Profit": 18625.6,
+        "Total Operating Income": 63602560.0,
+        "Operating Profit": 18625600.0,
         "Net Profit": 13037920.0,
         "Distributable Profit": 68283360.0,
         "Number of Shares": 5000000.0,
@@ -308,7 +340,7 @@
         "ROE": 2.0,
         "CAR": 52.0,
         "NPL": 4.0,
-        "Cost of funds": 862.0,
+        "Cost of funds": 8.62,
         "Credit To Deposit Ratio": 96.0,
         "Base Rate": 13.0,
         "Interest Spread Rate": 4.92
@@ -372,19 +404,30 @@
         "ROE": 33.33,
         "CAR": -40.57,
         "NPL": 6.38,
-        "Cost of funds": 9596.29,
+        "Cost of funds": -3.04,
         "Credit To Deposit Ratio": -38.08,
         "Base Rate": -3.13,
         "Interest Spread Rate": 12.59
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Cost of funds"
+      ]
     },
     {
       "symbol": "CORBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:38:02.009636",
+      "parsed_at": "2026-11-14T20:46:58.893415",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -396,8 +439,8 @@
         "Loans and Advances to Customers": 1140043050.0,
         "Interest Income": 181251720.0,
         "Net Interest Income": 88394610.0,
-        "Total Operating Income": 91553.02,
-        "Operating Profit": 26448.79,
+        "Total Operating Income": 91553020.0,
+        "Operating Profit": 26448790.0,
         "Net Profit": 18514150.0,
         "Distributable Profit": 51106120.0,
         "Number of Shares": 5250000.0,
@@ -476,14 +519,22 @@
         "Base Rate": -1.92,
         "Interest Spread Rate": 9.29
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:38:02.009492",
+      "parsed_at": "2026-11-14T20:46:58.893282",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -495,8 +546,8 @@
         "Loans and Advances to Customers": 1101716490.0,
         "Interest Income": 53147520.0,
         "Net Interest Income": 28598160.0,
-        "Total Operating Income": 29136.43,
-        "Operating Profit": 5614.3,
+        "Total Operating Income": 29136430.0,
+        "Operating Profit": 5614300.0,
         "Net Profit": 3930010.0,
         "Distributable Profit": 42130260.0,
         "Number of Shares": 5250000.0,
@@ -575,14 +626,22 @@
         "Base Rate": -9.65,
         "Interest Spread Rate": -7.47
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:38:02.009326",
+      "parsed_at": "2026-11-14T20:46:58.893147",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -594,8 +653,8 @@
         "Loans and Advances to Customers": 1068897250.0,
         "Interest Income": 97418160.0,
         "Net Interest Income": 46805000.0,
-        "Total Operating Income": 48062.57,
-        "Operating Profit": 13073.9,
+        "Total Operating Income": 48062570.0,
+        "Operating Profit": 13073900.0,
         "Net Profit": 9151730.0,
         "Distributable Profit": 49589850.0,
         "Number of Shares": 5250000.0,
@@ -674,14 +733,22 @@
         "Base Rate": -20.82,
         "Interest Spread Rate": -4.78
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:38:02.009140",
+      "parsed_at": "2026-11-14T20:46:58.893010",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -693,8 +760,8 @@
         "Loans and Advances to Customers": 1107010010.0,
         "Interest Income": 146137180.0,
         "Net Interest Income": 65889410.0,
-        "Total Operating Income": 68845.14,
-        "Operating Profit": 12463.93,
+        "Total Operating Income": 68845140.0,
+        "Operating Profit": 12463930.0,
         "Net Profit": 8724750.0,
         "Distributable Profit": 35111920.0,
         "Number of Shares": 5250000.0,
@@ -768,19 +835,27 @@
         "ROE": -23.5,
         "CAR": -19.25,
         "NPL": 23.75,
-        "Cost of funds": -99.11,
+        "Cost of funds": -11.14,
         "Credit To Deposit Ratio": -26.05,
         "Base Rate": -19.0,
         "Interest Spread Rate": -7.11
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:38:02.008906",
+      "parsed_at": "2026-11-14T20:46:58.892931",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -792,8 +867,8 @@
         "Loans and Advances to Customers": 1263179800.0,
         "Interest Income": 198549650.0,
         "Net Interest Income": 83959220.0,
-        "Total Operating Income": 89323.73,
-        "Operating Profit": 25515.09,
+        "Total Operating Income": 89323730.0,
+        "Operating Profit": 25515090.0,
         "Net Profit": 17860570.0,
         "Distributable Profit": 44581970.0,
         "Number of Shares": 5250000.0,
@@ -872,14 +947,22 @@
         "Base Rate": -27.14,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:38:02.008768",
+      "parsed_at": "2026-11-14T20:46:58.892880",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -891,8 +974,8 @@
         "Loans and Advances to Customers": 1332090910.0,
         "Interest Income": 55050270.0,
         "Net Interest Income": 19674890.0,
-        "Total Operating Income": 21481.25,
-        "Operating Profit": 2512.96,
+        "Total Operating Income": 21481250.0,
+        "Operating Profit": 2512960.0,
         "Net Profit": 2168830.0,
         "Distributable Profit": 21228010.0,
         "Number of Shares": 5250000.0,
@@ -971,14 +1054,22 @@
         "Base Rate": -14.64,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:38:02.008629",
+      "parsed_at": "2026-11-14T20:46:58.892829",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -990,8 +1081,8 @@
         "Loans and Advances to Customers": 1341875490.0,
         "Interest Income": 91974770.0,
         "Net Interest Income": 23431980.0,
-        "Total Operating Income": 26594.22,
-        "Operating Profit": 14756.86,
+        "Total Operating Income": 26594220.0,
+        "Operating Profit": 14756860.0,
         "Net Profit": 10739560.0,
         "Distributable Profit": -19128330.0,
         "Number of Shares": 5250000.0,
@@ -1067,14 +1158,22 @@
         "Base Rate": -18.36,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:38:02.008491",
+      "parsed_at": "2026-11-14T20:46:58.892773",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1089,8 +1188,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 155876430.0,
         "Net Interest Income": 54941260.0,
-        "Total Operating Income": 58951.9,
-        "Operating Profit": 24816.95,
+        "Total Operating Income": 58951900.0,
+        "Operating Profit": 24816950.0,
         "Net Profit": 17781620.0,
         "Distributable Profit": 10495960.0,
         "Number of Shares": 5250000.0,
@@ -1169,14 +1268,22 @@
         "Base Rate": -8.17,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:38:02.008339",
+      "parsed_at": "2026-11-14T20:46:58.892715",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1191,8 +1298,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 197714820.0,
         "Net Interest Income": 62366300.0,
-        "Total Operating Income": 67323.37,
-        "Operating Profit": -17252.22,
+        "Total Operating Income": 67323370.0,
+        "Operating Profit": -17252220.0,
         "Net Profit": -16385860.0,
         "Distributable Profit": -34546730.0,
         "Number of Shares": 5250000.0,
@@ -1270,14 +1377,22 @@
         "Base Rate": -10.36,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:38:02.008188",
+      "parsed_at": "2026-11-14T20:46:58.892655",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1292,8 +1407,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 56890470.0,
         "Net Interest Income": 23452160.0,
-        "Total Operating Income": 1085.0,
-        "Operating Profit": 4163.62,
+        "Total Operating Income": 1085000.0,
+        "Operating Profit": 4163620.0,
         "Net Profit": 2914530.0,
         "Distributable Profit": -32417460.0,
         "Number of Shares": 5250000.0,
@@ -1372,14 +1487,22 @@
         "Base Rate": -6.36,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:38:02.008026",
+      "parsed_at": "2026-11-14T20:46:58.892522",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1394,8 +1517,8 @@
         "Investment Securities": 400000000.0,
         "Interest Income": 100464960.0,
         "Net Interest Income": 35690750.0,
-        "Total Operating Income": 39138.16,
-        "Operating Profit": 20517.3,
+        "Total Operating Income": 39138160.0,
+        "Operating Profit": 20517300.0,
         "Net Profit": 12942220.0,
         "Distributable Profit": -46807100.0,
         "Number of Shares": 5250000.0,
@@ -1477,14 +1600,22 @@
         "Base Rate": -4.5,
         "Interest Spread Rate": -0.65
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:38:02.007850",
+      "parsed_at": "2026-11-14T20:46:58.892358",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1499,8 +1630,8 @@
         "Investment Securities": 790625000.0,
         "Interest Income": 165458110.0,
         "Net Interest Income": 67729640.0,
-        "Total Operating Income": 72635.07,
-        "Operating Profit": 96067.59,
+        "Total Operating Income": 72635070.0,
+        "Operating Profit": 96067590.0,
         "Net Profit": 48263020.0,
         "Distributable Profit": -51478450.0,
         "Number of Shares": 5250000.0,
@@ -1582,14 +1713,22 @@
         "Base Rate": -11.17,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:38:02.007680",
+      "parsed_at": "2026-11-14T20:46:58.892192",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1604,8 +1743,8 @@
         "Investment Securities": 1100000000.0,
         "Interest Income": 206681620.0,
         "Net Interest Income": 73715390.0,
-        "Total Operating Income": 81056.42,
-        "Operating Profit": 94144.05,
+        "Total Operating Income": 81056420.0,
+        "Operating Profit": 94144050.0,
         "Net Profit": 50103860.0,
         "Distributable Profit": -31418950.0,
         "Number of Shares": 5250000.0,
@@ -1687,14 +1826,22 @@
         "Base Rate": -12.0,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CORBL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:38:02.007491",
+      "parsed_at": "2026-11-14T20:46:58.892000",
       "raw": {
         "Paid Up Capital": 525000000.0,
         "Share Premium": 23921250.0,
@@ -1709,8 +1856,8 @@
         "Investment Securities": 900000000.0,
         "Interest Income": 49277440.0,
         "Net Interest Income": 13982380.0,
-        "Total Operating Income": 16523.81,
-        "Operating Profit": 8774.76,
+        "Total Operating Income": 16523810.0,
+        "Operating Profit": 8774760.0,
         "Net Profit": 6142330.0,
         "Distributable Profit": -29796740.0,
         "Number of Shares": 5250000.0,
@@ -1792,8 +1939,16 @@
         "Base Rate": -24.57,
         "Interest Spread Rate": 9.17
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:38:02.014019"
+  "last_updated": "2026-11-14T20:46:58.897258"
 }

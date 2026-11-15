@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:55:09.505996",
+      "parsed_at": "2026-11-14T21:04:17.925235",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -8628740.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 63235540.0,
         "Current Assets": 30884960.0,
         "Total Assets": 3612396480.0,
-        "Operating Profit": -104.53,
+        "Operating Profit": -104530.0,
         "Net Profit": -104530.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -0.01,
@@ -48,14 +48,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:55:09.505911",
+      "parsed_at": "2026-11-14T21:04:17.925200",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -27171000.0,
@@ -65,7 +72,7 @@
         "Current Assets": 43293800.0,
         "Total Assets": 3720326670.0,
         "Revenue": 18771250.0,
-        "Operating Profit": 16242.73,
+        "Operating Profit": 16242730.0,
         "Net Profit": -18542460.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -1.87,
@@ -97,14 +104,21 @@
         "revenue_ttm": 18771250.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:55:09.505822",
+      "parsed_at": "2026-11-14T21:04:17.925156",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -91437190.0,
@@ -115,7 +129,7 @@
         "Total Assets": 3711233800.0,
         "Revenue": 45484160.0,
         "Gross Profit": 42674480.0,
-        "Operating Profit": 36665.78,
+        "Operating Profit": 36665780.0,
         "Net Profit": -64268580.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -25.97,
@@ -148,14 +162,21 @@
         "revenue_ttm": 45484160.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:55:09.505727",
+      "parsed_at": "2026-11-14T21:04:17.925089",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -73277510.0,
@@ -165,7 +186,7 @@
         "Current Assets": 64630090.0,
         "Total Assets": 3812390820.0,
         "Revenue": 108738700.0,
-        "Operating Profit": 93733.82,
+        "Operating Profit": 93733820.0,
         "Net Profit": -53596660.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -10.83,
@@ -197,14 +218,21 @@
         "revenue_ttm": 108738700.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:55:09.505638",
+      "parsed_at": "2026-11-14T21:04:17.924896",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -60967350.0,
@@ -214,7 +242,7 @@
         "Current Assets": 109488580.0,
         "Total Assets": 3851768160.0,
         "Revenue": 158473330.0,
-        "Operating Profit": 140639.8,
+        "Operating Profit": 140639800.0,
         "Net Profit": -45099430.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -6.07,
@@ -263,14 +291,21 @@
         "Book Value(Rs.)": -5.34,
         "ROE": -64600.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:55:09.505549",
+      "parsed_at": "2026-11-14T21:04:17.924783",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -65471550.0,
@@ -280,7 +315,7 @@
         "Current Assets": 107702500.0,
         "Total Assets": 3932379350.0,
         "Revenue": 267877030.0,
-        "Operating Profit": 222679.6,
+        "Operating Profit": 222679600.0,
         "Net Profit": -49603630.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -5.01,
@@ -331,14 +366,21 @@
         "Book Value(Rs.)": -3.97,
         "ROE": -178.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:55:09.505458",
+      "parsed_at": "2026-11-14T21:04:17.924671",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -33783410.0,
@@ -348,7 +390,7 @@
         "Current Assets": 119493170.0,
         "Total Assets": 3909844520.0,
         "Revenue": 131280330.0,
-        "Operating Profit": 145741.4,
+        "Operating Profit": 145741400.0,
         "Net Profit": 31688140.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": 12.8,
@@ -400,14 +442,21 @@
         "Book Value(Rs.)": 6.42,
         "ROE": 146.35
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:55:09.505364",
+      "parsed_at": "2026-11-14T21:04:17.924566",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -178126810.0,
@@ -417,7 +466,7 @@
         "Current Assets": 187374740.0,
         "Total Assets": 3750671600.0,
         "Revenue": 138287010.0,
-        "Operating Profit": 220558.81,
+        "Operating Profit": 220558810.0,
         "Net Profit": -1873540.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -0.38,
@@ -468,14 +517,21 @@
         "Book Value(Rs.)": -11.44,
         "ROE": 96.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:55:09.505269",
+      "parsed_at": "2026-11-14T21:04:17.924526",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -287826160.0,
@@ -485,7 +541,7 @@
         "Current Assets": 122882390.0,
         "Total Assets": 3652216200.0,
         "Revenue": 249463810.0,
-        "Operating Profit": 214565.96,
+        "Operating Profit": 214565960.0,
         "Net Profit": -111572890.0,
         "Number of Shares": 9900000.0,
         "EPS(Rs.)": -15.03,
@@ -536,14 +592,21 @@
         "Book Value(Rs.)": -24.41,
         "ROE": -227.51
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:55:09.505176",
+      "parsed_at": "2026-11-14T21:04:17.924487",
       "raw": {
         "Paid Up Capital": 990000000.0,
         "Reserve and Surplus": -330704450.0,
@@ -554,7 +617,7 @@
         "Total Assets": 3641848160.0,
         "Revenue": 332914090.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 276770.72,
+        "Operating Profit": 276770720.0,
         "Net Profit": -152371180.0,
         "Number of Shares": 9900000.0,
         "EPS Reported": -15.39,
@@ -603,14 +666,21 @@
         "Net Profit": -207.18,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:55:09.505081",
+      "parsed_at": "2026-11-14T21:04:17.924449",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -141391600.0,
@@ -621,7 +691,7 @@
         "Total Assets": 3858758370.0,
         "Revenue": 238328730.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 216008.55,
+        "Operating Profit": 216008550.0,
         "Net Profit": 126283360.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 25.51,
@@ -671,14 +741,21 @@
         "Net Profit": 298.52,
         "Number of Shares": 100.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:55:09.504987",
+      "parsed_at": "2026-11-14T21:04:17.924397",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -155325210.0,
@@ -689,7 +766,7 @@
         "Total Assets": 3715550680.0,
         "Revenue": 277261780.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 239823.87,
+        "Operating Profit": 239823870.0,
         "Net Profit": 68700470.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 6.94,
@@ -739,14 +816,21 @@
         "Net Profit": 3766.88,
         "Number of Shares": 100.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:55:09.504892",
+      "parsed_at": "2026-11-14T21:04:17.924361",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -188402180.0,
@@ -757,7 +841,7 @@
         "Total Assets": 3591539740.0,
         "Revenue": 316556900.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 275926.43,
+        "Operating Profit": 275926430.0,
         "Net Profit": 34929550.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 2.35,
@@ -807,14 +891,21 @@
         "Net Profit": 131.31,
         "Number of Shares": 100.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:55:09.504796",
+      "parsed_at": "2026-11-14T21:04:17.924324",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -177802950.0,
@@ -825,7 +916,7 @@
         "Total Assets": 3604290520.0,
         "Revenue": 423419120.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 363540.87,
+        "Operating Profit": 363540870.0,
         "Net Profit": 46239190.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 2.34,
@@ -878,14 +969,21 @@
         "Book Value Reported": 36.67,
         "ROE Reported": 111.12
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:55:09.504698",
+      "parsed_at": "2026-11-14T21:04:17.924288",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -120055070.0,
@@ -896,7 +994,7 @@
         "Total Assets": 3634722990.0,
         "Revenue": 187837430.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 134980.34,
+        "Operating Profit": 134980340.0,
         "Net Profit": 66232430.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 13.38,
@@ -949,14 +1047,21 @@
         "Book Value Reported": 1.16,
         "ROE Reported": -48.16
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:55:09.504600",
+      "parsed_at": "2026-11-14T21:04:17.924250",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -82430720.0,
@@ -967,7 +1072,7 @@
         "Total Assets": 3605092330.0,
         "Revenue": 294014610.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 226160.56,
+        "Operating Profit": 226160560.0,
         "Net Profit": 105606790.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 10.67,
@@ -1020,14 +1125,21 @@
         "Book Value Reported": 3.99,
         "ROE Reported": 47.81
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:55:09.504499",
+      "parsed_at": "2026-11-14T21:04:17.924211",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -127765110.0,
@@ -1038,7 +1150,7 @@
         "Total Assets": 3555590650.0,
         "Revenue": 345875660.0,
         "Gross Profit": 338958150.0,
-        "Operating Profit": 158088.05,
+        "Operating Profit": 158088050.0,
         "Net Profit": 59814480.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 4.03,
@@ -1091,14 +1203,21 @@
         "Book Value Reported": 3.39,
         "ROE Reported": 65.77
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:55:09.504394",
+      "parsed_at": "2026-11-14T21:04:17.924173",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": -37021390.0,
@@ -1109,7 +1228,7 @@
         "Total Assets": 3591062530.0,
         "Revenue": 486464910.0,
         "Gross Profit": 476735610.0,
-        "Operating Profit": 225550.32,
+        "Operating Profit": 225550320.0,
         "Net Profit": 149917960.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 7.57,
@@ -1162,14 +1281,21 @@
         "Book Value Reported": 7.81,
         "ROE Reported": 200.39
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HURJA",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:55:09.504274",
+      "parsed_at": "2026-11-14T21:04:17.924126",
       "raw": {
         "Paid Up Capital": 1980000000.0,
         "Reserve and Surplus": 69846720.0,
@@ -1180,7 +1306,7 @@
         "Total Assets": 3686833280.0,
         "Revenue": 194562020.0,
         "Gross Profit": 190664480.0,
-        "Operating Profit": 140320.29,
+        "Operating Profit": 140320290.0,
         "Net Profit": 109052980.0,
         "Number of Shares": 19800000.0,
         "EPS Reported": 22.03,
@@ -1233,8 +1359,15 @@
         "Book Value Reported": 10.21,
         "ROE Reported": 49.44
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:55:09.508784"
+  "last_updated": "2026-11-14T21:04:17.926734"
 }

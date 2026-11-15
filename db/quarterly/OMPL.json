@@ -63,7 +63,7 @@
         "Current Liabilities": 228938490.0,
         "Current Assets": 369568920.0,
         "Total Assets": 1409104700.0,
-        "Revenue from Operation": 277554.95,
+        "Revenue from Operation": 277554950.0,
         "Net Profit": 8928360.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 1.49,
@@ -107,7 +107,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -5.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "OMPL",
@@ -123,7 +130,7 @@
         "Current Liabilities": 267497900.00000003,
         "Current Assets": 402792730.0,
         "Total Assets": 1452917650.0,
-        "Revenue from Operation": 51612.19,
+        "Revenue from Operation": 51612190.0,
         "Net Profit": -23077100.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -15.38,
@@ -166,7 +173,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -5.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "OMPL",
@@ -182,7 +196,7 @@
         "Current Liabilities": 343059070.0,
         "Current Assets": 491990950.0,
         "Total Assets": 1529530370.0,
-        "Revenue from Operation": 104832.25,
+        "Revenue from Operation": 104832250.0,
         "Net Profit": -38436770.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -12.81,
@@ -225,7 +239,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -5.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "OMPL",
@@ -241,7 +262,7 @@
         "Current Liabilities": 353616280.0,
         "Current Assets": 490980240.0,
         "Total Assets": 1530153410.0,
-        "Revenue from Operation": 139130.26,
+        "Revenue from Operation": 139130260.0,
         "Gross Profit": 86206320.0,
         "Net Profit": -40969930.0,
         "Number of Shares": 6000000.0,
@@ -285,7 +306,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -5.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "OMPL",
@@ -301,7 +329,7 @@
         "Current Liabilities": 381982530.0,
         "Current Assets": 502900170.0,
         "Total Assets": 1536027300.0,
-        "Revenue from Operation": 210114.24,
+        "Revenue from Operation": 210114240.0,
         "Gross Profit": 127972500.0,
         "Net Profit": -37757020.0,
         "Number of Shares": 6000000.0,
@@ -345,7 +373,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -5.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:40:40.075509"

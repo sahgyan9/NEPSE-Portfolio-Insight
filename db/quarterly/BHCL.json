@@ -8,7 +8,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:29:07.824055",
+      "parsed_at": "2026-11-14T20:38:12.010194",
       "raw": {
         "Paid Up Capital": 909101300.0,
         "Reserve and Surplus": 34267780.0,
@@ -50,7 +50,21 @@
         "revenue_ttm": 166782080.0,
         "graham_number": 128.77
       },
-      "yoy": {},
+      "yoy": {
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 261.2,
+        "Total Equity": 9.49,
+        "Borrowings": -47.85,
+        "Current Liabilities": 29.33,
+        "Current Assets": -12.96,
+        "Total Assets": -3.95,
+        "Revenue": -5.63,
+        "Net Profit": -40.32,
+        "Number of Shares": 0.0,
+        "EPS Reported": -40.32,
+        "Book Value Reported": 9.49,
+        "ROE Reported": -45.5
+      },
       "sector": "Others"
     },
     {
@@ -58,7 +72,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:29:07.824043",
+      "parsed_at": "2026-11-14T20:38:12.010189",
       "raw": {
         "Paid Up Capital": 909101300.0,
         "Reserve and Surplus": 66729080.0,
@@ -100,7 +114,21 @@
         "revenue_ttm": 192826960.0,
         "graham_number": 155.74
       },
-      "yoy": {},
+      "yoy": {
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 261.2,
+        "Total Equity": 9.49,
+        "Borrowings": -47.85,
+        "Current Liabilities": 29.33,
+        "Current Assets": -12.96,
+        "Total Assets": -3.95,
+        "Revenue": -5.63,
+        "Net Profit": -40.32,
+        "Number of Shares": 0.0,
+        "EPS Reported": -40.32,
+        "Book Value Reported": 9.49,
+        "ROE Reported": -45.5
+      },
       "sector": "Others"
     },
     {
@@ -108,7 +136,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:29:07.824031",
+      "parsed_at": "2026-11-14T20:38:12.010184",
       "raw": {
         "Paid Up Capital": 909101300.0,
         "Reserve and Surplus": 87596400.0,
@@ -152,7 +180,21 @@
         "revenue_ttm": 184140273.42,
         "graham_number": 152.88
       },
-      "yoy": {},
+      "yoy": {
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 261.2,
+        "Total Equity": 9.49,
+        "Borrowings": -47.85,
+        "Current Liabilities": 29.33,
+        "Current Assets": -12.96,
+        "Total Assets": -3.95,
+        "Revenue": -5.63,
+        "Net Profit": -40.32,
+        "Number of Shares": 0.0,
+        "EPS Reported": -40.32,
+        "Book Value Reported": 9.49,
+        "ROE Reported": -45.5
+      },
       "sector": "Others"
     },
     {
@@ -160,7 +202,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:29:07.824009",
+      "parsed_at": "2026-11-14T20:38:12.010179",
       "raw": {
         "Paid Up Capital": 909101300.0,
         "Reserve and Surplus": 113936360.0,
@@ -204,9 +246,89 @@
         "revenue_ttm": 191025520.0,
         "graham_number": 150.4
       },
-      "yoy": {},
+      "yoy": {
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 261.2,
+        "Total Equity": 9.49,
+        "Borrowings": -47.85,
+        "Current Liabilities": 29.33,
+        "Current Assets": -12.96,
+        "Total Assets": -3.95,
+        "Revenue": -5.63,
+        "Net Profit": -40.32,
+        "Number of Shares": 0.0,
+        "EPS Reported": -40.32,
+        "Book Value Reported": 9.49,
+        "ROE Reported": -45.5
+      },
       "sector": "Others"
+    },
+    {
+      "symbol": "BHCL",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-14T20:38:12.010167",
+      "raw": {
+        "Paid Up Capital": 909101300.0,
+        "Reserve and Surplus": 123775620.0,
+        "Total Equity": 1032876920.0,
+        "Borrowings": 153640400.0,
+        "Current Liabilities": 29836760.0,
+        "Current Assets": 75572550.0,
+        "Total Assets": 1192027110.0,
+        "Revenue": 39347780.0,
+        "Gross Profit": 27433510.0,
+        "Operating Profit": 13285050.0,
+        "Net Profit": 10595040.0,
+        "Number of Shares": 9091013.0,
+        "EPS Reported": 4.66,
+        "Book Value Reported": 113.62,
+        "ROE Reported": 4.1
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue",
+        "Gross Profit",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 9.1111998589856,
+        "bvps": 103.28651143517429,
+        "roe_ttm": 8.8212872449507,
+        "roa_ttm": 7.3637625682952,
+        "net_profit_ttm": 91113040.0,
+        "revenue_ttm": 188677780.0,
+        "graham_number": 145.51
+      },
+      "yoy": {
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 261.2,
+        "Total Equity": 9.49,
+        "Borrowings": -47.85,
+        "Current Liabilities": 29.33,
+        "Current Assets": -12.96,
+        "Total Assets": -3.95,
+        "Revenue": -5.63,
+        "Net Profit": -40.32,
+        "Number of Shares": 0.0,
+        "EPS Reported": -40.32,
+        "Book Value Reported": 9.49,
+        "ROE Reported": -45.5
+      },
+      "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-07T08:29:07.824903"
+  "last_updated": "2026-11-14T20:38:12.010953"
 }

@@ -67,8 +67,8 @@
         "Investment Securities": 21428568790.0,
         "Interest Income": 13125748190.0,
         "Net Interest Income": 4635136920.0,
-        "Total Operating Income": 5866366.56,
-        "Operating Profit": 3899885.51,
+        "Total Operating Income": 5866366560.0,
+        "Operating Profit": 3899885510.0,
         "Net Profit": 2722020200.0,
         "Distributable Profit": 1458750070.0,
         "Number of Shares": 186563220.0,
@@ -119,7 +119,15 @@
         "graham_number": 249.83
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -139,8 +147,8 @@
         "Investment Securities": 31402844580.0,
         "Interest Income": 18516923980.0,
         "Net Interest Income": 6479437290.0,
-        "Total Operating Income": 7958436.99,
-        "Operating Profit": 5236956.85,
+        "Total Operating Income": 7958436990.0,
+        "Operating Profit": 5236956850.0,
         "Net Profit": 3681232020.0,
         "Distributable Profit": 2390747430.0,
         "Number of Shares": 186563228.04,
@@ -191,7 +199,15 @@
         "graham_number": 256.05
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -211,8 +227,8 @@
         "Investment Securities": 31080340030.0,
         "Interest Income": 5713242780.0,
         "Net Interest Income": 1885328040.0,
-        "Total Operating Income": 2350025.53,
-        "Operating Profit": 1252341.98,
+        "Total Operating Income": 2350025530.0,
+        "Operating Profit": 1252341980.0,
         "Net Profit": 874170400.0,
         "Distributable Profit": 2073649790.0,
         "Number of Shares": 186563228.04,
@@ -266,7 +282,15 @@
         "eps_ttm": 56.17,
         "EPS(Rs.)": 56.17
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -287,8 +311,8 @@
         "Investment Securities": 30794583510.0,
         "Interest Income": 11298074070.0,
         "Net Interest Income": 3537049950.0,
-        "Total Operating Income": 4280956.11,
-        "Operating Profit": 2362365.26,
+        "Total Operating Income": 4280956110.0,
+        "Operating Profit": 2362365260.0,
         "Net Profit": 1652044750.0,
         "Distributable Profit": 4105420.0,
         "Number of Shares": 194025757.16,
@@ -343,7 +367,15 @@
         "eps_ttm": -8.19,
         "EPS(Rs.)": -8.19
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -363,8 +395,8 @@
         "Loans and Advances to Customers": 152107408460.0,
         "Interest Income": 17241128680.0,
         "Net Interest Income": 5472573170.0,
-        "Total Operating Income": 6551309.17,
-        "Operating Profit": 3523943.7,
+        "Total Operating Income": 6551309170.0,
+        "Operating Profit": 3523943700.0,
         "Net Profit": 2467556930.0,
         "Distributable Profit": 301520490.0,
         "Number of Shares": 194025757.16,
@@ -444,7 +476,15 @@
         "Base Rate": 13.74,
         "Interest Spread Rate": 2.2
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -465,8 +505,8 @@
         "Investment Securities": 29085105910.0,
         "Interest Income": 23299301310.0,
         "Net Interest Income": 7279743700.0,
-        "Total Operating Income": 8912762.28,
-        "Operating Profit": 3406739.72,
+        "Total Operating Income": 8912762280.0,
+        "Operating Profit": 3406739720.0,
         "Net Profit": 2263154090.0,
         "Distributable Profit": 204839980.0,
         "Number of Shares": 194025757.16,
@@ -548,7 +588,15 @@
         "Base Rate": 5.81,
         "Interest Spread Rate": -8.92
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -569,8 +617,8 @@
         "Investment Securities": 48913022060.0,
         "Interest Income": 6630726700.0,
         "Net Interest Income": 1998655780.0,
-        "Total Operating Income": 2622105.45,
-        "Operating Profit": 1644983.77,
+        "Total Operating Income": 2622105450.0,
+        "Operating Profit": 1644983770.0,
         "Net Profit": 1151522400.0,
         "Distributable Profit": 628655400.0,
         "Number of Shares": 194025757.16,
@@ -652,7 +700,15 @@
         "Base Rate": -2.47,
         "Interest Spread Rate": -9.51
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -673,8 +729,8 @@
         "Investment Securities": 45662640820.0,
         "Interest Income": 13073291560.0,
         "Net Interest Income": 3874399210.0,
-        "Total Operating Income": 4842004.83,
-        "Operating Profit": 3118419.85,
+        "Total Operating Income": 4842004830.0,
+        "Operating Profit": 3118419850.0,
         "Net Profit": 2182927660.0,
         "Distributable Profit": 64149800.0,
         "Number of Shares": 194025757.2,
@@ -757,7 +813,15 @@
         "Base Rate": -8.47,
         "Interest Spread Rate": -7.85
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -778,8 +842,8 @@
         "Investment Securities": 45523266160.0,
         "Interest Income": 19341490070.0,
         "Net Interest Income": 5783810990.0,
-        "Total Operating Income": 7163360.23,
-        "Operating Profit": 4111766.03,
+        "Total Operating Income": 7163360230.0,
+        "Operating Profit": 4111766030.0,
         "Net Profit": 2878746220.0,
         "Distributable Profit": 313347420.0,
         "Number of Shares": 194025757.16,
@@ -861,7 +925,15 @@
         "Base Rate": -15.8,
         "Interest Spread Rate": -4.77
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -882,8 +954,8 @@
         "Investment Securities": 47583463730.0,
         "Interest Income": 25850426670.0,
         "Net Interest Income": 8009145270.0,
-        "Total Operating Income": 9947401.59,
-        "Operating Profit": 5694932.87,
+        "Total Operating Income": 9947401590.0,
+        "Operating Profit": 5694932870.0,
         "Net Profit": 3774302810.0,
         "Distributable Profit": 1199673960.0,
         "Number of Shares": 194025757.16,
@@ -966,7 +1038,15 @@
         "Base Rate": -19.68,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -987,8 +1067,8 @@
         "Investment Securities": 49125754210.0,
         "Interest Income": 6262839390.0,
         "Net Interest Income": 2331862540.0,
-        "Total Operating Income": 3113607.63,
-        "Operating Profit": 1828318.3,
+        "Total Operating Income": 3113607630.0,
+        "Operating Profit": 1828318300.0,
         "Net Profit": 1286787200.0,
         "Distributable Profit": 2730919170.0,
         "Number of Shares": 194025757.16,
@@ -1071,7 +1151,15 @@
         "Base Rate": -25.56,
         "Interest Spread Rate": 2.05
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1092,8 +1180,8 @@
         "Investment Securities": 50525317450.0,
         "Interest Income": 11864475400.0,
         "Net Interest Income": 4419219610.0,
-        "Total Operating Income": 5636040.01,
-        "Operating Profit": 3186905.66,
+        "Total Operating Income": 5636040010.0,
+        "Operating Profit": 3186905660.0,
         "Net Profit": 1869950350.0,
         "Distributable Profit": 1841715250.0,
         "Number of Shares": 194025757.16,
@@ -1173,7 +1261,15 @@
         "Base Rate": -31.41,
         "Interest Spread Rate": -1.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1195,8 +1291,8 @@
         "Investment Securities": 52459880470.0,
         "Interest Income": 17623028850.0,
         "Net Interest Income": 6661382480.0,
-        "Total Operating Income": 8343841.52,
-        "Operating Profit": 3717834.76,
+        "Total Operating Income": 8343841520.0,
+        "Operating Profit": 3717834760.0,
         "Net Profit": 2229304140.0,
         "Distributable Profit": 1732386060.0,
         "Number of Shares": 194025757.16,
@@ -1277,7 +1373,15 @@
         "Base Rate": -26.43,
         "Interest Spread Rate": -8.52
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1299,8 +1403,8 @@
         "Investment Securities": 52369045170.0,
         "Interest Income": 23532707980.0,
         "Net Interest Income": 8822434300.0,
-        "Total Operating Income": 11167520.03,
-        "Operating Profit": 6558016.16,
+        "Total Operating Income": 11167520030.0,
+        "Operating Profit": 6558016160.0,
         "Net Profit": 4024431570.0,
         "Distributable Profit": 2780819220.0,
         "Number of Shares": 194025757.16,
@@ -1381,7 +1485,15 @@
         "Base Rate": -23.56,
         "Interest Spread Rate": -7.29
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1403,8 +1515,8 @@
         "Investment Securities": 53426608640.0,
         "Interest Income": 6262839390.0,
         "Net Interest Income": 2331862540.0,
-        "Total Operating Income": 3113607.63,
-        "Operating Profit": 1828318.3,
+        "Total Operating Income": 3113607630.0,
+        "Operating Profit": 1828318300.0,
         "Net Profit": 1286787200.0,
         "Distributable Profit": 3044609510.0,
         "Number of Shares": 194025757.16,
@@ -1485,7 +1597,15 @@
         "Base Rate": -23.23,
         "Interest Spread Rate": -2.01
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1507,8 +1627,8 @@
         "Investment Securities": 53294494150.0,
         "Interest Income": 11218395390.0,
         "Net Interest Income": 4653314970.0,
-        "Total Operating Income": 6187489.23,
-        "Operating Profit": 3395383.14,
+        "Total Operating Income": 6187489230.0,
+        "Operating Profit": 3395383140.0,
         "Net Profit": 2043378300.0,
         "Distributable Profit": 370062890.0,
         "Number of Shares": 209547817.73,
@@ -1592,7 +1712,15 @@
         "Base Rate": -19.66,
         "Interest Spread Rate": -3.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1614,8 +1742,8 @@
         "Investment Securities": 53778765610.0,
         "Interest Income": 16298745700.0,
         "Net Interest Income": 6841242730.0,
-        "Total Operating Income": 8905501.84,
-        "Operating Profit": 4893937.94,
+        "Total Operating Income": 8905501840.0,
+        "Operating Profit": 4893937940.0,
         "Net Profit": 3089335320.0,
         "Distributable Profit": 773003130.0,
         "Number of Shares": 209547817.73,
@@ -1699,7 +1827,15 @@
         "Base Rate": -22.73,
         "Interest Spread Rate": 3.84
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1721,8 +1857,8 @@
         "Investment Securities": 53057532010.0,
         "Interest Income": 21618585430.0,
         "Net Interest Income": 9212693620.0,
-        "Total Operating Income": 11900839.24,
-        "Operating Profit": 6833055.45,
+        "Total Operating Income": 11900839240.0,
+        "Operating Profit": 6833055450.0,
         "Net Profit": 4112568800.0,
         "Distributable Profit": 1907412910.0,
         "Number of Shares": 209547817.73,
@@ -1806,7 +1942,15 @@
         "Base Rate": -23.73,
         "Interest Spread Rate": -0.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCBL",
@@ -1828,8 +1972,8 @@
         "Investment Securities": 53089884550.0,
         "Interest Income": 5304962560.0,
         "Net Interest Income": 2605772120.0,
-        "Total Operating Income": 3610038.57,
-        "Operating Profit": 1961969.53,
+        "Total Operating Income": 3610038570.0,
+        "Operating Profit": 1961969530.0,
         "Net Profit": 1187657130.0,
         "Distributable Profit": 2051742400.0,
         "Number of Shares": 209547817.73,
@@ -1913,7 +2057,15 @@
         "Base Rate": -19.9,
         "Interest Spread Rate": -10.26
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:41:58.513081"

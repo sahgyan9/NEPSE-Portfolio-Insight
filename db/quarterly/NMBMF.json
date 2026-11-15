@@ -43,8 +43,8 @@
         "Investments": 2000000.0,
         "Interest Income": 605526000.0,
         "Net Interest Income": 337085000.0,
-        "Total Operating Income": 408186.0,
-        "Operating Profit": 167538.0,
+        "Total Operating Income": 408186000.0,
+        "Operating Profit": 167538000.0,
         "Net Profit": 105392000.0,
         "Number of Shares": 6558630.0,
         "EPS(Rs.)": 21.43,
@@ -88,7 +88,15 @@
         "graham_number": 271.29
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -107,8 +115,8 @@
         "Investments": 2000000.0,
         "Interest Income": 829051000.0,
         "Net Interest Income": 441394000.0,
-        "Total Operating Income": 529245.0,
-        "Operating Profit": 203312.0,
+        "Total Operating Income": 529245000.0,
+        "Operating Profit": 203312000.0,
         "Net Profit": 127953000.0,
         "Number of Shares": 6558630.0,
         "EPS(Rs.)": 19.51,
@@ -152,7 +160,15 @@
         "graham_number": 262.19
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -172,8 +188,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 210105000.0,
         "Net Interest Income": 86416000.0,
-        "Total Operating Income": 103120.0,
-        "Operating Profit": -8177.0,
+        "Total Operating Income": 103120000.0,
+        "Operating Profit": -8177000.0,
         "Net Profit": -8010000.0,
         "Number of Shares": 6558630.0,
         "EPS(Rs.)": -4.89,
@@ -217,7 +233,15 @@
         "revenue_ttm": 210105000.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -237,8 +261,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 408567000.0,
         "Net Interest Income": 169389000.0,
-        "Total Operating Income": 198880.0,
-        "Operating Profit": 7717.0,
+        "Total Operating Income": 198880000.0,
+        "Operating Profit": 7717000.0,
         "Net Profit": 5032000.0,
         "Number of Shares": 6558630.0,
         "EPS(Rs.)": 1.53,
@@ -286,7 +310,15 @@
         "eps_ttm": 126.42,
         "EPS(Rs.)": 126.42
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -306,8 +338,8 @@
         "Investment Securities": 2000000.0,
         "Interest Income": 610791590.0,
         "Net Interest Income": 259613080.0,
-        "Total Operating Income": 299527.95,
-        "Operating Profit": 16130.98,
+        "Total Operating Income": 299527950.0,
+        "Operating Profit": 16130980.0,
         "Net Profit": 11500300.0,
         "Number of Shares": 6558628.62,
         "EPS(Rs.)": 2.34,
@@ -378,7 +410,15 @@
         "Cost of funds": 40.05,
         "CD ratio": 3.37
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -398,8 +438,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 812834530.0,
         "Net Interest Income": 347438250.0,
-        "Total Operating Income": 400177.17,
-        "Operating Profit": -22666.79,
+        "Total Operating Income": 400177170.0,
+        "Operating Profit": -22666790.0,
         "Net Profit": -22417710.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": -3.11,
@@ -469,7 +509,15 @@
         "Cost of funds": 22.87,
         "CD ratio": 5.32
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -488,8 +536,8 @@
         "Investments": 2000000.0,
         "Interest Income": 160805980.0,
         "Net Interest Income": 57423710.0,
-        "Total Operating Income": 65821.09,
-        "Operating Profit": -47088.14,
+        "Total Operating Income": 65821090.0,
+        "Operating Profit": -47088140.0,
         "Net Profit": -47341320.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": -26.25,
@@ -558,7 +606,15 @@
         "Cost of funds": 1.68,
         "CD ratio": 6.84
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -577,8 +633,8 @@
         "Investments": 42000000.0,
         "Interest Income": 297175930.0,
         "Net Interest Income": 107655390.0,
-        "Total Operating Income": 127213.91,
-        "Operating Profit": -67608.85,
+        "Total Operating Income": 127213910.0,
+        "Operating Profit": -67608850.0,
         "Net Profit": -67563080.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": -18.73,
@@ -647,7 +703,15 @@
         "Cost of funds": 1.53,
         "CD ratio": 12.71
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -666,8 +730,8 @@
         "Investments": 2000000.0,
         "Interest Income": 455998200.0,
         "Net Interest Income": 175371730.0,
-        "Total Operating Income": 206331.04,
-        "Operating Profit": -75013.09,
+        "Total Operating Income": 206331040.0,
+        "Operating Profit": -75013090.0,
         "Net Profit": -74935830.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": -13.85,
@@ -735,7 +799,15 @@
         "Cost of funds": -10.06,
         "CD ratio": 26.09
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -753,8 +825,8 @@
         "Investments": 42000000.0,
         "Interest Income": 646577460.0,
         "Net Interest Income": 268900740.0,
-        "Total Operating Income": 312714.56,
-        "Operating Profit": -53798.71,
+        "Total Operating Income": 312714560.0,
+        "Operating Profit": -53798710.0,
         "Net Profit": -53390300.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": -7.4,
@@ -821,7 +893,15 @@
         "Cost of funds": -6.53,
         "CD ratio": 30.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -840,8 +920,8 @@
         "Investments": 42000000.0,
         "Interest Income": 172897760.0,
         "Net Interest Income": 80886690.0,
-        "Total Operating Income": 90834.1,
-        "Operating Profit": 7139.53,
+        "Total Operating Income": 90834100.0,
+        "Operating Profit": 7139530.0,
         "Net Profit": 7154850.0,
         "Number of Shares": 7214491.49,
         "EPS(Rs.)": 3.97,
@@ -911,7 +991,15 @@
         "Cost of funds": -22.37,
         "CD ratio": 30.15
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -931,8 +1019,8 @@
         "Investments": 42000000.0,
         "Interest Income": 353105450.0,
         "Net Interest Income": 175272380.0,
-        "Total Operating Income": 197348.06,
-        "Operating Profit": 16850.33,
+        "Total Operating Income": 197348060.0,
+        "Operating Profit": 16850330.0,
         "Net Profit": 11815490.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 3.28,
@@ -1000,7 +1088,15 @@
         "Cost of funds": -22.44,
         "CD ratio": 22.19
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1020,8 +1116,8 @@
         "Investments": 42000000.0,
         "Interest Income": 542327930.0,
         "Net Interest Income": 278634520.0,
-        "Total Operating Income": 316686.93,
-        "Operating Profit": 27487.95,
+        "Total Operating Income": 316686930.0,
+        "Operating Profit": 27487950.0,
         "Net Profit": 27525790.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 5.09,
@@ -1089,7 +1185,15 @@
         "Cost of funds": 574.87,
         "CD ratio": 12.54
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1109,8 +1213,8 @@
         "Investments": 2000000.0,
         "Interest Income": 796521530.0,
         "Net Interest Income": 435500450.0,
-        "Total Operating Income": 494375.14,
-        "Operating Profit": 68827.8,
+        "Total Operating Income": 494375140.0,
+        "Operating Profit": 68827800.0,
         "Net Profit": 63841570.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 8.85,
@@ -1177,7 +1281,15 @@
         "Cost of funds": -22.88,
         "CD ratio": 4.39
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1197,8 +1309,8 @@
         "Investments": 2000000.0,
         "Interest Income": 234381430.0,
         "Net Interest Income": 136335530.0,
-        "Total Operating Income": 151212.12,
-        "Operating Profit": 18176.36,
+        "Total Operating Income": 151212120.0,
+        "Operating Profit": 18176360.0,
         "Net Profit": 12725090.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 7.06,
@@ -1266,7 +1378,15 @@
         "Cost of funds": -18.3,
         "CD ratio": 4.07
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1286,8 +1406,8 @@
         "Investments": 42000000.0,
         "Interest Income": 469439150.0,
         "Net Interest Income": 283143970.0,
-        "Total Operating Income": 316220.06,
-        "Operating Profit": 49833.35,
+        "Total Operating Income": 316220060.0,
+        "Operating Profit": 49833350.0,
         "Net Profit": 34891740.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 9.67,
@@ -1358,7 +1478,15 @@
         "Cost of funds": -20.28,
         "CD ratio": 3.28
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1378,8 +1506,8 @@
         "Investments": 1195690.0,
         "Interest Income": 725320690.0,
         "Net Interest Income": 444206740.0,
-        "Total Operating Income": 496237.55,
-        "Operating Profit": 108119.02,
+        "Total Operating Income": 496237550.0,
+        "Operating Profit": 108119020.0,
         "Net Profit": 87013310.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 16.08,
@@ -1450,7 +1578,15 @@
         "Cost of funds": -90.82,
         "CD ratio": -2.77
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMBMF",
@@ -1470,8 +1606,8 @@
         "Investments": 1195690.0,
         "Interest Income": 1034684570.0,
         "Net Interest Income": 643488200.0,
-        "Total Operating Income": 724775.0,
-        "Operating Profit": 191756.89,
+        "Total Operating Income": 724775000.0,
+        "Operating Profit": 191756890.0,
         "Net Profit": 147401960.0,
         "Number of Shares": 7214491.49,
         "EPS Reported": 20.43,
@@ -1542,7 +1678,15 @@
         "Cost of funds": -17.58,
         "CD ratio": -0.36
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:35:16.870870"

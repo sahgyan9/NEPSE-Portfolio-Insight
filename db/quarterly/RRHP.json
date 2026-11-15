@@ -8,7 +8,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T09:54:06.125722",
+      "parsed_at": "2026-11-15T11:53:30.714302",
       "raw": {
         "Paid Up Capital": 560000000.0,
         "Reserve and Surplus": 54883870.0,
@@ -18,7 +18,7 @@
         "Current Assets": 72966640.0,
         "Total Assets": 1928713540.0,
         "Revenue": 170161040.0,
-        "Operating Profit": 143900.79,
+        "Operating Profit": 143900790.0,
         "Net Profit": 38521490.0,
         "Number of Shares": 5600000.0,
         "EPS(Rs.)": 9.17,
@@ -51,14 +51,21 @@
         "graham_number": 150.51
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RRHP",
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T09:54:06.125610",
+      "parsed_at": "2026-11-15T11:53:30.714110",
       "raw": {
         "Paid Up Capital": 560000000.0,
         "Reserve and Surplus": 75381330.0,
@@ -68,7 +75,7 @@
         "Current Assets": 104692850.0,
         "Total Assets": 1943611170.0,
         "Revenue": 230361770.0,
-        "Operating Profit": 198407.51,
+        "Operating Profit": 198407510.0,
         "Net Profit": 59018950.0,
         "Number of Shares": 5600000.0,
         "EPS(Rs.)": 10.54,
@@ -101,14 +108,21 @@
         "graham_number": 164.03
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RRHP",
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T09:54:06.125463",
+      "parsed_at": "2026-11-15T11:53:30.713853",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -127,7 +141,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T09:54:06.125446",
+      "parsed_at": "2026-11-15T11:53:30.713833",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -146,7 +160,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:54:06.125412",
+      "parsed_at": "2026-11-15T11:53:30.713790",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -161,5 +175,5 @@
       "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-07T09:54:06.127086"
+  "last_updated": "2026-11-15T11:53:30.715855"
 }

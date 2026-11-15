@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:18:10.675804",
+      "parsed_at": "2026-11-14T21:27:16.259532",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": 5528700.0,
@@ -20,8 +20,8 @@
         "Investment Securities": 66867570.0,
         "Interest Income": 53514130.0,
         "Net Interest Income": 16339600.0,
-        "Total Operating Income": 23318.41,
-        "Operating Profit": 577.74,
+        "Total Operating Income": 23318410.0,
+        "Operating Profit": 577740.0,
         "Net Profit": 507480.0,
         "Distributable Profit": 5528700.0,
         "Number of Shares": 4520000.0,
@@ -71,14 +71,22 @@
         "graham_number": 19.29
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:18:10.675760",
+      "parsed_at": "2026-11-14T21:27:16.259476",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": 8291420.0,
@@ -90,8 +98,8 @@
         "Investment Securities": 75452170.0,
         "Interest Income": 90845150.0,
         "Net Interest Income": 33167070.0,
-        "Total Operating Income": 42680.79,
-        "Operating Profit": 4482.93,
+        "Total Operating Income": 42680790.0,
+        "Operating Profit": 4482930.0,
         "Net Profit": 4087750.0,
         "Distributable Profit": 8291420.0,
         "Number of Shares": 4520000.0,
@@ -141,14 +149,22 @@
         "graham_number": 47.19
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:18:10.675716",
+      "parsed_at": "2026-11-14T21:27:16.259421",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": 8709530.0,
@@ -160,8 +176,8 @@
         "Investment Securities": 144785000.0,
         "Interest Income": 35721640.0,
         "Net Interest Income": 4906480.0,
-        "Total Operating Income": 6890.25,
-        "Operating Profit": 578.31,
+        "Total Operating Income": 6890250.0,
+        "Operating Profit": 578310.0,
         "Net Profit": 418110.0,
         "Distributable Profit": 8709530.0,
         "Number of Shares": 4520000.0,
@@ -211,14 +227,22 @@
         "graham_number": 30.24
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:18:10.675672",
+      "parsed_at": "2026-11-14T21:27:16.259363",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": 9369900.0,
@@ -230,8 +254,8 @@
         "Investment Securities": 122632900.0,
         "Interest Income": 91372650.0,
         "Net Interest Income": 16682940.0,
-        "Total Operating Income": 21857.41,
-        "Operating Profit": 3311.87,
+        "Total Operating Income": 21857410.0,
+        "Operating Profit": 3311870.0,
         "Net Profit": 2331610.0,
         "Distributable Profit": 9369900.0,
         "Number of Shares": 4520000.0,
@@ -281,14 +305,22 @@
         "graham_number": 50.52
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:18:10.675628",
+      "parsed_at": "2026-11-14T21:27:16.259298",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": -3620720.0,
@@ -300,8 +332,8 @@
         "Investment Securities": 133513680.0,
         "Interest Income": 145705800.0,
         "Net Interest Income": 30214330.0,
-        "Total Operating Income": 38396.31,
-        "Operating Profit": 6440.27,
+        "Total Operating Income": 38396310.0,
+        "Operating Profit": 6440270.0,
         "Net Profit": 5366900.0,
         "Distributable Profit": -3620720.0,
         "Number of Shares": 4520000.0,
@@ -380,14 +412,22 @@
         "Base Rate": 8.43,
         "Interest Spread Rate": -5.06
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:18:10.675583",
+      "parsed_at": "2026-11-14T21:27:16.259241",
       "raw": {
         "Paid Up Capital": 452000000.0,
         "Retained Earnings": -3120460.0,
@@ -399,8 +439,8 @@
         "Investment Securities": 152651790.0,
         "Interest Income": 182545880.0,
         "Net Interest Income": 49344760.0,
-        "Total Operating Income": 60948.17,
-        "Operating Profit": 7333.59,
+        "Total Operating Income": 60948170.0,
+        "Operating Profit": 7333590.0,
         "Net Profit": 5992230.0,
         "Distributable Profit": -3120460.0,
         "Number of Shares": 4520000.0,
@@ -479,14 +519,22 @@
         "Base Rate": 5.45,
         "Interest Spread Rate": 8.83
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:18:10.675539",
+      "parsed_at": "2026-11-14T21:27:16.259183",
       "raw": {
         "Paid Up Capital": 595922700.0,
         "Retained Earnings": 2933620.0,
@@ -498,8 +546,8 @@
         "Investment Securities": 227363560.0,
         "Interest Income": 56856750.0,
         "Net Interest Income": 19509080.0,
-        "Total Operating Income": 21418.73,
-        "Operating Profit": 6297.91,
+        "Total Operating Income": 21418730.0,
+        "Operating Profit": 6297910.0,
         "Net Profit": 6580480.0,
         "Distributable Profit": 2933620.0,
         "Number of Shares": 5959227.0,
@@ -578,14 +626,22 @@
         "Base Rate": 3.57,
         "Interest Spread Rate": -7.14
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:18:10.675494",
+      "parsed_at": "2026-11-14T21:27:16.259121",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -598,8 +654,8 @@
         "Investment Securities": 287978210.0,
         "Interest Income": 115661070.0,
         "Net Interest Income": 38425350.0,
-        "Total Operating Income": 44223.15,
-        "Operating Profit": 12614.18,
+        "Total Operating Income": 44223150.0,
+        "Operating Profit": 12614180.0,
         "Net Profit": 11249570.0,
         "Distributable Profit": 7682200.0,
         "Number of Shares": 6102000.0,
@@ -679,14 +735,22 @@
         "Base Rate": -5.76,
         "Interest Spread Rate": -4.59
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:18:10.675448",
+      "parsed_at": "2026-11-14T21:27:16.259050",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -699,8 +763,8 @@
         "Investment Securities": 245799890.0,
         "Interest Income": 172954730.0,
         "Net Interest Income": 62085210.0,
-        "Total Operating Income": 74325.05,
-        "Operating Profit": 20720.23,
+        "Total Operating Income": 74325050.0,
+        "Operating Profit": 20720230.0,
         "Net Profit": 15932890.0,
         "Distributable Profit": 11428860.0,
         "Number of Shares": 6102000.0,
@@ -780,14 +844,22 @@
         "Base Rate": -5.47,
         "Interest Spread Rate": -4.9
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:18:10.675401",
+      "parsed_at": "2026-11-14T21:27:16.258943",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -800,8 +872,8 @@
         "Investment Securities": 292861890.0,
         "Interest Income": 236266700.0,
         "Net Interest Income": 90242850.0,
-        "Total Operating Income": 115813.05,
-        "Operating Profit": 26816.46,
+        "Total Operating Income": 115813050.0,
+        "Operating Profit": 26816460.0,
         "Net Profit": 20343030.0,
         "Distributable Profit": 14956970.0,
         "Number of Shares": 6102000.0,
@@ -881,14 +953,22 @@
         "Base Rate": -14.85,
         "Interest Spread Rate": -1.1
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:18:10.675354",
+      "parsed_at": "2026-11-14T21:27:16.258814",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -901,8 +981,8 @@
         "Investment Securities": 391478410.0,
         "Interest Income": 63212820.0,
         "Net Interest Income": 23120890.0,
-        "Total Operating Income": 44554.71,
-        "Operating Profit": 21106.96,
+        "Total Operating Income": 44554710.0,
+        "Operating Profit": 21106960.0,
         "Net Profit": 14774870.0,
         "Distributable Profit": 19350580.0,
         "Number of Shares": 6102000.0,
@@ -982,14 +1062,22 @@
         "Base Rate": -19.45,
         "Interest Spread Rate": 2.71
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:18:10.675307",
+      "parsed_at": "2026-11-14T21:27:16.258684",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1002,8 +1090,8 @@
         "Investment Securities": 857071480.0,
         "Interest Income": 130559030.0,
         "Net Interest Income": 46666450.0,
-        "Total Operating Income": 74264.8,
-        "Operating Profit": 28626.06,
+        "Total Operating Income": 74264800.0,
+        "Operating Profit": 28626060.0,
         "Net Profit": 20038240.0,
         "Distributable Profit": 16594390.0,
         "Number of Shares": 6102000.0,
@@ -1081,14 +1169,22 @@
         "Base Rate": -20.41,
         "Interest Spread Rate": 0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:18:10.675260",
+      "parsed_at": "2026-11-14T21:27:16.258553",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1103,8 +1199,8 @@
         "Investment Securities": 1173334860.0,
         "Interest Income": 194346200.0,
         "Net Interest Income": 64894850.0,
-        "Total Operating Income": 102624.55,
-        "Operating Profit": 32511.93,
+        "Total Operating Income": 102624550.0,
+        "Operating Profit": 32511930.0,
         "Net Profit": 21647420.0,
         "Distributable Profit": 17881740.0,
         "Number of Shares": 6102000.0,
@@ -1184,14 +1280,22 @@
         "Base Rate": -24.09,
         "Interest Spread Rate": 2.91
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:18:10.675209",
+      "parsed_at": "2026-11-14T21:27:16.258253",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1206,8 +1310,8 @@
         "Investment Securities": 1306025410.0,
         "Interest Income": 263969770.0,
         "Net Interest Income": 87602550.0,
-        "Total Operating Income": 154358.65,
-        "Operating Profit": 33862.25,
+        "Total Operating Income": 154358650.0,
+        "Operating Profit": 33862250.0,
         "Net Profit": 23324320.0,
         "Distributable Profit": 12109240.0,
         "Number of Shares": 6102000.0,
@@ -1287,14 +1391,22 @@
         "Base Rate": -19.97,
         "Interest Spread Rate": 1.55
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:18:10.675159",
+      "parsed_at": "2026-11-14T21:27:16.257957",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1309,8 +1421,8 @@
         "Investment Securities": 970993000.0,
         "Interest Income": 64262880.0,
         "Net Interest Income": 17691970.0,
-        "Total Operating Income": 39361.18,
-        "Operating Profit": 20066.7,
+        "Total Operating Income": 39361180.0,
+        "Operating Profit": 20066700.0,
         "Net Profit": 13567700.0,
         "Distributable Profit": 16920600.0,
         "Number of Shares": 6102000.0,
@@ -1390,14 +1502,22 @@
         "Base Rate": -18.98,
         "Interest Spread Rate": -1.54
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:18:10.675109",
+      "parsed_at": "2026-11-14T21:27:16.257683",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1412,8 +1532,8 @@
         "Investment Securities": 1358387490.0,
         "Interest Income": 126711530.0,
         "Net Interest Income": 35870250.0,
-        "Total Operating Income": 72780.26,
-        "Operating Profit": 11876.76,
+        "Total Operating Income": 72780260.0,
+        "Operating Profit": 11876760.0,
         "Net Profit": 7834740.0,
         "Distributable Profit": 18377030.0,
         "Number of Shares": 6102000.0,
@@ -1496,14 +1616,22 @@
         "Base Rate": -19.07,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:18:10.675058",
+      "parsed_at": "2026-11-14T21:27:16.257512",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1518,8 +1646,8 @@
         "Investment Securities": 1517905680.0,
         "Interest Income": 187559500.0,
         "Net Interest Income": 53155810.0,
-        "Total Operating Income": 96217.11,
-        "Operating Profit": 8289.67,
+        "Total Operating Income": 96217110.0,
+        "Operating Profit": 8289670.0,
         "Net Profit": 5323770.0,
         "Distributable Profit": 16368260.0,
         "Number of Shares": 6102000.0,
@@ -1602,14 +1730,22 @@
         "Base Rate": -18.46,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:18:10.675004",
+      "parsed_at": "2026-11-14T21:27:16.257439",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1624,8 +1760,8 @@
         "Investment Securities": 1530195050.0,
         "Interest Income": 263972650.0,
         "Net Interest Income": 84124050.0,
-        "Total Operating Income": 135759.25,
-        "Operating Profit": 71120.36,
+        "Total Operating Income": 135759250.0,
+        "Operating Profit": 71120360.0,
         "Net Profit": 54347920.0,
         "Distributable Profit": 30212630.0,
         "Number of Shares": 6102000.0,
@@ -1708,14 +1844,22 @@
         "Base Rate": -16.74,
         "Interest Spread Rate": -0.87
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MPFL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:18:10.674942",
+      "parsed_at": "2026-11-14T21:27:16.257355",
       "raw": {
         "Paid Up Capital": 610200000.0,
         "Share Premium": 10540720.0,
@@ -1730,8 +1874,8 @@
         "Investment Securities": 1326362450.0,
         "Interest Income": 73538170.0,
         "Net Interest Income": 31435110.0,
-        "Total Operating Income": 38965.73,
-        "Operating Profit": 4664.75,
+        "Total Operating Income": 38965730.0,
+        "Operating Profit": 4664750.0,
         "Net Profit": 3265330.0,
         "Distributable Profit": 35934220.0,
         "Number of Shares": 6102000.0,
@@ -1814,8 +1958,16 @@
         "Base Rate": -11.99,
         "Interest Spread Rate": 11.86
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:18:10.677049"
+  "last_updated": "2026-11-14T21:27:16.261930"
 }

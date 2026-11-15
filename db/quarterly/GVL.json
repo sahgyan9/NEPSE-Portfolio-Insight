@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:52:20.433900",
+      "parsed_at": "2026-11-14T21:01:08.709807",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": -136261410.0,
@@ -19,7 +19,7 @@
         "Total Assets": 11478344960.0,
         "Revenue": 606560480.0,
         "Gross Profit": 350201480.0,
-        "Operating Profit": 354505.08,
+        "Operating Profit": 354505080.0,
         "Net Profit": 67817700.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 2.89,
@@ -53,14 +53,21 @@
         "graham_number": 78.86
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:52:20.433874",
+      "parsed_at": "2026-11-14T21:01:08.709770",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": -111428280.0,
@@ -71,7 +78,7 @@
         "Total Assets": 11580302240.0,
         "Revenue": 944343850.0,
         "Gross Profit": 542436020.0,
-        "Operating Profit": 543638.75,
+        "Operating Profit": 543638750.0,
         "Net Profit": 92906910.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 2.97,
@@ -105,14 +112,21 @@
         "graham_number": 80.27
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:52:20.433846",
+      "parsed_at": "2026-11-14T21:01:08.709721",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 83162280.0,
@@ -123,7 +137,7 @@
         "Total Assets": 11796835850.0,
         "Revenue": 520517310.0,
         "Gross Profit": 371904000.0,
-        "Operating Profit": 366506.97,
+        "Operating Profit": 366506970.0,
         "Net Profit": 194589890.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 24.91,
@@ -157,14 +171,21 @@
         "graham_number": 239.87
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:52:20.433820",
+      "parsed_at": "2026-11-14T21:01:08.709669",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 210690550.0,
@@ -175,7 +196,7 @@
         "Total Assets": 11589050450.0,
         "Revenue": 926989760.0,
         "Gross Profit": 627610530.0,
-        "Operating Profit": 618537.51,
+        "Operating Profit": 618537510.0,
         "Net Profit": 304220310.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 19.47,
@@ -209,14 +230,21 @@
         "graham_number": 216.24
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:52:20.433794",
+      "parsed_at": "2026-11-14T21:01:08.709617",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 208085510.0,
@@ -227,7 +255,7 @@
         "Total Assets": 11450293310.0,
         "Revenue": 1219874430.0,
         "Gross Profit": 777769160.0,
-        "Operating Profit": 764462.0,
+        "Operating Profit": 764462000.0,
         "Net Profit": 301617610.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 12.87,
@@ -281,14 +309,21 @@
         "Book Value(Rs.)": 11.52,
         "ROE": 298.35
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:52:20.433768",
+      "parsed_at": "2026-11-14T21:01:08.709537",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 225252690.0,
@@ -299,7 +334,7 @@
         "Total Assets": 11493756900.0,
         "Revenue": 1544515040.0,
         "Gross Profit": 958086800.0,
-        "Operating Profit": 940251.58,
+        "Operating Profit": 940251580.0,
         "Net Profit": 319059630.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 10.21,
@@ -353,14 +388,21 @@
         "Book Value(Rs.)": 11.19,
         "ROE": 209.09
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:52:20.433741",
+      "parsed_at": "2026-11-14T21:01:08.709475",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 460182570.0,
@@ -371,7 +413,7 @@
         "Total Assets": 11639631220.0,
         "Revenue": 547190420.0,
         "Gross Profit": 394733020.0,
-        "Operating Profit": 390624.6,
+        "Operating Profit": 390624600.0,
         "Net Profit": 234658430.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 30.04,
@@ -425,14 +467,21 @@
         "Book Value(Rs.)": 11.76,
         "ROE": 7.91
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:52:20.433715",
+      "parsed_at": "2026-11-14T21:01:08.709423",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 523133630.0,
@@ -443,7 +492,7 @@
         "Total Assets": 11631726060.0,
         "Revenue": 915727340.0,
         "Gross Profit": 613247000.0,
-        "Operating Profit": 604886.57,
+        "Operating Profit": 604886570.0,
         "Net Profit": 305104370.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 19.53,
@@ -497,14 +546,21 @@
         "Book Value(Rs.)": 9.37,
         "ROE": -8.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:52:20.433688",
+      "parsed_at": "2026-11-14T21:01:08.709372",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 478439410.0,
@@ -515,7 +571,7 @@
         "Total Assets": 11514311220.0,
         "Revenue": 1186804610.0,
         "Gross Profit": 725692870.0,
-        "Operating Profit": 711661.9,
+        "Operating Profit": 711661900.0,
         "Net Profit": 260413770.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 11.11,
@@ -569,14 +625,21 @@
         "Book Value(Rs.)": 8.11,
         "ROE": -20.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:52:20.433644",
+      "parsed_at": "2026-11-14T21:01:08.709320",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 368789200.0,
@@ -587,7 +650,7 @@
         "Total Assets": 11249267980.0,
         "Revenue": 1477587480.0,
         "Gross Profit": 758851060.0,
-        "Operating Profit": 774626.3,
+        "Operating Profit": 774626300.0,
         "Net Profit": 150760890.0,
         "Number of Shares": 31250000.0,
         "EPS(Rs.)": 4.82,
@@ -641,14 +704,21 @@
         "Book Value(Rs.)": 4.27,
         "ROE": -54.62
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:52:20.433545",
+      "parsed_at": "2026-11-14T21:01:08.709268",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 593788470.0,
@@ -659,7 +729,7 @@
         "Total Assets": 11364876530.0,
         "Revenue": 567822900.0,
         "Gross Profit": 403369180.0,
-        "Operating Profit": 396456.24,
+        "Operating Profit": 396456240.0,
         "Net Profit": 239302230.0,
         "Number of Shares": 31250000.0,
         "EPS Reported": 30.63,
@@ -710,14 +780,21 @@
         "Net Profit": 1.98,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:52:20.433448",
+      "parsed_at": "2026-11-14T21:01:08.709217",
       "raw": {
         "Paid Up Capital": 3125000000.0,
         "Reserve and Surplus": 725942280.0,
@@ -728,7 +805,7 @@
         "Total Assets": 11388326010.0,
         "Revenue": 998035700.0,
         "Gross Profit": 679543960.0,
-        "Operating Profit": 666988.57,
+        "Operating Profit": 666988570.0,
         "Net Profit": 374166620.0,
         "Number of Shares": 31250000.0,
         "EPS Reported": 23.95,
@@ -779,14 +856,21 @@
         "Net Profit": 22.64,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:52:20.433351",
+      "parsed_at": "2026-11-14T21:01:08.709156",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 412793300.0,
@@ -797,7 +881,7 @@
         "Total Assets": 11228045130.0,
         "Revenue": 1286493840.0,
         "Gross Profit": 809700160.0,
-        "Operating Profit": 790974.36,
+        "Operating Profit": 790974360.0,
         "Net Profit": 373518130.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 14.49,
@@ -848,14 +932,21 @@
         "Net Profit": 43.43,
         "Number of Shares": 10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:52:20.433257",
+      "parsed_at": "2026-11-14T21:01:08.709103",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 412477050.0,
@@ -866,7 +957,7 @@
         "Total Assets": 11027227150.0,
         "Revenue": 1618884490.0,
         "Gross Profit": 994438840.0,
-        "Operating Profit": 940589.91,
+        "Operating Profit": 940589910.0,
         "Net Profit": 389646460.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 11.34,
@@ -917,14 +1008,21 @@
         "Net Profit": 158.45,
         "Number of Shares": 10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:52:20.433159",
+      "parsed_at": "2026-11-14T21:01:08.709049",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 715364210.0,
@@ -935,7 +1033,7 @@
         "Total Assets": 10672079760.0,
         "Revenue": 576092880.0,
         "Gross Profit": 419226460.0,
-        "Operating Profit": 411664.26,
+        "Operating Profit": 411664260.0,
         "Net Profit": 302893570.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 35.25,
@@ -989,14 +1087,21 @@
         "Book Value Reported": 1.52,
         "ROE Reported": 13.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:52:20.433062",
+      "parsed_at": "2026-11-14T21:01:08.708998",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 858287010.0,
@@ -1007,7 +1112,7 @@
         "Total Assets": 10789634280.0,
         "Revenue": 1012729200.0,
         "Gross Profit": 683281280.0,
-        "Operating Profit": 668668.42,
+        "Operating Profit": 668668420.0,
         "Net Profit": 466745660.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 27.16,
@@ -1061,14 +1166,21 @@
         "Book Value Reported": 1.41,
         "ROE Reported": 11.84
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:52:20.432960",
+      "parsed_at": "2026-11-14T21:01:08.708944",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 885964400.0,
@@ -1079,7 +1191,7 @@
         "Total Assets": 10814998960.0,
         "Revenue": 1295694950.0,
         "Gross Profit": 804160980.0,
-        "Operating Profit": 782741.07,
+        "Operating Profit": 782741070.0,
         "Net Profit": 494414700.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 19.18,
@@ -1133,14 +1245,21 @@
         "Book Value Reported": 12.28,
         "ROE Reported": 17.94
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GVL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:52:20.432831",
+      "parsed_at": "2026-11-14T21:01:08.708879",
       "raw": {
         "Paid Up Capital": 3437500000.0,
         "Reserve and Surplus": 836288390.0,
@@ -1151,7 +1270,7 @@
         "Total Assets": 10776605070.0,
         "Revenue": 1574206020.0,
         "Gross Profit": 778942930.0,
-        "Operating Profit": 750866.32,
+        "Operating Profit": 750866320.0,
         "Net Profit": 444741860.0,
         "Number of Shares": 34375000.0,
         "EPS Reported": 12.94,
@@ -1205,8 +1324,15 @@
         "Book Value Reported": 11.01,
         "ROE Reported": 2.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:52:20.434769"
+  "last_updated": "2026-11-14T21:01:08.711044"
 }

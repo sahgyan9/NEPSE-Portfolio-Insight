@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:40:38.024199",
+      "parsed_at": "2026-11-14T20:49:33.195519",
       "raw": {
         "Paid Up Capital": 759067500.0,
         "Reserve and Surplus": 18487000.0,
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:40:38.024145",
+      "parsed_at": "2026-11-14T20:49:33.195424",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 18499740.0,
@@ -100,7 +100,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:40:38.024087",
+      "parsed_at": "2026-11-14T20:49:33.195331",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 18548740.0,
@@ -148,7 +148,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:40:38.024052",
+      "parsed_at": "2026-11-14T20:49:33.195231",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 32714580.0,
@@ -196,7 +196,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:40:38.024021",
+      "parsed_at": "2026-11-14T20:49:33.195139",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 33884790.0,
@@ -260,7 +260,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:40:38.023990",
+      "parsed_at": "2026-11-14T20:49:33.195049",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 5981790.0,
@@ -323,7 +323,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:40:38.023961",
+      "parsed_at": "2026-11-14T20:49:33.194958",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 30299690.0,
@@ -389,7 +389,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:40:38.023930",
+      "parsed_at": "2026-11-14T20:49:33.194863",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 32227350.0,
@@ -455,7 +455,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:40:38.023898",
+      "parsed_at": "2026-11-14T20:49:33.194772",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 2750840.0,
@@ -521,7 +521,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:40:38.023866",
+      "parsed_at": "2026-11-14T20:49:33.194682",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 1986760.0,
@@ -587,7 +587,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:40:38.023834",
+      "parsed_at": "2026-11-14T20:49:33.194583",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": 17740640.0,
@@ -654,7 +654,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:40:38.023797",
+      "parsed_at": "2026-11-14T20:49:33.194477",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": -152557700.0,
@@ -665,7 +665,7 @@
         "Total Assets": 3181255210.0,
         "Revenue": 178860380.0,
         "Gross Profit": 163259120.0,
-        "Operating Profit": 93268.58,
+        "Operating Profit": 93268580.0,
         "Net Profit": -8070560.0,
         "Number of Shares": 10542604.0,
         "EPS Reported": -1.53,
@@ -713,14 +713,21 @@
         "Net Profit": -125.35,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:40:38.023762",
+      "parsed_at": "2026-11-14T20:49:33.194375",
       "raw": {
         "Paid Up Capital": 1054260400.0,
         "Reserve and Surplus": -183400280.0,
@@ -731,7 +738,7 @@
         "Total Assets": 3159631050.0,
         "Revenue": 234476840.0,
         "Gross Profit": 211366350.0,
-        "Operating Profit": 107083.11,
+        "Operating Profit": 107083110.0,
         "Net Profit": -38018820.0,
         "Number of Shares": 10542604.0,
         "EPS Reported": -4.81,
@@ -779,14 +786,21 @@
         "Net Profit": -809.26,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:40:38.023726",
+      "parsed_at": "2026-11-14T20:49:33.194271",
       "raw": {
         "Paid Up Capital": 2099157900.0,
         "Reserve and Surplus": 89347880.0,
@@ -797,7 +811,7 @@
         "Total Assets": 3587223890.0,
         "Revenue": 303594120.0,
         "Gross Profit": 262293880.0,
-        "Operating Profit": 119751.47,
+        "Operating Profit": 119751470.0,
         "Net Profit": -70569420.0,
         "Number of Shares": 20991579.0,
         "EPS Reported": -3.36,
@@ -845,14 +859,21 @@
         "Net Profit": -1635.36,
         "Number of Shares": 99.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:40:38.023690",
+      "parsed_at": "2026-11-14T20:49:33.194169",
       "raw": {
         "Paid Up Capital": 2108520800.0,
         "Reserve and Surplus": 112730540.0,
@@ -863,7 +884,7 @@
         "Total Assets": 3501940070.0,
         "Revenue": 80060210.0,
         "Gross Profit": 66027950.0,
-        "Operating Profit": 33253.35,
+        "Operating Profit": 33253350.0,
         "Net Profit": 8937890.0,
         "Number of Shares": 21085208.0,
         "EPS Reported": 1.7,
@@ -915,14 +936,21 @@
         "Book Value Reported": 3.61,
         "ROE Reported": -75.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:40:38.023654",
+      "parsed_at": "2026-11-14T20:49:33.194085",
       "raw": {
         "Paid Up Capital": 2108520800.0,
         "Reserve and Surplus": 110105820.0,
@@ -933,7 +961,7 @@
         "Total Assets": 3510413620.0,
         "Revenue": 148428130.0,
         "Gross Profit": 121908120.0,
-        "Operating Profit": 59565.98,
+        "Operating Profit": 59565980.0,
         "Net Profit": 7279180.0,
         "Number of Shares": 21085208.0,
         "EPS Reported": 0.69,
@@ -987,14 +1015,21 @@
         "Book Value Reported": 23.02,
         "ROE Reported": 136.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:40:38.023614",
+      "parsed_at": "2026-11-14T20:49:33.193997",
       "raw": {
         "Paid Up Capital": 2108520800.0,
         "Reserve and Surplus": 115948560.0,
@@ -1005,7 +1040,7 @@
         "Total Assets": 3732157230.0,
         "Revenue": 205865310.0,
         "Gross Profit": 176534700.0,
-        "Operating Profit": 68123.05,
+        "Operating Profit": 68123050.0,
         "Net Profit": 13121910.0,
         "Number of Shares": 21085208.0,
         "EPS Reported": 0.83,
@@ -1059,14 +1094,21 @@
         "Book Value Reported": 27.72,
         "ROE Reported": 113.57
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DORDI",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:40:38.023565",
+      "parsed_at": "2026-11-14T20:49:33.193889",
       "raw": {
         "Paid Up Capital": 2108520800.0,
         "Reserve and Surplus": 132799460.0,
@@ -1077,7 +1119,7 @@
         "Total Assets": 4284849380.0,
         "Revenue": 296581490.0,
         "Gross Profit": 231428810.0,
-        "Operating Profit": 88176.96,
+        "Operating Profit": 88176960.0,
         "Net Profit": 29972810.0,
         "Number of Shares": 21085208.0,
         "EPS Reported": 1.42,
@@ -1131,8 +1173,15 @@
         "Book Value Reported": 1.96,
         "ROE Reported": 141.61
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:40:38.025373"
+  "last_updated": "2026-11-14T20:49:33.198433"
 }

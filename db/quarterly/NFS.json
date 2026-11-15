@@ -91,8 +91,8 @@
         "Investment Securities": 223122000.0,
         "Interest Income": 103875000.0,
         "Net Interest Income": 48856000.0,
-        "Total Operating Income": 77584.0,
-        "Operating Profit": 33953.0,
+        "Total Operating Income": 77584000.0,
+        "Operating Profit": 33953000.0,
         "Net Profit": 32066000.0,
         "Distributable Profit": -303195000.0,
         "Number of Shares": 4934960.0,
@@ -144,7 +144,15 @@
         "graham_number": 165.46
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -165,8 +173,8 @@
         "Investment Securities": 443378000.0,
         "Interest Income": 165683000.0,
         "Net Interest Income": 77231000.0,
-        "Total Operating Income": 113001.0,
-        "Operating Profit": 52194.0,
+        "Total Operating Income": 113001000.0,
+        "Operating Profit": 52194000.0,
         "Net Profit": 48578000.0,
         "Distributable Profit": -274324000.0,
         "Number of Shares": 7254720.0,
@@ -221,7 +229,15 @@
         "eps_ttm": 132.94,
         "EPS(Rs.)": 132.94
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -242,8 +258,8 @@
         "Investment Securities": 606834000.0,
         "Interest Income": 66076000.0,
         "Net Interest Income": 28790000.0,
-        "Total Operating Income": 37697.0,
-        "Operating Profit": 11685.0,
+        "Total Operating Income": 37697000.0,
+        "Operating Profit": 11685000.0,
         "Net Profit": 8179000.0,
         "Distributable Profit": -246289000.0,
         "Number of Shares": 7252720.0,
@@ -298,7 +314,15 @@
         "eps_ttm": -83.13,
         "EPS(Rs.)": -83.13
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -319,8 +343,8 @@
         "Investment Securities": 681926000.0,
         "Interest Income": 133817000.0,
         "Net Interest Income": 50436000.0,
-        "Total Operating Income": 62737.0,
-        "Operating Profit": 16885.0,
+        "Total Operating Income": 62737000.0,
+        "Operating Profit": 16885000.0,
         "Net Profit": 13479000.0,
         "Distributable Profit": -224075000.0,
         "Number of Shares": 7272980.0,
@@ -375,7 +399,15 @@
         "eps_ttm": -80.13,
         "EPS(Rs.)": -80.13
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -396,8 +428,8 @@
         "Investment Securities": 748595000.0,
         "Interest Income": 196785000.0,
         "Net Interest Income": 67049000.0,
-        "Total Operating Income": 85517.0,
-        "Operating Profit": 10594.0,
+        "Total Operating Income": 85517000.0,
+        "Operating Profit": 10594000.0,
         "Net Profit": 10335000.0,
         "Distributable Profit": -224063000.0,
         "Number of Shares": 7272980.0,
@@ -480,7 +512,15 @@
         "Base Rate": -1.34,
         "Interest Spread Rate": -11.48
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -501,8 +541,8 @@
         "Investment Securities": 749929000.0,
         "Interest Income": 269691000.0,
         "Net Interest Income": 91454000.0,
-        "Total Operating Income": 112751.0,
-        "Operating Profit": 25422.0,
+        "Total Operating Income": 112751000.0,
+        "Operating Profit": 25422000.0,
         "Net Profit": 25681000.0,
         "Distributable Profit": -210330000.0,
         "Number of Shares": 7275480.0,
@@ -585,7 +625,15 @@
         "Base Rate": -1.98,
         "Interest Spread Rate": -6.35
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -606,8 +654,8 @@
         "Investment Securities": 832259000.0,
         "Interest Income": 65694000.0,
         "Net Interest Income": 15286000.0,
-        "Total Operating Income": 17710.0,
-        "Operating Profit": -20244.0,
+        "Total Operating Income": 17710000.0,
+        "Operating Profit": -20244000.0,
         "Net Profit": -20244000.0,
         "Distributable Profit": -236748000.0,
         "Number of Shares": 7295020.0,
@@ -689,7 +737,15 @@
         "Base Rate": -12.64,
         "Interest Spread Rate": -5.61
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -710,8 +766,8 @@
         "Investment Securities": 740586470.0,
         "Interest Income": 143940730.0,
         "Net Interest Income": 49240160.0,
-        "Total Operating Income": 68909.15,
-        "Operating Profit": 812.27,
+        "Total Operating Income": 68909150.0,
+        "Operating Profit": 812270.0,
         "Net Profit": 812270.0,
         "Distributable Profit": -212338160.0,
         "Number of Shares": 7294967.47,
@@ -794,7 +850,15 @@
         "Base Rate": -19.81,
         "Interest Spread Rate": -1.09
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -815,8 +879,8 @@
         "Investment Securities": 551766870.0,
         "Interest Income": 220609100.0,
         "Net Interest Income": 75953910.0,
-        "Total Operating Income": 101337.67,
-        "Operating Profit": 1883.87,
+        "Total Operating Income": 101337670.0,
+        "Operating Profit": 1883870.0,
         "Net Profit": 1318710.0,
         "Distributable Profit": -221002220.0,
         "Number of Shares": 7294967.47,
@@ -899,7 +963,15 @@
         "Base Rate": -20.06,
         "Interest Spread Rate": -4.18
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -920,8 +992,8 @@
         "Investment Securities": 471049150.0,
         "Interest Income": 310362420.0,
         "Net Interest Income": 110755950.0,
-        "Total Operating Income": 152365.16,
-        "Operating Profit": 25883.21,
+        "Total Operating Income": 152365160.0,
+        "Operating Profit": 25883210.0,
         "Net Profit": 18118250.0,
         "Distributable Profit": -208229090.0,
         "Number of Shares": 7299067.47,
@@ -1004,7 +1076,15 @@
         "Base Rate": -13.43,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1025,8 +1105,8 @@
         "Investment Securities": 484494440.0,
         "Interest Income": 86467810.0,
         "Net Interest Income": 29051070.0,
-        "Total Operating Income": 34931.04,
-        "Operating Profit": -24001.38,
+        "Total Operating Income": 34931040.0,
+        "Operating Profit": -24001380.0,
         "Net Profit": -24001380.0,
         "Distributable Profit": -250701840.0,
         "Number of Shares": 7299067.47,
@@ -1108,7 +1188,15 @@
         "Base Rate": -18.84,
         "Interest Spread Rate": 0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1129,8 +1217,8 @@
         "Investment Securities": 494947170.0,
         "Interest Income": 173052880.0,
         "Net Interest Income": 55222460.0,
-        "Total Operating Income": 63377.8,
-        "Operating Profit": 29291.48,
+        "Total Operating Income": 63377800.0,
+        "Operating Profit": 29291480.0,
         "Net Profit": 20504040.0,
         "Distributable Profit": -261909880.0,
         "Number of Shares": 7299067.47,
@@ -1210,7 +1298,15 @@
         "Base Rate": -30.63,
         "Interest Spread Rate": 0.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1232,8 +1328,8 @@
         "Investment Securities": 544023580.0,
         "Interest Income": 227536260.0,
         "Net Interest Income": 46174660.0,
-        "Total Operating Income": 59509.1,
-        "Operating Profit": -622.67,
+        "Total Operating Income": 59509100.0,
+        "Operating Profit": -622670.0,
         "Net Profit": 1700610.0,
         "Distributable Profit": -278033970.0,
         "Number of Shares": 7299067.47,
@@ -1314,7 +1410,15 @@
         "Base Rate": -23.32,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1336,8 +1440,8 @@
         "Investment Securities": 544668560.0,
         "Interest Income": 339117260.0,
         "Net Interest Income": 90492400.0,
-        "Total Operating Income": 135625.16,
-        "Operating Profit": 28013.42,
+        "Total Operating Income": 135625160.0,
+        "Operating Profit": 28013420.0,
         "Net Profit": 21745870.0,
         "Distributable Profit": -287964320.0,
         "Number of Shares": 7594467.47,
@@ -1418,7 +1522,15 @@
         "Base Rate": -27.25,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1440,8 +1552,8 @@
         "Investment Securities": 525643310.0,
         "Interest Income": 84898980.0,
         "Net Interest Income": 18004410.0,
-        "Total Operating Income": 22391.2,
-        "Operating Profit": -59560.08,
+        "Total Operating Income": 22391200.0,
+        "Operating Profit": -59560080.0,
         "Net Profit": -59560080.0,
         "Distributable Profit": -332610120.0,
         "Number of Shares": 7594467.47,
@@ -1521,7 +1633,15 @@
         "Base Rate": -20.25,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1543,8 +1663,8 @@
         "Investment Securities": 541397020.0,
         "Interest Income": 159895170.0,
         "Net Interest Income": 31140730.0,
-        "Total Operating Income": 48161.08,
-        "Operating Profit": -87349.4,
+        "Total Operating Income": 48161080.0,
+        "Operating Profit": -87349400.0,
         "Net Profit": -87349400.0,
         "Distributable Profit": -384256240.0,
         "Number of Shares": 7756467.47,
@@ -1627,7 +1747,15 @@
         "Base Rate": -7.47,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1649,8 +1777,8 @@
         "Investment Securities": 544432630.0,
         "Interest Income": 247365060.0,
         "Net Interest Income": 58104540.0,
-        "Total Operating Income": 80404.24,
-        "Operating Profit": -78625.21,
+        "Total Operating Income": 80404240.0,
+        "Operating Profit": -78625210.0,
         "Net Profit": -78625210.0,
         "Distributable Profit": -375546430.0,
         "Number of Shares": 7756467.47,
@@ -1733,7 +1861,15 @@
         "Base Rate": -14.68,
         "Interest Spread Rate": -0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1755,8 +1891,8 @@
         "Investment Securities": 473179960.0,
         "Interest Income": 337469630.0,
         "Net Interest Income": 84066810.0,
-        "Total Operating Income": 111882.53,
-        "Operating Profit": -69616.36,
+        "Total Operating Income": 111882530.0,
+        "Operating Profit": -69616360.0,
         "Net Profit": -69616360.0,
         "Distributable Profit": -365099050.0,
         "Number of Shares": 7781467.47,
@@ -1839,7 +1975,15 @@
         "Base Rate": -16.13,
         "Interest Spread Rate": -0.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NFS",
@@ -1861,8 +2005,8 @@
         "Investment Securities": 484171260.0,
         "Interest Income": 91566460.0,
         "Net Interest Income": 34914830.0,
-        "Total Operating Income": 37524.37,
-        "Operating Profit": -14802.14,
+        "Total Operating Income": 37524370.0,
+        "Operating Profit": -14802140.0,
         "Net Profit": -29952890.0,
         "Distributable Profit": -406324040.0,
         "Number of Shares": 7781467.47,
@@ -1945,7 +2089,15 @@
         "Base Rate": -17.19,
         "Interest Spread Rate": -3.5
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:29:01.147712"

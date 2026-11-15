@@ -8,7 +8,7 @@
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T09:02:23.939841",
+      "parsed_at": "2026-11-14T21:11:32.611628",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -27,7 +27,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T09:02:23.939834",
+      "parsed_at": "2026-11-14T21:11:32.611622",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -46,7 +46,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T09:02:23.939828",
+      "parsed_at": "2026-11-14T21:11:32.611616",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -65,7 +65,7 @@
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T09:02:23.939820",
+      "parsed_at": "2026-11-14T21:11:32.611610",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -84,7 +84,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:02:23.939812",
+      "parsed_at": "2026-11-14T21:11:32.611604",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -125591110.0,
@@ -95,7 +95,7 @@
         "Total Assets": 490430070.0,
         "Revenue": 11018420.0,
         "Gross Profit": 9467670.0,
-        "Operating Profit": 7992.67,
+        "Operating Profit": 7992670.0,
         "Net Profit": -1825060.0,
         "Number of Shares": 3714000.0,
         "EPS(Rs.)": -1.97,
@@ -128,14 +128,21 @@
         "revenue_ttm": 11018420.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:02:23.939765",
+      "parsed_at": "2026-11-14T21:11:32.611564",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -131845880.0,
@@ -146,7 +153,7 @@
         "Total Assets": 481137740.0,
         "Revenue": 12497220.0,
         "Gross Profit": 9248150.0,
-        "Operating Profit": 8071.15,
+        "Operating Profit": 8071150.0,
         "Net Profit": -8079830.0,
         "Number of Shares": 3714000.0,
         "EPS(Rs.)": -4.35,
@@ -179,14 +186,21 @@
         "revenue_ttm": 12497220.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:02:23.939716",
+      "parsed_at": "2026-11-14T21:11:32.611525",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -139214850.0,
@@ -197,7 +211,7 @@
         "Total Assets": 472822380.0,
         "Revenue": 13422080.0,
         "Gross Profit": 9291770.0,
-        "Operating Profit": 7556.27,
+        "Operating Profit": 7556270.0,
         "Net Profit": -15448800.0,
         "Number of Shares": 3714000.0,
         "EPS(Rs.)": -5.55,
@@ -230,14 +244,21 @@
         "revenue_ttm": 13422080.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:02:23.939667",
+      "parsed_at": "2026-11-14T21:11:32.611486",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -154580840.0,
@@ -248,7 +269,7 @@
         "Total Assets": 479371290.0,
         "Revenue": 17694240.0,
         "Gross Profit": 7367340.0,
-        "Operating Profit": 363.23,
+        "Operating Profit": 363230.0,
         "Net Profit": -30814790.0,
         "Number of Shares": 3714000.0,
         "EPS Reported": -8.3,
@@ -281,14 +302,21 @@
         "revenue_ttm": 17694240.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:02:23.939619",
+      "parsed_at": "2026-11-14T21:11:32.611449",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -177999860.0,
@@ -299,7 +327,7 @@
         "Total Assets": 464428500.0,
         "Revenue": 9856380.0,
         "Gross Profit": 7522160.0,
-        "Operating Profit": 5700.14,
+        "Operating Profit": 5700140.0,
         "Net Profit": -4808320.0,
         "Number of Shares": 3714000.0,
         "EPS Reported": -5.18,
@@ -349,14 +377,21 @@
         "Net Profit": -163.46,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:02:23.939568",
+      "parsed_at": "2026-11-14T21:11:32.611410",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -180719760.0,
@@ -367,7 +402,7 @@
         "Total Assets": 477463080.0,
         "Revenue": 17425730.0,
         "Gross Profit": 14860020.0,
-        "Operating Profit": 11918.22,
+        "Operating Profit": 11918220.0,
         "Net Profit": -7528230.0,
         "Number of Shares": 3714000.0,
         "EPS Reported": -4.05,
@@ -417,14 +452,21 @@
         "Net Profit": 6.83,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:02:23.939517",
+      "parsed_at": "2026-11-14T21:11:32.611372",
       "raw": {
         "Paid Up Capital": 371499000.0,
         "Reserve and Surplus": -191126320.0,
@@ -435,7 +477,7 @@
         "Total Assets": 464463740.0,
         "Revenue": 19347100.0,
         "Gross Profit": 15609160.0,
-        "Operating Profit": 11085.1,
+        "Operating Profit": 11085100.0,
         "Net Profit": -17835780.0,
         "Number of Shares": 3714990.0,
         "EPS Reported": -6.4,
@@ -485,14 +527,21 @@
         "Net Profit": -15.45,
         "Number of Shares": 0.03
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:02:23.939464",
+      "parsed_at": "2026-11-14T21:11:32.611326",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": -204935110.0,
@@ -503,7 +552,7 @@
         "Total Assets": 459048430.0,
         "Revenue": 25456320.0,
         "Gross Profit": 17219890.0,
-        "Operating Profit": 9329.62,
+        "Operating Profit": 9329620.0,
         "Net Profit": -31743570.0,
         "Number of Shares": 3714000.0,
         "EPS Reported": -8.55,
@@ -556,14 +605,21 @@
         "Book Value Reported": -23.23,
         "ROE Reported": -34.2
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:02:23.939410",
+      "parsed_at": "2026-11-14T21:11:32.611287",
       "raw": {
         "Paid Up Capital": 371400000.0,
         "Reserve and Surplus": 5270900.0,
@@ -574,7 +630,7 @@
         "Total Assets": 461699070.0,
         "Revenue": 4866790.0,
         "Gross Profit": 3418890.0,
-        "Operating Profit": 1084.89,
+        "Operating Profit": 1084890.0,
         "Net Profit": -12611300.0,
         "Number of Shares": 3714000.0,
         "EPS Reported": -13.58,
@@ -627,14 +683,21 @@
         "Book Value Reported": 94.78,
         "ROE Reported": -34.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:02:23.939353",
+      "parsed_at": "2026-11-14T21:11:32.611247",
       "raw": {
         "Paid Up Capital": 612810000.0,
         "Reserve and Surplus": -196823520.0,
@@ -645,7 +708,7 @@
         "Total Assets": 450232490.0,
         "Revenue": 4866790.0,
         "Gross Profit": 2306390.0,
-        "Operating Profit": -2462.28,
+        "Operating Profit": -2462280.0,
         "Net Profit": -21958560.0,
         "Number of Shares": 6128100.0,
         "EPS Reported": -7.17,
@@ -698,14 +761,21 @@
         "Book Value Reported": 32.22,
         "ROE Reported": -33.67
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:02:23.939293",
+      "parsed_at": "2026-11-14T21:11:32.611205",
       "raw": {
         "Paid Up Capital": 612810000.0,
         "Reserve and Surplus": -208577500.0,
@@ -716,7 +786,7 @@
         "Total Assets": 444820150.0,
         "Revenue": 4866790.0,
         "Gross Profit": -777500.0,
-        "Operating Profit": -25822.44,
+        "Operating Profit": -25822440.0,
         "Net Profit": -33712540.0,
         "Number of Shares": 6128100.0,
         "EPS Reported": -7.34,
@@ -769,14 +839,21 @@
         "Book Value Reported": 35.86,
         "ROE Reported": 15.63
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JOSHI",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:02:23.939224",
+      "parsed_at": "2026-11-14T21:11:32.611154",
       "raw": {
         "Paid Up Capital": 612810000.0,
         "Reserve and Surplus": -214916420.0,
@@ -787,7 +864,7 @@
         "Total Assets": 442391350.0,
         "Revenue": 8851530.0,
         "Gross Profit": -5343320.0,
-        "Operating Profit": -40051.46,
+        "Operating Profit": -40051460.0,
         "Net Profit": -40051460.0,
         "Number of Shares": 6128100.0,
         "EPS Reported": -6.54,
@@ -840,8 +917,15 @@
         "Book Value Reported": 44.87,
         "ROE Reported": 47.19
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:02:23.941102"
+  "last_updated": "2026-11-14T21:11:32.613694"
 }

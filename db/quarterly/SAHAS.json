@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:42:40.999716",
+      "parsed_at": "2026-11-14T20:25:27.650695",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 1984071540.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 556161430.0,
         "Current Assets": 402687450.0,
         "Total Assets": 13133677300.0,
-        "Operating Profit": 581343.5,
+        "Operating Profit": 581343500.0,
         "Net Profit": 581343500.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 22.15,
@@ -49,14 +49,21 @@
         "graham_number": 279.45
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:42:40.999683",
+      "parsed_at": "2026-11-14T20:25:27.650612",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2020111080.0,
@@ -65,7 +72,7 @@
         "Current Liabilities": 821460080.0,
         "Current Assets": 771534680.0,
         "Total Assets": 14468338240.0,
-        "Operating Profit": 715326.1,
+        "Operating Profit": 715326100.0,
         "Net Profit": 715326100.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 20.44,
@@ -97,14 +104,21 @@
         "graham_number": 269.32
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:42:40.999648",
+      "parsed_at": "2026-11-14T20:25:27.650529",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2122267090.0,
@@ -113,7 +127,7 @@
         "Current Liabilities": 1721426250.0,
         "Current Assets": 952988850.0,
         "Total Assets": 15342134010.0,
-        "Operating Profit": 101896.04,
+        "Operating Profit": 101896040.0,
         "Net Profit": 101896040.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 11.65,
@@ -145,14 +159,21 @@
         "graham_number": 205.2
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:42:40.999612",
+      "parsed_at": "2026-11-14T20:25:27.650443",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2314446250.0,
@@ -161,7 +182,7 @@
         "Current Liabilities": 1797350530.0,
         "Current Assets": 730414500.0,
         "Total Assets": 15980442610.0,
-        "Operating Profit": 215995.49,
+        "Operating Profit": 215995490.0,
         "Net Profit": 215995490.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 12.34,
@@ -193,14 +214,21 @@
         "graham_number": 214.77
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:42:40.999563",
+      "parsed_at": "2026-11-14T20:25:27.650357",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2363584590.0,
@@ -211,7 +239,7 @@
         "Total Assets": 16922744300.0,
         "Revenue": 218081660.0,
         "Gross Profit": 211007890.0,
-        "Operating Profit": 412269.12,
+        "Operating Profit": 412269120.0,
         "Net Profit": 265133830.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 10.1,
@@ -262,14 +290,21 @@
         "eps_ttm": -54.4,
         "bvps": 6.92
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:42:40.999502",
+      "parsed_at": "2026-11-14T20:25:27.650265",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2172785860.0,
@@ -280,7 +315,7 @@
         "Total Assets": 17128654340.0,
         "Revenue": 612810570.0,
         "Gross Profit": 583047590.0,
-        "Operating Profit": 611049.66,
+        "Operating Profit": 611049660.0,
         "Net Profit": 134740500.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 3.85,
@@ -331,14 +366,21 @@
         "eps_ttm": -81.16,
         "bvps": 2.76
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:42:40.999441",
+      "parsed_at": "2026-11-14T20:25:27.650171",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2499184510.0,
@@ -349,7 +391,7 @@
         "Total Assets": 17278213170.0,
         "Revenue": 893348470.0,
         "Gross Profit": 710043640.0,
-        "Operating Profit": 680802.94,
+        "Operating Profit": 680802940.0,
         "Net Profit": 344808570.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 39.41,
@@ -400,14 +442,21 @@
         "eps_ttm": 238.28,
         "bvps": 6.7
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:42:40.999334",
+      "parsed_at": "2026-11-14T20:25:27.650076",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2603865330.0,
@@ -418,7 +467,7 @@
         "Total Assets": 17118704450.0,
         "Revenue": 1533670840.0,
         "Gross Profit": 1171482840.0,
-        "Operating Profit": 1115633.83,
+        "Operating Profit": 1115633830.0,
         "Net Profit": 458630890.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 26.21,
@@ -469,14 +518,21 @@
         "eps_ttm": 112.4,
         "bvps": 4.98
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:42:40.999232",
+      "parsed_at": "2026-11-14T20:25:27.649981",
       "raw": {
         "Paid Up Capital": 3500000000.0,
         "Reserve and Surplus": 2623424250.0,
@@ -487,7 +543,7 @@
         "Total Assets": 17003198820.0,
         "Revenue": 2025271360.0,
         "Gross Profit": 1486604520.0,
-        "Operating Profit": 1404750.81,
+        "Operating Profit": 1404750810.0,
         "Net Profit": 478189820.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 18.22,
@@ -541,7 +597,14 @@
         "eps_ttm": 80.4,
         "bvps": 4.43
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAHAS",
@@ -549,7 +612,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:42:40.999135",
+      "parsed_at": "2026-11-14T20:25:27.649885",
       "computed": {
         "pe_ratio": 68.5,
         "pb_ratio": 3.9,
@@ -593,7 +656,7 @@
         "Total Assets": 17083872350.0,
         "Revenue": 2448059910.0,
         "Gross Profit": 1711715610.0,
-        "Operating Profit": 1589833.41,
+        "Operating Profit": 1589833410.0,
         "Net Profit": 416042020.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 11.89,
@@ -645,6 +708,13 @@
         "EPS(Rs.)": 208.83,
         "Book Value(Rs.)": 6.85,
         "ROE": 188.24
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -653,7 +723,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:40.999039",
+      "parsed_at": "2026-11-14T20:25:27.649787",
       "computed": {
         "pe_ratio": 44.3,
         "pb_ratio": 3.2,
@@ -697,7 +767,7 @@
         "Total Assets": 17620846550.0,
         "Revenue": 867884240.0,
         "Gross Profit": 667208670.0,
-        "Operating Profit": 645857.17,
+        "Operating Profit": 645857170.0,
         "Net Profit": 400225670.0,
         "Number of Shares": 35000000.0,
         "EPS(Rs.)": 45.74,
@@ -749,6 +819,13 @@
         "EPS(Rs.)": 16.06,
         "Book Value(Rs.)": 7.78,
         "ROE": 7.7
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -757,7 +834,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:40.998939",
+      "parsed_at": "2026-11-14T20:25:27.649684",
       "computed": {
         "pe_ratio": 40.7,
         "pb_ratio": 3.0,
@@ -801,7 +878,7 @@
         "Total Assets": 17706414150.0,
         "Revenue": 1617547280.0,
         "Gross Profit": 1216700550.0,
-        "Operating Profit": 1169975.82,
+        "Operating Profit": 1169975820.0,
         "Net Profit": 709882830.0,
         "Number of Shares": 37800000.0,
         "EPS Reported": 37.56,
@@ -847,6 +924,13 @@
         "EPS Reported": 24.43,
         "Book Value Reported": -1.78,
         "ROE Reported": 26.68
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -855,7 +939,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:40.998843",
+      "parsed_at": "2026-11-14T20:25:27.649588",
       "computed": {
         "pe_ratio": 30.3,
         "pb_ratio": 3.0,
@@ -899,7 +983,7 @@
         "Total Assets": 17737851460.0,
         "Revenue": 2146851000.0,
         "Gross Profit": 1552391020.0,
-        "Operating Profit": 1487197.55,
+        "Operating Profit": 1487197550.0,
         "Net Profit": 834187490.0,
         "Number of Shares": 37800000.0,
         "EPS Reported": 29.42,
@@ -945,6 +1029,13 @@
         "EPS Reported": 24.43,
         "Book Value Reported": -1.78,
         "ROE Reported": 26.68
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -953,7 +1044,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:40.998746",
+      "parsed_at": "2026-11-14T20:25:27.649491",
       "computed": {
         "pe_ratio": 28.5,
         "pb_ratio": 3.7,
@@ -997,7 +1088,7 @@
         "Total Assets": 17720233880.0,
         "Revenue": 2652588210.0,
         "Gross Profit": 1829629420.0,
-        "Operating Profit": 1731716.27,
+        "Operating Profit": 1731716270.0,
         "Net Profit": 902723070.0,
         "Number of Shares": 37800000.0,
         "EPS Reported": 23.88,
@@ -1043,6 +1134,13 @@
         "EPS Reported": 24.43,
         "Book Value Reported": -1.78,
         "ROE Reported": 26.68
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1051,7 +1149,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:40.998647",
+      "parsed_at": "2026-11-14T20:25:27.649396",
       "computed": {
         "pe_ratio": 27.9,
         "pb_ratio": 3.6,
@@ -1095,7 +1193,7 @@
         "Total Assets": 17986815620.0,
         "Revenue": 925328740.0,
         "Gross Profit": 704508900.0,
-        "Operating Profit": 677478.85,
+        "Operating Profit": 677478850.0,
         "Net Profit": 494899980.0,
         "Number of Shares": 37800000.0,
         "EPS Reported": 52.37,
@@ -1141,6 +1239,13 @@
         "EPS Reported": 24.43,
         "Book Value Reported": -1.78,
         "ROE Reported": 26.68
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1149,7 +1254,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:40.998517",
+      "parsed_at": "2026-11-14T20:25:27.649297",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.4,
@@ -1193,7 +1298,7 @@
         "Total Assets": 18843694390.0,
         "Revenue": 1706531000.0,
         "Gross Profit": 1291493520.0,
-        "Operating Profit": 1245569.39,
+        "Operating Profit": 1245569390.0,
         "Net Profit": 904828360.0,
         "Number of Shares": 45738000.0,
         "EPS Reported": 39.57,
@@ -1239,6 +1344,13 @@
         "EPS Reported": 5.35,
         "Book Value Reported": -4.56,
         "ROE Reported": 10.38
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1247,7 +1359,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:40.998398",
+      "parsed_at": "2026-11-14T20:25:27.649194",
       "computed": {
         "pe_ratio": 26.8,
         "pb_ratio": 3.8,
@@ -1271,7 +1383,7 @@
         "dupont_roe": 15.46,
         "debt_to_equity": 1.28,
         "net_interest_margin": null,
-        "operating_profit_margin": 71.37,
+        "operating_profit_margin": 71.44,
         "revenue_per_share": 62.08,
         "qoq_profit_momentum": -32.21,
         "loan_to_asset": null,
@@ -1291,7 +1403,7 @@
         "Total Assets": 18536828260.0,
         "Revenue": 2333888930.0,
         "Gross Profit": 2184467240.0,
-        "Operating Profit": 1667231.08,
+        "Operating Profit": 1667231080.0,
         "Net Profit": 1182718340.0,
         "Number of Shares": 45738000.0,
         "EPS Reported": 34.48,
@@ -1337,6 +1449,13 @@
         "EPS Reported": 17.2,
         "Book Value Reported": -2.91,
         "ROE Reported": 20.73
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1344,7 +1463,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:40.998178",
+      "parsed_at": "2026-11-14T20:25:27.649073",
       "raw": {
         "Paid Up Capital": 4573800000.0,
         "Reserve and Surplus": 3685780090.0,
@@ -1355,7 +1474,7 @@
         "Total Assets": 18461455380.0,
         "Revenue": 2844534710.0,
         "Gross Profit": 1997527390.0,
-        "Operating Profit": 1975831.2,
+        "Operating Profit": 1975831200.0,
         "Net Profit": 1359156440.0,
         "Number of Shares": 45738000.0,
         "EPS Reported": 29.72,
@@ -1409,8 +1528,15 @@
         "Book Value Reported": -1.78,
         "ROE Reported": 26.71
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:41.000988"
+  "last_updated": "2026-11-14T20:25:27.653210"
 }

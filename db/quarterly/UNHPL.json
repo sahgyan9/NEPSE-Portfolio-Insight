@@ -18,7 +18,7 @@
         "Current Assets": 91892950.0,
         "Total Assets": 830581600.0,
         "Revenue": 65993460.0,
-        "Operating Profit": 52815.11,
+        "Operating Profit": 52815110.0,
         "Net Profit": 25568310.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 4.55,
@@ -51,7 +51,14 @@
         "graham_number": 97.72
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -68,7 +75,7 @@
         "Current Assets": 95881900.0,
         "Total Assets": 832050420.0,
         "Revenue": 82961750.0,
-        "Operating Profit": 65842.64,
+        "Operating Profit": 65842640.0,
         "Net Profit": 30013030.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 4.0,
@@ -101,7 +108,14 @@
         "graham_number": 91.91
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -119,7 +133,7 @@
         "Total Assets": 836164490.0,
         "Revenue": 28505970.0,
         "Gross Profit": 27860900.0,
-        "Operating Profit": 23107.28,
+        "Operating Profit": 23107280.0,
         "Net Profit": 14426270.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 7.69,
@@ -153,7 +167,14 @@
         "graham_number": 128.58
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -170,7 +191,7 @@
         "Current Assets": 97725330.0,
         "Total Assets": 832776070.0,
         "Revenue": 48383420.0,
-        "Operating Profit": 38318.48,
+        "Operating Profit": 38318480.0,
         "Net Profit": 19688500.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 5.25,
@@ -203,7 +224,14 @@
         "graham_number": 106.76
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -287,7 +315,7 @@
         "Total Assets": 812574990.0,
         "Revenue": 73613620.0,
         "Gross Profit": 73717740.0,
-        "Operating Profit": 53500.3,
+        "Operating Profit": 53500300.0,
         "Net Profit": 14580190.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 1.94,
@@ -340,7 +368,14 @@
         "Book Value(Rs.)": 2.08,
         "ROE": -52.35
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -358,7 +393,7 @@
         "Total Assets": 770168720.0,
         "Revenue": 25887960.0,
         "Gross Profit": 25903210.0,
-        "Operating Profit": 20707.9,
+        "Operating Profit": 20707900.0,
         "Net Profit": 10514250.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 5.61,
@@ -412,7 +447,14 @@
         "Book Value(Rs.)": 2.01,
         "ROE": -28.57
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -430,7 +472,7 @@
         "Total Assets": 763246600.0,
         "Revenue": 44829050.0,
         "Gross Profit": 46859960.0,
-        "Operating Profit": 37407.45,
+        "Operating Profit": 37407450.0,
         "Net Profit": 18014470.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 4.8,
@@ -483,7 +525,14 @@
         "Book Value(Rs.)": 1.54,
         "ROE": -9.93
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -501,7 +550,7 @@
         "Total Assets": 754186850.0,
         "Revenue": 57176610.0,
         "Gross Profit": 57223440.0,
-        "Operating Profit": 43422.67,
+        "Operating Profit": 43422670.0,
         "Net Profit": 15343700.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 2.73,
@@ -553,7 +602,14 @@
         "Book Value(Rs.)": 1.51,
         "ROE": -12.54
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -571,7 +627,7 @@
         "Total Assets": 745128980.0,
         "Revenue": 67830820.0,
         "Gross Profit": 67830820.0,
-        "Operating Profit": 47657.2,
+        "Operating Profit": 47657200.0,
         "Net Profit": 10709200.0,
         "Number of Shares": 7500000.0,
         "EPS(Rs.)": 1.43,
@@ -625,7 +681,14 @@
         "Book Value(Rs.)": 1.25,
         "ROE": -27.59
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -643,7 +706,7 @@
         "Total Assets": 755113880.0,
         "Revenue": 27987550.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 23339.38,
+        "Operating Profit": 23339380.0,
         "Net Profit": 14479010.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 7.72,
@@ -694,7 +757,14 @@
         "Net Profit": 37.71,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -712,7 +782,7 @@
         "Total Assets": 756802460.0,
         "Revenue": 46927330.0,
         "Gross Profit": 46927330.0,
-        "Operating Profit": 37789.89,
+        "Operating Profit": 37789890.0,
         "Net Profit": 20877600.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 5.57,
@@ -763,7 +833,14 @@
         "Net Profit": 15.89,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -781,7 +858,7 @@
         "Total Assets": 784248080.0,
         "Revenue": 58940990.0,
         "Gross Profit": 58940990.0,
-        "Operating Profit": 46596.0,
+        "Operating Profit": 46596000.0,
         "Net Profit": 21939670.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 3.9,
@@ -832,7 +909,14 @@
         "Net Profit": 42.99,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -850,7 +934,7 @@
         "Total Assets": 756686690.0,
         "Revenue": 75098890.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 58730.94,
+        "Operating Profit": 58730940.0,
         "Net Profit": 26222830.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 3.5,
@@ -901,7 +985,14 @@
         "Net Profit": 144.86,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -919,7 +1010,7 @@
         "Total Assets": 97810310.0,
         "Revenue": 27752160.0,
         "Gross Profit": 27752160.0,
-        "Operating Profit": 22599.56,
+        "Operating Profit": 22599560.0,
         "Net Profit": 14603410.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 7.79,
@@ -972,7 +1063,14 @@
         "Book Value Reported": 4.23,
         "ROE Reported": -3.32
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -990,7 +1088,7 @@
         "Total Assets": 781293100.0,
         "Revenue": 49612420.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 41719.13,
+        "Operating Profit": 41719130.0,
         "Net Profit": 26352330.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 7.03,
@@ -1044,7 +1142,14 @@
         "Book Value Reported": 3.23,
         "ROE Reported": 22.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -1062,7 +1167,7 @@
         "Total Assets": 787686240.0,
         "Revenue": 63512380.0,
         "Gross Profit": 63512380.0,
-        "Operating Profit": 30418.24,
+        "Operating Profit": 30418240.0,
         "Net Profit": 29457200.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 5.24,
@@ -1116,7 +1221,14 @@
         "Book Value Reported": 4.26,
         "ROE Reported": 28.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNHPL",
@@ -1134,7 +1246,7 @@
         "Total Assets": 790772420.0,
         "Revenue": 81315960.0,
         "Gross Profit": 81315960.0,
-        "Operating Profit": 33695.59,
+        "Operating Profit": 33695590.0,
         "Net Profit": 32678580.0,
         "Number of Shares": 7500000.0,
         "EPS Reported": 4.36,
@@ -1187,7 +1299,14 @@
         "Book Value Reported": 4.09,
         "ROE Reported": 19.6
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:22:01.979740"

@@ -18,8 +18,8 @@
         "Loans and Advances to Customers": 19800.0,
         "Interest Income": 796170.0,
         "Net Interest Income": 796160.0,
-        "Total Operating Income": 796.46,
-        "Operating Profit": 67.68,
+        "Total Operating Income": 796460.0,
+        "Operating Profit": 67680.0,
         "Net Profit": 151860.0,
         "Number of Shares": 1120000.0,
         "EPS(Rs.)": 0.13,
@@ -59,7 +59,15 @@
         "graham_number": 17.11
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -78,8 +86,8 @@
         "Investments": 7000000.0,
         "Interest Income": 425621000.0,
         "Net Interest Income": 191784000.0,
-        "Total Operating Income": 256379.0,
-        "Operating Profit": 91497.0,
+        "Total Operating Income": 256379000.0,
+        "Operating Profit": 91497000.0,
         "Net Profit": 71538000.0,
         "Number of Shares": 2700000.0,
         "EPS(Rs.)": 35.33,
@@ -123,7 +131,15 @@
         "graham_number": 344.2
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -142,8 +158,8 @@
         "Investments": 7000000.0,
         "Interest Income": 631878000.0,
         "Net Interest Income": 284922000.0,
-        "Total Operating Income": 365094.0,
-        "Operating Profit": 133704.0,
+        "Total Operating Income": 365094000.0,
+        "Operating Profit": 133704000.0,
         "Net Profit": 99756000.0,
         "Number of Shares": 2700000.0,
         "EPS(Rs.)": 36.95,
@@ -187,7 +203,15 @@
         "graham_number": 362.63
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 4361777000.0,
         "Interest Income": 125422000.0,
         "Net Interest Income": 16108000.0,
-        "Total Operating Income": 29826.0,
-        "Operating Profit": -30558.0,
+        "Total Operating Income": 29826000.0,
+        "Operating Profit": -30558000.0,
         "Net Profit": -29688000.0,
         "Number of Shares": 2700000.0,
         "EPS(Rs.)": -43.98,
@@ -248,7 +272,15 @@
         "revenue_ttm": 125422000.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -266,8 +298,8 @@
         "Loans and Advances to Customers": 4302162970.0,
         "Interest Income": 292493680.0,
         "Net Interest Income": 71800610.0,
-        "Total Operating Income": 97919.09,
-        "Operating Profit": 14742.17,
+        "Total Operating Income": 97919090.0,
+        "Operating Profit": 14742170.0,
         "Net Profit": 10319520.0,
         "Number of Shares": 2700000.0,
         "EPS(Rs.)": 7.64,
@@ -330,7 +362,15 @@
         "CAR": -94.68,
         "Cost of funds": 39.5
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -348,8 +388,8 @@
         "Loans and Advances to Customers": 3986028480.0,
         "Interest Income": 484585630.0,
         "Net Interest Income": 154552330.0,
-        "Total Operating Income": 189233.32,
-        "Operating Profit": 15630.19,
+        "Total Operating Income": 189233320.0,
+        "Operating Profit": 15630190.0,
         "Net Profit": 15630190.0,
         "Number of Shares": 2700000.0,
         "EPS(Rs.)": 7.72,
@@ -414,7 +454,15 @@
         "NPL": 406.77,
         "Cost of funds": 38.29
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -431,8 +479,8 @@
         "Loans and Advances to Customers": 3705297120.0,
         "Interest Income": 635534900.0,
         "Net Interest Income": 197382110.0,
-        "Total Operating Income": 239734.69,
-        "Operating Profit": 2241.19,
+        "Total Operating Income": 239734690.0,
+        "Operating Profit": 2241190.0,
         "Net Profit": 22241190.0,
         "Number of Shares": 3186000.0,
         "EPS(Rs.)": 6.98,
@@ -498,7 +546,15 @@
         "Cost of funds": 26.58,
         "CD ratio": -6.57
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -515,8 +571,8 @@
         "Loans and Advances to Customers": 3824439460.0,
         "Interest Income": 144032920.0,
         "Net Interest Income": 48487680.0,
-        "Total Operating Income": 61136.86,
-        "Operating Profit": 1477.56,
+        "Total Operating Income": 61136860.0,
+        "Operating Profit": 1477560.0,
         "Net Profit": 1477560.0,
         "Number of Shares": 3186000.0,
         "EPS(Rs.)": 1.86,
@@ -582,7 +638,15 @@
         "Cost of funds": -67.46,
         "CD ratio": 3.35
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -599,8 +663,8 @@
         "Loans and Advances to Customers": 3990701380.0,
         "Interest Income": 260794220.0,
         "Net Interest Income": 65583640.0,
-        "Total Operating Income": 103700.31,
-        "Operating Profit": 758.85,
+        "Total Operating Income": 103700310.0,
+        "Operating Profit": 758850.0,
         "Net Profit": 758850.0,
         "Number of Shares": 3186000.0,
         "EPS(Rs.)": 0.48,
@@ -665,7 +729,15 @@
         "NPL": 24.21,
         "Cost of funds": -6.18
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SABSL",
@@ -682,8 +754,8 @@
         "Loans and Advances to Customers": 4201995600.0,
         "Interest Income": 425199480.0,
         "Net Interest Income": 141979670.0,
-        "Total Operating Income": 195508.01,
-        "Operating Profit": 21908.18,
+        "Total Operating Income": 195508010.0,
+        "Operating Profit": 21908180.0,
         "Net Profit": 19717360.0,
         "Number of Shares": 3186000.0,
         "EPS(Rs.)": 8.25,
@@ -748,7 +820,15 @@
         "NPL": -31.6,
         "Cost of funds": -8.69
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:55:02.594383"

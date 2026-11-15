@@ -84,7 +84,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:43.535763",
+      "parsed_at": "2026-11-14T20:25:32.343636",
       "computed": {
         "pe_ratio": 207.6,
         "pb_ratio": 3.9,
@@ -158,7 +158,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:43.535757",
+      "parsed_at": "2026-11-14T20:25:32.343630",
       "computed": {
         "pe_ratio": -441.7,
         "pb_ratio": 4.3,
@@ -233,7 +233,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:43.535751",
+      "parsed_at": "2026-11-14T20:25:32.343622",
       "computed": {
         "pe_ratio": 87.9,
         "pb_ratio": 4.6,
@@ -275,7 +275,7 @@
         "Current Liabilities": 4584379910.0,
         "Current Assets": 5116777960.0,
         "Total Assets": 14785665260.0,
-        "Revenue from Operation": 6811410.96,
+        "Revenue from Operation": 6811410960.0,
         "Gross Profit": 1305946600.0,
         "Net Profit": 603036980.0,
         "Number of Shares": 49755000.0,
@@ -321,6 +321,13 @@
         "EPS Reported": 4.99,
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -329,7 +336,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:43.535744",
+      "parsed_at": "2026-11-14T20:25:32.343615",
       "computed": {
         "pe_ratio": 45.5,
         "pb_ratio": 4.5,
@@ -371,7 +378,7 @@
         "Current Liabilities": 4261328740.0,
         "Current Assets": 5255361610.0,
         "Total Assets": 15022125480.0,
-        "Revenue from Operation": 9550348.39,
+        "Revenue from Operation": 9550348390.0,
         "Gross Profit": 2062383580.0,
         "Net Profit": 1004593940.0,
         "Number of Shares": 49755000.0,
@@ -417,6 +424,13 @@
         "EPS Reported": 4.99,
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -425,7 +439,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:43.535738",
+      "parsed_at": "2026-11-14T20:25:32.343607",
       "computed": {
         "pe_ratio": 43.8,
         "pb_ratio": 4.4,
@@ -467,7 +481,7 @@
         "Current Liabilities": 4302203970.0,
         "Current Assets": 5579523060.0,
         "Total Assets": 15371900830.0,
-        "Revenue from Operation": 1975747.19,
+        "Revenue from Operation": 1975747190.0,
         "Gross Profit": 612631010.0,
         "Net Profit": 324280820.0,
         "Number of Shares": 49755000.0,
@@ -510,6 +524,13 @@
         "EPS Reported": 4.99,
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -518,7 +539,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:43.535731",
+      "parsed_at": "2026-11-14T20:25:32.343600",
       "computed": {
         "pe_ratio": 33.6,
         "pb_ratio": 4.4,
@@ -560,7 +581,7 @@
         "Current Liabilities": 5076971480.0,
         "Current Assets": 5473710490.0,
         "Total Assets": 15643296100.0,
-        "Revenue from Operation": 4082583.86,
+        "Revenue from Operation": 4082583860.0,
         "Gross Profit": 1044013030.0,
         "Net Profit": 538350040.0,
         "Number of Shares": 52242750.0,
@@ -606,6 +627,13 @@
         "EPS Reported": 4.99,
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -614,7 +642,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:43.535723",
+      "parsed_at": "2026-11-14T20:25:32.343592",
       "computed": {
         "pe_ratio": 33.0,
         "pb_ratio": 4.4,
@@ -656,7 +684,7 @@
         "Current Liabilities": 5608986570.0,
         "Current Assets": 6161192980.0,
         "Total Assets": 16550710060.0,
-        "Revenue from Operation": 7007978.83,
+        "Revenue from Operation": 7007978830.0,
         "Gross Profit": 1759260780.0,
         "Net Profit": 905813240.0,
         "Number of Shares": 52242750.0,
@@ -702,6 +730,13 @@
         "EPS Reported": 4.99,
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -709,7 +744,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:43.535710",
+      "parsed_at": "2026-11-14T20:25:32.343578",
       "raw": {
         "Paid Up Capital": 5224275000.0,
         "Reserve and Surplus": 5214618480.0,
@@ -718,7 +753,7 @@
         "Current Liabilities": 5478177910.0,
         "Current Assets": 6098418040.0,
         "Total Assets": 16600292640.0,
-        "Revenue from Operation": 10258527.8,
+        "Revenue from Operation": 10258527800.0,
         "Gross Profit": 2323390860.0,
         "Total Operating Profit": 1343945960.0,
         "Net Profit": 1107429390.0,
@@ -769,8 +804,15 @@
         "Book Value Reported": -1.08,
         "ROE Reported": 6.13
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:43.537196"
+  "last_updated": "2026-11-14T20:25:32.344625"
 }

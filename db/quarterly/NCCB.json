@@ -67,8 +67,8 @@
         "Investment Securities": 13993248950.0,
         "Interest Income": 2674445000.0,
         "Net Interest Income": 936800300.0,
-        "Total Operating Income": 1210230.64,
-        "Operating Profit": 720402.01,
+        "Total Operating Income": 1210230640.0,
+        "Operating Profit": 720402010.0,
         "Net Profit": 518057900.0,
         "Distributable Profit": 932761100.0,
         "Number of Shares": 103145166.8,
@@ -119,7 +119,15 @@
         "graham_number": 256.72
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NCCB",
@@ -139,8 +147,8 @@
         "Investment Securities": 14290282950.0,
         "Interest Income": 5593312090.0,
         "Net Interest Income": 1700133300.0,
-        "Total Operating Income": 2222109.1,
-        "Operating Profit": 1130610.01,
+        "Total Operating Income": 2222109100.0,
+        "Operating Profit": 1130610010.0,
         "Net Profit": 900543500.0,
         "Distributable Profit": 444916650.0,
         "Number of Shares": 111396780.14,
@@ -191,7 +199,15 @@
         "graham_number": 224.4
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NCCB",
@@ -211,8 +227,8 @@
         "Investment Securities": 16171832970.0,
         "Interest Income": 8983887240.0,
         "Net Interest Income": 6245781350.0,
-        "Total Operating Income": 3647260.67,
-        "Operating Profit": 1912942.69,
+        "Total Operating Income": 3647260670.0,
+        "Operating Profit": 1912942690.0,
         "Net Profit": 1487722870.0,
         "Distributable Profit": 977155110.0,
         "Number of Shares": 111396780.14,
@@ -266,7 +282,15 @@
         "eps_ttm": 40.35,
         "EPS(Rs.)": 40.35
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NCCB",
@@ -286,8 +310,8 @@
         "Investment Securities": 17278592060.0,
         "Interest Income": 13077556010.0,
         "Net Interest Income": 4155651780.0,
-        "Total Operating Income": 5581612.98,
-        "Operating Profit": 2672129.06,
+        "Total Operating Income": 5581612980.0,
+        "Operating Profit": 2672129060.0,
         "Net Profit": 2022222770.0,
         "Distributable Profit": 1474287270.0,
         "Number of Shares": 111396780.14,
@@ -341,7 +365,15 @@
         "eps_ttm": -24.81,
         "EPS(Rs.)": -24.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NCCB",
@@ -361,8 +393,8 @@
         "Investment Securities": 15031095830.0,
         "Interest Income": 4112393440.0,
         "Net Interest Income": 1127031760.0,
-        "Total Operating Income": 1376181.12,
-        "Operating Profit": 718549.54,
+        "Total Operating Income": 1376181120.0,
+        "Operating Profit": 718549540.0,
         "Net Profit": 516836160.0,
         "Distributable Profit": 1007810500.0,
         "Number of Shares": 111396780.14,
@@ -443,7 +475,15 @@
         "Base Rate": 34.85,
         "Interest Spread Rate": 15.62
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:24:24.768890"

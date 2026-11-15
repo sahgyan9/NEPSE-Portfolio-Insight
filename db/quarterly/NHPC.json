@@ -19,7 +19,7 @@
         "Total Assets": 1946212550.0,
         "Revenue": 36160130.0,
         "Gross Profit": 25622750.0,
-        "Operating Profit": 16675.17,
+        "Operating Profit": 16675170.0,
         "Net Profit": 32722380.0,
         "Number of Shares": 16425169.44,
         "EPS(Rs.)": 2.66,
@@ -53,7 +53,14 @@
         "graham_number": 78.17
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -122,7 +129,7 @@
         "Total Assets": 2042175250.0,
         "Revenue": 63628430.0,
         "Gross Profit": 44221250.0,
-        "Operating Profit": 34973.48,
+        "Operating Profit": 34973480.0,
         "Net Profit": 6818310.0,
         "Number of Shares": 16450169.44,
         "EPS(Rs.)": 1.96,
@@ -156,7 +163,14 @@
         "graham_number": 66.86
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -174,7 +188,7 @@
         "Total Assets": 2050685310.0,
         "Revenue": 55893700.0,
         "Gross Profit": 42248980.0,
-        "Operating Profit": 32875.38,
+        "Operating Profit": 32875380.0,
         "Net Profit": 7361070.0,
         "Number of Shares": 16450169.44,
         "EPS(Rs.)": 0.89,
@@ -208,7 +222,14 @@
         "graham_number": 45.17
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -294,7 +315,7 @@
         "Total Assets": 2231782750.0,
         "Revenue": 46829230.0,
         "Gross Profit": 20324300.0,
-        "Operating Profit": 11291.07,
+        "Operating Profit": 11291070.0,
         "Net Profit": 4832970.0,
         "Number of Shares": 16450169.44,
         "EPS(Rs.)": 0.29,
@@ -341,14 +362,21 @@
         "Total Assets": 12.42,
         "Revenue": -4.77,
         "Gross Profit": 20.51,
-        "Operating Profit": -99.75,
+        "Operating Profit": 150.16,
         "Net Profit": 127.72,
         "Number of Shares": 0.15,
         "EPS(Rs.)": 127.36,
         "Book Value(Rs.)": -0.24,
         "ROE": 127.62
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -366,7 +394,7 @@
         "Total Assets": 2862916420.0,
         "Revenue": 65298390.0,
         "Gross Profit": 50377930.0,
-        "Operating Profit": 27499.49,
+        "Operating Profit": 27499490.0,
         "Net Profit": 4591120.0,
         "Number of Shares": 24671629.16,
         "EPS(Rs.)": 0.74,
@@ -420,7 +448,14 @@
         "Book Value(Rs.)": 0.02,
         "ROE": -55.21
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -438,7 +473,7 @@
         "Total Assets": 3005720520.0,
         "Revenue": 54688570.0,
         "Gross Profit": 37702600.0,
-        "Operating Profit": 31004.65,
+        "Operating Profit": 31004650.0,
         "Net Profit": 8846960.0,
         "Number of Shares": 24671629.16,
         "EPS(Rs.)": 0.72,
@@ -492,7 +527,14 @@
         "Book Value(Rs.)": -0.04,
         "ROE": -20.45
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -510,7 +552,7 @@
         "Total Assets": 3011601710.0,
         "Revenue": 29163730.0,
         "Gross Profit": 17459480.0,
-        "Operating Profit": 8244.1,
+        "Operating Profit": 8244100.0,
         "Net Profit": -11497510.0,
         "Number of Shares": 24671629.16,
         "EPS(Rs.)": -0.62,
@@ -562,7 +604,14 @@
         "Book Value(Rs.)": 0.9,
         "ROE": 67.03
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -580,7 +629,7 @@
         "Total Assets": 3061701080.0,
         "Revenue": 40251170.0,
         "Gross Profit": 7756930.0,
-        "Operating Profit": -7068.04,
+        "Operating Profit": -7068040.0,
         "Net Profit": -24945980.0,
         "Number of Shares": 24671629.15,
         "EPS(Rs.)": -1.01,
@@ -633,7 +682,14 @@
         "Book Value(Rs.)": -0.41,
         "ROE": -448.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -651,7 +707,7 @@
         "Total Assets": 3102887850.0,
         "Revenue": 37733800.0,
         "Gross Profit": 15997020.0,
-        "Operating Profit": 7089.19,
+        "Operating Profit": 7089190.0,
         "Net Profit": -2588490.0,
         "Number of Shares": 24671629.15,
         "EPS(Rs.)": -0.42,
@@ -704,7 +760,14 @@
         "Book Value(Rs.)": -1.09,
         "ROE": -157.53
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -722,7 +785,7 @@
         "Total Assets": 3245961740.0,
         "Revenue": 52375660.0,
         "Gross Profit": 38058560.0,
-        "Operating Profit": 18993.9,
+        "Operating Profit": 18993900.0,
         "Net Profit": 6735580.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": 0.55,
@@ -773,7 +836,14 @@
         "Net Profit": -23.87,
         "Number of Shares": -0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -791,7 +861,7 @@
         "Total Assets": 3244635820.0,
         "Revenue": 44654020.0,
         "Gross Profit": 13926290.0,
-        "Operating Profit": 5402.49,
+        "Operating Profit": 5402490.0,
         "Net Profit": -8141410.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": -0.44,
@@ -841,7 +911,14 @@
         "Net Profit": 29.19,
         "Number of Shares": -0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -859,7 +936,7 @@
         "Total Assets": 3360869440.0,
         "Revenue": 177656130.0,
         "Gross Profit": 85206740.0,
-        "Operating Profit": 24856.68,
+        "Operating Profit": 24856680.0,
         "Net Profit": 3132640.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": 0.13,
@@ -910,7 +987,14 @@
         "Net Profit": 112.56,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -928,7 +1012,7 @@
         "Total Assets": 3392383990.0,
         "Revenue": 55990430.0,
         "Gross Profit": 36653050.0,
-        "Operating Profit": 18486.76,
+        "Operating Profit": 18486760.0,
         "Net Profit": 10677600.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": 1.73,
@@ -979,7 +1063,14 @@
         "Net Profit": 512.5,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -997,7 +1088,7 @@
         "Total Assets": 3421801860.0,
         "Revenue": 111248630.0,
         "Gross Profit": 74786060.0,
-        "Operating Profit": 41955.67,
+        "Operating Profit": 41955670.0,
         "Net Profit": 25989250.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": 2.11,
@@ -1051,7 +1142,14 @@
         "Book Value Reported": 0.62,
         "ROE Reported": 285.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -1069,7 +1167,7 @@
         "Total Assets": 3411425980.0,
         "Revenue": 135537340.0,
         "Gross Profit": 83517330.0,
-        "Operating Profit": 35017.56,
+        "Operating Profit": 35017560.0,
         "Net Profit": 19250980.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": 1.04,
@@ -1123,7 +1221,14 @@
         "Book Value Reported": 0.68,
         "ROE Reported": 332.61
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHPC",
@@ -1141,7 +1246,7 @@
         "Total Assets": 3483288150.0,
         "Revenue": 138140680.0,
         "Gross Profit": 64453240.0,
-        "Operating Profit": -5237.41,
+        "Operating Profit": -5237410.0,
         "Net Profit": -22929160.0,
         "Number of Shares": 24671629.15,
         "EPS Reported": -0.93,
@@ -1194,7 +1299,14 @@
         "Book Value Reported": -0.96,
         "ROE Reported": -846.15
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:30:35.486830"

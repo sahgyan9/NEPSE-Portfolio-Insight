@@ -17,7 +17,7 @@
         "Current Liabilities": 2746000.0,
         "Current Assets": 1612000.0,
         "Total Assets": 978840000.0,
-        "Operating Profit": -145.0,
+        "Operating Profit": -145000.0,
         "Net Profit": -145000.0,
         "Number of Shares": 6326000.0,
         "EPS(Rs.)": -0.09,
@@ -48,7 +48,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PPL",
@@ -900,7 +907,7 @@
         "Total Assets": 980756000.0,
         "Revenue": 53598000.0,
         "Gross Profit": 23876000.0,
-        "Operating Profit": -15153.0,
+        "Operating Profit": -15153000.0,
         "Net Profit": -18050000.0,
         "Number of Shares": 9489000.0,
         "EPS Reported": -2.54,
@@ -952,7 +959,14 @@
         "Book Value Reported": 5.06,
         "ROE Reported": -246.43
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PPL",

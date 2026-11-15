@@ -178,6 +178,35 @@ def eps_trend(series):
     return growth, consistency, cv
 
 
+TAX_ONLY_RATE = 0.05        # TDS on dividends; cash declared only to cover it is not income
+TAX_ONLY_TOL = 0.02         # percentage points of face value
+
+
+def split_dividend(bonus, cash):
+    """(bonus %, real cash %) of one fiscal year, both on Rs 100 face value.
+    When a company declares bonus shares plus a cash amount equal to 5% of the
+    total, the cash only pays the shareholder's dividend tax and is counted as 0."""
+    b, c = num(bonus) or 0.0, num(cash) or 0.0
+    if b > 0 and c > 0 and abs(c - (b + c) * TAX_ONLY_RATE) < TAX_ONLY_TOL:
+        c = 0.0
+    return b, c
+
+
+def dividend_stats(rows):
+    """rows: up to 5 dividend records with bonusPercent / cashPercent / totalPercent.
+    Returns the payout-history fields of a company record (all None when no rows)."""
+    out = {"bonus_avg5": None, "bonus_years_frac": None, "cash_avg5": None, "stock_avg5": None}
+    if not rows:
+        return out
+    totals = [num(x.get("totalPercent")) or 0.0 for x in rows]
+    parts = [split_dividend(x.get("bonusPercent"), x.get("cashPercent")) for x in rows]
+    out["bonus_avg5"] = statistics.fmean(totals)                  # cash + bonus, kept for the checklist
+    out["bonus_years_frac"] = sum(1 for t in totals if t > 0) / 5.0
+    out["stock_avg5"] = statistics.fmean(b for b, _ in parts)
+    out["cash_avg5"] = statistics.fmean(c for _, c in parts)
+    return out
+
+
 def prior_fy(fy):
     """'2083-84' -> '2082-83'. Returns None for anything not shaped 'YYYY-YY'."""
     m = re.fullmatch(r"(\d{4})-(\d{2})", str(fy or ""))
@@ -326,23 +355,23 @@ def load_universe():
         rows = d.get("dividends") or []
         rows = sorted(rows, key=lambda x: x.get("fiscalYear", ""), reverse=True)[:5]
         if rows:
-            recs[sym]["bonus_avg5"] = statistics.fmean(num(x.get("totalPercent")) or 0.0 for x in rows)
-            recs[sym]["bonus_years_frac"] = sum(1 for x in rows if (num(x.get("totalPercent")) or 0) > 0) / 5.0
+            recs[sym].update(dividend_stats(rows))
 
     # 3b) merolagani history for symbols not covered above
     raw = load_json(os.path.join(NEPSE_FUND_DIR, "raw_data.json"), []) or []
     for r in raw:
         sym = r.get("symbol")
         if sym in recs and recs[sym].get("bonus_avg5") is None:
-            byfy = defaultdict(float)
+            byfy = defaultdict(lambda: [0.0, 0.0])                 # fy -> [bonus, cash]
             for x in (r.get("bonus_shares") or []):
-                byfy[x.get("fy")] += num(x.get("value")) or 0.0
+                byfy[x.get("fy")][0] += num(x.get("value")) or 0.0
             for x in (r.get("cash_dividends") or []):
-                byfy[x.get("fy")] += num(x.get("value")) or 0.0
+                byfy[x.get("fy")][1] += num(x.get("value")) or 0.0
             fys = sorted(byfy.keys(), reverse=True)[:5]
             if fys:
-                recs[sym]["bonus_avg5"] = statistics.fmean(byfy[f] for f in fys)
-                recs[sym]["bonus_years_frac"] = sum(1 for f in fys if byfy[f] > 0) / 5.0
+                recs[sym].update(dividend_stats([
+                    {"bonusPercent": byfy[f][0], "cashPercent": byfy[f][1],
+                     "totalPercent": byfy[f][0] + byfy[f][1]} for f in fys]))
 
     # 3c) scoreboard YoY profit growth as a stop-gap for symbols without history
     sb = load_json(os.path.join(NEPSE_FUND_DIR, "nepse_alpha_scoreboard.json"), []) or []
@@ -402,10 +431,14 @@ def build_metric_table(recs):
         npl_score = None
         if r.get("npl") is not None:
             npl_score = -r["npl"] - (5.0 if r["npl"] > NPL_WATCH else 0.0)
+        # Net-profit growth is not diluted by bonus or rights shares; EPS growth is
+        # the fallback when profit growth is not reported.
+        earn = r.get("profit_growth") if r.get("profit_growth") is not None else r.get("eps_growth")
         t[sym] = {
             # Profitability
             "roe": r.get("roe"), "roa": r.get("roa"), "net_margin": r.get("net_margin"),
             # Growth (winsorised so one restatement cannot dominate)
+            "earn_growth": clip(earn, -100, 150),
             "eps_growth": clip(r.get("eps_growth"), -100, 150),
             "rev_growth": clip(r.get("rev_growth"), -100, 150),
             "profit_growth": clip(r.get("profit_growth"), -100, 150),
@@ -418,7 +451,8 @@ def build_metric_table(recs):
             # Payout
             "payout": clip(r.get("payout_ratio"), 0, 1.0),
             "div_yield": r.get("div_yield"),
-            "bonus_avg5": r.get("bonus_avg5"), "bonus_years": r.get("bonus_years_frac"),
+            "cash_avg5": r.get("cash_avg5"), "stock_avg5": r.get("stock_avg5"),
+            "bonus_years": r.get("bonus_years_frac"),
             # Valuation (higher = cheaper)
             "earnings_yield": ey, "pb_s": (-r["pb"]) if r.get("pb") and r["pb"] > 0 else None,
             "graham_discount": r.get("graham_discount"),
@@ -428,8 +462,9 @@ def build_metric_table(recs):
 
 PILLAR_METRICS = {
     "P": lambda sec: [(k, w) for k, w in PROFIT_WEIGHTS.get(sec, PROFIT_WEIGHTS["default"]).items()],
-    "G": lambda sec: [("eps_growth", 0.45), ("rev_growth", 0.25), ("consistency", 0.30)],
-    "Y": lambda sec: [("payout", 0.30), ("div_yield", 0.25), ("bonus_avg5", 0.25), ("bonus_years", 0.20)],
+    "G": lambda sec: [("earn_growth", 0.45), ("rev_growth", 0.25), ("consistency", 0.30)],
+    "Y": lambda sec: [("payout", 0.30), ("div_yield", 0.25), ("cash_avg5", 0.125), ("stock_avg5", 0.125),
+                      ("bonus_years", 0.20)],
     "V": lambda sec: [("earnings_yield", 0.45), ("pb_s", 0.30), ("graham_discount", 0.25)],
 }
 
@@ -510,6 +545,7 @@ def score_universe(recs, top_n=3):
                                               "eps_growth", "rev_growth", "consistency", "eps_cv",
                                               "car", "npl", "cd", "solvency", "de",
                                               "payout_ratio", "div_yield", "bonus_avg5",
+                                              "profit_growth", "cash_avg5", "stock_avg5",
                                               "turnover", "days_since_trade", "history_depth")},
         }
 

@@ -20,8 +20,8 @@
         "Investments": 22616500.0,
         "Interest Income": 150100240.0,
         "Net Interest Income": 88143460.0,
-        "Total Operating Income": 112789.88,
-        "Operating Profit": 43462.63,
+        "Total Operating Income": 112789880.0,
+        "Operating Profit": 43462630.0,
         "Net Profit": 28176670.0,
         "Number of Shares": 1320000.0,
         "EPS(Rs.)": 28.46,
@@ -65,7 +65,15 @@
         "graham_number": 331.69
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -84,8 +92,8 @@
         "Investments": 22616500.0,
         "Interest Income": 209882380.0,
         "Net Interest Income": 117939460.0,
-        "Total Operating Income": 150342.51,
-        "Operating Profit": 36729.05,
+        "Total Operating Income": 150342510.0,
+        "Operating Profit": 36729050.0,
         "Net Profit": 23895490.0,
         "Number of Shares": 1320000.0,
         "EPS(Rs.)": 18.1,
@@ -129,7 +137,15 @@
         "graham_number": 261.79
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -148,8 +164,8 @@
         "Investments": 22616500.0,
         "Interest Income": 55901320.0,
         "Net Interest Income": 21876500.0,
-        "Total Operating Income": 28276.88,
-        "Operating Profit": -11509.9,
+        "Total Operating Income": 28276880.0,
+        "Operating Profit": -11509900.0,
         "Net Profit": 9674200.0,
         "Number of Shares": 1320000.0,
         "EPS(Rs.)": 29.32,
@@ -193,7 +209,15 @@
         "graham_number": 340.36
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -212,8 +236,8 @@
         "Investments": 22616500.0,
         "Interest Income": 110272670.0,
         "Net Interest Income": 42224180.0,
-        "Total Operating Income": 52236.51,
-        "Operating Profit": -29884.57,
+        "Total Operating Income": 52236510.0,
+        "Operating Profit": -29884570.0,
         "Net Profit": -3172360.0,
         "Number of Shares": 1320000.0,
         "EPS(Rs.)": -4.81,
@@ -256,7 +280,15 @@
         "revenue_ttm": 110272670.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -275,8 +307,8 @@
         "Investments": 101000000.0,
         "Interest Income": 157852930.0,
         "Net Interest Income": 59704130.0,
-        "Total Operating Income": 72507.21,
-        "Operating Profit": -66134.13,
+        "Total Operating Income": 72507210.0,
+        "Operating Profit": -66134130.0,
         "Net Profit": -39421930.0,
         "Number of Shares": 1320000.0,
         "EPS(Rs.)": -39.82,
@@ -345,7 +377,15 @@
         "Cost of funds": 31.56,
         "CD ratio": -22.52
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -364,8 +404,8 @@
         "Investments": 101000000.0,
         "Interest Income": 222014460.0,
         "Net Interest Income": 93683640.0,
-        "Total Operating Income": 107168.21,
-        "Operating Profit": -26111.25,
+        "Total Operating Income": 107168210.0,
+        "Operating Profit": -26111250.0,
         "Net Profit": 401520.0,
         "Number of Shares": 1452000.0,
         "EPS(Rs.)": 0.28,
@@ -435,7 +475,15 @@
         "Cost of funds": 33.56,
         "CD ratio": -21.35
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -454,8 +502,8 @@
         "Investments": 111000000.0,
         "Interest Income": 37810260.0,
         "Net Interest Income": 10728970.0,
-        "Total Operating Income": 15347.6,
-        "Operating Profit": -29452.45,
+        "Total Operating Income": 15347600.0,
+        "Operating Profit": -29452450.0,
         "Net Profit": -29452450.0,
         "Number of Shares": 1452000.0,
         "EPS(Rs.)": -81.14,
@@ -524,7 +572,15 @@
         "Cost of funds": -1.34,
         "CD ratio": -17.17
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -543,8 +599,8 @@
         "Investments": 111000000.0,
         "Interest Income": 86706440.0,
         "Net Interest Income": 34180780.0,
-        "Total Operating Income": 42084.79,
-        "Operating Profit": -102588.06,
+        "Total Operating Income": 42084790.0,
+        "Operating Profit": -102588060.0,
         "Net Profit": -39989060.0,
         "Number of Shares": 1452000.0,
         "EPS(Rs.)": -55.08,
@@ -613,7 +669,15 @@
         "Cost of funds": -5.03,
         "CD ratio": -7.1
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -632,8 +696,8 @@
         "Investments": 1000000.0,
         "Interest Income": 126579120.0,
         "Net Interest Income": 48352060.0,
-        "Total Operating Income": 61129.36,
-        "Operating Profit": -182927.92,
+        "Total Operating Income": 61129360.0,
+        "Operating Profit": -182927920.0,
         "Net Profit": -45957510.0,
         "Number of Shares": 1752000.0,
         "EPS(Rs.)": -34.98,
@@ -702,7 +766,15 @@
         "Cost of funds": -14.25,
         "CD ratio": 16.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -721,8 +793,8 @@
         "Investments": 21000000.0,
         "Interest Income": 182613070.0,
         "Net Interest Income": 73864590.0,
-        "Total Operating Income": 91794.77,
-        "Operating Profit": -250145.05,
+        "Total Operating Income": 91794770.0,
+        "Operating Profit": -250145050.0,
         "Net Profit": -26818910.0,
         "Number of Shares": 1708050.0,
         "EPS(Rs.)": -15.7,
@@ -791,7 +863,15 @@
         "Cost of funds": -24.79,
         "CD ratio": 21.62
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -810,8 +890,8 @@
         "Investments": 21000000.0,
         "Interest Income": 46959980.0,
         "Net Interest Income": 14122070.0,
-        "Total Operating Income": 19776.14,
-        "Operating Profit": -75628.87,
+        "Total Operating Income": 19776140.0,
+        "Operating Profit": -75628870.0,
         "Net Profit": -19958730.0,
         "Number of Shares": 1708050.0,
         "EPS(Rs.)": -46.74,
@@ -880,7 +960,15 @@
         "Cost of funds": -14.42,
         "CD ratio": 26.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -900,8 +988,8 @@
         "Investments": 21000000.0,
         "Interest Income": 106939110.0,
         "Net Interest Income": 40988120.0,
-        "Total Operating Income": 52522.9,
-        "Operating Profit": -100240.22,
+        "Total Operating Income": 52522900.0,
+        "Operating Profit": -100240220.0,
         "Net Profit": -10868440.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": -12.73,
@@ -968,7 +1056,15 @@
         "Cost of funds": -20.39,
         "CD ratio": 29.92
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -988,8 +1084,8 @@
         "Investments": 21000000.0,
         "Interest Income": 169529060.0,
         "Net Interest Income": 73553150.0,
-        "Total Operating Income": 90382.96,
-        "Operating Profit": -115370.53,
+        "Total Operating Income": 90382960.0,
+        "Operating Profit": -115370530.0,
         "Net Profit": -10124490.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": -7.9,
@@ -1056,7 +1152,15 @@
         "Cost of funds": -19.83,
         "CD ratio": 17.82
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -1076,8 +1180,8 @@
         "Investments": 1000000.0,
         "Interest Income": 238936660.0,
         "Net Interest Income": 109259850.0,
-        "Total Operating Income": 920.58,
-        "Operating Profit": 3956.77,
+        "Total Operating Income": 920580.0,
+        "Operating Profit": 3956770.0,
         "Net Profit": 3988210.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": 2.33,
@@ -1145,7 +1249,15 @@
         "Cost of funds": -17.04,
         "CD ratio": 3.2
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -1165,8 +1277,8 @@
         "Investments": 1000000.0,
         "Interest Income": 80036820.0,
         "Net Interest Income": 45599390.0,
-        "Total Operating Income": 297.0,
-        "Operating Profit": 8033.26,
+        "Total Operating Income": 297000.0,
+        "Operating Profit": 8033260.0,
         "Net Profit": 9088560.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": 21.28,
@@ -1234,7 +1346,15 @@
         "Cost of funds": -16.29,
         "CD ratio": -2.3
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -1258,8 +1378,8 @@
         "Interest Income": 154005250.0,
         "Net Interest Income": 86884870.0,
         "Investment Securities": 1000000.0,
-        "Total Operating Income": 551.77,
-        "Operating Profit": 32724.11,
+        "Total Operating Income": 551770.0,
+        "Operating Profit": 32724110.0,
         "Net Profit": 33314890.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": 39.01,
@@ -1268,7 +1388,7 @@
         "ROE Reported": 40.17,
         "CAR": 6.26,
         "NPL": 7.25,
-        "Cost of funds": 652.0,
+        "Cost of funds": 6.52,
         "CD ratio": 278.78
       },
       "raw_keys_order": [
@@ -1333,10 +1453,21 @@
         "ROE Reported": 440.71,
         "CAR": -26.09,
         "NPL": 48.26,
-        "Cost of funds": 7929.56,
+        "Cost of funds": -19.7,
         "CD ratio": -6.31
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Cost of funds"
+      ]
     },
     {
       "symbol": "SLBSL",
@@ -1356,8 +1487,8 @@
         "Investments": 1000000.0,
         "Interest Income": 230505240.0,
         "Net Interest Income": 129853590.0,
-        "Total Operating Income": 146725.52,
-        "Operating Profit": 58543.19,
+        "Total Operating Income": 146725520.0,
+        "Operating Profit": 58543190.0,
         "Net Profit": 58835590.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": 45.93,
@@ -1428,7 +1559,15 @@
         "Cost of funds": -16.44,
         "CD ratio": -7.6
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SLBSL",
@@ -1448,8 +1587,8 @@
         "Investments": 1000000.0,
         "Interest Income": 297850870.0,
         "Net Interest Income": 162949250.0,
-        "Total Operating Income": 183652.14,
-        "Operating Profit": 48856.68,
+        "Total Operating Income": 183652140.0,
+        "Operating Profit": 48856680.0,
         "Net Profit": 45534200.0,
         "Number of Shares": 1708050.0,
         "EPS Reported": 26.66,
@@ -1520,7 +1659,15 @@
         "Cost of funds": -5.85,
         "CD ratio": -8.78
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:07:06.655942"

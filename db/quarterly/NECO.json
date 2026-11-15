@@ -8,7 +8,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:27:27.107379",
+      "parsed_at": "2026-11-15T11:53:29.630261",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -53,7 +53,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:27:27.107363",
+      "parsed_at": "2026-11-15T11:53:29.630254",
       "raw": {
         "Paid Up Capital": 2012360620.0,
         "Reserves and Surplus": 3211955470.0,
@@ -120,7 +120,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:27:27.107347",
+      "parsed_at": "2026-11-15T11:53:29.630247",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -165,7 +165,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:27:27.107331",
+      "parsed_at": "2026-11-15T11:53:29.630240",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -210,7 +210,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:27:27.107315",
+      "parsed_at": "2026-11-15T11:53:29.630232",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -255,7 +255,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:27:27.107297",
+      "parsed_at": "2026-11-15T11:53:29.630225",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -300,7 +300,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:27:27.107269",
+      "parsed_at": "2026-11-15T11:53:29.630207",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -341,5 +341,5 @@
       "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-07T09:27:27.108934"
+  "last_updated": "2026-11-15T11:53:29.631011"
 }

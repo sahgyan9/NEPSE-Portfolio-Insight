@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 6604645450.0,
         "Interest Income": 200169310.0,
         "Net Interest Income": 86542120.0,
-        "Total Operating Income": 100134.34,
-        "Operating Profit": 50059.36,
+        "Total Operating Income": 100134340.0,
+        "Operating Profit": 50059360.0,
         "Net Profit": 31931800.0,
         "Number of Shares": 7360000.0,
         "EPS(Rs.)": 17.35,
@@ -86,7 +86,15 @@
         "graham_number": 237.12
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -103,8 +111,8 @@
         "Loans and Advances to Customers": 6911873750.0,
         "Interest Income": 426871870.0,
         "Net Interest Income": 200486150.0,
-        "Total Operating Income": 230368.72,
-        "Operating Profit": 147575.92,
+        "Total Operating Income": 230368720.0,
+        "Operating Profit": 147575920.0,
         "Net Profit": 94125400.0,
         "Number of Shares": 7360000.0,
         "EPS(Rs.)": 25.58,
@@ -148,7 +156,15 @@
         "graham_number": 296.64
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -165,8 +181,8 @@
         "Loans and Advances to Customers": 7766198160.0,
         "Interest Income": 662333550.0,
         "Net Interest Income": 321248230.0,
-        "Total Operating Income": 373113.95,
-        "Operating Profit": 161360.1,
+        "Total Operating Income": 373113950.0,
+        "Operating Profit": 161360100.0,
         "Net Profit": 105864510.0,
         "Number of Shares": 8894560.0,
         "EPS(Rs.)": 15.86,
@@ -210,7 +226,15 @@
         "graham_number": 213.48
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -227,8 +251,8 @@
         "Loans and Advances to Customers": 9152466690.0,
         "Interest Income": 944869070.0,
         "Net Interest Income": 484566170.0,
-        "Total Operating Income": 566257.64,
-        "Operating Profit": 317407.25,
+        "Total Operating Income": 566257640.0,
+        "Operating Profit": 317407250.0,
         "Net Profit": 218922440.0,
         "Number of Shares": 9767020.0,
         "EPS(Rs.)": 22.06,
@@ -275,7 +299,15 @@
         "eps_ttm": -8.81,
         "EPS(Rs.)": -8.81
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -292,8 +324,8 @@
         "Loans and Advances to Customers": 9801491370.0,
         "Interest Income": 268762280.0,
         "Net Interest Income": 141239660.0,
-        "Total Operating Income": 165684.48,
-        "Operating Profit": 69508.02,
+        "Total Operating Income": 165684480.0,
+        "Operating Profit": 69508020.0,
         "Net Profit": 44340970.0,
         "Number of Shares": 10734560.0,
         "EPS(Rs.)": 16.52,
@@ -362,7 +394,15 @@
         "Credit To Deposit Ratio": 14.48,
         "Base Rate": -10.44
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -380,8 +420,8 @@
         "Loans and Advances to Customers": 10570697400.0,
         "Interest Income": 590840920.0,
         "Net Interest Income": 331175070.0,
-        "Total Operating Income": 380138.62,
-        "Operating Profit": 199903.18,
+        "Total Operating Income": 380138620.0,
+        "Operating Profit": 199903180.0,
         "Net Profit": 129673320.0,
         "Number of Shares": 10734560.0,
         "EPS(Rs.)": 24.16,
@@ -451,7 +491,15 @@
         "Credit To Deposit Ratio": 14.93,
         "Base Rate": 27.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -468,8 +516,8 @@
         "Loans and Advances to Customers": 10810792910.0,
         "Interest Income": 970351200.0,
         "Net Interest Income": 519916380.0,
-        "Total Operating Income": 585985.34,
-        "Operating Profit": 380444.02,
+        "Total Operating Income": 585985340.0,
+        "Operating Profit": 380444020.0,
         "Net Profit": 244903530.0,
         "Number of Shares": 10734560.0,
         "EPS(Rs.)": 30.42,
@@ -540,7 +588,15 @@
         "Credit To Deposit Ratio": -1.79,
         "Base Rate": 22.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -557,8 +613,8 @@
         "Loans and Advances to Customers": 11667323370.0,
         "Interest Income": 1389794040.0,
         "Net Interest Income": 712418900.0,
-        "Total Operating Income": 799822.85,
-        "Operating Profit": 531255.78,
+        "Total Operating Income": 799822850.0,
+        "Operating Profit": 531255780.0,
         "Net Profit": 343744830.0,
         "Number of Shares": 13584740.0,
         "EPS(Rs.)": 19.58,
@@ -629,7 +685,15 @@
         "Credit To Deposit Ratio": -5.6,
         "Base Rate": 19.23
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -649,8 +713,8 @@
         "Investment Securities": 6206803800.0,
         "Interest Income": 3878467580.0,
         "Net Interest Income": 1252696750.0,
-        "Total Operating Income": 1423037.66,
-        "Operating Profit": 571921.96,
+        "Total Operating Income": 1423037660.0,
+        "Operating Profit": 571921960.0,
         "Net Profit": 400685360.0,
         "Distributable Profit": 283565670.0,
         "Number of Shares": 30106696.62,
@@ -726,7 +790,15 @@
         "Credit To Deposit Ratio": 6.98,
         "Base Rate": 30.31
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -746,8 +818,8 @@
         "Investment Securities": 7478114730.0,
         "Interest Income": 5555294740.0,
         "Net Interest Income": 1747961930.0,
-        "Total Operating Income": 1952900.1,
-        "Operating Profit": 864602.06,
+        "Total Operating Income": 1952900100.0,
+        "Operating Profit": 864602060.0,
         "Net Profit": 595815100.0,
         "Distributable Profit": 348621910.0,
         "Number of Shares": 30106696.62,
@@ -823,7 +895,15 @@
         "Credit To Deposit Ratio": 2.53,
         "Base Rate": 8.58
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -843,8 +923,8 @@
         "Investment Securities": 7407634680.0,
         "Interest Income": 1787207970.0,
         "Net Interest Income": 468728530.0,
-        "Total Operating Income": 515896.43,
-        "Operating Profit": 80026.05,
+        "Total Operating Income": 515896430.0,
+        "Operating Profit": 80026050.0,
         "Net Profit": 55345930.0,
         "Distributable Profit": 260135630.0,
         "Number of Shares": 30106696.62,
@@ -921,7 +1001,15 @@
         "Base Rate": 17.93,
         "Interest Spread Rate": -25.43
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -941,8 +1029,8 @@
         "Investment Securities": 7643500290.0,
         "Interest Income": 3573522590.0,
         "Net Interest Income": 913579210.0,
-        "Total Operating Income": 989345.09,
-        "Operating Profit": 238939.99,
+        "Total Operating Income": 989345090.0,
+        "Operating Profit": 238939990.0,
         "Net Profit": 166563160.0,
         "Distributable Profit": 278229370.0,
         "Number of Shares": 30106696.62,
@@ -1019,7 +1107,15 @@
         "Base Rate": 16.04,
         "Interest Spread Rate": -21.83
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1039,8 +1135,8 @@
         "Investment Securities": 8289351370.0,
         "Interest Income": 5375216890.0,
         "Net Interest Income": 1399289740.0,
-        "Total Operating Income": 1511363.35,
-        "Operating Profit": 352857.87,
+        "Total Operating Income": 1511363350.0,
+        "Operating Profit": 352857870.0,
         "Net Profit": 246148810.0,
         "Distributable Profit": -123115950.0,
         "Number of Shares": 32675917.16,
@@ -1121,7 +1217,15 @@
         "Base Rate": 16.95,
         "Interest Spread Rate": 8.14
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1141,8 +1245,8 @@
         "Investment Securities": 9019875290.0,
         "Interest Income": 7139279550.0,
         "Net Interest Income": 1804160120.0,
-        "Total Operating Income": 1956514.74,
-        "Operating Profit": 505172.17,
+        "Total Operating Income": 1956514740.0,
+        "Operating Profit": 505172170.0,
         "Net Profit": 343721980.0,
         "Distributable Profit": 248954220.0,
         "Number of Shares": 32675917.17,
@@ -1223,7 +1327,15 @@
         "Base Rate": 7.9,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1244,8 +1356,8 @@
         "Investment Securities": 9139975500.0,
         "Interest Income": 1673994670.0,
         "Net Interest Income": 428065060.0,
-        "Total Operating Income": 490942.95,
-        "Operating Profit": 68455.58,
+        "Total Operating Income": 490942950.0,
+        "Operating Profit": 68455580.0,
         "Net Profit": 46591170.0,
         "Distributable Profit": -55073430.0,
         "Number of Shares": 32675917.17,
@@ -1327,7 +1439,15 @@
         "Base Rate": -5.77,
         "Interest Spread Rate": 4.61
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1347,8 +1467,8 @@
         "Investment Securities": 9240319010.0,
         "Interest Income": 3347933140.0,
         "Net Interest Income": 946368170.0,
-        "Total Operating Income": 1056928.75,
-        "Operating Profit": 145259.5,
+        "Total Operating Income": 1056928750.0,
+        "Operating Profit": 145259500.0,
         "Net Profit": 100233770.0,
         "Distributable Profit": -213657160.0,
         "Number of Shares": 34309713.02,
@@ -1429,7 +1549,15 @@
         "Base Rate": -16.07,
         "Interest Spread Rate": -5.95
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1449,8 +1577,8 @@
         "Investment Securities": 9861301900.0,
         "Interest Income": 4903710120.0,
         "Net Interest Income": 1448142270.0,
-        "Total Operating Income": 1604848.31,
-        "Operating Profit": 386892.01,
+        "Total Operating Income": 1604848310.0,
+        "Operating Profit": 386892010.0,
         "Net Profit": 269389810.0,
         "Distributable Profit": -60194840.0,
         "Number of Shares": 34309713.03,
@@ -1531,7 +1659,15 @@
         "Base Rate": -18.92,
         "Interest Spread Rate": -4.18
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1551,8 +1687,8 @@
         "Investment Securities": 10616265860.0,
         "Interest Income": 6371048310.0,
         "Net Interest Income": 1882276750.0,
-        "Total Operating Income": 2221752.59,
-        "Operating Profit": 750360.73,
+        "Total Operating Income": 2221752590.0,
+        "Operating Profit": 750360730.0,
         "Net Profit": 520473220.0,
         "Distributable Profit": 177796350.0,
         "Number of Shares": 34309713.03,
@@ -1633,7 +1769,15 @@
         "Base Rate": -24.28,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1653,8 +1797,8 @@
         "Investment Securities": 9794935700.0,
         "Interest Income": 1460450390.0,
         "Net Interest Income": 546243590.0,
-        "Total Operating Income": 614791.48,
-        "Operating Profit": 87342.84,
+        "Total Operating Income": 614791480.0,
+        "Operating Profit": 87342840.0,
         "Net Profit": 60179320.0,
         "Distributable Profit": 88549870.0,
         "Number of Shares": 34309713.03,
@@ -1735,7 +1879,15 @@
         "Base Rate": -27.87,
         "Interest Spread Rate": -0.66
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1755,8 +1907,8 @@
         "Investment Securities": 9928870860.0,
         "Interest Income": 2643555910.0,
         "Net Interest Income": 918298490.0,
-        "Total Operating Income": 1052473.37,
-        "Operating Profit": 283262.73,
+        "Total Operating Income": 1052473370.0,
+        "Operating Profit": 283262730.0,
         "Net Profit": 196561300.0,
         "Distributable Profit": 252501910.0,
         "Number of Shares": 34309713.03,
@@ -1834,7 +1986,15 @@
         "Base Rate": -27.2,
         "Interest Spread Rate": -1.97
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1856,8 +2016,8 @@
         "Investment Securities": 10426981860.0,
         "Interest Income": 3923555380.0,
         "Net Interest Income": 1429136320.0,
-        "Total Operating Income": 1745914.41,
-        "Operating Profit": 621885.39,
+        "Total Operating Income": 1745914410.0,
+        "Operating Profit": 621885390.0,
         "Net Profit": 434218330.0,
         "Distributable Profit": 240271270.0,
         "Number of Shares": 35562557.19,
@@ -1937,7 +2097,15 @@
         "Base Rate": -26.02,
         "Interest Spread Rate": -11.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -1959,8 +2127,8 @@
         "Investment Securities": 10979490320.0,
         "Interest Income": 5186440560.0,
         "Net Interest Income": 1880903080.0,
-        "Total Operating Income": 2272077.06,
-        "Operating Profit": 774205.03,
+        "Total Operating Income": 2272077060.0,
+        "Operating Profit": 774205030.0,
         "Net Profit": 537095110.0,
         "Distributable Profit": 413845640.0,
         "Number of Shares": 35562557.2,
@@ -2040,7 +2208,15 @@
         "Base Rate": -23.04,
         "Interest Spread Rate": -9.61
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -2062,8 +2238,8 @@
         "Investment Securities": 11342197040.0,
         "Interest Income": 1216810900.0,
         "Net Interest Income": 549116650.0,
-        "Total Operating Income": 651572.38,
-        "Operating Profit": 125387.49,
+        "Total Operating Income": 651572380.0,
+        "Operating Profit": 125387490.0,
         "Net Profit": 88211290.0,
         "Distributable Profit": 351481340.0,
         "Number of Shares": 35562557.2,
@@ -2143,7 +2319,15 @@
         "Base Rate": -21.77,
         "Interest Spread Rate": 1.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -2165,8 +2349,8 @@
         "Investment Securities": 11342809370.0,
         "Interest Income": 2336904130.0,
         "Net Interest Income": 1088072450.0,
-        "Total Operating Income": 1257285.21,
-        "Operating Profit": 451313.25,
+        "Total Operating Income": 1257285210.0,
+        "Operating Profit": 451313250.0,
         "Net Profit": 302597840.0,
         "Distributable Profit": 94661160.0,
         "Number of Shares": 37340685.06,
@@ -2249,7 +2433,15 @@
         "Base Rate": -21.6,
         "Interest Spread Rate": 1.78
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -2271,8 +2463,8 @@
         "Investment Securities": 11025106780.0,
         "Interest Income": 3401483130.0,
         "Net Interest Income": 1617555560.0,
-        "Total Operating Income": 1862354.87,
-        "Operating Profit": 712182.37,
+        "Total Operating Income": 1862354870.0,
+        "Operating Profit": 712182370.0,
         "Net Profit": 484531080.0,
         "Distributable Profit": 197035460.0,
         "Number of Shares": 37340685.06,
@@ -2355,7 +2547,15 @@
         "Base Rate": -22.68,
         "Interest Spread Rate": 6.93
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -2377,8 +2577,8 @@
         "Investment Securities": 11722560650.0,
         "Interest Income": 4774523360.0,
         "Net Interest Income": 2420107940.0,
-        "Total Operating Income": 2952788.75,
-        "Operating Profit": 1353032.77,
+        "Total Operating Income": 2952788750.0,
+        "Operating Profit": 1353032770.0,
         "Net Profit": 889937940.0,
         "Distributable Profit": 492377810.0,
         "Number of Shares": 37340685.06,
@@ -2461,7 +2661,15 @@
         "Base Rate": -21.33,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SADBL",
@@ -2483,8 +2691,8 @@
         "Investment Securities": 10720508750.0,
         "Interest Income": 1026605620.0,
         "Net Interest Income": 509866240.0,
-        "Total Operating Income": 576254.58,
-        "Operating Profit": 53138.93,
+        "Total Operating Income": 576254580.0,
+        "Operating Profit": 53138930.0,
         "Net Profit": 33461540.0,
         "Distributable Profit": -13273110.0,
         "Number of Shares": 38834312.46,
@@ -2567,7 +2775,15 @@
         "Base Rate": -14.07,
         "Interest Spread Rate": -9.61
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:55:25.890058"

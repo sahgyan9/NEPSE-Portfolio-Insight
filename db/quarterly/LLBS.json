@@ -8,7 +8,7 @@
       "fy": "2070-71",
       "quarter": 4,
       "quarter_label": "Q4 70-71",
-      "parsed_at": "2026-11-07T09:10:33.007066",
+      "parsed_at": "2026-11-14T21:19:38.943812",
       "raw": {
         "EPS(Rs.)": 1.99
       },
@@ -31,7 +31,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T09:10:33.007055",
+      "parsed_at": "2026-11-14T21:19:38.943804",
       "raw": {
         "EPS(Rs.)": 16.5
       },
@@ -54,7 +54,7 @@
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T09:10:33.007045",
+      "parsed_at": "2026-11-14T21:19:38.943797",
       "raw": {
         "Paid Up Capital": 320045000.0,
         "Reserve and Surplus": 394011390.0,
@@ -66,8 +66,8 @@
         "Investments": 2985100.0,
         "Interest Income": 841319840.0,
         "Net Interest Income": 517597150.0,
-        "Total Operating Income": 638894.47,
-        "Operating Profit": 286882.13,
+        "Total Operating Income": 638894470.0,
+        "Operating Profit": 286882130.0,
         "Net Profit": 197149060.0,
         "Number of Shares": 3200450.0,
         "EPS(Rs.)": 61.6,
@@ -111,14 +111,22 @@
         "graham_number": 556.08
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T09:10:33.006987",
+      "parsed_at": "2026-11-14T21:19:38.943750",
       "raw": {
         "Paid Up Capital": 320045000.0,
         "Reserve and Surplus": 410402000.0,
@@ -130,8 +138,8 @@
         "Investments": 103500000.0,
         "Interest Income": 245099000.0,
         "Net Interest Income": 135593000.0,
-        "Total Operating Income": 168264.0,
-        "Operating Profit": 74108.0,
+        "Total Operating Income": 168264000.0,
+        "Operating Profit": 74108000.0,
         "Net Profit": 46688000.0,
         "Number of Shares": 3200450.0,
         "EPS(Rs.)": 58.35,
@@ -175,14 +183,22 @@
         "graham_number": 547.39
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T09:10:33.006917",
+      "parsed_at": "2026-11-14T21:19:38.943701",
       "raw": {
         "Paid Up Capital": 384054000.0,
         "Reserve and Surplus": 367001000.0,
@@ -194,8 +210,8 @@
         "Investments": 3500000.0,
         "Interest Income": 505585000.0,
         "Net Interest Income": 271721000.0,
-        "Total Operating Income": 334519.0,
-        "Operating Profit": 146733.0,
+        "Total Operating Income": 334519000.0,
+        "Operating Profit": 146733000.0,
         "Net Profit": 92442000.0,
         "Number of Shares": 3840540.0,
         "EPS(Rs.)": 48.14,
@@ -242,14 +258,22 @@
         "eps_ttm": 2319.1,
         "EPS(Rs.)": 2319.1
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:10:33.006848",
+      "parsed_at": "2026-11-14T21:19:38.943653",
       "raw": {
         "Paid Up Capital": 384054000.0,
         "Reserve and Surplus": 433971000.0,
@@ -261,8 +285,8 @@
         "Investments": 2985000.0,
         "Interest Income": 779997000.0,
         "Net Interest Income": 403949000.0,
-        "Total Operating Income": 494563.0,
-        "Operating Profit": 193465.0,
+        "Total Operating Income": 494563000.0,
+        "Operating Profit": 193465000.0,
         "Net Profit": 130412000.0,
         "Number of Shares": 3840540.0,
         "EPS(Rs.)": 45.28,
@@ -309,14 +333,22 @@
         "eps_ttm": 174.42,
         "EPS(Rs.)": 174.42
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:10:33.006783",
+      "parsed_at": "2026-11-14T21:19:38.943605",
       "raw": {
         "Paid Up Capital": 384054000.0,
         "Reserve and Surplus": 463001920.0,
@@ -328,8 +360,8 @@
         "Investments": 2985100.0,
         "Interest Income": 1080662600.0,
         "Net Interest Income": 535213280.0,
-        "Total Operating Income": 650208.15,
-        "Operating Profit": 236753.13,
+        "Total Operating Income": 650208150.0,
+        "Operating Profit": 236753130.0,
         "Net Profit": 160723720.0,
         "Number of Shares": 3840540.0,
         "EPS(Rs.)": 41.85,
@@ -399,14 +431,22 @@
         "Cost of funds": 48.04,
         "CD ratio": -0.68
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:10:33.006711",
+      "parsed_at": "2026-11-14T21:19:38.943558",
       "raw": {
         "Paid Up Capital": 384054000.0,
         "Reserve and Surplus": 439784310.0,
@@ -418,8 +458,8 @@
         "Investments": 2985100.0,
         "Interest Income": 287772840.0,
         "Net Interest Income": 108267070.0,
-        "Total Operating Income": 130085.72,
-        "Operating Profit": -4121.06,
+        "Total Operating Income": 130085720.0,
+        "Operating Profit": -4121060.0,
         "Net Profit": -4114150.0,
         "Number of Shares": 3840540.0,
         "EPS(Rs.)": -4.28,
@@ -488,14 +528,22 @@
         "Cost of funds": 45.99,
         "CD ratio": -5.34
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:10:33.006649",
+      "parsed_at": "2026-11-14T21:19:38.943511",
       "raw": {
         "Paid Up Capital": 384054000.0,
         "Reserve and Surplus": 404084650.0,
@@ -507,8 +555,8 @@
         "Investments": 2985100.0,
         "Interest Income": 551076720.0,
         "Net Interest Income": 203392580.0,
-        "Total Operating Income": 235975.06,
-        "Operating Profit": -24078.04,
+        "Total Operating Income": 235975060.0,
+        "Operating Profit": -24078040.0,
         "Net Profit": -24010000.0,
         "Number of Shares": 3840540.0,
         "EPS(Rs.)": -12.5,
@@ -577,14 +625,22 @@
         "Cost of funds": 17.94,
         "CD ratio": 2.83
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:10:33.006583",
+      "parsed_at": "2026-11-14T21:19:38.943465",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 357682350.0,
@@ -596,8 +652,8 @@
         "Investments": 2985100.0,
         "Interest Income": 790992080.0,
         "Net Interest Income": 283562710.0,
-        "Total Operating Income": 325380.74,
-        "Operating Profit": -91929.19,
+        "Total Operating Income": 325380740.0,
+        "Operating Profit": -91929190.0,
         "Net Profit": -91786210.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": -27.71,
@@ -606,7 +662,7 @@
         "CAR": 10.77,
         "NPL": 9.47,
         "Cost of funds": 10.09,
-        "CD ratio": 26132.0
+        "CD ratio": 261.32
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -664,16 +720,27 @@
         "CAR": 1.8,
         "NPL": 179.35,
         "Cost of funds": 11.99,
-        "CD ratio": 9364.0
+        "CD ratio": -5.36
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "CD ratio"
+      ]
     },
     {
       "symbol": "LLBS",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:10:33.006514",
+      "parsed_at": "2026-11-14T21:19:38.943418",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 348961580.0,
@@ -685,8 +752,8 @@
         "Investments": 2961300.0,
         "Interest Income": 1004367820.0,
         "Net Interest Income": 366997420.0,
-        "Total Operating Income": 423131.62,
-        "Operating Profit": -83480.66,
+        "Total Operating Income": 423131620.0,
+        "Operating Profit": -83480660.0,
         "Net Profit": -83064370.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": -18.81,
@@ -755,14 +822,22 @@
         "Cost of funds": 5.41,
         "CD ratio": -6.86
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:10:33.006447",
+      "parsed_at": "2026-11-14T21:19:38.943371",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 353968670.0,
@@ -773,8 +848,8 @@
         "Loans and Advances to Customers": 6606643090.0,
         "Interest Income": 213526550.0,
         "Net Interest Income": 78909450.0,
-        "Total Operating Income": 112927.17,
-        "Operating Profit": 13444.35,
+        "Total Operating Income": 112927170.0,
+        "Operating Profit": 13444350.0,
         "Net Profit": 9532500.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": 8.63,
@@ -842,14 +917,22 @@
         "Cost of funds": -8.99,
         "CD ratio": 10.06
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:10:33.006375",
+      "parsed_at": "2026-11-14T21:19:38.943326",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 288604520.0,
@@ -861,8 +944,8 @@
         "Investments": 3306120.0,
         "Interest Income": 459866190.0,
         "Net Interest Income": 178939110.0,
-        "Total Operating Income": 237746.75,
-        "Operating Profit": 212394.14,
+        "Total Operating Income": 237746750.0,
+        "Operating Profit": 212394140.0,
         "Net Profit": 21522920.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": 9.75,
@@ -932,14 +1015,22 @@
         "Cost of funds": -0.62,
         "CD ratio": -8.06
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:10:33.006300",
+      "parsed_at": "2026-11-14T21:19:38.943279",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 384425860.0,
@@ -951,8 +1042,8 @@
         "Investments": 3180790.0,
         "Interest Income": 699402530.0,
         "Net Interest Income": 277988780.0,
-        "Total Operating Income": 335499.82,
-        "Operating Profit": 63452.39,
+        "Total Operating Income": 335499820.0,
+        "Operating Profit": 63452390.0,
         "Net Profit": 44433880.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": 13.41,
@@ -1020,16 +1111,24 @@
         "CAR": -22.75,
         "NPL": -18.06,
         "Cost of funds": -8.72,
-        "CD ratio": -99.03
+        "CD ratio": -3.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:10:33.006232",
+      "parsed_at": "2026-11-14T21:19:38.943233",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 286347280.0,
@@ -1041,8 +1140,8 @@
         "Investments": 3180790.0,
         "Interest Income": 956528120.0,
         "Net Interest Income": 403812430.0,
-        "Total Operating Income": 478025.7,
-        "Operating Profit": 76554.44,
+        "Total Operating Income": 478025700.0,
+        "Operating Profit": 76554440.0,
         "Net Profit": 53471150.0,
         "Number of Shares": 4416621.0,
         "EPS(Rs.)": 12.11,
@@ -1112,14 +1211,22 @@
         "Cost of funds": -21.2,
         "CD ratio": -94.13
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:10:33.006159",
+      "parsed_at": "2026-11-14T21:19:38.943183",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 303410770.0,
@@ -1132,8 +1239,8 @@
         "Investments": 800860.0,
         "Interest Income": 233879660.0,
         "Net Interest Income": 113539020.0,
-        "Total Operating Income": 120374.18,
-        "Operating Profit": 24305.78,
+        "Total Operating Income": 120374180.0,
+        "Operating Profit": 24305780.0,
         "Net Profit": 17014040.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 15.41,
@@ -1200,14 +1307,22 @@
         "Cost of funds": -15.28,
         "CD ratio": -19.7
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:10:33.006091",
+      "parsed_at": "2026-11-14T21:19:38.943134",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 269138430.0,
@@ -1220,8 +1335,8 @@
         "Investments": 2342030.0,
         "Interest Income": 427978220.0,
         "Net Interest Income": 197230990.0,
-        "Total Operating Income": 221340.19,
-        "Operating Profit": 23849.23,
+        "Total Operating Income": 221340190.0,
+        "Operating Profit": 23849230.0,
         "Net Profit": 17591350.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 7.97,
@@ -1289,14 +1404,22 @@
         "Cost of funds": -14.58,
         "CD ratio": -14.53
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:10:33.006027",
+      "parsed_at": "2026-11-14T21:19:38.943085",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 277693390.0,
@@ -1309,8 +1432,8 @@
         "Investments": 2342030.0,
         "Interest Income": 655315110.0,
         "Net Interest Income": 323412050.0,
-        "Total Operating Income": 359479.6,
-        "Operating Profit": 68571.3,
+        "Total Operating Income": 359479600.0,
+        "Operating Profit": 68571300.0,
         "Net Profit": 50239920.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 15.17,
@@ -1378,14 +1501,22 @@
         "Cost of funds": -17.7,
         "CD ratio": -14.72
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:10:33.005950",
+      "parsed_at": "2026-11-14T21:19:38.943036",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 270781580.0,
@@ -1398,8 +1529,8 @@
         "Investments": 2342030.0,
         "Interest Income": 881456460.0,
         "Net Interest Income": 451499400.0,
-        "Total Operating Income": 496075.54,
-        "Operating Profit": 27314.3,
+        "Total Operating Income": 496075540.0,
+        "Operating Profit": 27314300.0,
         "Net Profit": 19600140.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 4.44,
@@ -1467,14 +1598,22 @@
         "Cost of funds": -14.37,
         "CD ratio": 1269.44
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:10:33.005875",
+      "parsed_at": "2026-11-14T21:19:38.942983",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 350987310.0,
@@ -1487,8 +1626,8 @@
         "Investments": 2342030.0,
         "Interest Income": 234496840.0,
         "Net Interest Income": 140740720.0,
-        "Total Operating Income": 152777.62,
-        "Operating Profit": 44155.76,
+        "Total Operating Income": 152777620.0,
+        "Operating Profit": 44155760.0,
         "Net Profit": 30909030.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 27.99,
@@ -1559,14 +1698,22 @@
         "Cost of funds": -10.67,
         "CD ratio": -16.44
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:10:33.005800",
+      "parsed_at": "2026-11-14T21:19:38.942933",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 0.0,
@@ -1583,8 +1730,8 @@
         "Interest Income": 409651540.0,
         "Net Interest Income": 225629850.0,
         "Investment Securities": 1195600.0,
-        "Total Operating Income": 254105.11,
-        "Operating Profit": 48265.87,
+        "Total Operating Income": 254105110.0,
+        "Operating Profit": 48265870.0,
         "Net Profit": 33815230.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 15.31,
@@ -1667,14 +1814,22 @@
         "Cost of funds": -15.01,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:10:33.005701",
+      "parsed_at": "2026-11-14T21:19:38.942863",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 410328500.0,
@@ -1687,8 +1842,8 @@
         "Investments": 1195600.0,
         "Interest Income": 622229430.0,
         "Net Interest Income": 352388420.0,
-        "Total Operating Income": 394049.63,
-        "Operating Profit": 78868.74,
+        "Total Operating Income": 394049630.0,
+        "Operating Profit": 78868740.0,
         "Net Profit": 57265340.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 17.29,
@@ -1759,14 +1914,22 @@
         "Cost of funds": -12.8,
         "CD ratio": -46.58
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:10:33.005624",
+      "parsed_at": "2026-11-14T21:19:38.942812",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 460038820.0,
@@ -1779,8 +1942,8 @@
         "Investments": 1195600.0,
         "Interest Income": 867327830.0,
         "Net Interest Income": 506568850.0,
-        "Total Operating Income": 565866.06,
-        "Operating Profit": 152404.11,
+        "Total Operating Income": 565866060.0,
+        "Operating Profit": 152404110.0,
         "Net Profit": 106886760.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 24.2,
@@ -1851,14 +2014,22 @@
         "Cost of funds": -8.03,
         "CD ratio": -2.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LLBS",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:10:33.005535",
+      "parsed_at": "2026-11-14T21:19:38.942752",
       "raw": {
         "Paid Up Capital": 441662100.0,
         "Reserve and Surplus": 492736290.0,
@@ -1871,8 +2042,8 @@
         "Investments": 1195600.0,
         "Interest Income": 217981940.0,
         "Net Interest Income": 129972950.0,
-        "Total Operating Income": 143273.4,
-        "Operating Profit": 47506.6,
+        "Total Operating Income": 143273400.0,
+        "Operating Profit": 47506600.0,
         "Net Profit": 33267570.0,
         "Number of Shares": 4416621.0,
         "EPS Reported": 30.13,
@@ -1943,8 +2114,16 @@
         "Cost of funds": -10.44,
         "CD ratio": -0.96
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:10:33.008760"
+  "last_updated": "2026-11-14T21:19:38.947106"
 }

@@ -155,7 +155,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:49.784880",
+      "parsed_at": "2026-11-14T20:25:42.222736",
       "computed": {
         "pe_ratio": 42.2,
         "pb_ratio": 2.9,
@@ -233,7 +233,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:49.784875",
+      "parsed_at": "2026-11-14T20:25:42.222732",
       "computed": {
         "pe_ratio": -32.4,
         "pb_ratio": 2.5,
@@ -274,7 +274,7 @@
         "Current Liabilities": 1693649480.0,
         "Current Assets": 3747473190.0,
         "Total Assets": 13461759260.0,
-        "Revenue from Operation": 1764229.55,
+        "Revenue from Operation": 1764229550.0,
         "Gross Profit": 300351420.0,
         "Total Operating Profit": 94853080.0,
         "Net Profit": -75936420.0,
@@ -319,6 +319,13 @@
         "Net Profit": 5381.85,
         "EPS Reported": 5381.85,
         "ROE Reported": 5099.99
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -327,7 +334,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:49.784868",
+      "parsed_at": "2026-11-14T20:25:42.222728",
       "computed": {
         "pe_ratio": -52.7,
         "pb_ratio": 1.4,
@@ -368,7 +375,7 @@
         "Current Liabilities": 2006051350.0,
         "Current Assets": 3952159360.0,
         "Total Assets": 13940764610.0,
-        "Revenue from Operation": 2615209.33,
+        "Revenue from Operation": 2615209330.0,
         "Gross Profit": 700691810.0,
         "Total Operating Profit": 437045820.0,
         "Net Profit": 6150260.0,
@@ -413,6 +420,13 @@
         "Net Profit": 5381.85,
         "EPS Reported": 5381.85,
         "ROE Reported": 5099.99
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -421,7 +435,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:49.784861",
+      "parsed_at": "2026-11-14T20:25:42.222723",
       "computed": {
         "pe_ratio": 2059.9,
         "pb_ratio": 2.2,
@@ -463,7 +477,7 @@
         "Current Liabilities": 2233152850.0,
         "Current Assets": 4095186550.0,
         "Total Assets": 14125802110.0,
-        "Revenue from Operation": 669921.55,
+        "Revenue from Operation": 669921550.0,
         "Gross Profit": 233525840.0,
         "Total Operating Profit": 134871200.0,
         "Net Profit": 43688340.0,
@@ -509,6 +523,13 @@
         "Net Profit": 5381.85,
         "EPS Reported": 5381.85,
         "ROE Reported": 5099.99
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -517,7 +538,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:49.784854",
+      "parsed_at": "2026-11-14T20:25:42.222719",
       "computed": {
         "pe_ratio": -369.6,
         "pb_ratio": 2.2,
@@ -559,7 +580,7 @@
         "Current Liabilities": 2957471420.0,
         "Current Assets": 4797596470.0,
         "Total Assets": 14769483740.0,
-        "Revenue from Operation": 1690357.99,
+        "Revenue from Operation": 1690357990.0,
         "Gross Profit": 471424270.0,
         "Total Operating Profit": 317394640.0,
         "Net Profit": 47503800.0,
@@ -604,6 +625,13 @@
         "Net Profit": 5381.85,
         "EPS Reported": 5381.85,
         "ROE Reported": 5099.99
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -612,7 +640,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:49.784847",
+      "parsed_at": "2026-11-14T20:25:42.222714",
       "computed": {
         "pe_ratio": 77.3,
         "pb_ratio": 2.3,
@@ -654,7 +682,7 @@
         "Current Liabilities": 2149963880.0,
         "Current Assets": 4174563130.0,
         "Total Assets": 14497461300.0,
-        "Revenue from Operation": 3041781.74,
+        "Revenue from Operation": 3041781740.0,
         "Gross Profit": 879364310.0,
         "Total Operating Profit": 650054510.0,
         "Net Profit": 226134710.0,
@@ -702,6 +730,13 @@
         "Net Profit": 5381.85,
         "EPS Reported": 5381.85,
         "ROE Reported": 5099.99
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -709,7 +744,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:49.784832",
+      "parsed_at": "2026-11-14T20:25:42.222705",
       "raw": {
         "Paid Up Capital": 3075050000.0,
         "Reserve and Surplus": 3100100910.0,
@@ -718,7 +753,7 @@
         "Current Liabilities": 3171363410.0,
         "Current Assets": 4635518000.0,
         "Total Assets": 15352901070.0,
-        "Revenue from Operation": 4415900.43,
+        "Revenue from Operation": 4415900430.0,
         "Gross Profit": 1276749450.0,
         "Total Operating Profit": 890275110.0,
         "Net Profit": 337147950.0,
@@ -770,8 +805,15 @@
         "Book Value Reported": 5.42,
         "ROE Reported": 5099.99
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:49.785848"
+  "last_updated": "2026-11-14T20:25:42.223604"
 }

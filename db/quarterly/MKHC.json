@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:15:09.308325",
+      "parsed_at": "2026-11-14T21:24:14.736802",
       "raw": {
         "Paid Up Capital": 660000000.0,
         "Reserve and Surplus": -69709000.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 319613000.0,
         "Current Assets": 171270000.0,
         "Total Assets": 2533826000.0,
-        "Operating Profit": -11541.0,
+        "Operating Profit": -11541000.0,
         "Net Profit": -12979000.0,
         "Number of Shares": 6600000.0,
         "EPS(Rs.)": -2.62,
@@ -48,14 +48,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:15:09.308241",
+      "parsed_at": "2026-11-14T21:24:14.736713",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -66701000.0,
@@ -64,7 +71,7 @@
         "Current Liabilities": 364123000.0,
         "Current Assets": 194368000.0,
         "Total Assets": 3218890000.0,
-        "Operating Profit": -12144.0,
+        "Operating Profit": -12144000.0,
         "Net Profit": -13273000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -1.77,
@@ -95,14 +102,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:15:09.308155",
+      "parsed_at": "2026-11-14T21:24:14.736629",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -73153000.0,
@@ -113,7 +127,7 @@
         "Total Assets": 3354444000.0,
         "Revenue": 8968000.0,
         "Gross Profit": 8968000.0,
-        "Operating Profit": -6318.0,
+        "Operating Profit": -6318000.0,
         "Net Profit": -19545000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -1.95,
@@ -146,14 +160,21 @@
         "revenue_ttm": 8968000.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:15:09.308062",
+      "parsed_at": "2026-11-14T21:24:14.736533",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -123346000.0,
@@ -164,7 +185,7 @@
         "Total Assets": 3364525000.0,
         "Revenue": 56700000.0,
         "Gross Profit": 56700000.0,
-        "Operating Profit": 48909.0,
+        "Operating Profit": 48909000.0,
         "Net Profit": -50193000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -20.08,
@@ -197,14 +218,21 @@
         "revenue_ttm": 56700000.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:15:09.307970",
+      "parsed_at": "2026-11-14T21:24:14.736437",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -227212000.0,
@@ -215,7 +243,7 @@
         "Total Assets": 3355951000.0,
         "Revenue": 58492000.0,
         "Gross Profit": 58492000.0,
-        "Operating Profit": 43930.0,
+        "Operating Profit": 43930000.0,
         "Net Profit": -154059000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -30.81,
@@ -265,14 +293,21 @@
         "Book Value(Rs.)": -13.6,
         "ROE": -1260.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:15:09.307877",
+      "parsed_at": "2026-11-14T21:24:14.736343",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -299703000.0,
@@ -283,7 +318,7 @@
         "Total Assets": 3340889000.0,
         "Revenue": 86377000.0,
         "Gross Profit": 86377000.0,
-        "Operating Profit": 63885.0,
+        "Operating Profit": 63885000.0,
         "Net Profit": -226550000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -30.21,
@@ -333,14 +368,21 @@
         "Book Value(Rs.)": -24.97,
         "ROE": -2170.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:15:09.307784",
+      "parsed_at": "2026-11-14T21:24:14.736243",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -389406000.0,
@@ -351,7 +393,7 @@
         "Total Assets": 3361610000.0,
         "Revenue": 112251000.0,
         "Gross Profit": 112251000.0,
-        "Operating Profit": 60756.0,
+        "Operating Profit": 60756000.0,
         "Net Profit": -316253000.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": -31.63,
@@ -404,14 +446,21 @@
         "Book Value(Rs.)": -34.12,
         "ROE": -2354.5
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:15:09.307688",
+      "parsed_at": "2026-11-14T21:24:14.736178",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -309101000.0,
@@ -422,7 +471,7 @@
         "Total Assets": 3355031000.0,
         "Revenue": 134961000.0,
         "Gross Profit": 134961000.0,
-        "Operating Profit": 121461.0,
+        "Operating Profit": 121461000.0,
         "Net Profit": 27115000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 10.85,
@@ -473,14 +522,21 @@
         "Net Profit": 154.02,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:15:09.307593",
+      "parsed_at": "2026-11-14T21:24:14.736138",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -324970000.0,
@@ -491,7 +547,7 @@
         "Total Assets": 3324883000.0,
         "Revenue": 210800000.0,
         "Gross Profit": 210640000.0,
-        "Operating Profit": 186133.0,
+        "Operating Profit": 186133000.0,
         "Net Profit": 7182000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 1.44,
@@ -542,14 +598,21 @@
         "Net Profit": 104.66,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:15:09.307498",
+      "parsed_at": "2026-11-14T21:24:14.736098",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -381396000.0,
@@ -560,7 +623,7 @@
         "Total Assets": 3269952000.0,
         "Revenue": 246319000.0,
         "Gross Profit": 245719000.0,
-        "Operating Profit": 210371.0,
+        "Operating Profit": 210371000.0,
         "Net Profit": -49244000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": -6.57,
@@ -610,14 +673,21 @@
         "Net Profit": 78.26,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:15:09.307405",
+      "parsed_at": "2026-11-14T21:24:14.736059",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -417851000.0,
@@ -628,7 +698,7 @@
         "Total Assets": 3228703000.0,
         "Revenue": 336630000.0,
         "Gross Profit": 296974000.0,
-        "Operating Profit": 284271.0,
+        "Operating Profit": 284271000.0,
         "Net Profit": -63581000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": -6.36,
@@ -678,14 +748,21 @@
         "Net Profit": 79.9,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:15:09.307310",
+      "parsed_at": "2026-11-14T21:24:14.736019",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -368309000.0,
@@ -696,7 +773,7 @@
         "Total Assets": 3236472000.0,
         "Revenue": 139221000.0,
         "Gross Profit": 138026000.0,
-        "Operating Profit": 120371.0,
+        "Operating Profit": 120371000.0,
         "Net Profit": 28419000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 11.37,
@@ -750,14 +827,21 @@
         "Book Value Reported": -8.57,
         "ROE Reported": 14.65
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:15:09.307214",
+      "parsed_at": "2026-11-14T21:24:14.735972",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -353916000.0,
@@ -768,7 +852,7 @@
         "Total Assets": 3165310000.0,
         "Revenue": 235875000.0,
         "Gross Profit": 230806000.0,
-        "Operating Profit": 210503.0,
+        "Operating Profit": 210503000.0,
         "Net Profit": 43818000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 8.76,
@@ -822,14 +906,21 @@
         "Book Value Reported": -4.28,
         "ROE Reported": 536.62
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:15:09.307118",
+      "parsed_at": "2026-11-14T21:24:14.735932",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -368485000.0,
@@ -840,7 +931,7 @@
         "Total Assets": 3123066000.0,
         "Revenue": 296962000.0,
         "Gross Profit": 296962000.0,
-        "Operating Profit": 161810.0,
+        "Operating Profit": 161810000.0,
         "Net Profit": 29251000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 3.9,
@@ -894,14 +985,21 @@
         "Book Value Reported": 2.09,
         "ROE Reported": 158.25
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:15:09.307016",
+      "parsed_at": "2026-11-14T21:24:14.735890",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -382281000.0,
@@ -912,7 +1010,7 @@
         "Total Assets": 3110508000.0,
         "Revenue": 379439000.0,
         "Gross Profit": 379439000.0,
-        "Operating Profit": 190335.0,
+        "Operating Profit": 190335000.0,
         "Net Profit": 15850000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 1.59,
@@ -966,14 +1064,21 @@
         "Book Value Reported": 6.12,
         "ROE Reported": 123.53
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MKHC",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:15:09.306899",
+      "parsed_at": "2026-11-14T21:24:14.735840",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": -322617000.0,
@@ -984,7 +1089,7 @@
         "Total Assets": 3119861000.0,
         "Revenue": 147669000.0,
         "Gross Profit": 138711000.0,
-        "Operating Profit": 100310.0,
+        "Operating Profit": 100310000.0,
         "Net Profit": 63803000.0,
         "Number of Shares": 10000000.0,
         "EPS Reported": 25.52,
@@ -1038,8 +1143,15 @@
         "Book Value Reported": 7.23,
         "ROE Reported": 109.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:15:09.309814"
+  "last_updated": "2026-11-14T21:24:14.739073"
 }

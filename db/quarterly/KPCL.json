@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:08:10.220482",
+      "parsed_at": "2026-11-14T21:17:17.872066",
       "raw": {
         "Paid Up Capital": 690000000.0,
         "Reserve and Surplus": 121783090.0,
@@ -58,7 +58,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:08:10.220414",
+      "parsed_at": "2026-11-14T21:17:17.872026",
       "raw": {
         "Paid Up Capital": 690000000.0,
         "Reserve and Surplus": 129482880.0,
@@ -108,7 +108,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:08:10.220344",
+      "parsed_at": "2026-11-14T21:17:17.871990",
       "raw": {
         "Paid Up Capital": 690000000.0,
         "Reserve and Surplus": 164852800.0,
@@ -158,7 +158,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:08:10.220276",
+      "parsed_at": "2026-11-14T21:17:17.871953",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 76635770.0,
@@ -206,7 +206,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:08:10.220208",
+      "parsed_at": "2026-11-14T21:17:17.871854",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 81303600.0,
@@ -275,7 +275,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:08:10.220136",
+      "parsed_at": "2026-11-14T21:17:17.871765",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 82559040.0,
@@ -344,7 +344,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:08:10.220068",
+      "parsed_at": "2026-11-14T21:17:17.871675",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 121095390.0,
@@ -413,7 +413,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:08:10.220000",
+      "parsed_at": "2026-11-14T21:17:17.871586",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 155077300.0,
@@ -481,7 +481,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:08:10.219931",
+      "parsed_at": "2026-11-14T21:17:17.871494",
       "raw": {
         "Paid Up Capital": 793500000.0,
         "Reserve and Surplus": 161931220.0,
@@ -550,7 +550,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:08:10.219852",
+      "parsed_at": "2026-11-14T21:17:17.871407",
       "raw": {
         "Paid Up Capital": 872850000.0,
         "Reserve and Surplus": 96787960.0,
@@ -619,7 +619,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:08:10.219752",
+      "parsed_at": "2026-11-14T21:17:17.871321",
       "raw": {
         "Paid Up Capital": 872850000.0,
         "Reserve and Surplus": 142859110.0,
@@ -688,7 +688,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:08:10.219647",
+      "parsed_at": "2026-11-14T21:17:17.871234",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 107493140.0,
@@ -756,7 +756,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:08:10.219510",
+      "parsed_at": "2026-11-14T21:17:17.871161",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 119898530.0,
@@ -824,7 +824,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:08:10.219354",
+      "parsed_at": "2026-11-14T21:17:17.871121",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 125892190.0,
@@ -892,7 +892,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:08:10.219153",
+      "parsed_at": "2026-11-14T21:17:17.871082",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 171184480.0,
@@ -960,7 +960,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:08:10.218763",
+      "parsed_at": "2026-11-14T21:17:17.871043",
       "raw": {
         "Paid Up Capital": 999325970.0,
         "Reserve and Surplus": 136420430.0,
@@ -1031,7 +1031,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:08:10.218459",
+      "parsed_at": "2026-11-14T21:17:17.870984",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 219652920.0,
@@ -1042,7 +1042,7 @@
         "Total Assets": 1326155570.0,
         "Revenue": 157485670.0,
         "Gross Profit": 137181440.0,
-        "Operating Profit": 91293.25,
+        "Operating Profit": 91293250.0,
         "Net Profit": 89475510.0,
         "Number of Shares": 9339495.0,
         "EPS Reported": 12.77,
@@ -1095,14 +1095,21 @@
         "Book Value Reported": 9.46,
         "ROE Reported": -7.35
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KPCL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:08:10.218324",
+      "parsed_at": "2026-11-14T21:17:17.870925",
       "raw": {
         "Paid Up Capital": 933949500.0,
         "Reserve and Surplus": 235167350.0,
@@ -1113,7 +1120,7 @@
         "Total Assets": 1311554700.0,
         "Revenue": 199249370.0,
         "Gross Profit": 173685070.0,
-        "Operating Profit": 110114.12,
+        "Operating Profit": 110114120.0,
         "Net Profit": 104989950.0,
         "Number of Shares": 9339495.0,
         "EPS Reported": 11.24,
@@ -1166,8 +1173,15 @@
         "Book Value Reported": 10.31,
         "ROE Reported": 1.01
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:08:10.223170"
+  "last_updated": "2026-11-14T21:17:17.873511"
 }

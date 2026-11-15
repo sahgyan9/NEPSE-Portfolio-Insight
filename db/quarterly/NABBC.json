@@ -22,8 +22,8 @@
         "Investment Securities": 10408450.0,
         "Interest Income": 21535550.0,
         "Net Interest Income": 8412210.0,
-        "Total Operating Income": 12920.41,
-        "Operating Profit": -15779.72,
+        "Total Operating Income": 12920410.0,
+        "Operating Profit": -15779720.0,
         "Net Profit": -15779720.0,
         "Distributable Profit": -234655030.0,
         "Number of Shares": 2624676.0,
@@ -74,7 +74,15 @@
         "revenue_ttm": 21535550.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -94,8 +102,8 @@
         "Investment Securities": 22351880.0,
         "Interest Income": 11868580.0,
         "Net Interest Income": 1576650.0,
-        "Total Operating Income": 3220.0,
-        "Operating Profit": -16701.95,
+        "Total Operating Income": 3220000.0,
+        "Operating Profit": -16701950.0,
         "Net Profit": -16701950.0,
         "Distributable Profit": -250883930.0,
         "Number of Shares": 2624676.0,
@@ -145,7 +153,15 @@
         "revenue_ttm": 11868580.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -165,8 +181,8 @@
         "Investment Securities": 26510010.0,
         "Interest Income": 31303490.0,
         "Net Interest Income": 9074880.0,
-        "Total Operating Income": 11592.7,
-        "Operating Profit": -16629.23,
+        "Total Operating Income": 11592700.0,
+        "Operating Profit": -16629230.0,
         "Net Profit": -16629230.0,
         "Distributable Profit": -250811200.0,
         "Number of Shares": 2624676.0,
@@ -216,7 +232,15 @@
         "revenue_ttm": 31303490.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -236,20 +260,20 @@
         "Investment Securities": 33233200.0,
         "Interest Income": 46237210.0,
         "Net Interest Income": 12570000.0,
-        "Total Operating Income": 15721.83,
-        "Operating Profit": -32910.63,
+        "Total Operating Income": 15721830.0,
+        "Operating Profit": -32910630.0,
         "Net Profit": -32910630.0,
         "Distributable Profit": -267092600.0,
         "Number of Shares": 2624676.0,
         "EPS(Rs.)": -16.72,
         "Book Value(Rs.)": 46.16,
         "ROE": -36.0,
-        "CAR": 1385.0,
-        "NPL": 481.0,
-        "Cost of funds": 837.0,
-        "Credit To Deposit Ratio": 9506.0,
-        "Base Rate": 1701.0,
-        "Interest Spread Rate": 465.0
+        "CAR": 13.85,
+        "NPL": 4.81,
+        "Cost of funds": 8.37,
+        "Credit To Deposit Ratio": 95.06,
+        "Base Rate": 17.01,
+        "Interest Spread Rate": 4.65
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -287,7 +311,23 @@
         "revenue_ttm": 46237210.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Base Rate",
+        "CAR",
+        "Cost of funds",
+        "Credit To Deposit Ratio",
+        "Interest Spread Rate",
+        "NPL"
+      ]
     },
     {
       "symbol": "NABBC",
@@ -307,8 +347,8 @@
         "Investment Securities": 47197480.0,
         "Interest Income": 66786910.0,
         "Net Interest Income": 20341380.0,
-        "Total Operating Income": 24715.36,
-        "Operating Profit": -32188.74,
+        "Total Operating Income": 24715360.0,
+        "Operating Profit": -32188740.0,
         "Net Profit": -29142400.0,
         "Distributable Profit": -312933560.0,
         "Number of Shares": 2624676.0,
@@ -388,7 +428,15 @@
         "Base Rate": -27.79,
         "Interest Spread Rate": 31.26
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -408,8 +456,8 @@
         "Investment Securities": 40159730.0,
         "Interest Income": 14859970.0,
         "Net Interest Income": 2915200.0,
-        "Total Operating Income": 3119.76,
-        "Operating Profit": -12159.25,
+        "Total Operating Income": 3119760.0,
+        "Operating Profit": -12159250.0,
         "Net Profit": -12159250.0,
         "Distributable Profit": -325092810.0,
         "Number of Shares": 2624676.0,
@@ -489,7 +537,15 @@
         "Base Rate": -6.03,
         "Interest Spread Rate": 18.52
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -509,8 +565,8 @@
         "Investment Securities": 43144690.0,
         "Interest Income": 26356760.0,
         "Net Interest Income": 4445950.0,
-        "Total Operating Income": 4826.92,
-        "Operating Profit": -63862.29,
+        "Total Operating Income": 4826920.0,
+        "Operating Profit": -63862290.0,
         "Net Profit": -63862290.0,
         "Distributable Profit": -375705260.0,
         "Number of Shares": 2624676.0,
@@ -590,7 +646,15 @@
         "Base Rate": 3.64,
         "Interest Spread Rate": 42.93
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -610,8 +674,8 @@
         "Investment Securities": 43417530.0,
         "Interest Income": 40043880.0,
         "Net Interest Income": 6469280.0,
-        "Total Operating Income": 6931.26,
-        "Operating Profit": -4271.33,
+        "Total Operating Income": 6931260.0,
+        "Operating Profit": -4271330.0,
         "Net Profit": -4271330.0,
         "Distributable Profit": -391882390.0,
         "Number of Shares": 2624676.0,
@@ -620,7 +684,7 @@
         "ROE": -8.31,
         "CAR": 10.55,
         "NPL": 31.77,
-        "Cost of funds": 734.0,
+        "Cost of funds": 7.34,
         "Credit To Deposit Ratio": 73.62,
         "Base Rate": 15.09,
         "Interest Spread Rate": 4.47
@@ -684,14 +748,25 @@
         "EPS(Rs.)": 87.02,
         "Book Value(Rs.)": -43.41,
         "ROE": 76.92,
-        "CAR": -99.24,
-        "NPL": -93.4,
+        "CAR": -23.83,
+        "NPL": 560.5,
         "Cost of funds": -12.31,
-        "Credit To Deposit Ratio": -99.23,
-        "Base Rate": -99.11,
-        "Interest Spread Rate": -99.04
+        "Credit To Deposit Ratio": -22.55,
+        "Base Rate": -11.29,
+        "Interest Spread Rate": -3.87
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Cost of funds"
+      ]
     },
     {
       "symbol": "NABBC",
@@ -711,8 +786,8 @@
         "Investment Securities": 46905370.0,
         "Interest Income": 57436330.0,
         "Net Interest Income": 10625430.0,
-        "Total Operating Income": 14121.66,
-        "Operating Profit": 2204.5,
+        "Total Operating Income": 14121660.0,
+        "Operating Profit": 2204500.0,
         "Net Profit": 2204500.0,
         "Distributable Profit": -385406570.0,
         "Number of Shares": 2624676.0,
@@ -793,7 +868,15 @@
         "Base Rate": -12.2,
         "Interest Spread Rate": -30.36
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -813,8 +896,8 @@
         "Investment Securities": 48408220.0,
         "Interest Income": 7996840.0,
         "Net Interest Income": -4366090.0,
-        "Total Operating Income": -3485.42,
-        "Operating Profit": -4850.99,
+        "Total Operating Income": -3485420.0,
+        "Operating Profit": -4850990.0,
         "Net Profit": -4850990.0,
         "Distributable Profit": -404101800.0,
         "Number of Shares": 2624676.0,
@@ -894,7 +977,15 @@
         "Base Rate": -8.21,
         "Interest Spread Rate": -37.11
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -914,8 +1005,8 @@
         "Investment Securities": 48095860.0,
         "Interest Income": 19647260.0,
         "Net Interest Income": -2366860000.0,
-        "Total Operating Income": -1364836.0,
-        "Operating Profit": 6754.01,
+        "Total Operating Income": -1364836000.0,
+        "Operating Profit": 6754010.0,
         "Net Profit": -4553490.0,
         "Distributable Profit": -419359580.0,
         "Number of Shares": 2624676.0,
@@ -992,7 +1083,15 @@
         "Base Rate": -9.81,
         "Interest Spread Rate": -38.76
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1014,8 +1113,8 @@
         "Investment Securities": 45879550.0,
         "Interest Income": 30396260.0,
         "Net Interest Income": 1220770.0,
-        "Total Operating Income": 3234.1,
-        "Operating Profit": -1330.5,
+        "Total Operating Income": 3234100.0,
+        "Operating Profit": -1330500.0,
         "Net Profit": -12674660.0,
         "Distributable Profit": -429182170.0,
         "Number of Shares": 2624676.0,
@@ -1089,12 +1188,20 @@
         "Number of Shares": 0.0,
         "CAR": -110.81,
         "NPL": 41.52,
-        "Cost of funds": -99.14,
+        "Cost of funds": -14.31,
         "Credit To Deposit Ratio": 10.11,
         "Base Rate": 2.78,
         "Interest Spread Rate": 0.45
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1116,8 +1223,8 @@
         "Investment Securities": 39153370.0,
         "Interest Income": 35718650.0,
         "Net Interest Income": -299000.0,
-        "Total Operating Income": 4040.45,
-        "Operating Profit": -30819.69,
+        "Total Operating Income": 4040450.0,
+        "Operating Profit": -30819690.0,
         "Net Profit": -25169200.0,
         "Distributable Profit": -25169200.0,
         "Number of Shares": 2624676.0,
@@ -1196,7 +1303,15 @@
         "Base Rate": 5.94,
         "Interest Spread Rate": 17.49
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1218,8 +1333,8 @@
         "Investment Securities": 17785580.0,
         "Interest Income": 5043520.0,
         "Net Interest Income": -1230150.0,
-        "Total Operating Income": 1094.53,
-        "Operating Profit": -9732.17,
+        "Total Operating Income": 1094530.0,
+        "Operating Profit": -9732170.0,
         "Net Profit": -22107030.0,
         "Distributable Profit": -453921770.0,
         "Number of Shares": 2624676.0,
@@ -1298,7 +1413,15 @@
         "Base Rate": 17.46,
         "Interest Spread Rate": 39.13
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1320,8 +1443,8 @@
         "Investment Securities": 17785580.0,
         "Interest Income": 9994110.0,
         "Net Interest Income": -2318020.0,
-        "Total Operating Income": -2161.25,
-        "Operating Profit": -37201.95,
+        "Total Operating Income": -2161250.0,
+        "Operating Profit": -37201950.0,
         "Net Profit": -47347800.0,
         "Distributable Profit": -47347800.0,
         "Number of Shares": 4943333.55,
@@ -1403,7 +1526,15 @@
         "Base Rate": 16.4,
         "Interest Spread Rate": 23.29
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1425,8 +1556,8 @@
         "Investment Securities": 30132780.0,
         "Interest Income": 16332210.0,
         "Net Interest Income": -2454690.0,
-        "Total Operating Income": -2180.46,
-        "Operating Profit": -41612.72,
+        "Total Operating Income": -2180460.0,
+        "Operating Profit": -41612720.0,
         "Net Profit": -49781510.0,
         "Distributable Profit": -503703290.0,
         "Number of Shares": 5249930.55,
@@ -1508,7 +1639,15 @@
         "Base Rate": 22.37,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1530,8 +1669,8 @@
         "Investment Securities": 33520160.0,
         "Interest Income": 22877320.0,
         "Net Interest Income": -2799040.0,
-        "Total Operating Income": -2118.03,
-        "Operating Profit": -45637.92,
+        "Total Operating Income": -2118030.0,
+        "Operating Profit": -45637920.0,
         "Net Profit": -53796880.0,
         "Distributable Profit": -522340110.0,
         "Number of Shares": 5249930.55,
@@ -1613,7 +1752,15 @@
         "Base Rate": 16.19,
         "Interest Spread Rate": -16.44
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NABBC",
@@ -1635,8 +1782,8 @@
         "Investment Securities": 33520160.0,
         "Interest Income": 6491460.0,
         "Net Interest Income": -666390.0,
-        "Total Operating Income": -224.87,
-        "Operating Profit": 2934.91,
+        "Total Operating Income": -224870.0,
+        "Operating Profit": 2934910.0,
         "Net Profit": 2996610.0,
         "Distributable Profit": -520214250.0,
         "Number of Shares": 5249930.55,
@@ -1719,7 +1866,15 @@
         "Base Rate": -0.89,
         "Interest Spread Rate": -77.68
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:20:36.016092"

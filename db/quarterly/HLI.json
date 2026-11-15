@@ -8,7 +8,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:53:58.873793",
+      "parsed_at": "2026-11-14T21:03:06.254958",
       "raw": {
         "Paid Up Capital": 8020384000.0,
         "Reserves and Surplus": 1063544000.0,
@@ -21,8 +21,8 @@
         "Total Investment and Loans": 52914820000.0,
         "Total Revenue": 936665000.0,
         "Income From Investment Loans And Others": 768135000.0,
-        "Total Expenses And Provisions": 355341.0,
-        "Management Expenses": 181169.0,
+        "Total Expenses And Provisions": 355341000.0,
+        "Management Expenses": 181169000.0,
         "Net Profit": 581324000.0,
         "Net Premium": 14576177000.0,
         "Net Claim Payment": 5452446000.0,
@@ -73,14 +73,22 @@
         "graham_number": 139.23
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:53:58.873713",
+      "parsed_at": "2026-11-14T21:03:06.254776",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 1263059670.0,
@@ -92,7 +100,7 @@
         "Total Investment and Loans": 56238656920.0,
         "Total Revenue": 5834769850.0,
         "Income From Investment Loans And Others": 1374690250.0,
-        "Total Expenses And Provisions": 5593372.52,
+        "Total Expenses And Provisions": 5593372520.0,
         "Net Profit": 241397330.0,
         "Net Premium": 4227262400.0,
         "Net Claim Payment": 4911820690.0,
@@ -139,14 +147,21 @@
         "graham_number": 181.51
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:53:58.873643",
+      "parsed_at": "2026-11-14T21:03:06.254623",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 1301322800.0,
@@ -158,7 +173,7 @@
         "Total Investment and Loans": 58803214330.0,
         "Total Revenue": 10979472090.0,
         "Income From Investment Loans And Others": 2710486400.0,
-        "Total Expenses And Provisions": 10633409.27,
+        "Total Expenses And Provisions": 10633409270.0,
         "Net Profit": 346062820.0,
         "Net Premium": 7892509670.0,
         "Net Claim Payment": 9203850830.0,
@@ -205,14 +220,21 @@
         "graham_number": 154.62
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:53:58.873591",
+      "parsed_at": "2026-11-14T21:03:06.254454",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 1329209330.0,
@@ -224,7 +246,7 @@
         "Total Investment and Loans": 61347647880.0,
         "Total Revenue": 16696330860.0,
         "Income From Investment Loans And Others": 4126320970.0,
-        "Total Expenses And Provisions": 16260901.07,
+        "Total Expenses And Provisions": 16260901070.0,
         "Net Profit": 435429790.0,
         "Net Premium": 12023055430.0,
         "Net Claim Payment": 13971112630.0,
@@ -269,14 +291,21 @@
         "graham_number": 142.27
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:53:58.873541",
+      "parsed_at": "2026-11-14T21:03:06.254306",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 1421325390.0,
@@ -288,7 +317,7 @@
         "Total Investment and Loans": 65380659930.0,
         "Total Revenue": 22682766600.0,
         "Income From Investment Loans And Others": 5604592540.0,
-        "Total Expenses And Provisions": 22048907.72,
+        "Total Expenses And Provisions": 22048907720.0,
         "Net Profit": 633858880.0,
         "Net Premium": 16192049630.0,
         "Net Claim Payment": 18817453920.0,
@@ -357,14 +386,21 @@
         "Book Value(Rs.)": 6.28,
         "ROE": 2.62
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:53:58.873488",
+      "parsed_at": "2026-11-14T21:03:06.254154",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 2317901700.0,
@@ -377,7 +413,7 @@
         "Total Investment and Loans": 69535170890.0,
         "Total Revenue": 6554386000.0,
         "Income From Investment Loans And Others": 1486175390.0,
-        "Total Expenses And Provisions": 5881933.21,
+        "Total Expenses And Provisions": 5881933210.0,
         "Management Expenses": 0.0,
         "Net Profit": 253755060.0,
         "Net Premium": 4170193330.0,
@@ -452,14 +488,21 @@
         "Claims Payables": -100.0,
         "Number of Shares": 0.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:53:58.873394",
+      "parsed_at": "2026-11-14T21:03:06.253983",
       "raw": {
         "Paid Up Capital": 8020383600.0,
         "Reserves and Surplus": 2133287090.0,
@@ -472,7 +515,7 @@
         "Total Investment and Loans": 71067165810.0,
         "Total Revenue": 12214643170.0,
         "Income From Investment Loans And Others": 2897898010.0,
-        "Total Expenses And Provisions": 11332977.32,
+        "Total Expenses And Provisions": 11332977320.0,
         "Management Expenses": 0.0,
         "Net Profit": 376282120.0,
         "Net Premium": 8060990850.0,
@@ -547,14 +590,21 @@
         "Claims Payables": -100.0,
         "Number of Shares": 0.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:53:58.873297",
+      "parsed_at": "2026-11-14T21:03:06.253811",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": 1099048170.0,
@@ -567,7 +617,7 @@
         "Total Investment and Loans": 75431703480.0,
         "Total Revenue": 18480021610.0,
         "Income From Investment Loans And Others": 4286456580.0,
-        "Total Expenses And Provisions": 17144925.62,
+        "Total Expenses And Provisions": 17144925620.0,
         "Management Expenses": 0.0,
         "Net Profit": 472400660.0,
         "Net Premium": 12183093560.0,
@@ -641,14 +691,21 @@
         "Gross Claim Payments": 4.27,
         "Number of Shares": 14.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:53:58.873200",
+      "parsed_at": "2026-11-14T21:03:06.253643",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": 1024480980.0,
@@ -661,7 +718,7 @@
         "Total Investment and Loans": 75720848550.0,
         "Total Revenue": 25413943030.0,
         "Income From Investment Loans And Others": 5681039890.0,
-        "Total Expenses And Provisions": 23838228.07,
+        "Total Expenses And Provisions": 23838228070.0,
         "Management Expenses": 0.0,
         "Net Profit": 546974430.0,
         "Net Premium": 17260015210.0,
@@ -735,14 +792,21 @@
         "Gross Claim Payments": 22.43,
         "Number of Shares": 14.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:53:58.873101",
+      "parsed_at": "2026-11-14T21:03:06.253475",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": 776802130.0,
@@ -755,7 +819,7 @@
         "Total Investment and Loans": 79027667130.0,
         "Total Revenue": 6024080860.0,
         "Income From Investment Loans And Others": 1350989680.0,
-        "Total Expenses And Provisions": 5839054.12,
+        "Total Expenses And Provisions": 5839054120.0,
         "Management Expenses": 0.0,
         "Net Profit": 185026750.0,
         "Net Premium": 4325934380.0,
@@ -832,14 +896,21 @@
         "Book Value Reported": -23.99,
         "ROE Reported": -15.92
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:53:58.873011",
+      "parsed_at": "2026-11-14T21:03:06.253312",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": 947624630.0,
@@ -852,7 +923,7 @@
         "Total Investment and Loans": 82872689390.0,
         "Total Revenue": 11555657940.0,
         "Income From Investment Loans And Others": 2586125420.0,
-        "Total Expenses And Provisions": 11117374.91,
+        "Total Expenses And Provisions": 11117374910.0,
         "Management Expenses": 0.0,
         "Net Profit": 206737350.0,
         "Net Premium": 8407755340.0,
@@ -929,14 +1000,21 @@
         "Book Value Reported": -17.89,
         "ROE Reported": -41.33
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:53:58.872911",
+      "parsed_at": "2026-11-14T21:03:06.253140",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": -425535790.0,
@@ -949,7 +1027,7 @@
         "Total Investment and Loans": 81519380190.0,
         "Total Revenue": 17594724420.0,
         "Income From Investment Loans And Others": 3743492520.0,
-        "Total Expenses And Provisions": 16902312.12,
+        "Total Expenses And Provisions": 16902312120.0,
         "Management Expenses": 0.0,
         "Net Profit": 261444380.0,
         "Net Premium": 12936277810.0,
@@ -1026,14 +1104,21 @@
         "Book Value Reported": -13.46,
         "ROE Reported": -36.03
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HLI",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:53:58.872794",
+      "parsed_at": "2026-11-14T21:03:06.252942",
       "raw": {
         "Paid Up Capital": 9143237310.0,
         "Reserves and Surplus": -1084339620.0,
@@ -1046,7 +1131,7 @@
         "Total Investment and Loans": 83871454070.0,
         "Total Revenue": 24500945600.0,
         "Income From Investment Loans And Others": 5004067610.0,
-        "Total Expenses And Provisions": 23672901.04,
+        "Total Expenses And Provisions": 23672901040.0,
         "Management Expenses": 0.0,
         "Net Profit": 317771310.0,
         "Net Premium": 18325857470.0,
@@ -1123,8 +1208,15 @@
         "Book Value Reported": -16.09,
         "ROE Reported": 520.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:53:58.875749"
+  "last_updated": "2026-11-14T21:03:06.257748"
 }

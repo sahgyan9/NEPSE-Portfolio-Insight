@@ -68,8 +68,8 @@
         "Investment Securities": 29305607110.0,
         "Interest Income": 11311291010.0,
         "Net Interest Income": 4731053250.0,
-        "Total Operating Income": 5801467.1,
-        "Operating Profit": 2612781.48,
+        "Total Operating Income": 5801467100.0,
+        "Operating Profit": 2612781480.0,
         "Net Profit": 2192931820.0,
         "Distributable Profit": 2702493980.0,
         "Number of Shares": 144059048.31,
@@ -121,7 +121,15 @@
         "graham_number": 331.5
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -142,8 +150,8 @@
         "Investment Securities": 42737711340.0,
         "Interest Income": 16543782970.0,
         "Net Interest Income": 6884761320.0,
-        "Total Operating Income": 8281578.11,
-        "Operating Profit": 4111011.17,
+        "Total Operating Income": 8281578110.0,
+        "Operating Profit": 4111011170.0,
         "Net Profit": 3266085020.0,
         "Distributable Profit": 3563835440.0,
         "Number of Shares": 144059048.31,
@@ -195,7 +203,15 @@
         "graham_number": 355.97
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -216,8 +232,8 @@
         "Investment Securities": 35728781280.0,
         "Interest Income": 5385108830.0,
         "Net Interest Income": 1907195940.0,
-        "Total Operating Income": 2156989.23,
-        "Operating Profit": 794029.35,
+        "Total Operating Income": 2156989230.0,
+        "Operating Profit": 794029350.0,
         "Net Profit": 604098050.0,
         "Distributable Profit": 2902524110.0,
         "Number of Shares": 144059048.31,
@@ -272,7 +288,15 @@
         "eps_ttm": -63.83,
         "EPS(Rs.)": -63.83
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -293,8 +317,8 @@
         "Investment Securities": 38051683710.0,
         "Interest Income": 11227737510.0,
         "Net Interest Income": 3848874460.0,
-        "Total Operating Income": 4412006.86,
-        "Operating Profit": 1514585.29,
+        "Total Operating Income": 4412006860.0,
+        "Operating Profit": 1514585290.0,
         "Net Profit": 1170655430.0,
         "Distributable Profit": 297214250.0,
         "Number of Shares": 146940229.28,
@@ -349,7 +373,15 @@
         "eps_ttm": -91.98,
         "EPS(Rs.)": -91.98
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -370,8 +402,8 @@
         "Investment Securities": 50286415920.0,
         "Interest Income": 17888025400.0,
         "Net Interest Income": 6491125050.0,
-        "Total Operating Income": 7386618.64,
-        "Operating Profit": 2221617.52,
+        "Total Operating Income": 7386618640.0,
+        "Operating Profit": 2221617520.0,
         "Net Profit": 1782330000.0,
         "Distributable Profit": 180764500.0,
         "Number of Shares": 146940229.28,
@@ -454,7 +486,15 @@
         "Base Rate": 21.12,
         "Interest Spread Rate": 20.94
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -475,8 +515,8 @@
         "Investment Securities": 58389856100.0,
         "Interest Income": 25194073310.0,
         "Net Interest Income": 9441553679000.0,
-        "Total Operating Income": 10746174.02,
-        "Operating Profit": 4408281.66,
+        "Total Operating Income": 10746174020.0,
+        "Operating Profit": 4408281660.0,
         "Net Profit": 3411526800.0,
         "Distributable Profit": 973363900.0,
         "Number of Shares": 146940229.28,
@@ -559,7 +599,15 @@
         "Base Rate": 24.16,
         "Interest Spread Rate": -3.19
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -579,8 +627,8 @@
         "Investment Securities": 56350718850.0,
         "Interest Income": 6715428920.0,
         "Net Interest Income": 2217781940.0,
-        "Total Operating Income": 2649485.59,
-        "Operating Profit": 103900.86,
+        "Total Operating Income": 2649485590.0,
+        "Operating Profit": 103900860.0,
         "Net Profit": 142370390.0,
         "Distributable Profit": 367526660.0,
         "Number of Shares": 146940229.28,
@@ -661,7 +709,15 @@
         "Base Rate": 3.03,
         "Interest Spread Rate": 6.56
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -681,8 +737,8 @@
         "Investment Securities": 56877238620.0,
         "Interest Income": 13249579980.0,
         "Net Interest Income": 4634066280.0,
-        "Total Operating Income": 5417022.5,
-        "Operating Profit": 762593.6,
+        "Total Operating Income": 5417022500.0,
+        "Operating Profit": 762593600.0,
         "Net Profit": 590051800.0,
         "Distributable Profit": -569077050.0,
         "Number of Shares": 146940229.28,
@@ -763,7 +819,15 @@
         "Base Rate": -13.64,
         "Interest Spread Rate": -9.62
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -783,8 +847,8 @@
         "Investment Securities": 56460742910.0,
         "Interest Income": 19297783690.0,
         "Net Interest Income": 6775158090.0,
-        "Total Operating Income": 7993775.45,
-        "Operating Profit": 585329.54,
+        "Total Operating Income": 7993775450.0,
+        "Operating Profit": 585329540.0,
         "Net Profit": 130509110.0,
         "Distributable Profit": -1046632500.0,
         "Number of Shares": 146940229.28,
@@ -865,7 +929,15 @@
         "Base Rate": -19.46,
         "Interest Spread Rate": -3.66
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -885,8 +957,8 @@
         "Investment Securities": 73809706170.0,
         "Interest Income": 25252960870.0,
         "Net Interest Income": 8802110440.0,
-        "Total Operating Income": 10598251.24,
-        "Operating Profit": 2809117.38,
+        "Total Operating Income": 10598251240.0,
+        "Operating Profit": 2809117380.0,
         "Net Profit": 1656831830.0,
         "Distributable Profit": 769308380.0,
         "Number of Shares": 146940229.28,
@@ -967,7 +1039,15 @@
         "Base Rate": -19.66,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -987,8 +1067,8 @@
         "Investment Securities": 73300431720.0,
         "Interest Income": 5866995180.0,
         "Net Interest Income": 2208252370.0,
-        "Total Operating Income": 2647411.56,
-        "Operating Profit": 690527.8,
+        "Total Operating Income": 2647411560.0,
+        "Operating Profit": 690527800.0,
         "Net Profit": 602198300.0,
         "Distributable Profit": 1002682790.0,
         "Number of Shares": 146940229.28,
@@ -1069,7 +1149,15 @@
         "Base Rate": -26.88,
         "Interest Spread Rate": 1.03
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1090,8 +1178,8 @@
         "Investment Securities": 81494699080.0,
         "Interest Income": 11445110080.0,
         "Net Interest Income": 4626641200.0,
-        "Total Operating Income": 5435472.96,
-        "Operating Profit": 416767.8,
+        "Total Operating Income": 5435472960.0,
+        "Operating Profit": 416767800.0,
         "Net Profit": 461017650.0,
         "Distributable Profit": 607175740.0,
         "Number of Shares": 146940229.28,
@@ -1170,7 +1258,15 @@
         "Base Rate": -27.95,
         "Interest Spread Rate": 1.56
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1192,8 +1288,8 @@
         "Investment Securities": 57382537810.0,
         "Interest Income": 16886875740.0,
         "Net Interest Income": 7100752630.0,
-        "Total Operating Income": 8568614.22,
-        "Operating Profit": 4312783.28,
+        "Total Operating Income": 8568614220.0,
+        "Operating Profit": 4312783280.0,
         "Net Profit": 2783494680.0,
         "Distributable Profit": 306218430.0,
         "Number of Shares": 146940229.28,
@@ -1273,7 +1369,15 @@
         "Base Rate": -25.41,
         "Interest Spread Rate": -2.28
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1295,8 +1399,8 @@
         "Investment Securities": 62112576520.0,
         "Interest Income": 23068579390.0,
         "Net Interest Income": 10087151820.0,
-        "Total Operating Income": 11943937.7,
-        "Operating Profit": 5415886.2,
+        "Total Operating Income": 11943937700.0,
+        "Operating Profit": 5415886200.0,
         "Net Profit": 3773008990.0,
         "Distributable Profit": -449089960.0,
         "Number of Shares": 146940229.28,
@@ -1376,7 +1480,15 @@
         "Base Rate": -29.99,
         "Interest Spread Rate": -1.27
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1398,8 +1510,8 @@
         "Investment Securities": 64156008400.0,
         "Interest Income": 5583299330.0,
         "Net Interest Income": 2569500390.0,
-        "Total Operating Income": 2984965.7,
-        "Operating Profit": 917120.76,
+        "Total Operating Income": 2984965700.0,
+        "Operating Profit": 917120760.0,
         "Net Profit": 588287500.0,
         "Distributable Profit": -570192950.0,
         "Number of Shares": 146940229.28,
@@ -1479,7 +1591,15 @@
         "Base Rate": -23.21,
         "Interest Spread Rate": -0.76
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1501,8 +1621,8 @@
         "Investment Securities": 76949090250.0,
         "Interest Income": 10377675520.0,
         "Net Interest Income": 4442915480.0,
-        "Total Operating Income": 5349094.8,
-        "Operating Profit": 2061506.9,
+        "Total Operating Income": 5349094800.0,
+        "Operating Profit": 2061506900.0,
         "Net Profit": 1304852930.0,
         "Distributable Profit": -914923330.0,
         "Number of Shares": 146940229.28,
@@ -1586,7 +1706,15 @@
         "Base Rate": -19.48,
         "Interest Spread Rate": -2.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1608,8 +1736,8 @@
         "Investment Securities": 75736897910.0,
         "Interest Income": 16197586100.0,
         "Net Interest Income": 7313205860.0,
-        "Total Operating Income": 8779032.61,
-        "Operating Profit": 4852861.39,
+        "Total Operating Income": 8779032610.0,
+        "Operating Profit": 4852861390.0,
         "Net Profit": 2792981920.0,
         "Distributable Profit": 321334190.0,
         "Number of Shares": 146940229.28,
@@ -1692,7 +1820,15 @@
         "Base Rate": -20.97,
         "Interest Spread Rate": -4.15
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1714,8 +1850,8 @@
         "Investment Securities": 80907173240.0,
         "Interest Income": 21953771900.0,
         "Net Interest Income": 10033060540.0,
-        "Total Operating Income": 12089969.64,
-        "Operating Profit": 7191464.39,
+        "Total Operating Income": 12089969640.0,
+        "Operating Profit": 7191464390.0,
         "Net Profit": 4500199270.0,
         "Distributable Profit": 2327960910.0,
         "Number of Shares": 146940229.28,
@@ -1798,7 +1934,15 @@
         "Base Rate": -20.25,
         "Interest Spread Rate": -9.23
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBL",
@@ -1820,8 +1964,8 @@
         "Investment Securities": 77127035460.0,
         "Interest Income": 5594466560.0,
         "Net Interest Income": 2489574800.0,
-        "Total Operating Income": 3136252.94,
-        "Operating Profit": 994954.33,
+        "Total Operating Income": 3136252940.0,
+        "Operating Profit": 994954330.0,
         "Net Profit": 832187830.0,
         "Distributable Profit": 2752845060.0,
         "Number of Shares": 146940229.28,
@@ -1904,7 +2048,15 @@
         "Base Rate": -15.31,
         "Interest Spread Rate": -13.55
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:23:13.696817"

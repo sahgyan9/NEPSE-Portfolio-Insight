@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:46:59.695741",
+      "parsed_at": "2026-11-14T20:55:52.676634",
       "raw": {
         "EPS(Rs.)": 5.73
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:46:59.695731",
+      "parsed_at": "2026-11-14T20:55:52.676614",
       "raw": {
         "EPS(Rs.)": 7.87
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:46:59.695721",
+      "parsed_at": "2026-11-14T20:55:52.676593",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -68,8 +68,8 @@
         "Investment Securities": 3124339280.0,
         "Interest Income": 942870230.0,
         "Net Interest Income": 267373380.0,
-        "Total Operating Income": 352371.16,
-        "Operating Profit": 152336.52,
+        "Total Operating Income": 352371160.0,
+        "Operating Profit": 152336520.0,
         "Net Profit": 110837570.0,
         "Distributable Profit": 19436410.0,
         "Number of Shares": 9461152.0,
@@ -121,14 +121,22 @@
         "graham_number": 266.66
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:46:59.695647",
+      "parsed_at": "2026-11-14T20:55:52.676434",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -142,8 +150,8 @@
         "Investment Securities": 3283031130.0,
         "Interest Income": 1319967410.0,
         "Net Interest Income": 347133910.0,
-        "Total Operating Income": 461988.62,
-        "Operating Profit": 263440.44,
+        "Total Operating Income": 461988620.0,
+        "Operating Profit": 263440440.0,
         "Net Profit": 188555620.0,
         "Distributable Profit": 85031330.0,
         "Number of Shares": 9461152.0,
@@ -195,14 +203,22 @@
         "graham_number": 304.13
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:46:59.695571",
+      "parsed_at": "2026-11-14T20:55:52.676272",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -216,8 +232,8 @@
         "Investment Securities": 3455793500.0,
         "Interest Income": 477438660.0,
         "Net Interest Income": 150272660.0,
-        "Total Operating Income": 163684.21,
-        "Operating Profit": 54661.87,
+        "Total Operating Income": 163684210.0,
+        "Operating Profit": 54661870.0,
         "Net Profit": 38423470.0,
         "Distributable Profit": 118912860.0,
         "Number of Shares": 9461152.0,
@@ -272,14 +288,22 @@
         "eps_ttm": 183.42,
         "EPS(Rs.)": 183.42
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:46:59.695451",
+      "parsed_at": "2026-11-14T20:55:52.676113",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -294,8 +318,8 @@
         "Investment Securities": 3509228940.0,
         "Interest Income": 892478090.0,
         "Net Interest Income": 225271830.0,
-        "Total Operating Income": 260612.46,
-        "Operating Profit": 66571.78,
+        "Total Operating Income": 260612460.0,
+        "Operating Profit": 66571780.0,
         "Net Profit": 46943100.0,
         "Distributable Profit": 128363660.0,
         "Number of Shares": 9461152.0,
@@ -351,14 +375,22 @@
         "eps_ttm": 26.05,
         "EPS(Rs.)": 26.05
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:46:59.695344",
+      "parsed_at": "2026-11-14T20:55:52.675949",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -373,8 +405,8 @@
         "Investment Securities": 3477028940.0,
         "Interest Income": 1327260590.0,
         "Net Interest Income": 315760720.0,
-        "Total Operating Income": 369615.29,
-        "Operating Profit": 27802.71,
+        "Total Operating Income": 369615290.0,
+        "Operating Profit": 27802710.0,
         "Net Profit": 19990960.0,
         "Distributable Profit": 101411520.0,
         "Number of Shares": 9461152.0,
@@ -458,14 +490,22 @@
         "Base Rate": 13.35,
         "Interest Spread Rate": 32.25
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:46:59.695261",
+      "parsed_at": "2026-11-14T20:55:52.675783",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -480,8 +520,8 @@
         "Investment Securities": 3730274300.0,
         "Interest Income": 1691220340.0,
         "Net Interest Income": 335856070.0,
-        "Total Operating Income": 406499.8,
-        "Operating Profit": 133471.88,
+        "Total Operating Income": 406499800.0,
+        "Operating Profit": 133471880.0,
         "Net Profit": 91023060.0,
         "Distributable Profit": -27119880.0,
         "Number of Shares": 9461152.0,
@@ -565,14 +605,22 @@
         "Base Rate": 5.03,
         "Interest Spread Rate": 16.79
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:46:59.695102",
+      "parsed_at": "2026-11-14T20:55:52.675616",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -586,8 +634,8 @@
         "Investment Securities": 3413000010.0,
         "Interest Income": 397655850.0,
         "Net Interest Income": 71904070.0,
-        "Total Operating Income": 88450.08,
-        "Operating Profit": -50236.01,
+        "Total Operating Income": 88450080.0,
+        "Operating Profit": -50236010.0,
         "Net Profit": -35017510.0,
         "Distributable Profit": -31090090.0,
         "Number of Shares": 9461152.0,
@@ -669,14 +717,22 @@
         "Base Rate": 2.99,
         "Interest Spread Rate": -2.75
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:46:59.694972",
+      "parsed_at": "2026-11-14T20:55:52.675455",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -690,8 +746,8 @@
         "Investment Securities": 3439121400.0,
         "Interest Income": 756632910.0,
         "Net Interest Income": 121638260.0,
-        "Total Operating Income": 148887.45,
-        "Operating Profit": 28269.75,
+        "Total Operating Income": 148887450.0,
+        "Operating Profit": 28269750.0,
         "Net Profit": 22885220.0,
         "Distributable Profit": -259153710.0,
         "Number of Shares": 9461152.0,
@@ -774,14 +830,22 @@
         "Base Rate": -5.11,
         "Interest Spread Rate": -5.58
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:46:59.694834",
+      "parsed_at": "2026-11-14T20:55:52.675292",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -795,8 +859,8 @@
         "Investment Securities": 2673642500.0,
         "Interest Income": 1116872400.0,
         "Net Interest Income": 185367860.0,
-        "Total Operating Income": 230905.82,
-        "Operating Profit": -90847.28,
+        "Total Operating Income": 230905820.0,
+        "Operating Profit": -90847280.0,
         "Net Profit": -86464890.0,
         "Distributable Profit": -395698220.0,
         "Number of Shares": 9461152.0,
@@ -878,14 +942,22 @@
         "Base Rate": -8.54,
         "Interest Spread Rate": -5.94
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:46:59.694716",
+      "parsed_at": "2026-11-14T20:55:52.675131",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -899,8 +971,8 @@
         "Investment Securities": 3024801940.0,
         "Interest Income": 1536003650.0,
         "Net Interest Income": 318595440.0,
-        "Total Operating Income": 404240.95,
-        "Operating Profit": 187568.4,
+        "Total Operating Income": 404240950.0,
+        "Operating Profit": 187568400.0,
         "Net Profit": 148429280.0,
         "Distributable Profit": -483263490.0,
         "Number of Shares": 9461152.0,
@@ -983,14 +1055,22 @@
         "Base Rate": -17.33,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:46:59.694595",
+      "parsed_at": "2026-11-14T20:55:52.674968",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1004,8 +1084,8 @@
         "Investment Securities": 2991752990.0,
         "Interest Income": 336706740.0,
         "Net Interest Income": 75201350.0,
-        "Total Operating Income": 94243.83,
-        "Operating Profit": 46983.16,
+        "Total Operating Income": 94243830.0,
+        "Operating Profit": 46983160.0,
         "Net Profit": 49513830.0,
         "Distributable Profit": -506070080.0,
         "Number of Shares": 9461152.0,
@@ -1013,7 +1093,6 @@
         "Book Value(Rs.)": 194.57,
         "ROE": 10.76,
         "CAR": 13.57,
-        "NPL": 110.61,
         "Cost of funds": 7.58,
         "Credit To Deposit Ratio": 68.42,
         "Base Rate": 9.55,
@@ -1082,20 +1161,30 @@
         "Book Value(Rs.)": -21.02,
         "ROE": 279.03,
         "CAR": -2.02,
-        "NPL": 2686.15,
         "Cost of funds": -28.36,
         "Credit To Deposit Ratio": -12.74,
         "Base Rate": -25.16,
         "Interest Spread Rate": -2.39
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_invalid": {
+        "NPL": 110.61
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:46:59.694470",
+      "parsed_at": "2026-11-14T20:55:52.674806",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1109,8 +1198,8 @@
         "Investment Securities": 2991752990.0,
         "Interest Income": 611894570.0,
         "Net Interest Income": 120878420.0,
-        "Total Operating Income": 154743.94,
-        "Operating Profit": 4681.08,
+        "Total Operating Income": 154743940.0,
+        "Operating Profit": 4681080.0,
         "Net Profit": 10489740.0,
         "Distributable Profit": -651487870.0,
         "Number of Shares": 9461152.0,
@@ -1190,14 +1279,22 @@
         "Base Rate": -28.64,
         "Interest Spread Rate": -4.6
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:46:59.694229",
+      "parsed_at": "2026-11-14T20:55:52.674647",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1212,8 +1309,8 @@
         "Investment Securities": 2691752990.0,
         "Interest Income": 882860680.0,
         "Net Interest Income": 180809390.0,
-        "Total Operating Income": 233606.38,
-        "Operating Profit": 9714.28,
+        "Total Operating Income": 233606380.0,
+        "Operating Profit": 9714280.0,
         "Net Profit": 15222320.0,
         "Distributable Profit": -655734800.0,
         "Number of Shares": 9461152.0,
@@ -1294,14 +1391,22 @@
         "Base Rate": -28.52,
         "Interest Spread Rate": -6.75
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:46:59.694057",
+      "parsed_at": "2026-11-14T20:55:52.674475",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1316,8 +1421,8 @@
         "Investment Securities": 2206752990.0,
         "Interest Income": 1106971330.0,
         "Net Interest Income": 196760630.0,
-        "Total Operating Income": 271604.3,
-        "Operating Profit": -5846.79,
+        "Total Operating Income": 271604300.0,
+        "Operating Profit": -5846790.0,
         "Net Profit": 5119390.0,
         "Distributable Profit": -419412100.0,
         "Number of Shares": 9461152.0,
@@ -1398,14 +1503,22 @@
         "Base Rate": -100.0,
         "Interest Spread Rate": -100.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:46:59.693899",
+      "parsed_at": "2026-11-14T20:55:52.674303",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1420,8 +1533,8 @@
         "Investment Securities": 2321325400.0,
         "Interest Income": 267979910.0,
         "Net Interest Income": 73340890.0,
-        "Total Operating Income": 234378.05,
-        "Operating Profit": 53025.67,
+        "Total Operating Income": 234378050.0,
+        "Operating Profit": 53025670.0,
         "Net Profit": 37384700.0,
         "Distributable Profit": -495696480.0,
         "Number of Shares": 9461152.0,
@@ -1429,7 +1542,6 @@
         "Book Value Reported": 232.61,
         "ROE Reported": 6.8,
         "CAR": 13.44,
-        "NPL": 104.19,
         "Cost of funds": 5.91,
         "Credit To Deposit Ratio": 73.59,
         "Base Rate": 8.19,
@@ -1496,20 +1608,30 @@
         "Distributable Profit": 2.05,
         "Number of Shares": 0.0,
         "CAR": -0.96,
-        "NPL": -5.8,
         "Cost of funds": -22.03,
         "Credit To Deposit Ratio": 7.56,
         "Base Rate": -14.24,
         "Interest Spread Rate": -0.45
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_invalid": {
+        "NPL": 104.19
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:46:59.693720",
+      "parsed_at": "2026-11-14T20:55:52.674150",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1524,8 +1646,8 @@
         "Investment Securities": 2564275740.0,
         "Interest Income": 679424440.0,
         "Net Interest Income": 304998810.0,
-        "Total Operating Income": 359298.68,
-        "Operating Profit": 158869.31,
+        "Total Operating Income": 359298680.0,
+        "Operating Profit": 158869310.0,
         "Net Profit": 111708620.0,
         "Distributable Profit": -569204260.0,
         "Number of Shares": 9461152.0,
@@ -1609,14 +1731,22 @@
         "Base Rate": -15.45,
         "Interest Spread Rate": 1.83
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:46:59.693472",
+      "parsed_at": "2026-11-14T20:55:52.673997",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1631,8 +1761,8 @@
         "Investment Securities": 3794038330.0,
         "Interest Income": 858862620.0,
         "Net Interest Income": 312108360.0,
-        "Total Operating Income": 384472.52,
-        "Operating Profit": 100383.21,
+        "Total Operating Income": 384472520.0,
+        "Operating Profit": 100383210.0,
         "Net Profit": 101336500.0,
         "Distributable Profit": -574804510.0,
         "Number of Shares": 9461152.0,
@@ -1716,14 +1846,22 @@
         "Base Rate": -15.72,
         "Interest Spread Rate": -5.14
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:46:59.693295",
+      "parsed_at": "2026-11-14T20:55:52.673833",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1738,8 +1876,8 @@
         "Investment Securities": 2752280510.0,
         "Interest Income": 1026603370.0,
         "Net Interest Income": 313737490.0,
-        "Total Operating Income": 420059.99,
-        "Operating Profit": 194915.97,
+        "Total Operating Income": 420059990.0,
+        "Operating Profit": 194915970.0,
         "Net Profit": 141529380.0,
         "Distributable Profit": -364258590.0,
         "Number of Shares": 9461152.0,
@@ -1817,14 +1955,22 @@
         "Book Value Reported": 7.04,
         "ROE Reported": 2525.93
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GFCL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:46:59.693100",
+      "parsed_at": "2026-11-14T20:55:52.673649",
       "raw": {
         "Paid Up Capital": 946115200.0,
         "Share Premium": 2475550.0,
@@ -1839,8 +1985,8 @@
         "Investment Securities": 2760303130.0,
         "Interest Income": 224320050.0,
         "Net Interest Income": 74191850.0,
-        "Total Operating Income": 95509.88,
-        "Operating Profit": 86378.45,
+        "Total Operating Income": 95509880.0,
+        "Operating Profit": 86378450.0,
         "Net Profit": 63150080.0,
         "Distributable Profit": -383535160.0,
         "Number of Shares": 9461152.0,
@@ -1924,8 +2070,16 @@
         "Base Rate": -26.74,
         "Interest Spread Rate": -10.51
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:46:59.699080"
+  "last_updated": "2026-11-14T20:55:52.679396"
 }

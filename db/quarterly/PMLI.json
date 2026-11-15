@@ -19,7 +19,7 @@
         "Total Investment and Loans": 11883191160.0,
         "Total Revenue": 1413186650.0,
         "Income From Investment Loans And Others": 269754580.0,
-        "Total Expenses And Provisions": 1312790.15,
+        "Total Expenses And Provisions": 1312790150.0,
         "Net Profit": 100396500.0,
         "Net Premium": 1125858930.0,
         "Net Claim Payment": 1025558820.0,
@@ -63,7 +63,14 @@
         "graham_number": 157.65
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -82,7 +89,7 @@
         "Total Investment and Loans": 13491477130.0,
         "Total Revenue": 2601422700.0,
         "Income From Investment Loans And Others": 565530360.0,
-        "Total Expenses And Provisions": 2424999.0,
+        "Total Expenses And Provisions": 2424999000.0,
         "Net Profit": 176423700.0,
         "Net Premium": 1998514250.0,
         "Net Claim Payment": 1900996210.0,
@@ -129,7 +136,14 @@
         "graham_number": 148.95
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -148,7 +162,7 @@
         "Total Investment and Loans": 14080361370.0,
         "Total Revenue": 3895705550.0,
         "Income From Investment Loans And Others": 841729170.0,
-        "Total Expenses And Provisions": 3626785.42,
+        "Total Expenses And Provisions": 3626785420.0,
         "Net Profit": 268920130.0,
         "Net Premium": 2964017860.0,
         "Net Claim Payment": 2783787490.0,
@@ -193,7 +207,14 @@
         "graham_number": 151.98
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -212,7 +233,7 @@
         "Total Investment and Loans": 14080361370.0,
         "Total Revenue": 5577762310.0,
         "Income From Investment Loans And Others": 1156742010.0,
-        "Total Expenses And Provisions": 5211587.84,
+        "Total Expenses And Provisions": 5211587840.0,
         "Net Profit": 366174480.0,
         "Net Premium": 4238021690.0,
         "Net Claim Payment": 3898203810.0,
@@ -257,7 +278,14 @@
         "graham_number": 156.05
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -276,7 +304,7 @@
         "Total Investment and Loans": 14708670550.0,
         "Total Revenue": 1578109790.0,
         "Income From Investment Loans And Others": 304443590.0,
-        "Total Expenses And Provisions": 1451871.98,
+        "Total Expenses And Provisions": 1451871980.0,
         "Net Profit": 126237810.0,
         "Net Premium": 1172960110.0,
         "Net Claim Payment": 1151434360.0,
@@ -344,7 +372,14 @@
         "Book Value(Rs.)": 1.02,
         "ROE": 13.15
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -364,7 +399,7 @@
         "Total Investment and Loans": 14551312350.0,
         "Total Revenue": 2974984230.0,
         "Income From Investment Loans And Others": 603345290.0,
-        "Total Expenses And Provisions": 2792397.31,
+        "Total Expenses And Provisions": 2792397310.0,
         "Management Expenses": 0.0,
         "Net Profit": 182586930.0,
         "Net Premium": 2267594860.0,
@@ -438,7 +473,14 @@
         "Gross Claim Payments": -25.36,
         "Number of Shares": 10.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -458,7 +500,7 @@
         "Total Investment and Loans": 15182300010.0,
         "Total Revenue": 4540141460.0,
         "Income From Investment Loans And Others": 896125350.0,
-        "Total Expenses And Provisions": 4269417.92,
+        "Total Expenses And Provisions": 4269417920.0,
         "Management Expenses": 0.0,
         "Net Profit": 270723530.0,
         "Net Premium": 3492034840.0,
@@ -532,7 +574,14 @@
         "Gross Claim Payments": -12.21,
         "Number of Shares": 10.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -552,7 +601,7 @@
         "Total Investment and Loans": 16596718990.0,
         "Total Revenue": 6617616620.0,
         "Income From Investment Loans And Others": 1203595100.0,
-        "Total Expenses And Provisions": 6246873.14,
+        "Total Expenses And Provisions": 6246873140.0,
         "Management Expenses": 0.0,
         "Net Profit": 370743480.0,
         "Net Premium": 5179721940.0,
@@ -626,7 +675,14 @@
         "Gross Claim Payments": 7.01,
         "Number of Shares": 18.8
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -646,7 +702,7 @@
         "Total Investment and Loans": 16613464720.0,
         "Total Revenue": 1674125320.0,
         "Income From Investment Loans And Others": 294963670.0,
-        "Total Expenses And Provisions": 1610350.42,
+        "Total Expenses And Provisions": 1610350420.0,
         "Management Expenses": 0.0,
         "Net Profit": 63774910.0,
         "Net Premium": 1389639660.0,
@@ -720,7 +776,14 @@
         "Gross Claim Payments": -9.91,
         "Number of Shares": 8.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -740,7 +803,7 @@
         "Total Investment and Loans": 17846217460.0,
         "Total Revenue": 3370592200.0,
         "Income From Investment Loans And Others": 538380910.0,
-        "Total Expenses And Provisions": 3237432.59,
+        "Total Expenses And Provisions": 3237432590.0,
         "Management Expenses": 0.0,
         "Net Profit": 133159600.0,
         "Net Premium": 2777197910.0,
@@ -817,7 +880,14 @@
         "Book Value Reported": -5.53,
         "ROE Reported": -31.27
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -837,7 +907,7 @@
         "Total Investment and Loans": 18984975280.0,
         "Total Revenue": 5167651490.0,
         "Income From Investment Loans And Others": 772824620.0,
-        "Total Expenses And Provisions": 4892580.63,
+        "Total Expenses And Provisions": 4892580630.0,
         "Management Expenses": 0.0,
         "Net Profit": 275070860.0,
         "Net Premium": 4151778850.0,
@@ -914,7 +984,14 @@
         "Book Value Reported": -5.16,
         "ROE Reported": -4.63
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMLI",
@@ -934,7 +1011,7 @@
         "Total Investment and Loans": 20838490550.0,
         "Total Revenue": 7519413450.0,
         "Income From Investment Loans And Others": 1016698240.0,
-        "Total Expenses And Provisions": 7143820.42,
+        "Total Expenses And Provisions": 7143820420.0,
         "Management Expenses": 0.0,
         "Net Profit": 375593040.0,
         "Net Premium": 6265733220.0,
@@ -1011,7 +1088,14 @@
         "Book Value Reported": 0.57,
         "ROE Reported": -3.19
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:47:39.036669"

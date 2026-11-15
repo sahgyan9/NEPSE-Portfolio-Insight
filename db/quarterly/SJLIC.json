@@ -21,8 +21,8 @@
         "Total Investment and Loans": 26210808690.0,
         "Total Revenue": 470598810.0,
         "Income From Investment Loans And Others": 170551760.0,
-        "Total Expenses And Provisions": 186324.52,
-        "Management Expenses": 37569.96,
+        "Total Expenses And Provisions": 186324520.0,
+        "Management Expenses": 37569960.0,
         "Net Profit": 284194280.0,
         "Net Premium": 3405118230.0,
         "Net Claim Payment": 823411150.0,
@@ -71,7 +71,15 @@
         "graham_number": 215.21
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -91,8 +99,8 @@
         "Total Investment and Loans": 27848098140.0,
         "Total Revenue": 530080610.0,
         "Income From Investment Loans And Others": 333454170.0,
-        "Total Expenses And Provisions": 276885.98,
-        "Management Expenses": 68840.62,
+        "Total Expenses And Provisions": 276885980.0,
+        "Management Expenses": 68840620.0,
         "Net Profit": 253194620.0,
         "Net Premium": 4596334130.0,
         "Net Claim Payment": 1353371890.0,
@@ -141,7 +149,15 @@
         "graham_number": 165.76
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -161,8 +177,8 @@
         "Total Investment and Loans": 28916030490.0,
         "Total Revenue": 637934040.0,
         "Income From Investment Loans And Others": 439411140.0,
-        "Total Expenses And Provisions": 343837.46,
-        "Management Expenses": 119675.17,
+        "Total Expenses And Provisions": 343837460.0,
+        "Management Expenses": 119675170.0,
         "Net Profit": 294096580.0,
         "Net Premium": 7143096110.0,
         "Net Claim Payment": 1905357010.0,
@@ -211,7 +227,15 @@
         "graham_number": 153.49
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -230,7 +254,7 @@
         "Total Investment and Loans": 30194744220.0,
         "Total Revenue": 3106997920.0,
         "Income From Investment Loans And Others": 739795100.0,
-        "Total Expenses And Provisions": 2974894.71,
+        "Total Expenses And Provisions": 2974894710.0,
         "Net Profit": 132103210.0,
         "Net Premium": 2233920910.0,
         "Net Claim Payment": 2482549370.0,
@@ -277,7 +301,14 @@
         "graham_number": 206.25
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -296,7 +327,7 @@
         "Total Investment and Loans": 33542459330.0,
         "Total Revenue": 5864958300.0,
         "Income From Investment Loans And Others": 1496434470.0,
-        "Total Expenses And Provisions": 5628327.42,
+        "Total Expenses And Provisions": 5628327420.0,
         "Net Profit": 236630890.0,
         "Net Premium": 4157181720.0,
         "Net Claim Payment": 4705754930.0,
@@ -368,7 +399,14 @@
         "Book Value(Rs.)": 0.29,
         "ROE": -17.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -388,8 +426,8 @@
         "Total Investment and Loans": 33541368250.0,
         "Total Revenue": 8895614680.0,
         "Income From Investment Loans And Others": 2638230670.0,
-        "Total Expenses And Provisions": 8600181.38,
-        "Management Expenses": 813727.61,
+        "Total Expenses And Provisions": 8600181380.0,
+        "Management Expenses": 813727610.0,
         "Net Profit": 295433310.0,
         "Net Premium": 6374405000.0,
         "Net Claim Payment": 7158803250.0,
@@ -464,7 +502,15 @@
         "Book Value(Rs.)": 1.19,
         "ROE": 15.27
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -483,7 +529,7 @@
         "Total Investment and Loans": 34964949070.0,
         "Total Revenue": 12662715740.0,
         "Income From Investment Loans And Others": 3111808340.0,
-        "Total Expenses And Provisions": 12266178.29,
+        "Total Expenses And Provisions": 12266178290.0,
         "Net Profit": 396537450.0,
         "Net Premium": 9105948890.0,
         "Net Claim Payment": 10017223240.0,
@@ -552,7 +598,14 @@
         "Book Value(Rs.)": -19.33,
         "ROE": 51.5
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -571,7 +624,7 @@
         "Total Investment and Loans": 37166827980.0,
         "Total Revenue": 3522557900.0,
         "Income From Investment Loans And Others": 940175150.0,
-        "Total Expenses And Provisions": 3360975.06,
+        "Total Expenses And Provisions": 3360975060.0,
         "Net Profit": 115334550.0,
         "Net Premium": 2458722950.0,
         "Net Claim Payment": 2847436470.0,
@@ -641,7 +694,14 @@
         "Book Value(Rs.)": -11.75,
         "ROE": 258.1
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -661,8 +721,8 @@
         "Total Investment and Loans": 37417084850.0,
         "Total Revenue": 7000067090.0,
         "Income From Investment Loans And Others": 1769325960.0,
-        "Total Expenses And Provisions": 6640898.36,
-        "Management Expenses": 522913.31,
+        "Total Expenses And Provisions": 6640898360.0,
+        "Management Expenses": 522913310.0,
         "Net Profit": 196139160.0,
         "Net Premium": 4981595960.0,
         "Net Claim Payment": 5638838670.0,
@@ -736,7 +796,15 @@
         "Claims Payables": -100.0,
         "Number of Shares": 10.26
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -756,7 +824,7 @@
         "Total Investment and Loans": 32711643320.0,
         "Total Revenue": 10481979290.0,
         "Income From Investment Loans And Others": 2604594800.0,
-        "Total Expenses And Provisions": 9918844.56,
+        "Total Expenses And Provisions": 9918844560.0,
         "Management Expenses": 0.0,
         "Net Profit": 295750380.0,
         "Net Premium": 7512286850.0,
@@ -832,7 +900,14 @@
         "Gross Claim Payments": 6.35,
         "Number of Shares": 10.26
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -852,7 +927,7 @@
         "Total Investment and Loans": 41662769620.0,
         "Total Revenue": 15134776830.0,
         "Income From Investment Loans And Others": 3445240240.0,
-        "Total Expenses And Provisions": 14526278.59,
+        "Total Expenses And Provisions": 14526278590.0,
         "Management Expenses": 0.0,
         "Net Profit": 350286400.0,
         "Net Premium": 11185210800.0,
@@ -926,7 +1001,14 @@
         "Gross Claim Payments": -8.91,
         "Number of Shares": 0.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -946,7 +1028,7 @@
         "Total Investment and Loans": 43419084380.0,
         "Total Revenue": 3955053020.0,
         "Income From Investment Loans And Others": 891651240.0,
-        "Total Expenses And Provisions": 3769983.63,
+        "Total Expenses And Provisions": 3769983630.0,
         "Management Expenses": 0.0,
         "Net Profit": 128020570.0,
         "Net Premium": 2919505870.0,
@@ -1020,7 +1102,14 @@
         "Gross Claim Payments": -0.26,
         "Number of Shares": 0.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -1040,7 +1129,7 @@
         "Total Investment and Loans": 45977528520.0,
         "Total Revenue": 7702172850.0,
         "Income From Investment Loans And Others": 1711674250.0,
-        "Total Expenses And Provisions": 7354112.17,
+        "Total Expenses And Provisions": 7354112170.0,
         "Management Expenses": 0.0,
         "Net Profit": 201873790.0,
         "Net Premium": 5710217270.0,
@@ -1118,7 +1207,14 @@
         "Book Value Reported": -0.09,
         "ROE Reported": 3.0
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -1138,7 +1234,7 @@
         "Total Investment and Loans": 46985846910.0,
         "Total Revenue": 11597095500.0,
         "Income From Investment Loans And Others": 2546920620.0,
-        "Total Expenses And Provisions": 11020294.54,
+        "Total Expenses And Provisions": 11020294540.0,
         "Management Expenses": 0.0,
         "Net Profit": 330332700.0,
         "Net Premium": 8614046450.0,
@@ -1216,7 +1312,14 @@
         "Book Value Reported": 0.06,
         "ROE Reported": 11.64
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJLIC",
@@ -1236,7 +1339,7 @@
         "Total Investment and Loans": 52795610570.0,
         "Total Revenue": 17099064740.0,
         "Income From Investment Loans And Others": 3566097800.0,
-        "Total Expenses And Provisions": 16487883.06,
+        "Total Expenses And Provisions": 16487883060.0,
         "Management Expenses": 0.0,
         "Net Profit": 380219380.0,
         "Net Premium": 12944627810.0,
@@ -1313,7 +1416,14 @@
         "Book Value Reported": -3.29,
         "ROE Reported": 12.16
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:05:46.875843"

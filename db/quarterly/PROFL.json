@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 248608830.0,
         "Interest Income": 9258060.0,
         "Net Interest Income": 2666060.0,
-        "Total Operating Income": 3380.64,
-        "Operating Profit": -168.31,
+        "Total Operating Income": 3380640.0,
+        "Operating Profit": -168310.0,
         "Net Profit": 1173020.0,
         "Number of Shares": 2001500.0,
         "EPS(Rs.)": 0.59,
@@ -84,7 +84,15 @@
         "graham_number": 34.8
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -101,8 +109,8 @@
         "Loans and Advances to Customers": 303478940.0,
         "Interest Income": 20320980.0,
         "Net Interest Income": 7894050.0,
-        "Total Operating Income": 9549.76,
-        "Operating Profit": 532.67,
+        "Total Operating Income": 9549760.0,
+        "Operating Profit": 532670.0,
         "Net Profit": 25525700.0,
         "Number of Shares": 2001600.0,
         "EPS(Rs.)": 12.75,
@@ -144,7 +152,15 @@
         "graham_number": 169.45
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -161,8 +177,8 @@
         "Loans and Advances to Customers": 396948040.0,
         "Interest Income": 31881280.0,
         "Net Interest Income": 13899880.0,
-        "Total Operating Income": 16473.93,
-        "Operating Profit": 1428.65,
+        "Total Operating Income": 16473930.0,
+        "Operating Profit": 1428650.0,
         "Net Profit": 26071430.0,
         "Number of Shares": 2001600.0,
         "EPS(Rs.)": 13.02,
@@ -204,7 +220,15 @@
         "graham_number": 171.47
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -221,8 +245,8 @@
         "Loans and Advances to Customers": 447121300.0,
         "Interest Income": 44966500.0,
         "Net Interest Income": 19411830.0,
-        "Total Operating Income": 27118.66,
-        "Operating Profit": -1824.36,
+        "Total Operating Income": 27118660.0,
+        "Operating Profit": -1824360.0,
         "Net Profit": 25673690.0,
         "Number of Shares": 2001600.0,
         "EPS(Rs.)": 10.13,
@@ -267,7 +291,15 @@
         "eps_ttm": 328.67,
         "EPS(Rs.)": 328.67
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -288,8 +320,8 @@
         "Investment Securities": 565399700.0,
         "Interest Income": 294644790.0,
         "Net Interest Income": 101434010.0,
-        "Total Operating Income": 144968.91,
-        "Operating Profit": 16052.07,
+        "Total Operating Income": 144968910.0,
+        "Operating Profit": 16052070.0,
         "Net Profit": 16052070.0,
         "Distributable Profit": 24980910.0,
         "Number of Shares": 8001000.0,
@@ -365,7 +397,15 @@
         "Cost of funds": 6.01,
         "Credit To Deposit Ratio": 75.27
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -385,8 +425,8 @@
         "Investment Securities": 858659170.0,
         "Interest Income": 454342430.0,
         "Net Interest Income": 161331110.0,
-        "Total Operating Income": 211350.03,
-        "Operating Profit": 62595.71,
+        "Total Operating Income": 211350030.0,
+        "Operating Profit": 62595710.0,
         "Net Profit": 50148480.0,
         "Distributable Profit": 15543210.0,
         "Number of Shares": 8481060.0,
@@ -461,7 +501,15 @@
         "Cost of funds": 29.47,
         "Credit To Deposit Ratio": 50.24
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -481,8 +529,8 @@
         "Investment Securities": 801485240.0,
         "Interest Income": 164879370.0,
         "Net Interest Income": 54740320.0,
-        "Total Operating Income": 65093.72,
-        "Operating Profit": 30739.03,
+        "Total Operating Income": 65093720.0,
+        "Operating Profit": 30739030.0,
         "Net Profit": 22931760.0,
         "Distributable Profit": -5597120.0,
         "Number of Shares": 8481060.0,
@@ -557,7 +605,15 @@
         "Cost of funds": 34.07,
         "Credit To Deposit Ratio": 26.83
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -577,8 +633,8 @@
         "Investment Securities": 813371220.0,
         "Interest Income": 327111470.0,
         "Net Interest Income": 102130910.0,
-        "Total Operating Income": 117253.65,
-        "Operating Profit": -13025.03,
+        "Total Operating Income": 117253650.0,
+        "Operating Profit": -13025030.0,
         "Net Profit": -13025030.0,
         "Distributable Profit": -25410730.0,
         "Number of Shares": 8481060.0,
@@ -652,7 +708,15 @@
         "Cost of funds": 61.78,
         "Credit To Deposit Ratio": 34.02
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -672,8 +736,8 @@
         "Investment Securities": 840080920.0,
         "Interest Income": 467351110.0,
         "Net Interest Income": 124339790.0,
-        "Total Operating Income": 144423.08,
-        "Operating Profit": -75119.71,
+        "Total Operating Income": 144423080.0,
+        "Operating Profit": -75119710.0,
         "Net Profit": -75119710.0,
         "Distributable Profit": -94247880.0,
         "Number of Shares": 8481060.0,
@@ -753,7 +817,15 @@
         "Base Rate": 15.17,
         "Interest Spread Rate": 34.29
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -773,8 +845,8 @@
         "Investment Securities": 812428880.0,
         "Interest Income": 627353830.0,
         "Net Interest Income": 167811390.0,
-        "Total Operating Income": 193822.42,
-        "Operating Profit": -290229.04,
+        "Total Operating Income": 193822420.0,
+        "Operating Profit": -290229040.0,
         "Net Profit": -290229040.0,
         "Distributable Profit": -366497000.0,
         "Number of Shares": 8481060.0,
@@ -854,7 +926,15 @@
         "Base Rate": 9.05,
         "Interest Spread Rate": 1.1
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -874,8 +954,8 @@
         "Investment Securities": 812964300.0,
         "Interest Income": 128782860.0,
         "Net Interest Income": 12787860.0,
-        "Total Operating Income": 32648.52,
-        "Operating Profit": -60999.11,
+        "Total Operating Income": 32648520.0,
+        "Operating Profit": -60999110.0,
         "Net Profit": -61185640.0,
         "Distributable Profit": -398232280.0,
         "Number of Shares": 8481060.0,
@@ -955,7 +1035,15 @@
         "Base Rate": 10.67,
         "Interest Spread Rate": -3.2
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -975,8 +1063,8 @@
         "Investment Securities": 836540720.0,
         "Interest Income": 274680440.0,
         "Net Interest Income": 41763600.0,
-        "Total Operating Income": 72578.77,
-        "Operating Profit": -105471.83,
+        "Total Operating Income": 72578770.0,
+        "Operating Profit": -105471830.0,
         "Net Profit": -105750890.0,
         "Distributable Profit": -450100650.0,
         "Number of Shares": 8481060.0,
@@ -1056,7 +1144,15 @@
         "Base Rate": 6.49,
         "Interest Spread Rate": 1.55
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1076,8 +1172,8 @@
         "Investment Securities": 831040110.0,
         "Interest Income": 448127480.0,
         "Net Interest Income": 97133870.0,
-        "Total Operating Income": 141349.11,
-        "Operating Profit": -54510.2,
+        "Total Operating Income": 141349110.0,
+        "Operating Profit": -54510200.0,
         "Net Profit": -54900220.0,
         "Distributable Profit": -404333260.0,
         "Number of Shares": 8481060.0,
@@ -1157,7 +1253,15 @@
         "Base Rate": -19.14,
         "Interest Spread Rate": -1.93
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1177,8 +1281,8 @@
         "Investment Securities": 1389540580.0,
         "Interest Income": 622430010.0,
         "Net Interest Income": 152006690.0,
-        "Total Operating Income": 205210.58,
-        "Operating Profit": -37686.09,
+        "Total Operating Income": 205210580.0,
+        "Operating Profit": -37686090.0,
         "Net Profit": -38076100.0,
         "Distributable Profit": -616936570.0,
         "Number of Shares": 8481060.0,
@@ -1258,7 +1362,15 @@
         "Base Rate": -24.18,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1278,8 +1390,8 @@
         "Investment Securities": 844019440.0,
         "Interest Income": 166426450.0,
         "Net Interest Income": 50646160.0,
-        "Total Operating Income": 66133.86,
-        "Operating Profit": 112832.1,
+        "Total Operating Income": 66133860.0,
+        "Operating Profit": 112832100.0,
         "Net Profit": 80940210.0,
         "Distributable Profit": -477889590.0,
         "Number of Shares": 8481060.0,
@@ -1360,7 +1472,15 @@
         "Base Rate": -28.21,
         "Interest Spread Rate": -0.88
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1380,8 +1500,8 @@
         "Investment Securities": 805789800.0,
         "Interest Income": 300756340.0,
         "Net Interest Income": 78813350.0,
-        "Total Operating Income": 112538.93,
-        "Operating Profit": 117539.36,
+        "Total Operating Income": 112538930.0,
+        "Operating Profit": 117539360.0,
         "Net Profit": 85350640.0,
         "Distributable Profit": -440639290.0,
         "Number of Shares": 8481060.0,
@@ -1459,7 +1579,15 @@
         "Base Rate": -28.79,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1481,8 +1609,8 @@
         "Investment Securities": 707410740.0,
         "Interest Income": 447281460.0,
         "Net Interest Income": 130934150.0,
-        "Total Operating Income": 171638.54,
-        "Operating Profit": 131553.36,
+        "Total Operating Income": 171638540.0,
+        "Operating Profit": 131553360.0,
         "Net Profit": 90441990.0,
         "Distributable Profit": -441672600.0,
         "Number of Shares": 8481060.0,
@@ -1562,7 +1690,15 @@
         "Base Rate": -26.62,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1584,8 +1720,8 @@
         "Investment Securities": 1313996240.0,
         "Interest Income": 593801640.0,
         "Net Interest Income": 185302950.0,
-        "Total Operating Income": 235581.92,
-        "Operating Profit": 159843.51,
+        "Total Operating Income": 235581920.0,
+        "Operating Profit": 159843510.0,
         "Net Profit": 111938700.0,
         "Distributable Profit": -423179510.0,
         "Number of Shares": 8481060.0,
@@ -1665,7 +1801,15 @@
         "Base Rate": -19.18,
         "Interest Spread Rate": -0.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1687,8 +1831,8 @@
         "Investment Securities": 1701978680.0,
         "Interest Income": 142227910.0,
         "Net Interest Income": 50840750.0,
-        "Total Operating Income": 75607.48,
-        "Operating Profit": -40280.61,
+        "Total Operating Income": 75607480.0,
+        "Operating Profit": -40280610.0,
         "Net Profit": -39080610.0,
         "Distributable Profit": -475937270.0,
         "Number of Shares": 8481060.0,
@@ -1767,7 +1911,15 @@
         "Base Rate": -19.45,
         "Interest Spread Rate": 2.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1789,8 +1941,8 @@
         "Investment Securities": 609392150.0,
         "Interest Income": 269721130.0,
         "Net Interest Income": 91774290.0,
-        "Total Operating Income": 123807.97,
-        "Operating Profit": -30451.96,
+        "Total Operating Income": 123807970.0,
+        "Operating Profit": -30451960.0,
         "Net Profit": -29251960.0,
         "Distributable Profit": -468698620.0,
         "Number of Shares": 8481060.0,
@@ -1872,7 +2024,15 @@
         "Base Rate": -14.44,
         "Interest Spread Rate": -10.89
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1894,8 +2054,8 @@
         "Investment Securities": 2016237960.0,
         "Interest Income": 403602170.0,
         "Net Interest Income": 140944240.0,
-        "Total Operating Income": 180684.65,
-        "Operating Profit": -25948.25,
+        "Total Operating Income": 180684650.0,
+        "Operating Profit": -25948250.0,
         "Net Profit": -24743250.0,
         "Distributable Profit": -443774390.0,
         "Number of Shares": 8481060.0,
@@ -1977,7 +2137,15 @@
         "Base Rate": -13.39,
         "Interest Spread Rate": -2.62
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PROFL",
@@ -1999,8 +2167,8 @@
         "Investment Securities": 2060644690.0,
         "Interest Income": 541990320.0,
         "Net Interest Income": 193683590.0,
-        "Total Operating Income": 242084.06,
-        "Operating Profit": 69362.91,
+        "Total Operating Income": 242084060.0,
+        "Operating Profit": 69362910.0,
         "Net Profit": 50169590.0,
         "Distributable Profit": -359522860.0,
         "Number of Shares": 8481060.0,
@@ -2083,7 +2251,15 @@
         "Base Rate": -16.67,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:49:37.185146"

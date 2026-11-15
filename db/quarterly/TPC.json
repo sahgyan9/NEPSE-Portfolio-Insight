@@ -19,7 +19,7 @@
         "Total Assets": 1375625190.0,
         "Revenue": 14776200.0,
         "Gross Profit": 13546230.0,
-        "Operating Profit": 357.6,
+        "Operating Profit": 357600.0,
         "Net Profit": -8242600.0,
         "Number of Shares": 2800000.0,
         "EPS(Rs.)": -2.94,
@@ -52,7 +52,14 @@
         "revenue_ttm": 14776200.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -70,7 +77,7 @@
         "Total Assets": 1394806930.0,
         "Revenue": 47666800.0,
         "Gross Profit": 46683390.0,
-        "Operating Profit": 32286.86,
+        "Operating Profit": 32286860.0,
         "Net Profit": 11875170.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 11.88,
@@ -104,7 +111,14 @@
         "graham_number": 145.2
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -122,7 +136,7 @@
         "Total Assets": 1381219180.0,
         "Revenue": 86450230.0,
         "Gross Profit": 58030090.0,
-        "Operating Profit": 55991.56,
+        "Operating Profit": 55991560.0,
         "Net Profit": 17179960.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 8.59,
@@ -156,7 +170,14 @@
         "graham_number": 124.32
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -174,7 +195,7 @@
         "Total Assets": 1362766020.0,
         "Revenue": 106371330.0,
         "Gross Profit": 103607220.0,
-        "Operating Profit": 61297.6,
+        "Operating Profit": 61297600.0,
         "Net Profit": -512260.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -0.17,
@@ -207,7 +228,14 @@
         "revenue_ttm": 106371330.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -225,7 +253,7 @@
         "Total Assets": 1328176200.0,
         "Revenue": 142795570.0,
         "Gross Profit": 139074010.0,
-        "Operating Profit": 82742.88,
+        "Operating Profit": 82742880.0,
         "Net Profit": -4433800.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -1.11,
@@ -278,7 +306,14 @@
         "Book Value(Rs.)": 12.76,
         "ROE": 91.63
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -296,7 +331,7 @@
         "Total Assets": 1346753070.0,
         "Revenue": 57640940.0,
         "Gross Profit": 43045600.0,
-        "Operating Profit": 42298.84,
+        "Operating Profit": 42298840.0,
         "Net Profit": 16612980.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 16.61,
@@ -350,7 +385,14 @@
         "Book Value(Rs.)": 0.43,
         "ROE": 39.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -368,7 +410,7 @@
         "Total Assets": 1308917230.0,
         "Revenue": 82779730.0,
         "Gross Profit": 54921720.0,
-        "Operating Profit": 52842.67,
+        "Operating Profit": 52842670.0,
         "Net Profit": 662330.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 0.33,
@@ -422,7 +464,14 @@
         "Book Value(Rs.)": -5.44,
         "ROE": -95.9
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -440,7 +489,7 @@
         "Total Assets": 1279091040.0,
         "Revenue": 96871780.0,
         "Gross Profit": 55338000.0,
-        "Operating Profit": 52442.49,
+        "Operating Profit": 52442490.0,
         "Net Profit": -27808640.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -9.27,
@@ -493,7 +542,14 @@
         "Book Value(Rs.)": -9.33,
         "ROE": -5782.61
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -511,7 +567,7 @@
         "Total Assets": 1259373800.0,
         "Revenue": 121646870.0,
         "Gross Profit": 66520840.0,
-        "Operating Profit": 62442.56,
+        "Operating Profit": 62442560.0,
         "Net Profit": -47024630.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -11.76,
@@ -564,7 +620,14 @@
         "Book Value(Rs.)": -14.59,
         "ROE": -1138.93
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -582,7 +645,7 @@
         "Total Assets": 1284870810.0,
         "Revenue": 70046650.0,
         "Gross Profit": 55291440.0,
-        "Operating Profit": 54019.02,
+        "Operating Profit": 54019020.0,
         "Net Profit": 26634030.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 26.63,
@@ -636,7 +699,14 @@
         "Book Value(Rs.)": -11.26,
         "ROE": 80.69
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -654,7 +724,7 @@
         "Total Assets": 1254009320.0,
         "Revenue": 90104830.0,
         "Gross Profit": 61460020.0,
-        "Operating Profit": 59443.69,
+        "Operating Profit": 59443690.0,
         "Net Profit": 6462410.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 3.23,
@@ -708,7 +778,14 @@
         "Book Value(Rs.)": -13.71,
         "ROE": 1025.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -726,7 +803,7 @@
         "Total Assets": 1226286110.0,
         "Revenue": 102434910.0,
         "Gross Profit": 60645800.0,
-        "Operating Profit": 57699.79,
+        "Operating Profit": 57699790.0,
         "Net Profit": -19653140.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -6.55,
@@ -779,7 +856,14 @@
         "Book Value(Rs.)": -14.45,
         "ROE": 17.37
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -797,7 +881,7 @@
         "Total Assets": 1212327720.0,
         "Revenue": 129771460.0,
         "Gross Profit": 74856520.0,
-        "Operating Profit": 70960.93,
+        "Operating Profit": 70960930.0,
         "Net Profit": -30058980.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -7.51,
@@ -850,7 +934,14 @@
         "Book Value(Rs.)": -11.89,
         "ROE": 27.46
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -868,7 +959,7 @@
         "Total Assets": 1232702220.0,
         "Revenue": 82717170.0,
         "Gross Profit": 68277000.0,
-        "Operating Profit": 67323.31,
+        "Operating Profit": 67323310.0,
         "Net Profit": 46033050.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 46.03,
@@ -919,7 +1010,14 @@
         "Net Profit": 72.84,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -937,7 +1035,7 @@
         "Total Assets": 1206635780.0,
         "Revenue": 108877390.0,
         "Gross Profit": 81574610.0,
-        "Operating Profit": 79119.16,
+        "Operating Profit": 79119160.0,
         "Net Profit": 39763850.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 19.88,
@@ -988,7 +1086,14 @@
         "Net Profit": 515.31,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1006,7 +1111,7 @@
         "Total Assets": 1187736620.0,
         "Revenue": 121327740.0,
         "Gross Profit": 81290870.0,
-        "Operating Profit": 78110.84,
+        "Operating Profit": 78110840.0,
         "Net Profit": 22066640.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 7.36,
@@ -1057,7 +1162,14 @@
         "Net Profit": 212.28,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1075,7 +1187,7 @@
         "Total Assets": 1184062490.0,
         "Revenue": 155459660.0,
         "Gross Profit": 100507260.0,
-        "Operating Profit": 95884.39,
+        "Operating Profit": 95884390.0,
         "Net Profit": 23391360.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 5.85,
@@ -1126,7 +1238,14 @@
         "Net Profit": 177.82,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1144,7 +1263,7 @@
         "Total Assets": 1213820490.0,
         "Revenue": 82307760.0,
         "Gross Profit": 67718510.0,
-        "Operating Profit": 66556.45,
+        "Operating Profit": 66556450.0,
         "Net Profit": 56247670.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 28.12,
@@ -1198,7 +1317,14 @@
         "Book Value Reported": 47.81,
         "ROE Reported": -58.67
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1216,7 +1342,7 @@
         "Total Assets": 1203347860.0,
         "Revenue": 113908400.0,
         "Gross Profit": 85719500.0,
-        "Operating Profit": 82416.14,
+        "Operating Profit": 82416140.0,
         "Net Profit": 66148250.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 16.54,
@@ -1270,7 +1396,14 @@
         "Book Value Reported": 53.45,
         "ROE Reported": -45.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1288,7 +1421,7 @@
         "Total Assets": 1198513280.0,
         "Revenue": 130443860.0,
         "Gross Profit": 89377580.0,
-        "Operating Profit": 85271.59,
+        "Operating Profit": 85271590.0,
         "Net Profit": 62947970.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 10.49,
@@ -1342,7 +1475,14 @@
         "Book Value Reported": 63.87,
         "ROE Reported": -13.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1360,7 +1500,7 @@
         "Total Assets": 1176004360.0,
         "Revenue": 182612260.0,
         "Gross Profit": 124604160.0,
-        "Operating Profit": 116870.46,
+        "Operating Profit": 116870460.0,
         "Net Profit": 89339140.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 11.17,
@@ -1414,7 +1554,14 @@
         "Book Value Reported": 68.16,
         "ROE Reported": 13.59
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TPC",
@@ -1432,7 +1579,7 @@
         "Total Assets": 1220380850.0,
         "Revenue": 84713330.0,
         "Gross Profit": 69972930.0,
-        "Operating Profit": 68371.47,
+        "Operating Profit": 68371470.0,
         "Net Profit": 63700700.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 31.85,
@@ -1486,7 +1633,14 @@
         "Book Value Reported": 12.01,
         "ROE Reported": 1.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:18:01.025913"

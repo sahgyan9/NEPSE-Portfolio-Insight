@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T09:01:12.895877",
+      "parsed_at": "2026-11-14T21:10:22.588402",
       "raw": {
         "EPS(Rs.)": 27.89
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T09:01:12.895854",
+      "parsed_at": "2026-11-14T21:10:22.588383",
       "raw": {
         "Paid Up Capital": 248625000.0,
         "Reserves": 158005210.0,
@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 1053957020.0,
         "Interest Income": 30746240.0,
         "Net Interest Income": 3987760.0,
-        "Total Operating Income": 4352.01,
-        "Operating Profit": 1712.37,
+        "Total Operating Income": 4352010.0,
+        "Operating Profit": 1712370.0,
         "Net Profit": 1685680.0,
         "Number of Shares": 2486250.0,
         "EPS(Rs.)": 0.68,
@@ -86,14 +86,22 @@
         "graham_number": 50.02
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T09:01:12.895739",
+      "parsed_at": "2026-11-14T21:10:22.588338",
       "raw": {
         "Paid Up Capital": 310781000.0,
         "Reserves": 112713600.0,
@@ -103,8 +111,8 @@
         "Loans and Advances to Customers": 1043400150.0,
         "Interest Income": 73211270.0,
         "Net Interest Income": 21262460.0,
-        "Total Operating Income": 21913.96,
-        "Operating Profit": 16880.45,
+        "Total Operating Income": 21913960.0,
+        "Operating Profit": 16880450.0,
         "Net Profit": 12417570.0,
         "Number of Shares": 3107810.0,
         "EPS(Rs.)": 4.0,
@@ -148,14 +156,22 @@
         "graham_number": 110.74
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T09:01:12.895624",
+      "parsed_at": "2026-11-14T21:10:22.588295",
       "raw": {
         "Paid Up Capital": 310781000.0,
         "Reserves": 140659210.0,
@@ -165,8 +181,8 @@
         "Loans and Advances to Customers": 1148251330.0,
         "Interest Income": 118506190.0,
         "Net Interest Income": 41935990.0,
-        "Total Operating Income": 44333.39,
-        "Operating Profit": 35143.72,
+        "Total Operating Income": 44333390.0,
+        "Operating Profit": 35143720.0,
         "Net Profit": 30201130.0,
         "Number of Shares": 3107810.0,
         "EPS(Rs.)": 9.72,
@@ -210,14 +226,22 @@
         "graham_number": 178.24
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T09:01:12.895510",
+      "parsed_at": "2026-11-14T21:10:22.588253",
       "raw": {
         "Paid Up Capital": 310781000.0,
         "Reserves": 218076610.0,
@@ -227,8 +251,8 @@
         "Loans and Advances to Customers": 1256013250.0,
         "Interest Income": 193876370.0,
         "Net Interest Income": 91120580.0,
-        "Total Operating Income": 95117.18,
-        "Operating Profit": 78669.06,
+        "Total Operating Income": 95117180.0,
+        "Operating Profit": 78669060.0,
         "Net Profit": 79466750.0,
         "Number of Shares": 3107810.0,
         "EPS(Rs.)": 14.12,
@@ -275,14 +299,22 @@
         "eps_ttm": -49.37,
         "EPS(Rs.)": -49.37
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T09:01:12.895398",
+      "parsed_at": "2026-11-14T21:10:22.588212",
       "raw": {
         "Paid Up Capital": 310781000.0,
         "Reserves": 245299140.0,
@@ -292,8 +324,8 @@
         "Loans and Advances to Customers": 1206150150.0,
         "Interest Income": 52285770.0,
         "Net Interest Income": 26222590.0,
-        "Total Operating Income": 27579.67,
-        "Operating Profit": 24400.86,
+        "Total Operating Income": 27579670.0,
+        "Operating Profit": 24400860.0,
         "Net Profit": 17542570.0,
         "Number of Shares": 3107810.0,
         "EPS(Rs.)": 5.64,
@@ -362,14 +394,22 @@
         "Credit To Deposit Ratio": -1.98,
         "Base Rate": -6.58
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T09:01:12.895282",
+      "parsed_at": "2026-11-14T21:10:22.588169",
       "raw": {
         "Paid Up Capital": 341859100.0,
         "Reserves": 175373300.0,
@@ -379,8 +419,8 @@
         "Loans and Advances to Customers": 1271243580.0,
         "Interest Income": 109137030.0,
         "Net Interest Income": 57181510.0,
-        "Total Operating Income": 59522.52,
-        "Operating Profit": 47620.06,
+        "Total Operating Income": 59522520.0,
+        "Operating Profit": 47620060.0,
         "Net Profit": 45190400.0,
         "Number of Shares": 3418590.0,
         "EPS(Rs.)": 13.21,
@@ -449,14 +489,22 @@
         "Credit To Deposit Ratio": 10.7,
         "Base Rate": -0.94
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T09:01:12.895164",
+      "parsed_at": "2026-11-14T21:10:22.588128",
       "raw": {
         "Paid Up Capital": 341859100.0,
         "Reserves": 212035240.0,
@@ -466,8 +514,8 @@
         "Loans and Advances to Customers": 1366888860.0,
         "Interest Income": 172713370.0,
         "Net Interest Income": 93101570.0,
-        "Total Operating Income": 96694.9,
-        "Operating Profit": 74279.48,
+        "Total Operating Income": 96694900.0,
+        "Operating Profit": 74279480.0,
         "Net Profit": 68520730.0,
         "Number of Shares": 3418590.0,
         "EPS(Rs.)": 20.04,
@@ -536,14 +584,22 @@
         "Credit To Deposit Ratio": 13.39,
         "Base Rate": 10.83
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:01:12.895048",
+      "parsed_at": "2026-11-14T21:10:22.588036",
       "raw": {
         "Paid Up Capital": 341859100.0,
         "Reserves": 294903960.0,
@@ -553,8 +609,8 @@
         "Loans and Advances to Customers": 1397599910.0,
         "Interest Income": 268843560.0,
         "Net Interest Income": 157332770.0,
-        "Total Operating Income": 162385.52,
-        "Operating Profit": 100255.61,
+        "Total Operating Income": 162385520.0,
+        "Operating Profit": 100255610.0,
         "Net Profit": 118335210.0,
         "Number of Shares": 3418590.0,
         "EPS(Rs.)": 27.65,
@@ -623,14 +679,22 @@
         "Credit To Deposit Ratio": 13.8,
         "Base Rate": 25.08
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:01:12.894930",
+      "parsed_at": "2026-11-14T21:10:22.587924",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": 62036520.0,
@@ -643,8 +707,8 @@
         "Investment Securities": 55596500.0,
         "Interest Income": 343247390.0,
         "Net Interest Income": 147876420.0,
-        "Total Operating Income": 160835.71,
-        "Operating Profit": 66414.66,
+        "Total Operating Income": 160835710.0,
+        "Operating Profit": 66414660.0,
         "Net Profit": 52483850.0,
         "Distributable Profit": 62036520.0,
         "Number of Shares": 6904728.0,
@@ -720,14 +784,22 @@
         "Credit To Deposit Ratio": 54.45,
         "Base Rate": 17.61
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:01:12.894791",
+      "parsed_at": "2026-11-14T21:10:22.587781",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": 47901650.0,
@@ -740,8 +812,8 @@
         "Investment Securities": 55596500.0,
         "Interest Income": 456561160.0,
         "Net Interest Income": 182809650.0,
-        "Total Operating Income": 208809.99,
-        "Operating Profit": 61395.8,
+        "Total Operating Income": 208809990.0,
+        "Operating Profit": 61395800.0,
         "Net Profit": 43089060.0,
         "Distributable Profit": 47901650.0,
         "Number of Shares": 6904728.0,
@@ -817,14 +889,22 @@
         "Credit To Deposit Ratio": 26.56,
         "Base Rate": 26.65
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:01:12.894652",
+      "parsed_at": "2026-11-14T21:10:22.587627",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": 35189380.0,
@@ -837,8 +917,8 @@
         "Investment Securities": 55596500.0,
         "Interest Income": 140273040.0,
         "Net Interest Income": 50637910.0,
-        "Total Operating Income": 51787.0,
-        "Operating Profit": 3416.13,
+        "Total Operating Income": 51787000.0,
+        "Operating Profit": 3416130.0,
         "Net Profit": 2419090.0,
         "Distributable Profit": 35189380.0,
         "Number of Shares": 6904728.0,
@@ -914,14 +994,22 @@
         "Credit To Deposit Ratio": 14.61,
         "Base Rate": 18.05
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:01:12.894511",
+      "parsed_at": "2026-11-14T21:10:22.587403",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": 49781840.0,
@@ -934,8 +1022,8 @@
         "Investment Securities": 55596500.0,
         "Interest Income": 283107580.0,
         "Net Interest Income": 101029060.0,
-        "Total Operating Income": 102959.88,
-        "Operating Profit": 17965.38,
+        "Total Operating Income": 102959880.0,
+        "Operating Profit": 17965380.0,
         "Net Profit": 14592470.0,
         "Distributable Profit": 49781840.0,
         "Number of Shares": 6904728.0,
@@ -1011,14 +1099,22 @@
         "Credit To Deposit Ratio": 15.11,
         "Base Rate": 9.9
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:01:12.894366",
+      "parsed_at": "2026-11-14T21:10:22.587251",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -195550750.0,
@@ -1031,8 +1127,8 @@
         "Investment Securities": 44031500.0,
         "Interest Income": 425391460.0,
         "Net Interest Income": 148897200.0,
-        "Total Operating Income": 153309.01,
-        "Operating Profit": 19556.6,
+        "Total Operating Income": 153309010.0,
+        "Operating Profit": 19556600.0,
         "Net Profit": 15345470.0,
         "Distributable Profit": -195551000.0,
         "Number of Shares": 6904728.0,
@@ -1113,14 +1209,22 @@
         "Base Rate": 19.69,
         "Interest Spread Rate": -7.23
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:01:12.894223",
+      "parsed_at": "2026-11-14T21:10:22.587095",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -209421440.0,
@@ -1133,8 +1237,8 @@
         "Investment Securities": 44031500.0,
         "Interest Income": 536159850.0,
         "Net Interest Income": 160833250.0,
-        "Total Operating Income": 172174.99,
-        "Operating Profit": 5719.02,
+        "Total Operating Income": 172174990.0,
+        "Operating Profit": 5719020.0,
         "Net Profit": 4148060.0,
         "Distributable Profit": -209421440.0,
         "Number of Shares": 6904728.0,
@@ -1215,14 +1319,22 @@
         "Base Rate": 11.68,
         "Interest Spread Rate": 7.33
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:01:12.894078",
+      "parsed_at": "2026-11-14T21:10:22.586959",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -348731740.0,
@@ -1235,8 +1347,8 @@
         "Investment Securities": 44031500.0,
         "Interest Income": 148816800.0,
         "Net Interest Income": 51080100.0,
-        "Total Operating Income": 52478.39,
-        "Operating Profit": -2625.08,
+        "Total Operating Income": 52478390.0,
+        "Operating Profit": -2625080.0,
         "Net Profit": 436420.0,
         "Distributable Profit": -348731740.0,
         "Number of Shares": 6904728.0,
@@ -1317,14 +1429,22 @@
         "Base Rate": 5.73,
         "Interest Spread Rate": 5.3
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:01:12.893931",
+      "parsed_at": "2026-11-14T21:10:22.586902",
       "raw": {
         "Paid Up Capital": 690472900.0,
         "Retained Earnings": -347182150.0,
@@ -1337,8 +1457,8 @@
         "Investment Securities": 44031500.0,
         "Interest Income": 293035800.0,
         "Net Interest Income": 101312000.0,
-        "Total Operating Income": 103475.09,
-        "Operating Profit": -853.07,
+        "Total Operating Income": 103475090.0,
+        "Operating Profit": -853070.0,
         "Net Profit": 1986020.0,
         "Distributable Profit": -347182150.0,
         "Number of Shares": 6904729.03,
@@ -1419,14 +1539,22 @@
         "Base Rate": -1.57,
         "Interest Spread Rate": 5.77
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:01:12.893791",
+      "parsed_at": "2026-11-14T21:10:22.586845",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -457798970.0,
@@ -1439,8 +1567,8 @@
         "Investment Securities": 44031500.0,
         "Interest Income": 431716090.0,
         "Net Interest Income": 148740210.0,
-        "Total Operating Income": 152535.87,
-        "Operating Profit": -106653.4,
+        "Total Operating Income": 152535870.0,
+        "Operating Profit": -106653400.0,
         "Net Profit": -108630800.0,
         "Distributable Profit": -457798970.0,
         "Number of Shares": 6904728.0,
@@ -1520,14 +1648,22 @@
         "Base Rate": -11.37,
         "Interest Spread Rate": -0.65
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:01:12.893653",
+      "parsed_at": "2026-11-14T21:10:22.586790",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -721895860.0,
@@ -1540,8 +1676,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 487489380.0,
         "Net Interest Income": 113098960.0,
-        "Total Operating Income": 123207.54,
-        "Operating Profit": 123207.54,
+        "Total Operating Income": 123207540.0,
+        "Operating Profit": 123207540.0,
         "Net Profit": -137163030.0,
         "Distributable Profit": -721895860.0,
         "Number of Shares": 6904728.0,
@@ -1621,14 +1757,22 @@
         "Base Rate": -18.47,
         "Interest Spread Rate": 1.1
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:01:12.893514",
+      "parsed_at": "2026-11-14T21:10:22.586736",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -652561980.0,
@@ -1641,8 +1785,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 140612570.0,
         "Net Interest Income": 49344710.0,
-        "Total Operating Income": 51358.04,
-        "Operating Profit": 98651.24,
+        "Total Operating Income": 51358040.0,
+        "Operating Profit": 98651240.0,
         "Net Profit": 69055870.0,
         "Distributable Profit": -652561980.0,
         "Number of Shares": 6904728.0,
@@ -1723,14 +1867,22 @@
         "Base Rate": -20.71,
         "Interest Spread Rate": 0.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:01:12.893370",
+      "parsed_at": "2026-11-14T21:10:22.586683",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Retained Earnings": -969865700.0,
@@ -1743,8 +1895,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 185985430.0,
         "Net Interest Income": 11951040.0,
-        "Total Operating Income": 17243.97,
-        "Operating Profit": -248247.86,
+        "Total Operating Income": 17243970.0,
+        "Operating Profit": -248247860.0,
         "Net Profit": -248247860.0,
         "Distributable Profit": -969865700.0,
         "Number of Shares": 6904728.0,
@@ -1821,14 +1973,22 @@
         "Base Rate": -22.83,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:01:12.893229",
+      "parsed_at": "2026-11-14T21:10:22.586630",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -1843,8 +2003,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 403451730.0,
         "Net Interest Income": 155128080.0,
-        "Total Operating Income": 161249.01,
-        "Operating Profit": -128325.84,
+        "Total Operating Income": 161249010.0,
+        "Operating Profit": -128325840.0,
         "Net Profit": -128325840.0,
         "Distributable Profit": -849943680.0,
         "Number of Shares": 6904728.0,
@@ -1923,14 +2083,22 @@
         "Base Rate": -16.51,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:01:12.893075",
+      "parsed_at": "2026-11-14T21:10:22.586574",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -1945,8 +2113,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 479945200.0,
         "Net Interest Income": 166704740.0,
-        "Total Operating Income": 174495.25,
-        "Operating Profit": -207284.11,
+        "Total Operating Income": 174495250.0,
+        "Operating Profit": -207284110.0,
         "Net Profit": -207284110.0,
         "Distributable Profit": -1100613700.0,
         "Number of Shares": 6904728.0,
@@ -2025,14 +2193,22 @@
         "Base Rate": -8.83,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:01:12.892920",
+      "parsed_at": "2026-11-14T21:10:22.586471",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -2047,8 +2223,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 71043190.0,
         "Net Interest Income": 17424510.0,
-        "Total Operating Income": 23476.25,
-        "Operating Profit": 2637.11,
+        "Total Operating Income": 23476250.0,
+        "Operating Profit": 2637110.0,
         "Net Profit": 1845980.0,
         "Distributable Profit": -1135041540.0,
         "Number of Shares": 6904728.0,
@@ -2127,14 +2303,22 @@
         "Base Rate": -2.56,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:01:12.892761",
+      "parsed_at": "2026-11-14T21:10:22.586315",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -2149,8 +2333,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 157391100.0,
         "Net Interest Income": 56785000.0,
-        "Total Operating Income": 64188.24,
-        "Operating Profit": -22383.53,
+        "Total Operating Income": 64188240.0,
+        "Operating Profit": -22383530.0,
         "Net Profit": -22383530.0,
         "Distributable Profit": -1159271050.0,
         "Number of Shares": 6904728.0,
@@ -2232,14 +2416,22 @@
         "Base Rate": 2.89,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:01:12.892603",
+      "parsed_at": "2026-11-14T21:10:22.586152",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -2254,8 +2446,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 212806840.0,
         "Net Interest Income": 70067500.0,
-        "Total Operating Income": 78400.62,
-        "Operating Profit": -29089.56,
+        "Total Operating Income": 78400620.0,
+        "Operating Profit": -29089560.0,
         "Net Profit": -29089560.0,
         "Distributable Profit": -1165971370.0,
         "Number of Shares": 6904728.0,
@@ -2337,14 +2529,22 @@
         "Base Rate": -0.51,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:01:12.892423",
+      "parsed_at": "2026-11-14T21:10:22.585986",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -2359,8 +2559,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 355584060.0,
         "Net Interest Income": 171512260.0,
-        "Total Operating Income": 181156.89,
-        "Operating Profit": 13348.54,
+        "Total Operating Income": 181156890.0,
+        "Operating Profit": 13348540.0,
         "Net Profit": 9343980.0,
         "Distributable Profit": -1127537840.0,
         "Number of Shares": 6904728.0,
@@ -2442,14 +2642,22 @@
         "Base Rate": -2.2,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JFL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:01:12.892220",
+      "parsed_at": "2026-11-14T21:10:22.585783",
       "raw": {
         "Paid Up Capital": 690472800.0,
         "Share Premium": 0.0,
@@ -2464,8 +2672,8 @@
         "Investment Securities": 39496500.0,
         "Interest Income": 98323800.0,
         "Net Interest Income": 61163510.0,
-        "Total Operating Income": 62405.25,
-        "Operating Profit": -8585.02,
+        "Total Operating Income": 62405250.0,
+        "Operating Profit": -8585020.0,
         "Net Profit": -8585020.0,
         "Distributable Profit": -1178159300.0,
         "Number of Shares": 6904728.0,
@@ -2547,8 +2755,16 @@
         "Base Rate": -12.28,
         "Interest Spread Rate": 8.7
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:01:12.900992"
+  "last_updated": "2026-11-14T21:10:22.591931"
 }

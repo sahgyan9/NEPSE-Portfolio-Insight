@@ -8,7 +8,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:04:10.204957",
+      "parsed_at": "2026-11-14T21:13:19.794852",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 64434990.0,
@@ -19,7 +19,7 @@
         "Total Assets": 247621890.0,
         "Revenue": 11019900.0,
         "Gross Profit": 9517530.0,
-        "Operating Profit": 6094.81,
+        "Operating Profit": 6094810.0,
         "Net Profit": 5059430.0,
         "Number of Shares": 1218675.0,
         "EPS(Rs.)": 16.61,
@@ -53,14 +53,21 @@
         "graham_number": 239.02
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:04:10.204901",
+      "parsed_at": "2026-11-14T21:13:19.794759",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 70058960.0,
@@ -71,7 +78,7 @@
         "Total Assets": 248554090.0,
         "Revenue": 21658770.0,
         "Gross Profit": 19725790.0,
-        "Operating Profit": 14049.4,
+        "Operating Profit": 14049400.0,
         "Net Profit": 10319050.0,
         "Number of Shares": 1218675.0,
         "EPS(Rs.)": 16.93,
@@ -105,14 +112,21 @@
         "graham_number": 244.93
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:04:10.204839",
+      "parsed_at": "2026-11-14T21:13:19.794665",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 74019340.0,
@@ -123,7 +137,7 @@
         "Total Assets": 244262260.0,
         "Revenue": 30385440.0,
         "Gross Profit": 25990200.0,
-        "Operating Profit": 20013.51,
+        "Operating Profit": 20013510.0,
         "Net Profit": 14274800.0,
         "Number of Shares": 1218675.0,
         "EPS(Rs.)": 15.62,
@@ -157,14 +171,21 @@
         "graham_number": 237.68
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:04:10.204777",
+      "parsed_at": "2026-11-14T21:13:19.794569",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 75502390.0,
@@ -175,7 +196,7 @@
         "Total Assets": 244555520.0,
         "Revenue": 35297390.0,
         "Gross Profit": 30365030.0,
-        "Operating Profit": 23210.16,
+        "Operating Profit": 23210160.0,
         "Net Profit": 15757840.0,
         "Number of Shares": 1218675.0,
         "EPS(Rs.)": 12.93,
@@ -209,14 +230,21 @@
         "graham_number": 217.06
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:04:10.204711",
+      "parsed_at": "2026-11-14T21:13:19.794472",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 57913960.0,
@@ -227,7 +255,7 @@
         "Total Assets": 221915560.0,
         "Revenue": 10420610.0,
         "Gross Profit": 9999380.0,
-        "Operating Profit": 8327.48,
+        "Operating Profit": 8327480.0,
         "Net Profit": 4663070.0,
         "Number of Shares": 1218675.0,
         "EPS(Rs.)": 15.31,
@@ -281,14 +309,21 @@
         "Book Value(Rs.)": -3.5,
         "ROE": -4.51
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:04:10.204609",
+      "parsed_at": "2026-11-14T21:13:19.794377",
       "raw": {
         "Paid Up Capital": 121867500.0,
         "Reserve and Surplus": 61826120.0,
@@ -299,7 +334,7 @@
         "Total Assets": 223012520.0,
         "Revenue": 19959160.0,
         "Gross Profit": 19037080.0,
-        "Operating Profit": 15904.92,
+        "Operating Profit": 15904920.0,
         "Net Profit": 8846530.0,
         "Number of Shares": 1218675.0,
         "EPS Reported": 14.52,
@@ -350,14 +385,21 @@
         "Net Profit": -14.27,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:04:10.204512",
+      "parsed_at": "2026-11-14T21:13:19.794282",
       "raw": {
         "Paid Up Capital": 134054250.0,
         "Reserve and Surplus": 50893810.0,
@@ -368,7 +410,7 @@
         "Total Assets": 219451090.0,
         "Revenue": 27369770.0,
         "Gross Profit": 25336360.0,
-        "Operating Profit": 20369.01,
+        "Operating Profit": 20369010.0,
         "Net Profit": 10100970.0,
         "Number of Shares": 1340542.5,
         "EPS Reported": 10.05,
@@ -419,14 +461,21 @@
         "Net Profit": -29.24,
         "Number of Shares": 10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:04:10.204409",
+      "parsed_at": "2026-11-14T21:13:19.794186",
       "raw": {
         "Paid Up Capital": 134054250.0,
         "Reserve and Surplus": 49229790.0,
@@ -437,7 +486,7 @@
         "Total Assets": 213459960.0,
         "Revenue": 31133260.0,
         "Gross Profit": 28533710.0,
-        "Operating Profit": 22283.44,
+        "Operating Profit": 22283440.0,
         "Net Profit": 8938710.0,
         "Number of Shares": 1340542.5,
         "EPS Reported": 6.67,
@@ -488,14 +537,21 @@
         "Net Profit": -43.27,
         "Number of Shares": 10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:04:10.204306",
+      "parsed_at": "2026-11-14T21:13:19.794068",
       "raw": {
         "Paid Up Capital": 134054250.0,
         "Reserve and Surplus": 50356060.0,
@@ -506,7 +562,7 @@
         "Total Assets": 215365000.0,
         "Revenue": 8198580.0,
         "Gross Profit": 7626250.0,
-        "Operating Profit": 5885.77,
+        "Operating Profit": 5885770.0,
         "Net Profit": 2544040.0,
         "Number of Shares": 1340542.5,
         "EPS Reported": 7.59,
@@ -557,14 +613,21 @@
         "Net Profit": -45.44,
         "Number of Shares": 10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:04:10.204204",
+      "parsed_at": "2026-11-14T21:13:19.793971",
       "raw": {
         "Paid Up Capital": 134054250.0,
         "Reserve and Surplus": 55979270.0,
@@ -575,7 +638,7 @@
         "Total Assets": 216212890.0,
         "Revenue": 19453540.0,
         "Gross Profit": 18127460.0,
-        "Operating Profit": 15006.76,
+        "Operating Profit": 15006760.0,
         "Net Profit": 8320440.0,
         "Number of Shares": 1340542.5,
         "EPS Reported": 12.41,
@@ -629,14 +692,21 @@
         "Book Value Reported": -5.95,
         "ROE Reported": -9.03
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:04:10.204110",
+      "parsed_at": "2026-11-14T21:13:19.793876",
       "raw": {
         "Paid Up Capital": 147459680.0,
         "Reserve and Surplus": 44534820.0,
@@ -647,7 +717,7 @@
         "Total Assets": 212479920.0,
         "Revenue": 27421510.0,
         "Gross Profit": 24939990.0,
-        "Operating Profit": 12922.66,
+        "Operating Profit": 12922660.0,
         "Net Profit": 10986970.0,
         "Number of Shares": 1474596.75,
         "EPS Reported": 9.93,
@@ -701,14 +771,21 @@
         "Book Value Reported": -5.63,
         "ROE Reported": 4.81
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:04:10.204004",
+      "parsed_at": "2026-11-14T21:13:19.793771",
       "raw": {
         "Paid Up Capital": 147459680.0,
         "Reserve and Surplus": 44547380.0,
@@ -719,7 +796,7 @@
         "Total Assets": 208824290.0,
         "Revenue": 33610530.0,
         "Gross Profit": 30850800.0,
-        "Operating Profit": 13538.25,
+        "Operating Profit": 13538250.0,
         "Net Profit": 10999530.0,
         "Number of Shares": 1474596.75,
         "EPS Reported": 7.46,
@@ -773,14 +850,21 @@
         "Book Value Reported": -4.76,
         "ROE Reported": 17.42
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBSH",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:04:10.203921",
+      "parsed_at": "2026-11-14T21:13:19.793655",
       "raw": {
         "Paid Up Capital": 147459680.0,
         "Reserve and Surplus": 46401550.0,
@@ -791,7 +875,7 @@
         "Total Assets": 206302090.0,
         "Revenue": 11025650.0,
         "Gross Profit": 10316990.0,
-        "Operating Profit": 5399.72,
+        "Operating Profit": 5399720.0,
         "Net Profit": 4482290.0,
         "Number of Shares": 1474596.75,
         "EPS Reported": 12.16,
@@ -845,8 +929,15 @@
         "Book Value Reported": -4.43,
         "ROE Reported": 67.57
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:04:10.205878"
+  "last_updated": "2026-11-14T21:13:19.797311"
 }

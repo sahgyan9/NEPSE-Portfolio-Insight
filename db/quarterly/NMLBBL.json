@@ -20,8 +20,8 @@
         "Investments": 379445780.0,
         "Interest Income": 2171906180.0,
         "Net Interest Income": 1038880450.0,
-        "Total Operating Income": 1281062.04,
-        "Operating Profit": 599139.45,
+        "Total Operating Income": 1281062040.0,
+        "Operating Profit": 599139450.0,
         "Net Profit": 447006120.0,
         "Number of Shares": 13977645.45,
         "EPS(Rs.)": 31.98,
@@ -65,7 +65,15 @@
         "graham_number": 374.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -84,8 +92,8 @@
         "Investments": 360922570.0,
         "Interest Income": 594424770.0,
         "Net Interest Income": 244686770.0,
-        "Total Operating Income": 273918.3,
-        "Operating Profit": -264257.49,
+        "Total Operating Income": 273918300.0,
+        "Operating Profit": -264257490.0,
         "Net Profit": -261150670.0,
         "Number of Shares": 13977645.45,
         "EPS(Rs.)": -74.73,
@@ -128,7 +136,15 @@
         "revenue_ttm": 594424770.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -148,8 +164,8 @@
         "Investments": 381732590.0,
         "Interest Income": 1359561140.0,
         "Net Interest Income": 633848360.0,
-        "Total Operating Income": 704233.54,
-        "Operating Profit": -68668.21,
+        "Total Operating Income": 704233540.0,
+        "Operating Profit": -68668210.0,
         "Net Profit": -62708600.0,
         "Number of Shares": 13977645.45,
         "EPS Reported": -8.97,
@@ -193,7 +209,15 @@
         "revenue_ttm": 1359561140.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -213,8 +237,8 @@
         "Investments": 3510000.0,
         "Interest Income": 2066507850.0,
         "Net Interest Income": 1017419930.0,
-        "Total Operating Income": 814394.45,
-        "Operating Profit": 74809.3,
+        "Total Operating Income": 814394450.0,
+        "Operating Profit": 74809300.0,
         "Net Profit": 57900770.0,
         "Number of Shares": 13977645.45,
         "EPS Reported": 5.52,
@@ -259,7 +283,15 @@
         "graham_number": 154.69
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -279,8 +311,8 @@
         "Investments": 3510000.0,
         "Interest Income": 2801007050.0,
         "Net Interest Income": 1434724770.0,
-        "Total Operating Income": 1661635.1,
-        "Operating Profit": 363984.62,
+        "Total Operating Income": 1661635100.0,
+        "Operating Profit": 363984620.0,
         "Net Profit": 254017210.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": 18.17,
@@ -348,7 +380,15 @@
         "Cost of funds": -20.67,
         "CD ratio": -0.84
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -368,8 +408,8 @@
         "Investments": 3510000.0,
         "Interest Income": 715018610.0,
         "Net Interest Income": 403300410.0,
-        "Total Operating Income": 440989.18,
-        "Operating Profit": 76040.15,
+        "Total Operating Income": 440989180.0,
+        "Operating Profit": 76040150.0,
         "Net Profit": 55368510.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": 15.84,
@@ -437,7 +477,15 @@
         "Cost of funds": -43.92,
         "CD ratio": 6.24
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -457,8 +505,8 @@
         "Investments": 3510000.0,
         "Interest Income": 1273097600.0,
         "Net Interest Income": 681075050.0,
-        "Total Operating Income": 773767.38,
-        "Operating Profit": 108539.68,
+        "Total Operating Income": 773767380.0,
+        "Operating Profit": 108539680.0,
         "Net Profit": 78150520.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": 11.18,
@@ -529,7 +577,15 @@
         "Cost of funds": -37.12,
         "CD ratio": 2.94
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -549,8 +605,8 @@
         "Investments": 3510000.0,
         "Interest Income": 1782447920.0,
         "Net Interest Income": 898298570.0,
-        "Total Operating Income": 1048903.34,
-        "Operating Profit": 49302.41,
+        "Total Operating Income": 1048903340.0,
+        "Operating Profit": 49302410.0,
         "Net Profit": 43833100.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": 4.18,
@@ -621,7 +677,15 @@
         "Cost of funds": 22.96,
         "CD ratio": -6.73
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -641,8 +705,8 @@
         "Investments": 3510000.0,
         "Interest Income": 2485092190.0,
         "Net Interest Income": 1294362500.0,
-        "Total Operating Income": 1510357.95,
-        "Operating Profit": 323052.42,
+        "Total Operating Income": 1510357950.0,
+        "Operating Profit": 323052420.0,
         "Net Profit": 235901430.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": 16.88,
@@ -713,7 +777,15 @@
         "Cost of funds": -1.57,
         "CD ratio": -4.93
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NMLBBL",
@@ -733,8 +805,8 @@
         "Investments": 3510000.0,
         "Interest Income": 600590820.0,
         "Net Interest Income": 288942270.0,
-        "Total Operating Income": 333509.15,
-        "Operating Profit": -30727.57,
+        "Total Operating Income": 333509150.0,
+        "Operating Profit": -30727570.0,
         "Net Profit": -27999440.0,
         "Number of Shares": 13977642.72,
         "EPS Reported": -8.01,
@@ -804,7 +876,15 @@
         "Cost of funds": 5.19,
         "CD ratio": -9.31
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:36:54.888971"

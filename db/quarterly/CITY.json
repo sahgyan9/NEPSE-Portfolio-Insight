@@ -8,7 +8,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:34:50.781591",
+      "parsed_at": "2026-11-14T20:43:53.120784",
       "raw": {
         "Paid Up Capital": 1506600000.0,
         "Reserve and Surplus": 67882910.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 239753230.0,
         "Current Assets": 315885800.0,
         "Total Assets": 5415385200.0,
-        "Revenue from Operations": 327254.25,
+        "Revenue from Operations": 327254250.0,
         "Gross Profit": 342304530.0,
         "Net Profit": -216166960.0,
         "Number of Shares": 15066000.0,
@@ -50,14 +50,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:34:50.781505",
+      "parsed_at": "2026-11-14T20:43:53.120687",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": 60625200.0,
@@ -66,7 +73,7 @@
         "Current Liabilities": 529113700.0,
         "Current Assets": 286377360.0,
         "Total Assets": 5461571190.0,
-        "Revenue from Operations": 473151.16,
+        "Revenue from Operations": 473151160.0,
         "Net Profit": -273636360.0,
         "Number of Shares": 16740000.0,
         "EPS(Rs.)": -16.35,
@@ -97,14 +104,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:34:50.781425",
+      "parsed_at": "2026-11-14T20:43:53.120602",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": 285500.0,
@@ -113,7 +127,7 @@
         "Current Liabilities": 613788490.0,
         "Current Assets": 289360900.0,
         "Total Assets": 5468697230.0,
-        "Revenue from Operations": 115959.76,
+        "Revenue from Operations": 115959760.0,
         "Net Profit": -60339700.0,
         "Number of Shares": 16740000.0,
         "EPS(Rs.)": -14.42,
@@ -144,14 +158,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:34:50.781344",
+      "parsed_at": "2026-11-14T20:43:53.120514",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -58517650.0,
@@ -160,7 +181,7 @@
         "Current Liabilities": 660067390.0,
         "Current Assets": 294309760.0,
         "Total Assets": 5464224050.0,
-        "Revenue from Operations": 243046.89,
+        "Revenue from Operations": 243046890.0,
         "Net Profit": -117992200.0,
         "Number of Shares": 16740000.0,
         "EPS(Rs.)": -14.1,
@@ -191,14 +212,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:34:50.781263",
+      "parsed_at": "2026-11-14T20:43:53.120424",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -94347160.0,
@@ -207,7 +235,7 @@
         "Current Liabilities": 676029260.0,
         "Current Assets": 304575400.0,
         "Total Assets": 5486862910.0,
-        "Revenue from Operations": 370296.9,
+        "Revenue from Operations": 370296900.0,
         "Net Profit": -153700590.0,
         "Number of Shares": 16740000.0,
         "EPS(Rs.)": -12.24,
@@ -255,14 +283,21 @@
         "Book Value(Rs.)": -9.71,
         "ROE": 29.16
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:34:50.781179",
+      "parsed_at": "2026-11-14T20:43:53.120332",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -90995550.0,
@@ -271,7 +306,7 @@
         "Current Liabilities": 702036750.0,
         "Current Assets": 286451150.0,
         "Total Assets": 5536871980.0,
-        "Revenue from Operations": 504231.03,
+        "Revenue from Operations": 504231030.0,
         "Net Profit": -204730670.0,
         "Number of Shares": 16740000.0,
         "EPS Reported": -12.23,
@@ -318,14 +353,21 @@
         "Net Profit": 25.18,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:34:50.781093",
+      "parsed_at": "2026-11-14T20:43:53.120233",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -159241970.0,
@@ -334,7 +376,7 @@
         "Current Liabilities": 773280960.0,
         "Current Assets": 331828880.0,
         "Total Assets": 5609413010.0,
-        "Revenue from Operations": 110223.93,
+        "Revenue from Operations": 110223930.0,
         "Net Profit": -56277800.0,
         "Number of Shares": 16740000.0,
         "EPS Reported": -13.45,
@@ -381,14 +423,21 @@
         "Net Profit": 6.73,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:34:50.781005",
+      "parsed_at": "2026-11-14T20:43:53.120082",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -267132630.0,
@@ -397,7 +446,7 @@
         "Current Liabilities": 787748010.0,
         "Current Assets": 324595360.0,
         "Total Assets": 5539926090.0,
-        "Revenue from Operations": 235791.38,
+        "Revenue from Operations": 235791380.0,
         "Net Profit": -104968940.0,
         "Number of Shares": 16740000.0,
         "EPS Reported": -12.54,
@@ -444,14 +493,21 @@
         "Net Profit": 11.04,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:34:50.780905",
+      "parsed_at": "2026-11-14T20:43:53.119977",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -335966950.0,
@@ -460,7 +516,7 @@
         "Current Liabilities": 881540140.0,
         "Current Assets": 310381680.0,
         "Total Assets": 5535392110.0,
-        "Revenue from Operations": 353832.21,
+        "Revenue from Operations": 353832210.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -173803260.0,
@@ -509,14 +565,21 @@
         "Net Profit": -13.08,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:34:50.780805",
+      "parsed_at": "2026-11-14T20:43:53.119874",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": -320906660.0,
@@ -525,7 +588,7 @@
         "Current Liabilities": 907109860.0,
         "Current Assets": 300216920.0,
         "Total Assets": 5560623700.0,
-        "Revenue from Operations": 486848.43,
+        "Revenue from Operations": 486848430.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -198965880.0,
@@ -577,14 +640,21 @@
         "Book Value Reported": -14.52,
         "ROE Reported": -13.69
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:34:50.780713",
+      "parsed_at": "2026-11-14T20:43:53.119781",
       "raw": {
         "Paid Up Capital": 1674000000.0,
         "Reserve and Surplus": 602401470.0,
@@ -593,7 +663,7 @@
         "Current Liabilities": 372546610.0,
         "Current Assets": 682327980.0,
         "Total Assets": 5908122770.0,
-        "Revenue from Operations": 107586.93,
+        "Revenue from Operations": 107586930.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -55652160.0,
@@ -645,14 +715,21 @@
         "Book Value Reported": 50.28,
         "ROE Reported": 34.19
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:34:50.780618",
+      "parsed_at": "2026-11-14T20:43:53.119683",
       "raw": {
         "Paid Up Capital": 3013200000.0,
         "Reserve and Surplus": -44174420.0,
@@ -661,7 +738,7 @@
         "Current Liabilities": 194361500.0,
         "Current Assets": 487771790.0,
         "Total Assets": 5684006020.0,
-        "Revenue from Operations": 232398.25,
+        "Revenue from Operations": 232398250.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -100938260.0,
@@ -713,14 +790,21 @@
         "Book Value Reported": 17.24,
         "ROE Reported": 54.42
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:34:50.780518",
+      "parsed_at": "2026-11-14T20:43:53.119584",
       "raw": {
         "Paid Up Capital": 3013200000.0,
         "Reserve and Surplus": -81982910.0,
@@ -729,7 +813,7 @@
         "Current Liabilities": 194781380.0,
         "Current Assets": 459674770.0,
         "Total Assets": 5638745490.0,
-        "Revenue from Operations": 356799.54,
+        "Revenue from Operations": 356799540.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -138746760.0,
@@ -781,14 +865,21 @@
         "Book Value Reported": 21.71,
         "ROE Reported": 63.57
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CITY",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:34:50.780402",
+      "parsed_at": "2026-11-14T20:43:53.119459",
       "raw": {
         "Paid Up Capital": 3013200000.0,
         "Reserve and Surplus": -116631610.0,
@@ -797,7 +888,7 @@
         "Current Liabilities": 201711320.0,
         "Current Assets": 455312120.0,
         "Total Assets": 5611543900.0,
-        "Revenue from Operations": 506034.52,
+        "Revenue from Operations": 506034520.0,
         "Gross Profit": 342861340.0,
         "Operating Profit": 0.0,
         "Net Profit": -173090730.0,
@@ -849,8 +940,15 @@
         "Book Value Reported": 18.93,
         "ROE Reported": 59.32
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:34:50.783966"
+  "last_updated": "2026-11-14T20:43:53.123280"
 }

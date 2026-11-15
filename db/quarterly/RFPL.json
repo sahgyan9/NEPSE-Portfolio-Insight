@@ -999,7 +999,7 @@
         "Total Assets": 2848256670.0,
         "Revenue": 201741770.0,
         "Gross Profit": 182628380.0,
-        "Operating Profit": 126496.71,
+        "Operating Profit": 126496710.0,
         "Net Profit": 18656340.0,
         "Number of Shares": 14000000.0,
         "EPS Reported": 1.78,
@@ -1052,7 +1052,14 @@
         "Book Value Reported": 17.73,
         "ROE Reported": 455.56
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RFPL",
@@ -1070,7 +1077,7 @@
         "Total Assets": 2839149670.0,
         "Revenue": 264333170.0,
         "Gross Profit": 226908720.0,
-        "Operating Profit": 151203.55,
+        "Operating Profit": 151203550.0,
         "Net Profit": 37945500.0,
         "Number of Shares": 14000000.0,
         "EPS Reported": 2.71,
@@ -1123,7 +1130,14 @@
         "Book Value Reported": 19.16,
         "ROE Reported": 1406.67
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:52:37.341616"

@@ -67,8 +67,8 @@
         "Total Investment and Loans": 2194214000.0,
         "Total Revenue": 305146000.0,
         "Income From Investment Loans And Others": 114473000.0,
-        "Total Expenses And Provisions": 128235.0,
-        "Management Expenses": 20291.0,
+        "Total Expenses And Provisions": 128235000.0,
+        "Management Expenses": 20291000.0,
         "Net Profit": 176912000.0,
         "Net Premium": 581694000.0,
         "Net Claim Payment": 208264000.0,
@@ -117,7 +117,15 @@
         "graham_number": 270.0
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -137,8 +145,8 @@
         "Total Investment and Loans": 2288676000.0,
         "Total Revenue": 63118000.0,
         "Income From Investment Loans And Others": 29006000.0,
-        "Total Expenses And Provisions": 26611.0,
-        "Management Expenses": 5434.0,
+        "Total Expenses And Provisions": 26611000.0,
+        "Management Expenses": 5434000.0,
         "Net Profit": 36507000.0,
         "Net Premium": 123428000.0,
         "Net Claim Payment": 54934000.0,
@@ -187,7 +195,15 @@
         "graham_number": 229.4
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -207,8 +223,8 @@
         "Total Investment and Loans": 2349027000.0,
         "Total Revenue": 122521000.0,
         "Income From Investment Loans And Others": 79346000.0,
-        "Total Expenses And Provisions": 51732.0,
-        "Management Expenses": 10873.0,
+        "Total Expenses And Provisions": 51732000.0,
+        "Management Expenses": 10873000.0,
         "Net Profit": 70789000.0,
         "Net Premium": 260695000.0,
         "Net Claim Payment": 134501000.0,
@@ -260,7 +276,15 @@
         "eps_ttm": -41.95,
         "EPS(Rs.)": -41.95
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -280,8 +304,8 @@
         "Total Investment and Loans": 2398646000.0,
         "Total Revenue": 195493000.0,
         "Income From Investment Loans And Others": 90522000.0,
-        "Total Expenses And Provisions": 81864.0,
-        "Management Expenses": 16525.0,
+        "Total Expenses And Provisions": 81864000.0,
+        "Management Expenses": 16525000.0,
         "Net Profit": 113629000.0,
         "Net Premium": 357451000.0,
         "Net Claim Payment": 177241000.0,
@@ -333,7 +357,15 @@
         "eps_ttm": -72.66,
         "EPS(Rs.)": -72.66
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -353,8 +385,8 @@
         "Total Investment and Loans": 2399259000.0,
         "Total Revenue": 280949000.0,
         "Income From Investment Loans And Others": 131494000.0,
-        "Total Expenses And Provisions": 123765.0,
-        "Management Expenses": 23419.0,
+        "Total Expenses And Provisions": 123765000.0,
+        "Management Expenses": 23419000.0,
         "Net Profit": 157184000.0,
         "Net Premium": 431598000.0,
         "Net Claim Payment": 292113000.0,
@@ -431,7 +463,15 @@
         "Book Value(Rs.)": -3.91,
         "ROE": -57.42
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -451,8 +491,8 @@
         "Total Investment and Loans": 2424122000.0,
         "Total Revenue": 64036000.0,
         "Income From Investment Loans And Others": 44691000.0,
-        "Total Expenses And Provisions": 27362.0,
-        "Management Expenses": 5474.0,
+        "Total Expenses And Provisions": 27362000.0,
+        "Management Expenses": 5474000.0,
         "Net Profit": 36674000.0,
         "Net Premium": 111938000.0,
         "Net Claim Payment": 76596000.0,
@@ -529,7 +569,15 @@
         "Book Value(Rs.)": 3.81,
         "ROE": -9.57
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -549,8 +597,8 @@
         "Total Investment and Loans": 2376279000.0,
         "Total Revenue": 76411000.0,
         "Income From Investment Loans And Others": 89325000.0,
-        "Total Expenses And Provisions": 36231.0,
-        "Management Expenses": 12083.0,
+        "Total Expenses And Provisions": 36231000.0,
+        "Management Expenses": 12083000.0,
         "Net Profit": 40180000.0,
         "Net Premium": 204838000.0,
         "Net Claim Payment": 135912000.0,
@@ -627,7 +675,15 @@
         "Book Value(Rs.)": 2.56,
         "ROE": -74.12
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PICL",
@@ -647,8 +703,8 @@
         "Total Investment and Loans": 2412389000.0,
         "Total Revenue": 175785000.0,
         "Income From Investment Loans And Others": 125212000.0,
-        "Total Expenses And Provisions": 75396.0,
-        "Management Expenses": 16287.0,
+        "Total Expenses And Provisions": 75396000.0,
+        "Management Expenses": 16287000.0,
         "Net Profit": 100390000.0,
         "Net Premium": 311794000.0,
         "Net Claim Payment": 216983000.0,
@@ -725,7 +781,15 @@
         "Book Value(Rs.)": -3.25,
         "ROE": -17.34
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:47:13.006058"

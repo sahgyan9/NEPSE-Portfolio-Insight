@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:41:57.726522",
+      "parsed_at": "2026-11-14T20:24:31.942096",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 815240.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 1518056330.0,
         "Interest Income": 61953950.0,
         "Net Interest Income": 40229290.0,
-        "Total Operating Income": 68582.5,
-        "Operating Profit": 11974.32,
+        "Total Operating Income": 68582500.0,
+        "Operating Profit": 11974320.0,
         "Net Profit": 10207080.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": 5.44,
@@ -63,14 +63,22 @@
         "graham_number": 110.82
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:41:57.726490",
+      "parsed_at": "2026-11-14T20:24:31.942025",
       "raw": {
         "Paid Up Capital": 152500000.0,
         "Reserve and Surplus": 19146520.0,
@@ -81,8 +89,8 @@
         "Loans and Advances to Customers": 2075681890.0,
         "Interest Income": 272667410.0,
         "Net Interest Income": 90291490.0,
-        "Total Operating Income": 128668.12,
-        "Operating Profit": 17579.13,
+        "Total Operating Income": 128668120.0,
+        "Operating Profit": 17579130.0,
         "Net Profit": 11074850.0,
         "Number of Shares": 1525000.0,
         "EPS(Rs.)": 7.26,
@@ -125,14 +133,22 @@
         "graham_number": 135.6
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:41:57.726456",
+      "parsed_at": "2026-11-14T20:24:31.941954",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 34616970.0,
@@ -143,8 +159,8 @@
         "Loans and Advances to Customers": 2134646410.0,
         "Interest Income": 71481830.0,
         "Net Interest Income": 18996280.0,
-        "Total Operating Income": 28762.36,
-        "Operating Profit": -17060.28,
+        "Total Operating Income": 28762360.0,
+        "Operating Profit": -17060280.0,
         "Net Profit": 315640.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": 0.51,
@@ -187,14 +203,22 @@
         "graham_number": 36.14
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:41:57.726425",
+      "parsed_at": "2026-11-14T20:24:31.941879",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 49769310.0,
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 2076271930.0,
         "Interest Income": 155144040.0,
         "Net Interest Income": 44058180.0,
-        "Total Operating Income": 63045.2,
-        "Operating Profit": 6091.86,
+        "Total Operating Income": 63045200.0,
+        "Operating Profit": 6091860.0,
         "Net Profit": 15484570.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": 12.39,
@@ -249,14 +273,22 @@
         "graham_number": 182.83
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:41:57.726393",
+      "parsed_at": "2026-11-14T20:24:31.941808",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 21972240.0,
@@ -267,8 +299,8 @@
         "Loans and Advances to Customers": 1913437470.0,
         "Interest Income": 207557800.0,
         "Net Interest Income": 32883220.0,
-        "Total Operating Income": 55555.17,
-        "Operating Profit": -124259.5,
+        "Total Operating Income": 55555170.0,
+        "Operating Profit": -124259500.0,
         "Net Profit": -12180560.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": -6.5,
@@ -335,14 +367,22 @@
         "Cost of funds": 227.83,
         "CD ratio": -19.15
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:41:57.726361",
+      "parsed_at": "2026-11-14T20:24:31.941736",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 27366510.0,
@@ -352,8 +392,8 @@
         "Loans and Advances to Customers": 1772394400.0,
         "Interest Income": 532997500.0,
         "Net Interest Income": 95322440.0,
-        "Total Operating Income": 115281.9,
-        "Operating Profit": 328.07,
+        "Total Operating Income": 115281900.0,
+        "Operating Profit": 328070.0,
         "Net Profit": 328070.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": 0.13,
@@ -419,14 +459,22 @@
         "Cost of funds": 21.09,
         "CD ratio": -83.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:41:57.726330",
+      "parsed_at": "2026-11-14T20:24:31.941673",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -991870.0,
@@ -436,8 +484,8 @@
         "Loans and Advances to Customers": 1833328370.0,
         "Interest Income": 111484290.0,
         "Net Interest Income": 11210710.0,
-        "Total Operating Income": 15244.77,
-        "Operating Profit": -28358.38,
+        "Total Operating Income": 15244770.0,
+        "Operating Profit": -28358380.0,
         "Net Profit": -28358380.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": -45.37,
@@ -502,14 +550,22 @@
         "Cost of funds": -7.73,
         "CD ratio": 26.79
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:41:57.726299",
+      "parsed_at": "2026-11-14T20:24:31.941614",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -63460540.0,
@@ -519,8 +575,8 @@
         "Loans and Advances to Customers": 1912821900.0,
         "Interest Income": 104986770.0,
         "Net Interest Income": -1257130.0,
-        "Total Operating Income": 12325.89,
-        "Operating Profit": -62468.68,
+        "Total Operating Income": 12325890.0,
+        "Operating Profit": -62468680.0,
         "Net Profit": -62468680.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": -49.97,
@@ -585,14 +641,22 @@
         "Cost of funds": -32.32,
         "CD ratio": 22.44
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:41:57.726268",
+      "parsed_at": "2026-11-14T20:24:31.941552",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -549130.0,
@@ -603,8 +667,8 @@
         "Loans and Advances to Customers": 2078272040.0,
         "Interest Income": 213581760.0,
         "Net Interest Income": 58698320.0,
-        "Total Operating Income": 80008.95,
-        "Operating Profit": -22333.83,
+        "Total Operating Income": 80008950.0,
+        "Operating Profit": -22333830.0,
         "Net Profit": -22333830.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": -11.91,
@@ -671,7 +735,15 @@
         "Cost of funds": -30.79,
         "CD ratio": 21.33
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AVYAN",
@@ -679,7 +751,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:41:57.726237",
+      "parsed_at": "2026-11-14T20:24:31.941486",
       "computed": {
         "pe_ratio": -265.1,
         "pb_ratio": 10.4,
@@ -722,8 +794,8 @@
         "Loans and Advances to Customers": 2155918850.0,
         "Interest Income": 295487560.0,
         "Net Interest Income": 89723650.0,
-        "Total Operating Income": 123099.65,
-        "Operating Profit": -4314.48,
+        "Total Operating Income": 123099650.0,
+        "Operating Profit": -4314480.0,
         "Net Profit": -3485730.0,
         "Number of Shares": 2500000.0,
         "EPS(Rs.)": -1.39,
@@ -790,6 +862,14 @@
         "EPS(Rs.)": -1169.23,
         "Book Value(Rs.)": -3.27,
         "ROE": -1183.33
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -798,7 +878,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:41:57.726204",
+      "parsed_at": "2026-11-14T20:24:31.941419",
       "computed": {
         "pe_ratio": -771.0,
         "pb_ratio": 10.0,
@@ -843,8 +923,8 @@
         "Investments": 0.0,
         "Interest Income": 76551190.0,
         "Net Interest Income": 24152840.0,
-        "Total Operating Income": 30165.75,
-        "Operating Profit": -32974.99,
+        "Total Operating Income": 30165750.0,
+        "Operating Profit": -32974990.0,
         "Net Profit": -32974990.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": -52.76,
@@ -905,6 +985,14 @@
         "CD ratio": -88.11,
         "eps_ttm": -16.29,
         "net_profit_ttm": -16.28
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -913,7 +1001,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:41:57.726167",
+      "parsed_at": "2026-11-14T20:24:31.941349",
       "computed": {
         "pe_ratio": 48.4,
         "pb_ratio": 11.2,
@@ -958,8 +1046,8 @@
         "Investments": 0.0,
         "Interest Income": 162514930.0,
         "Net Interest Income": 63158010.0,
-        "Total Operating Income": 84399.45,
-        "Operating Profit": 4653.12,
+        "Total Operating Income": 84399450.0,
+        "Operating Profit": 4653120.0,
         "Net Profit": 3786920.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 3.03,
@@ -1020,6 +1108,14 @@
         "CD ratio": -88.23,
         "eps_ttm": 106.06,
         "net_profit_ttm": 106.06
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1028,7 +1124,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:41:57.726130",
+      "parsed_at": "2026-11-14T20:24:31.941281",
       "computed": {
         "pe_ratio": 40.6,
         "pb_ratio": 9.2,
@@ -1072,8 +1168,8 @@
         "Loans and Advances to Customers": 3123770250.0,
         "Interest Income": 265927160.0,
         "Net Interest Income": 110394370.0,
-        "Total Operating Income": 143638.53,
-        "Operating Profit": 119082.66,
+        "Total Operating Income": 143638530.0,
+        "Operating Profit": 119082660.0,
         "Net Profit": 31727650.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 16.92,
@@ -1136,6 +1232,14 @@
         "CD ratio": -88.6,
         "eps_ttm": 242.07,
         "net_profit_ttm": 242.06
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1144,7 +1248,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:41:57.726094",
+      "parsed_at": "2026-11-14T20:24:31.941211",
       "computed": {
         "pe_ratio": 42.3,
         "pb_ratio": 8.8,
@@ -1188,8 +1292,8 @@
         "Loans and Advances to Customers": 3450125600.0,
         "Interest Income": 399648740.0,
         "Net Interest Income": 189044690.0,
-        "Total Operating Income": 244010.13,
-        "Operating Profit": 102424.64,
+        "Total Operating Income": 244010130.0,
+        "Operating Profit": 102424640.0,
         "Net Profit": 66050200.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 26.42,
@@ -1252,6 +1356,14 @@
         "CD ratio": -88.43,
         "eps_ttm": 2000.72,
         "net_profit_ttm": 1994.87
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1260,7 +1372,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:41:57.726051",
+      "parsed_at": "2026-11-14T20:24:31.941139",
       "computed": {
         "pe_ratio": 36.9,
         "pb_ratio": 7.7,
@@ -1303,8 +1415,8 @@
         "Loans and Advances to Customers": 3563852010.0,
         "Interest Income": 108755910.0,
         "Net Interest Income": 50952590.0,
-        "Total Operating Income": 57903.28,
-        "Operating Profit": 11587.8,
+        "Total Operating Income": 57903280.0,
+        "Operating Profit": 11587800.0,
         "Net Profit": 8111460.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 12.98,
@@ -1367,6 +1479,14 @@
         "CD ratio": 7.86,
         "eps_ttm": 124.6,
         "net_profit_ttm": 124.6
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1375,7 +1495,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:41:57.726002",
+      "parsed_at": "2026-11-14T20:24:31.941062",
       "computed": {
         "pe_ratio": 22.4,
         "pb_ratio": 7.6,
@@ -1419,8 +1539,8 @@
         "Loans and Advances to Customers": 3541044000.0,
         "Interest Income": 266507460.0,
         "Net Interest Income": 156871860.0,
-        "Total Operating Income": 175111.27,
-        "Operating Profit": 110514.37,
+        "Total Operating Income": 175111270.0,
+        "Operating Profit": 110514370.0,
         "Net Profit": 77360060.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 61.89,
@@ -1494,6 +1614,14 @@
         "NPL": 0.24,
         "Cost of funds": -27.44,
         "CD ratio": 10.77
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1502,7 +1630,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:41:57.725940",
+      "parsed_at": "2026-11-14T20:24:31.940960",
       "computed": {
         "pe_ratio": 21.0,
         "pb_ratio": 7.1,
@@ -1546,8 +1674,8 @@
         "Loans and Advances to Customers": 3563198900.0,
         "Interest Income": 383655610.0,
         "Net Interest Income": 226058780.0,
-        "Total Operating Income": 251821.18,
-        "Operating Profit": 140711.7,
+        "Total Operating Income": 251821180.0,
+        "Operating Profit": 140711700.0,
         "Net Profit": 98498190.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 52.53,
@@ -1611,6 +1739,14 @@
         "NPL": -24.85,
         "Cost of funds": -28.92,
         "CD ratio": 9.71
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1618,7 +1754,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:41:57.725869",
+      "parsed_at": "2026-11-14T20:24:31.940849",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 146875330.0,
@@ -1631,8 +1767,8 @@
         "Investments": 0.0,
         "Interest Income": 518436390.0,
         "Net Interest Income": 311683510.0,
-        "Total Operating Income": 347802.62,
-        "Operating Profit": 196969.43,
+        "Total Operating Income": 347802620.0,
+        "Operating Profit": 196969430.0,
         "Net Profit": 142608420.0,
         "Number of Shares": 2500000.0,
         "EPS Reported": 57.04,
@@ -1702,8 +1838,16 @@
         "Cost of funds": -25.9,
         "CD ratio": 8.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:41:57.727591"
+  "last_updated": "2026-11-14T20:24:31.944280"
 }

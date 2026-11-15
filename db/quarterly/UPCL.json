@@ -19,7 +19,7 @@
         "Total Assets": 3819845370.0,
         "Revenue": 66631340.0,
         "Gross Profit": 55435640.0,
-        "Operating Profit": 16382.44,
+        "Operating Profit": 16382440.0,
         "Net Profit": 3793710.0,
         "Number of Shares": 21003500.0,
         "EPS(Rs.)": 0.24,
@@ -53,7 +53,14 @@
         "graham_number": 23.99
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPCL",
@@ -71,7 +78,7 @@
         "Total Assets": 3888290880.0,
         "Revenue": 137355310.0,
         "Gross Profit": 114707940.0,
-        "Operating Profit": 54561.18,
+        "Operating Profit": 54561180.0,
         "Net Profit": 13678320.0,
         "Number of Shares": 21003500.0,
         "EPS(Rs.)": 0.65,
@@ -105,7 +112,14 @@
         "graham_number": 39.57
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPCL",
@@ -123,7 +137,7 @@
         "Total Assets": 3892948590.0,
         "Revenue": 124861640.0,
         "Gross Profit": 118754440.0,
-        "Operating Profit": 99195.19,
+        "Operating Profit": 99195190.0,
         "Net Profit": 60450520.0,
         "Number of Shares": 21003500.0,
         "EPS(Rs.)": 11.51,
@@ -157,7 +171,14 @@
         "graham_number": 169.35
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPCL",
@@ -1027,7 +1048,7 @@
         "Total Assets": 4407679280.0,
         "Revenue": 178563990.0,
         "Gross Profit": 140207220.0,
-        "Operating Profit": 34585.8,
+        "Operating Profit": 34585800.0,
         "Net Profit": 20506230.0,
         "Number of Shares": 24851236.18,
         "EPS Reported": 1.1,
@@ -1079,7 +1100,14 @@
         "Book Value Reported": 3.47,
         "ROE Reported": -82.86
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPCL",
@@ -1097,7 +1125,7 @@
         "Total Assets": 4245653640.0,
         "Revenue": 302011050.0,
         "Gross Profit": 184591510.0,
-        "Operating Profit": 104493.6,
+        "Operating Profit": 104493600.0,
         "Net Profit": 27968110.0,
         "Number of Shares": 24851236.18,
         "EPS Reported": 1.13,
@@ -1149,7 +1177,14 @@
         "Book Value Reported": -2.57,
         "ROE Reported": -81.1
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:22:27.029535"

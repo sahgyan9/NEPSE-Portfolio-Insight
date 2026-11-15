@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T08:53:22.759115",
+      "parsed_at": "2026-11-14T21:02:21.845052",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -323608420.0,
@@ -19,7 +19,7 @@
         "Total Assets": 2390596540.0,
         "Revenue": 32287470.0,
         "Gross Profit": 18282430.0,
-        "Operating Profit": 16706.72,
+        "Operating Profit": 16706720.0,
         "Net Profit": -21425250.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -0.07,
@@ -52,14 +52,21 @@
         "revenue_ttm": 32287470.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:53:22.759023",
+      "parsed_at": "2026-11-14T21:02:21.845017",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -368696660.0,
@@ -70,7 +77,7 @@
         "Total Assets": 2353950350.0,
         "Revenue": 21729700.0,
         "Gross Profit": 11909960.0,
-        "Operating Profit": 11552.93,
+        "Operating Profit": 11552930.0,
         "Net Profit": -44988240.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -5.62,
@@ -103,14 +110,21 @@
         "revenue_ttm": 21729700.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:53:22.758974",
+      "parsed_at": "2026-11-14T21:02:21.844982",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -404408880.0,
@@ -121,7 +135,7 @@
         "Total Assets": 2312302740.0,
         "Revenue": 107900030.0,
         "Gross Profit": 82436610.0,
-        "Operating Profit": 81993.84,
+        "Operating Profit": 81993840.0,
         "Net Profit": -35812210.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -2.98,
@@ -154,14 +168,21 @@
         "revenue_ttm": 107900030.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:53:22.758930",
+      "parsed_at": "2026-11-14T21:02:21.844946",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -490756120.0,
@@ -172,7 +193,7 @@
         "Total Assets": 2255350380.0,
         "Revenue": 23648610.0,
         "Gross Profit": 13308530.0,
-        "Operating Profit": 11957.74,
+        "Operating Profit": 11957740.0,
         "Net Profit": -86347250.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -5.4,
@@ -205,14 +226,21 @@
         "revenue_ttm": 23648610.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:53:22.758887",
+      "parsed_at": "2026-11-14T21:02:21.844911",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -555807240.0,
@@ -223,7 +251,7 @@
         "Total Assets": 2228378950.0,
         "Revenue": 18048240.0,
         "Gross Profit": 10149590.0,
-        "Operating Profit": 9876.24,
+        "Operating Profit": 9876240.0,
         "Net Profit": -65051120.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -16.26,
@@ -276,14 +304,21 @@
         "Book Value(Rs.)": -18.19,
         "ROE": -256.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:53:22.758844",
+      "parsed_at": "2026-11-14T21:02:21.844876",
       "raw": {
         "Paid Up Capital": 1600000000.0,
         "Reserve and Surplus": -555807240.0,
@@ -294,7 +329,7 @@
         "Total Assets": 2228378950.0,
         "Revenue": 18048240.0,
         "Gross Profit": 10149590.0,
-        "Operating Profit": 9876.24,
+        "Operating Profit": 9876240.0,
         "Net Profit": -65051120.0,
         "Number of Shares": 16000000.0,
         "EPS(Rs.)": -5.42,
@@ -347,14 +382,21 @@
         "Book Value(Rs.)": -15.2,
         "ROE": -18.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:53:22.758800",
+      "parsed_at": "2026-11-14T21:02:21.844840",
       "raw": {
         "Paid Up Capital": 1899475100.0,
         "Reserve and Surplus": -630100320.0,
@@ -365,7 +407,7 @@
         "Total Assets": 2258698130.0,
         "Revenue": 38035510.0,
         "Gross Profit": 25974540.0,
-        "Operating Profit": 25610.07,
+        "Operating Profit": 25610070.0,
         "Net Profit": -74293070.0,
         "Number of Shares": 18994751.0,
         "EPS(Rs.)": -3.91,
@@ -418,14 +460,21 @@
         "Book Value(Rs.)": -10.56,
         "ROE": -46.25
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:53:22.758756",
+      "parsed_at": "2026-11-14T21:02:21.844803",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -720297090.0,
@@ -436,7 +485,7 @@
         "Total Assets": 2260531630.0,
         "Revenue": 24453060.0,
         "Gross Profit": -85726320.0,
-        "Operating Profit": -88475.16,
+        "Operating Profit": -88475160.0,
         "Net Profit": -113591900.0,
         "Number of Shares": 28000000.0,
         "EPS(Rs.)": -16.23,
@@ -489,14 +538,21 @@
         "Book Value(Rs.)": 7.14,
         "ROE": -173.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:53:22.758712",
+      "parsed_at": "2026-11-14T21:02:21.844766",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -721252280.0,
@@ -507,7 +563,7 @@
         "Total Assets": 2250187600.0,
         "Revenue": 67138800.0,
         "Gross Profit": -62822050.0,
-        "Operating Profit": -66091.43,
+        "Operating Profit": -66091430.0,
         "Net Profit": -114547090.0,
         "Number of Shares": 28000000.0,
         "EPS(Rs.)": -8.18,
@@ -560,14 +616,21 @@
         "Book Value(Rs.)": 13.76,
         "ROE": 55.78
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:53:22.758667",
+      "parsed_at": "2026-11-14T21:02:21.844718",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -585902920.0,
@@ -578,7 +641,7 @@
         "Total Assets": 2386128360.0,
         "Revenue": 92578360.0,
         "Gross Profit": 48137180.0,
-        "Operating Profit": 44192.85,
+        "Operating Profit": 44192850.0,
         "Net Profit": 20802260.0,
         "Number of Shares": 28000000.0,
         "EPS(Rs.)": 0.99,
@@ -632,14 +695,21 @@
         "Book Value(Rs.)": 21.16,
         "ROE": 115.04
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:53:22.758621",
+      "parsed_at": "2026-11-14T21:02:21.844651",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -627441350.0,
@@ -650,7 +720,7 @@
         "Total Assets": 2349223590.0,
         "Revenue": 111656740.0,
         "Gross Profit": 93023050.0,
-        "Operating Profit": 77121.46,
+        "Operating Profit": 77121460.0,
         "Net Profit": -22919330.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -0.82,
@@ -700,14 +770,21 @@
         "Net Profit": 69.15,
         "Number of Shares": 47.41
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:53:22.758529",
+      "parsed_at": "2026-11-14T21:02:21.844583",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -622184460.0,
@@ -718,7 +795,7 @@
         "Total Assets": 2347128250.0,
         "Revenue": 41251640.0,
         "Gross Profit": 35475600.0,
-        "Operating Profit": 29054.96,
+        "Operating Profit": 29054960.0,
         "Net Profit": 5256890.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": 0.75,
@@ -769,14 +846,21 @@
         "Net Profit": 104.63,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:53:22.758432",
+      "parsed_at": "2026-11-14T21:02:21.844514",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -670148970.0,
@@ -787,7 +871,7 @@
         "Total Assets": 2314588340.0,
         "Revenue": 43315070.0,
         "Gross Profit": 24657750.0,
-        "Operating Profit": 12044.24,
+        "Operating Profit": 12044240.0,
         "Net Profit": -36398460.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -2.6,
@@ -837,14 +921,21 @@
         "Net Profit": 68.22,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:53:22.758338",
+      "parsed_at": "2026-11-14T21:02:21.844448",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -679638470.0,
@@ -901,7 +992,7 @@
         "Total Assets": -2.47,
         "Revenue": -29.14,
         "Gross Profit": -7.59,
-        "Operating Profit": 63655.42,
+        "Operating Profit": -36.24,
         "Net Profit": -323.89,
         "Number of Shares": 0.0
       },
@@ -912,7 +1003,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:53:22.758242",
+      "parsed_at": "2026-11-14T21:02:21.844386",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -674106810.0,
@@ -923,7 +1014,7 @@
         "Total Assets": 2354885800.0,
         "Revenue": 117711610.0,
         "Gross Profit": 90371150.0,
-        "Operating Profit": 63582.93,
+        "Operating Profit": 63582930.0,
         "Net Profit": -40356300.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -1.44,
@@ -976,14 +1067,21 @@
         "Book Value Reported": -2.15,
         "ROE Reported": -80.95
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:53:22.758126",
+      "parsed_at": "2026-11-14T21:02:21.844329",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -617464190.0,
@@ -994,7 +1092,7 @@
         "Total Assets": 2384457210.0,
         "Revenue": 69604770.0,
         "Gross Profit": 52108380.0,
-        "Operating Profit": 42671.63,
+        "Operating Profit": 42671630.0,
         "Net Profit": 16286320.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": 2.33,
@@ -1048,14 +1146,21 @@
         "Book Value Reported": 0.22,
         "ROE Reported": 207.22
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:53:22.758024",
+      "parsed_at": "2026-11-14T21:02:21.844271",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -694244680.0,
@@ -1066,7 +1171,7 @@
         "Total Assets": 2303687880.0,
         "Revenue": 69604770.0,
         "Gross Profit": 20528140.0,
-        "Operating Profit": -6083.51,
+        "Operating Profit": -6083510.0,
         "Net Profit": -60494170.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -4.32,
@@ -1119,14 +1224,21 @@
         "Book Value Reported": -1.13,
         "ROE Reported": -68.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:53:22.757906",
+      "parsed_at": "2026-11-14T21:02:21.844211",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -725350870.0,
@@ -1137,7 +1249,7 @@
         "Total Assets": 2321625240.0,
         "Revenue": 69604770.0,
         "Gross Profit": 14944970.0,
-        "Operating Profit": -79080.78,
+        "Operating Profit": -79080780.0,
         "Net Profit": -91600360.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -4.36,
@@ -1190,14 +1302,21 @@
         "Book Value Reported": -2.17,
         "ROE Reported": -101.02
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDHPC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:53:22.757747",
+      "parsed_at": "2026-11-14T21:02:21.844131",
       "raw": {
         "Paid Up Capital": 2800000000.0,
         "Reserve and Surplus": -784731480.0,
@@ -1208,7 +1327,7 @@
         "Total Assets": 2454941000.0,
         "Revenue": 69600800.0,
         "Gross Profit": 38877180.0,
-        "Operating Profit": -67457.42,
+        "Operating Profit": -67457420.0,
         "Net Profit": -95223760.0,
         "Number of Shares": 28000000.0,
         "EPS Reported": -3.4,
@@ -1261,8 +1380,15 @@
         "Book Value Reported": -5.2,
         "ROE Reported": -148.95
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:53:22.761505"
+  "last_updated": "2026-11-14T21:02:21.847434"
 }

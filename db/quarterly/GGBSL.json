@@ -8,7 +8,7 @@
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:47:46.993607",
+      "parsed_at": "2026-11-14T20:56:41.079122",
       "raw": {
         "EPS(Rs.)": -9.53
       },
@@ -31,7 +31,7 @@
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:47:46.993588",
+      "parsed_at": "2026-11-14T20:56:41.079102",
       "raw": {
         "EPS(Rs.)": -14.04
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:47:46.993568",
+      "parsed_at": "2026-11-14T20:56:41.079082",
       "raw": {
         "Paid Up Capital": 110632500.0,
         "Reserve and Surplus": 251455280.0,
@@ -66,8 +66,8 @@
         "Investments": 3000000.0,
         "Interest Income": 249100480.0,
         "Net Interest Income": 142140490.0,
-        "Total Operating Income": 189745.38,
-        "Operating Profit": 81422.89,
+        "Total Operating Income": 189745380.0,
+        "Operating Profit": 81422890.0,
         "Net Profit": 72073650.0,
         "Number of Shares": 1106325.0,
         "EPS(Rs.)": 130.29,
@@ -111,14 +111,22 @@
         "graham_number": 979.52
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GGBSL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:47:46.993439",
+      "parsed_at": "2026-11-14T20:56:41.078942",
       "raw": {
         "Paid Up Capital": 110632500.0,
         "Reserve and Surplus": 249676410.0,
@@ -129,8 +137,8 @@
         "Loans and Advances to Customers": 3951518570.0,
         "Interest Income": 384812640.0,
         "Net Interest Income": 206239690.0,
-        "Total Operating Income": 270877.06,
-        "Operating Profit": 102730.73,
+        "Total Operating Income": 270877060.0,
+        "Operating Profit": 102730730.0,
         "Net Profit": 72714350.0,
         "Number of Shares": 1106325.0,
         "EPS(Rs.)": 87.63,
@@ -173,14 +181,22 @@
         "graham_number": 801.33
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GGBSL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:47:46.993317",
+      "parsed_at": "2026-11-14T20:56:41.078817",
       "raw": {
         "Paid Up Capital": 110632500.0,
         "Reserve and Surplus": 264688700.0,
@@ -191,8 +207,8 @@
         "Loans and Advances to Customers": 3958525450.0,
         "Interest Income": 530945420.0,
         "Net Interest Income": 277826290.0,
-        "Total Operating Income": 360972.88,
-        "Operating Profit": 127367.67,
+        "Total Operating Income": 360972880.0,
+        "Operating Profit": 127367670.0,
         "Net Profit": 90107850.0,
         "Number of Shares": 1106325.0,
         "EPS(Rs.)": 81.45,
@@ -238,14 +254,22 @@
         "eps_ttm": 954.67,
         "EPS(Rs.)": 954.67
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GGBSL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:47:46.993186",
+      "parsed_at": "2026-11-14T20:56:41.078684",
       "raw": {
         "Paid Up Capital": 110632500.0,
         "Reserve and Surplus": 261595990.0,
@@ -256,8 +280,8 @@
         "Loans and Advances to Customers": 3992821220.0,
         "Interest Income": 134487250.0,
         "Net Interest Income": 58938030.0,
-        "Total Operating Income": 75812.13,
-        "Operating Profit": -22748.86,
+        "Total Operating Income": 75812130.0,
+        "Operating Profit": -22748860.0,
         "Net Profit": -2275480.0,
         "Number of Shares": 1106325.0,
         "EPS(Rs.)": -8.23,
@@ -302,14 +326,22 @@
         "eps_ttm": 41.38,
         "EPS(Rs.)": 41.38
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GGBSL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:47:46.993041",
+      "parsed_at": "2026-11-14T20:56:41.078527",
       "raw": {
         "Paid Up Capital": 110632500.0,
         "Reserve and Surplus": 270195010.0,
@@ -320,8 +352,8 @@
         "Loans and Advances to Customers": 3998095580.0,
         "Interest Income": 271775860.0,
         "Net Interest Income": 122543430.0,
-        "Total Operating Income": 157637.18,
-        "Operating Profit": 9478.92,
+        "Total Operating Income": 157637180.0,
+        "Operating Profit": 9478920.0,
         "Net Profit": 7141530.0,
         "Number of Shares": 1106325.0,
         "EPS(Rs.)": 12.91,
@@ -389,8 +421,16 @@
         "Cost of funds": 15.38,
         "CD ratio": -3.78
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:47:46.995211"
+  "last_updated": "2026-11-14T20:56:41.080858"
 }

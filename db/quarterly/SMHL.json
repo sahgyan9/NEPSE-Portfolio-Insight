@@ -768,7 +768,7 @@
         "Total Assets": 9647551380.0,
         "Revenue": 936435750.0,
         "Gross Profit": 885282920.0,
-        "Operating Profit": 598896.02,
+        "Operating Profit": 598896020.0,
         "Net Profit": 244182560.0,
         "Number of Shares": 23152500.0,
         "EPS Reported": 14.06,
@@ -821,7 +821,14 @@
         "Book Value Reported": 6.05,
         "ROE Reported": 150.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMHL",
@@ -910,7 +917,7 @@
         "Total Assets": 9412360000.0,
         "Revenue": 381500000.0,
         "Gross Profit": 373990000.0,
-        "Operating Profit": 277130.0,
+        "Operating Profit": 277130000.0,
         "Net Profit": 174450000.0,
         "Number of Shares": 26625.38,
         "EPS Reported": 26.21,
@@ -963,7 +970,14 @@
         "Book Value Reported": -1.64,
         "ROE Reported": 31.32
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:09:13.525905"

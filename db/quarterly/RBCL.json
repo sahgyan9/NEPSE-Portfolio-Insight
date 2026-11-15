@@ -66,8 +66,8 @@
         "Total Investment and Loans": 6266698000.0,
         "Total Revenue": 540462000.0,
         "Income From Investment Loans And Others": 285810000.0,
-        "Total Expenses And Provisions": 197773.0,
-        "Management Expenses": 1302.0,
+        "Total Expenses And Provisions": 197773000.0,
+        "Management Expenses": 1302000.0,
         "Net Profit": 342689000.0,
         "Net Premium": 245387000.0,
         "Net Claim Payment": 32468000.0,
@@ -113,7 +113,15 @@
         "graham_number": 2277.3
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -132,8 +140,8 @@
         "Total Investment and Loans": 6364778000.0,
         "Total Revenue": 764942000.0,
         "Income From Investment Loans And Others": 327254000.0,
-        "Total Expenses And Provisions": 291448.0,
-        "Management Expenses": 1803.0,
+        "Total Expenses And Provisions": 291448000.0,
+        "Management Expenses": 1803000.0,
         "Net Profit": 473495000.0,
         "Net Premium": 345380000.0,
         "Net Claim Payment": 40232000.0,
@@ -179,7 +187,15 @@
         "graham_number": 3077.12
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -198,8 +214,8 @@
         "Total Investment and Loans": 6164284000.0,
         "Total Revenue": 113610000.0,
         "Income From Investment Loans And Others": 81420000.0,
-        "Total Expenses And Provisions": 59750.0,
-        "Management Expenses": 512.0,
+        "Total Expenses And Provisions": 59750000.0,
+        "Management Expenses": 512000.0,
         "Net Profit": 53860000.0,
         "Net Premium": 158252000.0,
         "Net Claim Payment": 20336000.0,
@@ -248,7 +264,15 @@
         "eps_ttm": -38.62,
         "EPS(Rs.)": -38.62
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -267,8 +291,8 @@
         "Total Investment and Loans": 7534222000.0,
         "Total Revenue": 536582000.0,
         "Income From Investment Loans And Others": 276879000.0,
-        "Total Expenses And Provisions": 162392.0,
-        "Management Expenses": 814.0,
+        "Total Expenses And Provisions": 162392000.0,
+        "Management Expenses": 814000.0,
         "Net Profit": 374190000.0,
         "Net Premium": 212150000.0,
         "Net Claim Payment": 33997000.0,
@@ -317,7 +341,15 @@
         "eps_ttm": 47.36,
         "EPS(Rs.)": 47.36
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -336,8 +368,8 @@
         "Total Investment and Loans": 7766400000.0,
         "Total Revenue": 982174000.0,
         "Income From Investment Loans And Others": 618637000.0,
-        "Total Expenses And Provisions": 295736.0,
-        "Management Expenses": 12591.0,
+        "Total Expenses And Provisions": 295736000.0,
+        "Management Expenses": 12591000.0,
         "Net Profit": 686438000.0,
         "Net Premium": 310412000.0,
         "Net Claim Payment": 52176000.0,
@@ -409,7 +441,15 @@
         "Book Value(Rs.)": 95.32,
         "ROE": 2.04
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -428,8 +468,8 @@
         "Total Investment and Loans": 7912586000.0,
         "Total Revenue": 1126643000.0,
         "Income From Investment Loans And Others": 752776000.0,
-        "Total Expenses And Provisions": 354097.0,
-        "Management Expenses": 19491.0,
+        "Total Expenses And Provisions": 354097000.0,
+        "Management Expenses": 19491000.0,
         "Net Profit": 772546000.0,
         "Net Premium": 372116000.0,
         "Net Claim Payment": 76304000.0,
@@ -501,7 +541,15 @@
         "Book Value(Rs.)": 12.23,
         "ROE": 45.39
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -520,7 +568,7 @@
         "Total Investment and Loans": 7594419290.0,
         "Total Revenue": 313648620.0,
         "Income From Investment Loans And Others": 161635740.0,
-        "Total Expenses And Provisions": 101125.77,
+        "Total Expenses And Provisions": 101125770.0,
         "Net Profit": 137665440.0,
         "Net Premium": 83820680.0,
         "Net Claim Payment": 2634960.0,
@@ -588,7 +636,14 @@
         "Book Value(Rs.)": -35.55,
         "ROE": -12.13
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -607,7 +662,7 @@
         "Total Investment and Loans": 7822008570.0,
         "Total Revenue": 755168920.0,
         "Income From Investment Loans And Others": 538461910.0,
-        "Total Expenses And Provisions": 214210.16,
+        "Total Expenses And Provisions": 214210160.0,
         "Net Profit": 427258580.0,
         "Net Premium": 134121560.0,
         "Net Claim Payment": 32673890.0,
@@ -677,7 +732,14 @@
         "Book Value(Rs.)": -36.47,
         "ROE": -63.33
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -696,7 +758,7 @@
         "Total Investment and Loans": 8102008570.0,
         "Total Revenue": 928609090.0,
         "Income From Investment Loans And Others": 685409380.0,
-        "Total Expenses And Provisions": 260315.76,
+        "Total Expenses And Provisions": 260315760.0,
         "Net Profit": 516336750.0,
         "Net Premium": 101619990.0,
         "Net Claim Payment": 10688250.0,
@@ -764,7 +826,14 @@
         "Book Value(Rs.)": -38.67,
         "ROE": -69.77
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -784,7 +853,7 @@
         "Total Investment and Loans": 8091734500.0,
         "Total Revenue": 1307916350.0,
         "Income From Investment Loans And Others": 819829880.0,
-        "Total Expenses And Provisions": 457710.81,
+        "Total Expenses And Provisions": 457710810.0,
         "Management Expenses": 0.0,
         "Net Profit": 627309410.0,
         "Net Premium": 311097370.0,
@@ -856,7 +925,14 @@
         "Gross Claim Payments": -7.57,
         "Number of Shares": 0.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -876,7 +952,7 @@
         "Total Investment and Loans": 8213644640.0,
         "Total Revenue": 415108690.0,
         "Income From Investment Loans And Others": 117811490.0,
-        "Total Expenses And Provisions": 161864.04,
+        "Total Expenses And Provisions": 161864040.0,
         "Management Expenses": 0.0,
         "Net Profit": 156575890.0,
         "Net Premium": 187719090.0,
@@ -951,7 +1027,14 @@
         "bvps": 319.4,
         "net_profit_ttm": 13.74
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -971,7 +1054,7 @@
         "Total Investment and Loans": 8124145220.0,
         "Total Revenue": 724917680.0,
         "Income From Investment Loans And Others": 427399480.0,
-        "Total Expenses And Provisions": 277987.95,
+        "Total Expenses And Provisions": 277987950.0,
         "Management Expenses": 0.0,
         "Net Profit": 346688560.0,
         "Net Premium": 160762420.0,
@@ -1047,7 +1130,14 @@
         "net_profit_ttm": -18.86,
         "Claims Payables": -100.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1067,7 +1157,7 @@
         "Total Investment and Loans": 8234145220.0,
         "Total Revenue": 852814420.0,
         "Income From Investment Loans And Others": 512421260.0,
-        "Total Expenses And Provisions": 333436.79,
+        "Total Expenses And Provisions": 333436790.0,
         "Management Expenses": 0.0,
         "Net Profit": 395663330.0,
         "Net Premium": 166823720.0,
@@ -1142,7 +1232,14 @@
         "bvps": 292.32,
         "net_profit_ttm": -23.37
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1161,7 +1258,7 @@
         "Total Investment and Loans": 7771068220.0,
         "Total Revenue": 1045556420.0,
         "Income From Investment Loans And Others": 591834900.0,
-        "Total Expenses And Provisions": 474517.47,
+        "Total Expenses And Provisions": 474517470.0,
         "Net Profit": 427642630.0,
         "Net Premium": 247468780.0,
         "Net Claim Payment": 70189480.0,
@@ -1237,7 +1334,14 @@
         "bvps": 297.59,
         "net_profit_ttm": -31.83
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1256,7 +1360,7 @@
         "Total Investment and Loans": 5707634220.0,
         "Total Revenue": 172614660.0,
         "Income From Investment Loans And Others": 53700400.0,
-        "Total Expenses And Provisions": 272124.49,
+        "Total Expenses And Provisions": 272124490.0,
         "Net Profit": -99509830.0,
         "Net Premium": 38025750.0,
         "Net Claim Payment": 186443220.0,
@@ -1332,7 +1436,14 @@
         "bvps": -0.9,
         "net_profit_ttm": -163.55
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1351,7 +1462,7 @@
         "Total Investment and Loans": 7497634220.0,
         "Total Revenue": 543632700.0,
         "Income From Investment Loans And Others": 348559930.0,
-        "Total Expenses And Provisions": 366369.51,
+        "Total Expenses And Provisions": 366369510.0,
         "Net Profit": 177263190.0,
         "Net Premium": 85880690.0,
         "Net Claim Payment": 203875730.0,
@@ -1427,7 +1538,14 @@
         "bvps": 2.19,
         "net_profit_ttm": -48.87
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1446,7 +1564,7 @@
         "Total Investment and Loans": 8065089020.0,
         "Total Revenue": 739468460.0,
         "Income From Investment Loans And Others": 412710490.0,
-        "Total Expenses And Provisions": 413641.95,
+        "Total Expenses And Provisions": 413641950.0,
         "Net Profit": 288953400.0,
         "Net Premium": 161606870.0,
         "Net Claim Payment": 193008100.0,
@@ -1522,7 +1640,14 @@
         "bvps": 3.21,
         "net_profit_ttm": -26.97
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RBCL",
@@ -1541,7 +1666,7 @@
         "Total Investment and Loans": 8158809720.0,
         "Total Revenue": 912090910.0,
         "Income From Investment Loans And Others": 461227150.0,
-        "Total Expenses And Provisions": 503748.09,
+        "Total Expenses And Provisions": 503748090.0,
         "Net Profit": 344437910.0,
         "Net Premium": 231613240.0,
         "Net Claim Payment": 176980650.0,
@@ -1617,7 +1742,14 @@
         "bvps": -1.26,
         "net_profit_ttm": -19.46
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:51:07.406954"

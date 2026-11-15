@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T09:12:45.399404",
+      "parsed_at": "2026-11-14T21:21:44.246495",
       "raw": {
         "EPS(Rs.)": 45.76
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T09:12:45.399396",
+      "parsed_at": "2026-11-14T21:21:44.246468",
       "raw": {
         "Paid Up Capital": 138800000.0,
         "Reserve and Surplus": 58326740.0,
@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 1268894020.0,
         "Interest Income": 55348310.0,
         "Net Interest Income": 38918390.0,
-        "Total Operating Income": 48973.91,
-        "Operating Profit": 24859.31,
+        "Total Operating Income": 48973910.0,
+        "Operating Profit": 24859310.0,
         "Net Profit": 15819560.0,
         "Number of Shares": 1388000.0,
         "EPS(Rs.)": 45.58,
@@ -84,14 +84,22 @@
         "graham_number": 381.64
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T09:12:45.399353",
+      "parsed_at": "2026-11-14T21:21:44.246332",
       "raw": {
         "Paid Up Capital": 138800000.0,
         "Reserve and Surplus": 72235430.0,
@@ -102,8 +110,8 @@
         "Loans and Advances to Customers": 1238699520.0,
         "Interest Income": 112284600.0,
         "Net Interest Income": 78902370.0,
-        "Total Operating Income": 97098.08,
-        "Operating Profit": 41567.44,
+        "Total Operating Income": 97098080.0,
+        "Operating Profit": 41567440.0,
         "Net Profit": 29728550.0,
         "Number of Shares": 1388000.0,
         "EPS(Rs.)": 42.83,
@@ -146,14 +154,22 @@
         "graham_number": 382.78
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T09:12:45.399309",
+      "parsed_at": "2026-11-14T21:21:44.246196",
       "raw": {
         "Paid Up Capital": 141860000.0,
         "Reserve and Surplus": 97833630.0,
@@ -164,8 +180,8 @@
         "Loans and Advances to Customers": 1277230480.0,
         "Interest Income": 171741420.0,
         "Net Interest Income": 124055390.0,
-        "Total Operating Income": 152909.91,
-        "Operating Profit": 86946.44,
+        "Total Operating Income": 152909910.0,
+        "Operating Profit": 86946440.0,
         "Net Profit": 55329550.0,
         "Number of Shares": 1418600.0,
         "EPS(Rs.)": 52.0,
@@ -208,14 +224,22 @@
         "graham_number": 444.62
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T09:12:45.399263",
+      "parsed_at": "2026-11-14T21:21:44.246059",
       "raw": {
         "Paid Up Capital": 200000000.0,
         "Reserve and Surplus": 117800440.0,
@@ -226,8 +250,8 @@
         "Loans and Advances to Customers": 1338456220.0,
         "Interest Income": 237279510.0,
         "Net Interest Income": 171455910.0,
-        "Total Operating Income": 212312.65,
-        "Operating Profit": 118831.27,
+        "Total Operating Income": 212312650.0,
+        "Operating Profit": 118831270.0,
         "Net Profit": 75619900.0,
         "Number of Shares": 2000000.0,
         "EPS(Rs.)": 50.64,
@@ -273,14 +297,22 @@
         "eps_ttm": 10.66,
         "EPS(Rs.)": 10.66
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T09:12:45.399219",
+      "parsed_at": "2026-11-14T21:21:44.245924",
       "raw": {
         "Paid Up Capital": 200000000.0,
         "Reserve and Surplus": 118311340.0,
@@ -291,8 +323,8 @@
         "Loans and Advances to Customers": 1575433060.0,
         "Interest Income": 70090700.0,
         "Net Interest Income": 49819410.0,
-        "Total Operating Income": 65428.38,
-        "Operating Profit": 33670.38,
+        "Total Operating Income": 65428380.0,
+        "Operating Profit": 33670380.0,
         "Net Profit": 21426610.0,
         "Number of Shares": 2000000.0,
         "EPS(Rs.)": 42.84,
@@ -359,14 +391,22 @@
         "NPL": 119.57,
         "Cost of funds": -2.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T09:12:45.399175",
+      "parsed_at": "2026-11-14T21:21:44.245797",
       "raw": {
         "Paid Up Capital": 220000000.0,
         "Reserve and Surplus": 123289140.0,
@@ -377,8 +417,8 @@
         "Loans and Advances to Customers": 1832781520.0,
         "Interest Income": 152072290.0,
         "Net Interest Income": 105266400.0,
-        "Total Operating Income": 137961.69,
-        "Operating Profit": 72921.21,
+        "Total Operating Income": 137961690.0,
+        "Operating Profit": 72921210.0,
         "Net Profit": 46404410.0,
         "Number of Shares": 2200000.0,
         "EPS(Rs.)": 42.19,
@@ -446,14 +486,22 @@
         "Cost of funds": 32.72,
         "CD ratio": -28.24
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T09:12:45.399130",
+      "parsed_at": "2026-11-14T21:21:44.245671",
       "raw": {
         "Paid Up Capital": 220000000.0,
         "Reserve and Surplus": 146187420.0,
@@ -464,8 +512,8 @@
         "Loans and Advances to Customers": 2215920160.0,
         "Interest Income": 239102610.0,
         "Net Interest Income": 154739950.0,
-        "Total Operating Income": 217593.81,
-        "Operating Profit": 108904.21,
+        "Total Operating Income": 217593810.0,
+        "Operating Profit": 108904210.0,
         "Net Profit": 69302680.0,
         "Number of Shares": 2200000.0,
         "EPS(Rs.)": 42.0,
@@ -533,14 +581,22 @@
         "Cost of funds": 122.17,
         "CD ratio": -13.56
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:12:45.399085",
+      "parsed_at": "2026-11-14T21:21:44.245545",
       "raw": {
         "Paid Up Capital": 220000000.0,
         "Reserve and Surplus": 169712030.0,
@@ -551,8 +607,8 @@
         "Loans and Advances to Customers": 2403296530.0,
         "Interest Income": 344373140.0,
         "Net Interest Income": 208367370.0,
-        "Total Operating Income": 283043.81,
-        "Operating Profit": 142212.6,
+        "Total Operating Income": 283043810.0,
+        "Operating Profit": 142212600.0,
         "Net Profit": 92827300.0,
         "Number of Shares": 2200000.0,
         "EPS(Rs.)": 42.55,
@@ -620,14 +676,22 @@
         "Cost of funds": 100.21,
         "CD ratio": -10.9
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:12:45.399033",
+      "parsed_at": "2026-11-14T21:21:44.245419",
       "raw": {
         "Paid Up Capital": 1200000000.0,
         "Reserve and Surplus": 724912520.0,
@@ -639,8 +703,8 @@
         "Investments": 50593960.0,
         "Interest Income": 1649530750.0,
         "Net Interest Income": 809151800.0,
-        "Total Operating Income": 979108.24,
-        "Operating Profit": 541034.85,
+        "Total Operating Income": 979108240.0,
+        "Operating Profit": 541034850.0,
         "Net Profit": 341574680.0,
         "Number of Shares": 12000000.0,
         "EPS(Rs.)": 37.95,
@@ -709,14 +773,22 @@
         "Cost of funds": 120.58,
         "CD ratio": -4.38
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:12:45.398986",
+      "parsed_at": "2026-11-14T21:21:44.245283",
       "raw": {
         "Paid Up Capital": 1200000000.0,
         "Reserve and Surplus": 793881900.0,
@@ -728,8 +800,8 @@
         "Investments": 50593960.0,
         "Interest Income": 2285395020.0,
         "Net Interest Income": 1040388590.0,
-        "Total Operating Income": 1259954.33,
-        "Operating Profit": 652843.48,
+        "Total Operating Income": 1259954330.0,
+        "Operating Profit": 652843480.0,
         "Net Profit": 412205290.0,
         "Number of Shares": 12000000.0,
         "EPS(Rs.)": 34.35,
@@ -795,14 +867,22 @@
         "NPL": 79.27,
         "Cost of funds": 71.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:12:45.398941",
+      "parsed_at": "2026-11-14T21:21:44.245156",
       "raw": {
         "Paid Up Capital": 1200000000.0,
         "Reserve and Surplus": 866219770.0,
@@ -814,8 +894,8 @@
         "Investments": 50593960.0,
         "Interest Income": 594568760.0,
         "Net Interest Income": 201655570.0,
-        "Total Operating Income": 234852.11,
-        "Operating Profit": 34504.37,
+        "Total Operating Income": 234852110.0,
+        "Operating Profit": 34504370.0,
         "Net Profit": 25585600.0,
         "Number of Shares": 12000000.0,
         "EPS(Rs.)": 8.53,
@@ -881,14 +961,22 @@
         "NPL": 259.56,
         "Cost of funds": 17.96
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:12:45.398886",
+      "parsed_at": "2026-11-14T21:21:44.245027",
       "raw": {
         "Paid Up Capital": 1200000000.0,
         "Reserve and Surplus": 854290400.0,
@@ -900,8 +988,8 @@
         "Investments": 51347510.0,
         "Interest Income": 1150194760.0,
         "Net Interest Income": 391748080.0,
-        "Total Operating Income": 445075.83,
-        "Operating Profit": 94824.4,
+        "Total Operating Income": 445075830.0,
+        "Operating Profit": 94824400.0,
         "Net Profit": 67795070.0,
         "Number of Shares": 12000000.0,
         "EPS(Rs.)": 11.3,
@@ -967,14 +1055,22 @@
         "NPL": 406.12,
         "Cost of funds": 23.58
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:12:45.398821",
+      "parsed_at": "2026-11-14T21:21:44.244896",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 554153090.0,
@@ -986,8 +1082,8 @@
         "Investments": 51347510.0,
         "Interest Income": 1643944540.0,
         "Net Interest Income": 527282720.0,
-        "Total Operating Income": 604685.61,
-        "Operating Profit": 13667.21,
+        "Total Operating Income": 604685610.0,
+        "Operating Profit": 13667210.0,
         "Net Profit": 13087130.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 1.32,
@@ -1054,14 +1150,22 @@
         "NPL": 134.54,
         "Cost of funds": 18.1
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:12:45.398754",
+      "parsed_at": "2026-11-14T21:21:44.244766",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 609297620.0,
@@ -1073,8 +1177,8 @@
         "Investments": 51347510.0,
         "Interest Income": 2233463820.0,
         "Net Interest Income": 761941810.0,
-        "Total Operating Income": 865625.31,
-        "Operating Profit": 93430.83,
+        "Total Operating Income": 865625310.0,
+        "Operating Profit": 93430830.0,
         "Net Profit": 71931640.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 5.45,
@@ -1143,14 +1247,22 @@
         "NPL": 98.64,
         "Cost of funds": -0.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:12:45.398686",
+      "parsed_at": "2026-11-14T21:21:44.244635",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 543615250.0,
@@ -1162,8 +1274,8 @@
         "Investments": 51347510.0,
         "Interest Income": 483154420.0,
         "Net Interest Income": 159311300.0,
-        "Total Operating Income": 186022.3,
-        "Operating Profit": -62575.53,
+        "Total Operating Income": 186022300.0,
+        "Operating Profit": -62575530.0,
         "Net Profit": -62547310.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": -18.95,
@@ -1231,14 +1343,22 @@
         "NPL": 135.17,
         "Cost of funds": 4.7
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:12:45.398619",
+      "parsed_at": "2026-11-14T21:21:44.244504",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 649688240.0,
@@ -1250,8 +1370,8 @@
         "Investments": 2000000.0,
         "Interest Income": 996091090.0,
         "Net Interest Income": 396312030.0,
-        "Total Operating Income": 455709.32,
-        "Operating Profit": 91841.28,
+        "Total Operating Income": 455709320.0,
+        "Operating Profit": 91841280.0,
         "Net Profit": 64309840.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 9.74,
@@ -1320,14 +1440,22 @@
         "NPL": 58.67,
         "Cost of funds": -20.9
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:12:45.398552",
+      "parsed_at": "2026-11-14T21:21:44.244365",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 709135500.0,
@@ -1339,8 +1467,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1478740220.0,
         "Net Interest Income": 609258080.0,
-        "Total Operating Income": 699469.28,
-        "Operating Profit": 175884.97,
+        "Total Operating Income": 699469280.0,
+        "Operating Profit": 175884970.0,
         "Net Profit": 123842450.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 12.51,
@@ -1409,14 +1537,22 @@
         "NPL": -16.37,
         "Cost of funds": -26.34
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:12:45.398484",
+      "parsed_at": "2026-11-14T21:21:44.244230",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 798975980.0,
@@ -1428,8 +1564,8 @@
         "Investments": 47093050.0,
         "Interest Income": 2006623110.0,
         "Net Interest Income": 874847970.0,
-        "Total Operating Income": 992904.89,
-        "Operating Profit": 313117.52,
+        "Total Operating Income": 992904890.0,
+        "Operating Profit": 313117520.0,
         "Net Profit": 219573130.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 16.63,
@@ -1499,14 +1635,22 @@
         "Cost of funds": -28.53,
         "CD ratio": -71.19
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:12:45.398415",
+      "parsed_at": "2026-11-14T21:21:44.244091",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 803697510.0,
@@ -1518,8 +1662,8 @@
         "Investments": 47093050.0,
         "Interest Income": 478736330.0,
         "Net Interest Income": 221897540.0,
-        "Total Operating Income": 242614.93,
-        "Operating Profit": 5474.67,
+        "Total Operating Income": 242614930.0,
+        "Operating Profit": 5474670.0,
         "Net Profit": 3650450.0,
         "Number of Shares": 13200000.0,
         "EPS(Rs.)": 1.11,
@@ -1589,14 +1733,22 @@
         "Cost of funds": -16.97,
         "CD ratio": -70.51
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:12:45.398347",
+      "parsed_at": "2026-11-14T21:21:44.243966",
       "raw": {
         "Paid Up Capital": 1320000000.0,
         "Reserve and Surplus": 805011300.0,
@@ -1609,8 +1761,8 @@
         "Investments": 2900000.0,
         "Interest Income": 988989380.0,
         "Net Interest Income": 506363000.0,
-        "Total Operating Income": 549052.63,
-        "Operating Profit": 117996.75,
+        "Total Operating Income": 549052630.0,
+        "Operating Profit": 117996750.0,
         "Net Profit": 79553880.0,
         "Number of Shares": 13200000.0,
         "EPS Reported": 12.05,
@@ -1678,14 +1830,22 @@
         "Cost of funds": -13.27,
         "CD ratio": -71.32
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:12:45.398277",
+      "parsed_at": "2026-11-14T21:21:44.243837",
       "raw": {
         "Paid Up Capital": 1419000000.0,
         "Reserve and Surplus": 750824890.0,
@@ -1698,8 +1858,8 @@
         "Investments": 47652760.0,
         "Interest Income": 1444935950.0,
         "Net Interest Income": 738212700.0,
-        "Total Operating Income": 808051.25,
-        "Operating Profit": 184680.39,
+        "Total Operating Income": 808051250.0,
+        "Operating Profit": 184680390.0,
         "Net Profit": 129355510.0,
         "Number of Shares": 14190000.0,
         "EPS Reported": 12.15,
@@ -1767,14 +1927,22 @@
         "Cost of funds": -19.28,
         "CD ratio": -71.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:12:45.398207",
+      "parsed_at": "2026-11-14T21:21:44.243707",
       "raw": {
         "Paid Up Capital": 1419000000.0,
         "Reserve and Surplus": 824601370.0,
@@ -1787,8 +1955,8 @@
         "Investments": 2900000.0,
         "Interest Income": 1976873620.0,
         "Net Interest Income": 1050319370.0,
-        "Total Operating Income": 1151744.44,
-        "Operating Profit": 330244.82,
+        "Total Operating Income": 1151744440.0,
+        "Operating Profit": 330244820.0,
         "Net Profit": 216090210.0,
         "Number of Shares": 14190000.0,
         "EPS Reported": 15.23,
@@ -1856,14 +2024,22 @@
         "Cost of funds": -19.9,
         "CD ratio": 4.39
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:12:45.398136",
+      "parsed_at": "2026-11-14T21:21:44.243576",
       "raw": {
         "Paid Up Capital": 1419000000.0,
         "Reserve and Surplus": 813765400.0,
@@ -1876,8 +2052,8 @@
         "Investments": 2900000.0,
         "Interest Income": 461600970.0,
         "Net Interest Income": 242638420.0,
-        "Total Operating Income": 263253.92,
-        "Operating Profit": -11958.44,
+        "Total Operating Income": 263253920.0,
+        "Operating Profit": -11958440.0,
         "Net Profit": -12177480.0,
         "Number of Shares": 14190000.0,
         "EPS Reported": -3.43,
@@ -1944,14 +2120,22 @@
         "Cost of funds": -24.97,
         "CD ratio": -1.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:12:45.398063",
+      "parsed_at": "2026-11-14T21:21:44.243441",
       "raw": {
         "Paid Up Capital": 1419000000.0,
         "Reserve and Surplus": 0.0,
@@ -1968,8 +2152,8 @@
         "Interest Income": 957445500.0,
         "Net Interest Income": 544543780.0,
         "Investment Securities": 2900000.0,
-        "Total Operating Income": 593364.2,
-        "Operating Profit": 140717.67,
+        "Total Operating Income": 593364200.0,
+        "Operating Profit": 140717670.0,
         "Net Profit": 98512170.0,
         "Number of Shares": 14190000.0,
         "EPS Reported": 13.88,
@@ -2052,14 +2236,22 @@
         "Cost of funds": -19.34,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:12:45.397952",
+      "parsed_at": "2026-11-14T21:21:44.243251",
       "raw": {
         "Paid Up Capital": 1486402500.0,
         "Reserve and Surplus": 770938310.0,
@@ -2072,8 +2264,8 @@
         "Investments": 2900000.0,
         "Interest Income": 1443262780.0,
         "Net Interest Income": 832311500.0,
-        "Total Operating Income": 919344.46,
-        "Operating Profit": 212235.87,
+        "Total Operating Income": 919344460.0,
+        "Operating Profit": 212235870.0,
         "Net Profit": 148575610.0,
         "Number of Shares": 14864025.0,
         "EPS Reported": 13.33,
@@ -2144,14 +2336,22 @@
         "Cost of funds": -16.24,
         "CD ratio": -12.6
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MERO",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:12:45.397865",
+      "parsed_at": "2026-11-14T21:21:44.243170",
       "raw": {
         "Paid Up Capital": 1486402500.0,
         "Reserve and Surplus": 741223070.0,
@@ -2164,8 +2364,8 @@
         "Investments": 2900000.0,
         "Interest Income": 2023360070.0,
         "Net Interest Income": 1204431740.0,
-        "Total Operating Income": 1357675.63,
-        "Operating Profit": 205252.83,
+        "Total Operating Income": 1357675630.0,
+        "Operating Profit": 205252830.0,
         "Net Profit": 125871610.0,
         "Number of Shares": 14864025.0,
         "EPS Reported": 8.47,
@@ -2236,8 +2436,116 @@
         "Cost of funds": -5.66,
         "CD ratio": -28.72
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
+    },
+    {
+      "symbol": "MERO",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-14T21:21:44.243103",
+      "raw": {
+        "Paid Up Capital": 1486402500.0,
+        "Reserve and Surplus": 795284600.0,
+        "Total Equity": 2281687100.0,
+        "Total Assets": 15922479070.0,
+        "Deposits from Customers": 4718868640.0,
+        "Borrowings": 7796214000.0,
+        "Loans and Advances to BFIs": 0.0,
+        "Loans and Advances to Customers": 15127277250.0,
+        "Investments": 1875770.0,
+        "Interest Income": 579601080.0,
+        "Net Interest Income": 385071000.0,
+        "Total Operating Income": 408520250.0,
+        "Operating Profit": 123747810.0,
+        "Net Profit": 86623470.0,
+        "Number of Shares": 14864025.0,
+        "EPS Reported": 23.31,
+        "Book Value Reported": 153.5,
+        "ROE Reported": 15.19,
+        "CAR": 12.9,
+        "NPL": 19.24,
+        "Cost of funds": 6.15,
+        "CD ratio": 120.87
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Total Assets",
+        "Deposits from Customers",
+        "Borrowings",
+        "Loans and Advances to BFIs",
+        "Loans and Advances to Customers",
+        "Investments",
+        "Interest Income",
+        "Net Interest Income",
+        "Total Operating Income",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported",
+        "CAR",
+        "NPL",
+        "Cost of funds",
+        "CD ratio"
+      ],
+      "computed": {
+        "eps_ttm": 23.31,
+        "bvps": 153.5,
+        "roe_ttm": 15.19,
+        "roa_ttm": null,
+        "net_profit_ttm": 86623470.0,
+        "revenue_ttm": 579601080.0,
+        "graham_number": 283.74
+      },
+      "yoy": {
+        "eps_ttm": 779.59,
+        "bvps": -2.45,
+        "net_profit_ttm": 811.34,
+        "revenue_ttm": 25.56,
+        "Paid Up Capital": 4.75,
+        "Reserve and Surplus": -2.27,
+        "Total Equity": 2.19,
+        "Total Assets": 1.65,
+        "Deposits from Customers": 17.75,
+        "Borrowings": -6.71,
+        "Loans and Advances to Customers": 2.85,
+        "Investments": -35.32,
+        "Interest Income": 25.56,
+        "Net Interest Income": 58.7,
+        "Total Operating Income": 55.18,
+        "Operating Profit": 1134.82,
+        "Net Profit": 811.34,
+        "Number of Shares": 4.75,
+        "EPS Reported": 779.59,
+        "Book Value Reported": -2.45,
+        "ROE Reported": 796.79,
+        "CAR": 5.56,
+        "NPL": 28.52,
+        "Cost of funds": -11.38,
+        "CD ratio": 1.61
+      },
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:12:45.401161"
+  "last_updated": "2026-11-14T21:21:44.251657"
 }

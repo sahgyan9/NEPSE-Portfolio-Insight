@@ -17,7 +17,7 @@
         "Current Liabilities": 61674380.0,
         "Current Assets": 1092985120.0,
         "Total Assets": 1711770050.0,
-        "Revenue from Operation": 311786.46,
+        "Revenue from Operation": 311786460.0,
         "Gross Profit": 110236370.0,
         "Total Operating Profit": 6238860.0,
         "Net Profit": 7871270.0,
@@ -53,7 +53,14 @@
         "graham_number": 54.49
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SYPNL",
@@ -68,7 +75,7 @@
         "Current Liabilities": 67973620.0,
         "Current Assets": 713195930.0,
         "Total Assets": 1716943480.0,
-        "Revenue from Operation": 530816.85,
+        "Revenue from Operation": 530816850.0,
         "Gross Profit": 177893880.0,
         "Total Operating Profit": 59316440.0,
         "Net Profit": 30219740.0,
@@ -104,7 +111,14 @@
         "graham_number": 86.88
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SYPNL",
@@ -119,7 +133,7 @@
         "Current Liabilities": 76727830.0,
         "Current Assets": 713195930.0,
         "Total Assets": 1734566350.0,
-        "Revenue from Operation": 812789.56,
+        "Revenue from Operation": 812789560.0,
         "Gross Profit": 292499630.0,
         "Total Operating Profit": 120554520.0,
         "Net Profit": 67516490.0,
@@ -155,7 +169,14 @@
         "graham_number": 113.94
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:29:11.418620"

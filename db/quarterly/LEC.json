@@ -8,7 +8,7 @@
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T09:08:54.631647",
+      "parsed_at": "2026-11-14T21:18:01.084409",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -133545670.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 535809650.0,
         "Current Assets": 151919460.0,
         "Total Assets": 4870478190.0,
-        "Operating Profit": -21205.36,
+        "Operating Profit": -21205360.0,
         "Net Profit": -21205360.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -5.65,
@@ -48,14 +48,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T09:08:54.631565",
+      "parsed_at": "2026-11-14T21:18:01.084316",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -141510910.0,
@@ -64,7 +71,7 @@
         "Current Liabilities": 473460420.0,
         "Current Assets": 78092270.0,
         "Total Assets": 4898447210.0,
-        "Operating Profit": -18810.03,
+        "Operating Profit": -18810030.0,
         "Net Profit": -29170610.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -3.89,
@@ -95,14 +102,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T09:08:54.631483",
+      "parsed_at": "2026-11-14T21:18:01.084233",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -146572850.0,
@@ -111,7 +125,7 @@
         "Current Liabilities": 639447570.0,
         "Current Assets": 121391850.0,
         "Total Assets": 5068075840.0,
-        "Operating Profit": -23871.96,
+        "Operating Profit": -23871960.0,
         "Net Profit": -34232540.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -3.04,
@@ -142,14 +156,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T09:08:54.631398",
+      "parsed_at": "2026-11-14T21:18:01.084147",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -150914380.0,
@@ -158,7 +179,7 @@
         "Current Liabilities": 869203870.0,
         "Current Assets": 125428800.0,
         "Total Assets": 5293490610.0,
-        "Operating Profit": -28213.5,
+        "Operating Profit": -28213500.0,
         "Net Profit": -38574080.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -2.57,
@@ -189,14 +210,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:08:54.631315",
+      "parsed_at": "2026-11-14T21:18:01.084062",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -170843020.0,
@@ -205,7 +233,7 @@
         "Current Liabilities": 1267379320.0,
         "Current Assets": 135330820.0,
         "Total Assets": 5671737420.0,
-        "Operating Profit": -19918.68,
+        "Operating Profit": -19918680.0,
         "Net Profit": -19918680.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -1.77,
@@ -253,14 +281,21 @@
         "Book Value(Rs.)": -2.73,
         "ROE": 67.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:08:54.631232",
+      "parsed_at": "2026-11-14T21:18:01.083981",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -179383240.0,
@@ -269,7 +304,7 @@
         "Current Liabilities": 708572310.0,
         "Current Assets": 84212670.0,
         "Total Assets": 6007077800.0,
-        "Operating Profit": -28458.91,
+        "Operating Profit": -28458910.0,
         "Net Profit": -28458910.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -1.9,
@@ -317,14 +352,21 @@
         "Book Value(Rs.)": -2.79,
         "ROE": 49.88
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:08:54.631150",
+      "parsed_at": "2026-11-14T21:18:01.083903",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -186178690.0,
@@ -333,7 +375,7 @@
         "Current Liabilities": 856387720.0,
         "Current Assets": 74218250.0,
         "Total Assets": 6148097770.0,
-        "Operating Profit": -6795.45,
+        "Operating Profit": -6795450.0,
         "Net Profit": -6795450.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -1.81,
@@ -381,14 +423,21 @@
         "Book Value(Rs.)": -2.93,
         "ROE": 38.58
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:08:54.631065",
+      "parsed_at": "2026-11-14T21:18:01.083824",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -174638990.0,
@@ -399,7 +448,7 @@
         "Total Assets": 6349698630.0,
         "Revenue": 82512740.0,
         "Gross Profit": 79334630.0,
-        "Operating Profit": 73172.43,
+        "Operating Profit": 73172430.0,
         "Net Profit": 11541720.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": 1.54,
@@ -450,14 +499,21 @@
         "Book Value(Rs.)": -1.76,
         "ROE": 160.84
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:08:54.630970",
+      "parsed_at": "2026-11-14T21:18:01.083736",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -254624520.0,
@@ -468,7 +524,7 @@
         "Total Assets": 6239065320.0,
         "Revenue": 131155070.0,
         "Gross Profit": 122844610.0,
-        "Operating Profit": 6176.99,
+        "Operating Profit": 6176990.0,
         "Net Profit": -79985530.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -7.11,
@@ -518,14 +574,21 @@
         "Book Value(Rs.)": -6.3,
         "ROE": -328.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:08:54.630878",
+      "parsed_at": "2026-11-14T21:18:01.083649",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -364601020.0,
@@ -536,7 +599,7 @@
         "Total Assets": 6350596670.0,
         "Revenue": 136506250.0,
         "Gross Profit": 121471040.0,
-        "Operating Profit": 62799.87,
+        "Operating Profit": 62799870.0,
         "Net Profit": -88509590.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -5.9,
@@ -586,14 +649,21 @@
         "Book Value(Rs.)": -14.03,
         "ROE": -262.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:08:54.630787",
+      "parsed_at": "2026-11-14T21:18:01.083562",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -486159950.0,
@@ -604,7 +674,7 @@
         "Total Assets": 6248811080.0,
         "Revenue": 101498850.0,
         "Gross Profit": 86899880.0,
-        "Operating Profit": 26124.4,
+        "Operating Profit": 26124400.0,
         "Net Profit": -118190160.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -31.52,
@@ -654,14 +724,21 @@
         "Book Value(Rs.)": -22.83,
         "ROE": -2152.66
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:08:54.630694",
+      "parsed_at": "2026-11-14T21:18:01.083474",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -557270630.0,
@@ -672,7 +749,7 @@
         "Total Assets": 6258000940.0,
         "Revenue": 144676560.0,
         "Gross Profit": 128755820.0,
-        "Operating Profit": 68143.67,
+        "Operating Profit": 68143670.0,
         "Net Profit": -71110680.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -9.48,
@@ -725,14 +802,21 @@
         "Book Value(Rs.)": -28.87,
         "ROE": -967.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:08:54.630600",
+      "parsed_at": "2026-11-14T21:18:01.083387",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -604497330.0,
@@ -743,7 +827,7 @@
         "Total Assets": 6195390390.0,
         "Revenue": 138274250.0,
         "Gross Profit": 121344870.0,
-        "Operating Profit": 85503.79,
+        "Operating Profit": 85503790.0,
         "Net Profit": -47226710.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -4.2,
@@ -796,14 +880,21 @@
         "Book Value(Rs.)": -28.1,
         "ROE": 17.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:08:54.630506",
+      "parsed_at": "2026-11-14T21:18:01.083298",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -549549320.0,
@@ -814,7 +905,7 @@
         "Total Assets": 6262586330.0,
         "Revenue": 163163860.0,
         "Gross Profit": 142836270.0,
-        "Operating Profit": 102675.69,
+        "Operating Profit": 102675690.0,
         "Net Profit": -36565210.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -2.44,
@@ -867,14 +958,21 @@
         "Book Value(Rs.)": -16.29,
         "ROE": 50.64
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:08:54.630411",
+      "parsed_at": "2026-11-14T21:18:01.083207",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -640045690.0,
@@ -885,7 +983,7 @@
         "Total Assets": 6117252490.0,
         "Revenue": 168770240.0,
         "Gross Profit": 152798010.0,
-        "Operating Profit": 87377.89,
+        "Operating Profit": 87377890.0,
         "Net Profit": -36330960.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": -9.69,
@@ -935,14 +1033,21 @@
         "Net Profit": 69.26,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:08:54.630319",
+      "parsed_at": "2026-11-14T21:18:01.083121",
       "raw": {
         "Paid Up Capital": 1500000000.0,
         "Reserve and Surplus": -137920210.0,
@@ -953,7 +1058,7 @@
         "Total Assets": 6329552040.0,
         "Revenue": 157580540.0,
         "Gross Profit": 142444230.0,
-        "Operating Profit": 79652.8,
+        "Operating Profit": 79652800.0,
         "Net Profit": -30992520.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": -4.13,
@@ -1003,14 +1108,21 @@
         "Net Profit": 56.42,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:08:54.630225",
+      "parsed_at": "2026-11-14T21:18:01.083034",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -621915510.0,
@@ -1021,7 +1133,7 @@
         "Total Assets": 6161644490.0,
         "Revenue": 144889940.0,
         "Gross Profit": 130596210.0,
-        "Operating Profit": 66389.22,
+        "Operating Profit": 66389220.0,
         "Net Profit": -24571150.0,
         "Number of Shares": 22500000.0,
         "EPS Reported": -1.46,
@@ -1071,14 +1183,21 @@
         "Net Profit": 47.97,
         "Number of Shares": 50.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:08:54.630132",
+      "parsed_at": "2026-11-14T21:18:01.082950",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -663257840.0,
@@ -1146,7 +1265,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:08:54.630036",
+      "parsed_at": "2026-11-14T21:18:01.082880",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -679670730.0,
@@ -1157,7 +1276,7 @@
         "Total Assets": 6050686210.0,
         "Revenue": 147551590.0,
         "Gross Profit": 130438700.0,
-        "Operating Profit": 62961.04,
+        "Operating Profit": 62961040.0,
         "Net Profit": -16389620.0,
         "Number of Shares": 22500000.0,
         "EPS Reported": -2.91,
@@ -1210,14 +1329,21 @@
         "Book Value Reported": 21.73,
         "ROE Reported": 75.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:08:54.629943",
+      "parsed_at": "2026-11-14T21:18:01.082811",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -690245070.0,
@@ -1228,7 +1354,7 @@
         "Total Assets": 6014545270.0,
         "Revenue": 143496080.0,
         "Gross Profit": 127890700.0,
-        "Operating Profit": 63413.52,
+        "Operating Profit": 63413520.0,
         "Net Profit": -8737420.0,
         "Number of Shares": 22500000.0,
         "EPS Reported": -0.78,
@@ -1281,14 +1407,21 @@
         "Book Value Reported": -23.66,
         "ROE Reported": 75.38
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:08:54.629844",
+      "parsed_at": "2026-11-14T21:18:01.082739",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -753900250.0,
@@ -1299,7 +1432,7 @@
         "Total Assets": 5964946520.0,
         "Revenue": 158576960.0,
         "Gross Profit": 140239850.0,
-        "Operating Profit": 77977.71,
+        "Operating Profit": 77977710.0,
         "Net Profit": 10088940.0,
         "Number of Shares": 22500000.0,
         "EPS Reported": 0.6,
@@ -1353,14 +1486,21 @@
         "Book Value Reported": -8.11,
         "ROE Reported": 144.78
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LEC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:08:54.629727",
+      "parsed_at": "2026-11-14T21:18:01.082651",
       "raw": {
         "Paid Up Capital": 2250000000.0,
         "Reserve and Surplus": -666125800.0,
@@ -1371,7 +1511,7 @@
         "Total Assets": 5958946970.0,
         "Revenue": 175823540.0,
         "Gross Profit": 153905990.0,
-        "Operating Profit": 93210.92,
+        "Operating Profit": 93210920.0,
         "Net Profit": 25240950.0,
         "Number of Shares": 22500000.0,
         "EPS Reported": 1.12,
@@ -1424,8 +1564,15 @@
         "Book Value Reported": -0.18,
         "ROE Reported": 160.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:08:54.634437"
+  "last_updated": "2026-11-14T21:18:01.088114"
 }

@@ -19,7 +19,7 @@
         "Total Assets": 546869000.0,
         "Revenue": 75689000.0,
         "Gross Profit": 63524000.0,
-        "Operating Profit": 58515.0,
+        "Operating Profit": 58515000.0,
         "Net Profit": 28682000.0,
         "Number of Shares": 3199300.0,
         "EPS(Rs.)": 11.95,
@@ -53,7 +53,14 @@
         "graham_number": 168.48
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -71,7 +78,7 @@
         "Total Assets": 540650000.0,
         "Revenue": 95030000.0,
         "Gross Profit": 73611000.0,
-        "Operating Profit": 71626.0,
+        "Operating Profit": 71626000.0,
         "Net Profit": 33027000.0,
         "Number of Shares": 3199300.0,
         "EPS(Rs.)": 10.32,
@@ -105,7 +112,14 @@
         "graham_number": 157.57
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -123,7 +137,7 @@
         "Total Assets": 542558000.0,
         "Revenue": 36005000.0,
         "Gross Profit": 30856000.0,
-        "Operating Profit": 30675.0,
+        "Operating Profit": 30675000.0,
         "Net Profit": 20827000.0,
         "Number of Shares": 3199300.0,
         "EPS(Rs.)": 26.04,
@@ -157,7 +171,14 @@
         "graham_number": 257.48
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -175,7 +196,7 @@
         "Total Assets": 541371000.0,
         "Revenue": 64697000.0,
         "Gross Profit": 54997000.0,
-        "Operating Profit": 54941.0,
+        "Operating Profit": 54941000.0,
         "Net Profit": 33288000.0,
         "Number of Shares": 3359260.0,
         "EPS(Rs.)": 19.82,
@@ -209,7 +230,14 @@
         "graham_number": 222.71
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -227,7 +255,7 @@
         "Total Assets": 564058000.0,
         "Revenue": 81998000.0,
         "Gross Profit": 68977000.0,
-        "Operating Profit": 68492.0,
+        "Operating Profit": 68492000.0,
         "Net Profit": 35580000.0,
         "Number of Shares": 3359260.0,
         "EPS(Rs.)": 14.12,
@@ -281,7 +309,14 @@
         "Book Value(Rs.)": 6.01,
         "ROE": 11.48
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -299,7 +334,7 @@
         "Total Assets": 561692000.0,
         "Revenue": 100525000.0,
         "Gross Profit": 82675000.0,
-        "Operating Profit": 82686.0,
+        "Operating Profit": 82686000.0,
         "Net Profit": 38313000.0,
         "Number of Shares": 3359260.0,
         "EPS(Rs.)": 11.41,
@@ -353,7 +388,14 @@
         "Book Value(Rs.)": 5.42,
         "ROE": 4.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -371,7 +413,7 @@
         "Total Assets": 540013000.0,
         "Revenue": 36154000.0,
         "Gross Profit": 31787000.0,
-        "Operating Profit": 31457.0,
+        "Operating Profit": 31457000.0,
         "Net Profit": 16032000.0,
         "Number of Shares": 3359270.0,
         "EPS(Rs.)": 19.09,
@@ -425,7 +467,14 @@
         "Book Value(Rs.)": 4.72,
         "ROE": -29.99
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -443,7 +492,7 @@
         "Total Assets": 536173000.0,
         "Revenue": 65660000.0,
         "Gross Profit": 56764000.0,
-        "Operating Profit": 56390.0,
+        "Operating Profit": 56390000.0,
         "Net Profit": 33153000.0,
         "Number of Shares": 3594410.0,
         "EPS(Rs.)": 18.45,
@@ -497,7 +546,14 @@
         "Book Value(Rs.)": 3.5,
         "ROE": -10.04
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -515,7 +571,7 @@
         "Total Assets": 533603000.0,
         "Revenue": 81522000.0,
         "Gross Profit": 69197000.0,
-        "Operating Profit": 68463.0,
+        "Operating Profit": 68463000.0,
         "Net Profit": 37672000.0,
         "Number of Shares": 3594410.0,
         "EPS(Rs.)": 13.97,
@@ -569,7 +625,14 @@
         "Book Value(Rs.)": 3.99,
         "ROE": -4.83
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -587,7 +650,7 @@
         "Total Assets": 522902000.0,
         "Revenue": 95476000.0,
         "Gross Profit": 78740000.0,
-        "Operating Profit": 77451.0,
+        "Operating Profit": 77451000.0,
         "Net Profit": 40125000.0,
         "Number of Shares": 3594410.0,
         "EPS(Rs.)": 11.16,
@@ -641,7 +704,14 @@
         "Book Value(Rs.)": 3.78,
         "ROE": -5.73
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -659,7 +729,7 @@
         "Total Assets": 566007000.0,
         "Revenue": 36845000.0,
         "Gross Profit": 32495000.0,
-        "Operating Profit": 31542.0,
+        "Operating Profit": 31542000.0,
         "Net Profit": 21798000.0,
         "Number of Shares": 3594410.0,
         "EPS Reported": 24.26,
@@ -710,7 +780,14 @@
         "Net Profit": 35.97,
         "Number of Shares": 7.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -728,7 +805,7 @@
         "Total Assets": 634224000.0,
         "Revenue": 73032000.0,
         "Gross Profit": 63234000.0,
-        "Operating Profit": 62520.0,
+        "Operating Profit": 62520000.0,
         "Net Profit": 43462000.0,
         "Number of Shares": 3594410.0,
         "EPS Reported": 24.18,
@@ -779,7 +856,14 @@
         "Net Profit": 31.1,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -797,7 +881,7 @@
         "Total Assets": 624091000.0,
         "Revenue": 91359000.0,
         "Gross Profit": 78316000.0,
-        "Operating Profit": 76933.0,
+        "Operating Profit": 76933000.0,
         "Net Profit": 49825000.0,
         "Number of Shares": 3881970.0,
         "EPS Reported": 17.11,
@@ -848,7 +932,14 @@
         "Net Profit": 32.26,
         "Number of Shares": 8.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -866,7 +957,7 @@
         "Total Assets": 608255000.0,
         "Revenue": 109655000.0,
         "Gross Profit": 91394000.0,
-        "Operating Profit": 88166.0,
+        "Operating Profit": 88166000.0,
         "Net Profit": 53440000.0,
         "Number of Shares": 3881970.0,
         "EPS Reported": 13.77,
@@ -917,7 +1008,14 @@
         "Net Profit": 33.18,
         "Number of Shares": 8.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -935,7 +1033,7 @@
         "Total Assets": 616741000.0,
         "Revenue": 36847000.0,
         "Gross Profit": 32202000.0,
-        "Operating Profit": 31444.0,
+        "Operating Profit": 31444000.0,
         "Net Profit": 21669000.0,
         "Number of Shares": 3881970.0,
         "EPS Reported": 22.33,
@@ -989,7 +1087,14 @@
         "Book Value Reported": 3.32,
         "ROE Reported": -10.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -1007,7 +1112,7 @@
         "Total Assets": 637380000.0,
         "Revenue": 73907000.0,
         "Gross Profit": 65584000.0,
-        "Operating Profit": 64193.0,
+        "Operating Profit": 64193000.0,
         "Net Profit": 44738000.0,
         "Number of Shares": 4231340.0,
         "EPS Reported": 21.15,
@@ -1061,7 +1166,14 @@
         "Book Value Reported": -5.42,
         "ROE Reported": -7.51
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -1079,7 +1191,7 @@
         "Total Assets": 631303000.0,
         "Revenue": 94214000.0,
         "Gross Profit": 81907000.0,
-        "Operating Profit": 65536.0,
+        "Operating Profit": 65536000.0,
         "Net Profit": 53167000.0,
         "Number of Shares": 4231340.0,
         "EPS Reported": 16.75,
@@ -1133,7 +1245,14 @@
         "Book Value Reported": 2.28,
         "ROE Reported": -4.31
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NHDL",
@@ -1151,7 +1270,7 @@
         "Total Assets": 616329000.0,
         "Revenue": 112938000.0,
         "Gross Profit": 96176000.0,
-        "Operating Profit": 74257.0,
+        "Operating Profit": 74257000.0,
         "Net Profit": 59220000.0,
         "Number of Shares": 4231340.0,
         "EPS Reported": 14.0,
@@ -1205,7 +1324,14 @@
         "Book Value Reported": 2.67,
         "ROE Reported": -0.97
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:29:49.112071"

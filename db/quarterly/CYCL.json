@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:39:37.221953",
+      "parsed_at": "2026-11-14T20:48:31.914366",
       "raw": {
         "Paid Up Capital": 82108240.0,
         "Reserve and Surplus": 300419770.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 3376504710.0,
         "Interest Income": 270476860.0,
         "Net Interest Income": 157745100.0,
-        "Total Operating Income": 264531.32,
-        "Operating Profit": 87210.32,
+        "Total Operating Income": 264531320.0,
+        "Operating Profit": 87210320.0,
         "Net Profit": 99916680.0,
         "Number of Shares": 821082.4,
         "EPS(Rs.)": 162.25,
@@ -63,14 +63,22 @@
         "graham_number": 1304.13
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:39:37.221916",
+      "parsed_at": "2026-11-14T20:48:31.914323",
       "raw": {
         "Paid Up Capital": 121641840.0,
         "Reserve and Surplus": 280819840.0,
@@ -81,8 +89,8 @@
         "Loans and Advances to Customers": 3590204830.0,
         "Interest Income": 404512210.0,
         "Net Interest Income": 219954570.0,
-        "Total Operating Income": 360051.46,
-        "Operating Profit": 33830.97,
+        "Total Operating Income": 360051460.0,
+        "Operating Profit": 33830970.0,
         "Net Profit": 80329680.0,
         "Number of Shares": 1216418.4,
         "EPS(Rs.)": 66.04,
@@ -125,14 +133,22 @@
         "graham_number": 701.16
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:39:37.221879",
+      "parsed_at": "2026-11-14T20:48:31.914281",
       "raw": {
         "Paid Up Capital": 121641840.0,
         "Reserve and Surplus": 295950040.0,
@@ -143,8 +159,8 @@
         "Loans and Advances to Customers": 3925435600.0,
         "Interest Income": 136292740.0,
         "Net Interest Income": 60438960.0,
-        "Total Operating Income": 81491.96,
-        "Operating Profit": 24281.64,
+        "Total Operating Income": 81491960.0,
+        "Operating Profit": 24281640.0,
         "Net Profit": 15137370.0,
         "Number of Shares": 1216418.4,
         "EPS(Rs.)": 49.78,
@@ -187,14 +203,22 @@
         "graham_number": 620.09
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:39:37.221842",
+      "parsed_at": "2026-11-14T20:48:31.914238",
       "raw": {
         "Paid Up Capital": 121641840.0,
         "Reserve and Surplus": 247460410.0,
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 4015545250.0,
         "Interest Income": 277240480.0,
         "Net Interest Income": 121494160.0,
-        "Total Operating Income": 160353.05,
-        "Operating Profit": 38010.8,
+        "Total Operating Income": 160353050.0,
+        "Operating Profit": 38010800.0,
         "Net Profit": 23865820.0,
         "Number of Shares": 1216418.4,
         "EPS(Rs.)": 39.24,
@@ -249,14 +273,22 @@
         "graham_number": 542.57
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:39:37.221805",
+      "parsed_at": "2026-11-14T20:48:31.914195",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 309121920.0,
@@ -267,8 +299,8 @@
         "Loans and Advances to Customers": 5223959130.0,
         "Interest Income": 425150090.0,
         "Net Interest Income": 175720110.0,
-        "Total Operating Income": 229861.25,
-        "Operating Profit": 8707.53,
+        "Total Operating Income": 229861250.0,
+        "Operating Profit": 8707530.0,
         "Net Profit": 7707780.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 3.86,
@@ -336,14 +368,22 @@
         "Cost of funds": 27.02,
         "CD ratio": -55.05
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:39:37.221764",
+      "parsed_at": "2026-11-14T20:48:31.914152",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 309800070.0,
@@ -354,8 +394,8 @@
         "Loans and Advances to Customers": 5141161110.0,
         "Interest Income": 613353530.0,
         "Net Interest Income": 231537580.0,
-        "Total Operating Income": 301021.43,
-        "Operating Profit": 6385.35,
+        "Total Operating Income": 301021430.0,
+        "Operating Profit": 6385350.0,
         "Net Profit": 5639920.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 2.12,
@@ -423,14 +463,22 @@
         "Cost of funds": 18.21,
         "CD ratio": -55.37
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:39:37.221725",
+      "parsed_at": "2026-11-14T20:48:31.914109",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 322982000.0,
@@ -441,8 +489,8 @@
         "Loans and Advances to Customers": 5601065890.0,
         "Interest Income": 180409190.0,
         "Net Interest Income": 56376320.0,
-        "Total Operating Income": 78196.35,
-        "Operating Profit": -1376.08,
+        "Total Operating Income": 78196350.0,
+        "Operating Profit": -1376080.0,
         "Net Profit": 1902220.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 2.86,
@@ -510,14 +558,22 @@
         "Cost of funds": 15.33,
         "CD ratio": -56.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:39:37.221685",
+      "parsed_at": "2026-11-14T20:48:31.914065",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 304565510.0,
@@ -528,8 +584,8 @@
         "Loans and Advances to Customers": 5729306410.0,
         "Interest Income": 384546400.0,
         "Net Interest Income": 131880050.0,
-        "Total Operating Income": 172910.48,
-        "Operating Profit": 24991.03,
+        "Total Operating Income": 172910480.0,
+        "Operating Profit": 24991030.0,
         "Net Profit": 21097860.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 15.84,
@@ -597,14 +653,22 @@
         "Cost of funds": 11.23,
         "CD ratio": -54.3
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:39:37.221649",
+      "parsed_at": "2026-11-14T20:48:31.914022",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 310126410.0,
@@ -615,8 +679,8 @@
         "Loans and Advances to Customers": 5742248210.0,
         "Interest Income": 583154030.0,
         "Net Interest Income": 207327090.0,
-        "Total Operating Income": 270066.39,
-        "Operating Profit": 34050.69,
+        "Total Operating Income": 270066390.0,
+        "Operating Profit": 34050690.0,
         "Net Profit": 28007890.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 14.02,
@@ -684,14 +748,22 @@
         "Cost of funds": -13.35,
         "CD ratio": -0.87
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:39:37.221611",
+      "parsed_at": "2026-11-14T20:48:31.913979",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 326864790.0,
@@ -702,8 +774,8 @@
         "Loans and Advances to Customers": 5936269040.0,
         "Interest Income": 825143360.0,
         "Net Interest Income": 318755150.0,
-        "Total Operating Income": 401319.89,
-        "Operating Profit": 46422.41,
+        "Total Operating Income": 401319890.0,
+        "Operating Profit": 46422410.0,
         "Net Profit": 38088090.0,
         "Number of Shares": 2664243.9,
         "EPS(Rs.)": 14.3,
@@ -771,14 +843,22 @@
         "Cost of funds": -8.66,
         "CD ratio": -0.78
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:39:37.221573",
+      "parsed_at": "2026-11-14T20:48:31.913935",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 317774200.0,
@@ -791,8 +871,8 @@
         "Investments": 0.0,
         "Interest Income": 196158690.0,
         "Net Interest Income": 74282010.0,
-        "Total Operating Income": 88623.24,
-        "Operating Profit": -9706.44,
+        "Total Operating Income": 88623240.0,
+        "Operating Profit": -9706440.0,
         "Net Profit": -7981630.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": -11.98,
@@ -858,14 +938,22 @@
         "Cost of funds": -19.54,
         "CD ratio": 0.39
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:39:37.221531",
+      "parsed_at": "2026-11-14T20:48:31.913887",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 404288890.0,
@@ -878,8 +966,8 @@
         "Investments": 0.0,
         "Interest Income": 405049030.0,
         "Net Interest Income": 174077480.0,
-        "Total Operating Income": 198768.6,
-        "Operating Profit": 59371.36,
+        "Total Operating Income": 198768600.0,
+        "Operating Profit": 59371360.0,
         "Net Profit": 43162070.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 32.4,
@@ -946,14 +1034,22 @@
         "Cost of funds": -31.14,
         "CD ratio": -1.44
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:39:37.221470",
+      "parsed_at": "2026-11-14T20:48:31.913839",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 448952920.0,
@@ -966,8 +1062,8 @@
         "Investments": 0.0,
         "Interest Income": 626149970.0,
         "Net Interest Income": 292209170.0,
-        "Total Operating Income": 334619.68,
-        "Operating Profit": 76269.56,
+        "Total Operating Income": 334619680.0,
+        "Operating Profit": 76269560.0,
         "Net Profit": 55862260.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 27.96,
@@ -1034,14 +1130,22 @@
         "Cost of funds": -24.97,
         "CD ratio": -5.92
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:39:37.221428",
+      "parsed_at": "2026-11-14T20:48:31.913790",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 472033730.0,
@@ -1054,8 +1158,8 @@
         "Investments": 0.0,
         "Interest Income": 890045920.0,
         "Net Interest Income": 450390320.0,
-        "Total Operating Income": 519625.14,
-        "Operating Profit": 162721.41,
+        "Total Operating Income": 519625140.0,
+        "Operating Profit": 162721410.0,
         "Net Profit": 117478310.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 44.09,
@@ -1122,14 +1226,22 @@
         "Cost of funds": -26.25,
         "CD ratio": -6.75
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:39:37.221362",
+      "parsed_at": "2026-11-14T20:48:31.913740",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 424257620.0,
@@ -1142,8 +1254,8 @@
         "Investments": 0.0,
         "Interest Income": 185220080.0,
         "Net Interest Income": 75502790.0,
-        "Total Operating Income": 91291.6,
-        "Operating Profit": -16505.99,
+        "Total Operating Income": 91291600.0,
+        "Operating Profit": -16505990.0,
         "Net Profit": -14573830.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": -21.88,
@@ -1212,14 +1324,22 @@
         "Cost of funds": -8.63,
         "CD ratio": -6.69
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:39:37.221288",
+      "parsed_at": "2026-11-14T20:48:31.913687",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Share Premium": 0.0,
@@ -1236,8 +1356,8 @@
         "Interest Income": 413406820.0,
         "Investment Securities": 0.0,
         "Net Interest Income": 202863060.0,
-        "Total Operating Income": 238049.48,
-        "Operating Profit": 48032.69,
+        "Total Operating Income": 238049480.0,
+        "Operating Profit": 48032690.0,
         "Net Profit": 37289690.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 27.99,
@@ -1319,14 +1439,22 @@
         "Cost of funds": -4.01,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:39:37.221210",
+      "parsed_at": "2026-11-14T20:48:31.913614",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 451691120.0,
@@ -1339,8 +1467,8 @@
         "Investments": 0.0,
         "Interest Income": 612195400.0,
         "Net Interest Income": 302010290.0,
-        "Total Operating Income": 354810.97,
-        "Operating Profit": 68921.84,
+        "Total Operating Income": 354810970.0,
+        "Operating Profit": 68921840.0,
         "Net Profit": 53430920.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 26.74,
@@ -1410,14 +1538,22 @@
         "Cost of funds": -1.84,
         "CD ratio": -1.05
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CYCL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:39:37.221139",
+      "parsed_at": "2026-11-14T20:48:31.913546",
       "raw": {
         "Paid Up Capital": 266424390.0,
         "Reserve and Surplus": 686707990.0,
@@ -1430,8 +1566,8 @@
         "Investments": 0.0,
         "Interest Income": 869494130.0,
         "Net Interest Income": 455164000.0,
-        "Total Operating Income": 532395.31,
-        "Operating Profit": 411047.87,
+        "Total Operating Income": 532395310.0,
+        "Operating Profit": 411047870.0,
         "Net Profit": 294812210.0,
         "Number of Shares": 2664243.9,
         "EPS Reported": 110.66,
@@ -1501,8 +1637,16 @@
         "Cost of funds": -9.74,
         "CD ratio": 5.52
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:39:37.223438"
+  "last_updated": "2026-11-14T20:48:31.916335"
 }

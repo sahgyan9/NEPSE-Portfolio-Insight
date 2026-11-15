@@ -19,7 +19,7 @@
         "Total Assets": 576588520.0,
         "Revenue": 58874550.0,
         "Gross Profit": 53854540.0,
-        "Operating Profit": 58049.0,
+        "Operating Profit": 58049000.0,
         "Net Profit": 22782240.0,
         "Number of Shares": 2100000.0,
         "EPS(Rs.)": 14.46,
@@ -53,7 +53,14 @@
         "graham_number": 168.61
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -71,7 +78,7 @@
         "Total Assets": 592683490.0,
         "Revenue": 26341700.0,
         "Gross Profit": 25233910.0,
-        "Operating Profit": 27896.73,
+        "Operating Profit": 27896730.0,
         "Net Profit": 14886660.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 19.85,
@@ -105,7 +112,14 @@
         "graham_number": 204.42
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -173,7 +187,7 @@
         "Total Assets": 571354840.0,
         "Revenue": 49436050.0,
         "Gross Profit": 45772600.0,
-        "Operating Profit": 44352.69,
+        "Operating Profit": 44352690.0,
         "Net Profit": 7749540.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 3.44,
@@ -207,7 +221,14 @@
         "graham_number": 83.99
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -225,7 +246,7 @@
         "Total Assets": 566724780.0,
         "Revenue": 56052630.0,
         "Gross Profit": 51275960.0,
-        "Operating Profit": 50332.24,
+        "Operating Profit": 50332240.0,
         "Net Profit": 1169650.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 0.39,
@@ -279,7 +300,14 @@
         "Book Value(Rs.)": 1.8,
         "ROE": -97.34
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -297,7 +325,7 @@
         "Total Assets": 569757200.0,
         "Revenue": 28346710.0,
         "Gross Profit": 25528960.0,
-        "Operating Profit": 24121.25,
+        "Operating Profit": 24121250.0,
         "Net Profit": 11806830.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 15.74,
@@ -351,7 +379,14 @@
         "Book Value(Rs.)": -0.69,
         "ROE": -20.17
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -369,7 +404,7 @@
         "Total Assets": 562205870.0,
         "Revenue": 43754230.0,
         "Gross Profit": 39900520.0,
-        "Operating Profit": 36522.95,
+        "Operating Profit": 36522950.0,
         "Net Profit": 12812580.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 8.54,
@@ -422,7 +457,14 @@
         "Book Value(Rs.)": -0.06,
         "ROE": -9.84
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -440,7 +482,7 @@
         "Total Assets": 550755120.0,
         "Revenue": 50679590.0,
         "Gross Profit": 45420550.0,
-        "Operating Profit": 40734.71,
+        "Operating Profit": 40734710.0,
         "Net Profit": 6256150.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 2.78,
@@ -494,7 +536,14 @@
         "Book Value(Rs.)": -0.1,
         "ROE": -19.31
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -512,7 +561,7 @@
         "Total Assets": 543489410.0,
         "Revenue": 57356700.0,
         "Gross Profit": 52737800.0,
-        "Operating Profit": 46530.43,
+        "Operating Profit": 46530430.0,
         "Net Profit": 1458040.0,
         "Number of Shares": 3000000.0,
         "EPS(Rs.)": 0.49,
@@ -566,7 +615,14 @@
         "Book Value(Rs.)": 0.57,
         "ROE": 22.73
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -584,7 +640,7 @@
         "Total Assets": 550208200.0,
         "Revenue": 27181620.0,
         "Gross Profit": 24864570.0,
-        "Operating Profit": 23754.76,
+        "Operating Profit": 23754760.0,
         "Net Profit": 13350740.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 17.8,
@@ -635,7 +691,14 @@
         "Net Profit": 13.08,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -653,7 +716,7 @@
         "Total Assets": 538939580.0,
         "Revenue": 37655070.0,
         "Gross Profit": 33710750.0,
-        "Operating Profit": 30923.64,
+        "Operating Profit": 30923640.0,
         "Net Profit": 11196940.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 7.46,
@@ -704,7 +767,14 @@
         "Net Profit": -12.61,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -722,7 +792,7 @@
         "Total Assets": 534023240.0,
         "Revenue": 49357370.0,
         "Gross Profit": 44234230.0,
-        "Operating Profit": 39868.49,
+        "Operating Profit": 39868490.0,
         "Net Profit": 11066570.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 4.92,
@@ -773,7 +843,14 @@
         "Net Profit": 76.89,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -791,7 +868,7 @@
         "Total Assets": 526039510.0,
         "Revenue": 58565890.0,
         "Gross Profit": 49773750.0,
-        "Operating Profit": 43461.31,
+        "Operating Profit": 43461310.0,
         "Net Profit": 5777990.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 1.93,
@@ -842,7 +919,14 @@
         "Net Profit": 296.28,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -860,7 +944,7 @@
         "Total Assets": 541761260.0,
         "Revenue": 27439870.0,
         "Gross Profit": 26462110.0,
-        "Operating Profit": 24013.96,
+        "Operating Profit": 24013960.0,
         "Net Profit": 15504040.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 20.67,
@@ -914,7 +998,14 @@
         "Book Value Reported": 2.81,
         "ROE Reported": 12.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -932,7 +1023,7 @@
         "Total Assets": 526996400.0,
         "Revenue": 40432800.0,
         "Gross Profit": 37259780.0,
-        "Operating Profit": 32934.06,
+        "Operating Profit": 32934060.0,
         "Net Profit": 15865810.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 10.58,
@@ -986,7 +1077,14 @@
         "Book Value Reported": 3.15,
         "ROE Reported": 37.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -1004,7 +1102,7 @@
         "Total Assets": 517094160.0,
         "Revenue": 46543470.0,
         "Gross Profit": 42354420.0,
-        "Operating Profit": 21954.65,
+        "Operating Profit": 21954650.0,
         "Net Profit": 11372970.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 5.05,
@@ -1058,7 +1156,14 @@
         "Book Value Reported": 1.6,
         "ROE Reported": 1.14
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPHL",
@@ -1076,7 +1181,7 @@
         "Total Assets": 508548890.0,
         "Revenue": 50269240.0,
         "Gross Profit": 44156170.0,
-        "Operating Profit": 16780.38,
+        "Operating Profit": 16780380.0,
         "Net Profit": 3004660.0,
         "Number of Shares": 3000000.0,
         "EPS Reported": 1.0,
@@ -1130,7 +1235,14 @@
         "Book Value Reported": 0.5,
         "ROE Reported": -48.34
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:11:40.545319"

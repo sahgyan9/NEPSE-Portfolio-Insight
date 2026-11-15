@@ -291,6 +291,31 @@ def archive_symbols():
         return []
 
 
+def run_fill_gaps(db: dict, symbols: list[str]) -> None:
+    """Add fiscal years that NepaliPaisa has but the DB lacks. Existing rows are untouched,
+    because the two sources disagree on rounding (and occasionally on bonus vs cash)."""
+    targets = [s for s in symbols if (db.get(s) or {}).get("dividends")]
+    added_total = 0
+    with httpx.Client() as client:
+        for i, sym in enumerate(targets):
+            try:
+                rows, cname = fetch_symbol_nepalipaisa(client, sym)
+            except Exception as e:
+                print(f"  {sym} [NepaliPaisa]: FAILED ({e})")
+                continue
+            have = {d.get("fiscalYear") for d in db[sym]["dividends"]}
+            new_rows = [r for r in rows if r["fiscalYear"] and r["fiscalYear"] not in have]
+            if new_rows:
+                merge_symbol_dividends(db, sym, cname, new_rows)
+                added_total += len(new_rows)
+                print(f"  {sym}: added {', '.join(r['fiscalYear'] for r in new_rows)}")
+            if i < len(targets) - 1:
+                time.sleep(REQUEST_DELAY_SEC)
+    with open(DIVIDEND_DB_PATH, "w", encoding="utf-8") as f:
+        json.dump(db, f, indent=4, ensure_ascii=False)
+    print(f"\nSaved {DIVIDEND_DB_PATH} ({added_total} missing fiscal-year rows added)")
+
+
 # ── Main Orchestration ───────────────────────────────────────────────────────
 
 def main():
@@ -304,6 +329,10 @@ def main():
                         help="With --all, skip symbols that already have dividend rows (cheap top-up)")
     parser.add_argument("--source", choices=["auto", "hamroshare", "nepalipaisa"], default="auto",
                         help="Data source: auto (HamroShare bulk + NepaliPaisa fallback), hamroshare, nepalipaisa")
+    parser.add_argument("--fill-gaps", action="store_true",
+                        help="Query NepaliPaisa for symbols that already have rows and ADD only fiscal "
+                             "years missing from the DB (HamroShare omits some years, e.g. SMB 080-081). "
+                             "Never overwrites an existing fiscal-year row.")
     parser.add_argument("--fy", help="Print a summary for this fiscal year (e.g. 081-082) after fetching")
     args = parser.parse_args()
 
@@ -320,6 +349,10 @@ def main():
         sys.exit(1)
 
     db = load_json(DIVIDEND_DB_PATH, {})
+
+    if args.fill_gaps:
+        run_fill_gaps(db, symbols)
+        sys.exit(0)
 
     if args.missing_only:
         have = {s for s, e in db.items() if (e or {}).get("dividends")}

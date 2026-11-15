@@ -319,7 +319,7 @@
         "Current Liabilities": 307988580.0,
         "Current Assets": 164658450.0,
         "Total Assets": 12091697970.0,
-        "Operating Profit": -10834.0,
+        "Operating Profit": -10834000.0,
         "Net Profit": -16168000.0,
         "Number of Shares": 36500000.0,
         "EPS(Rs.)": -1.77,
@@ -366,7 +366,14 @@
         "Book Value(Rs.)": -0.06,
         "ROE": -2.14
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -384,7 +391,7 @@
         "Total Assets": 12519822000.0,
         "Revenue": 78249000.0,
         "Gross Profit": 78249000.0,
-        "Operating Profit": -41873.0,
+        "Operating Profit": -41873000.0,
         "Net Profit": 35709000.0,
         "Number of Shares": 36500000.0,
         "EPS(Rs.)": 1.96,
@@ -434,7 +441,14 @@
         "Book Value(Rs.)": 0.66,
         "ROE": 358.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -452,7 +466,7 @@
         "Total Assets": 12855621310.0,
         "Revenue": 123132790.0,
         "Gross Profit": 123132790.0,
-        "Operating Profit": -18487.05,
+        "Operating Profit": -18487050.0,
         "Net Profit": -125929580.0,
         "Number of Shares": 36500000.0,
         "EPS(Rs.)": -4.6,
@@ -501,7 +515,14 @@
         "Book Value(Rs.)": 0.83,
         "ROE": -605.8
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -519,7 +540,7 @@
         "Total Assets": 12889405980.0,
         "Revenue": 206881030.0,
         "Gross Profit": 157313510.0,
-        "Operating Profit": 15037.53,
+        "Operating Profit": 15037530.0,
         "Net Profit": -155340790.0,
         "Number of Shares": 36500000.0,
         "EPS(Rs.)": -4.26,
@@ -568,7 +589,14 @@
         "Book Value(Rs.)": -4.69,
         "ROE": -695.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -586,7 +614,7 @@
         "Total Assets": 13026389090.0,
         "Revenue": 63856870.0,
         "Gross Profit": 48793300.0,
-        "Operating Profit": 3000.83,
+        "Operating Profit": 3000830.0,
         "Net Profit": -54972480.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": -6.02,
@@ -633,7 +661,14 @@
         "Net Profit": -240.01,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -651,7 +686,7 @@
         "Total Assets": 13182733010.0,
         "Revenue": 214635700.0,
         "Gross Profit": 166332620.0,
-        "Operating Profit": 42399.2,
+        "Operating Profit": 42399200.0,
         "Net Profit": -135657350.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": -7.43,
@@ -701,7 +736,14 @@
         "Net Profit": -479.9,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -719,7 +761,7 @@
         "Total Assets": 13193305990.0,
         "Revenue": 481933310.0,
         "Gross Profit": 396648320.0,
-        "Operating Profit": 122729.85,
+        "Operating Profit": 122729850.0,
         "Net Profit": -242868170.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": -8.87,
@@ -769,7 +811,14 @@
         "Net Profit": -92.86,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -787,7 +836,7 @@
         "Total Assets": 13251790000.0,
         "Revenue": 882926000.0,
         "Gross Profit": 720965000.0,
-        "Operating Profit": 288112.0,
+        "Operating Profit": 288112000.0,
         "Net Profit": -279380000.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": -7.65,
@@ -837,7 +886,14 @@
         "Net Profit": -79.85,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -855,7 +911,7 @@
         "Total Assets": 13164417320.0,
         "Revenue": 558646270.0,
         "Gross Profit": 502716250.0,
-        "Operating Profit": 341837.25,
+        "Operating Profit": 341837250.0,
         "Net Profit": 153825570.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": 16.86,
@@ -909,7 +965,14 @@
         "Book Value Reported": -2.41,
         "ROE Reported": 386.9
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -927,7 +990,7 @@
         "Total Assets": 12781459850.0,
         "Revenue": 904688610.0,
         "Gross Profit": 785358830.0,
-        "Operating Profit": 470745.04,
+        "Operating Profit": 470745040.0,
         "Net Profit": 108527880.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": 5.95,
@@ -981,7 +1044,14 @@
         "Book Value Reported": -1.1,
         "ROE Reported": 180.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -999,7 +1069,7 @@
         "Total Assets": 12685024000.0,
         "Revenue": 1193270320.0,
         "Gross Profit": 1031857540.0,
-        "Operating Profit": 560077.06,
+        "Operating Profit": 560077060.0,
         "Net Profit": 21538630.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": 0.79,
@@ -1053,7 +1123,14 @@
         "Book Value Reported": -0.48,
         "ROE Reported": 108.93
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SJCL",
@@ -1071,7 +1148,7 @@
         "Total Assets": 12720270820.0,
         "Revenue": 1649600090.0,
         "Gross Profit": 1403500200.0,
-        "Operating Profit": 783649.54,
+        "Operating Profit": 783649540.0,
         "Net Profit": 81978420.0,
         "Number of Shares": 36500000.0,
         "EPS Reported": 2.25,
@@ -1125,7 +1202,14 @@
         "Book Value Reported": 2.77,
         "ROE Reported": 128.54
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:05:45.571034"

@@ -1046,7 +1046,7 @@
         "Total Assets": 4847388140.0,
         "Revenue": 623873440.0,
         "Gross Profit": 549336800.0,
-        "Operating Profit": 719465.61,
+        "Operating Profit": 719465610.0,
         "Net Profit": 206841800.0,
         "Number of Shares": 13500000.0,
         "EPS Reported": 20.43,
@@ -1099,7 +1099,14 @@
         "Book Value Reported": 14.88,
         "ROE Reported": 46.5
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "USHEC",
@@ -1117,7 +1124,7 @@
         "Total Assets": 4810204560.0,
         "Revenue": 738286140.0,
         "Gross Profit": 635997240.0,
-        "Operating Profit": 408406.75,
+        "Operating Profit": 408406750.0,
         "Net Profit": 208763010.0,
         "Number of Shares": 13500000.0,
         "EPS Reported": 15.46,
@@ -1170,7 +1177,14 @@
         "Book Value Reported": 15.85,
         "ROE Reported": 59.19
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:22:49.585213"

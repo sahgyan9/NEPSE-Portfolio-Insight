@@ -20,8 +20,8 @@
         "Investments": 56600.0,
         "Interest Income": 231146730.0,
         "Net Interest Income": 116700250.0,
-        "Total Operating Income": 146918.3,
-        "Operating Profit": 57877.91,
+        "Total Operating Income": 146918300.0,
+        "Operating Profit": 57877910.0,
         "Net Profit": 40514540.0,
         "Number of Shares": 700000.0,
         "EPS(Rs.)": 77.17,
@@ -63,7 +63,15 @@
         "graham_number": 791.16
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -82,8 +90,8 @@
         "Investments": 56600.0,
         "Interest Income": 164925810.0,
         "Net Interest Income": 60013300.0,
-        "Total Operating Income": 76641.31,
-        "Operating Profit": 23665.27,
+        "Total Operating Income": 76641310.0,
+        "Operating Profit": 23665270.0,
         "Net Profit": 16565690.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 30.29,
@@ -125,7 +133,15 @@
         "graham_number": 457.38
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -144,8 +160,8 @@
         "Investments": 56600.0,
         "Interest Income": 236777350.0,
         "Net Interest Income": 64470690.0,
-        "Total Operating Income": 87995.16,
-        "Operating Profit": 8284.65,
+        "Total Operating Income": 87995160.0,
+        "Operating Profit": 8284650.0,
         "Net Profit": 5799260.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 7.07,
@@ -187,7 +203,15 @@
         "graham_number": 191.62
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -206,8 +230,8 @@
         "Investments": 56600.0,
         "Interest Income": 347696510.0,
         "Net Interest Income": 125151100.0,
-        "Total Operating Income": 155306.73,
-        "Operating Profit": 15897.33,
+        "Total Operating Income": 155306730.0,
+        "Operating Profit": 15897330.0,
         "Net Profit": 11128130.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 10.17,
@@ -251,7 +275,15 @@
         "graham_number": 231.71
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -269,8 +301,8 @@
         "Investments": 56600.0,
         "Interest Income": 145453320.0,
         "Net Interest Income": 38325730.0,
-        "Total Operating Income": 51756.38,
-        "Operating Profit": -146354.55,
+        "Total Operating Income": 51756380.0,
+        "Operating Profit": -146354550.0,
         "Net Profit": -146354550.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": -267.62,
@@ -336,7 +368,15 @@
         "NPL": 732.11,
         "Cost of funds": -15.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -354,8 +394,8 @@
         "Investments": 15300.0,
         "Interest Income": 233932610.0,
         "Net Interest Income": 77835110.0,
-        "Total Operating Income": 142744.71,
-        "Operating Profit": 34811.71,
+        "Total Operating Income": 142744710.0,
+        "Operating Profit": 34811710.0,
         "Net Profit": 24368200.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 29.71,
@@ -422,7 +462,15 @@
         "NPL": 243.93,
         "Cost of funds": 1.41
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -441,8 +489,8 @@
         "Investments": 15300.0,
         "Interest Income": 312025790.0,
         "Net Interest Income": 109365570.0,
-        "Total Operating Income": 182380.71,
-        "Operating Profit": 49945.08,
+        "Total Operating Income": 182380710.0,
+        "Operating Profit": 49945080.0,
         "Net Profit": 34961560.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 31.96,
@@ -511,7 +559,15 @@
         "NPL": 60.64,
         "Cost of funds": -13.28
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -530,8 +586,8 @@
         "Investments": 24880.0,
         "Interest Income": 70341380.0,
         "Net Interest Income": 23829660.0,
-        "Total Operating Income": 75753.27,
-        "Operating Profit": 34152.06,
+        "Total Operating Income": 75753270.0,
+        "Operating Profit": 34152060.0,
         "Net Profit": 23906440.0,
         "Number of Shares": 1093750.0,
         "EPS(Rs.)": 87.43,
@@ -601,7 +657,15 @@
         "Cost of funds": -27.11,
         "CD ratio": 0.11
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -621,8 +685,8 @@
         "Investments": 24880.0,
         "Interest Income": 173448400.0,
         "Net Interest Income": 79593220.0,
-        "Total Operating Income": 96498.64,
-        "Operating Profit": 26777.1,
+        "Total Operating Income": 96498640.0,
+        "Operating Profit": 26777100.0,
         "Net Profit": 18743970.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": 34.27,
@@ -689,7 +753,15 @@
         "Cost of funds": -16.6,
         "CD ratio": 7.05
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -709,8 +781,8 @@
         "Investments": 25000.0,
         "Interest Income": 249435000.0,
         "Net Interest Income": 106608000.0,
-        "Total Operating Income": 130983.0,
-        "Operating Profit": 33856.0,
+        "Total Operating Income": 130983000.0,
+        "Operating Profit": 33856000.0,
         "Net Profit": 23699000.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": 28.89,
@@ -777,7 +849,15 @@
         "Cost of funds": -26.16,
         "CD ratio": 25.35
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -797,8 +877,8 @@
         "Investments": 24880.0,
         "Interest Income": 364429540.0,
         "Net Interest Income": 168845470.0,
-        "Total Operating Income": 200875.36,
-        "Operating Profit": 64408.2,
+        "Total Operating Income": 200875360.0,
+        "Operating Profit": 64408200.0,
         "Net Profit": 45085740.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": 41.22,
@@ -866,7 +946,15 @@
         "Cost of funds": -18.92,
         "CD ratio": 22.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -886,8 +974,8 @@
         "Investments": 24880.0,
         "Interest Income": 88708400.0,
         "Net Interest Income": 42241130.0,
-        "Total Operating Income": 48480.97,
-        "Operating Profit": -19345.52,
+        "Total Operating Income": 48480970.0,
+        "Operating Profit": -19345520.0,
         "Net Profit": -19345520.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": -70.75,
@@ -954,7 +1042,15 @@
         "Cost of funds": 6.32,
         "CD ratio": 18.26
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -978,8 +1074,8 @@
         "Interest Income": 177475350.0,
         "Net Interest Income": 86818770.0,
         "Investment Securities": 24880.0,
-        "Total Operating Income": 99870.74,
-        "Operating Profit": -20084.45,
+        "Total Operating Income": 99870740.0,
+        "Operating Profit": -20084450.0,
         "Net Profit": -20084450.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": -36.73,
@@ -1055,7 +1151,15 @@
         "Cost of funds": -27.31,
         "CD ratio": 9.47
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -1075,8 +1179,8 @@
         "Investments": 24880.0,
         "Interest Income": 265103710.0,
         "Net Interest Income": 126979920.0,
-        "Total Operating Income": 148419.32,
-        "Operating Profit": 23400.34,
+        "Total Operating Income": 148419320.0,
+        "Operating Profit": 23400340.0,
         "Net Profit": 16380240.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": 19.97,
@@ -1147,7 +1251,15 @@
         "Cost of funds": 5.03,
         "CD ratio": -5.61
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHLB",
@@ -1167,8 +1279,8 @@
         "Investments": 24880.0,
         "Interest Income": 374288310.0,
         "Net Interest Income": 190763560.0,
-        "Total Operating Income": 220248.09,
-        "Operating Profit": 48143.46,
+        "Total Operating Income": 220248090.0,
+        "Operating Profit": 48143460.0,
         "Net Profit": 33700430.0,
         "Number of Shares": 1093750.0,
         "EPS Reported": 30.81,
@@ -1239,7 +1351,15 @@
         "Cost of funds": -12.35,
         "CD ratio": -5.94
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:04:41.111751"

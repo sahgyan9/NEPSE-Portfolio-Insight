@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:34:00.595879",
+      "parsed_at": "2026-11-14T20:43:03.978551",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -449414290.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 109229460.0,
         "Current Assets": 272899410.0,
         "Total Assets": 3581704120.0,
-        "Revenue from Operations": 420318.5,
+        "Revenue from Operations": 420318500.0,
         "Gross Profit": 346070150.0,
         "Net Profit": -29400530.0,
         "Number of Shares": 15340910.0,
@@ -50,14 +50,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:34:00.595791",
+      "parsed_at": "2026-11-14T20:43:03.978464",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -394436310.0,
@@ -66,7 +73,7 @@
         "Current Liabilities": 98396340.0,
         "Current Assets": 294693000.0,
         "Total Assets": 3601563980.0,
-        "Revenue from Operations": 669848.29,
+        "Revenue from Operations": 669848290.0,
         "Gross Profit": 562589170.0,
         "Net Profit": 25577450.0,
         "Number of Shares": 15340910.0,
@@ -100,14 +107,21 @@
         "graham_number": 52.83
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:34:00.595703",
+      "parsed_at": "2026-11-14T20:43:03.978376",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -381328630.0,
@@ -116,9 +130,9 @@
         "Current Liabilities": 96474680.0,
         "Current Assets": 251007950.0,
         "Total Assets": 3585789990.0,
-        "Revenue from Operations": 186422.23,
+        "Revenue from Operations": 186422230.0,
         "Gross Profit": 163265490.0,
-        "Operating Profit": 81746.99,
+        "Operating Profit": 81746990.0,
         "Net Profit": 13107670.0,
         "Number of Shares": 15340910.0,
         "EPS(Rs.)": 3.42,
@@ -152,14 +166,22 @@
         "graham_number": 76.04
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:34:00.595610",
+      "parsed_at": "2026-11-14T20:43:03.978281",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -342949190.0,
@@ -168,7 +190,7 @@
         "Current Liabilities": 94588500.0,
         "Current Assets": 286197820.0,
         "Total Assets": 3650377520.0,
-        "Revenue from Operations": 408258.05,
+        "Revenue from Operations": 408258050.0,
         "Gross Profit": 357839060.0,
         "Net Profit": 51487120.0,
         "Number of Shares": 15340910.0,
@@ -202,14 +224,21 @@
         "graham_number": 108.27
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:34:00.595523",
+      "parsed_at": "2026-11-14T20:43:03.978164",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -307898390.0,
@@ -218,7 +247,7 @@
         "Current Liabilities": 90378760.0,
         "Current Assets": 296474500.0,
         "Total Assets": 3652687340.0,
-        "Revenue from Operations": 629022.36,
+        "Revenue from Operations": 629022360.0,
         "Gross Profit": 545865140.0,
         "Net Profit": 77735680.0,
         "Number of Shares": 15340910.0,
@@ -270,14 +299,21 @@
         "Book Value(Rs.)": 13.06,
         "ROE": 334.07
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:34:00.595434",
+      "parsed_at": "2026-11-14T20:43:03.978068",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -234471550.0,
@@ -286,7 +322,7 @@
         "Current Liabilities": 142454350.0,
         "Current Assets": 403214160.0,
         "Total Assets": 3783578610.0,
-        "Revenue from Operations": 913417.99,
+        "Revenue from Operations": 913417990.0,
         "Gross Profit": 792600020.0,
         "Net Profit": 151162520.0,
         "Number of Shares": 15340910.0,
@@ -338,14 +374,21 @@
         "Book Value(Rs.)": 14.04,
         "ROE": 419.2
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:34:00.595341",
+      "parsed_at": "2026-11-14T20:43:03.977983",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -213098180.0,
@@ -354,7 +397,7 @@
         "Current Liabilities": 108807720.0,
         "Current Assets": 353536290.0,
         "Total Assets": 3692537540.0,
-        "Revenue from Operations": 206159.93,
+        "Revenue from Operations": 206159930.0,
         "Gross Profit": 179900320.0,
         "Net Profit": 21373360.0,
         "Number of Shares": 15340910.0,
@@ -406,14 +449,21 @@
         "Book Value(Rs.)": 14.6,
         "ROE": 42.2
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:34:00.595253",
+      "parsed_at": "2026-11-14T20:43:03.977895",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -167301740.0,
@@ -422,7 +472,7 @@
         "Current Liabilities": 91920900.0,
         "Current Assets": 285231460.0,
         "Total Assets": 3669233540.0,
-        "Revenue from Operations": 457537.91,
+        "Revenue from Operations": 457537910.0,
         "Gross Profit": 400278420.0,
         "Net Profit": 62849780.0,
         "Number of Shares": 15340910.0,
@@ -474,14 +524,21 @@
         "Book Value(Rs.)": 14.75,
         "ROE": 71.32
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:34:00.595163",
+      "parsed_at": "2026-11-14T20:43:03.977805",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -122241280.0,
@@ -490,7 +547,7 @@
         "Current Liabilities": 80741270.0,
         "Current Assets": 252253130.0,
         "Total Assets": 3617770090.0,
-        "Revenue from Operations": 706056.09,
+        "Revenue from Operations": 706056090.0,
         "Gross Profit": 606885300.0,
         "Net Profit": 107910240.0,
         "Number of Shares": 15340910.0,
@@ -542,14 +599,21 @@
         "Book Value(Rs.)": 15.14,
         "ROE": 20.59
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:34:00.595083",
+      "parsed_at": "2026-11-14T20:43:03.977749",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -70678140.0,
@@ -558,7 +622,7 @@
         "Current Liabilities": 160259470.0,
         "Current Assets": 298593740.0,
         "Total Assets": 3639698690.0,
-        "Revenue from Operations": 1000115.98,
+        "Revenue from Operations": 1000115980.0,
         "Gross Profit": 870358590.0,
         "Operating Profit": 0.0,
         "Net Profit": 223387990.0,
@@ -609,14 +673,21 @@
         "Net Profit": 47.78,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:34:00.595008",
+      "parsed_at": "2026-11-14T20:43:03.977709",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -45148280.0,
@@ -625,7 +696,7 @@
         "Current Liabilities": 84363740.0,
         "Current Assets": 271864980.0,
         "Total Assets": 3618995950.0,
-        "Revenue from Operations": 195875.59,
+        "Revenue from Operations": 195875590.0,
         "Gross Profit": 169664980.0,
         "Operating Profit": 0.0,
         "Net Profit": 25529870.0,
@@ -676,14 +747,21 @@
         "Net Profit": 19.45,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:34:00.594933",
+      "parsed_at": "2026-11-14T20:43:03.977669",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": -4195760.0,
@@ -692,7 +770,7 @@
         "Current Liabilities": 111244430.0,
         "Current Assets": 294831860.0,
         "Total Assets": 3663968800.0,
-        "Revenue from Operations": 422537.74,
+        "Revenue from Operations": 422537740.0,
         "Gross Profit": 367016180.0,
         "Operating Profit": 0.0,
         "Net Profit": 66482380.0,
@@ -743,14 +821,21 @@
         "Net Profit": 5.78,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:34:00.594856",
+      "parsed_at": "2026-11-14T20:43:03.977628",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": 38132920.0,
@@ -759,7 +844,7 @@
         "Current Liabilities": 95085540.0,
         "Current Assets": 295128700.0,
         "Total Assets": 3646887830.0,
-        "Revenue from Operations": 635108.31,
+        "Revenue from Operations": 635108310.0,
         "Gross Profit": 547305060.0,
         "Operating Profit": 0.0,
         "Net Profit": 108811060.0,
@@ -810,14 +895,21 @@
         "Net Profit": 0.83,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:34:00.594779",
+      "parsed_at": "2026-11-14T20:43:03.977586",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": 116804030.0,
@@ -826,7 +918,7 @@
         "Current Liabilities": 131698330.0,
         "Current Assets": 335738660.0,
         "Total Assets": 3701440770.0,
-        "Revenue from Operations": 902416.57,
+        "Revenue from Operations": 902416570.0,
         "Gross Profit": 782483370.0,
         "Operating Profit": 0.0,
         "Net Profit": 210895500.0,
@@ -880,14 +972,21 @@
         "Book Value Reported": 12.81,
         "ROE Reported": -16.32
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:34:00.594701",
+      "parsed_at": "2026-11-14T20:43:03.977545",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": 104372300.0,
@@ -896,7 +995,7 @@
         "Current Liabilities": 73090560.0,
         "Current Assets": 429816940.0,
         "Total Assets": 3748301630.0,
-        "Revenue from Operations": 138707.76,
+        "Revenue from Operations": 138707760.0,
         "Gross Profit": 115832510.0,
         "Operating Profit": 0.0,
         "Net Profit": -12431730.0,
@@ -949,14 +1048,21 @@
         "Book Value Reported": 10.04,
         "ROE Reported": -144.17
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:34:00.594624",
+      "parsed_at": "2026-11-14T20:43:03.977503",
       "raw": {
         "Paid Up Capital": 1534091000.0,
         "Reserve and Surplus": 46269540.0,
@@ -965,7 +1071,7 @@
         "Current Liabilities": 126109310.0,
         "Current Assets": 491455950.0,
         "Total Assets": 3929666720.0,
-        "Revenue from Operations": 248960.47,
+        "Revenue from Operations": 248960470.0,
         "Gross Profit": 210168520.0,
         "Operating Profit": 0.0,
         "Net Profit": -47020560.0,
@@ -1018,14 +1124,21 @@
         "Book Value Reported": 3.3,
         "ROE Reported": -168.47
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:34:00.594544",
+      "parsed_at": "2026-11-14T20:43:03.977461",
       "raw": {
         "Paid Up Capital": 1610795550.0,
         "Reserve and Surplus": 3163980.0,
@@ -1034,7 +1147,7 @@
         "Current Liabilities": 115061860.0,
         "Current Assets": 3452457030.0,
         "Total Assets": 3973672100.0,
-        "Revenue from Operations": 455866.03,
+        "Revenue from Operations": 455866030.0,
         "Gross Profit": 387725360.0,
         "Operating Profit": 0.0,
         "Net Profit": -9384490.0,
@@ -1087,14 +1200,21 @@
         "Book Value Reported": -2.23,
         "ROE Reported": -108.45
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CGH",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:34:00.594440",
+      "parsed_at": "2026-11-14T20:43:03.977409",
       "raw": {
         "Paid Up Capital": 1610795550.0,
         "Reserve and Surplus": 95038330.0,
@@ -1103,7 +1223,7 @@
         "Current Liabilities": 155707950.0,
         "Current Assets": 508785180.0,
         "Total Assets": 4128613360.0,
-        "Revenue from Operations": 777544.22,
+        "Revenue from Operations": 777544220.0,
         "Gross Profit": 626527210.0,
         "Operating Profit": 0.0,
         "Net Profit": 82489860.0,
@@ -1157,8 +1277,15 @@
         "Book Value Reported": -1.59,
         "ROE Reported": -62.1
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:34:00.598670"
+  "last_updated": "2026-11-14T20:43:03.980429"
 }

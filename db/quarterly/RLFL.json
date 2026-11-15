@@ -69,8 +69,8 @@
         "Investment Securities": 1956624000.0,
         "Interest Income": 536608000.0,
         "Net Interest Income": 186163000.0,
-        "Total Operating Income": 223068.0,
-        "Operating Profit": 54695.0,
+        "Total Operating Income": 223068000.0,
+        "Operating Profit": 54695000.0,
         "Net Profit": 38286000.0,
         "Distributable Profit": 26035000.0,
         "Number of Shares": 10530060.0,
@@ -123,7 +123,15 @@
         "graham_number": 115.24
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -144,8 +152,8 @@
         "Investment Securities": 2479377000.0,
         "Interest Income": 770644000.0,
         "Net Interest Income": 252819000.0,
-        "Total Operating Income": 296126.0,
-        "Operating Profit": 103859.0,
+        "Total Operating Income": 296126000.0,
+        "Operating Profit": 103859000.0,
         "Net Profit": 72701000.0,
         "Distributable Profit": 42672000.0,
         "Number of Shares": 10530060.0,
@@ -197,7 +205,15 @@
         "graham_number": 139.43
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -218,8 +234,8 @@
         "Investment Securities": 2450430000.0,
         "Interest Income": 223829000.0,
         "Net Interest Income": 33429000.0,
-        "Total Operating Income": 43134.0,
-        "Operating Profit": -42538.0,
+        "Total Operating Income": 43134000.0,
+        "Operating Profit": -42538000.0,
         "Net Profit": -42538000.0,
         "Distributable Profit": 25303000.0,
         "Number of Shares": 10530060.0,
@@ -273,7 +289,15 @@
         "eps_ttm": -389.09,
         "EPS(Rs.)": -389.09
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -294,8 +318,8 @@
         "Investment Securities": 2480288000.0,
         "Interest Income": 472259000.0,
         "Net Interest Income": 86567000.0,
-        "Total Operating Income": 103890.0,
-        "Operating Profit": -38496.0,
+        "Total Operating Income": 103890000.0,
+        "Operating Profit": -38496000.0,
         "Net Profit": -38496000.0,
         "Distributable Profit": 20714000.0,
         "Number of Shares": 10530060.0,
@@ -349,7 +373,15 @@
         "eps_ttm": -216.22,
         "EPS(Rs.)": -216.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -371,8 +403,8 @@
         "Investment Securities": 2021142000.0,
         "Interest Income": 737599000.0,
         "Net Interest Income": 154954000.0,
-        "Total Operating Income": 182389.0,
-        "Operating Profit": 6628.0,
+        "Total Operating Income": 182389000.0,
+        "Operating Profit": 6628000.0,
         "Net Profit": 4639000.0,
         "Distributable Profit": 1692000.0,
         "Number of Shares": 10530060.0,
@@ -457,7 +489,15 @@
         "Base Rate": 8.15,
         "Interest Spread Rate": 18.27
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -479,8 +519,8 @@
         "Investment Securities": 2006787000.0,
         "Interest Income": 985185000.0,
         "Net Interest Income": 210373000.0,
-        "Total Operating Income": 245378.0,
-        "Operating Profit": -154129.0,
+        "Total Operating Income": 245378000.0,
+        "Operating Profit": -154129000.0,
         "Net Profit": -154129000.0,
         "Distributable Profit": -162066000.0,
         "Number of Shares": 11214520.0,
@@ -563,7 +603,15 @@
         "Base Rate": 6.81,
         "Interest Spread Rate": 3.15
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -585,8 +633,8 @@
         "Investment Securities": 1990204000.0,
         "Interest Income": 235898000.0,
         "Net Interest Income": 50500000.0,
-        "Total Operating Income": 59377.0,
-        "Operating Profit": 77062.0,
+        "Total Operating Income": 59377000.0,
+        "Operating Profit": 77062000.0,
         "Net Profit": 53943000.0,
         "Distributable Profit": -248721000.0,
         "Number of Shares": 11214520.0,
@@ -670,7 +718,15 @@
         "Base Rate": -0.08,
         "Interest Spread Rate": 2.71
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -691,8 +747,8 @@
         "Investment Securities": 2004430000.0,
         "Interest Income": 442054000.0,
         "Net Interest Income": 85805000.0,
-        "Total Operating Income": 105888.0,
-        "Operating Profit": -54765.0,
+        "Total Operating Income": 105888000.0,
+        "Operating Profit": -54765000.0,
         "Net Profit": -54765000.0,
         "Distributable Profit": -312811000.0,
         "Number of Shares": 11214520.0,
@@ -774,7 +830,15 @@
         "Base Rate": -7.48,
         "Interest Spread Rate": -3.97
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -795,8 +859,8 @@
         "Investment Securities": 1895825000.0,
         "Interest Income": 659420000.0,
         "Net Interest Income": 133560000.0,
-        "Total Operating Income": 166279.0,
-        "Operating Profit": -47251.0,
+        "Total Operating Income": 166279000.0,
+        "Operating Profit": -47251000.0,
         "Net Profit": -47251000.0,
         "Distributable Profit": -313168000.0,
         "Number of Shares": 11214520.0,
@@ -878,7 +942,15 @@
         "Base Rate": -13.55,
         "Interest Spread Rate": -4.18
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -899,8 +971,8 @@
         "Investment Securities": 2339336000.0,
         "Interest Income": 918978000.0,
         "Net Interest Income": 217613000.0,
-        "Total Operating Income": 270642.0,
-        "Operating Profit": 41316.0,
+        "Total Operating Income": 270642000.0,
+        "Operating Profit": 41316000.0,
         "Net Profit": 28921000.0,
         "Distributable Profit": -308098000.0,
         "Number of Shares": 11214520.0,
@@ -983,7 +1055,15 @@
         "Base Rate": -15.21,
         "Interest Spread Rate": 0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1004,8 +1084,8 @@
         "Investment Securities": 2293224000.0,
         "Interest Income": 201385000.0,
         "Net Interest Income": 34483000.0,
-        "Total Operating Income": 47639.0,
-        "Operating Profit": -57555.0,
+        "Total Operating Income": 47639000.0,
+        "Operating Profit": -57555000.0,
         "Net Profit": -57555000.0,
         "Distributable Profit": -390272000.0,
         "Number of Shares": 11214520.0,
@@ -1087,7 +1167,15 @@
         "Base Rate": -23.12,
         "Interest Spread Rate": 1.32
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1108,8 +1196,8 @@
         "Investment Securities": 1646201000.0,
         "Interest Income": 380724000.0,
         "Net Interest Income": 67524000.0,
-        "Total Operating Income": 96974.0,
-        "Operating Profit": -119739.0,
+        "Total Operating Income": 96974000.0,
+        "Operating Profit": -119739000.0,
         "Net Profit": -119739000.0,
         "Distributable Profit": -425590000.0,
         "Number of Shares": 11214520.0,
@@ -1188,7 +1276,15 @@
         "Base Rate": -24.34,
         "Interest Spread Rate": -0.65
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1210,8 +1306,8 @@
         "Investment Securities": 1906014000.0,
         "Interest Income": 573737000.0,
         "Net Interest Income": 133500000.0,
-        "Total Operating Income": 174776.0,
-        "Operating Profit": -174711.0,
+        "Total Operating Income": 174776000.0,
+        "Operating Profit": -174711000.0,
         "Net Profit": -174711000.0,
         "Distributable Profit": -493013000.0,
         "Number of Shares": 11214520.0,
@@ -1291,7 +1387,15 @@
         "Base Rate": -25.7,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1313,8 +1417,8 @@
         "Investment Securities": 1921196000.0,
         "Interest Income": 808412000.0,
         "Net Interest Income": 240224000.0,
-        "Total Operating Income": 302680.0,
-        "Operating Profit": 55667.0,
+        "Total Operating Income": 302680000.0,
+        "Operating Profit": 55667000.0,
         "Net Profit": 42704000.0,
         "Distributable Profit": -199042000.0,
         "Number of Shares": 11214520.0,
@@ -1395,7 +1499,15 @@
         "Base Rate": -23.91,
         "Interest Spread Rate": -3.26
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1417,8 +1529,8 @@
         "Investment Securities": 1996605000.0,
         "Interest Income": 191756000.0,
         "Net Interest Income": 65362000.0,
-        "Total Operating Income": 92003.0,
-        "Operating Profit": -164827.0,
+        "Total Operating Income": 92003000.0,
+        "Operating Profit": -164827000.0,
         "Net Profit": -164827000.0,
         "Distributable Profit": -351583000.0,
         "Number of Shares": 11214520.0,
@@ -1498,7 +1610,15 @@
         "Base Rate": -16.94,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1520,8 +1640,8 @@
         "Investment Securities": 1703291000.0,
         "Interest Income": 369943000.0,
         "Net Interest Income": 120514000.0,
-        "Total Operating Income": 160961.0,
-        "Operating Profit": 2461.0,
+        "Total Operating Income": 160961000.0,
+        "Operating Profit": 2461000.0,
         "Net Profit": 1723000.0,
         "Distributable Profit": -215940000.0,
         "Number of Shares": 11214520.0,
@@ -1605,7 +1725,15 @@
         "Base Rate": -14.6,
         "Interest Spread Rate": 0.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1627,8 +1755,8 @@
         "Investment Securities": 2159198000.0,
         "Interest Income": 597327000.0,
         "Net Interest Income": 223334000.0,
-        "Total Operating Income": 287295.0,
-        "Operating Profit": 54144.0,
+        "Total Operating Income": 287295000.0,
+        "Operating Profit": 54144000.0,
         "Net Profit": 37901000.0,
         "Distributable Profit": -242066000.0,
         "Number of Shares": 11214520.0,
@@ -1712,7 +1840,15 @@
         "Base Rate": -12.8,
         "Interest Spread Rate": -6.55
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1734,8 +1870,8 @@
         "Investment Securities": 2023403000.0,
         "Interest Income": 784609000.0,
         "Net Interest Income": 283456000.0,
-        "Total Operating Income": 381887.0,
-        "Operating Profit": 72266.0,
+        "Total Operating Income": 381887000.0,
+        "Operating Profit": 72266000.0,
         "Net Profit": 50587000.0,
         "Distributable Profit": -151067000.0,
         "Number of Shares": 11214520.0,
@@ -1818,7 +1954,15 @@
         "Base Rate": -20.0,
         "Interest Spread Rate": -6.74
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLFL",
@@ -1840,8 +1984,8 @@
         "Investment Securities": 1515350000.0,
         "Interest Income": 234027000.0,
         "Net Interest Income": 106517000.0,
-        "Total Operating Income": 134706.0,
-        "Operating Profit": -120278.0,
+        "Total Operating Income": 134706000.0,
+        "Operating Profit": -120278000.0,
         "Net Profit": -120278000.0,
         "Distributable Profit": -289562000.0,
         "Number of Shares": 11214520.0,
@@ -1924,7 +2068,15 @@
         "Base Rate": -19.22,
         "Interest Spread Rate": -8.71
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:53:07.657759"

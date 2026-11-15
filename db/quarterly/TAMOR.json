@@ -17,7 +17,7 @@
         "Current Liabilities": 336892740.0,
         "Current Assets": 1146913640.0,
         "Total Assets": 6741897680.0,
-        "Operating Profit": -18001.62,
+        "Operating Profit": -18001620.0,
         "Net Profit": -17945630.0,
         "Number of Shares": 23327500.0,
         "EPS(Rs.)": -1.03,
@@ -48,7 +48,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -64,7 +71,7 @@
         "Current Liabilities": 201148740.0,
         "Current Assets": 648948300.0,
         "Total Assets": 8867284230.0,
-        "Operating Profit": -22476.55,
+        "Operating Profit": -22476550.0,
         "Net Profit": -43463580.0,
         "Number of Shares": 24993750.0,
         "EPS(Rs.)": -3.48,
@@ -95,7 +102,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -111,7 +125,7 @@
         "Current Liabilities": 156046620.0,
         "Current Assets": 1387978310.0,
         "Total Assets": 10406537600.0,
-        "Operating Profit": -41630.14,
+        "Operating Profit": -41630140.0,
         "Net Profit": -59721800.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": -2.39,
@@ -142,7 +156,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -158,7 +179,7 @@
         "Current Liabilities": 134422380.0,
         "Current Assets": 971728800.0,
         "Total Assets": 11149100200.0,
-        "Operating Profit": -30439.69,
+        "Operating Profit": -30439690.0,
         "Net Profit": -30068820.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": -0.9,
@@ -189,7 +210,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -206,7 +234,7 @@
         "Current Assets": 767286000.0,
         "Total Assets": 11597026970.0,
         "Revenue": 654254370.0,
-        "Operating Profit": -9297.99,
+        "Operating Profit": -9297990.0,
         "Net Profit": -8950300.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": -1.07,
@@ -255,7 +283,14 @@
         "Book Value(Rs.)": -2.25,
         "ROE": -10.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -272,7 +307,7 @@
         "Current Assets": 714785530.0,
         "Total Assets": 12365990820.0,
         "Revenue": 1473739860.0,
-        "Operating Profit": -19089.85,
+        "Operating Profit": -19089850.0,
         "Net Profit": -16341690.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": -0.98,
@@ -321,7 +356,14 @@
         "Book Value(Rs.)": 0.61,
         "ROE": 74.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -338,7 +380,7 @@
         "Current Assets": 647678530.0,
         "Total Assets": 13294606550.0,
         "Revenue": 2482217130.0,
-        "Operating Profit": -27590.1,
+        "Operating Profit": -27590100.0,
         "Net Profit": -29553940.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": -1.18,
@@ -387,7 +429,14 @@
         "Book Value(Rs.)": -0.14,
         "ROE": 50.41
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -405,7 +454,7 @@
         "Total Assets": 13747277570.0,
         "Revenue": 3308616080.0,
         "Gross Profit": 305907630.0,
-        "Operating Profit": 183402.43,
+        "Operating Profit": 183402430.0,
         "Net Profit": 4532640.0,
         "Number of Shares": 33325000.0,
         "EPS(Rs.)": 0.14,
@@ -456,7 +505,14 @@
         "Book Value(Rs.)": 0.18,
         "ROE": 115.22
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -474,7 +530,7 @@
         "Total Assets": 13963518180.0,
         "Revenue": 750976720.0,
         "Gross Profit": 497991700.0,
-        "Operating Profit": 369879.23,
+        "Operating Profit": 369879230.0,
         "Net Profit": 145782280.0,
         "Number of Shares": 33325000.0,
         "EPS Reported": 17.5,
@@ -524,7 +580,14 @@
         "Net Profit": 1728.8,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -542,7 +605,7 @@
         "Total Assets": 14092580310.0,
         "Revenue": 1317452240.0,
         "Gross Profit": 961451000.0,
-        "Operating Profit": 708958.92,
+        "Operating Profit": 708958920.0,
         "Net Profit": 271637840.0,
         "Number of Shares": 33325000.0,
         "EPS Reported": 16.3,
@@ -592,7 +655,14 @@
         "Net Profit": 1762.24,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -610,7 +680,7 @@
         "Total Assets": 13941722620.0,
         "Revenue": 1382599070.0,
         "Gross Profit": 1205468700.0,
-        "Operating Profit": 827561.56,
+        "Operating Profit": 827561560.0,
         "Net Profit": 211445650.0,
         "Number of Shares": 33325000.0,
         "EPS Reported": 8.46,
@@ -660,7 +730,14 @@
         "Net Profit": 815.46,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -747,7 +824,7 @@
         "Total Assets": 14267143790.0,
         "Revenue": 580429870.0,
         "Gross Profit": 518382220.0,
-        "Operating Profit": 383308.68,
+        "Operating Profit": 383308680.0,
         "Net Profit": 210016410.0,
         "Number of Shares": 33325000.0,
         "EPS Reported": 25.21,
@@ -801,7 +878,14 @@
         "Book Value Reported": 13.83,
         "ROE Reported": 26.53
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -819,7 +903,7 @@
         "Total Assets": 14110082970.0,
         "Revenue": 891656320.0,
         "Gross Profit": 779742470.0,
-        "Operating Profit": 517243.06,
+        "Operating Profit": 517243060.0,
         "Net Profit": 181010570.0,
         "Number of Shares": 33325000.0,
         "EPS Reported": 10.86,
@@ -873,7 +957,14 @@
         "Book Value Reported": 9.06,
         "ROE Reported": -38.88
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -891,7 +982,7 @@
         "Total Assets": 14056020730.0,
         "Revenue": 1311728600.0,
         "Gross Profit": 1134531530.0,
-        "Operating Profit": 715620.39,
+        "Operating Profit": 715620390.0,
         "Net Profit": 251016360.0,
         "Number of Shares": 33324970.0,
         "EPS Reported": 10.04,
@@ -945,7 +1036,14 @@
         "Book Value Reported": 12.96,
         "ROE Reported": 5.05
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -963,7 +1061,7 @@
         "Total Assets": 14339356980.0,
         "Revenue": 2025176100.0,
         "Gross Profit": 1772759900.0,
-        "Operating Profit": 1204319.2,
+        "Operating Profit": 1204319200.0,
         "Net Profit": 624291370.0,
         "Number of Shares": 33324970.0,
         "EPS Reported": 18.73,
@@ -1016,7 +1114,14 @@
         "Book Value Reported": 17.09,
         "ROE Reported": 31.46
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TAMOR",
@@ -1034,7 +1139,7 @@
         "Total Assets": 14039217320.0,
         "Revenue": 745745520.0,
         "Gross Profit": 685038690.0,
-        "Operating Profit": 555131.06,
+        "Operating Profit": 555131060.0,
         "Net Profit": 429667290.0,
         "Number of Shares": 33324970.0,
         "EPS Reported": 51.57,
@@ -1088,7 +1193,14 @@
         "Book Value Reported": 17.04,
         "ROE Reported": 74.78
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:15:46.431807"

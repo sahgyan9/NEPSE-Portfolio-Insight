@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:21:11.149053",
+      "parsed_at": "2026-11-14T20:30:18.930843",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserve and Surplus": 85356510.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 1226179900.0,
         "Interest Income": 76947870.0,
         "Net Interest Income": 39947270.0,
-        "Total Operating Income": 53469.03,
-        "Operating Profit": 21436.71,
+        "Total Operating Income": 53469030.0,
+        "Operating Profit": 21436710.0,
         "Net Profit": 24628430.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 49.26,
@@ -63,14 +63,22 @@
         "graham_number": 453.26
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKBSL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:21:11.148934",
+      "parsed_at": "2026-11-14T20:30:18.930804",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserve and Surplus": 95548570.0,
@@ -81,8 +89,8 @@
         "Loans and Advances to Customers": 1337159670.0,
         "Interest Income": 122111450.0,
         "Net Interest Income": 59938360.0,
-        "Total Operating Income": 80945.28,
-        "Operating Profit": 44780.67,
+        "Total Operating Income": 80945280.0,
+        "Operating Profit": 44780670.0,
         "Net Profit": 34831460.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 46.44,
@@ -125,14 +133,22 @@
         "graham_number": 452.03
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKBSL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:21:11.148814",
+      "parsed_at": "2026-11-14T20:30:18.930754",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserve and Surplus": 108204990.0,
@@ -143,8 +159,8 @@
         "Loans and Advances to Customers": 1417839950.0,
         "Interest Income": 179871100.0,
         "Net Interest Income": 87817370.0,
-        "Total Operating Income": 116415.97,
-        "Operating Profit": 60729.37,
+        "Total Operating Income": 116415970.0,
+        "Operating Profit": 60729370.0,
         "Net Profit": 45578900.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 45.58,
@@ -187,14 +203,22 @@
         "graham_number": 462.08
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKBSL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:21:11.148687",
+      "parsed_at": "2026-11-14T20:30:18.930694",
       "raw": {
         "Paid Up Capital": 100000000.0,
         "Reserve and Surplus": 136940000.0,
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 1455018220.0,
         "Interest Income": 47340000.0,
         "Net Interest Income": 13486000.0,
-        "Total Operating Income": 20070.0,
-        "Operating Profit": -999.0,
+        "Total Operating Income": 20070000.0,
+        "Operating Profit": -999000.0,
         "Net Profit": 1989000.0,
         "Number of Shares": 1000000.0,
         "EPS(Rs.)": 7.96,
@@ -249,14 +273,22 @@
         "graham_number": 206.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "AKBSL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:21:11.148542",
+      "parsed_at": "2026-11-14T20:30:18.930644",
       "raw": {
         "Paid Up Capital": 119000000.0,
         "Reserve and Surplus": 84940940.0,
@@ -267,8 +299,8 @@
         "Loans and Advances to Customers": 1445280160.0,
         "Interest Income": 98407910.0,
         "Net Interest Income": 31294260.0,
-        "Total Operating Income": 44976.94,
-        "Operating Profit": 7994.37,
+        "Total Operating Income": 44976940.0,
+        "Operating Profit": 7994370.0,
         "Net Profit": 11296210.0,
         "Number of Shares": 1190000.0,
         "EPS(Rs.)": 18.99,
@@ -336,8 +368,16 @@
         "Cost of funds": -0.46,
         "CD ratio": 1.38
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:21:11.150739"
+  "last_updated": "2026-11-14T20:30:18.931404"
 }

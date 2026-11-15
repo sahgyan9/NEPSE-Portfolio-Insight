@@ -72,7 +72,7 @@
         "Current Assets": 1357239340.0,
         "Total Assets": 2911685450.0,
         "Revenue": 882405930.0,
-        "Revenue from Operation": 878621.95,
+        "Revenue from Operation": 878621950.0,
         "Gross Profit": 114702450.0,
         "Total Operating Profit": 48738140.0,
         "Net Profit": 15656100.0,
@@ -109,7 +109,14 @@
         "graham_number": 69.54
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAIL",
@@ -126,7 +133,7 @@
         "Current Assets": 1426038520.0,
         "Total Assets": 2993609200.0,
         "Revenue": 0.0,
-        "Revenue from Operation": 1351524.98,
+        "Revenue from Operation": 1351524980.0,
         "Gross Profit": 168511910.0,
         "Total Operating Profit": 66530899.99999999,
         "Net Profit": 20058680.0,
@@ -163,7 +170,14 @@
         "graham_number": 63.95
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAIL",
@@ -180,7 +194,7 @@
         "Current Assets": 1450096140.0,
         "Total Assets": 3055124970.0,
         "Revenue": 0.0,
-        "Revenue from Operation": 1806347.01,
+        "Revenue from Operation": 1806347010.0,
         "Gross Profit": 221905400.0,
         "Total Operating Profit": 82562190.0,
         "Net Profit": 17834220.0,
@@ -217,7 +231,14 @@
         "graham_number": 51.6
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:56:19.398712"

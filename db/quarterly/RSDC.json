@@ -18,8 +18,8 @@
         "Loans and Advances to Customers": 5458499750.0,
         "Interest Income": 618769400.0,
         "Net Interest Income": 238233840.0,
-        "Total Operating Income": 264776.39,
-        "Operating Profit": 193145.82,
+        "Total Operating Income": 264776390.0,
+        "Operating Profit": 193145820.0,
         "Net Profit": 135202070.0,
         "Number of Shares": 8051557.41,
         "EPS(Rs.)": 16.79,
@@ -59,7 +59,15 @@
         "graham_number": 218.29
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -77,8 +85,8 @@
         "Investments": 2000000.0,
         "Interest Income": 224725570.0,
         "Net Interest Income": 76502240.0,
-        "Total Operating Income": 85440.34,
-        "Operating Profit": 54616.09,
+        "Total Operating Income": 85440340.0,
+        "Operating Profit": 54616090.0,
         "Net Profit": 38231260.0,
         "Number of Shares": 8051557.41,
         "EPS(Rs.)": 18.99,
@@ -119,7 +127,15 @@
         "graham_number": 232.91
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -137,8 +153,8 @@
         "Investments": 2000000.0,
         "Interest Income": 455732160.0,
         "Net Interest Income": 147563220.0,
-        "Total Operating Income": 165173.06,
-        "Operating Profit": 113449.46,
+        "Total Operating Income": 165173060.0,
+        "Operating Profit": 113449460.0,
         "Net Profit": 79414620.0,
         "Number of Shares": 8051557.41,
         "EPS(Rs.)": 19.73,
@@ -179,7 +195,15 @@
         "graham_number": 242.48
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -198,8 +222,8 @@
         "Investments": 2000000.0,
         "Interest Income": 697675780.0,
         "Net Interest Income": 214044370.0,
-        "Total Operating Income": 235674.48,
-        "Operating Profit": 122891.45,
+        "Total Operating Income": 235674480.0,
+        "Operating Profit": 122891450.0,
         "Net Profit": 86024010.0,
         "Number of Shares": 8695682.01,
         "EPS(Rs.)": 13.19,
@@ -241,7 +265,15 @@
         "graham_number": 187.61
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -260,8 +292,8 @@
         "Investments": 2000000.0,
         "Interest Income": 948688810.0,
         "Net Interest Income": 284952900.0,
-        "Total Operating Income": 310115.7,
-        "Operating Profit": 159294.85,
+        "Total Operating Income": 310115700.0,
+        "Operating Profit": 159294850.0,
         "Net Profit": 111645220.0,
         "Number of Shares": 8695682.01,
         "EPS(Rs.)": 12.84,
@@ -328,7 +360,15 @@
         "NPL": 148.98,
         "Cost of funds": 6.28
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -347,8 +387,8 @@
         "Investments": 2000000.0,
         "Interest Income": 238963390.0,
         "Net Interest Income": 68116750.0,
-        "Total Operating Income": 72751.57,
-        "Operating Profit": 58131.73,
+        "Total Operating Income": 72751570.0,
+        "Operating Profit": 58131730.0,
         "Net Profit": 40774290.0,
         "Number of Shares": 8695682.01,
         "EPS(Rs.)": 0.0,
@@ -414,7 +454,15 @@
         "NPL": 148.33,
         "Cost of funds": -1.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -433,8 +481,8 @@
         "Investments": 2000000.0,
         "Interest Income": 447667750.0,
         "Net Interest Income": 122011520.0,
-        "Total Operating Income": 130853.66,
-        "Operating Profit": 99006.17,
+        "Total Operating Income": 130853660.0,
+        "Operating Profit": 99006170.0,
         "Net Profit": 69304320.0,
         "Number of Shares": 8695682.01,
         "EPS(Rs.)": 15.94,
@@ -502,7 +550,15 @@
         "NPL": 124.69,
         "Cost of funds": -10.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -520,8 +576,8 @@
         "Loans and Advances to Customers": 12870350.0,
         "Interest Income": 649700830.0,
         "Net Interest Income": 185194360.0,
-        "Total Operating Income": 197904.95,
-        "Operating Profit": 160128.32,
+        "Total Operating Income": 197904950.0,
+        "Operating Profit": 160128320.0,
         "Net Profit": 112121330.0,
         "Number of Shares": 9443510.65,
         "EPS(Rs.)": 15.83,
@@ -588,7 +644,15 @@
         "NPL": 118.25,
         "Cost of funds": -20.5
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -607,8 +671,8 @@
         "Investments": 2000000.0,
         "Interest Income": 839294640.0,
         "Net Interest Income": 244769260.0,
-        "Total Operating Income": 260356.66,
-        "Operating Profit": 209480.74,
+        "Total Operating Income": 260356660.0,
+        "Operating Profit": 209480740.0,
         "Net Profit": 146668020.0,
         "Number of Shares": 9443510.65,
         "EPS(Rs.)": 15.53,
@@ -678,7 +742,15 @@
         "Cost of funds": -25.37,
         "CD ratio": 1.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -697,8 +769,8 @@
         "Investments": 2000000.0,
         "Interest Income": 174205330.0,
         "Net Interest Income": 64081500.0,
-        "Total Operating Income": 67641.34,
-        "Operating Profit": 37283.99,
+        "Total Operating Income": 67641340.0,
+        "Operating Profit": 37283990.0,
         "Net Profit": 26098790.0,
         "Number of Shares": 9443510.65,
         "EPS(Rs.)": 11.05,
@@ -765,7 +837,15 @@
         "Cost of funds": -27.35,
         "CD ratio": 2.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -784,8 +864,8 @@
         "Investments": 2000000.0,
         "Interest Income": 320912650.0,
         "Net Interest Income": 112116690.0,
-        "Total Operating Income": 114150.23,
-        "Operating Profit": 64669.95,
+        "Total Operating Income": 114150230.0,
+        "Operating Profit": 64669950.0,
         "Net Profit": 44182010.0,
         "Number of Shares": 9443510.65,
         "EPS Reported": 9.36,
@@ -852,7 +932,15 @@
         "Cost of funds": -36.82,
         "CD ratio": -3.95
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -872,8 +960,8 @@
         "Investments": 2000000.0,
         "Interest Income": 464212080.0,
         "Net Interest Income": 170965160.0,
-        "Total Operating Income": 175119.39,
-        "Operating Profit": 101411.24,
+        "Total Operating Income": 175119390.0,
+        "Operating Profit": 101411240.0,
         "Net Profit": 69897410.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 9.01,
@@ -940,7 +1028,15 @@
         "Cost of funds": -33.86,
         "CD ratio": -9.6
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -960,8 +1056,8 @@
         "Investments": 2000000.0,
         "Interest Income": 600109230.0,
         "Net Interest Income": 224557920.0,
-        "Total Operating Income": 230441.02,
-        "Operating Profit": 149899.04,
+        "Total Operating Income": 230441020.0,
+        "Operating Profit": 149899040.0,
         "Net Profit": 103196040.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 9.98,
@@ -1029,7 +1125,15 @@
         "Cost of funds": -32.12,
         "CD ratio": -21.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -1049,8 +1153,8 @@
         "Investments": 2000000.0,
         "Interest Income": 116802010.0,
         "Net Interest Income": 44832090.0,
-        "Total Operating Income": 46939.37,
-        "Operating Profit": 30154.15,
+        "Total Operating Income": 46939370.0,
+        "Operating Profit": 30154150.0,
         "Net Profit": 21107900.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 8.17,
@@ -1118,7 +1222,15 @@
         "Cost of funds": -29.26,
         "CD ratio": -2.25
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -1138,8 +1250,8 @@
         "Investments": 115890000.0,
         "Interest Income": 238667380.0,
         "Net Interest Income": 107624890.0,
-        "Total Operating Income": 112186.55,
-        "Operating Profit": 109604.56,
+        "Total Operating Income": 112186550.0,
+        "Operating Profit": 109604560.0,
         "Net Profit": 76672480.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 14.83,
@@ -1210,7 +1322,15 @@
         "Cost of funds": -21.43,
         "CD ratio": -0.15
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -1230,8 +1350,8 @@
         "Investments": 115890000.0,
         "Interest Income": 329782340.0,
         "Net Interest Income": 147622420.0,
-        "Total Operating Income": 152705.08,
-        "Operating Profit": 94629.79,
+        "Total Operating Income": 152705080.0,
+        "Operating Profit": 94629790.0,
         "Net Profit": 65647500.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 8.46,
@@ -1302,7 +1422,15 @@
         "Cost of funds": -23.51,
         "CD ratio": -0.6
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -1322,8 +1450,8 @@
         "Investments": 115890000.0,
         "Interest Income": 413915290.0,
         "Net Interest Income": 191542500.0,
-        "Total Operating Income": 196937.18,
-        "Operating Profit": 196471.5,
+        "Total Operating Income": 196937180.0,
+        "Operating Profit": 196471500.0,
         "Net Profit": 138238250.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 13.37,
@@ -1394,7 +1522,15 @@
         "Cost of funds": -21.07,
         "CD ratio": 10.09
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSDC",
@@ -1414,8 +1550,8 @@
         "Investments": 115890000.0,
         "Interest Income": 68261540.0,
         "Net Interest Income": 33926910.0,
-        "Total Operating Income": 34413.18,
-        "Operating Profit": 18048.25,
+        "Total Operating Income": 34413180.0,
+        "Operating Profit": 18048250.0,
         "Net Profit": 12633770.0,
         "Number of Shares": 10340644.17,
         "EPS Reported": 4.89,
@@ -1486,7 +1622,15 @@
         "Cost of funds": -27.63,
         "CD ratio": 21.4
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:54:06.849762"

@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:33:00.299554",
+      "parsed_at": "2026-11-14T20:41:59.708943",
       "raw": {
         "EPS(Rs.)": 2.27
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:33:00.299539",
+      "parsed_at": "2026-11-14T20:41:59.708935",
       "raw": {
         "EPS(Rs.)": 7.57
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:33:00.299521",
+      "parsed_at": "2026-11-14T20:41:59.708928",
       "raw": {
         "Paid Up Capital": 8643661000.0,
         "Retained Earnings": 997703000.0,
@@ -67,8 +67,8 @@
         "Investment Securities": 12336095000.0,
         "Interest Income": 4601162000.0,
         "Net Interest Income": 1467449000.0,
-        "Total Operating Income": 1837585.0,
-        "Operating Profit": 732294.0,
+        "Total Operating Income": 1837585000.0,
+        "Operating Profit": 732294000.0,
         "Net Profit": 504001000.0,
         "Distributable Profit": 997703000.0,
         "Number of Shares": 86436610.0,
@@ -119,14 +119,22 @@
         "graham_number": 184.24
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:33:00.299394",
+      "parsed_at": "2026-11-14T20:41:59.708873",
       "raw": {
         "Paid Up Capital": 9075844000.0,
         "Retained Earnings": 942896000.0,
@@ -139,8 +147,8 @@
         "Investment Securities": 13516912000.0,
         "Interest Income": 7471688000.0,
         "Net Interest Income": 2455287000.0,
-        "Total Operating Income": 2940577.0,
-        "Operating Profit": 1303873.0,
+        "Total Operating Income": 2940577000.0,
+        "Operating Profit": 1303873000.0,
         "Net Profit": 904123000.0,
         "Distributable Profit": 942896000.0,
         "Number of Shares": 90758440.0,
@@ -191,14 +199,22 @@
         "graham_number": 195.2
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:33:00.299260",
+      "parsed_at": "2026-11-14T20:41:59.708818",
       "raw": {
         "Paid Up Capital": 9075844000.0,
         "Retained Earnings": 1006309000.0,
@@ -211,8 +227,8 @@
         "Investment Securities": 17075536000.0,
         "Interest Income": 10783662000.0,
         "Net Interest Income": 3641534000.0,
-        "Total Operating Income": 4247017.0,
-        "Operating Profit": 2113271.0,
+        "Total Operating Income": 4247017000.0,
+        "Operating Profit": 2113271000.0,
         "Net Profit": 1384685000.0,
         "Distributable Profit": 1006309000.0,
         "Number of Shares": 90758440.0,
@@ -266,14 +282,22 @@
         "eps_ttm": 572.25,
         "EPS(Rs.)": 572.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:33:00.299085",
+      "parsed_at": "2026-11-14T20:41:59.708759",
       "raw": {
         "Paid Up Capital": 9075844000.0,
         "Retained Earnings": 860315000.0,
@@ -286,8 +310,8 @@
         "Investment Securities": 17447737000.0,
         "Interest Income": 3402339000.0,
         "Net Interest Income": 1152928000.0,
-        "Total Operating Income": 1301935.0,
-        "Operating Profit": 588445.0,
+        "Total Operating Income": 1301935000.0,
+        "Operating Profit": 588445000.0,
         "Net Profit": 415091000.0,
         "Distributable Profit": 860315000.0,
         "Number of Shares": 90758440.0,
@@ -341,14 +365,22 @@
         "eps_ttm": 141.61,
         "EPS(Rs.)": 141.61
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:33:00.298934",
+      "parsed_at": "2026-11-14T20:41:59.708619",
       "raw": {
         "Paid Up Capital": 9075844000.0,
         "Retained Earnings": 439757000.0,
@@ -361,8 +393,8 @@
         "Investment Securities": 17968118000.0,
         "Interest Income": 6819261000.0,
         "Net Interest Income": 2258374000.0,
-        "Total Operating Income": 2525281.0,
-        "Operating Profit": 904997.0,
+        "Total Operating Income": 2525281000.0,
+        "Operating Profit": 904997000.0,
         "Net Profit": 637022000.0,
         "Distributable Profit": 439757000.0,
         "Number of Shares": 90758440.0,
@@ -443,8 +475,16 @@
         "Base Rate": 20.43,
         "Interest Spread Rate": 31.15
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:33:00.300819"
+  "last_updated": "2026-11-14T20:41:59.709677"
 }

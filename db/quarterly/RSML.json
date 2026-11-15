@@ -17,7 +17,7 @@
         "Current Liabilities": 2339362100.0,
         "Current Assets": 5087583470.0,
         "Total Assets": 14568829020.0,
-        "Revenue from Operation": 4790291.16,
+        "Revenue from Operation": 4790291160.0,
         "Gross Profit": 599390080.0,
         "Total Operating Profit": 329848350.0,
         "Net Profit": 137435410.0,
@@ -53,7 +53,14 @@
         "graham_number": 399.59
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSML",
@@ -69,7 +76,7 @@
         "Current Liabilities": 2314236340.0,
         "Current Assets": 4619193110.0,
         "Total Assets": 14008628900.0,
-        "Revenue from Operation": 7460460.27,
+        "Revenue from Operation": 7460460270.0,
         "Gross Profit": 948624720.0,
         "Total Operating Profit": 534987930.00000006,
         "Net Profit": 266892120.0,
@@ -105,7 +112,14 @@
         "graham_number": 457.76
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RSML",
@@ -121,7 +135,7 @@
         "Current Liabilities": 2270906860.0,
         "Current Assets": 4689964420.0,
         "Total Assets": 13993458850.0,
-        "Revenue from Operation": 10459675.87,
+        "Revenue from Operation": 10459675870.0,
         "Gross Profit": 1385239670.0,
         "Total Operating Profit": 740066770.0,
         "Net Profit": 399029670.0,
@@ -157,7 +171,14 @@
         "graham_number": 487.69
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:10:18.555317"

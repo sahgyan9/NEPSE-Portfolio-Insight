@@ -8,7 +8,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T09:08:03.694450",
+      "parsed_at": "2026-11-14T21:17:11.207989",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 43137000.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 371057000.0,
         "Interest Income": 19656000.0,
         "Net Interest Income": 13682000.0,
-        "Total Operating Income": 23377.0,
-        "Operating Profit": 8236.0,
+        "Total Operating Income": 23377000.0,
+        "Operating Profit": 8236000.0,
         "Net Profit": 5915000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 47.31,
@@ -63,14 +63,22 @@
         "graham_number": 445.29
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T09:08:03.694394",
+      "parsed_at": "2026-11-14T21:17:11.207872",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 55313000.0,
@@ -81,8 +89,8 @@
         "Loans and Advances to Customers": 392857000.0,
         "Interest Income": 38730000.0,
         "Net Interest Income": 26434000.0,
-        "Total Operating Income": 45609.0,
-        "Operating Profit": 17205.0,
+        "Total Operating Income": 45609000.0,
+        "Operating Profit": 17205000.0,
         "Net Profit": 11391000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 45.56,
@@ -125,14 +133,22 @@
         "graham_number": 464.67
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T09:08:03.694344",
+      "parsed_at": "2026-11-14T21:17:11.207757",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 61481000.0,
@@ -143,8 +159,8 @@
         "Loans and Advances to Customers": 412931000.0,
         "Interest Income": 57939000.0,
         "Net Interest Income": 40729000.0,
-        "Total Operating Income": 69298.0,
-        "Operating Profit": 25829.0,
+        "Total Operating Income": 69298000.0,
+        "Operating Profit": 25829000.0,
         "Net Profit": 16880000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 67.52,
@@ -187,14 +203,22 @@
         "graham_number": 582.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T09:08:03.694285",
+      "parsed_at": "2026-11-14T21:17:11.207650",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 76458000.0,
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 431722000.0,
         "Interest Income": 78710000.0,
         "Net Interest Income": 55935000.0,
-        "Total Operating Income": 99937.0,
-        "Operating Profit": 37774.0,
+        "Total Operating Income": 99937000.0,
+        "Operating Profit": 37774000.0,
         "Net Profit": 26410000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 52.82,
@@ -249,14 +273,22 @@
         "graham_number": 548.25
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T09:08:03.694223",
+      "parsed_at": "2026-11-14T21:17:11.207551",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 66882000.0,
@@ -267,8 +299,8 @@
         "Loans and Advances to Customers": 497553000.0,
         "Interest Income": 22160000.0,
         "Net Interest Income": 15923000.0,
-        "Total Operating Income": 27917.0,
-        "Operating Profit": 7830.0,
+        "Total Operating Income": 27917000.0,
+        "Operating Profit": 7830000.0,
         "Net Profit": 5515000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 107.71,
@@ -336,14 +368,22 @@
         "Cost of funds": 9.29,
         "CD ratio": -12.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T09:08:03.694173",
+      "parsed_at": "2026-11-14T21:17:11.207449",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 75462000.0,
@@ -354,8 +394,8 @@
         "Loans and Advances to Customers": 537107000.0,
         "Interest Income": 46856000.0,
         "Net Interest Income": 33847000.0,
-        "Total Operating Income": 57590.0,
-        "Operating Profit": 20461.0,
+        "Total Operating Income": 57590000.0,
+        "Operating Profit": 20461000.0,
         "Net Profit": 13996000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 55.98,
@@ -423,14 +463,22 @@
         "Cost of funds": 37.69,
         "CD ratio": -8.83
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T09:08:03.694134",
+      "parsed_at": "2026-11-14T21:17:11.207346",
       "raw": {
         "Paid Up Capital": 50000000.0,
         "Reserve and Surplus": 82236000.0,
@@ -441,8 +489,8 @@
         "Loans and Advances to Customers": 604398000.0,
         "Interest Income": 73430000.0,
         "Net Interest Income": 51653000.0,
-        "Total Operating Income": 85853.0,
-        "Operating Profit": 29139.0,
+        "Total Operating Income": 85853000.0,
+        "Operating Profit": 29139000.0,
         "Net Profit": 20770000.0,
         "Number of Shares": 500000.0,
         "EPS(Rs.)": 55.39,
@@ -510,14 +558,22 @@
         "Cost of funds": 59.09,
         "CD ratio": -2.56
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:08:03.694095",
+      "parsed_at": "2026-11-14T21:17:11.207228",
       "raw": {
         "Paid Up Capital": 82500000.0,
         "Reserve and Surplus": 52738000.0,
@@ -528,8 +584,8 @@
         "Loans and Advances to Customers": 769037000.0,
         "Interest Income": 104513000.0,
         "Net Interest Income": 71609000.0,
-        "Total Operating Income": 118799.0,
-        "Operating Profit": 30491.0,
+        "Total Operating Income": 118799000.0,
+        "Operating Profit": 30491000.0,
         "Net Profit": 22297000.0,
         "Number of Shares": 825000.0,
         "EPS(Rs.)": 27.26,
@@ -597,14 +653,22 @@
         "Cost of funds": 63.64,
         "CD ratio": 3.87
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:08:03.694043",
+      "parsed_at": "2026-11-14T21:17:11.207109",
       "raw": {
         "Paid Up Capital": 312875000.0,
         "Reserve and Surplus": 211924000.0,
@@ -616,8 +680,8 @@
         "Investments": 2000000.0,
         "Interest Income": 379071000.0,
         "Net Interest Income": 219546000.0,
-        "Total Operating Income": 279397.0,
-        "Operating Profit": 83504.0,
+        "Total Operating Income": 279397000.0,
+        "Operating Profit": 83504000.0,
         "Net Profit": 111864000.0,
         "Number of Shares": 3128750.0,
         "EPS(Rs.)": 47.67,
@@ -686,14 +750,22 @@
         "Cost of funds": 44.67,
         "CD ratio": 27.43
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:08:03.694000",
+      "parsed_at": "2026-11-14T21:17:11.206987",
       "raw": {
         "Paid Up Capital": 312875000.0,
         "Reserve and Surplus": 227383000.0,
@@ -705,8 +777,8 @@
         "Investments": 2000000.0,
         "Interest Income": 526117000.0,
         "Net Interest Income": 294796000.0,
-        "Total Operating Income": 370664.0,
-        "Operating Profit": 89283.0,
+        "Total Operating Income": 370664000.0,
+        "Operating Profit": 89283000.0,
         "Net Profit": 128496000.0,
         "Number of Shares": 3128750.0,
         "EPS(Rs.)": 41.07,
@@ -775,14 +847,22 @@
         "Cost of funds": 25.88,
         "CD ratio": 27.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:08:03.693958",
+      "parsed_at": "2026-11-14T21:17:11.206856",
       "raw": {
         "Paid Up Capital": 312875000.0,
         "Reserve and Surplus": 240458000.0,
@@ -794,8 +874,8 @@
         "Investments": 2000000.0,
         "Interest Income": 152280000.0,
         "Net Interest Income": 71154000.0,
-        "Total Operating Income": 86321.0,
-        "Operating Profit": 8431.0,
+        "Total Operating Income": 86321000.0,
+        "Operating Profit": 8431000.0,
         "Net Profit": 13167000.0,
         "Number of Shares": 3128750.0,
         "EPS(Rs.)": 16.83,
@@ -864,14 +944,22 @@
         "Cost of funds": 11.54,
         "CD ratio": 27.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:08:03.693901",
+      "parsed_at": "2026-11-14T21:17:11.206720",
       "raw": {
         "Paid Up Capital": 312875410.0,
         "Reserve and Surplus": 253689000.0,
@@ -883,8 +971,8 @@
         "Investments": 2000000.0,
         "Interest Income": 298076050.0,
         "Net Interest Income": 137674190.0,
-        "Total Operating Income": 169290.95,
-        "Operating Profit": 38543.18,
+        "Total Operating Income": 169290950.0,
+        "Operating Profit": 38543180.0,
         "Net Profit": 26980220.0,
         "Number of Shares": 3128754.11,
         "EPS(Rs.)": 17.25,
@@ -950,14 +1038,22 @@
         "NPL": 189.47,
         "Cost of funds": 5.89
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:08:03.693860",
+      "parsed_at": "2026-11-14T21:17:11.206597",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 172717930.0,
@@ -969,8 +1065,8 @@
         "Investments": 2000000.0,
         "Interest Income": 439321350.0,
         "Net Interest Income": 197697270.0,
-        "Total Operating Income": 239794.21,
-        "Operating Profit": 50890.95,
+        "Total Operating Income": 239794210.0,
+        "Operating Profit": 50890950.0,
         "Net Profit": 35623670.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 12.76,
@@ -1037,14 +1133,22 @@
         "NPL": 50.54,
         "Cost of funds": 26.84
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:08:03.693813",
+      "parsed_at": "2026-11-14T21:17:11.206470",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 69509660.0,
@@ -1056,8 +1160,8 @@
         "Investments": 2000000.0,
         "Interest Income": 582827440.0,
         "Net Interest Income": 255055360.0,
-        "Total Operating Income": 310052.97,
-        "Operating Profit": 66061.83,
+        "Total Operating Income": 310052970.0,
+        "Operating Profit": 66061830.0,
         "Net Profit": 46243280.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 12.42,
@@ -1127,14 +1231,22 @@
         "Cost of funds": 18.87,
         "CD ratio": 7.41
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:08:03.693774",
+      "parsed_at": "2026-11-14T21:17:11.206338",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 188307430.0,
@@ -1146,8 +1258,8 @@
         "Investments": 2000000.0,
         "Interest Income": 146987650.0,
         "Net Interest Income": 62295980.0,
-        "Total Operating Income": 75990.37,
-        "Operating Profit": 7838.79,
+        "Total Operating Income": 75990370.0,
+        "Operating Profit": 7838790.0,
         "Net Profit": 5487160.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 5.9,
@@ -1217,14 +1329,22 @@
         "Cost of funds": 3.59,
         "CD ratio": -56.95
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:08:03.693721",
+      "parsed_at": "2026-11-14T21:17:11.206202",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 225113280.0,
@@ -1236,8 +1356,8 @@
         "Investments": 2000000.0,
         "Interest Income": 286298080.0,
         "Net Interest Income": 116912410.0,
-        "Total Operating Income": 139164.51,
-        "Operating Profit": 25639.17,
+        "Total Operating Income": 139164510.0,
+        "Operating Profit": 25639170.0,
         "Net Profit": 17947420.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 9.64,
@@ -1306,14 +1426,22 @@
         "NPL": 9.55,
         "Cost of funds": 8.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:08:03.693682",
+      "parsed_at": "2026-11-14T21:17:11.206079",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 238970040.0,
@@ -1325,8 +1453,8 @@
         "Investments": 2000000.0,
         "Interest Income": 423244370.0,
         "Net Interest Income": 180310410.0,
-        "Total Operating Income": 211886.47,
-        "Operating Profit": 45895.19,
+        "Total Operating Income": 211886470.0,
+        "Operating Profit": 45895190.0,
         "Net Profit": 32126630.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 11.5,
@@ -1395,14 +1523,22 @@
         "NPL": -11.43,
         "Cost of funds": -16.8
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:08:03.693643",
+      "parsed_at": "2026-11-14T21:17:11.205957",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 270667150.0,
@@ -1414,8 +1550,8 @@
         "Investments": 2000000.0,
         "Interest Income": 572636260.0,
         "Net Interest Income": 255009440.0,
-        "Total Operating Income": 299390.58,
-        "Operating Profit": 94501.6,
+        "Total Operating Income": 299390580.0,
+        "Operating Profit": 94501600.0,
         "Net Profit": 63125750.0,
         "Number of Shares": 3723217.39,
         "EPS(Rs.)": 16.95,
@@ -1485,14 +1621,22 @@
         "Cost of funds": -26.07,
         "CD ratio": -60.02
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:08:03.693603",
+      "parsed_at": "2026-11-14T21:17:11.205833",
       "raw": {
         "Paid Up Capital": 372321740.0,
         "Reserve and Surplus": 286272980.0,
@@ -1505,8 +1649,8 @@
         "Investments": 2000000.0,
         "Interest Income": 156957510.0,
         "Net Interest Income": 82898230.0,
-        "Total Operating Income": 97217.79,
-        "Operating Profit": 24289.8,
+        "Total Operating Income": 97217790.0,
+        "Operating Profit": 24289800.0,
         "Net Profit": 17002860.0,
         "Number of Shares": 3723217.39,
         "EPS Reported": 18.27,
@@ -1574,14 +1718,22 @@
         "Cost of funds": -18.6,
         "CD ratio": -1.53
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:08:03.693563",
+      "parsed_at": "2026-11-14T21:17:11.205706",
       "raw": {
         "Paid Up Capital": 407692310.0,
         "Reserve and Surplus": 290451140.0,
@@ -1594,8 +1746,8 @@
         "Investments": 0.0,
         "Interest Income": 315388010.0,
         "Net Interest Income": 170810770.0,
-        "Total Operating Income": 198622.3,
-        "Operating Profit": 60116.11,
+        "Total Operating Income": 198622300.0,
+        "Operating Profit": 60116110.0,
         "Net Profit": 42155190.0,
         "Number of Shares": 4076923.05,
         "EPS Reported": 20.68,
@@ -1663,14 +1815,22 @@
         "Cost of funds": -20.39,
         "CD ratio": -61.06
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:08:03.693522",
+      "parsed_at": "2026-11-14T21:17:11.205579",
       "raw": {
         "Paid Up Capital": 407692310.0,
         "Reserve and Surplus": 312237720.0,
@@ -1683,8 +1843,8 @@
         "Investments": 2000000.0,
         "Interest Income": 483221590.0,
         "Net Interest Income": 268131440.0,
-        "Total Operating Income": 309599.53,
-        "Operating Profit": 97037.33,
+        "Total Operating Income": 309599530.0,
+        "Operating Profit": 97037330.0,
         "Net Profit": 68000040.0,
         "Number of Shares": 4076923.05,
         "EPS Reported": 22.24,
@@ -1752,14 +1912,22 @@
         "Cost of funds": -17.47,
         "CD ratio": -4.19
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:08:03.693476",
+      "parsed_at": "2026-11-14T21:17:11.205451",
       "raw": {
         "Paid Up Capital": 407692310.0,
         "Reserve and Surplus": 352406810.0,
@@ -1772,8 +1940,8 @@
         "Investments": 2000000.0,
         "Interest Income": 666890500.0,
         "Net Interest Income": 381015150.0,
-        "Total Operating Income": 437852.96,
-        "Operating Profit": 154239.24,
+        "Total Operating Income": 437852960.0,
+        "Operating Profit": 154239240.0,
         "Net Profit": 108068520.0,
         "Number of Shares": 4076923.05,
         "EPS Reported": 26.51,
@@ -1841,14 +2009,22 @@
         "Cost of funds": -26.67,
         "CD ratio": -3.33
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:08:03.693434",
+      "parsed_at": "2026-11-14T21:17:11.205300",
       "raw": {
         "Paid Up Capital": 407692310.0,
         "Reserve and Surplus": 373065720.0,
@@ -1861,8 +2037,8 @@
         "Investments": 2000000.0,
         "Interest Income": 181527390.0,
         "Net Interest Income": 108785810.0,
-        "Total Operating Income": 121984.1,
-        "Operating Profit": 29013.25,
+        "Total Operating Income": 121984100.0,
+        "Operating Profit": 29013250.0,
         "Net Profit": 20340040.0,
         "Number of Shares": 4076923.05,
         "EPS Reported": 19.96,
@@ -1933,14 +2109,22 @@
         "Cost of funds": -15.43,
         "CD ratio": 0.57
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:08:03.693392",
+      "parsed_at": "2026-11-14T21:17:11.205185",
       "raw": {
         "Paid Up Capital": 448461540.0,
         "Reserve and Surplus": 290141030.0,
@@ -1953,8 +2137,8 @@
         "Investments": 2000000.0,
         "Interest Income": 355965720.0,
         "Net Interest Income": 217670770.0,
-        "Total Operating Income": 245000.92,
-        "Operating Profit": 83526.67,
+        "Total Operating Income": 245000920.0,
+        "Operating Profit": 83526670.0,
         "Net Profit": 58499440.0,
         "Number of Shares": 4484615.35,
         "EPS Reported": 26.09,
@@ -2024,14 +2208,22 @@
         "Cost of funds": -22.93,
         "CD ratio": -2.49
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:08:03.693349",
+      "parsed_at": "2026-11-14T21:17:11.205079",
       "raw": {
         "Paid Up Capital": 448461540.0,
         "Reserve and Surplus": 246454770.0,
@@ -2044,8 +2236,8 @@
         "Investments": 2000000.0,
         "Interest Income": 535894150.0,
         "Net Interest Income": 332339510.0,
-        "Total Operating Income": 380647.19,
-        "Operating Profit": 20976.54,
+        "Total Operating Income": 380647190.0,
+        "Operating Profit": 20976540.0,
         "Net Profit": 14714350.0,
         "Number of Shares": 4484615.35,
         "EPS Reported": 4.37,
@@ -2116,14 +2308,22 @@
         "Cost of funds": -20.5,
         "CD ratio": -0.09
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KMCDB",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:08:03.693295",
+      "parsed_at": "2026-11-14T21:17:11.204960",
       "raw": {
         "Paid Up Capital": 448461540.0,
         "Reserve and Surplus": 353081130.0,
@@ -2136,8 +2336,8 @@
         "Investments": 2000000.0,
         "Interest Income": 743476030.0,
         "Net Interest Income": 470918780.0,
-        "Total Operating Income": 542483.69,
-        "Operating Profit": 181803.51,
+        "Total Operating Income": 542483690.0,
+        "Operating Profit": 181803510.0,
         "Net Profit": 122883810.0,
         "Number of Shares": 4484615.35,
         "EPS Reported": 27.4,
@@ -2208,8 +2408,16 @@
         "Cost of funds": -7.4,
         "CD ratio": 3.57
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:08:03.696165"
+  "last_updated": "2026-11-14T21:17:11.211116"
 }

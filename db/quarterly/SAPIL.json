@@ -9,7 +9,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:58:43.239444",
+      "parsed_at": "2026-11-14T20:26:18.316786",
       "computed": {
         "roe_ttm": 4.5005971677099,
         "roa_ttm": 3.5813567157699,
@@ -48,7 +48,7 @@
         "Current Liabilities": 39423440.0,
         "Current Assets": 288647480.0,
         "Total Assets": 478948660.0,
-        "Revenue from Operation": 210348.8,
+        "Revenue from Operation": 210348800.0,
         "Gross Profit": 70659540.0,
         "Total Operating Profit": 21974530.0,
         "Net Profit": 17152860.0,
@@ -74,8 +74,15 @@
         "Book Value Reported",
         "ROE Reported"
       ],
-      "yoy": {}
+      "yoy": {},
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:58:43.240852"
+  "last_updated": "2026-11-14T20:26:18.317615"
 }

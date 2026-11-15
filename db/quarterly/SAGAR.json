@@ -17,7 +17,7 @@
         "Current Liabilities": 345988020.0,
         "Current Assets": 797034660.0,
         "Total Assets": 1375368720.0,
-        "Revenue from Operation": 59970.84,
+        "Revenue from Operation": 59970840.0,
         "Gross Profit": 17338170.0,
         "Total Operating Profit": -11115550.0,
         "Net Profit": -15323920.0,
@@ -52,7 +52,14 @@
         "revenue_ttm": 239883360.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAGAR",
@@ -68,7 +75,7 @@
         "Current Liabilities": 414456090.0,
         "Current Assets": 778889950.0,
         "Total Assets": 1193346040.0,
-        "Revenue from Operation": 129184.88,
+        "Revenue from Operation": 129184880.0,
         "Gross Profit": 34770220.0,
         "Total Operating Profit": -16383940.0,
         "Net Profit": -26158100.0,
@@ -103,7 +110,14 @@
         "revenue_ttm": 258369760.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAGAR",
@@ -119,7 +133,7 @@
         "Current Liabilities": 396845290.0,
         "Current Assets": 679476520.0,
         "Total Assets": 1476786820.0,
-        "Revenue from Operation": 194052.83,
+        "Revenue from Operation": 194052830.0,
         "Gross Profit": 50669530.0,
         "Total Operating Profit": 64274160.0,
         "Net Profit": -35357200.0,
@@ -154,7 +168,14 @@
         "revenue_ttm": 258672422.39
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAGAR",
@@ -170,7 +191,7 @@
         "Current Liabilities": 364151880.0,
         "Current Assets": 765768080.0,
         "Total Assets": 1538116190.0,
-        "Revenue from Operation": 476362.02,
+        "Revenue from Operation": 476362020.0,
         "Gross Profit": 99207950.0,
         "Total Operating Profit": 97482710.0,
         "Net Profit": -57269660.0,
@@ -205,7 +226,14 @@
         "revenue_ttm": 476362020.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:56:16.188360"

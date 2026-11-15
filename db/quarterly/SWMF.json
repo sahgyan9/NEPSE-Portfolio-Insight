@@ -89,8 +89,8 @@
         "Investments": 2000000.0,
         "Interest Income": 613734000.0,
         "Net Interest Income": 308030000.0,
-        "Total Operating Income": 390603.0,
-        "Operating Profit": 159707.0,
+        "Total Operating Income": 390603000.0,
+        "Operating Profit": 159707000.0,
         "Net Profit": 102569000.0,
         "Number of Shares": 7919850.0,
         "EPS(Rs.)": 17.27,
@@ -132,7 +132,15 @@
         "graham_number": 253.61
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -151,8 +159,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1027744080.0,
         "Net Interest Income": 467607150.0,
-        "Total Operating Income": 581084.16,
-        "Operating Profit": 18787.2,
+        "Total Operating Income": 581084160.0,
+        "Operating Profit": 18787200.0,
         "Net Profit": 139637400.0,
         "Number of Shares": 7919850.0,
         "EPS(Rs.)": 17.63,
@@ -197,7 +205,15 @@
         "eps_ttm": -56.63,
         "EPS(Rs.)": -56.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -216,8 +232,8 @@
         "Investments": 42000000.0,
         "Interest Income": 432822430.0,
         "Net Interest Income": 175058630.0,
-        "Total Operating Income": 219522.66,
-        "Operating Profit": 63352.91,
+        "Total Operating Income": 219522660.0,
+        "Operating Profit": 63352910.0,
         "Net Profit": 44347030.0,
         "Number of Shares": 7919847.9,
         "EPS(Rs.)": 22.4,
@@ -262,7 +278,15 @@
         "eps_ttm": -54.62,
         "EPS(Rs.)": -54.62
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -281,8 +305,8 @@
         "Investments": 42000000.0,
         "Interest Income": 803433500.0,
         "Net Interest Income": 322836150.0,
-        "Total Operating Income": 404915.89,
-        "Operating Profit": 99132.62,
+        "Total Operating Income": 404915890.0,
+        "Operating Profit": 99132620.0,
         "Net Profit": 69392830.0,
         "Number of Shares": 7919847.9,
         "EPS(Rs.)": 17.52,
@@ -327,7 +351,15 @@
         "eps_ttm": -46.27,
         "EPS(Rs.)": -46.27
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -346,8 +378,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1167906930.0,
         "Net Interest Income": 444108060.0,
-        "Total Operating Income": 553046.91,
-        "Operating Profit": 78913.16,
+        "Total Operating Income": 553046910.0,
+        "Operating Profit": 78913160.0,
         "Net Profit": 56379140.0,
         "Number of Shares": 7919847.9,
         "EPS(Rs.)": 9.49,
@@ -416,7 +448,15 @@
         "NPL": 159.66,
         "Cost of funds": 22.33
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -435,8 +475,8 @@
         "Investments": 42000000.0,
         "Interest Income": 1534439840.0,
         "Net Interest Income": 570090210.0,
-        "Total Operating Income": 710655.18,
-        "Operating Profit": 112328.54,
+        "Total Operating Income": 710655180.0,
+        "Operating Profit": 112328540.0,
         "Net Profit": 79737380.0,
         "Number of Shares": 9107825.09,
         "EPS(Rs.)": 8.75,
@@ -505,7 +545,15 @@
         "NPL": 95.95,
         "Cost of funds": 18.32
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -524,8 +572,8 @@
         "Investments": 42000000.0,
         "Interest Income": 347749720.0,
         "Net Interest Income": 135421930.0,
-        "Total Operating Income": 176357.6,
-        "Operating Profit": 16846.26,
+        "Total Operating Income": 176357600.0,
+        "Operating Profit": 16846260.0,
         "Net Profit": 11792380.0,
         "Number of Shares": 9107825.09,
         "EPS(Rs.)": 5.18,
@@ -594,7 +642,15 @@
         "NPL": 90.97,
         "Cost of funds": -9.56
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -613,8 +669,8 @@
         "Investments": 42000000.0,
         "Interest Income": 683625120.0,
         "Net Interest Income": 254993020.0,
-        "Total Operating Income": 340716.35,
-        "Operating Profit": 33554.83,
+        "Total Operating Income": 340716350.0,
+        "Operating Profit": 33554830.0,
         "Net Profit": 23488380.0,
         "Number of Shares": 9107825.09,
         "EPS(Rs.)": 5.16,
@@ -683,7 +739,15 @@
         "NPL": 74.76,
         "Cost of funds": 1.14
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -702,8 +766,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1019049870.0,
         "Net Interest Income": 378757550.0,
-        "Total Operating Income": 479207.84,
-        "Operating Profit": 32768.86,
+        "Total Operating Income": 479207840.0,
+        "Operating Profit": 32768860.0,
         "Net Profit": 22938200.0,
         "Number of Shares": 9107825.09,
         "EPS(Rs.)": 3.36,
@@ -773,7 +837,15 @@
         "Cost of funds": -22.62,
         "CD ratio": -0.92
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -792,8 +864,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1499383590.0,
         "Net Interest Income": 620351450.0,
-        "Total Operating Income": 765953.63,
-        "Operating Profit": 140995.08,
+        "Total Operating Income": 765953630.0,
+        "Operating Profit": 140995080.0,
         "Net Profit": 98696560.0,
         "Number of Shares": 9107825.09,
         "EPS(Rs.)": 10.84,
@@ -863,7 +935,15 @@
         "Cost of funds": -23.06,
         "CD ratio": -3.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -882,8 +962,8 @@
         "Investments": 42000000.0,
         "Interest Income": 294093760.0,
         "Net Interest Income": 87061640.0,
-        "Total Operating Income": 115071.79,
-        "Operating Profit": -47183.81,
+        "Total Operating Income": 115071790.0,
+        "Operating Profit": -47183810.0,
         "Net Profit": -47183810.0,
         "Number of Shares": 10436663.17,
         "EPS(Rs.)": -18.08,
@@ -952,7 +1032,15 @@
         "Cost of funds": -13.91,
         "CD ratio": -5.91
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -972,8 +1060,8 @@
         "Investments": 42700000.0,
         "Interest Income": 705866150.0,
         "Net Interest Income": 303962640.0,
-        "Total Operating Income": 366928.55,
-        "Operating Profit": 53606.36,
+        "Total Operating Income": 366928550.0,
+        "Operating Profit": 53606360.0,
         "Net Profit": 37524460.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 6.78,
@@ -1041,7 +1129,15 @@
         "Cost of funds": -16.7,
         "CD ratio": 0.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1061,8 +1157,8 @@
         "Investments": 2700000.0,
         "Interest Income": 1082987710.0,
         "Net Interest Income": 485919640.0,
-        "Total Operating Income": 585885.5,
-        "Operating Profit": 112418.25,
+        "Total Operating Income": 585885500.0,
+        "Operating Profit": 112418250.0,
         "Net Profit": 78692770.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 9.48,
@@ -1130,7 +1226,15 @@
         "Cost of funds": -15.33,
         "CD ratio": 2.06
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1150,8 +1254,8 @@
         "Investments": 2700000.0,
         "Interest Income": 1564651670.0,
         "Net Interest Income": 814261860.0,
-        "Total Operating Income": 933065.52,
-        "Operating Profit": 197491.64,
+        "Total Operating Income": 933065520.0,
+        "Operating Profit": 197491640.0,
         "Net Profit": 138244150.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 12.5,
@@ -1219,7 +1323,15 @@
         "Cost of funds": -17.16,
         "CD ratio": 2.62
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1239,8 +1351,8 @@
         "Investments": 2700000.0,
         "Interest Income": 401662470.0,
         "Net Interest Income": 207530870.0,
-        "Total Operating Income": 238698.77,
-        "Operating Profit": 89217.72,
+        "Total Operating Income": 238698770.0,
+        "Operating Profit": 89217720.0,
         "Net Profit": 62452400.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 22.58,
@@ -1308,7 +1420,15 @@
         "Cost of funds": -10.94,
         "CD ratio": 5.31
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1332,8 +1452,8 @@
         "Interest Income": 804638110.0,
         "Net Interest Income": 430380230.0,
         "Investment Securities": 2700000.0,
-        "Total Operating Income": 497693.54,
-        "Operating Profit": 167345.91,
+        "Total Operating Income": 497693540.0,
+        "Operating Profit": 167345910.0,
         "Net Profit": 117142130.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 21.18,
@@ -1410,7 +1530,15 @@
         "Cost of funds": -11.07,
         "CD ratio": 4.93
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1430,8 +1558,8 @@
         "Investments": 2700000.0,
         "Interest Income": 1206743430.0,
         "Net Interest Income": 660545980.0,
-        "Total Operating Income": 765434.34,
-        "Operating Profit": 270538.23,
+        "Total Operating Income": 765434340.0,
+        "Operating Profit": 270538230.0,
         "Net Profit": 189376760.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 22.82,
@@ -1502,7 +1630,15 @@
         "Cost of funds": -13.09,
         "CD ratio": -1.48
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SWMF",
@@ -1522,8 +1658,8 @@
         "Investments": 2700000.0,
         "Interest Income": 1745722050.0,
         "Net Interest Income": 1011181450.0,
-        "Total Operating Income": 1143329.11,
-        "Operating Profit": 353817.97,
+        "Total Operating Income": 1143329110.0,
+        "Operating Profit": 353817970.0,
         "Net Profit": 217849110.0,
         "Number of Shares": 11062862.96,
         "EPS Reported": 19.69,
@@ -1594,7 +1730,15 @@
         "Cost of funds": -11.25,
         "CD ratio": 4.34
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:14:56.881223"

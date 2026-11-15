@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:41:40.884063",
+      "parsed_at": "2026-11-15T11:53:06.177910",
       "raw": {
         "EPS(Rs.)": 42.63
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:41:40.884053",
+      "parsed_at": "2026-11-15T11:53:06.177885",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 144128000.0,
@@ -43,8 +43,8 @@
         "Total Investment and Loans": 322944000.0,
         "Total Revenue": 3900000.0,
         "Income From Investment Loans And Others": 816000.0,
-        "Total Expenses And Provisions": 2388.0,
-        "Management Expenses": 1417.0,
+        "Total Expenses And Provisions": 2388000.0,
+        "Management Expenses": 1417000.0,
         "Net Profit": 1512000.0,
         "Net Premium": 19065000.0,
         "Net Claim Payment": 20351000.0,
@@ -92,14 +92,22 @@
         "graham_number": 197.58
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:41:40.883989",
+      "parsed_at": "2026-11-15T11:53:06.177697",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 151743000.0,
@@ -111,8 +119,8 @@
         "Total Investment and Loans": 320212000.0,
         "Total Revenue": 16610000.0,
         "Income From Investment Loans And Others": 2223000.0,
-        "Total Expenses And Provisions": 7483.0,
-        "Management Expenses": 2268.0,
+        "Total Expenses And Provisions": 7483000.0,
+        "Management Expenses": 2268000.0,
         "Net Profit": 9127000.0,
         "Net Premium": 36189000.0,
         "Net Claim Payment": 27169000.0,
@@ -160,14 +168,22 @@
         "graham_number": 347.78
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:41:40.883916",
+      "parsed_at": "2026-11-15T11:53:06.177510",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 154199000.0,
@@ -179,8 +195,8 @@
         "Total Investment and Loans": 338368000.0,
         "Total Revenue": 21262000.0,
         "Income From Investment Loans And Others": 4112000.0,
-        "Total Expenses And Provisions": 9679.0,
-        "Management Expenses": 3061.0,
+        "Total Expenses And Provisions": 9679000.0,
+        "Management Expenses": 3061000.0,
         "Net Profit": 11582000.0,
         "Net Premium": 52706000.0,
         "Net Claim Payment": 48646000.0,
@@ -228,14 +244,22 @@
         "graham_number": 321.14
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:41:40.883844",
+      "parsed_at": "2026-11-15T11:53:06.177326",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 170737000.0,
@@ -247,8 +271,8 @@
         "Total Investment and Loans": 393411000.0,
         "Total Revenue": 51236000.0,
         "Income From Investment Loans And Others": 6168000.0,
-        "Total Expenses And Provisions": 23205.0,
-        "Management Expenses": 5158.0,
+        "Total Expenses And Provisions": 23205000.0,
+        "Management Expenses": 5158000.0,
         "Net Profit": 28121000.0,
         "Net Premium": 98778000.0,
         "Net Claim Payment": 62536000.0,
@@ -299,14 +323,22 @@
         "eps_ttm": 45.91,
         "EPS(Rs.)": 45.91
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T08:41:40.883737",
+      "parsed_at": "2026-11-15T11:53:06.177138",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 121396000.0,
@@ -319,8 +351,8 @@
         "Total Investment and Loans": 324588000.0,
         "Total Revenue": 2836000.0,
         "Income From Investment Loans And Others": 2077000.0,
-        "Total Expenses And Provisions": 1785.0,
-        "Management Expenses": 1110.0,
+        "Total Expenses And Provisions": 1785000.0,
+        "Management Expenses": 1110000.0,
         "Net Profit": 1051000.0,
         "Net Premium": 29688000.0,
         "Net Claim Payment": 9479000.0,
@@ -396,14 +428,22 @@
         "Book Value(Rs.)": 34.84,
         "ROE": -48.54
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T08:41:40.883629",
+      "parsed_at": "2026-11-15T11:53:06.176941",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 142099000.0,
@@ -416,8 +456,8 @@
         "Total Investment and Loans": 411530000.0,
         "Total Revenue": 34576000.0,
         "Income From Investment Loans And Others": 5118000.0,
-        "Total Expenses And Provisions": 14273.0,
-        "Management Expenses": 2443.0,
+        "Total Expenses And Provisions": 14273000.0,
+        "Management Expenses": 2443000.0,
         "Net Profit": 20703000.0,
         "Net Premium": 52560000.0,
         "Net Claim Payment": 22199000.0,
@@ -493,14 +533,22 @@
         "Book Value(Rs.)": 38.29,
         "ROE": 63.97
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T08:41:40.883532",
+      "parsed_at": "2026-11-15T11:53:06.176745",
       "raw": {
         "Paid Up Capital": 101250000.0,
         "Reserves and Surplus": 110649000.0,
@@ -513,8 +561,8 @@
         "Total Investment and Loans": 432559000.0,
         "Total Revenue": 36739000.0,
         "Income From Investment Loans And Others": 8907000.0,
-        "Total Expenses And Provisions": 15627.0,
-        "Management Expenses": 3563.0,
+        "Total Expenses And Provisions": 15627000.0,
+        "Management Expenses": 3563000.0,
         "Net Profit": 21112000.0,
         "Net Premium": 83869000.0,
         "Net Claim Payment": 30205000.0,
@@ -590,14 +638,22 @@
         "Book Value(Rs.)": 44.29,
         "ROE": 26.43
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:41:40.883426",
+      "parsed_at": "2026-11-15T11:53:06.176550",
       "raw": {
         "Paid Up Capital": 121500000.0,
         "Reserves and Surplus": 114877000.0,
@@ -610,8 +666,8 @@
         "Total Investment and Loans": 407893000.0,
         "Total Revenue": 80522000.0,
         "Income From Investment Loans And Others": 11213000.0,
-        "Total Expenses And Provisions": 34933.0,
-        "Management Expenses": 5674.0,
+        "Total Expenses And Provisions": 34933000.0,
+        "Management Expenses": 5674000.0,
         "Net Profit": 45589000.0,
         "Net Premium": 101863000.0,
         "Net Claim Payment": 48177000.0,
@@ -687,14 +743,22 @@
         "Book Value(Rs.)": 20.39,
         "ROE": 12.21
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T08:41:40.883310",
+      "parsed_at": "2026-11-15T11:53:06.176346",
       "raw": {
         "Paid Up Capital": 1095930000.0,
         "Reserves and Surplus": 348718000.0,
@@ -706,8 +770,8 @@
         "Total Investment and Loans": 1534187000.0,
         "Total Revenue": 246992000.0,
         "Income From Investment Loans And Others": 88896000.0,
-        "Total Expenses And Provisions": 98705.0,
-        "Management Expenses": 11616.0,
+        "Total Expenses And Provisions": 98705000.0,
+        "Management Expenses": 11616000.0,
         "Net Profit": 148287000.0,
         "Net Premium": 389156000.0,
         "Net Claim Payment": 150829000.0,
@@ -781,14 +845,22 @@
         "Book Value(Rs.)": -57.03,
         "ROE": 910.38
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T08:41:40.883201",
+      "parsed_at": "2026-11-15T11:53:06.176149",
       "raw": {
         "Paid Up Capital": 1183604000.0,
         "Reserves and Surplus": 383376000.0,
@@ -800,8 +872,8 @@
         "Total Investment and Loans": 1690337000.0,
         "Total Revenue": 347510000.0,
         "Income From Investment Loans And Others": 137890000.0,
-        "Total Expenses And Provisions": 143639.0,
-        "Management Expenses": 17252.0,
+        "Total Expenses And Provisions": 143639000.0,
+        "Management Expenses": 17252000.0,
         "Net Profit": 203871000.0,
         "Net Premium": 436172000.0,
         "Net Claim Payment": 228342000.0,
@@ -875,14 +947,22 @@
         "Book Value(Rs.)": -59.15,
         "ROE": 3.13
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "EIC",
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T08:41:40.883084",
+      "parsed_at": "2026-11-15T11:53:06.175913",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -901,7 +981,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:41:40.883078",
+      "parsed_at": "2026-11-15T11:53:06.175899",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -920,7 +1000,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:41:40.883059",
+      "parsed_at": "2026-11-15T11:53:06.175873",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -935,5 +1015,5 @@
       "sector": "Non-Life Insurance"
     }
   ],
-  "last_updated": "2026-11-07T08:41:40.885009"
+  "last_updated": "2026-11-15T11:53:06.179596"
 }

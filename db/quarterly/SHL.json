@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:42:46.447303",
+      "parsed_at": "2026-11-14T20:25:36.519774",
       "raw": {
         "EPS(Rs.)": 9.99
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:42:46.447285",
+      "parsed_at": "2026-11-14T20:25:36.519767",
       "raw": {
         "EPS(Rs.)": 8.75
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:42:46.447267",
+      "parsed_at": "2026-11-14T20:25:36.519756",
       "raw": {
         "Paid Up Capital": 842579730.0,
         "Reserve and Surplus": 698261460.0,
@@ -63,8 +63,8 @@
         "Current Liabilities": 581514090.0,
         "Current Assets": 374607720.0,
         "Total Assets": 2284616960.0,
-        "Revenue from Operations": 743859.85,
-        "Operating Profit": 116676.6,
+        "Revenue from Operations": 743859850.0,
+        "Operating Profit": 116676600.0,
         "Net Profit": 108597370.0,
         "Number of Shares": 84257973.0,
         "EPS(Rs.)": 1.72,
@@ -97,14 +97,22 @@
         "graham_number": 26.6
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:42:46.447185",
+      "parsed_at": "2026-11-14T20:25:36.519699",
       "raw": {
         "Paid Up Capital": 842579730.0,
         "Reserve and Surplus": 891295140.0,
@@ -113,8 +121,8 @@
         "Current Liabilities": 510079420.0,
         "Current Assets": 417507630.0,
         "Total Assets": 2399106290.0,
-        "Revenue from Operations": 1371596.18,
-        "Operating Profit": 319575.22,
+        "Revenue from Operations": 1371596180.0,
+        "Operating Profit": 319575220.0,
         "Net Profit": 301631050.0,
         "Number of Shares": 84257973.0,
         "EPS(Rs.)": 3.58,
@@ -147,14 +155,22 @@
         "graham_number": 40.72
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:42:46.447104",
+      "parsed_at": "2026-11-14T20:25:36.519644",
       "raw": {
         "Paid Up Capital": 842579730.0,
         "Reserve and Surplus": 998751210.0,
@@ -163,9 +179,9 @@
         "Current Liabilities": 490752720.0,
         "Current Assets": 444408790.0,
         "Total Assets": 2503599800.0,
-        "Revenue from Operations": 413273.2,
+        "Revenue from Operations": 413273200.0,
         "Gross Profit": 346573020.0,
-        "Operating Profit": 126893.54,
+        "Operating Profit": 126893540.0,
         "Net Profit": 112006450.0,
         "Number of Shares": 84257973.0,
         "EPS(Rs.)": 5.32,
@@ -202,14 +218,22 @@
         "eps_ttm": -46.75,
         "EPS(Rs.)": -46.75
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:42:46.447016",
+      "parsed_at": "2026-11-14T20:25:36.519583",
       "raw": {
         "Paid Up Capital": 842579730.0,
         "Reserve and Surplus": 1138183410.0,
@@ -218,8 +242,8 @@
         "Current Liabilities": 528719350.0,
         "Current Assets": 585080490.0,
         "Total Assets": 2677511490.0,
-        "Revenue from Operations": 960146.89,
-        "Operating Profit": 306265.36,
+        "Revenue from Operations": 960146890.0,
+        "Operating Profit": 306265360.0,
         "Net Profit": 251438640.0,
         "Number of Shares": 84257973.0,
         "EPS(Rs.)": 5.97,
@@ -255,14 +279,22 @@
         "eps_ttm": -31.77,
         "EPS(Rs.)": -31.77
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:42:46.446935",
+      "parsed_at": "2026-11-14T20:25:36.519526",
       "raw": {
         "Paid Up Capital": 884715060.0,
         "Reserve and Surplus": 1036192940.0,
@@ -271,8 +303,8 @@
         "Current Liabilities": 538183630.0,
         "Current Assets": 540439510.0,
         "Total Assets": 2695140870.0,
-        "Revenue from Operations": 1509284.09,
-        "Operating Profit": 460373.15,
+        "Revenue from Operations": 1509284090.0,
+        "Operating Profit": 460373150.0,
         "Net Profit": 371179680.0,
         "Number of Shares": 88471506.0,
         "EPS(Rs.)": 5.59,
@@ -323,14 +355,22 @@
         "Book Value(Rs.)": 18.7,
         "ROE": 174.04
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:42:46.446853",
+      "parsed_at": "2026-11-14T20:25:36.519470",
       "raw": {
         "Paid Up Capital": 884715060.0,
         "Reserve and Surplus": 1210168220.0,
@@ -339,8 +379,8 @@
         "Current Liabilities": 518679920.0,
         "Current Assets": 505765820.0,
         "Total Assets": 2792455130.0,
-        "Revenue from Operations": 2249188.51,
-        "Operating Profit": 684025.48,
+        "Revenue from Operations": 2249188510.0,
+        "Operating Profit": 684025480.0,
         "Net Profit": 545154960.0,
         "Number of Shares": 88471506.0,
         "EPS(Rs.)": 6.16,
@@ -391,14 +431,22 @@
         "Book Value(Rs.)": 15.06,
         "ROE": 49.54
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:42:46.446771",
+      "parsed_at": "2026-11-14T20:25:36.519413",
       "raw": {
         "Paid Up Capital": 884715060.0,
         "Reserve and Surplus": 1324039830.0,
@@ -407,8 +455,8 @@
         "Current Liabilities": 401082430.0,
         "Current Assets": 496562530.0,
         "Total Assets": 2798733650.0,
-        "Revenue from Operations": 399699.64,
-        "Operating Profit": 119506.16,
+        "Revenue from Operations": 399699640.0,
+        "Operating Profit": 119506160.0,
         "Net Profit": 102342150.0,
         "Number of Shares": 8847150.6,
         "EPS(Rs.)": 4.63,
@@ -459,14 +507,22 @@
         "Book Value(Rs.)": 14.28,
         "ROE": -23.84
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:42:46.446690",
+      "parsed_at": "2026-11-14T20:25:36.519357",
       "raw": {
         "Paid Up Capital": 884715060.0,
         "Reserve and Surplus": 1484814420.0,
@@ -475,8 +531,8 @@
         "Current Liabilities": 489489140.0,
         "Current Assets": 691026220.0,
         "Total Assets": 3046296710.0,
-        "Revenue from Operations": 1050823.11,
-        "Operating Profit": 317964.45,
+        "Revenue from Operations": 1050823110.0,
+        "Operating Profit": 317964450.0,
         "Net Profit": 263116750.0,
         "Number of Shares": 88471506.0,
         "EPS(Rs.)": 5.95,
@@ -527,14 +583,22 @@
         "Book Value(Rs.)": 13.91,
         "ROE": -12.52
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:42:46.446606",
+      "parsed_at": "2026-11-14T20:25:36.519300",
       "raw": {
         "Paid Up Capital": 928953700.0,
         "Reserve and Surplus": 1354636550.0,
@@ -543,8 +607,8 @@
         "Current Liabilities": 448777920.0,
         "Current Assets": 548967820.0,
         "Total Assets": 3017214430.0,
-        "Revenue from Operations": 1681066.56,
-        "Operating Profit": 512744.43,
+        "Revenue from Operations": 1681066560.0,
+        "Operating Profit": 512744430.0,
         "Net Profit": 412322580.0,
         "Number of Shares": 92895370.0,
         "EPS(Rs.)": 5.92,
@@ -595,7 +659,15 @@
         "Book Value(Rs.)": 13.22,
         "ROE": -6.56
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHL",
@@ -603,7 +675,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:42:46.446519",
+      "parsed_at": "2026-11-14T20:25:36.519239",
       "computed": {
         "pe_ratio": 98.9,
         "pb_ratio": 25.4,
@@ -645,9 +717,9 @@
         "Current Liabilities": 440584150.0,
         "Current Assets": 453614750.0,
         "Total Assets": 3005041510.0,
-        "Revenue from Operations": 2497545.57,
+        "Revenue from Operations": 2497545570.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 747894.23,
+        "Operating Profit": 747894230.0,
         "Net Profit": 601077610.0,
         "Number of Shares": 92895370.0,
         "EPS Reported": 6.47,
@@ -692,6 +764,14 @@
         "EPS Reported": 2.46,
         "Book Value Reported": 6.22,
         "ROE Reported": -3.54
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -700,7 +780,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:46.446432",
+      "parsed_at": "2026-11-14T20:25:36.519178",
       "computed": {
         "pe_ratio": 88.9,
         "pb_ratio": 22.6,
@@ -742,9 +822,9 @@
         "Current Liabilities": 482694800.0,
         "Current Assets": 533386670.0,
         "Total Assets": 3178399120.0,
-        "Revenue from Operations": 514383.33,
+        "Revenue from Operations": 514383330.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 152019.08,
+        "Operating Profit": 152019080.0,
         "Net Profit": 121113370.0,
         "Number of Shares": 92895370.0,
         "EPS Reported": 5.22,
@@ -789,6 +869,14 @@
         "EPS Reported": 2.46,
         "Book Value Reported": 6.22,
         "ROE Reported": -3.54
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -797,7 +885,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:46.446345",
+      "parsed_at": "2026-11-14T20:25:36.519087",
       "computed": {
         "pe_ratio": 81.4,
         "pb_ratio": 20.3,
@@ -839,9 +927,9 @@
         "Current Liabilities": 527305350.0,
         "Current Assets": 541171430.0,
         "Total Assets": 3277987170.0,
-        "Revenue from Operations": 1219576.41,
+        "Revenue from Operations": 1219576410.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 370732.06,
+        "Operating Profit": 370732060.0,
         "Net Profit": 301742210.0,
         "Number of Shares": 92895370.0,
         "EPS Reported": 6.5,
@@ -886,6 +974,14 @@
         "EPS Reported": 2.46,
         "Book Value Reported": 6.22,
         "ROE Reported": -3.54
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -894,7 +990,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:46.446258",
+      "parsed_at": "2026-11-14T20:25:36.519022",
       "computed": {
         "pe_ratio": 86.7,
         "pb_ratio": 22.9,
@@ -936,8 +1032,8 @@
         "Current Liabilities": 473587460.0,
         "Current Assets": 511987180.0,
         "Total Assets": 3399431270.0,
-        "Revenue from Operations": 1890817.22,
-        "Operating Profit": 591745.25,
+        "Revenue from Operations": 1890817220.0,
+        "Operating Profit": 591745250.0,
         "Net Profit": 467392960.0,
         "Number of Shares": 102186269.0,
         "EPS Reported": 6.1,
@@ -983,6 +1079,14 @@
         "EPS Reported": 2.46,
         "Book Value Reported": 6.22,
         "ROE Reported": -3.54
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -991,7 +1095,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:46.446171",
+      "parsed_at": "2026-11-14T20:25:36.518960",
       "computed": {
         "pe_ratio": 85.6,
         "pb_ratio": 20.7,
@@ -1033,8 +1137,8 @@
         "Current Liabilities": 415948680.0,
         "Current Assets": 374007440.0,
         "Total Assets": 3488210390.0,
-        "Revenue from Operations": 2770089.63,
-        "Operating Profit": 828475.12,
+        "Revenue from Operations": 2770089630.0,
+        "Operating Profit": 828475120.0,
         "Net Profit": 670709970.0,
         "Number of Shares": 102186269.0,
         "EPS Reported": 6.56,
@@ -1080,6 +1184,14 @@
         "EPS Reported": 1.39,
         "Book Value Reported": 6.76,
         "ROE Reported": -5.03
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1088,7 +1200,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:46.446081",
+      "parsed_at": "2026-11-14T20:25:36.518897",
       "computed": {
         "pe_ratio": 81.7,
         "pb_ratio": 19.7,
@@ -1130,8 +1242,8 @@
         "Current Liabilities": 557879030.0,
         "Current Assets": 490424110.0,
         "Total Assets": 3691042920.0,
-        "Revenue from Operations": 627940.74,
-        "Operating Profit": 144091.41,
+        "Revenue from Operations": 627940740.0,
+        "Operating Profit": 144091410.0,
         "Net Profit": 123586030.0,
         "Number of Shares": 102186269.0,
         "EPS Reported": 4.84,
@@ -1177,6 +1289,14 @@
         "EPS Reported": -7.28,
         "Book Value Reported": 5.91,
         "ROE Reported": -12.45
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1185,7 +1305,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:46.446047",
+      "parsed_at": "2026-11-14T20:25:36.518835",
       "computed": {
         "pe_ratio": 86.8,
         "pb_ratio": 20.2,
@@ -1227,8 +1347,8 @@
         "Current Liabilities": 570786020.0,
         "Current Assets": 642271510.0,
         "Total Assets": 3813141810.0,
-        "Revenue from Operations": 1459710.95,
-        "Operating Profit": 418606.73,
+        "Revenue from Operations": 1459710950.0,
+        "Operating Profit": 418606730.0,
         "Net Profit": 347568700.0,
         "Number of Shares": 102186269.0,
         "EPS Reported": 6.8,
@@ -1274,6 +1394,14 @@
         "EPS Reported": 4.62,
         "Book Value Reported": 10.41,
         "ROE Reported": -5.17
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1282,7 +1410,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:46.446016",
+      "parsed_at": "2026-11-14T20:25:36.518765",
       "computed": {
         "pe_ratio": 81.7,
         "pb_ratio": 19.9,
@@ -1324,8 +1452,8 @@
         "Current Liabilities": 433620730.0,
         "Current Assets": 648778100.0,
         "Total Assets": 3839072930.0,
-        "Revenue from Operations": 2249778.82,
-        "Operating Profit": 680837.14,
+        "Revenue from Operations": 2249778820.0,
+        "Operating Profit": 680837140.0,
         "Net Profit": 550732620.0,
         "Number of Shares": 117515254.0,
         "EPS Reported": 6.25,
@@ -1371,6 +1499,14 @@
         "EPS Reported": 2.46,
         "Book Value Reported": 6.2,
         "ROE Reported": -3.51
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1378,7 +1514,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:46.445979",
+      "parsed_at": "2026-11-14T20:25:36.518686",
       "raw": {
         "Paid Up Capital": 1175152540.0,
         "Reserve and Surplus": 2176569290.0,
@@ -1387,9 +1523,9 @@
         "Current Liabilities": 405734300.0,
         "Current Assets": 730355170.0,
         "Total Assets": 3991535820.0,
-        "Revenue from Operations": 3148091.7,
+        "Revenue from Operations": 3148091700.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 922435.79,
+        "Operating Profit": 922435790.0,
         "Net Profit": 761106090.0,
         "Number of Shares": 117515254.0,
         "EPS Reported": 6.48,
@@ -1441,8 +1577,16 @@
         "Book Value Reported": 5.05,
         "ROE Reported": -6.04
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:46.449466"
+  "last_updated": "2026-11-14T20:25:36.521156"
 }

@@ -21,8 +21,8 @@
         "Total Investment and Loans": 4067714000.0,
         "Total Revenue": 340934000.0,
         "Income From Investment Loans And Others": 131526000.0,
-        "Total Expenses And Provisions": 138932.0,
-        "Management Expenses": 32722.0,
+        "Total Expenses And Provisions": 138932000.0,
+        "Management Expenses": 32722000.0,
         "Net Profit": 202002000.0,
         "Net Premium": 619714000.0,
         "Net Claim Payment": 415161000.0,
@@ -71,7 +71,15 @@
         "graham_number": 203.18
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -90,7 +98,7 @@
         "Total Investment and Loans": 4019415450.0,
         "Total Revenue": 371712280.0,
         "Income From Investment Loans And Others": 88537140.0,
-        "Total Expenses And Provisions": 316551.51,
+        "Total Expenses And Provisions": 316551510.0,
         "Net Profit": 38699700.0,
         "Net Premium": 235283240.0,
         "Net Claim Payment": 162315030.0,
@@ -135,7 +143,14 @@
         "graham_number": 177.33
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -154,7 +169,7 @@
         "Total Investment and Loans": 4489025340.0,
         "Total Revenue": 759630300.0,
         "Income From Investment Loans And Others": 182733170.0,
-        "Total Expenses And Provisions": 570926.35,
+        "Total Expenses And Provisions": 570926350.0,
         "Net Profit": 131887760.0,
         "Net Premium": 444057270.0,
         "Net Claim Payment": 243908760.0,
@@ -201,7 +216,14 @@
         "graham_number": 246.34
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -220,7 +242,7 @@
         "Total Investment and Loans": 4597487660.0,
         "Total Revenue": 1278207580.0,
         "Income From Investment Loans And Others": 256897770.0,
-        "Total Expenses And Provisions": 867731.2,
+        "Total Expenses And Provisions": 867731200.0,
         "Net Profit": 274224220.0,
         "Net Premium": 784443550.0,
         "Net Claim Payment": 357964360.0,
@@ -265,7 +287,14 @@
         "graham_number": 296.7
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -284,7 +313,7 @@
         "Total Investment and Loans": 4297661770.0,
         "Total Revenue": 1914570550.0,
         "Income From Investment Loans And Others": 330022880.0,
-        "Total Expenses And Provisions": 1331198.5,
+        "Total Expenses And Provisions": 1331198500.0,
         "Net Profit": 385285130.0,
         "Net Premium": 1209254320.0,
         "Net Claim Payment": 544242520.0,
@@ -353,7 +382,14 @@
         "Book Value(Rs.)": 2.77,
         "ROE": 68.35
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -373,7 +409,7 @@
         "Total Investment and Loans": 4343690110.0,
         "Total Revenue": 320029440.0,
         "Income From Investment Loans And Others": 76276530.0,
-        "Total Expenses And Provisions": 345951.73,
+        "Total Expenses And Provisions": 345951730.0,
         "Management Expenses": 0.0,
         "Net Profit": -18145610.0,
         "Net Premium": 193040960.0,
@@ -444,7 +480,14 @@
         "Gross Claim Payments": -56.54,
         "Number of Shares": 10.26
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -464,7 +507,7 @@
         "Total Investment and Loans": 4116551860.0,
         "Total Revenue": 699380700.0,
         "Income From Investment Loans And Others": 132179170.0,
-        "Total Expenses And Provisions": 603352.74,
+        "Total Expenses And Provisions": 603352740.0,
         "Management Expenses": 0.0,
         "Net Profit": 69683620.0,
         "Net Premium": 443795410.0,
@@ -537,7 +580,14 @@
         "Claims Payables": -100.0,
         "Number of Shares": 10.26
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -557,7 +607,7 @@
         "Total Investment and Loans": 4303647780.0,
         "Total Revenue": 1108050480.0,
         "Income From Investment Loans And Others": 176200230.0,
-        "Total Expenses And Provisions": 942161.36,
+        "Total Expenses And Provisions": 942161360.0,
         "Management Expenses": 0.0,
         "Net Profit": 116122380.0,
         "Net Premium": 720431500.0,
@@ -629,7 +679,14 @@
         "Gross Claim Payments": 12.16,
         "Number of Shares": 10.26
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -649,7 +706,7 @@
         "Total Investment and Loans": 4265726500.0,
         "Total Revenue": 1744856230.0,
         "Income From Investment Loans And Others": 221488020.0,
-        "Total Expenses And Provisions": 1416456.93,
+        "Total Expenses And Provisions": 1416456930.0,
         "Management Expenses": 0.0,
         "Net Profit": 216432840.0,
         "Net Premium": 1175037820.0,
@@ -721,7 +778,14 @@
         "Gross Claim Payments": 27.82,
         "Number of Shares": 10.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -741,7 +805,7 @@
         "Total Investment and Loans": 4479546470.0,
         "Total Revenue": 363461680.0,
         "Income From Investment Loans And Others": 43316200.0,
-        "Total Expenses And Provisions": 579452.16,
+        "Total Expenses And Provisions": 579452160.0,
         "Management Expenses": 0.0,
         "Net Profit": -151193330.0,
         "Net Premium": 245558260.0,
@@ -815,7 +879,14 @@
         "Book Value Reported": -4.3,
         "ROE Reported": -692.31
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -835,7 +906,7 @@
         "Total Investment and Loans": 4449403000.0,
         "Total Revenue": 781997590.0,
         "Income From Investment Loans And Others": 76271670.0,
-        "Total Expenses And Provisions": 934324.72,
+        "Total Expenses And Provisions": 934324720.0,
         "Management Expenses": 0.0,
         "Net Profit": -106628990.0,
         "Net Premium": 587873210.0,
@@ -909,7 +980,14 @@
         "Book Value Reported": -4.93,
         "ROE Reported": -246.59
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -929,7 +1007,7 @@
         "Total Investment and Loans": 4489054600.0,
         "Total Revenue": 1262868410.0,
         "Income From Investment Loans And Others": 97913430.0,
-        "Total Expenses And Provisions": 1362569.1,
+        "Total Expenses And Provisions": 1362569100.0,
         "Management Expenses": 0.0,
         "Net Profit": -69790490.0,
         "Net Premium": 986002730.0,
@@ -1003,7 +1081,14 @@
         "Book Value Reported": -7.84,
         "ROE Reported": -159.38
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UAIL",
@@ -1023,7 +1108,7 @@
         "Total Investment and Loans": 4508874270.0,
         "Total Revenue": 1805210210.0,
         "Income From Investment Loans And Others": 118614160.0,
-        "Total Expenses And Provisions": 1715067.59,
+        "Total Expenses And Provisions": 1715067590.0,
         "Management Expenses": 0.0,
         "Net Profit": 63099830.0,
         "Net Premium": 1337611420.0,
@@ -1098,7 +1183,14 @@
         "Book Value Reported": 6.36,
         "ROE Reported": -72.64
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:18:12.440361"

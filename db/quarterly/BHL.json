@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:41:58.498418",
+      "parsed_at": "2026-11-14T20:24:33.223646",
       "raw": {
         "Paid Up Capital": 1654312800.0,
         "Reserve and Surplus": -93640320.0,
@@ -53,7 +53,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:41:58.498393",
+      "parsed_at": "2026-11-14T20:24:33.223600",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -93883380.0,
@@ -98,7 +98,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:41:58.498368",
+      "parsed_at": "2026-11-14T20:24:33.223551",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -94795530.0,
@@ -107,7 +107,7 @@
         "Current Liabilities": 1427312440.0,
         "Current Assets": 366293190.0,
         "Total Assets": 8490961320.0,
-        "Operating Profit": -816.44,
+        "Operating Profit": -816440.0,
         "Net Profit": -912140.0,
         "Number of Shares": 18279700.0,
         "EPS(Rs.)": -0.2,
@@ -138,14 +138,21 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:41:58.498340",
+      "parsed_at": "2026-11-14T20:24:33.223500",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -196503660.0,
@@ -192,7 +199,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:41:58.498313",
+      "parsed_at": "2026-11-14T20:24:33.223451",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -330253840.0,
@@ -257,7 +264,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:41:58.498285",
+      "parsed_at": "2026-11-14T20:24:33.223398",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -139732640.0,
@@ -322,7 +329,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:41:58.498257",
+      "parsed_at": "2026-11-14T20:24:33.223345",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -435702760.0,
@@ -387,7 +394,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:41:58.498230",
+      "parsed_at": "2026-11-14T20:24:33.223292",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -602989210.0,
@@ -454,7 +461,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:41:58.498205",
+      "parsed_at": "2026-11-14T20:24:33.223240",
       "raw": {
         "Paid Up Capital": 1827970000.0,
         "Reserve and Surplus": -704222490.0,
@@ -523,7 +530,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:41:58.498181",
+      "parsed_at": "2026-11-14T20:24:33.223186",
       "computed": {
         "pe_ratio": 272.9,
         "pb_ratio": 6.5,
@@ -621,7 +628,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:41:58.498155",
+      "parsed_at": "2026-11-14T20:24:33.223131",
       "computed": {
         "pe_ratio": -34.7,
         "pb_ratio": 5.2,
@@ -714,7 +721,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:41:58.498129",
+      "parsed_at": "2026-11-14T20:24:33.223075",
       "computed": {
         "pe_ratio": -29.9,
         "pb_ratio": 5.4,
@@ -807,7 +814,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:41:58.498102",
+      "parsed_at": "2026-11-14T20:24:33.223019",
       "computed": {
         "pe_ratio": -17.5,
         "pb_ratio": 3.1,
@@ -900,7 +907,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:41:58.498075",
+      "parsed_at": "2026-11-14T20:24:33.222959",
       "computed": {
         "pe_ratio": -14.0,
         "pb_ratio": 2.4,
@@ -954,8 +961,8 @@
         "Investments": 1000000.0,
         "Interest Income": 717998030.0,
         "Net Interest Income": 370265610.0,
-        "Total Operating Income": 429969.24,
-        "Operating Profit": 134883.72,
+        "Total Operating Income": 429969240.0,
+        "Operating Profit": 134883720.0,
         "CAR": 8.68,
         "NPL": 2.13,
         "Cost of funds": 7.39,
@@ -1007,6 +1014,14 @@
         "net_profit_ttm": 122.5,
         "Reserve and Surplus": 124.11,
         "Net Profit": 122.5
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1015,7 +1030,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:41:58.498034",
+      "parsed_at": "2026-11-14T20:24:33.222869",
       "computed": {
         "pe_ratio": -16.5,
         "pb_ratio": 2.4,
@@ -1111,7 +1126,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:41:58.498006",
+      "parsed_at": "2026-11-14T20:24:33.222811",
       "computed": {
         "pe_ratio": 484.8,
         "pb_ratio": 2.6,
@@ -1207,7 +1222,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:41:58.497977",
+      "parsed_at": "2026-11-14T20:24:33.222745",
       "computed": {
         "pe_ratio": 521.1,
         "pb_ratio": 2.8,
@@ -1231,7 +1246,7 @@
         "dupont_roe": 5.76,
         "debt_to_equity": 1.88,
         "net_interest_margin": null,
-        "operating_profit_margin": 56.11,
+        "operating_profit_margin": 60.8,
         "revenue_per_share": 30.41,
         "qoq_profit_momentum": -92.76,
         "loan_to_asset": null,
@@ -1251,7 +1266,7 @@
         "Total Assets": 8669860000.0,
         "Revenue": 878539640.0,
         "Gross Profit": 806182450.0,
-        "Operating Profit": 534187.06,
+        "Operating Profit": 534187060.0,
         "Net Profit": 235658820.0,
         "Number of Shares": 36559400.0,
         "EPS Reported": 8.59,
@@ -1295,6 +1310,13 @@
         "Net Profit": 172.14,
         "EPS Reported": 172.12,
         "ROE Reported": 169.0
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1302,7 +1324,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:41:58.497943",
+      "parsed_at": "2026-11-14T20:24:33.222640",
       "raw": {
         "Paid Up Capital": 3655940000.0,
         "Reserve and Surplus": -686410810.0,
@@ -1313,7 +1335,7 @@
         "Total Assets": 8803225770.0,
         "Revenue": 1247027270.0,
         "Gross Profit": 1050128230.0,
-        "Operating Profit": 649856.76,
+        "Operating Profit": 649856760.0,
         "Net Profit": 282314690.0,
         "Number of Shares": 36559400.0,
         "EPS Reported": 7.72,
@@ -1363,8 +1385,15 @@
         "Book Value Reported": -48.0,
         "ROE Reported": -42.26
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:41:58.499466"
+  "last_updated": "2026-11-14T20:24:33.225361"
 }

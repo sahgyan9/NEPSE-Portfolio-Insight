@@ -22,8 +22,8 @@
         "Investment Securities": 292950000.0,
         "Interest Income": 139394000.0,
         "Net Interest Income": 51704000.0,
-        "Total Operating Income": 61526.0,
-        "Operating Profit": -14670.0,
+        "Total Operating Income": 61526000.0,
+        "Operating Profit": -14670000.0,
         "Net Profit": 2828000.0,
         "Distributable Profit": -290496000.0,
         "Number of Shares": 7248650.0,
@@ -75,7 +75,15 @@
         "graham_number": 30.01
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -96,8 +104,8 @@
         "Investment Securities": 314120000.0,
         "Interest Income": 200839000.0,
         "Net Interest Income": 71002000.0,
-        "Total Operating Income": 93509.0,
-        "Operating Profit": 29710.0,
+        "Total Operating Income": 93509000.0,
+        "Operating Profit": 29710000.0,
         "Net Profit": 6431000.0,
         "Distributable Profit": -291543000.0,
         "Number of Shares": 7421750.0,
@@ -149,7 +157,15 @@
         "graham_number": 40.71
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -170,8 +186,8 @@
         "Investment Securities": 313347000.0,
         "Interest Income": 70939000.0,
         "Net Interest Income": 24169000.0,
-        "Total Operating Income": 26781.0,
-        "Operating Profit": -36501.0,
+        "Total Operating Income": 26781000.0,
+        "Operating Profit": -36501000.0,
         "Net Profit": -31463000.0,
         "Distributable Profit": -361759000.0,
         "Number of Shares": 7421750.0,
@@ -222,7 +238,15 @@
         "revenue_ttm": 70939000.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -243,8 +267,8 @@
         "Investment Securities": 275347000.0,
         "Interest Income": 138370000.0,
         "Net Interest Income": 44676000.0,
-        "Total Operating Income": -29501.0,
-        "Operating Profit": -82409.0,
+        "Total Operating Income": -29501000.0,
+        "Operating Profit": -82409000.0,
         "Net Profit": -77370000.0,
         "Distributable Profit": -395089000.0,
         "Number of Shares": 8189110.0,
@@ -295,7 +319,15 @@
         "revenue_ttm": 138370000.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -316,8 +348,8 @@
         "Investment Securities": 303339000.0,
         "Interest Income": 203976000.0,
         "Net Interest Income": 62233000.0,
-        "Total Operating Income": 67877.0,
-        "Operating Profit": -138520.0,
+        "Total Operating Income": 67877000.0,
+        "Operating Profit": -138520000.0,
         "Net Profit": -133439000.0,
         "Distributable Profit": -448031000.0,
         "Number of Shares": 8189110.0,
@@ -399,7 +431,15 @@
         "Base Rate": 4.42,
         "Interest Spread Rate": 12.18
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -420,8 +460,8 @@
         "Investment Securities": 315738000.0,
         "Interest Income": 257138000.0,
         "Net Interest Income": 70293000.0,
-        "Total Operating Income": 71291.0,
-        "Operating Profit": -88634.0,
+        "Total Operating Income": 71291000.0,
+        "Operating Profit": -88634000.0,
         "Net Profit": -79848000.0,
         "Distributable Profit": -440989000.0,
         "Number of Shares": 8189110.0,
@@ -503,7 +543,15 @@
         "Base Rate": 9.54,
         "Interest Spread Rate": -21.53
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -523,8 +571,8 @@
         "Investment Securities": 347188000.0,
         "Interest Income": 60408000.0,
         "Net Interest Income": 18218000.0,
-        "Total Operating Income": 23656.0,
-        "Operating Profit": -13687.0,
+        "Total Operating Income": 23656000.0,
+        "Operating Profit": -13687000.0,
         "Net Profit": -9887000.0,
         "Distributable Profit": -462673000.0,
         "Number of Shares": 8189110.0,
@@ -604,7 +652,15 @@
         "Base Rate": 27.33,
         "Interest Spread Rate": -7.66
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -624,8 +680,8 @@
         "Investment Securities": 404442000.0,
         "Interest Income": 117833000.0,
         "Net Interest Income": 35848000.0,
-        "Total Operating Income": 43657.0,
-        "Operating Profit": -25095.0,
+        "Total Operating Income": 43657000.0,
+        "Operating Profit": -25095000.0,
         "Net Profit": -21345000.0,
         "Distributable Profit": -482081000.0,
         "Number of Shares": 8189110.0,
@@ -705,7 +761,15 @@
         "Base Rate": 11.81,
         "Interest Spread Rate": -7.29
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -726,8 +790,8 @@
         "Investment Securities": 435814000.0,
         "Interest Income": 175045000.0,
         "Net Interest Income": 53216000.0,
-        "Total Operating Income": 62372.0,
-        "Operating Profit": -73191.0,
+        "Total Operating Income": 62372000.0,
+        "Operating Profit": -73191000.0,
         "Net Profit": -69375000.0,
         "Distributable Profit": -536170000.0,
         "Number of Shares": 8189110.0,
@@ -809,7 +873,15 @@
         "Base Rate": -0.2,
         "Interest Spread Rate": -4.38
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -830,8 +902,8 @@
         "Investment Securities": 501810000.0,
         "Interest Income": 254893000.0,
         "Net Interest Income": 84411000.0,
-        "Total Operating Income": 96757.0,
-        "Operating Profit": -123066.0,
+        "Total Operating Income": 96757000.0,
+        "Operating Profit": -123066000.0,
         "Net Profit": -94736000.0,
         "Distributable Profit": -596655000.0,
         "Number of Shares": 8189110.0,
@@ -913,7 +985,15 @@
         "Base Rate": -12.99,
         "Interest Spread Rate": 3.85
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -934,8 +1014,8 @@
         "Investment Securities": 540191000.0,
         "Interest Income": 67789000.0,
         "Net Interest Income": 19565000.0,
-        "Total Operating Income": 27020.0,
-        "Operating Profit": -24265.0,
+        "Total Operating Income": 27020000.0,
+        "Operating Profit": -24265000.0,
         "Net Profit": -18205000.0,
         "Distributable Profit": -625465000.0,
         "Number of Shares": 8189110.0,
@@ -1016,7 +1096,15 @@
         "Base Rate": -36.21,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1037,8 +1125,8 @@
         "Investment Securities": 613821000.0,
         "Interest Income": 133213000.0,
         "Net Interest Income": 38761000.0,
-        "Total Operating Income": 51327.0,
-        "Operating Profit": -68914.0,
+        "Total Operating Income": 51327000.0,
+        "Operating Profit": -68914000.0,
         "Net Profit": -62822000.0,
         "Distributable Profit": -680196000.0,
         "Number of Shares": 8189110.0,
@@ -1116,7 +1204,15 @@
         "Base Rate": -34.33,
         "Interest Spread Rate": -0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1138,8 +1234,8 @@
         "Investment Securities": 704821000.0,
         "Interest Income": 194702000.0,
         "Net Interest Income": 56462000.0,
-        "Total Operating Income": 72057.0,
-        "Operating Profit": -41896.0,
+        "Total Operating Income": 72057000.0,
+        "Operating Profit": -41896000.0,
         "Net Profit": -35706000.0,
         "Distributable Profit": -684906000.0,
         "Number of Shares": 8189110.0,
@@ -1219,7 +1315,15 @@
         "Base Rate": -26.78,
         "Interest Spread Rate": -0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1241,8 +1345,8 @@
         "Investment Securities": 651460120.0,
         "Interest Income": 270933580.0,
         "Net Interest Income": 88530130.0,
-        "Total Operating Income": 116987.24,
-        "Operating Profit": 19590.12,
+        "Total Operating Income": 116987240.0,
+        "Operating Profit": 19590120.0,
         "Net Profit": 31935550.0,
         "Distributable Profit": -625141820.0,
         "Number of Shares": 8189114.0,
@@ -1323,7 +1427,15 @@
         "Base Rate": -20.85,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1345,8 +1457,8 @@
         "Investment Securities": 775067680.0,
         "Interest Income": 58312580.0,
         "Net Interest Income": 13333300.0,
-        "Total Operating Income": 19218.47,
-        "Operating Profit": -21825.96,
+        "Total Operating Income": 19218470.0,
+        "Operating Profit": -21825960.0,
         "Net Profit": -21720520.0,
         "Distributable Profit": -631116000.0,
         "Number of Shares": 8189114.0,
@@ -1426,7 +1538,15 @@
         "Base Rate": -15.24,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1448,8 +1568,8 @@
         "Investment Securities": 275567530.0,
         "Interest Income": 124423480.0,
         "Net Interest Income": 35941150.0,
-        "Total Operating Income": 46787.13,
-        "Operating Profit": 6380.02,
+        "Total Operating Income": 46787130.0,
+        "Operating Profit": 6380020.0,
         "Net Profit": 1169600.0,
         "Distributable Profit": -617400330.0,
         "Number of Shares": 8189114.0,
@@ -1533,7 +1653,15 @@
         "Base Rate": -14.35,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SFCL",
@@ -1555,20 +1683,20 @@
         "Investment Securities": 280037890.0,
         "Interest Income": 191808630.0,
         "Net Interest Income": 61420400.0,
-        "Total Operating Income": 78596.2,
-        "Operating Profit": 9910.42,
+        "Total Operating Income": 78596200.0,
+        "Operating Profit": 9910420.0,
         "Net Profit": 740640.0,
         "Distributable Profit": -619819070.0,
         "Number of Shares": 8189114.0,
         "EPS Reported": 0.12,
         "Book Value Reported": 60.3,
         "ROE Reported": 0.2,
-        "CAR": 1471.0,
-        "NPL": 809.0,
-        "Cost of funds": 540.0,
-        "Credit To Deposit Ratio": 7656.0,
-        "Base Rate": 910.0,
-        "Interest Spread Rate": 458.0
+        "CAR": 14.71,
+        "NPL": 8.09,
+        "Cost of funds": 5.4,
+        "Credit To Deposit Ratio": 76.56,
+        "Base Rate": 9.1,
+        "Interest Spread Rate": 4.58
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -1633,14 +1761,30 @@
         "EPS Reported": 102.07,
         "Book Value Reported": 12.44,
         "ROE Reported": 101.85,
-        "CAR": 11111.89,
-        "NPL": 4826.92,
-        "Cost of funds": 7923.77,
-        "Credit To Deposit Ratio": 10271.17,
-        "Base Rate": 8263.97,
-        "Interest Spread Rate": 9943.86
+        "CAR": 12.12,
+        "NPL": -50.73,
+        "Cost of funds": -19.76,
+        "Credit To Deposit Ratio": 3.71,
+        "Base Rate": -16.36,
+        "Interest Spread Rate": 0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Base Rate",
+        "CAR",
+        "Cost of funds",
+        "Credit To Deposit Ratio",
+        "Interest Spread Rate",
+        "NPL"
+      ]
     }
   ],
   "last_updated": "2026-11-07T10:03:08.929586"

@@ -8,7 +8,7 @@
       "fy": "2076-77",
       "quarter": 3,
       "quarter_label": "Q3 76-77",
-      "parsed_at": "2026-11-07T10:20:24.191319",
+      "parsed_at": "2026-11-15T11:53:40.192756",
       "raw": {
         "Paid Up Capital": 1040835000.0,
         "Reserves": 241605000.0,
@@ -19,7 +19,7 @@
         "Loans and Advances to Customers": 5816943000.0,
         "Investment Securities": 495606000.0,
         "Net Interest Income": 266268000.0,
-        "Total Operating Income": 297215.0,
+        "Total Operating Income": 297215000.0,
         "Net Profit": 71693000.0,
         "Number of Shares": 10408346.46,
         "EPS(Rs.)": 9.18,
@@ -53,18 +53,25 @@
         "roe_ttm": 6.29,
         "roa_ttm": null,
         "net_profit_ttm": 71693000.0,
-        "revenue_ttm": 297215.0,
+        "revenue_ttm": 297215000.0,
         "graham_number": 173.6
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UFL",
       "fy": "2076-77",
       "quarter": 4,
       "quarter_label": "Q4 76-77",
-      "parsed_at": "2026-11-07T10:20:24.191193",
+      "parsed_at": "2026-11-15T11:53:40.192496",
       "raw": {
         "Paid Up Capital": 1040834650.0,
         "Reserves": 240965530.0,
@@ -75,7 +82,7 @@
         "Loans and Advances to Customers": 5846900830.0,
         "Investment Securities": 501336160.0,
         "Net Interest Income": 339783000.0,
-        "Total Operating Income": 378167.0,
+        "Total Operating Income": 378167000.0,
         "Net Profit": 95087000.0,
         "Number of Shares": 10408346.46,
         "EPS(Rs.)": 9.14,
@@ -109,18 +116,25 @@
         "roe_ttm": 6.17,
         "roa_ttm": null,
         "net_profit_ttm": 95087000.0,
-        "revenue_ttm": 378167.0,
+        "revenue_ttm": 378167000.0,
         "graham_number": 174.52
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UFL",
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T10:20:24.191023",
+      "parsed_at": "2026-11-15T11:53:40.192204",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -139,7 +153,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T10:20:24.191007",
+      "parsed_at": "2026-11-15T11:53:40.192183",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -158,7 +172,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T10:20:24.190977",
+      "parsed_at": "2026-11-15T11:53:40.192146",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -173,5 +187,5 @@
       "sector": "Finance"
     }
   ],
-  "last_updated": "2026-11-07T10:20:24.192634"
+  "last_updated": "2026-11-15T11:53:40.194333"
 }

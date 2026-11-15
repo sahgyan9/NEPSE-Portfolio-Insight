@@ -8,7 +8,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:29:02.241723",
+      "parsed_at": "2026-11-14T20:38:06.188830",
       "raw": {
         "Paid Up Capital": 572064700.0,
         "Reserve and Surplus": 150739050.0,
@@ -54,7 +54,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:29:02.241645",
+      "parsed_at": "2026-11-14T20:38:06.188709",
       "raw": {
         "Paid Up Capital": 572064700.0,
         "Reserve and Surplus": 113958950.0,
@@ -102,7 +102,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:29:02.241556",
+      "parsed_at": "2026-11-14T20:38:06.188625",
       "raw": {
         "Paid Up Capital": 572064700.0,
         "Reserve and Surplus": 139618070.0,
@@ -148,7 +148,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:29:02.241476",
+      "parsed_at": "2026-11-14T20:38:06.188546",
       "raw": {
         "Paid Up Capital": 572064700.0,
         "Reserve and Surplus": 139308720.0,
@@ -194,7 +194,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:29:02.241396",
+      "parsed_at": "2026-11-14T20:38:06.188465",
       "raw": {
         "Paid Up Capital": 594947300.0,
         "Reserve and Surplus": 63516900.0,
@@ -257,7 +257,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:29:02.241315",
+      "parsed_at": "2026-11-14T20:38:06.188384",
       "raw": {
         "Paid Up Capital": 594947300.0,
         "Reserve and Surplus": 69221320.0,
@@ -324,7 +324,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:29:02.241220",
+      "parsed_at": "2026-11-14T20:38:06.188332",
       "raw": {
         "Paid Up Capital": 594947300.0,
         "Reserve and Surplus": 97253880.0,
@@ -390,7 +390,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:29:02.241125",
+      "parsed_at": "2026-11-14T20:38:06.188291",
       "raw": {
         "Paid Up Capital": 594947300.0,
         "Reserve and Surplus": 121220940.0,
@@ -456,7 +456,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:29:02.241029",
+      "parsed_at": "2026-11-14T20:38:06.188252",
       "raw": {
         "Paid Up Capital": 594947300.0,
         "Reserve and Surplus": 164204560.0,
@@ -522,7 +522,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:29:02.240927",
+      "parsed_at": "2026-11-14T20:38:06.188196",
       "raw": {
         "Paid Up Capital": 678239900.0,
         "Reserve and Surplus": 60407580.0,
@@ -591,7 +591,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:29:02.240825",
+      "parsed_at": "2026-11-14T20:38:06.188148",
       "raw": {
         "Paid Up Capital": 678239000.0,
         "Reserve and Surplus": 85918540.0,
@@ -602,7 +602,7 @@
         "Total Assets": 969701300.0,
         "Revenue": 129217980.0,
         "Gross Profit": 129217980.0,
-        "Operating Profit": 72307.06,
+        "Operating Profit": 72307060.0,
         "Net Profit": 56770300.0,
         "Number of Shares": 6782390.0,
         "EPS Reported": 11.16,
@@ -654,14 +654,21 @@
         "Book Value Reported": -3.16,
         "ROE Reported": 21.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BGWT",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:29:02.240723",
+      "parsed_at": "2026-11-14T20:38:06.188107",
       "raw": {
         "Paid Up Capital": 678239900.0,
         "Reserve and Surplus": 90238300.0,
@@ -672,7 +679,7 @@
         "Total Assets": 985754790.0,
         "Revenue": 154112600.0,
         "Gross Profit": 129160120.0,
-        "Operating Profit": 79957.08,
+        "Operating Profit": 79957080.0,
         "Net Profit": 61090050.0,
         "Number of Shares": 6782399.0,
         "EPS Reported": 9.01,
@@ -724,14 +731,21 @@
         "Book Value Reported": -5.88,
         "ROE Reported": -13.96
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BGWT",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:29:02.240602",
+      "parsed_at": "2026-11-14T20:38:06.188067",
       "raw": {
         "Paid Up Capital": 678239900.0,
         "Reserve and Surplus": 115037920.0,
@@ -742,7 +756,7 @@
         "Total Assets": 1003097840.0,
         "Revenue": 41044940.0,
         "Gross Profit": 33578300.0,
-        "Operating Profit": 30462.12,
+        "Operating Profit": 30462120.0,
         "Net Profit": 24553460.0,
         "Number of Shares": 6782399.0,
         "EPS Reported": 14.48,
@@ -794,8 +808,15 @@
         "Book Value Reported": -8.34,
         "ROE Reported": 46.16
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:29:02.243871"
+  "last_updated": "2026-11-14T20:38:06.190315"
 }

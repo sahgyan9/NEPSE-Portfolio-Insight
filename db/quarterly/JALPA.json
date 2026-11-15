@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:00:12.952475",
+      "parsed_at": "2026-11-14T21:09:27.593233",
       "raw": {
         "Paid Up Capital": 160000000.0,
         "Reserve and Surplus": 386063400.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 5040900670.0,
         "Interest Income": 482831420.0,
         "Net Interest Income": 268568480.0,
-        "Total Operating Income": 364943.12,
-        "Operating Profit": 103394.04,
+        "Total Operating Income": 364943120.0,
+        "Operating Profit": 103394040.0,
         "Net Profit": 86429580.0,
         "Number of Shares": 1600000.0,
         "EPS(Rs.)": 72.02,
@@ -61,14 +61,22 @@
         "graham_number": 743.67
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:00:12.952412",
+      "parsed_at": "2026-11-14T21:09:27.593191",
       "raw": {
         "Paid Up Capital": 160000000.0,
         "Reserve and Surplus": 472666500.0,
@@ -79,8 +87,8 @@
         "Loans and Advances to Customers": 5052588500.0,
         "Interest Income": 670164690.0,
         "Net Interest Income": 353967730.0,
-        "Total Operating Income": 454666.52,
-        "Operating Profit": 94698.68,
+        "Total Operating Income": 454666520.0,
+        "Operating Profit": 94698680.0,
         "Net Profit": 98657540.0,
         "Number of Shares": 1600000.0,
         "EPS(Rs.)": 61.66,
@@ -121,14 +129,22 @@
         "graham_number": 740.67
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:00:12.952348",
+      "parsed_at": "2026-11-14T21:09:27.593146",
       "raw": {
         "Paid Up Capital": 160000000.0,
         "Reserve and Surplus": 381005530.0,
@@ -139,8 +155,8 @@
         "Loans and Advances to Customers": 5097129680.0,
         "Interest Income": 195049350.0,
         "Net Interest Income": 94511550.0,
-        "Total Operating Income": 118925.73,
-        "Operating Profit": -13267.29,
+        "Total Operating Income": 118925730.0,
+        "Operating Profit": -13267290.0,
         "Net Profit": -1030660.0,
         "Number of Shares": 1600000.0,
         "EPS(Rs.)": -2.58,
@@ -180,14 +196,22 @@
         "revenue_ttm": 195049350.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:00:12.952280",
+      "parsed_at": "2026-11-14T21:09:27.593100",
       "raw": {
         "Paid Up Capital": 160000000.0,
         "Reserve and Surplus": 394872700.0,
@@ -198,8 +222,8 @@
         "Loans and Advances to Customers": 4992488020.0,
         "Interest Income": 386330420.0,
         "Net Interest Income": 182533660.0,
-        "Total Operating Income": 231039.1,
-        "Operating Profit": -167.91,
+        "Total Operating Income": 231039100.0,
+        "Operating Profit": -167910.0,
         "Net Profit": 12836510.0,
         "Number of Shares": 1600000.0,
         "EPS(Rs.)": 16.05,
@@ -240,14 +264,22 @@
         "graham_number": 353.89
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:00:12.952211",
+      "parsed_at": "2026-11-14T21:09:27.593044",
       "raw": {
         "Paid Up Capital": 160000000.0,
         "Reserve and Surplus": 322392810.0,
@@ -258,8 +290,8 @@
         "Loans and Advances to Customers": 4575281390.0,
         "Interest Income": 558181580.0,
         "Net Interest Income": 238589160.0,
-        "Total Operating Income": 305589.16,
-        "Operating Profit": -71091.36,
+        "Total Operating Income": 305589160.0,
+        "Operating Profit": -71091360.0,
         "Net Profit": -39234490.0,
         "Number of Shares": 1600000.0,
         "EPS(Rs.)": -32.7,
@@ -323,14 +355,22 @@
         "NPL": 201.63,
         "Cost of funds": 29.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:00:12.952147",
+      "parsed_at": "2026-11-14T21:09:27.592987",
       "raw": {
         "Paid Up Capital": 182800000.0,
         "Reserve and Surplus": 214340730.0,
@@ -341,8 +381,8 @@
         "Loans and Advances to Customers": 4242746060.0,
         "Interest Income": 733743600.0,
         "Net Interest Income": 311772630.0,
-        "Total Operating Income": 381804.81,
-        "Operating Profit": -151778.59,
+        "Total Operating Income": 381804810.0,
+        "Operating Profit": -151778590.0,
         "Net Profit": -112452760.0,
         "Number of Shares": 1828000.0,
         "EPS(Rs.)": -61.52,
@@ -406,14 +446,22 @@
         "NPL": 261.64,
         "Cost of funds": 22.36
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:00:12.952079",
+      "parsed_at": "2026-11-14T21:09:27.592924",
       "raw": {
         "Paid Up Capital": 182800000.0,
         "Reserve and Surplus": 345974860.0,
@@ -423,8 +471,8 @@
         "Loans and Advances to Customers": 4509121570.0,
         "Interest Income": 161992050.0,
         "Net Interest Income": 58621470.0,
-        "Total Operating Income": 85643.38,
-        "Operating Profit": -16461.66,
+        "Total Operating Income": 85643380.0,
+        "Operating Profit": -16461660.0,
         "Net Profit": -16461660.0,
         "Number of Shares": 1828000.0,
         "EPS(Rs.)": -36.02,
@@ -486,14 +534,22 @@
         "NPL": 108.86,
         "Cost of funds": 14.16
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:00:12.952014",
+      "parsed_at": "2026-11-14T21:09:27.592879",
       "raw": {
         "Paid Up Capital": 182800000.0,
         "Reserve and Surplus": 329523180.0,
@@ -503,8 +559,8 @@
         "Loans and Advances to Customers": 4743316500.0,
         "Interest Income": 336012760.0,
         "Net Interest Income": 132999410.0,
-        "Total Operating Income": 181260.24,
-        "Operating Profit": 3226.14,
+        "Total Operating Income": 181260240.0,
+        "Operating Profit": 3226140.0,
         "Net Profit": 2258300.0,
         "Number of Shares": 1828000.0,
         "EPS(Rs.)": 2.47,
@@ -567,14 +623,22 @@
         "NPL": 50.42,
         "Cost of funds": 7.87
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JALPA",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:00:12.951940",
+      "parsed_at": "2026-11-14T21:09:27.592806",
       "raw": {
         "Paid Up Capital": 182800000.0,
         "Reserve and Surplus": 329482060.0,
@@ -584,8 +648,8 @@
         "Loans and Advances to Customers": 4820442600.0,
         "Interest Income": 513720160.0,
         "Net Interest Income": 208269480.0,
-        "Total Operating Income": 278461.47,
-        "Operating Profit": 8973.98,
+        "Total Operating Income": 278461470.0,
+        "Operating Profit": 8973980.0,
         "Net Profit": 6281790.0,
         "Number of Shares": 1828000.0,
         "EPS(Rs.)": 4.58,
@@ -648,8 +712,16 @@
         "NPL": -0.4,
         "Cost of funds": -3.98
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:00:12.953806"
+  "last_updated": "2026-11-14T21:09:27.594250"
 }

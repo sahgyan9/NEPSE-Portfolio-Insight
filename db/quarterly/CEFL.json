@@ -8,7 +8,7 @@
       "fy": "2076-77",
       "quarter": 2,
       "quarter_label": "Q2 76-77",
-      "parsed_at": "2026-11-07T08:33:53.180891",
+      "parsed_at": "2026-11-15T11:53:04.334761",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserves": 119095000.0,
@@ -18,7 +18,7 @@
         "Loans and Advances to BFIs": 8591000.0,
         "Loans and Advances to Customers": 148095000.0,
         "Net Interest Income": 11189000.0,
-        "Total Operating Income": 12124.0,
+        "Total Operating Income": 12124000.0,
         "Net Profit": -532000.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -0.27,
@@ -49,17 +49,24 @@
         "roe_ttm": -0.38,
         "roa_ttm": null,
         "net_profit_ttm": -532000.0,
-        "revenue_ttm": 12124.0
+        "revenue_ttm": 12124000.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CEFL",
       "fy": "2076-77",
       "quarter": 3,
       "quarter_label": "Q3 76-77",
-      "parsed_at": "2026-11-07T08:33:53.180857",
+      "parsed_at": "2026-11-15T11:53:04.334636",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserves": 119289000.0,
@@ -69,7 +76,7 @@
         "Loans and Advances to BFIs": 4415000.0,
         "Loans and Advances to Customers": 132734000.0,
         "Net Interest Income": 16755000.0,
-        "Total Operating Income": 17833.0,
+        "Total Operating Income": 17833000.0,
         "Net Profit": -2315000.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -0.77,
@@ -100,17 +107,24 @@
         "roe_ttm": -1.11,
         "roa_ttm": null,
         "net_profit_ttm": -2315000.0,
-        "revenue_ttm": 17833.0
+        "revenue_ttm": 17833000.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CEFL",
       "fy": "2076-77",
       "quarter": 4,
       "quarter_label": "Q4 76-77",
-      "parsed_at": "2026-11-07T08:33:53.180820",
+      "parsed_at": "2026-11-15T11:53:04.334504",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Share Premium": 4798000.0,
@@ -122,7 +136,7 @@
         "Loans and Advances to Customers": 125497000.0,
         "Interest Income": 31440000.0,
         "Net Interest Income": 21377000.0,
-        "Total Operating Income": 26525.0,
+        "Total Operating Income": 26525000.0,
         "Net Profit": 4082000.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 1.02,
@@ -163,14 +177,21 @@
         "graham_number": 39.12
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CEFL",
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T08:33:53.180753",
+      "parsed_at": "2026-11-15T11:53:04.334313",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -189,7 +210,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T08:33:53.180743",
+      "parsed_at": "2026-11-15T11:53:04.334288",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -204,5 +225,5 @@
       "sector": "Finance"
     }
   ],
-  "last_updated": "2026-11-07T08:33:53.181512"
+  "last_updated": "2026-11-15T11:53:04.335960"
 }

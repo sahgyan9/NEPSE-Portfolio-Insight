@@ -19,7 +19,7 @@
         "Total Assets": 584751630.0,
         "Revenue": 8504970.0,
         "Gross Profit": 10133710.0,
-        "Operating Profit": 6206.81,
+        "Operating Profit": 6206810.0,
         "Net Profit": 4665830.0,
         "Shares Outstanding": 5311184000.0,
         "EPS": 0.88,
@@ -53,7 +53,14 @@
         "graham_number": 45.96
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -71,7 +78,7 @@
         "Total Assets": 708910550.0,
         "Revenue": 15169520.0,
         "Gross Profit": 15179280.0,
-        "Operating Profit": 12202.36,
+        "Operating Profit": 12202360.0,
         "Net Profit": 10301620.0,
         "Shares Outstanding": 5311184000.0,
         "EPS": 7.76,
@@ -105,7 +112,14 @@
         "graham_number": 137.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -123,7 +137,7 @@
         "Total Assets": 939977180.0,
         "Revenue": 29331260.0,
         "Gross Profit": 29356240.0,
-        "Operating Profit": 24421.58,
+        "Operating Profit": 24421580.0,
         "Net Profit": 21940310.0,
         "Shares Outstanding": 5311184000.0,
         "EPS": 8.26,
@@ -157,7 +171,14 @@
         "graham_number": 142.79
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -175,7 +196,7 @@
         "Total Assets": 955269410.0,
         "Revenue": 39955090.0,
         "Gross Profit": 40424140.0,
-        "Operating Profit": 33981.74,
+        "Operating Profit": 33981740.0,
         "Net Profit": 30906140.0,
         "Shares Outstanding": 5311184000.0,
         "EPS": 7.76,
@@ -209,7 +230,14 @@
         "graham_number": 139.45
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -227,7 +255,7 @@
         "Total Assets": 963978170.0,
         "Revenue": 51424340.0,
         "Gross Profit": 53604790.0,
-        "Operating Profit": 43037.94,
+        "Operating Profit": 43037940.0,
         "Net Profit": 34498480.0,
         "Shares Outstanding": 5576743000.0,
         "EPS": 6.19,
@@ -281,7 +309,14 @@
         "Book Value": -0.22,
         "ROE": 608.54
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -299,7 +334,7 @@
         "Total Assets": 833560400.0,
         "Revenue": 13765680.0,
         "Gross Profit": 14284470.0,
-        "Operating Profit": 11213.22,
+        "Operating Profit": 11213220.0,
         "Net Profit": 7862570.0,
         "Shares Outstanding": 5576743000.0,
         "EPS": 5.64,
@@ -353,7 +388,14 @@
         "Book Value": -0.6,
         "ROE": -26.87
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",
@@ -371,7 +413,7 @@
         "Total Assets": 883769290.0,
         "Revenue": 46671590.0,
         "Gross Profit": 46671590.0,
-        "Operating Profit": 37585.63,
+        "Operating Profit": 37585630.0,
         "Net Profit": 19381080.0,
         "Shares Outstanding": 5855580000.0,
         "EPS": 6.62,
@@ -425,7 +467,14 @@
         "Book Value": -5.66,
         "ROE": -15.01
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPC",

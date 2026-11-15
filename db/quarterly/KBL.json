@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T09:04:02.611061",
+      "parsed_at": "2026-11-14T21:13:09.439646",
       "raw": {
         "EPS(Rs.)": 17.18
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T09:04:02.611049",
+      "parsed_at": "2026-11-14T21:13:09.439639",
       "raw": {
         "EPS(Rs.)": 18.17
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:04:02.611027",
+      "parsed_at": "2026-11-14T21:13:09.439631",
       "raw": {
         "Paid Up Capital": 14711183330.0,
         "Share Premium": 88804040.0,
@@ -68,8 +68,8 @@
         "Investment Securities": 20618980290.0,
         "Interest Income": 12830359760.0,
         "Net Interest Income": 4424929580.0,
-        "Total Operating Income": 5666697.36,
-        "Operating Profit": 2576811.36,
+        "Total Operating Income": 5666697360.0,
+        "Operating Profit": 2576811360.0,
         "Net Profit": 1802771570.0,
         "Distributable Profit": 827843510.0,
         "Number of Shares": 147111830.0,
@@ -121,14 +121,22 @@
         "graham_number": 224.96
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:04:02.610879",
+      "parsed_at": "2026-11-14T21:13:09.439578",
       "raw": {
         "Paid Up Capital": 14711183330.0,
         "Share Premium": 88804040.0,
@@ -142,8 +150,8 @@
         "Investment Securities": 22806827860.0,
         "Interest Income": 18518543000.0,
         "Net Interest Income": 6380724110.0,
-        "Total Operating Income": 8124960.17,
-        "Operating Profit": 3988158.21,
+        "Total Operating Income": 8124960170.0,
+        "Operating Profit": 3988158210.0,
         "Net Profit": 2835234060.0,
         "Distributable Profit": 1773917680.0,
         "Number of Shares": 147111833.26,
@@ -195,14 +203,22 @@
         "graham_number": 249.88
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:04:02.610732",
+      "parsed_at": "2026-11-14T21:13:09.439525",
       "raw": {
         "Paid Up Capital": 14711183330.0,
         "Share Premium": 88804040.0,
@@ -216,8 +232,8 @@
         "Investment Securities": 24877505290.0,
         "Interest Income": 5923753430.0,
         "Net Interest Income": 1972261060.0,
-        "Total Operating Income": 2382239.55,
-        "Operating Profit": 1431344.83,
+        "Total Operating Income": 2382239550.0,
+        "Operating Profit": 1431344830.0,
         "Net Profit": 1001459380.0,
         "Distributable Profit": 2143454310.0,
         "Number of Shares": 147111833.26,
@@ -272,14 +288,22 @@
         "eps_ttm": 58.5,
         "EPS(Rs.)": 58.5
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:04:02.610584",
+      "parsed_at": "2026-11-14T21:13:09.439472",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 88804040.0,
@@ -294,8 +318,8 @@
         "Investment Securities": 39557953700.0,
         "Interest Income": 12790892700.0,
         "Net Interest Income": 4240644340.0,
-        "Total Operating Income": 4993387.07,
-        "Operating Profit": 1573392.62,
+        "Total Operating Income": 4993387070.0,
+        "Operating Profit": 1573392620.0,
         "Net Profit": 1012070950.0,
         "Distributable Profit": 224441340.0,
         "Number of Shares": 262258613.4,
@@ -351,14 +375,22 @@
         "eps_ttm": -57.51,
         "EPS(Rs.)": -57.51
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:04:02.610431",
+      "parsed_at": "2026-11-14T21:13:09.439417",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 88804040.0,
@@ -373,8 +405,8 @@
         "Investment Securities": 45232540990.0,
         "Interest Income": 23082472120.0,
         "Net Interest Income": 7477116270.0,
-        "Total Operating Income": 8858651.98,
-        "Operating Profit": 1860061.25,
+        "Total Operating Income": 8858651980.0,
+        "Operating Profit": 1860061250.0,
         "Net Profit": 1820295530.0,
         "Distributable Profit": 2486290.0,
         "Number of Shares": 262258613.4,
@@ -458,14 +490,22 @@
         "Base Rate": 10.96,
         "Interest Spread Rate": 30.73
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:04:02.610272",
+      "parsed_at": "2026-11-14T21:13:09.439360",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 88804040.0,
@@ -480,8 +520,8 @@
         "Investment Securities": 42542370930.0,
         "Interest Income": 34052700460.0,
         "Net Interest Income": 11011396070.0,
-        "Total Operating Income": 13028271.38,
-        "Operating Profit": 3032133.17,
+        "Total Operating Income": 13028271380.0,
+        "Operating Profit": 3032133170.0,
         "Net Profit": 1957107460.0,
         "Distributable Profit": -848305970.0,
         "Number of Shares": 262258613.4,
@@ -565,14 +605,22 @@
         "Base Rate": 3.12,
         "Interest Spread Rate": 14.22
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:04:02.610107",
+      "parsed_at": "2026-11-14T21:13:09.439303",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 88804040.0,
@@ -587,8 +635,8 @@
         "Investment Securities": 49066219510.0,
         "Interest Income": 10603835100.0,
         "Net Interest Income": 3041972180.0,
-        "Total Operating Income": 3976596.87,
-        "Operating Profit": 436652.72,
+        "Total Operating Income": 3976596870.0,
+        "Operating Profit": 436652720.0,
         "Net Profit": 263935120.0,
         "Distributable Profit": -2165668700.0,
         "Number of Shares": 262258613.4,
@@ -672,14 +720,22 @@
         "Base Rate": -0.73,
         "Interest Spread Rate": 4.12
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:04:02.609980",
+      "parsed_at": "2026-11-14T21:13:09.439175",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Retained Earnings": -3771834830.0,
@@ -693,8 +749,8 @@
         "Investment Securities": 52813400260.0,
         "Interest Income": 20367155590.0,
         "Net Interest Income": 5725399560.0,
-        "Total Operating Income": 7254080.33,
-        "Operating Profit": 1493517.92,
+        "Total Operating Income": 7254080330.0,
+        "Operating Profit": 1493517920.0,
         "Net Profit": 867211480.0,
         "Distributable Profit": -3771834830.0,
         "Number of Shares": 262258613.4,
@@ -777,14 +833,22 @@
         "Base Rate": -12.36,
         "Interest Spread Rate": -9.95
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:04:02.609885",
+      "parsed_at": "2026-11-14T21:13:09.439033",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Retained Earnings": -4205229320.0,
@@ -798,8 +862,8 @@
         "Investment Securities": 49792813690.0,
         "Interest Income": 29549568530.0,
         "Net Interest Income": 8424798500.0,
-        "Total Operating Income": 10554470.59,
-        "Operating Profit": 2261874.88,
+        "Total Operating Income": 10554470590.0,
+        "Operating Profit": 2261874880.0,
         "Net Profit": 1052794530.0,
         "Distributable Profit": -4205229320.0,
         "Number of Shares": 262258613.4,
@@ -882,14 +946,22 @@
         "Base Rate": -11.89,
         "Interest Spread Rate": -23.51
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:04:02.609788",
+      "parsed_at": "2026-11-14T21:13:09.438896",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Retained Earnings": -3788998250.0,
@@ -903,8 +975,8 @@
         "Investment Securities": 64827728830.0,
         "Interest Income": 38682343440.0,
         "Net Interest Income": 10986863860.0,
-        "Total Operating Income": 13836293.95,
-        "Operating Profit": 3903699.44,
+        "Total Operating Income": 13836293950.0,
+        "Operating Profit": 3903699440.0,
         "Net Profit": 2308212410.0,
         "Distributable Profit": -3788998250.0,
         "Number of Shares": 262258613.4,
@@ -987,14 +1059,22 @@
         "Base Rate": -18.44,
         "Interest Spread Rate": -20.68
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:04:02.609689",
+      "parsed_at": "2026-11-14T21:13:09.438758",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Retained Earnings": -3328424670.0,
@@ -1008,8 +1088,8 @@
         "Investment Securities": 95296709220.0,
         "Interest Income": 8640810330.0,
         "Net Interest Income": 2006246070.0,
-        "Total Operating Income": 3726474.85,
-        "Operating Profit": 1549706.08,
+        "Total Operating Income": 3726474850.0,
+        "Operating Profit": 1549706080.0,
         "Net Profit": 1078177780.0,
         "Distributable Profit": -3328424670.0,
         "Number of Shares": 262258613.4,
@@ -1092,14 +1172,22 @@
         "Base Rate": -31.44,
         "Interest Spread Rate": -10.23
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:04:02.609593",
+      "parsed_at": "2026-11-14T21:13:09.438617",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Retained Earnings": -6477695750.0,
@@ -1113,8 +1201,8 @@
         "Investment Securities": 81221933280.0,
         "Interest Income": 16337070410.0,
         "Net Interest Income": 5213964310.0,
-        "Total Operating Income": 7083617.19,
-        "Operating Profit": 721561.09,
+        "Total Operating Income": 7083617190.0,
+        "Operating Profit": 721561090.0,
         "Net Profit": 275730460.0,
         "Distributable Profit": -6477695750.0,
         "Number of Shares": 262258613.4,
@@ -1194,14 +1282,22 @@
         "Base Rate": -30.54,
         "Interest Spread Rate": -11.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:04:02.609496",
+      "parsed_at": "2026-11-14T21:13:09.438536",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1216,8 +1312,8 @@
         "Investment Securities": 83968597720.0,
         "Interest Income": 23775589030.0,
         "Net Interest Income": 7896550160.0,
-        "Total Operating Income": 10495926.91,
-        "Operating Profit": 858398.91,
+        "Total Operating Income": 10495926910.0,
+        "Operating Profit": 858398910.0,
         "Net Profit": 285823060.0,
         "Distributable Profit": -6500334810.0,
         "Number of Shares": 262258613.4,
@@ -1298,14 +1394,22 @@
         "Base Rate": -29.6,
         "Interest Spread Rate": -11.34
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:04:02.609395",
+      "parsed_at": "2026-11-14T21:13:09.438479",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1320,8 +1424,8 @@
         "Investment Securities": 80213706220.0,
         "Interest Income": 32290582110.0,
         "Net Interest Income": 11554394660.0,
-        "Total Operating Income": 15133052.07,
-        "Operating Profit": 6134491.03,
+        "Total Operating Income": 15133052070.0,
+        "Operating Profit": 6134491030.0,
         "Net Profit": 2116409050.0,
         "Distributable Profit": -2794020616000.0,
         "Number of Shares": 262258613.4,
@@ -1402,14 +1506,22 @@
         "Base Rate": -27.56,
         "Interest Spread Rate": -9.11
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:04:02.609289",
+      "parsed_at": "2026-11-14T21:13:09.438419",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1424,8 +1536,8 @@
         "Investment Securities": 96251328260.0,
         "Interest Income": 7336110440.0,
         "Net Interest Income": 2912050990.0,
-        "Total Operating Income": 4215313.75,
-        "Operating Profit": 1424035.8,
+        "Total Operating Income": 4215313750.0,
+        "Operating Profit": 1424035800.0,
         "Net Profit": 1056531170.0,
         "Distributable Profit": -3919920200.0,
         "Number of Shares": 262258613.4,
@@ -1506,14 +1618,22 @@
         "Base Rate": -22.19,
         "Interest Spread Rate": -8.55
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:04:02.609186",
+      "parsed_at": "2026-11-14T21:13:09.438355",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1528,8 +1648,8 @@
         "Investment Securities": 106559891880.0,
         "Interest Income": 15175838260.0,
         "Net Interest Income": 6783509670.0,
-        "Total Operating Income": 9212934.8,
-        "Operating Profit": 4366510.21,
+        "Total Operating Income": 9212934800.0,
+        "Operating Profit": 4366510210.0,
         "Net Profit": 2720085590.0,
         "Distributable Profit": -2987186730.0,
         "Number of Shares": 262258613.4,
@@ -1613,14 +1733,22 @@
         "Base Rate": -21.57,
         "Interest Spread Rate": -6.84
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:04:02.609067",
+      "parsed_at": "2026-11-14T21:13:09.438286",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1635,8 +1763,8 @@
         "Investment Securities": 110110825090.0,
         "Interest Income": 21578301420.0,
         "Net Interest Income": 9302222930.0,
-        "Total Operating Income": 12813075.71,
-        "Operating Profit": 6504963.63,
+        "Total Operating Income": 12813075710.0,
+        "Operating Profit": 6504963630.0,
         "Net Profit": 4178048410.0,
         "Distributable Profit": -1989509170.0,
         "Number of Shares": 262258613.4,
@@ -1720,14 +1848,22 @@
         "Base Rate": -21.09,
         "Interest Spread Rate": -11.08
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:04:02.608871",
+      "parsed_at": "2026-11-14T21:13:09.438223",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1742,8 +1878,8 @@
         "Investment Securities": 114417301050.0,
         "Interest Income": 28459535790.0,
         "Net Interest Income": 12013083600.0,
-        "Total Operating Income": 16358432.25,
-        "Operating Profit": 11235225.92,
+        "Total Operating Income": 16358432250.0,
+        "Operating Profit": 11235225920.0,
         "Net Profit": 7387197910.0,
         "Distributable Profit": 791661680.0,
         "Number of Shares": 262258613.4,
@@ -1826,14 +1962,22 @@
         "Base Rate": 0.0,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KBL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:04:02.608662",
+      "parsed_at": "2026-11-14T21:13:09.438150",
       "raw": {
         "Paid Up Capital": 26225861340.0,
         "Share Premium": 0.0,
@@ -1848,8 +1992,8 @@
         "Investment Securities": 102810386020.0,
         "Interest Income": 6185934800.0,
         "Net Interest Income": 2091282680.0,
-        "Total Operating Income": 3672015.63,
-        "Operating Profit": 1885325.49,
+        "Total Operating Income": 3672015630.0,
+        "Operating Profit": 1885325490.0,
         "Net Profit": 1074505930.0,
         "Distributable Profit": 147188500.0,
         "Number of Shares": 262258613.4,
@@ -1933,8 +2077,16 @@
         "Base Rate": -17.53,
         "Interest Spread Rate": -14.16
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:04:02.613687"
+  "last_updated": "2026-11-14T21:13:09.442103"
 }

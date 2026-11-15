@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:41:59.183601",
+      "parsed_at": "2026-11-14T20:24:35.185883",
       "raw": {
         "EPS(Rs.)": 101.46
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:41:59.183594",
+      "parsed_at": "2026-11-14T20:24:35.185876",
       "raw": {
         "Paid Up Capital": 422790000.0,
         "Reserve and Surplus": 624448000.0,
@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 8087889000.0,
         "Interest Income": 411365000.0,
         "Net Interest Income": 250825000.0,
-        "Total Operating Income": 279897.0,
-        "Operating Profit": 164522.0,
+        "Total Operating Income": 279897000.0,
+        "Operating Profit": 164522000.0,
         "Net Profit": 105400000.0,
         "Number of Shares": 4227900.0,
         "EPS(Rs.)": 99.72,
@@ -86,14 +86,22 @@
         "graham_number": 745.48
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:41:59.183561",
+      "parsed_at": "2026-11-14T20:24:35.185844",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 595254000.0,
@@ -104,8 +112,8 @@
         "Loans and Advances to Customers": 8622297000.0,
         "Interest Income": 817806000.0,
         "Net Interest Income": 492693000.0,
-        "Total Operating Income": 553834.0,
-        "Operating Profit": 322042.0,
+        "Total Operating Income": 553834000.0,
+        "Operating Profit": 322042000.0,
         "Net Profit": 206250000.0,
         "Number of Shares": 5957480.0,
         "EPS(Rs.)": 69.25,
@@ -148,14 +156,22 @@
         "graham_number": 476.99
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:41:59.183524",
+      "parsed_at": "2026-11-14T20:24:35.185812",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 796385000.0,
@@ -166,8 +182,8 @@
         "Loans and Advances to Customers": 9286859000.0,
         "Interest Income": 1257591000.0,
         "Net Interest Income": 754216000.0,
-        "Total Operating Income": 852291.0,
-        "Operating Profit": 513764.0,
+        "Total Operating Income": 852291000.0,
+        "Operating Profit": 513764000.0,
         "Net Profit": 330259000.0,
         "Number of Shares": 5957480.0,
         "EPS(Rs.)": 75.19,
@@ -210,14 +226,22 @@
         "graham_number": 497.02
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:41:59.183485",
+      "parsed_at": "2026-11-14T20:24:35.185780",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 746827000.0,
@@ -228,8 +252,8 @@
         "Loans and Advances to Customers": 9685946000.0,
         "Interest Income": 1750495000.0,
         "Net Interest Income": 1046604000.0,
-        "Total Operating Income": 1182952.0,
-        "Operating Profit": 727263.0,
+        "Total Operating Income": 1182952000.0,
+        "Operating Profit": 727263000.0,
         "Net Profit": 472681000.0,
         "Number of Shares": 5957480.0,
         "EPS(Rs.)": 79.15,
@@ -275,14 +299,22 @@
         "EPS(Rs.)": -21.99,
         "eps_ttm": -21.99
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T08:41:59.183447",
+      "parsed_at": "2026-11-14T20:24:35.185748",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 865704000.0,
@@ -293,8 +325,8 @@
         "Loans and Advances to Customers": 10561002000.0,
         "Interest Income": 515540000.0,
         "Net Interest Income": 299400000.0,
-        "Total Operating Income": 342156.0,
-        "Operating Profit": 196034.0,
+        "Total Operating Income": 342156000.0,
+        "Operating Profit": 196034000.0,
         "Net Profit": 126653000.0,
         "Number of Shares": 5957480.0,
         "EPS(Rs.)": 85.04,
@@ -362,14 +394,22 @@
         "eps_ttm": -14.72,
         "bvps": -0.96
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T08:41:59.183409",
+      "parsed_at": "2026-11-14T20:24:35.185715",
       "raw": {
         "Paid Up Capital": 834047000.0,
         "Reserve and Surplus": 673970000.0,
@@ -380,8 +420,8 @@
         "Loans and Advances to Customers": 11162894000.0,
         "Interest Income": 1080220000.0,
         "Net Interest Income": 639530000.0,
-        "Total Operating Income": 724168.0,
-        "Operating Profit": 459772.0,
+        "Total Operating Income": 724168000.0,
+        "Operating Profit": 459772000.0,
         "Net Profit": 295694000.0,
         "Number of Shares": 8340470.0,
         "EPS(Rs.)": 70.91,
@@ -449,14 +489,22 @@
         "eps_ttm": 2.4,
         "bvps": 23.83
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T08:41:59.183376",
+      "parsed_at": "2026-11-14T20:24:35.185682",
       "raw": {
         "Paid Up Capital": 834071000.0,
         "Reserve and Surplus": 822016000.0,
@@ -467,8 +515,8 @@
         "Loans and Advances to Customers": 12184631000.0,
         "Interest Income": 1641679000.0,
         "Net Interest Income": 937231000.0,
-        "Total Operating Income": 1069860.0,
-        "Operating Profit": 691267.0,
+        "Total Operating Income": 1069860000.0,
+        "Operating Profit": 691267000.0,
         "Net Profit": 443741000.0,
         "Number of Shares": 8340710.0,
         "EPS(Rs.)": 70.94,
@@ -536,14 +584,22 @@
         "eps_ttm": -5.65,
         "bvps": 35.97
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:41:59.183340",
+      "parsed_at": "2026-11-14T20:24:35.185648",
       "raw": {
         "Paid Up Capital": 834071000.0,
         "Reserve and Surplus": 954691000.0,
@@ -554,8 +610,8 @@
         "Loans and Advances to Customers": 12514202000.0,
         "Interest Income": 2265416000.0,
         "Net Interest Income": 1246420000.0,
-        "Total Operating Income": 1423631.0,
-        "Operating Profit": 889784.0,
+        "Total Operating Income": 1423631000.0,
+        "Operating Profit": 889784000.0,
         "Net Profit": 576416000.0,
         "Number of Shares": 8340710.0,
         "EPS(Rs.)": 69.04,
@@ -623,14 +679,22 @@
         "eps_ttm": -12.77,
         "bvps": -4.84
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:41:59.183306",
+      "parsed_at": "2026-11-14T20:24:35.185615",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3292848810.0,
@@ -642,8 +706,8 @@
         "Investments": 501668000.0,
         "Interest Income": 3529768610.0,
         "Net Interest Income": 1757740740.0,
-        "Total Operating Income": 2159737.01,
-        "Operating Profit": 1120737.87,
+        "Total Operating Income": 2159737010.0,
+        "Operating Profit": 1120737870.0,
         "Net Profit": 717102030.0,
         "Number of Shares": 23241000.0,
         "EPS(Rs.)": 41.14,
@@ -709,14 +773,22 @@
         "eps_ttm": -51.62,
         "bvps": -1.48
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:41:59.183272",
+      "parsed_at": "2026-11-14T20:24:35.185582",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3583727490.0,
@@ -728,8 +800,8 @@
         "Investments": 477500000.0,
         "Interest Income": 4967296250.0,
         "Net Interest Income": 2490524440.0,
-        "Total Operating Income": 2984505.21,
-        "Operating Profit": 1607819.6,
+        "Total Operating Income": 2984505210.0,
+        "Operating Profit": 1607819600.0,
         "Net Profit": 1032283700.0,
         "Number of Shares": 23241000.0,
         "EPS(Rs.)": 44.42,
@@ -798,14 +870,22 @@
         "eps_ttm": -37.36,
         "bvps": 40.59
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:41:59.183238",
+      "parsed_at": "2026-11-14T20:24:35.185548",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3957880670.0,
@@ -817,8 +897,8 @@
         "Investments": 465500000.0,
         "Interest Income": 1428567080.0,
         "Net Interest Income": 739988950.0,
-        "Total Operating Income": 842355.86,
-        "Operating Profit": 466959.21,
+        "Total Operating Income": 842355860.0,
+        "Operating Profit": 466959210.0,
         "Net Profit": 329108490.0,
         "Number of Shares": 23241000.0,
         "EPS(Rs.)": 56.64,
@@ -884,14 +964,22 @@
         "eps_ttm": -20.16,
         "bvps": 36.14
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:41:59.183205",
+      "parsed_at": "2026-11-14T20:24:35.185516",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 4036964110.0,
@@ -903,8 +991,8 @@
         "Investments": 601028000.0,
         "Interest Income": 2824074780.0,
         "Net Interest Income": 1436292130.0,
-        "Total Operating Income": 1632402.5,
-        "Operating Profit": 797881.66,
+        "Total Operating Income": 1632402500.0,
+        "Operating Profit": 797881660.0,
         "Net Profit": 556082220.0,
         "Number of Shares": 23241000.0,
         "EPS(Rs.)": 47.85,
@@ -970,14 +1058,22 @@
         "eps_ttm": -30.69,
         "bvps": 27.62
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:41:59.183171",
+      "parsed_at": "2026-11-14T20:24:35.185482",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 3745120040.0,
@@ -989,8 +1085,8 @@
         "Investments": 686038000.0,
         "Interest Income": 4278172770.0,
         "Net Interest Income": 2117056520.0,
-        "Total Operating Income": 2393816.44,
-        "Operating Profit": 1244812.52,
+        "Total Operating Income": 2393816440.0,
+        "Operating Profit": 1244812520.0,
         "Net Profit": 880659580.0,
         "Number of Shares": 28354020.0,
         "EPS(Rs.)": 41.41,
@@ -1057,14 +1153,22 @@
         "eps_ttm": 0.66,
         "bvps": -3.97
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:41:59.183136",
+      "parsed_at": "2026-11-14T20:24:35.185450",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 3920504920.0,
@@ -1076,8 +1180,8 @@
         "Investments": 503638000.0,
         "Interest Income": 5822681020.0,
         "Net Interest Income": 2853480570.0,
-        "Total Operating Income": 3093077.56,
-        "Operating Profit": 1541851.69,
+        "Total Operating Income": 3093077560.0,
+        "Operating Profit": 1541851690.0,
         "Net Profit": 1061926230.0,
         "Number of Shares": 28354020.0,
         "EPS(Rs.)": 37.45,
@@ -1147,14 +1251,22 @@
         "eps_ttm": -15.69,
         "bvps": -6.27
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:41:59.183102",
+      "parsed_at": "2026-11-14T20:24:35.185417",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 4186170340.0,
@@ -1166,8 +1278,8 @@
         "Investments": 514538000.0,
         "Interest Income": 1510028290.0,
         "Net Interest Income": 728410730.0,
-        "Total Operating Income": 792452.17,
-        "Operating Profit": 313015.95,
+        "Total Operating Income": 792452170.0,
+        "Operating Profit": 313015950.0,
         "Net Profit": 221160160.0,
         "Number of Shares": 28354020.0,
         "EPS(Rs.)": 31.2,
@@ -1236,14 +1348,22 @@
         "eps_ttm": -44.92,
         "bvps": -8.38
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:41:59.183066",
+      "parsed_at": "2026-11-14T20:24:35.185375",
       "raw": {
         "Paid Up Capital": 2977172100.0,
         "Reserve and Surplus": 3915617790.0,
@@ -1255,8 +1375,8 @@
         "Investments": 662680000.0,
         "Interest Income": 2916131380.0,
         "Net Interest Income": 1384747490.0,
-        "Total Operating Income": 1512361.01,
-        "Operating Profit": 613885.69,
+        "Total Operating Income": 1512361010.0,
+        "Operating Profit": 613885690.0,
         "Net Profit": 436225250.0,
         "Number of Shares": 29771721.0,
         "EPS(Rs.)": 29.3,
@@ -1325,14 +1445,22 @@
         "eps_ttm": -38.77,
         "bvps": -15.41
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:41:59.183031",
+      "parsed_at": "2026-11-14T20:24:35.185336",
       "raw": {
         "Paid Up Capital": 2977172100.0,
         "Reserve and Surplus": 4087739640.0,
@@ -1344,8 +1472,8 @@
         "Investments": 586481000.0,
         "Interest Income": 4367078710.0,
         "Net Interest Income": 2056646980.0,
-        "Total Operating Income": 2269428.78,
-        "Operating Profit": 904123.31,
+        "Total Operating Income": 2269428780.0,
+        "Operating Profit": 904123310.0,
         "Net Profit": 643762460.0,
         "Number of Shares": 29771721.0,
         "EPS(Rs.)": 28.83,
@@ -1414,7 +1542,15 @@
         "eps_ttm": -30.38,
         "bvps": 2.25
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CBBL",
@@ -1422,7 +1558,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:41:59.182997",
+      "parsed_at": "2026-11-14T20:24:35.185298",
       "computed": {
         "pe_ratio": 38.7,
         "pb_ratio": 4.5,
@@ -1467,8 +1603,8 @@
         "Investments": 781042800.0,
         "Interest Income": 5943186720.0,
         "Net Interest Income": 2820926210.0,
-        "Total Operating Income": 3103177.85,
-        "Operating Profit": 1401764.36,
+        "Total Operating Income": 3103177850.0,
+        "Operating Profit": 1401764360.0,
         "Net Profit": 1000948270.0,
         "Number of Shares": 29771721.0,
         "EPS(Rs.)": 33.62,
@@ -1537,6 +1673,14 @@
         "EPS(Rs.)": -10.23,
         "Book Value(Rs.)": 4.57,
         "ROE": -14.19
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1545,7 +1689,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:41:59.182962",
+      "parsed_at": "2026-11-14T20:24:35.185262",
       "computed": {
         "pe_ratio": 29.2,
         "pb_ratio": 3.9,
@@ -1591,8 +1735,8 @@
         "Investments": 781042500.0,
         "Interest Income": 1495612550.0,
         "Net Interest Income": 679847030.0,
-        "Total Operating Income": 767904.33,
-        "Operating Profit": 336358.26,
+        "Total Operating Income": 767904330.0,
+        "Operating Profit": 336358260.0,
         "Net Profit": 237487780.0,
         "Number of Shares": 29771721.0,
         "EPS Reported": 31.91,
@@ -1655,6 +1799,14 @@
         "NPL": 26.75,
         "Cost of funds": -3.29,
         "CD ratio": 4.58
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1663,7 +1815,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:41:59.182925",
+      "parsed_at": "2026-11-14T20:24:35.185227",
       "computed": {
         "pe_ratio": 25.9,
         "pb_ratio": 3.7,
@@ -1709,8 +1861,8 @@
         "Investments": 764218640.0,
         "Interest Income": 2968169240.0,
         "Net Interest Income": 1358725290.0,
-        "Total Operating Income": 1535045.97,
-        "Operating Profit": 721738.27,
+        "Total Operating Income": 1535045970.0,
+        "Operating Profit": 721738270.0,
         "Net Profit": 511838990.0,
         "Number of Shares": 32153458.68,
         "EPS Reported": 31.84,
@@ -1773,6 +1925,14 @@
         "NPL": -7.8,
         "Cost of funds": -4.52,
         "CD ratio": 4.77
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1781,7 +1941,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:41:59.182889",
+      "parsed_at": "2026-11-14T20:24:35.185192",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.6,
@@ -1826,8 +1986,8 @@
         "Investments": 495867800.0,
         "Interest Income": 4493666250.0,
         "Net Interest Income": 2064265170.0,
-        "Total Operating Income": 2332986.83,
-        "Operating Profit": 1202110.46,
+        "Total Operating Income": 2332986830.0,
+        "Operating Profit": 1202110460.0,
         "Net Profit": 853550560.0,
         "Number of Shares": 32153458.68,
         "EPS Reported": 35.39,
@@ -1891,6 +2051,14 @@
         "NPL": -14.47,
         "Cost of funds": -2.22,
         "CD ratio": 8.22
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1899,7 +2067,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:41:59.182853",
+      "parsed_at": "2026-11-14T20:24:35.185156",
       "computed": {
         "pe_ratio": 27.4,
         "pb_ratio": 4.2,
@@ -1944,8 +2112,8 @@
         "Investments": 684250000.0,
         "Interest Income": 6122253020.0,
         "Net Interest Income": 2819466840.0,
-        "Total Operating Income": 3155628.97,
-        "Operating Profit": 1703173.42,
+        "Total Operating Income": 3155628970.0,
+        "Operating Profit": 1703173420.0,
         "Net Profit": 1212874490.0,
         "Number of Shares": 32153458.68,
         "EPS Reported": 37.72,
@@ -2009,6 +2177,14 @@
         "NPL": -15.0,
         "Cost of funds": -4.2,
         "CD ratio": 1.82
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2017,7 +2193,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:41:59.182817",
+      "parsed_at": "2026-11-14T20:24:35.185119",
       "computed": {
         "pe_ratio": 26.4,
         "pb_ratio": 3.9,
@@ -2062,8 +2238,8 @@
         "Investments": 684250000.0,
         "Interest Income": 1651153230.0,
         "Net Interest Income": 755117980.0,
-        "Total Operating Income": 840029.44,
-        "Operating Profit": 379486.69,
+        "Total Operating Income": 840029440.0,
+        "Operating Profit": 379486690.0,
         "Net Profit": 269002800.0,
         "Number of Shares": 32153458.68,
         "EPS Reported": 33.46,
@@ -2127,6 +2303,14 @@
         "NPL": -13.15,
         "Cost of funds": -2.35,
         "CD ratio": 5.03
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2135,7 +2319,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:41:59.182779",
+      "parsed_at": "2026-11-14T20:24:35.185082",
       "computed": {
         "pe_ratio": 27.0,
         "pb_ratio": 3.9,
@@ -2180,8 +2364,8 @@
         "Investments": 833782600.0,
         "Interest Income": 3247112400.0,
         "Net Interest Income": 1459951040.0,
-        "Total Operating Income": 1642362.83,
-        "Operating Profit": 805757.66,
+        "Total Operating Income": 1642362830.0,
+        "Operating Profit": 805757660.0,
         "Net Profit": 576096500.0,
         "Number of Shares": 36172641.02,
         "EPS Reported": 31.85,
@@ -2245,6 +2429,14 @@
         "NPL": -9.93,
         "Cost of funds": -1.66,
         "CD ratio": -3.01
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2253,7 +2445,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:41:59.182740",
+      "parsed_at": "2026-11-14T20:24:35.185043",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.9,
@@ -2298,8 +2490,8 @@
         "Investments": 1045090190.0,
         "Interest Income": 4910866130.0,
         "Net Interest Income": 2203023140.0,
-        "Total Operating Income": 2499110.69,
-        "Operating Profit": 1269796.69,
+        "Total Operating Income": 2499110690.0,
+        "Operating Profit": 1269796690.0,
         "Net Profit": 906476530.0,
         "Number of Shares": 36172641.02,
         "EPS Reported": 33.41,
@@ -2363,6 +2555,14 @@
         "NPL": -10.77,
         "Cost of funds": -0.48,
         "CD ratio": -4.14
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2370,7 +2570,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:41:59.182694",
+      "parsed_at": "2026-11-14T20:24:35.184998",
       "raw": {
         "Paid Up Capital": 3617264100.0,
         "Reserve and Surplus": 5464086640.0,
@@ -2383,8 +2583,8 @@
         "Investments": 1148543390.0,
         "Interest Income": 6717349500.0,
         "Net Interest Income": 3008419120.0,
-        "Total Operating Income": 3407959.2,
-        "Operating Profit": 1817600.41,
+        "Total Operating Income": 3407959200.0,
+        "Operating Profit": 1817600410.0,
         "Net Profit": 1298965530.0,
         "Number of Shares": 36172641.02,
         "EPS Reported": 35.91,
@@ -2455,8 +2655,16 @@
         "Cost of funds": -0.49,
         "CD ratio": -1.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:41:59.185154"
+  "last_updated": "2026-11-14T20:24:35.187298"
 }

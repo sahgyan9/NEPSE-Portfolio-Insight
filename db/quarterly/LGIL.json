@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T09:09:43.849454",
+      "parsed_at": "2026-11-14T21:18:51.205739",
       "raw": {
         "EPS(Rs.)": 42.78
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T09:09:43.849431",
+      "parsed_at": "2026-11-14T21:18:51.205715",
       "raw": {
         "Paid Up Capital": 291605000.0,
         "Reserves and Surplus": 43755000.0,
@@ -43,8 +43,8 @@
         "Total Investment and Loans": 812727000.0,
         "Total Revenue": 34588000.0,
         "Income From Investment Loans And Others": 6607000.0,
-        "Total Expenses And Provisions": 13744.0,
-        "Management Expenses": 1833.0,
+        "Total Expenses And Provisions": 13744000.0,
+        "Management Expenses": 1833000.0,
         "Net Profit": 20844000.0,
         "Net Premium": 109042000.0,
         "Net Claim Payment": 59915000.0,
@@ -92,14 +92,22 @@
         "graham_number": 323.8
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T09:09:43.849286",
+      "parsed_at": "2026-11-14T21:18:51.205551",
       "raw": {
         "Paid Up Capital": 291875000.0,
         "Reserves and Surplus": 79061000.0,
@@ -111,8 +119,8 @@
         "Total Investment and Loans": 881370000.0,
         "Total Revenue": 47459000.0,
         "Income From Investment Loans And Others": 12606000.0,
-        "Total Expenses And Provisions": 15232.0,
-        "Management Expenses": 3103.0,
+        "Total Expenses And Provisions": 15232000.0,
+        "Management Expenses": 3103000.0,
         "Net Profit": 28227000.0,
         "Net Premium": 151176000.0,
         "Net Claim Payment": 166054000.0,
@@ -160,14 +168,22 @@
         "graham_number": 285.71
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T09:09:43.849139",
+      "parsed_at": "2026-11-14T21:18:51.205391",
       "raw": {
         "Paid Up Capital": 330000000.0,
         "Reserves and Surplus": 96837000.0,
@@ -180,8 +196,8 @@
         "Total Investment and Loans": 919815000.0,
         "Total Revenue": 105718000.0,
         "Income From Investment Loans And Others": 18236000.0,
-        "Total Expenses And Provisions": 41939.0,
-        "Management Expenses": 5227.0,
+        "Total Expenses And Provisions": 41939000.0,
+        "Management Expenses": 5227000.0,
         "Net Profit": 63779000.0,
         "Net Premium": 307371000.0,
         "Net Claim Payment": 701223000.0,
@@ -230,14 +246,22 @@
         "graham_number": 333.29
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T09:09:43.848987",
+      "parsed_at": "2026-11-14T21:18:51.205228",
       "raw": {
         "Paid Up Capital": 330000000.0,
         "Reserves and Surplus": 142927000.0,
@@ -250,8 +274,8 @@
         "Total Investment and Loans": 1017550000.0,
         "Total Revenue": 254742000.0,
         "Income From Investment Loans And Others": 25241000.0,
-        "Total Expenses And Provisions": 98783.0,
-        "Management Expenses": 9228.0,
+        "Total Expenses And Provisions": 98783000.0,
+        "Management Expenses": 9228000.0,
         "Net Profit": 155959000.0,
         "Net Premium": 482939000.0,
         "Net Claim Payment": 234946000.0,
@@ -303,14 +327,22 @@
         "eps_ttm": 7.53,
         "EPS(Rs.)": 7.53
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T09:09:43.848834",
+      "parsed_at": "2026-11-14T21:18:51.205060",
       "raw": {
         "Paid Up Capital": 330000000.0,
         "Reserves and Surplus": 115240000.0,
@@ -323,8 +355,8 @@
         "Total Investment and Loans": 1119925000.0,
         "Total Revenue": 53846000.0,
         "Income From Investment Loans And Others": 9678000.0,
-        "Total Expenses And Provisions": 24655.0,
-        "Management Expenses": 2445.0,
+        "Total Expenses And Provisions": 24655000.0,
+        "Management Expenses": 2445000.0,
         "Net Profit": 38867000.0,
         "Net Premium": 213192000.0,
         "Net Claim Payment": 60364000.0,
@@ -400,14 +432,22 @@
         "Book Value(Rs.)": 34.05,
         "ROE": 22.92
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T09:09:43.848682",
+      "parsed_at": "2026-11-14T21:18:51.204886",
       "raw": {
         "Paid Up Capital": 390000000.0,
         "Reserves and Surplus": 131090000.0,
@@ -420,8 +460,8 @@
         "Total Investment and Loans": 1143320000.0,
         "Total Revenue": 125811000.0,
         "Income From Investment Loans And Others": 28488000.0,
-        "Total Expenses And Provisions": 48929.0,
-        "Management Expenses": 4996.0,
+        "Total Expenses And Provisions": 48929000.0,
+        "Management Expenses": 4996000.0,
         "Net Profit": 76882000.0,
         "Net Premium": 363401000.0,
         "Net Claim Payment": 117519000.0,
@@ -497,14 +537,22 @@
         "Book Value(Rs.)": 11.51,
         "ROE": 82.83
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T09:09:43.848530",
+      "parsed_at": "2026-11-14T21:18:51.204720",
       "raw": {
         "Paid Up Capital": 390000000.0,
         "Reserves and Surplus": 150713000.0,
@@ -517,8 +565,8 @@
         "Total Investment and Loans": 1209902000.0,
         "Total Revenue": 190365000.0,
         "Income From Investment Loans And Others": 30498000.0,
-        "Total Expenses And Provisions": 74236.0,
-        "Management Expenses": 7876.0,
+        "Total Expenses And Provisions": 74236000.0,
+        "Management Expenses": 7876000.0,
         "Net Profit": 116129000.0,
         "Net Premium": 550708000.0,
         "Net Claim Payment": 205117000.0,
@@ -595,14 +643,22 @@
         "Book Value(Rs.)": 14.44,
         "ROE": 34.65
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:09:43.848376",
+      "parsed_at": "2026-11-14T21:18:51.204551",
       "raw": {
         "Paid Up Capital": 390000000.0,
         "Reserves and Surplus": 188134000.0,
@@ -615,8 +671,8 @@
         "Total Investment and Loans": 1284053000.0,
         "Total Revenue": 313359000.0,
         "Income From Investment Loans And Others": 50972000.0,
-        "Total Expenses And Provisions": 122389.0,
-        "Management Expenses": 13263.0,
+        "Total Expenses And Provisions": 122389000.0,
+        "Management Expenses": 13263000.0,
         "Net Profit": 190970000.0,
         "Net Premium": 751219000.0,
         "Net Claim Payment": 325667000.0,
@@ -693,14 +749,22 @@
         "Book Value(Rs.)": 8.62,
         "ROE": -4.6
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:09:43.848219",
+      "parsed_at": "2026-11-14T21:18:51.204382",
       "raw": {
         "Paid Up Capital": 1198900000.0,
         "Reserves and Surplus": 311700000.0,
@@ -713,8 +777,8 @@
         "Total Investment and Loans": 2312800000.0,
         "Total Revenue": 193400000.0,
         "Income From Investment Loans And Others": 104400000.0,
-        "Total Expenses And Provisions": 97800.0,
-        "Management Expenses": 16600.0,
+        "Total Expenses And Provisions": 97800000.0,
+        "Management Expenses": 16600000.0,
         "Net Profit": 95500000.0,
         "Net Premium": 516600000.0,
         "Net Claim Payment": 368600000.0,
@@ -791,14 +855,22 @@
         "Book Value(Rs.)": -11.53,
         "ROE": -74.49
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:09:43.848063",
+      "parsed_at": "2026-11-14T21:18:51.204215",
       "raw": {
         "Paid Up Capital": 1312800000.0,
         "Reserves and Surplus": 153000000.0,
@@ -811,8 +883,8 @@
         "Total Investment and Loans": 2357700000.0,
         "Total Revenue": 322400000.0,
         "Income From Investment Loans And Others": 145700000.0,
-        "Total Expenses And Provisions": 135000.0,
-        "Management Expenses": 24800.0,
+        "Total Expenses And Provisions": 135000000.0,
+        "Management Expenses": 24800000.0,
         "Net Profit": 187300000.0,
         "Net Premium": 564100000.0,
         "Net Claim Payment": 470800000.0,
@@ -889,14 +961,22 @@
         "Book Value(Rs.)": -14.69,
         "ROE": -57.56
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:09:43.847904",
+      "parsed_at": "2026-11-14T21:18:51.204044",
       "raw": {
         "Paid Up Capital": 1312800000.0,
         "Reserves and Surplus": 194300000.0,
@@ -909,8 +989,8 @@
         "Total Investment and Loans": 2486300000.0,
         "Total Revenue": 101200000.0,
         "Income From Investment Loans And Others": 44900000.0,
-        "Total Expenses And Provisions": 46000.0,
-        "Management Expenses": 6500.0,
+        "Total Expenses And Provisions": 46000000.0,
+        "Management Expenses": 6500000.0,
         "Net Profit": 55100000.0,
         "Net Premium": 365500000.0,
         "Net Claim Payment": 130100000.0,
@@ -987,14 +1067,22 @@
         "Book Value(Rs.)": -16.78,
         "ROE": -49.2
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:09:43.847739",
+      "parsed_at": "2026-11-14T21:18:51.203873",
       "raw": {
         "Paid Up Capital": 1312800000.0,
         "Reserves and Surplus": 253700000.0,
@@ -1007,8 +1095,8 @@
         "Total Investment and Loans": 2388800000.0,
         "Total Revenue": 194800000.0,
         "Income From Investment Loans And Others": 78900000.0,
-        "Total Expenses And Provisions": 89900.0,
-        "Management Expenses": 12900.0,
+        "Total Expenses And Provisions": 89900000.0,
+        "Management Expenses": 12900000.0,
         "Net Profit": 104900000.0,
         "Net Premium": 509600000.0,
         "Net Claim Payment": 244000000.0,
@@ -1085,14 +1173,22 @@
         "Book Value(Rs.)": -21.59,
         "ROE": -58.37
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LGIL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:09:43.847552",
+      "parsed_at": "2026-11-14T21:18:51.203686",
       "raw": {
         "Paid Up Capital": 1312800000.0,
         "Reserves and Surplus": 258600000.0,
@@ -1105,8 +1201,8 @@
         "Total Investment and Loans": 2293400000.0,
         "Total Revenue": 227700000.0,
         "Income From Investment Loans And Others": 106700000.0,
-        "Total Expenses And Provisions": 111000.0,
-        "Management Expenses": 19400.0,
+        "Total Expenses And Provisions": 111000000.0,
+        "Management Expenses": 19400000.0,
         "Net Profit": 116700000.0,
         "Net Premium": 483200000.0,
         "Net Claim Payment": 325100000.0,
@@ -1183,8 +1279,16 @@
         "Book Value(Rs.)": -2.81,
         "ROE": 14.73
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:09:43.852271"
+  "last_updated": "2026-11-14T21:18:51.208674"
 }

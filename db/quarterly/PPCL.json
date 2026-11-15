@@ -989,7 +989,7 @@
         "Total Assets": 2865238850.0,
         "Revenue": 289281170.0,
         "Gross Profit": 253691200.0,
-        "Operating Profit": 168519.71,
+        "Operating Profit": 168519710.0,
         "Net Profit": 60193880.0,
         "Number of Shares": 9625000.0,
         "EPS Reported": 8.34,
@@ -1041,7 +1041,14 @@
         "Book Value Reported": 5.73,
         "ROE Reported": 210.29
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PPCL",
@@ -1059,7 +1066,7 @@
         "Total Assets": 2877749220.0,
         "Revenue": 377816870.0,
         "Gross Profit": 338965850.0,
-        "Operating Profit": 244734.25,
+        "Operating Profit": 244734250.0,
         "Net Profit": 85163270.0,
         "Number of Shares": 9625000.0,
         "EPS Reported": 8.85,
@@ -1112,7 +1119,14 @@
         "Book Value Reported": 7.91,
         "ROE Reported": 271.18
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PPCL",
@@ -1130,7 +1144,7 @@
         "Total Assets": 2912820820.0,
         "Revenue": 144265240.0,
         "Gross Profit": 141420560.0,
-        "Operating Profit": 107329.67,
+        "Operating Profit": 107329670.0,
         "Net Profit": 79578100.0,
         "Number of Shares": 9625000.0,
         "EPS Reported": 33.07,
@@ -1183,7 +1197,14 @@
         "Book Value Reported": 11.34,
         "ROE Reported": 38.7
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:48:02.402975"

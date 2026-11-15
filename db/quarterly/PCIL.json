@@ -17,7 +17,7 @@
         "Current Liabilities": 1243362790.0,
         "Current Assets": 2849550540.0,
         "Total Assets": 10991929800.0,
-        "Revenue from Operation": 3403945.9,
+        "Revenue from Operation": 3403945900.0,
         "Gross Profit": 579702400.0,
         "Total Operating Profit": 380825700.0,
         "Net Profit": 57311540.0,
@@ -53,7 +53,14 @@
         "graham_number": 77.07
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PCIL",
@@ -69,7 +76,7 @@
         "Current Liabilities": 695614990.0,
         "Current Assets": 2215551740.0,
         "Total Assets": 10315081000.0,
-        "Revenue from Operation": 4765939.97,
+        "Revenue from Operation": 4765939970.0,
         "Gross Profit": 773466390.0,
         "Total Operating Profit": 429397650.0,
         "Net Profit": 39992670.0,
@@ -105,7 +112,14 @@
         "graham_number": 55.67
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:59:10.665178"

@@ -43,8 +43,8 @@
         "Investments": 3600090.0,
         "Interest Income": 505302840.0,
         "Net Interest Income": 265688300.0,
-        "Total Operating Income": 324755.12,
-        "Operating Profit": 124385.86,
+        "Total Operating Income": 324755120.0,
+        "Operating Profit": 124385860.0,
         "Net Profit": 95137510.0,
         "Number of Shares": 3200000.0,
         "EPS(Rs.)": 39.64,
@@ -88,7 +88,15 @@
         "graham_number": 387.63
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -107,8 +115,8 @@
         "Investments": 3600090.0,
         "Interest Income": 688932050.0,
         "Net Interest Income": 341563830.0,
-        "Total Operating Income": 415661.52,
-        "Operating Profit": 158144.13,
+        "Total Operating Income": 415661520.0,
+        "Operating Profit": 158144130.0,
         "Net Profit": 104719860.0,
         "Number of Shares": 3200000.0,
         "EPS(Rs.)": 32.72,
@@ -152,7 +160,15 @@
         "graham_number": 355.36
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -171,8 +187,8 @@
         "Investments": 3010080.0,
         "Interest Income": 181643340.0,
         "Net Interest Income": 69154630.0,
-        "Total Operating Income": 86396.62,
-        "Operating Profit": 11415.92,
+        "Total Operating Income": 86396620.0,
+        "Operating Profit": 11415920.0,
         "Net Profit": 7982190.0,
         "Number of Shares": 3200000.0,
         "EPS(Rs.)": 9.98,
@@ -214,7 +230,15 @@
         "graham_number": 217.16
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -233,8 +257,8 @@
         "Investments": 863270.0,
         "Interest Income": 357967590.0,
         "Net Interest Income": 135035870.0,
-        "Total Operating Income": 167049.3,
-        "Operating Profit": 34455.76,
+        "Total Operating Income": 167049300.0,
+        "Operating Profit": 34455760.0,
         "Net Profit": 21257720.0,
         "Number of Shares": 3200000.0,
         "EPS(Rs.)": 13.29,
@@ -279,7 +303,15 @@
         "eps_ttm": 1944.62,
         "EPS(Rs.)": 1944.62
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -297,8 +329,8 @@
         "Investments": 863270.0,
         "Interest Income": 520881720.0,
         "Net Interest Income": 186185500.0,
-        "Total Operating Income": 231222.83,
-        "Operating Profit": 7774.02,
+        "Total Operating Income": 231222830.0,
+        "Operating Profit": 7774020.0,
         "Net Profit": 1761140.0,
         "Number of Shares": 3200000.0,
         "EPS(Rs.)": 0.73,
@@ -363,7 +395,15 @@
         "NPL": 66.88,
         "Cost of funds": 23.51
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -380,8 +420,8 @@
         "Loans and Advances to Customers": 8613150190.0,
         "Interest Income": 743346740.0,
         "Net Interest Income": 288597210.0,
-        "Total Operating Income": 333193.96,
-        "Operating Profit": 95048.49,
+        "Total Operating Income": 333193960.0,
+        "Operating Profit": 95048490.0,
         "Net Profit": 58041200.0,
         "Number of Shares": 7450403.59,
         "EPS(Rs.)": 7.79,
@@ -447,7 +487,15 @@
         "Cost of funds": 12.96,
         "CD ratio": 321.2
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -465,8 +513,8 @@
         "Investments": 2010000.0,
         "Interest Income": 318119330.0,
         "Net Interest Income": 84446800.0,
-        "Total Operating Income": 96730.15,
-        "Operating Profit": 21323.29,
+        "Total Operating Income": 96730150.0,
+        "Operating Profit": 21323290.0,
         "Net Profit": 14926300.0,
         "Number of Shares": 7450403.59,
         "EPS(Rs.)": 8.01,
@@ -533,7 +581,15 @@
         "NPL": 58.95,
         "Cost of funds": 1.81
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -550,8 +606,8 @@
         "Loans and Advances to Customers": 9023469480.0,
         "Interest Income": 646861520.0,
         "Net Interest Income": 201993960.0,
-        "Total Operating Income": 227185.17,
-        "Operating Profit": 62571.29,
+        "Total Operating Income": 227185170.0,
+        "Operating Profit": 62571290.0,
         "Net Profit": 41042350.0,
         "Number of Shares": 7450403.6,
         "EPS(Rs.)": 11.02,
@@ -616,7 +672,15 @@
         "NPL": 43.99,
         "Cost of funds": -4.98
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -633,8 +697,8 @@
         "Loans and Advances to Customers": 9074112880.0,
         "Interest Income": 947973180.0,
         "Net Interest Income": 286757410.0,
-        "Total Operating Income": 327992.94,
-        "Operating Profit": 58866.6,
+        "Total Operating Income": 327992940.0,
+        "Operating Profit": 58866600.0,
         "Net Profit": 33166270.0,
         "Number of Shares": 7450403.59,
         "EPS(Rs.)": 5.94,
@@ -699,7 +763,15 @@
         "NPL": 2.53,
         "Cost of funds": -14.54
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -717,8 +789,8 @@
         "Investments": 2010000.0,
         "Interest Income": 1263294140.0,
         "Net Interest Income": 379604390.0,
-        "Total Operating Income": 439064.35,
-        "Operating Profit": 29811.38,
+        "Total Operating Income": 439064350.0,
+        "Operating Profit": 29811380.0,
         "Net Profit": 8366100.0,
         "Number of Shares": 7450403.59,
         "EPS(Rs.)": 1.12,
@@ -785,7 +857,15 @@
         "Cost of funds": -16.68,
         "CD ratio": -74.65
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -803,8 +883,8 @@
         "Investments": 2010000.0,
         "Interest Income": 287786430.0,
         "Net Interest Income": 96999940.0,
-        "Total Operating Income": 109052.25,
-        "Operating Profit": -34559.39,
+        "Total Operating Income": 109052250.0,
+        "Operating Profit": -34559390.0,
         "Net Profit": -34559390.0,
         "Number of Shares": 7450403.59,
         "EPS(Rs.)": -18.55,
@@ -871,7 +951,15 @@
         "Cost of funds": -15.72,
         "CD ratio": -75.39
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -891,8 +979,8 @@
         "Investments": 2010000.0,
         "Interest Income": 658275550.0,
         "Net Interest Income": 274291530.0,
-        "Total Operating Income": 301410.82,
-        "Operating Profit": 105683.86,
+        "Total Operating Income": 301410820.0,
+        "Operating Profit": 105683860.0,
         "Net Profit": 70455900.0,
         "Number of Shares": 7450403.59,
         "EPS Reported": 18.91,
@@ -958,7 +1046,15 @@
         "Cost of funds": -22.28,
         "CD ratio": -77.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -978,8 +1074,8 @@
         "Investments": 10000.0,
         "Interest Income": 987167960.0,
         "Net Interest Income": 440149340.0,
-        "Total Operating Income": 484816.2,
-        "Operating Profit": 118226.25,
+        "Total Operating Income": 484816200.0,
+        "Operating Profit": 118226250.0,
         "Net Profit": 78068070.0,
         "Number of Shares": 7450403.59,
         "EPS Reported": 13.97,
@@ -1045,7 +1141,15 @@
         "Cost of funds": -24.57,
         "CD ratio": -77.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -1065,8 +1169,8 @@
         "Investments": 10000.0,
         "Interest Income": 1335547430.0,
         "Net Interest Income": 634166350.0,
-        "Total Operating Income": 706195.72,
-        "Operating Profit": 156204.77,
+        "Total Operating Income": 706195720.0,
+        "Operating Profit": 156204770.0,
         "Net Profit": 96778150.0,
         "Number of Shares": 7450403.59,
         "EPS Reported": 12.99,
@@ -1133,7 +1237,15 @@
         "Cost of funds": -22.25,
         "CD ratio": -4.49
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -1153,8 +1265,8 @@
         "Investments": 2010000.0,
         "Interest Income": 337767370.0,
         "Net Interest Income": 173971870.0,
-        "Total Operating Income": 190715.41,
-        "Operating Profit": 47977.78,
+        "Total Operating Income": 190715410.0,
+        "Operating Profit": 47977780.0,
         "Net Profit": 32011140.0,
         "Number of Shares": 7450403.59,
         "EPS Reported": 17.19,
@@ -1221,7 +1333,15 @@
         "Cost of funds": -21.98,
         "CD ratio": -3.8
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -1245,8 +1365,8 @@
         "Interest Income": 531912820.0,
         "Investment Securities": 10000.0,
         "Net Interest Income": 219291440.0,
-        "Total Operating Income": 253512.23,
-        "Operating Profit": 4688.3,
+        "Total Operating Income": 253512230.0,
+        "Operating Profit": 4688300.0,
         "Net Profit": -1673480.0,
         "Number of Shares": 7450403.59,
         "EPS Reported": -0.45,
@@ -1327,7 +1447,15 @@
         "Cost of funds": -18.31,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -1347,8 +1475,8 @@
         "Investments": 10000.0,
         "Interest Income": 776365040.0,
         "Net Interest Income": 320671530.0,
-        "Total Operating Income": 376481.44,
-        "Operating Profit": -19622.9,
+        "Total Operating Income": 376481440.0,
+        "Operating Profit": -19622900.0,
         "Net Profit": -26796150.0,
         "Number of Shares": 7917220.59,
         "EPS Reported": -4.51,
@@ -1417,7 +1545,15 @@
         "Cost of funds": -17.87,
         "CD ratio": -0.79
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "VLBS",
@@ -1437,8 +1573,8 @@
         "Investments": 10000.0,
         "Interest Income": 1348655390.0,
         "Net Interest Income": 742451390.0,
-        "Total Operating Income": 819800.53,
-        "Operating Profit": 328625.48,
+        "Total Operating Income": 819800530.0,
+        "Operating Profit": 328625480.0,
         "Net Profit": 196159560.0,
         "Number of Shares": 7917220.59,
         "EPS Reported": 24.78,
@@ -1508,7 +1644,15 @@
         "Cost of funds": -14.17,
         "CD ratio": 2.87
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:23:38.280376"

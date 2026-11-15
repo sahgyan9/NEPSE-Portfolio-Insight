@@ -19,7 +19,7 @@
         "Total Assets": 1441369920.0,
         "Revenue": 187083560.0,
         "Gross Profit": 172738900.0,
-        "Operating Profit": 134747.88,
+        "Operating Profit": 134747880.0,
         "Net Profit": 82236930.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 27.41,
@@ -53,7 +53,14 @@
         "graham_number": 272.88
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -71,7 +78,7 @@
         "Total Assets": 1390556010.0,
         "Revenue": 139339860.0,
         "Gross Profit": 125739290.0,
-        "Operating Profit": 99325.67,
+        "Operating Profit": 99325670.0,
         "Net Profit": 50184040.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 25.09,
@@ -105,7 +112,14 @@
         "graham_number": 252.86
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -123,7 +137,7 @@
         "Total Assets": 1426114190.0,
         "Revenue": 171452150.0,
         "Gross Profit": 156795220.0,
-        "Operating Profit": 117745.86,
+        "Operating Profit": 117745860.0,
         "Net Profit": 48357070.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 12.9,
@@ -157,7 +171,14 @@
         "graham_number": 178.3
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -294,7 +315,7 @@
         "Total Assets": 1437518980.0,
         "Revenue": 136637210.0,
         "Gross Profit": 125781720.0,
-        "Operating Profit": 101032.4,
+        "Operating Profit": 101032400.0,
         "Net Profit": 57650040.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 23.06,
@@ -348,7 +369,14 @@
         "Book Value(Rs.)": 7.61,
         "ROE": -14.58
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -366,7 +394,7 @@
         "Total Assets": 1437518980.0,
         "Revenue": 136637210.0,
         "Gross Profit": 125781720.0,
-        "Operating Profit": 101032.4,
+        "Operating Profit": 101032400.0,
         "Net Profit": 57650040.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 15.37,
@@ -420,7 +448,14 @@
         "Book Value(Rs.)": 11.28,
         "ROE": 7.14
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -438,7 +473,7 @@
         "Total Assets": 1413624600.0,
         "Revenue": 228242070.0,
         "Gross Profit": 197118510.0,
-        "Operating Profit": 151270.0,
+        "Operating Profit": 151270000.0,
         "Net Profit": 70518680.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 14.1,
@@ -491,7 +526,14 @@
         "Book Value(Rs.)": 12.22,
         "ROE": 13.64
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -577,7 +619,7 @@
         "Total Assets": 1430745370.0,
         "Revenue": 72613290.0,
         "Gross Profit": 65404050.0,
-        "Operating Profit": 52289.66,
+        "Operating Profit": 52289660.0,
         "Net Profit": 35415460.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 14.17,
@@ -628,7 +670,14 @@
         "Net Profit": -38.57,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SMH",
@@ -927,7 +976,7 @@
         "Total Assets": 1364771690.0,
         "Revenue": 138409180.0,
         "Gross Profit": 119462930.0,
-        "Operating Profit": 76394.56,
+        "Operating Profit": 76394560.0,
         "Net Profit": 37792060.0,
         "Number of Shares": 5350000.0,
         "EPS Reported": 9.42,
@@ -980,7 +1029,14 @@
         "Book Value Reported": 9.35,
         "ROE Reported": -26.1
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:09:12.376853"

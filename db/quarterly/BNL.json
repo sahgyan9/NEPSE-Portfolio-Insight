@@ -8,7 +8,7 @@
       "fy": "2070-71",
       "quarter": 4,
       "quarter_label": "Q4 70-71",
-      "parsed_at": "2026-11-07T08:30:45.796662",
+      "parsed_at": "2026-11-14T20:39:46.049303",
       "raw": {
         "EPS(Rs.)": 66.0
       },
@@ -31,7 +31,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:30:45.796654",
+      "parsed_at": "2026-11-14T20:39:46.049292",
       "raw": {
         "EPS(Rs.)": 40.0
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:30:45.796646",
+      "parsed_at": "2026-11-14T20:39:46.049278",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 4412894000.0,
@@ -63,9 +63,9 @@
         "Current Liabilities": 5850948000.0,
         "Current Assets": 5430630000.0,
         "Total Assets": 12488819000.0,
-        "Revenue from Operation": 7920326.0,
+        "Revenue from Operation": 7920326000.0,
         "Gross Profit": 2535435000.0,
-        "Total Operating Profit": 970062.0,
+        "Total Operating Profit": 970062000.0,
         "Net Profit": 481348000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 329.31,
@@ -95,18 +95,26 @@
         "roe_ttm": 13.3,
         "roa_ttm": null,
         "net_profit_ttm": 481348000.0,
-        "revenue_ttm": 7920326.0,
+        "revenue_ttm": 7920326000.0,
         "graham_number": 4282.97
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:30:45.796609",
+      "parsed_at": "2026-11-14T20:39:46.049218",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5044138000.0,
@@ -115,9 +123,9 @@
         "Current Liabilities": 4095225000.0,
         "Current Assets": 3924172000.0,
         "Total Assets": 10938076000.0,
-        "Revenue from Operation": 12647147.0,
+        "Revenue from Operation": 12647147000.0,
         "Gross Profit": 3647041000.0,
-        "Total Operating Profit": 1504757.0,
+        "Total Operating Profit": 1504757000.0,
         "Net Profit": 813069000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 417.0,
@@ -147,18 +155,26 @@
         "roe_ttm": 15.52,
         "roa_ttm": null,
         "net_profit_ttm": 813069000.0,
-        "revenue_ttm": 12647147.0,
+        "revenue_ttm": 12647147000.0,
         "graham_number": 5022.16
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:30:45.796573",
+      "parsed_at": "2026-11-14T20:39:46.049160",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5188499000.0,
@@ -167,9 +183,9 @@
         "Current Liabilities": 4564984000.0,
         "Current Assets": 4857086000.0,
         "Total Assets": 11876033000.0,
-        "Revenue from Operation": 4018295.0,
+        "Revenue from Operation": 4018295000.0,
         "Gross Profit": 1159278000.0,
-        "Total Operating Profit": 473608.0,
+        "Total Operating Profit": 473608000.0,
         "Net Profit": 372301000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 764.13,
@@ -199,21 +215,29 @@
         "roe_ttm": 26.64,
         "roa_ttm": null,
         "net_profit_ttm": 372301000.0,
-        "revenue_ttm": 4018295.0,
+        "revenue_ttm": 4018295000.0,
         "graham_number": 7022.77
       },
       "yoy": {
         "eps_ttm": 1057.77,
         "EPS(Rs.)": 1057.77
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:30:45.796547",
+      "parsed_at": "2026-11-14T20:39:46.049095",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5385459000.0,
@@ -222,9 +246,9 @@
         "Current Liabilities": 4811603000.0,
         "Current Assets": 4807894000.0,
         "Total Assets": 11936274000.0,
-        "Revenue from Operation": 5197340.0,
+        "Revenue from Operation": 5197340000.0,
         "Gross Profit": 1507727000.0,
-        "Total Operating Profit": 409545.0,
+        "Total Operating Profit": 409545000.0,
         "Net Profit": 278067000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 285.36,
@@ -254,21 +278,29 @@
         "roe_ttm": 9.97,
         "roa_ttm": null,
         "net_profit_ttm": 278067000.0,
-        "revenue_ttm": 5197340.0,
+        "revenue_ttm": 5197340000.0,
         "graham_number": 4287.71
       },
       "yoy": {
         "eps_ttm": 613.4,
         "EPS(Rs.)": 613.4
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:30:45.796520",
+      "parsed_at": "2026-11-14T20:39:46.048979",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5363709000.0,
@@ -277,9 +309,9 @@
         "Current Liabilities": 7525501000.0,
         "Current Assets": 7767008000.0,
         "Total Assets": 14967334000.0,
-        "Revenue from Operation": 8343229.0,
+        "Revenue from Operation": 8343229000.0,
         "Gross Profit": 2412409000.0,
-        "Total Operating Profit": 659310.0,
+        "Total Operating Profit": 659310000.0,
         "Net Profit": 402209000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 275.17,
@@ -309,7 +341,7 @@
         "roe_ttm": 9.31,
         "roa_ttm": null,
         "net_profit_ttm": 402209000.0,
-        "revenue_ttm": 8343229.0,
+        "revenue_ttm": 8343229000.0,
         "graham_number": 4278.12
       },
       "yoy": {
@@ -333,14 +365,22 @@
         "Book Value(Rs.)": 19.4,
         "ROE": -30.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:30:45.796494",
+      "parsed_at": "2026-11-14T20:39:46.048830",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5767329000.0,
@@ -349,9 +389,9 @@
         "Current Liabilities": 5909599000.0,
         "Current Assets": 6024511000.0,
         "Total Assets": 13027752000.0,
-        "Revenue from Operation": 12670738.0,
+        "Revenue from Operation": 12670738000.0,
         "Gross Profit": 3556237000.0,
-        "Total Operating Profit": 1321739.0,
+        "Total Operating Profit": 1321739000.0,
         "Net Profit": 833934000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 427.9,
@@ -381,7 +421,7 @@
         "roe_ttm": 13.99,
         "roa_ttm": null,
         "net_profit_ttm": 833934000.0,
-        "revenue_ttm": 12670738.0,
+        "revenue_ttm": 12670738000.0,
         "graham_number": 5427.16
       },
       "yoy": {
@@ -405,14 +445,22 @@
         "Book Value(Rs.)": 13.8,
         "ROE": -9.86
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:30:45.796468",
+      "parsed_at": "2026-11-14T20:39:46.048743",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5714563000.0,
@@ -421,9 +469,9 @@
         "Current Liabilities": 8458635000.0,
         "Current Assets": 8429265000.0,
         "Total Assets": 15874592000.0,
-        "Revenue from Operation": 3266218.0,
+        "Revenue from Operation": 3266218000.0,
         "Gross Profit": 913603000.0,
-        "Total Operating Profit": 232291.0,
+        "Total Operating Profit": 232291000.0,
         "Net Profit": 105305000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 216.13,
@@ -453,7 +501,7 @@
         "roe_ttm": 7.13,
         "roa_ttm": null,
         "net_profit_ttm": 105305000.0,
-        "revenue_ttm": 3266218.0,
+        "revenue_ttm": 3266218000.0,
         "graham_number": 3839.98
       },
       "yoy": {
@@ -477,14 +525,22 @@
         "Book Value(Rs.)": 5.7,
         "ROE": -73.24
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:30:45.796442",
+      "parsed_at": "2026-11-14T20:39:46.048656",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5528416000.0,
@@ -493,9 +549,9 @@
         "Current Liabilities": 7273981000.0,
         "Current Assets": 7214792000.0,
         "Total Assets": 14481844000.0,
-        "Revenue from Operation": 4583125.0,
+        "Revenue from Operation": 4583125000.0,
         "Gross Profit": 1178308000.0,
-        "Total Operating Profit": 87106.0,
+        "Total Operating Profit": 87106000.0,
         "Net Profit": -151578000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": -155.55,
@@ -525,7 +581,7 @@
         "roe_ttm": -4.99,
         "roa_ttm": null,
         "net_profit_ttm": -151578000.0,
-        "revenue_ttm": 4583125.0
+        "revenue_ttm": 4583125000.0
       },
       "yoy": {
         "eps_ttm": -154.51,
@@ -548,14 +604,22 @@
         "Book Value(Rs.)": 8.95,
         "ROE": -150.05
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:30:45.796416",
+      "parsed_at": "2026-11-14T20:39:46.048567",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6097537000.0,
@@ -564,9 +628,9 @@
         "Current Liabilities": 8393987000.0,
         "Current Assets": 8500715000.0,
         "Total Assets": 15743897000.0,
-        "Revenue from Operation": 7184386.0,
+        "Revenue from Operation": 7184386000.0,
         "Gross Profit": 2041158000.0,
-        "Total Operating Profit": 444657.0,
+        "Total Operating Profit": 444657000.0,
         "Net Profit": 59891000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 40.97,
@@ -596,7 +660,7 @@
         "roe_ttm": 1.27,
         "roa_ttm": null,
         "net_profit_ttm": 59891000.0,
-        "revenue_ttm": 7184386.0,
+        "revenue_ttm": 7184386000.0,
         "graham_number": 1725.2
       },
       "yoy": {
@@ -620,14 +684,22 @@
         "Book Value(Rs.)": 9.22,
         "ROE": -86.36
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:30:45.796390",
+      "parsed_at": "2026-11-14T20:39:46.048480",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6394947000.0,
@@ -636,9 +708,9 @@
         "Current Liabilities": 7271823000.0,
         "Current Assets": 7790040000.0,
         "Total Assets": 14948224000.0,
-        "Revenue from Operation": 11218283.0,
+        "Revenue from Operation": 11218283000.0,
         "Gross Profit": 2905430000.0,
-        "Total Operating Profit": 936827.0,
+        "Total Operating Profit": 936827000.0,
         "Net Profit": 395862000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 203.12,
@@ -668,7 +740,7 @@
         "roe_ttm": 6.01,
         "roa_ttm": null,
         "net_profit_ttm": 395862000.0,
-        "revenue_ttm": 11218283.0,
+        "revenue_ttm": 11218283000.0,
         "graham_number": 3931.08
       },
       "yoy": {
@@ -692,14 +764,22 @@
         "Book Value(Rs.)": 10.53,
         "ROE": -57.04
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:30:45.796364",
+      "parsed_at": "2026-11-14T20:39:46.048391",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6477175000.0,
@@ -708,9 +788,9 @@
         "Current Liabilities": 7544210000.0,
         "Current Assets": 8186309000.0,
         "Total Assets": 15275552000.0,
-        "Revenue from Operation": 3002464.0,
+        "Revenue from Operation": 3002464000.0,
         "Gross Profit": 787540000.0,
-        "Total Operating Profit": 177680.0,
+        "Total Operating Profit": 177680000.0,
         "Net Profit": 84383000.0,
         "Number of Shares": 1948890.0,
         "EPS(Rs.)": 173.19,
@@ -740,7 +820,7 @@
         "roe_ttm": 5.06,
         "roa_ttm": null,
         "net_profit_ttm": 84383000.0,
-        "revenue_ttm": 3002464.0,
+        "revenue_ttm": 3002464000.0,
         "graham_number": 3652.49
       },
       "yoy": {
@@ -764,14 +844,22 @@
         "Book Value(Rs.)": 12.91,
         "ROE": -29.03
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:30:45.796333",
+      "parsed_at": "2026-11-14T20:39:46.048301",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6195327000.0,
@@ -780,9 +868,9 @@
         "Current Liabilities": 6179210000.0,
         "Current Assets": 6434943000.0,
         "Total Assets": 13522260000.0,
-        "Revenue from Operation": 4364352.0,
+        "Revenue from Operation": 4364352000.0,
         "Gross Profit": 916588000.0,
-        "Total Operating Profit": -126688.0,
+        "Total Operating Profit": -126688000.0,
         "Net Profit": -245042000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": -251.47,
@@ -812,7 +900,7 @@
         "roe_ttm": -7.67,
         "roa_ttm": null,
         "net_profit_ttm": -245042000.0,
-        "revenue_ttm": 4364352.0
+        "revenue_ttm": 4364352000.0
       },
       "yoy": {
         "eps_ttm": -61.67,
@@ -832,14 +920,22 @@
         "Net Profit": -61.66,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:30:45.796302",
+      "parsed_at": "2026-11-14T20:39:46.048215",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6454289000.0,
@@ -848,9 +944,9 @@
         "Current Liabilities": 7802274000.0,
         "Current Assets": 8476172000.0,
         "Total Assets": 15411966000.0,
-        "Revenue from Operation": 7074434.0,
+        "Revenue from Operation": 7074434000.0,
         "Gross Profit": 1798035000.0,
-        "Total Operating Profit": 232103.0,
+        "Total Operating Profit": 232103000.0,
         "Net Profit": 15979000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": 10.93,
@@ -880,7 +976,7 @@
         "roe_ttm": 0.32,
         "roa_ttm": null,
         "net_profit_ttm": 15979000.0,
-        "revenue_ttm": 7074434.0,
+        "revenue_ttm": 7074434000.0,
         "graham_number": 915.99
       },
       "yoy": {
@@ -901,14 +997,22 @@
         "Net Profit": -73.32,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:30:45.796276",
+      "parsed_at": "2026-11-14T20:39:46.048126",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6011040000.0,
@@ -917,9 +1021,9 @@
         "Current Liabilities": 6107432000.0,
         "Current Assets": 6538564000.0,
         "Total Assets": 13359703000.0,
-        "Revenue from Operation": 10921489.0,
+        "Revenue from Operation": 10921489000.0,
         "Gross Profit": 2687748000.0,
-        "Total Operating Profit": 761378.0,
+        "Total Operating Profit": 761378000.0,
         "Net Profit": -400600000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": -205.55,
@@ -949,7 +1053,7 @@
         "roe_ttm": -6.46,
         "roa_ttm": null,
         "net_profit_ttm": -400600000.0,
-        "revenue_ttm": 10921489.0
+        "revenue_ttm": 10921489000.0
       },
       "yoy": {
         "eps_ttm": -201.2,
@@ -969,14 +1073,22 @@
         "Net Profit": -201.2,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:30:45.796249",
+      "parsed_at": "2026-11-14T20:39:46.048036",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6333098000.0,
@@ -985,9 +1097,9 @@
         "Current Liabilities": 6668903000.0,
         "Current Assets": 7548328000.0,
         "Total Assets": 14239690000.0,
-        "Revenue from Operation": 3691180.0,
+        "Revenue from Operation": 3691180000.0,
         "Gross Profit": 1156812000.0,
-        "Total Operating Profit": 411864.0,
+        "Total Operating Profit": 411864000.0,
         "Net Profit": 321674000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": 660.22,
@@ -1017,7 +1129,7 @@
         "roe_ttm": 19.71,
         "roa_ttm": null,
         "net_profit_ttm": 321674000.0,
-        "revenue_ttm": 3691180.0,
+        "revenue_ttm": 3691180000.0,
         "graham_number": 7053.93
       },
       "yoy": {
@@ -1038,14 +1150,22 @@
         "Net Profit": 281.21,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:30:45.796220",
+      "parsed_at": "2026-11-14T20:39:46.047950",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6043836000.0,
@@ -1054,9 +1174,9 @@
         "Current Liabilities": 5187663000.0,
         "Current Assets": 5604024000.0,
         "Total Assets": 12473712000.0,
-        "Revenue from Operation": 4752303.0,
+        "Revenue from Operation": 4752303000.0,
         "Gross Profit": 1226019000.0,
-        "Total Operating Profit": 133877.0,
+        "Total Operating Profit": 133877000.0,
         "Net Profit": 31268000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": 32.09,
@@ -1086,7 +1206,7 @@
         "roe_ttm": 1.0,
         "roa_ttm": null,
         "net_profit_ttm": 31268000.0,
-        "revenue_ttm": 4752303.0,
+        "revenue_ttm": 4752303000.0,
         "graham_number": 1520.3
       },
       "yoy": {
@@ -1110,14 +1230,22 @@
         "Book Value Reported": -2.37,
         "ROE Reported": 113.04
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:30:45.796187",
+      "parsed_at": "2026-11-14T20:39:46.047847",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 5876784000.0,
@@ -1126,9 +1254,9 @@
         "Current Liabilities": 6885034000.0,
         "Current Assets": 7636208000.0,
         "Total Assets": 14365992000.0,
-        "Revenue from Operation": 7654122.0,
+        "Revenue from Operation": 7654122000.0,
         "Gross Profit": 2136593000.0,
-        "Total Operating Profit": 396570.0,
+        "Total Operating Profit": 396570000.0,
         "Net Profit": 219949000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": 150.48,
@@ -1158,7 +1286,7 @@
         "roe_ttm": 4.56,
         "roa_ttm": null,
         "net_profit_ttm": 219949000.0,
-        "revenue_ttm": 7654122.0,
+        "revenue_ttm": 7654122000.0,
         "graham_number": 3341.19
       },
       "yoy": {
@@ -1182,14 +1310,22 @@
         "Book Value Reported": -3.36,
         "ROE Reported": 1325.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:30:45.796150",
+      "parsed_at": "2026-11-14T20:39:46.047803",
       "raw": {
         "Paid Up Capital": 194889000.0,
         "Reserve and Surplus": 6939748000.0,
@@ -1198,9 +1334,9 @@
         "Current Liabilities": 5064202000.0,
         "Current Assets": 6396924000.0,
         "Total Assets": 13223117000.0,
-        "Revenue from Operation": 1873754.0,
+        "Revenue from Operation": 1873754000.0,
         "Gross Profit": 3739402000.0,
-        "Total Operating Profit": 1369241.0,
+        "Total Operating Profit": 1369241000.0,
         "Net Profit": 878391000.0,
         "Number of Shares": 1948890.0,
         "EPS Reported": 450.71,
@@ -1230,7 +1366,7 @@
         "roe_ttm": 12.31,
         "roa_ttm": null,
         "net_profit_ttm": 878391000.0,
-        "revenue_ttm": 1873754.0,
+        "revenue_ttm": 1873754000.0,
         "graham_number": 6093.01
       },
       "yoy": {
@@ -1254,8 +1390,96 @@
         "Book Value Reported": 14.96,
         "ROE Reported": 290.56
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
+    },
+    {
+      "symbol": "BNL",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-14T20:39:46.047760",
+      "raw": {
+        "Paid Up Capital": 194889000.0,
+        "Reserve and Surplus": 7250737000.0,
+        "Total Equity": 7445626000.0,
+        "Borrowings": 2440430000.0,
+        "Current Liabilities": 6174487000.0,
+        "Current Assets": 7776300000.0,
+        "Total Assets": 14645858000.0,
+        "Revenue from Operation": 3771224000.0,
+        "Gross Profit": 1159197000.0,
+        "Total Operating Profit": 413060000.0,
+        "Net Profit": 342424000.0,
+        "Number of Shares": 1948890.0,
+        "EPS Reported": 702.81,
+        "Book Value Reported": 3820.44,
+        "ROE Reported": 18.4
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Borrowings",
+        "Current Liabilities",
+        "Current Assets",
+        "Total Assets",
+        "Revenue from Operation",
+        "Gross Profit",
+        "Total Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported"
+      ],
+      "computed": {
+        "eps_ttm": 702.81,
+        "bvps": 3820.44,
+        "roe_ttm": 18.4,
+        "roa_ttm": null,
+        "net_profit_ttm": 342424000.0,
+        "revenue_ttm": 3771224000.0,
+        "graham_number": 7772.61
+      },
+      "yoy": {
+        "eps_ttm": 6.45,
+        "bvps": 14.06,
+        "net_profit_ttm": 6.45,
+        "revenue_ttm": 2.17,
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 14.49,
+        "Total Equity": 14.06,
+        "Borrowings": -6.22,
+        "Current Liabilities": -7.41,
+        "Current Assets": 3.02,
+        "Total Assets": 2.85,
+        "Revenue from Operation": 2.17,
+        "Gross Profit": 0.21,
+        "Total Operating Profit": 0.29,
+        "Net Profit": 6.45,
+        "Number of Shares": 0.0,
+        "EPS Reported": 6.45,
+        "Book Value Reported": 14.06,
+        "ROE Reported": -6.65
+      },
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:30:45.799238"
+  "last_updated": "2026-11-14T20:39:46.050781"
 }

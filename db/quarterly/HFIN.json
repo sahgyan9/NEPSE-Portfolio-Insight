@@ -8,7 +8,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:16:00.567901",
+      "parsed_at": "2026-11-14T21:02:29.175339",
       "raw": {
         "Paid Up Capital": 2000000000.0,
         "Reserve and Surplus": 210234820.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 196846550.0,
         "Current Assets": 293004660.0,
         "Total Assets": 4409939750.0,
-        "Revenue from Operations": 131976.88,
+        "Revenue from Operations": 131976880.0,
         "Net Profit": -181089690.0,
         "Number of Shares": 20000000.0,
         "EPS Reported": -12.07,
@@ -50,14 +50,21 @@
         "revenue_ttm": 175925181.04
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HFIN",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:16:00.567877",
+      "parsed_at": "2026-11-14T21:02:29.175318",
       "raw": {
         "Paid Up Capital": 2000000000.0,
         "Reserve and Surplus": 145633900.0,
@@ -66,7 +73,7 @@
         "Current Liabilities": 158834110.0,
         "Current Assets": 294902300.0,
         "Total Assets": 4402572850.0,
-        "Revenue from Operations": 190335.46,
+        "Revenue from Operations": 190335460.0,
         "Gross Profit": 117998820.0,
         "Net Profit": -244568610.0,
         "Number of Shares": 20000000.0,
@@ -100,8 +107,15 @@
         "revenue_ttm": 190335460.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:16:00.568927"
+  "last_updated": "2026-11-14T21:02:29.177579"
 }

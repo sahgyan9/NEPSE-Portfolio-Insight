@@ -4,7 +4,43 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from tools.score_sector_leaders import prior_fy, prior_year_quarter
+import pytest
+
+from tools.score_sector_leaders import (build_metric_table, dividend_stats, prior_fy,
+                                        prior_year_quarter, split_dividend)
+
+
+def test_split_dividend_drops_tax_only_cash():
+    assert split_dividend(21.0, 1.1053) == (21.0, 0.0)     # 1.1053 = 5% of 22.1053
+    assert split_dividend(5.0, 10.8) == (5.0, 10.8)        # real cash alongside bonus
+    assert split_dividend(0.0, 12.5) == (0.0, 12.5)        # cash only is never tax-only
+    assert split_dividend(None, None) == (0.0, 0.0)
+
+
+def test_dividend_stats_separates_cash_and_bonus():
+    rows = [{"bonusPercent": 20, "cashPercent": 5, "totalPercent": 25},
+            {"bonusPercent": 19, "cashPercent": 1, "totalPercent": 20},      # tax-only cash
+            {"bonusPercent": 0, "cashPercent": 0, "totalPercent": 0}]
+    s = dividend_stats(rows)
+    assert s["bonus_avg5"] == pytest.approx(15.0)          # legacy total is unchanged
+    assert s["bonus_years_frac"] == pytest.approx(2 / 5)
+    assert s["stock_avg5"] == pytest.approx(13.0)
+    assert s["cash_avg5"] == pytest.approx(5 / 3)
+
+
+def test_dividend_stats_empty():
+    assert all(v is None for v in dividend_stats([]).values())
+
+
+def test_growth_metric_prefers_profit_growth():
+    t = build_metric_table({
+        "A": {"profit_growth": 10.0, "eps_growth": -15.0},   # bonus issue diluted EPS
+        "B": {"profit_growth": None, "eps_growth": 8.0},     # falls back to EPS growth
+        "C": {"profit_growth": 400.0, "eps_growth": 5.0},    # winsorised
+    })
+    assert t["A"]["earn_growth"] == 10.0
+    assert t["B"]["earn_growth"] == 8.0
+    assert t["C"]["earn_growth"] == 150
 
 
 def q(fy, quarter):

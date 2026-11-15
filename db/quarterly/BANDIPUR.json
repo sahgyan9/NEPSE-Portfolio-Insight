@@ -8,7 +8,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:51:10.268288",
+      "parsed_at": "2026-11-14T20:34:35.646485",
       "raw": {
         "Paid Up Capital": 2829993000.0,
         "Reserve and Surplus": -213043530.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 310466200.0,
         "Current Assets": 689637470.0,
         "Total Assets": 3921311340.0,
-        "Revenue from Operations": 9457.47,
+        "Revenue from Operations": 9457470.0,
         "Gross Profit": 26062530.0,
         "Net Profit": -7491990.0,
         "Number of Shares": 28299930.0,
@@ -51,14 +51,21 @@
         "revenue_ttm": 18914940.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BANDIPUR",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:51:10.268283",
+      "parsed_at": "2026-11-14T20:34:35.646474",
       "raw": {
         "Paid Up Capital": 2829993000.0,
         "Reserve and Surplus": -229305910.0,
@@ -67,7 +74,7 @@
         "Current Liabilities": 292687320.0,
         "Current Assets": 605998050.0,
         "Total Assets": 3886144710.0,
-        "Revenue from Operations": 11611.29,
+        "Revenue from Operations": 11611290.0,
         "Gross Profit": 5808720.0,
         "Net Profit": -16262390.0,
         "Number of Shares": 28299930.0,
@@ -101,14 +108,21 @@
         "revenue_ttm": 15477849.57
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BANDIPUR",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:51:10.268272",
+      "parsed_at": "2026-11-14T20:34:35.646453",
       "raw": {
         "Paid Up Capital": 2829993000.0,
         "Reserve and Surplus": -242956900.0,
@@ -117,7 +131,7 @@
         "Current Liabilities": 354030740.0,
         "Current Assets": 472468370.0,
         "Total Assets": 3880296550.0,
-        "Revenue from Operations": 17985.05,
+        "Revenue from Operations": 17985050.0,
         "Gross Profit": 5858120.0,
         "Net Profit": -13650990.0,
         "Number of Shares": 28299930.0,
@@ -151,8 +165,15 @@
         "revenue_ttm": 17985050.0
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:51:10.269198"
+  "last_updated": "2026-11-14T20:34:35.647464"
 }

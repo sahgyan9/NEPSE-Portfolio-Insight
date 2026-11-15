@@ -355,7 +355,7 @@
         "Total Assets": 2849678060.0,
         "Revenue": 104354410.0,
         "Gross Profit": 163543490.0,
-        "Operating Profit": 157802.35,
+        "Operating Profit": 157802350.0,
         "Net Profit": 64610720.0,
         "Number of Shares": 11000000.0,
         "EPS(Rs.)": 23.49,
@@ -408,7 +408,14 @@
         "Book Value(Rs.)": 7.59,
         "ROE": 8.95
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -425,7 +432,7 @@
         "Current Assets": 92630240.0,
         "Total Assets": 2763584400.0,
         "Revenue": 244138220.0,
-        "Operating Profit": 216446.06,
+        "Operating Profit": 216446060.0,
         "Net Profit": 54355140.0,
         "Number of Shares": 11000000.0,
         "EPS(Rs.)": 9.88,
@@ -476,7 +483,14 @@
         "Book Value(Rs.)": -0.98,
         "ROE": 6.45
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -493,7 +507,7 @@
         "Current Assets": 70808540.0,
         "Total Assets": 2713918820.0,
         "Revenue": 292064710.0,
-        "Operating Profit": 256875.46,
+        "Operating Profit": 256875460.0,
         "Net Profit": 21300910.0,
         "Number of Shares": 11000000.0,
         "EPS(Rs.)": 2.58,
@@ -544,7 +558,14 @@
         "Book Value(Rs.)": -0.27,
         "ROE": 85.37
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -561,7 +582,7 @@
         "Current Assets": 99891370.0,
         "Total Assets": 2716579170.0,
         "Revenue": 363689490.0,
-        "Operating Profit": 319164.89,
+        "Operating Profit": 319164890.0,
         "Net Profit": 3524280.0,
         "Number of Shares": 11000000.0,
         "EPS(Rs.)": 0.32,
@@ -612,7 +633,14 @@
         "Book Value(Rs.)": 0.42,
         "ROE": 127.74
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -764,7 +792,7 @@
         "Total Assets": 2691365360.0,
         "Revenue": 237673130.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 200270.74,
+        "Operating Profit": 200270740.0,
         "Net Profit": 4314880.0,
         "Number of Shares": 11000000.0,
         "EPS Reported": 0.52,
@@ -814,7 +842,14 @@
         "Net Profit": -79.74,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -1036,7 +1071,7 @@
         "Total Assets": 2515477790.0,
         "Revenue": 291624730.0,
         "Gross Profit": 254426700.0,
-        "Operating Profit": 158162.63,
+        "Operating Profit": 158162630.0,
         "Net Profit": 82255250.0,
         "Number of Shares": 11000000.0,
         "EPS Reported": 9.97,
@@ -1089,7 +1124,14 @@
         "Book Value Reported": 1.18,
         "ROE Reported": 1796.77
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "PMHPL",
@@ -1107,7 +1149,7 @@
         "Total Assets": 2484348930.0,
         "Revenue": 465495060.0,
         "Gross Profit": 295875800.0,
-        "Operating Profit": 66783.89,
+        "Operating Profit": 66783890.0,
         "Net Profit": 66795760.0,
         "Number of Shares": 11000000.0,
         "EPS Reported": 6.07,
@@ -1159,7 +1201,14 @@
         "Book Value Reported": 8.05,
         "ROE Reported": 190.1
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:47:37.710337"

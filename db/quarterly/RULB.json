@@ -20,8 +20,8 @@
         "Investments": 33000000.0,
         "Interest Income": 323328180.0,
         "Net Interest Income": 164113010.0,
-        "Total Operating Income": 233795.89,
-        "Operating Profit": 88173.51,
+        "Total Operating Income": 233795890.0,
+        "Operating Profit": 88173510.0,
         "Net Profit": 55549310.0,
         "Number of Shares": 2600000.0,
         "EPS(Rs.)": 28.49,
@@ -65,7 +65,15 @@
         "graham_number": 326.93
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RULB",
@@ -84,8 +92,8 @@
         "Investments": 33000000.0,
         "Interest Income": 447962940.0,
         "Net Interest Income": 220856240.0,
-        "Total Operating Income": 305928.45,
-        "Operating Profit": 104753.25,
+        "Total Operating Income": 305928450.0,
+        "Operating Profit": 104753250.0,
         "Net Profit": 66502240.0,
         "Number of Shares": 2600000.0,
         "EPS(Rs.)": 25.58,
@@ -129,7 +137,15 @@
         "graham_number": 312.87
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RULB",
@@ -148,8 +164,8 @@
         "Investments": 33000000.0,
         "Interest Income": 123165520.0,
         "Net Interest Income": 47375240.0,
-        "Total Operating Income": 62745.58,
-        "Operating Profit": 5009.83,
+        "Total Operating Income": 62745580.0,
+        "Operating Profit": 5009830.0,
         "Net Profit": 3823310.0,
         "Number of Shares": 2600000.0,
         "EPS(Rs.)": 5.88,
@@ -193,7 +209,15 @@
         "graham_number": 150.64
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RULB",
@@ -212,8 +236,8 @@
         "Investments": 33000000.0,
         "Interest Income": 252833180.0,
         "Net Interest Income": 100588970.0,
-        "Total Operating Income": 126909.48,
-        "Operating Profit": 13307.61,
+        "Total Operating Income": 126909480.0,
+        "Operating Profit": 13307610.0,
         "Net Profit": 8383790.0,
         "Number of Shares": 2600000.0,
         "EPS(Rs.)": 6.45,
@@ -257,7 +281,15 @@
         "graham_number": 158.36
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RULB",
@@ -276,8 +308,8 @@
         "Investments": 33010000.0,
         "Interest Income": 393783690.0,
         "Net Interest Income": 159548740.0,
-        "Total Operating Income": 196377.6,
-        "Operating Profit": 53198.46,
+        "Total Operating Income": 196377600.0,
+        "Operating Profit": 53198460.0,
         "Net Profit": 37238920.0,
         "Number of Shares": 2599550.0,
         "EPS(Rs.)": 19.1,
@@ -347,7 +379,15 @@
         "Cost of funds": 35.92,
         "CD ratio": 0.24
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:54:14.516747"

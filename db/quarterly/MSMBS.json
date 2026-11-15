@@ -8,7 +8,7 @@
       "fy": "2076-77",
       "quarter": 3,
       "quarter_label": "Q3 76-77",
-      "parsed_at": "2026-11-07T09:19:25.898176",
+      "parsed_at": "2026-11-15T11:53:13.089122",
       "raw": {
         "Paid Up Capital": 121000000.0,
         "Reserve and Surplus": 39498000.0,
@@ -20,7 +20,7 @@
         "Investments": 2000000.0,
         "Interest Income": 153328870.0,
         "Net Interest Income": 61960500.0,
-        "Total Operating Income": 96364.83,
+        "Total Operating Income": 96364830.0,
         "Net Profit": 4602560.0,
         "Number of Shares": 1210000.0,
         "EPS(Rs.)": 5.07,
@@ -59,14 +59,21 @@
         "graham_number": 123.01
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MSMBS",
       "fy": "2076-77",
       "quarter": 4,
       "quarter_label": "Q4 76-77",
-      "parsed_at": "2026-11-07T09:19:25.898044",
+      "parsed_at": "2026-11-15T11:53:13.089068",
       "raw": {
         "Paid Up Capital": 121000000.0,
         "Reserve and Surplus": 23399460.0,
@@ -78,7 +85,7 @@
         "Investments": 2000000.0,
         "Interest Income": 201742770.0,
         "Net Interest Income": 80917370.0,
-        "Total Operating Income": 121874.4,
+        "Total Operating Income": 121874400.0,
         "Net Profit": -11496560.0,
         "Number of Shares": 1210000.0,
         "EPS(Rs.)": -9.5,
@@ -116,14 +123,21 @@
         "revenue_ttm": 201742770.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MSMBS",
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T09:19:25.897882",
+      "parsed_at": "2026-11-15T11:53:13.089000",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -142,7 +156,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T09:19:25.897863",
+      "parsed_at": "2026-11-15T11:53:13.088995",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -161,7 +175,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T09:19:25.897835",
+      "parsed_at": "2026-11-15T11:53:13.088984",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -176,5 +190,5 @@
       "sector": "Microfinance"
     }
   ],
-  "last_updated": "2026-11-07T09:19:25.899436"
+  "last_updated": "2026-11-15T11:53:13.090227"
 }

@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:40:00.917172",
+      "parsed_at": "2026-11-14T20:48:55.115012",
       "raw": {
         "EPS(Rs.)": 30.94
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:40:00.917150",
+      "parsed_at": "2026-11-14T20:48:55.114985",
       "raw": {
         "Paid Up Capital": 3065234000.0,
         "Reserves": 817429000.0,
@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 31881904000.0,
         "Interest Income": 768195000.0,
         "Net Interest Income": 307713000.0,
-        "Total Operating Income": 416739.0,
-        "Operating Profit": 114434.0,
+        "Total Operating Income": 416739000.0,
+        "Operating Profit": 114434000.0,
         "Net Profit": 142780000.0,
         "Number of Shares": 30652340.0,
         "EPS(Rs.)": 18.63,
@@ -90,14 +90,22 @@
         "graham_number": 230.43
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:40:00.917033",
+      "parsed_at": "2026-11-14T20:48:55.114839",
       "raw": {
         "Paid Up Capital": 3065234000.0,
         "Reserves": 1093131000.0,
@@ -108,8 +116,8 @@
         "Loans and Advances to Customers": 33556523000.0,
         "Interest Income": 1612493000.0,
         "Net Interest Income": 716114000.0,
-        "Total Operating Income": 928554.0,
-        "Operating Profit": 370470.0,
+        "Total Operating Income": 928554000.0,
+        "Operating Profit": 370470000.0,
         "Net Profit": 418483000.0,
         "Number of Shares": 30652340.0,
         "EPS(Rs.)": 27.31,
@@ -156,14 +164,22 @@
         "graham_number": 288.72
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:40:00.916914",
+      "parsed_at": "2026-11-14T20:48:55.114693",
       "raw": {
         "Paid Up Capital": 3065234000.0,
         "Reserves": 1399427000.0,
@@ -174,8 +190,8 @@
         "Loans and Advances to Customers": 37843384000.0,
         "Interest Income": 2482711000.0,
         "Net Interest Income": 1160144000.0,
-        "Total Operating Income": 1513472.0,
-        "Operating Profit": 758835.0,
+        "Total Operating Income": 1513472000.0,
+        "Operating Profit": 758835000.0,
         "Net Profit": 724779000.0,
         "Number of Shares": 30652340.0,
         "EPS(Rs.)": 31.53,
@@ -222,14 +238,22 @@
         "graham_number": 321.45
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:40:00.916784",
+      "parsed_at": "2026-11-14T20:48:55.114545",
       "raw": {
         "Paid Up Capital": 3650640000.0,
         "Reserves": 1721968000.0,
@@ -240,8 +264,8 @@
         "Loans and Advances to Customers": 40567277000.0,
         "Interest Income": 3443970000.0,
         "Net Interest Income": 1620264000.0,
-        "Total Operating Income": 2133497.0,
-        "Operating Profit": 1128620.0,
+        "Total Operating Income": 2133497000.0,
+        "Operating Profit": 1128620000.0,
         "Net Profit": 1089914000.0,
         "Number of Shares": 36506400.0,
         "EPS(Rs.)": 35.25,
@@ -291,14 +315,22 @@
         "eps_ttm": 13.93,
         "EPS(Rs.)": 13.93
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T08:40:00.916667",
+      "parsed_at": "2026-11-14T20:48:55.114397",
       "raw": {
         "Paid Up Capital": 5537352000.0,
         "Reserves": 1648217000.0,
@@ -309,8 +341,8 @@
         "Loans and Advances to Customers": 43730750000.0,
         "Interest Income": 988265000.0,
         "Net Interest Income": 435954000.0,
-        "Total Operating Income": 609855.0,
-        "Operating Profit": 352389.0,
+        "Total Operating Income": 609855000.0,
+        "Operating Profit": 352389000.0,
         "Net Profit": 345157000.0,
         "Number of Shares": 55373520.0,
         "EPS(Rs.)": 24.93,
@@ -384,14 +416,22 @@
         "Base Rate": -7.63,
         "Interest Spread Rate": -4.43
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T08:40:00.916550",
+      "parsed_at": "2026-11-14T20:48:55.114248",
       "raw": {
         "Paid Up Capital": 5537352000.0,
         "Reserves": 1915233000.0,
@@ -402,8 +442,8 @@
         "Loans and Advances to Customers": 46782081000.0,
         "Interest Income": 2041321000.0,
         "Net Interest Income": 855147000.0,
-        "Total Operating Income": 1204979.0,
-        "Operating Profit": 682852.0,
+        "Total Operating Income": 1204979000.0,
+        "Operating Profit": 682852000.0,
         "Net Profit": 631668000.0,
         "Number of Shares": 55373520.0,
         "EPS(Rs.)": 22.81,
@@ -477,14 +517,22 @@
         "Base Rate": 7.02,
         "Interest Spread Rate": -16.31
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T08:40:00.916431",
+      "parsed_at": "2026-11-14T20:48:55.114085",
       "raw": {
         "Paid Up Capital": 5876440000.0,
         "Reserves": 2176179000.0,
@@ -495,8 +543,8 @@
         "Loans and Advances to Customers": 47800018000.0,
         "Interest Income": 3356022000.0,
         "Net Interest Income": 1254818000.0,
-        "Total Operating Income": 1752518.0,
-        "Operating Profit": 887150.0,
+        "Total Operating Income": 1752518000.0,
+        "Operating Profit": 887150000.0,
         "Net Profit": 882855000.0,
         "Number of Shares": 58764400.0,
         "EPS(Rs.)": 20.34,
@@ -570,14 +618,22 @@
         "Base Rate": 55.99,
         "Interest Spread Rate": -10.02
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:40:00.916307",
+      "parsed_at": "2026-11-14T20:48:55.113976",
       "raw": {
         "Paid Up Capital": 6921690000.0,
         "Reserves": 2527163000.0,
@@ -588,8 +644,8 @@
         "Loans and Advances to Customers": 48077612000.0,
         "Interest Income": 4919927000.0,
         "Net Interest Income": 1750382000.0,
-        "Total Operating Income": 2411688.0,
-        "Operating Profit": 1249542.0,
+        "Total Operating Income": 2411688000.0,
+        "Operating Profit": 1249542000.0,
         "Net Profit": 1210178000.0,
         "Number of Shares": 69216900.0,
         "EPS(Rs.)": 20.27,
@@ -663,14 +719,22 @@
         "Base Rate": 84.63,
         "Interest Spread Rate": -19.44
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:40:00.916174",
+      "parsed_at": "2026-11-14T20:48:55.113914",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 866752110.0,
@@ -683,8 +747,8 @@
         "Investment Securities": 22868383770.0,
         "Interest Income": 11255302400.0,
         "Net Interest Income": 3680011400.0,
-        "Total Operating Income": 4740396.58,
-        "Operating Profit": 2190450.81,
+        "Total Operating Income": 4740396580.0,
+        "Operating Profit": 2190450810.0,
         "Net Profit": 1589651010.0,
         "Distributable Profit": 866752110.0,
         "Number of Shares": 142009740.0,
@@ -761,14 +825,22 @@
         "Base Rate": 39.74,
         "Interest Spread Rate": -4.38
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:40:00.915967",
+      "parsed_at": "2026-11-14T20:48:55.113845",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Share Premium": 136128190.0,
@@ -782,8 +854,8 @@
         "Investment Securities": 28504083970.0,
         "Interest Income": 16095433370.0,
         "Net Interest Income": 5121275320.0,
-        "Total Operating Income": 6391675.69,
-        "Operating Profit": 3067674.51,
+        "Total Operating Income": 6391675690.0,
+        "Operating Profit": 3067674510.0,
         "Net Profit": 2251171130.0,
         "Distributable Profit": 1424645930.0,
         "Number of Shares": 142009740.06,
@@ -859,14 +931,22 @@
         "Base Rate": 29.69,
         "Interest Spread Rate": 21.78
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:40:00.915821",
+      "parsed_at": "2026-11-14T20:48:55.113773",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 1242784150.0,
@@ -879,8 +959,8 @@
         "Investment Securities": 24130220870.0,
         "Interest Income": 5096489010.0,
         "Net Interest Income": 1455519880.0,
-        "Total Operating Income": 1684965.2,
-        "Operating Profit": 712475.49,
+        "Total Operating Income": 1684965200.0,
+        "Operating Profit": 712475490.0,
         "Net Profit": 501215550.0,
         "Distributable Profit": 1242784150.0,
         "Number of Shares": 142009740.06,
@@ -957,14 +1037,22 @@
         "Base Rate": 11.07,
         "Interest Spread Rate": -3.8
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:40:00.915680",
+      "parsed_at": "2026-11-14T20:48:55.113705",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 107174080.0,
@@ -977,8 +1065,8 @@
         "Investment Securities": 24192128850.0,
         "Interest Income": 10273181350.0,
         "Net Interest Income": 2845787610.0,
-        "Total Operating Income": 3357916.44,
-        "Operating Profit": 1191972.62,
+        "Total Operating Income": 3357916440.0,
+        "Operating Profit": 1191972620.0,
         "Net Profit": 841333050.0,
         "Distributable Profit": 107174080.0,
         "Number of Shares": 142009740.06,
@@ -1055,14 +1143,22 @@
         "Base Rate": 1.97,
         "Interest Spread Rate": 35.11
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:40:00.915538",
+      "parsed_at": "2026-11-14T20:48:55.113564",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 143480350.0,
@@ -1075,8 +1171,8 @@
         "Investment Securities": 23711969490.0,
         "Interest Income": 15524849530.0,
         "Net Interest Income": 4399180950.0,
-        "Total Operating Income": 5156812.24,
-        "Operating Profit": 1769312.57,
+        "Total Operating Income": 5156812240.0,
+        "Operating Profit": 1769312570.0,
         "Net Profit": 1236061600.0,
         "Distributable Profit": 143480350.0,
         "Number of Shares": 142009740.06,
@@ -1157,14 +1253,22 @@
         "Base Rate": 13.56,
         "Interest Spread Rate": 13.21
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:40:00.915398",
+      "parsed_at": "2026-11-14T20:48:55.113426",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 1037276870.0,
@@ -1177,8 +1281,8 @@
         "Investment Securities": 28685569580.0,
         "Interest Income": 20688978460.0,
         "Net Interest Income": 5857274710.0,
-        "Total Operating Income": 6939839.18,
-        "Operating Profit": 3072700.72,
+        "Total Operating Income": 6939839180.0,
+        "Operating Profit": 3072700720.0,
         "Net Profit": 2214425230.0,
         "Distributable Profit": 1037276870.0,
         "Number of Shares": 142009740.06,
@@ -1257,14 +1361,22 @@
         "Base Rate": 4.16,
         "Interest Spread Rate": -5.88
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:40:00.915265",
+      "parsed_at": "2026-11-14T20:48:55.113256",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": -231811710.0,
@@ -1277,8 +1389,8 @@
         "Investment Securities": 29939975010.0,
         "Interest Income": 5189666420.0,
         "Net Interest Income": 1446384700.0,
-        "Total Operating Income": 1751523.78,
-        "Operating Profit": 567869.79,
+        "Total Operating Income": 1751523780.0,
+        "Operating Profit": 567869790.0,
         "Net Profit": 402455630.0,
         "Distributable Profit": -231811710.0,
         "Number of Shares": 142009740.06,
@@ -1359,14 +1471,22 @@
         "Base Rate": -4.85,
         "Interest Spread Rate": 1.84
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:40:00.915132",
+      "parsed_at": "2026-11-14T20:48:55.112974",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": -213091610.0,
@@ -1379,8 +1499,8 @@
         "Investment Securities": 32535079770.0,
         "Interest Income": 10123934770.0,
         "Net Interest Income": 2839831470.0,
-        "Total Operating Income": 3469351.5,
-        "Operating Profit": 1086454.06,
+        "Total Operating Income": 3469351500.0,
+        "Operating Profit": 1086454060.0,
         "Net Profit": 782784840.0,
         "Distributable Profit": -213091610.0,
         "Number of Shares": 142009740.1,
@@ -1461,14 +1581,22 @@
         "Base Rate": -13.87,
         "Interest Spread Rate": -7.19
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:40:00.915001",
+      "parsed_at": "2026-11-14T20:48:55.112688",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 18919120.0,
@@ -1481,8 +1609,8 @@
         "Investment Securities": 32005413340.0,
         "Interest Income": 14933112610.0,
         "Net Interest Income": 4256040750.0,
-        "Total Operating Income": 5201598.3,
-        "Operating Profit": 1861773.43,
+        "Total Operating Income": 5201598300.0,
+        "Operating Profit": 1861773430.0,
         "Net Profit": 1211416810.0,
         "Distributable Profit": 18919120.0,
         "Number of Shares": 142009740.06,
@@ -1563,14 +1691,22 @@
         "Base Rate": -19.3,
         "Interest Spread Rate": -4.76
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:40:00.914865",
+      "parsed_at": "2026-11-14T20:48:55.112388",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 616163480.0,
@@ -1583,8 +1719,8 @@
         "Investment Securities": 36218845350.0,
         "Interest Income": 19682006590.0,
         "Net Interest Income": 5686160590.0,
-        "Total Operating Income": 7019879.66,
-        "Operating Profit": 2077811.44,
+        "Total Operating Income": 7019879660.0,
+        "Operating Profit": 2077811440.0,
         "Net Profit": 1342466560.0,
         "Distributable Profit": 616163480.0,
         "Number of Shares": 142009740.06,
@@ -1665,14 +1801,22 @@
         "Base Rate": -21.41,
         "Interest Spread Rate": -0.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:40:00.914731",
+      "parsed_at": "2026-11-14T20:48:55.112076",
       "raw": {
         "Paid Up Capital": 14200974010.0,
         "Retained Earnings": 678494300.0,
@@ -1685,8 +1829,8 @@
         "Investment Securities": 35756429050.0,
         "Interest Income": 4567645730.0,
         "Net Interest Income": 1497876610.0,
-        "Total Operating Income": 1975916.75,
-        "Operating Profit": 282971.24,
+        "Total Operating Income": 1975916750.0,
+        "Operating Profit": 282971240.0,
         "Net Profit": 198220940.0,
         "Distributable Profit": 678494300.0,
         "Number of Shares": 142009740.06,
@@ -1767,14 +1911,22 @@
         "Base Rate": -25.28,
         "Interest Spread Rate": 2.33
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:40:00.914594",
+      "parsed_at": "2026-11-14T20:48:55.111748",
       "raw": {
         "Paid Up Capital": 14769012970.0,
         "Retained Earnings": 158181300.0,
@@ -1787,8 +1939,8 @@
         "Investment Securities": 32356045150.0,
         "Interest Income": 8889858260.0,
         "Net Interest Income": 3074571750.0,
-        "Total Operating Income": 3934558.7,
-        "Operating Profit": 911391.38,
+        "Total Operating Income": 3934558700.0,
+        "Operating Profit": 911391380.0,
         "Net Profit": 661828610.0,
         "Distributable Profit": 158181300.0,
         "Number of Shares": 147690129.66,
@@ -1866,14 +2018,22 @@
         "Base Rate": -25.59,
         "Interest Spread Rate": -0.75
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:40:00.914460",
+      "parsed_at": "2026-11-14T20:48:55.111439",
       "raw": {
         "Paid Up Capital": 14769012970.0,
         "Share Premium": 0.0,
@@ -1888,8 +2048,8 @@
         "Investment Securities": 32059468330.0,
         "Interest Income": 13134451060.0,
         "Net Interest Income": 4748976360.0,
-        "Total Operating Income": 5976294.0,
-        "Operating Profit": 1334116.17,
+        "Total Operating Income": 5976294000.0,
+        "Operating Profit": 1334116170.0,
         "Net Profit": 961893690.0,
         "Distributable Profit": 162621860.0,
         "Number of Shares": 147690129.66,
@@ -1969,14 +2129,22 @@
         "Base Rate": -26.36,
         "Interest Spread Rate": -4.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:40:00.914317",
+      "parsed_at": "2026-11-14T20:48:55.111117",
       "raw": {
         "Paid Up Capital": 14769012970.0,
         "Share Premium": 0.0,
@@ -1991,8 +2159,8 @@
         "Investment Securities": 42267572420.0,
         "Interest Income": 17309675060.0,
         "Net Interest Income": 6364973100.0,
-        "Total Operating Income": 8124410.88,
-        "Operating Profit": 2000975.83,
+        "Total Operating Income": 8124410880.0,
+        "Operating Profit": 2000975830.0,
         "Net Profit": 1293321390.0,
         "Distributable Profit": 775452210.0,
         "Number of Shares": 147690129.66,
@@ -2072,14 +2240,22 @@
         "Base Rate": -24.33,
         "Interest Spread Rate": -8.77
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:40:00.914164",
+      "parsed_at": "2026-11-14T20:48:55.110796",
       "raw": {
         "Paid Up Capital": 14769012970.0,
         "Share Premium": 0.0,
@@ -2094,8 +2270,8 @@
         "Investment Securities": 41557067050.0,
         "Interest Income": 4066326620.0,
         "Net Interest Income": 1666263490.0,
-        "Total Operating Income": 2214921.98,
-        "Operating Profit": -371855.0,
+        "Total Operating Income": 2214921980.0,
+        "Operating Profit": -371855000.0,
         "Net Profit": -220411170.0,
         "Distributable Profit": -414778090.0,
         "Number of Shares": 147690129.66,
@@ -2174,14 +2350,22 @@
         "Base Rate": -25.51,
         "Interest Spread Rate": -4.29
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:40:00.914002",
+      "parsed_at": "2026-11-14T20:48:55.110479",
       "raw": {
         "Paid Up Capital": 15507463610.0,
         "Share Premium": 0.0,
@@ -2196,8 +2380,8 @@
         "Investment Securities": 41821077110.0,
         "Interest Income": 7723863530.0,
         "Net Interest Income": 3144546130.0,
-        "Total Operating Income": 4118749.81,
-        "Operating Profit": 504171.39,
+        "Total Operating Income": 4118749810.0,
+        "Operating Profit": 504171390.0,
         "Net Profit": 358858630.0,
         "Distributable Profit": -1100493660.0,
         "Number of Shares": 155074636.14,
@@ -2280,14 +2464,22 @@
         "Base Rate": -23.01,
         "Interest Spread Rate": -7.05
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:40:00.913874",
+      "parsed_at": "2026-11-14T20:48:55.110154",
       "raw": {
         "Paid Up Capital": 15507463610.0,
         "Share Premium": 0.0,
@@ -2302,8 +2494,8 @@
         "Investment Securities": 41067798650.0,
         "Interest Income": 11273333930.0,
         "Net Interest Income": 4678859980.0,
-        "Total Operating Income": 6159261.14,
-        "Operating Profit": 1849271.89,
+        "Total Operating Income": 6159261140.0,
+        "Operating Profit": 1849271890.0,
         "Net Profit": 1306461350.0,
         "Distributable Profit": -504454820.0,
         "Number of Shares": 155074636.14,
@@ -2386,14 +2578,22 @@
         "Base Rate": 0.0,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:40:00.913828",
+      "parsed_at": "2026-11-14T20:48:55.109765",
       "raw": {
         "Paid Up Capital": 15507463610.0,
         "Share Premium": 0.0,
@@ -2408,8 +2608,8 @@
         "Investment Securities": 58144508960.0,
         "Interest Income": 15011949880.0,
         "Net Interest Income": 6293653950.0,
-        "Total Operating Income": 8349176.42,
-        "Operating Profit": 3601536.4,
+        "Total Operating Income": 8349176420.0,
+        "Operating Profit": 3601536400.0,
         "Net Profit": 2098603030.0,
         "Distributable Profit": 523101770.0,
         "Number of Shares": 155074636.14,
@@ -2492,14 +2692,22 @@
         "Base Rate": -20.0,
         "Interest Spread Rate": -17.58
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "CZBIL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:40:00.913772",
+      "parsed_at": "2026-11-14T20:48:55.109386",
       "raw": {
         "Paid Up Capital": 16096747230.0,
         "Share Premium": 0.0,
@@ -2514,8 +2722,8 @@
         "Investment Securities": 54689163520.0,
         "Interest Income": 3633065150.0,
         "Net Interest Income": 1541517000.0,
-        "Total Operating Income": 2070705.9,
-        "Operating Profit": 111378.24,
+        "Total Operating Income": 2070705900.0,
+        "Operating Profit": 111378240.0,
         "Net Profit": 107703270.0,
         "Distributable Profit": -448415410.0,
         "Number of Shares": 160967472.32,
@@ -2598,8 +2806,16 @@
         "Base Rate": -17.46,
         "Interest Spread Rate": -10.55
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:40:00.922195"
+  "last_updated": "2026-11-14T20:48:55.120814"
 }

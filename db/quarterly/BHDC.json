@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:29:09.164539",
+      "parsed_at": "2026-11-14T20:38:13.464696",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": 132417660.0,
@@ -19,7 +19,7 @@
         "Total Assets": 2992056530.0,
         "Revenue": 316828470.0,
         "Gross Profit": 309721190.0,
-        "Operating Profit": 234596.43,
+        "Operating Profit": 234596430.0,
         "Net Profit": 122384810.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": 12.24,
@@ -53,14 +53,21 @@
         "graham_number": 176.6
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:29:09.164445",
+      "parsed_at": "2026-11-14T20:38:13.464610",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": 136184440.0,
@@ -71,7 +78,7 @@
         "Total Assets": 3108779880.0,
         "Revenue": 400254290.0,
         "Gross Profit": 390709200.0,
-        "Operating Profit": 273993.78,
+        "Operating Profit": 273993780.0,
         "Net Profit": 126151590.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": 12.62,
@@ -105,14 +112,21 @@
         "graham_number": 179.62
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:29:09.164352",
+      "parsed_at": "2026-11-14T20:38:13.464524",
       "raw": {
         "Paid Up Capital": 1000000000.0,
         "Reserve and Surplus": 167752150.0,
@@ -123,7 +137,7 @@
         "Total Assets": 3064972740.0,
         "Revenue": 101274640.0,
         "Gross Profit": 98864150.0,
-        "Operating Profit": 70407.41,
+        "Operating Profit": 70407410.0,
         "Net Profit": 35630590.0,
         "Number of Shares": 10000000.0,
         "EPS(Rs.)": 14.25,
@@ -157,14 +171,21 @@
         "graham_number": 193.5
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:29:09.164253",
+      "parsed_at": "2026-11-14T20:38:13.464436",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 192264620.0,
@@ -174,7 +195,7 @@
         "Current Assets": 216319630.0,
         "Total Assets": 3143164860.0,
         "Revenue": 161639310.0,
-        "Operating Profit": 182119.39,
+        "Operating Profit": 182119390.0,
         "Net Profit": 112661670.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 21.46,
@@ -207,14 +228,21 @@
         "graham_number": 239.01
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:29:09.164158",
+      "parsed_at": "2026-11-14T20:38:13.464353",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 143762750.0,
@@ -224,7 +252,7 @@
         "Current Assets": 160129980.0,
         "Total Assets": 3073733450.0,
         "Revenue": 210280200.0,
-        "Operating Profit": 168603.47,
+        "Operating Profit": 168603470.0,
         "Net Profit": 64159800.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 8.15,
@@ -276,14 +304,21 @@
         "Book Value(Rs.)": 0.4,
         "ROE": -33.67
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:29:09.164062",
+      "parsed_at": "2026-11-14T20:38:13.464271",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 144329650.0,
@@ -293,7 +328,7 @@
         "Current Assets": 194505050.0,
         "Total Assets": 3090360420.0,
         "Revenue": 285012150.0,
-        "Operating Profit": 207332.58,
+        "Operating Profit": 207332580.0,
         "Net Profit": 64726700.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 6.16,
@@ -345,14 +380,21 @@
         "Book Value(Rs.)": 0.11,
         "ROE": -51.17
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:29:09.163967",
+      "parsed_at": "2026-11-14T20:38:13.464189",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 205416540.0,
@@ -362,7 +404,7 @@
         "Current Assets": 242081640.0,
         "Total Assets": 3109453000.0,
         "Revenue": 146892380.0,
-        "Operating Profit": 97900.52,
+        "Operating Profit": 97900520.0,
         "Net Profit": 61539910.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 23.44,
@@ -414,14 +456,21 @@
         "Book Value(Rs.)": 2.38,
         "ROE": 60.74
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:29:09.163872",
+      "parsed_at": "2026-11-14T20:38:13.464094",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 176807580.0,
@@ -431,7 +480,7 @@
         "Current Assets": 240870260.0,
         "Total Assets": 3089969350.0,
         "Revenue": 247346160.0,
-        "Operating Profit": 158800.74,
+        "Operating Profit": 158800740.0,
         "Net Profit": 87933850.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 16.75,
@@ -482,14 +531,21 @@
         "EPS(Rs.)": -21.95,
         "Book Value(Rs.)": -1.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:29:09.163772",
+      "parsed_at": "2026-11-14T20:38:13.464010",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 160045460.0,
@@ -499,7 +555,7 @@
         "Current Assets": 136161730.0,
         "Total Assets": 2971714400.0,
         "Revenue": 306777550.0,
-        "Operating Profit": 175616.47,
+        "Operating Profit": 175616470.0,
         "Net Profit": 71171730.0,
         "Number of Shares": 10500000.0,
         "EPS(Rs.)": 9.04,
@@ -551,14 +607,21 @@
         "Book Value(Rs.)": 1.36,
         "ROE": 9.34
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:29:09.163674",
+      "parsed_at": "2026-11-14T20:38:13.463927",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 138707760.0,
@@ -624,7 +687,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:29:09.163581",
+      "parsed_at": "2026-11-14T20:38:13.463845",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 196085920.0,
@@ -692,7 +755,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:29:09.163483",
+      "parsed_at": "2026-11-14T20:38:13.463758",
       "raw": {
         "Paid Up Capital": 1050000000.0,
         "Reserve and Surplus": 211467680.0,
@@ -760,7 +823,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:29:09.163380",
+      "parsed_at": "2026-11-14T20:38:13.463666",
       "raw": {
         "Paid Up Capital": 1129800000.0,
         "Reserve and Surplus": 114670120.0,
@@ -828,7 +891,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:29:09.163280",
+      "parsed_at": "2026-11-14T20:38:13.463615",
       "raw": {
         "Paid Up Capital": 1129800000.0,
         "Reserve and Surplus": 105878950.0,
@@ -895,7 +958,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:29:09.163177",
+      "parsed_at": "2026-11-14T20:38:13.463588",
       "raw": {
         "Paid Up Capital": 1129800000.0,
         "Reserve and Surplus": 190756320.0,
@@ -963,7 +1026,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:29:09.163073",
+      "parsed_at": "2026-11-14T20:38:13.463560",
       "raw": {
         "Paid Up Capital": 1129800000.0,
         "Reserve and Surplus": 259902520.0,
@@ -1034,7 +1097,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:29:09.162964",
+      "parsed_at": "2026-11-14T20:38:13.463532",
       "raw": {
         "Paid Up Capital": 1186290000.0,
         "Reserve and Surplus": 206821360.0,
@@ -1045,7 +1108,7 @@
         "Total Assets": 2916602470.0,
         "Revenue": 353104810.0,
         "Gross Profit": 344876580.0,
-        "Operating Profit": 208794.33,
+        "Operating Profit": 208794330.0,
         "Net Profit": 117655740.0,
         "Number of Shares": 11862900.0,
         "EPS Reported": 13.22,
@@ -1098,14 +1161,21 @@
         "Book Value Reported": 6.61,
         "ROE Reported": 58.37
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:29:09.162855",
+      "parsed_at": "2026-11-14T20:38:13.463503",
       "raw": {
         "Paid Up Capital": 1186290000.0,
         "Reserve and Surplus": 217273890.0,
@@ -1116,7 +1186,7 @@
         "Total Assets": 3193230870.0,
         "Revenue": 459919520.0,
         "Gross Profit": 444964270.0,
-        "Operating Profit": 259623.76,
+        "Operating Profit": 259623760.0,
         "Net Profit": 139841020.0,
         "Number of Shares": 11862900.0,
         "EPS Reported": 11.79,
@@ -1169,14 +1239,21 @@
         "Book Value Reported": 8.18,
         "ROE Reported": 103.68
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BHDC",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:29:09.162722",
+      "parsed_at": "2026-11-14T20:38:13.463467",
       "raw": {
         "Paid Up Capital": 1186290000.0,
         "Reserve and Surplus": 300880230.0,
@@ -1187,7 +1264,7 @@
         "Total Assets": 3242513430.0,
         "Revenue": 172907480.0,
         "Gross Profit": 163945320.0,
-        "Operating Profit": 121213.94,
+        "Operating Profit": 121213940.0,
         "Net Profit": 89218980.0,
         "Number of Shares": 11862900.0,
         "EPS Reported": 30.08,
@@ -1240,8 +1317,15 @@
         "Book Value Reported": 7.26,
         "ROE Reported": -9.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:29:09.165764"
+  "last_updated": "2026-11-14T20:38:13.467373"
 }

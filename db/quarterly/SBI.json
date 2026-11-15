@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 39854032000.0,
         "Interest Income": 967001000.0,
         "Net Interest Income": 566970000.0,
-        "Total Operating Income": 762936.0,
-        "Operating Profit": 442649.0,
+        "Total Operating Income": 762936000.0,
+        "Operating Profit": 442649000.0,
         "Net Profit": 302071000.0,
         "Number of Shares": 30580590.0,
         "EPS(Rs.)": 39.51,
@@ -90,7 +90,15 @@
         "graham_number": 417.33
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -108,8 +116,8 @@
         "Loans and Advances to Customers": 41818188000.0,
         "Interest Income": 1917785000.0,
         "Net Interest Income": 1141457000.0,
-        "Total Operating Income": 1548347.0,
-        "Operating Profit": 927139.0,
+        "Total Operating Income": 1548347000.0,
+        "Operating Profit": 927139000.0,
         "Net Profit": 623928000.0,
         "Number of Shares": 30580590.0,
         "EPS(Rs.)": 40.81,
@@ -156,7 +164,15 @@
         "graham_number": 435.39
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -174,8 +190,8 @@
         "Loans and Advances to Customers": 46204589000.0,
         "Interest Income": 2888449000.0,
         "Net Interest Income": 1739284000.0,
-        "Total Operating Income": 2380609.0,
-        "Operating Profit": 1432294.0,
+        "Total Operating Income": 2380609000.0,
+        "Operating Profit": 1432294000.0,
         "Net Profit": 950300000.0,
         "Number of Shares": 38837360.0,
         "EPS(Rs.)": 32.63,
@@ -222,7 +238,15 @@
         "graham_number": 353.12
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -240,8 +264,8 @@
         "Loans and Advances to Customers": 46995416000.0,
         "Interest Income": 3981262000.0,
         "Net Interest Income": 2416111000.0,
-        "Total Operating Income": 3336362.0,
-        "Operating Profit": 2040713.0,
+        "Total Operating Income": 3336362000.0,
+        "Operating Profit": 2040713000.0,
         "Net Profit": 1331881000.0,
         "Number of Shares": 38837360.0,
         "EPS(Rs.)": 34.29,
@@ -291,7 +315,15 @@
         "eps_ttm": -1.58,
         "EPS(Rs.)": -1.58
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -309,8 +341,8 @@
         "Loans and Advances to Customers": 52378948000.0,
         "Interest Income": 1153764000.0,
         "Net Interest Income": 692897000.0,
-        "Total Operating Income": 944166.0,
-        "Operating Profit": 538515.0,
+        "Total Operating Income": 944166000.0,
+        "Operating Profit": 538515000.0,
         "Net Profit": 354178000.0,
         "Number of Shares": 38837360.0,
         "EPS(Rs.)": 36.48,
@@ -384,7 +416,15 @@
         "Base Rate": -6.03,
         "Interest Spread Rate": 5.09
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -402,8 +442,8 @@
         "Loans and Advances to Customers": 59772328000.0,
         "Interest Income": 2448778000.0,
         "Net Interest Income": 1451362000.0,
-        "Total Operating Income": 1982077.0,
-        "Operating Profit": 1164661.0,
+        "Total Operating Income": 1982077000.0,
+        "Operating Profit": 1164661000.0,
         "Net Profit": 758725000.0,
         "Number of Shares": 38837360.0,
         "EPS(Rs.)": 39.07,
@@ -477,7 +517,15 @@
         "Base Rate": 8.54,
         "Interest Spread Rate": 7.73
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -495,8 +543,8 @@
         "Loans and Advances to Customers": 61715242000.0,
         "Interest Income": 4034770000.0,
         "Net Interest Income": 2195704000.0,
-        "Total Operating Income": 3028273.0,
-        "Operating Profit": 1750553.0,
+        "Total Operating Income": 3028273000.0,
+        "Operating Profit": 1750553000.0,
         "Net Profit": 1104400000.0,
         "Number of Shares": 49798560.0,
         "EPS(Rs.)": 29.57,
@@ -570,7 +618,15 @@
         "Base Rate": 47.93,
         "Interest Spread Rate": -16.73
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -588,8 +644,8 @@
         "Loans and Advances to Customers": 63025023000.0,
         "Interest Income": 5911370000.0,
         "Net Interest Income": 2916887000.0,
-        "Total Operating Income": 4073357.0,
-        "Operating Profit": 2340270.0,
+        "Total Operating Income": 4073357000.0,
+        "Operating Profit": 2340270000.0,
         "Net Profit": 1523856000.0,
         "Number of Shares": 69248930.0,
         "EPS(Rs.)": 33.46,
@@ -663,7 +719,15 @@
         "Base Rate": 50.17,
         "Interest Spread Rate": -10.82
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -683,8 +747,8 @@
         "Investment Securities": 23564604700.0,
         "Interest Income": 8370983550.0,
         "Net Interest Income": 2854253550.0,
-        "Total Operating Income": 4016980.83,
-        "Operating Profit": 1846716.28,
+        "Total Operating Income": 4016980830.0,
+        "Operating Profit": 1846716280.0,
         "Net Profit": 1300022450.0,
         "Distributable Profit": 1390060390.0,
         "Number of Shares": 98258531.13,
@@ -761,7 +825,15 @@
         "Base Rate": 52.3,
         "Interest Spread Rate": -10.57
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -782,8 +854,8 @@
         "Investment Securities": 23573364280.0,
         "Interest Income": 12364173500.0,
         "Net Interest Income": 4407723060.0,
-        "Total Operating Income": 5908336.03,
-        "Operating Profit": 2365108.71,
+        "Total Operating Income": 5908336030.0,
+        "Operating Profit": 2365108710.0,
         "Net Profit": 1638284340.0,
         "Distributable Profit": 1448805250.0,
         "Number of Shares": 98258531.13,
@@ -862,7 +934,15 @@
         "Base Rate": 48.3,
         "Interest Spread Rate": -8.02
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -883,8 +963,8 @@
         "Investment Securities": 23802243380.0,
         "Interest Income": 3969151120.0,
         "Net Interest Income": 1298116100.0,
-        "Total Operating Income": 1679801.95,
-        "Operating Profit": 893412.96,
+        "Total Operating Income": 1679801950.0,
+        "Operating Profit": 893412960.0,
         "Net Profit": 627357810.0,
         "Distributable Profit": 1634492720.0,
         "Number of Shares": 98258531.13,
@@ -963,7 +1043,15 @@
         "Base Rate": 24.48,
         "Interest Spread Rate": -7.39
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -984,8 +1072,8 @@
         "Investment Securities": 24472969680.0,
         "Interest Income": 8224517700.0,
         "Net Interest Income": 2673590500.0,
-        "Total Operating Income": 3443347.56,
-        "Operating Profit": 1665365.43,
+        "Total Operating Income": 3443347560.0,
+        "Operating Profit": 1665365430.0,
         "Net Profit": 1177194320.0,
         "Distributable Profit": 1213583710.0,
         "Number of Shares": 98258531.13,
@@ -1064,7 +1152,15 @@
         "Base Rate": 19.71,
         "Interest Spread Rate": -1.12
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1085,8 +1181,8 @@
         "Investment Securities": 25353432070.0,
         "Interest Income": 12810698120.0,
         "Net Interest Income": 4132167770.0,
-        "Total Operating Income": 5252089.48,
-        "Operating Profit": 2556851.37,
+        "Total Operating Income": 5252089480.0,
+        "Operating Profit": 2556851370.0,
         "Net Profit": 1803285800.0,
         "Distributable Profit": 1167541450.0,
         "Number of Shares": 101206287.06,
@@ -1168,7 +1264,15 @@
         "Base Rate": 19.65,
         "Interest Spread Rate": 2.71
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1189,8 +1293,8 @@
         "Investment Securities": 33878742800.0,
         "Interest Income": 17838065910.0,
         "Net Interest Income": 5767266890.0,
-        "Total Operating Income": 7334878.88,
-        "Operating Profit": 3197276.27,
+        "Total Operating Income": 7334878880.0,
+        "Operating Profit": 3197276270.0,
         "Net Profit": 2241642860.0,
         "Distributable Profit": 1410153930.0,
         "Number of Shares": 101206287.06,
@@ -1273,7 +1377,15 @@
         "Base Rate": 11.76,
         "Interest Spread Rate": -8.49
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1294,8 +1406,8 @@
         "Investment Securities": 44013524820.0,
         "Interest Income": 4743159260.0,
         "Net Interest Income": 1382001630.0,
-        "Total Operating Income": 1697686.37,
-        "Operating Profit": 680463.81,
+        "Total Operating Income": 1697686370.0,
+        "Operating Profit": 680463810.0,
         "Net Profit": 479178030.0,
         "Distributable Profit": 946492190.0,
         "Number of Shares": 101206287.06,
@@ -1378,7 +1490,15 @@
         "Base Rate": 0.29,
         "Interest Spread Rate": -0.5
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1399,8 +1519,8 @@
         "Investment Securities": 50402179210.0,
         "Interest Income": 9255134880.0,
         "Net Interest Income": 2658542620.0,
-        "Total Operating Income": 3325026.41,
-        "Operating Profit": 1183969.46,
+        "Total Operating Income": 3325026410.0,
+        "Operating Profit": 1183969460.0,
         "Net Profit": 840541520.0,
         "Distributable Profit": 495587860.0,
         "Number of Shares": 101206287.06,
@@ -1483,7 +1603,15 @@
         "Base Rate": -10.14,
         "Interest Spread Rate": -9.32
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1503,8 +1631,8 @@
         "Investment Securities": 54712930610.0,
         "Interest Income": 13321767070.0,
         "Net Interest Income": 3573754810.0,
-        "Total Operating Income": 4542611.48,
-        "Operating Profit": 1645841.42,
+        "Total Operating Income": 4542611480.0,
+        "Operating Profit": 1645841420.0,
         "Net Profit": 1164177870.0,
         "Distributable Profit": 834360360.0,
         "Number of Shares": 105001522.82,
@@ -1585,7 +1713,15 @@
         "Base Rate": -19.22,
         "Interest Spread Rate": -4.32
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1605,8 +1741,8 @@
         "Investment Securities": 47833055680.0,
         "Interest Income": 17894542230.0,
         "Net Interest Income": 5072967790.0,
-        "Total Operating Income": 6409053.74,
-        "Operating Profit": 2852205.95,
+        "Total Operating Income": 6409053740.0,
+        "Operating Profit": 2852205950.0,
         "Net Profit": 2013721350.0,
         "Distributable Profit": 1130199960.0,
         "Number of Shares": 105001522.82,
@@ -1687,7 +1823,15 @@
         "Base Rate": -22.72,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1707,8 +1851,8 @@
         "Investment Securities": 50276236570.0,
         "Interest Income": 4141207350.0,
         "Net Interest Income": 1348359460.0,
-        "Total Operating Income": 1689752.56,
-        "Operating Profit": 1213014.64,
+        "Total Operating Income": 1689752560.0,
+        "Operating Profit": 1213014640.0,
         "Net Profit": 814651190.0,
         "Distributable Profit": 1877649190.0,
         "Number of Shares": 105001522.82,
@@ -1789,7 +1933,15 @@
         "Base Rate": -24.68,
         "Interest Spread Rate": -5.76
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1809,8 +1961,8 @@
         "Investment Securities": 51459300370.0,
         "Interest Income": 7650693770.0,
         "Net Interest Income": 2293367140.0,
-        "Total Operating Income": 2988583.51,
-        "Operating Profit": 1338159.33,
+        "Total Operating Income": 2988583510.0,
+        "Operating Profit": 1338159330.0,
         "Net Profit": 900281050.0,
         "Distributable Profit": 1210675840.0,
         "Number of Shares": 105001522.82,
@@ -1888,7 +2040,15 @@
         "Base Rate": -26.09,
         "Interest Spread Rate": -5.51
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -1910,8 +2070,8 @@
         "Investment Securities": 43654980440.0,
         "Interest Income": 11307477420.0,
         "Net Interest Income": 3534955840.0,
-        "Total Operating Income": 4640501.03,
-        "Operating Profit": 1792696.58,
+        "Total Operating Income": 4640501030.0,
+        "Operating Profit": 1792696580.0,
         "Net Profit": 1203261400.0,
         "Distributable Profit": 1051533380.0,
         "Number of Shares": 108991580.68,
@@ -1991,7 +2151,15 @@
         "Base Rate": -24.8,
         "Interest Spread Rate": -5.51
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2013,8 +2181,8 @@
         "Investment Securities": 54579704350.0,
         "Interest Income": 15462931030.0,
         "Net Interest Income": 5262311870.0,
-        "Total Operating Income": 6788341.66,
-        "Operating Profit": 2733792.21,
+        "Total Operating Income": 6788341660.0,
+        "Operating Profit": 2733792210.0,
         "Net Profit": 1802580120.0,
         "Distributable Profit": 1230357620.0,
         "Number of Shares": 108991580.68,
@@ -2094,7 +2262,15 @@
         "Base Rate": -24.22,
         "Interest Spread Rate": -11.78
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2116,8 +2292,8 @@
         "Investment Securities": 30523515160.0,
         "Interest Income": 3744074160.0,
         "Net Interest Income": 1318658750.0,
-        "Total Operating Income": 1764022.0,
-        "Operating Profit": 715747.51,
+        "Total Operating Income": 1764022000.0,
+        "Operating Profit": 715747510.0,
         "Net Profit": 501565200.0,
         "Distributable Profit": 1509884910.0,
         "Number of Shares": 108991580.68,
@@ -2197,7 +2373,15 @@
         "Base Rate": -22.8,
         "Interest Spread Rate": -7.98
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2219,8 +2403,8 @@
         "Investment Securities": 32173396420.0,
         "Interest Income": 7270138050.0,
         "Net Interest Income": 2561023130.0,
-        "Total Operating Income": 3548222.21,
-        "Operating Profit": 1471398.2,
+        "Total Operating Income": 3548222210.0,
+        "Operating Profit": 1471398200.0,
         "Net Profit": 1031342920.0,
         "Distributable Profit": 1201306330.0,
         "Number of Shares": 108991580.68,
@@ -2303,7 +2487,15 @@
         "Base Rate": -20.45,
         "Interest Spread Rate": -6.1
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2325,8 +2517,8 @@
         "Investment Securities": 31479013210.0,
         "Interest Income": 10811896300.0,
         "Net Interest Income": 3869415720.0,
-        "Total Operating Income": 5301392.27,
-        "Operating Profit": 2085360.13,
+        "Total Operating Income": 5301392270.0,
+        "Operating Profit": 2085360130.0,
         "Net Profit": 1461785730.0,
         "Distributable Profit": 1026239330.0,
         "Number of Shares": 113351243.91,
@@ -2409,7 +2601,15 @@
         "Base Rate": -18.42,
         "Interest Spread Rate": -12.2
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2431,8 +2631,8 @@
         "Investment Securities": 29658178560.0,
         "Interest Income": 14481046050.0,
         "Net Interest Income": 5334310560.0,
-        "Total Operating Income": 7157824.83,
-        "Operating Profit": 2916141.44,
+        "Total Operating Income": 7157824830.0,
+        "Operating Profit": 2916141440.0,
         "Net Profit": 2044330740.0,
         "Distributable Profit": 1251639300.0,
         "Number of Shares": 113351243.91,
@@ -2515,7 +2715,15 @@
         "Base Rate": -17.17,
         "Interest Spread Rate": -8.81
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SBI",
@@ -2537,8 +2745,8 @@
         "Investment Securities": 29622997260.0,
         "Interest Income": 3481892230.0,
         "Net Interest Income": 1269720770.0,
-        "Total Operating Income": 1765861.26,
-        "Operating Profit": 783460.83,
+        "Total Operating Income": 1765861260.0,
+        "Operating Profit": 783460830.0,
         "Net Profit": 552215080.0,
         "Distributable Profit": 1604485550.0,
         "Number of Shares": 113351243.91,
@@ -2621,7 +2829,15 @@
         "Base Rate": -14.77,
         "Interest Spread Rate": -11.56
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:58:52.746927"

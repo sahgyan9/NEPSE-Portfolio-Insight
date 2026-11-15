@@ -21,8 +21,8 @@
         "Total Investment and Loans": 5578992000.0,
         "Total Revenue": 181309000.0,
         "Income From Investment Loans And Others": 142557000.0,
-        "Total Expenses And Provisions": 60826.0,
-        "Management Expenses": 32825.0,
+        "Total Expenses And Provisions": 60826000.0,
+        "Management Expenses": 32825000.0,
         "Net Profit": 120483000.0,
         "Net Premium": 2138694000.0,
         "Net Claim Payment": 545777000.0,
@@ -71,7 +71,15 @@
         "graham_number": 138.78
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLI",
@@ -91,8 +99,8 @@
         "Total Investment and Loans": 5882796000.0,
         "Total Revenue": 198171000.0,
         "Income From Investment Loans And Others": 177670000.0,
-        "Total Expenses And Provisions": 76041.0,
-        "Management Expenses": 53137.0,
+        "Total Expenses And Provisions": 76041000.0,
+        "Management Expenses": 53137000.0,
         "Net Profit": 122130000.0,
         "Net Premium": 2992609000.0,
         "Net Claim Payment": 779668000.0,
@@ -141,7 +149,15 @@
         "graham_number": 121.09
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLI",
@@ -161,8 +177,8 @@
         "Total Investment and Loans": 6224259000.0,
         "Total Revenue": 162731000.0,
         "Income From Investment Loans And Others": 56267000.0,
-        "Total Expenses And Provisions": 30950.0,
-        "Management Expenses": 9459.0,
+        "Total Expenses And Provisions": 30950000.0,
+        "Management Expenses": 9459000.0,
         "Net Profit": 131781000.0,
         "Net Premium": 729940000.0,
         "Net Claim Payment": 276121000.0,
@@ -213,7 +229,15 @@
         "graham_number": 260.47
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLI",
@@ -233,8 +257,8 @@
         "Total Investment and Loans": 6488067000.0,
         "Total Revenue": 216025000.0,
         "Income From Investment Loans And Others": 109199000.0,
-        "Total Expenses And Provisions": 49241.0,
-        "Management Expenses": 18755.0,
+        "Total Expenses And Provisions": 49241000.0,
+        "Management Expenses": 18755000.0,
         "Net Profit": 166784000.0,
         "Net Premium": 1371283000.0,
         "Net Claim Payment": 477145000.0,
@@ -285,7 +309,15 @@
         "graham_number": 208.54
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RLI",
@@ -305,8 +337,8 @@
         "Total Investment and Loans": 6947496000.0,
         "Total Revenue": 205063000.0,
         "Income From Investment Loans And Others": 147856000.0,
-        "Total Expenses And Provisions": 58706.0,
-        "Management Expenses": 26519.0,
+        "Total Expenses And Provisions": 58706000.0,
+        "Management Expenses": 26519000.0,
         "Net Profit": 146357000.0,
         "Net Premium": 1970668000.0,
         "Net Claim Payment": 698734000.0,
@@ -385,7 +417,15 @@
         "Book Value(Rs.)": 7.92,
         "ROE": 12.57
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:53:10.914841"

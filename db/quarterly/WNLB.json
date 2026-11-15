@@ -20,8 +20,8 @@
         "Investments": 28902410.0,
         "Interest Income": 93511340.0,
         "Net Interest Income": 32242230.0,
-        "Total Operating Income": 43610.79,
-        "Operating Profit": -30135.95,
+        "Total Operating Income": 43610790.0,
+        "Operating Profit": -30135950.0,
         "Net Profit": 5394430.0,
         "Number of Shares": 724462.5,
         "EPS(Rs.)": 9.93,
@@ -63,7 +63,15 @@
         "graham_number": 173.42
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -82,8 +90,8 @@
         "Investments": 8000000.0,
         "Interest Income": 127744360.0,
         "Net Interest Income": 47972030.0,
-        "Total Operating Income": 61694.89,
-        "Operating Profit": -37669.69,
+        "Total Operating Income": 61694890.0,
+        "Operating Profit": -37669690.0,
         "Net Profit": 10837530.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": 13.68,
@@ -125,7 +133,15 @@
         "graham_number": 181.47
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -144,8 +160,8 @@
         "Investments": 8000000.0,
         "Interest Income": 30056110.0,
         "Net Interest Income": 7549240.0,
-        "Total Operating Income": 10835.34,
-        "Operating Profit": -16409.07,
+        "Total Operating Income": 10835340.0,
+        "Operating Profit": -16409070.0,
         "Net Profit": -2371650.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -11.98,
@@ -186,7 +202,15 @@
         "revenue_ttm": 30056110.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -205,8 +229,8 @@
         "Investments": 13000000.0,
         "Interest Income": 56737750.0,
         "Net Interest Income": 8668280.0,
-        "Total Operating Income": 12849.02,
-        "Operating Profit": -46667.03,
+        "Total Operating Income": 12849020.0,
+        "Operating Profit": -46667030.0,
         "Net Profit": -10971660.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -27.7,
@@ -247,7 +271,15 @@
         "revenue_ttm": 56737750.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -266,8 +298,8 @@
         "Investments": 9000000.0,
         "Interest Income": 76692390.0,
         "Net Interest Income": 9215730.0,
-        "Total Operating Income": 14647.14,
-        "Operating Profit": -95511.49,
+        "Total Operating Income": 14647140.0,
+        "Operating Profit": -95511490.0,
         "Net Profit": -24018630.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -40.43,
@@ -333,7 +365,15 @@
         "NPL": 150.0,
         "Cost of funds": -22.43
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -352,8 +392,8 @@
         "Investments": 9000000.0,
         "Interest Income": 110390380.0,
         "Net Interest Income": 17328980.0,
-        "Total Operating Income": 27384.27,
-        "Operating Profit": -209086.61,
+        "Total Operating Income": 27384270.0,
+        "Operating Profit": -209086610.0,
         "Net Profit": 79970.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": 0.1,
@@ -422,7 +462,15 @@
         "NPL": 19.88,
         "Cost of funds": 628.91
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -441,8 +489,8 @@
         "Investments": 9000000.0,
         "Interest Income": 24487490.0,
         "Net Interest Income": 3612740.0,
-        "Total Operating Income": 6267.2,
-        "Operating Profit": -46663.27,
+        "Total Operating Income": 6267200.0,
+        "Operating Profit": -46663270.0,
         "Net Profit": -1548960.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -7.82,
@@ -510,7 +558,15 @@
         "NPL": -49.54,
         "Cost of funds": -2.81
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -529,8 +585,8 @@
         "Investments": 9000000.0,
         "Interest Income": 44581940.0,
         "Net Interest Income": 4398950.0,
-        "Total Operating Income": 9277.96,
-        "Operating Profit": -132913.58,
+        "Total Operating Income": 9277960.0,
+        "Operating Profit": -132913580.0,
         "Net Profit": -5651470.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -14.27,
@@ -598,7 +654,15 @@
         "NPL": -65.38,
         "Cost of funds": -19.7
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -617,8 +681,8 @@
         "Investments": 9000000.0,
         "Interest Income": 76528820.0,
         "Net Interest Income": 13277220.0,
-        "Total Operating Income": 20332.73,
-        "Operating Profit": -250452.34,
+        "Total Operating Income": 20332730.0,
+        "Operating Profit": -250452340.0,
         "Net Profit": -4768380.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": -8.03,
@@ -686,7 +750,15 @@
         "NPL": -61.73,
         "Cost of funds": 22.84
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -705,8 +777,8 @@
         "Investments": 9000000.0,
         "Interest Income": 114962630.0,
         "Net Interest Income": 32156210.0,
-        "Total Operating Income": 52210.33,
-        "Operating Profit": 11120.04,
+        "Total Operating Income": 52210330.0,
+        "Operating Profit": 11120040.0,
         "Net Profit": 11366810.0,
         "Number of Shares": 792113.0,
         "EPS(Rs.)": 14.35,
@@ -776,7 +848,15 @@
         "Cost of funds": -78.77,
         "CD ratio": 3254.29
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -796,8 +876,8 @@
         "Investments": 9000000.0,
         "Interest Income": 14969840.0,
         "Net Interest Income": -1184250.0,
-        "Total Operating Income": -339.6,
-        "Operating Profit": -93083.64,
+        "Total Operating Income": -339600.0,
+        "Operating Profit": -93083640.0,
         "Net Profit": -13932180.0,
         "Number of Shares": 792113.0,
         "EPS Reported": -70.35,
@@ -864,7 +944,15 @@
         "Cost of funds": -17.33,
         "CD ratio": 2664.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -884,8 +972,8 @@
         "Investments": 9000000.0,
         "Interest Income": 41620450.0,
         "Net Interest Income": 10000920.0,
-        "Total Operating Income": 13186.69,
-        "Operating Profit": -192122.08,
+        "Total Operating Income": 13186690.0,
+        "Operating Profit": -192122080.0,
         "Net Profit": -12463910.0,
         "Number of Shares": 792113.0,
         "EPS Reported": -31.47,
@@ -952,7 +1040,15 @@
         "Cost of funds": -13.25,
         "CD ratio": -6.54
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -972,8 +1068,8 @@
         "Investments": 9000000.0,
         "Interest Income": 77165900.0,
         "Net Interest Income": 32408190.0,
-        "Total Operating Income": 37163.39,
-        "Operating Profit": 10412.45,
+        "Total Operating Income": 37163390.0,
+        "Operating Profit": 10412450.0,
         "Net Profit": 2550540.0,
         "Number of Shares": 792113.0,
         "EPS Reported": 4.29,
@@ -1041,7 +1137,15 @@
         "Cost of funds": -49.64,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -1061,8 +1165,8 @@
         "Investments": 9000000.0,
         "Interest Income": 106378270.0,
         "Net Interest Income": 47086570.0,
-        "Total Operating Income": 55114.16,
-        "Operating Profit": 20340.36,
+        "Total Operating Income": 55114160.0,
+        "Operating Profit": 20340360.0,
         "Net Profit": 9697740.0,
         "Number of Shares": 843405.5,
         "EPS Reported": 11.5,
@@ -1130,7 +1234,15 @@
         "Cost of funds": -27.55,
         "CD ratio": -96.96
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -1150,8 +1262,8 @@
         "Investments": 9000000.0,
         "Interest Income": 28109280.0,
         "Net Interest Income": 14135040.0,
-        "Total Operating Income": 16150.66,
-        "Operating Profit": 1339.74,
+        "Total Operating Income": 16150660.0,
+        "Operating Profit": 1339740.0,
         "Net Profit": 937820.0,
         "Number of Shares": 843405.5,
         "EPS Reported": 4.45,
@@ -1222,7 +1334,15 @@
         "Cost of funds": -20.41,
         "CD ratio": -77.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -1246,8 +1366,8 @@
         "Interest Income": 64031910.0,
         "Net Interest Income": 36537850.0,
         "Investment Securities": 9000000.0,
-        "Total Operating Income": 41138.38,
-        "Operating Profit": -9029.4,
+        "Total Operating Income": 41138380.0,
+        "Operating Profit": -9029400.0,
         "Net Profit": -8829400.0,
         "Number of Shares": 843405.5,
         "EPS Reported": -20.94,
@@ -1323,7 +1443,15 @@
         "Cost of funds": -22.92,
         "CD ratio": 4.85
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -1343,8 +1471,8 @@
         "Investments": 9000000.0,
         "Interest Income": 87301240.0,
         "Net Interest Income": 47267120.0,
-        "Total Operating Income": 54536.54,
-        "Operating Profit": 12091.94,
+        "Total Operating Income": 54536540.0,
+        "Operating Profit": 12091940.0,
         "Net Profit": 8604360.0,
         "Number of Shares": 843405.5,
         "EPS Reported": 13.6,
@@ -1414,7 +1542,15 @@
         "NPL": 136.09,
         "Cost of funds": -4.28
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "WNLB",
@@ -1434,8 +1570,8 @@
         "Investments": 9500000.0,
         "Interest Income": 116663770.0,
         "Net Interest Income": 64143120.0,
-        "Total Operating Income": 73522.48,
-        "Operating Profit": 20761.92,
+        "Total Operating Income": 73522480.0,
+        "Operating Profit": 20761920.0,
         "Net Profit": 8342760.0,
         "Number of Shares": 843405.5,
         "EPS Reported": 9.89,
@@ -1506,7 +1642,15 @@
         "Cost of funds": -24.34,
         "CD ratio": 620.45
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:24:27.168453"

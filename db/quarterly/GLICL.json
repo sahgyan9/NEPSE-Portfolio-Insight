@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:49:27.780026",
+      "parsed_at": "2026-11-14T20:58:18.273254",
       "raw": {
         "EPS(Rs.)": 5.01
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:49:27.779993",
+      "parsed_at": "2026-11-14T20:58:18.273246",
       "raw": {
         "EPS(Rs.)": 9.21
       },
@@ -54,7 +54,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:49:27.781091",
+      "parsed_at": "2026-11-14T20:58:18.273716",
       "raw": {
         "EPS(Rs.)": 3.43
       },
@@ -77,7 +77,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:49:27.781054",
+      "parsed_at": "2026-11-14T20:58:18.273690",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Reserves and Surplus": 170865940.0,
@@ -89,8 +89,8 @@
         "Total Investment and Loans": 2092998660.0,
         "Total Revenue": 8966020.0,
         "Income From Investment Loans And Others": 10351920.0,
-        "Total Expenses And Provisions": 3542.31,
-        "Management Expenses": 2636.63,
+        "Total Expenses And Provisions": 3542310.0,
+        "Management Expenses": 2636630.0,
         "Net Profit": 5423710.0,
         "Net Premium": 139097040.0,
         "Net Claim Payment": 71063980.0,
@@ -134,14 +134,22 @@
         "graham_number": 114.46
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:49:27.780802",
+      "parsed_at": "2026-11-14T20:58:18.273531",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Reserves and Surplus": 175083950.0,
@@ -153,8 +161,8 @@
         "Total Investment and Loans": 2299042530.0,
         "Total Revenue": 18131760.0,
         "Income From Investment Loans And Others": 19411700.0,
-        "Total Expenses And Provisions": 8490.04,
-        "Management Expenses": 6245.71,
+        "Total Expenses And Provisions": 8490040.0,
+        "Management Expenses": 6245710.0,
         "Net Profit": 9641720.0,
         "Net Premium": 331258110.0,
         "Net Claim Payment": 17347220.0,
@@ -203,14 +211,22 @@
         "eps_ttm": -22.95,
         "EPS(Rs.)": -22.95
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:49:27.780547",
+      "parsed_at": "2026-11-14T20:58:18.273370",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Reserves and Surplus": 182495590.0,
@@ -222,8 +238,8 @@
         "Total Investment and Loans": 2496016300.0,
         "Total Revenue": 28426400.0,
         "Income From Investment Loans And Others": 26956520.0,
-        "Total Expenses And Provisions": 16925.08,
-        "Management Expenses": 15514.2,
+        "Total Expenses And Provisions": 16925080.0,
+        "Management Expenses": 15514200.0,
         "Net Profit": 11501320.0,
         "Net Premium": 551394750.0,
         "Net Claim Payment": 74730040.0,
@@ -272,14 +288,22 @@
         "eps_ttm": -66.67,
         "EPS(Rs.)": -66.67
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:49:27.780293",
+      "parsed_at": "2026-11-14T20:58:18.273314",
       "raw": {
         "Paid Up Capital": 500000000.0,
         "Reserves and Surplus": 185800340.0,
@@ -292,8 +316,8 @@
         "Total Investment and Loans": 2788691150.0,
         "Total Revenue": 42812030.0,
         "Income From Investment Loans And Others": 33209820.0,
-        "Total Expenses And Provisions": 20470.39,
-        "Management Expenses": 17868.15,
+        "Total Expenses And Provisions": 20470390.0,
+        "Management Expenses": 17868150.0,
         "Net Profit": 22341650.0,
         "Net Premium": 947390690.0,
         "Net Claim Payment": 48089510.0,
@@ -343,14 +367,22 @@
         "eps_ttm": 41.11,
         "EPS(Rs.)": 41.11
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:49:27.779958",
+      "parsed_at": "2026-11-14T20:58:18.273238",
       "raw": {
         "Paid Up Capital": 2084250000.0,
         "Reserves and Surplus": 548266000.0,
@@ -363,8 +395,8 @@
         "Total Investment and Loans": 13016084000.0,
         "Total Revenue": 176175000.0,
         "Income From Investment Loans And Others": 179505000.0,
-        "Total Expenses And Provisions": 44571.0,
-        "Management Expenses": 22444.0,
+        "Total Expenses And Provisions": 44571000.0,
+        "Management Expenses": 22444000.0,
         "Net Profit": 131604000.0,
         "Net Premium": 2354973000.0,
         "Net Claim Payment": 1166148000.0,
@@ -440,14 +472,22 @@
         "Book Value(Rs.)": -3.33,
         "ROE": 100.93
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:49:27.779664",
+      "parsed_at": "2026-11-14T20:58:18.273173",
       "raw": {
         "Paid Up Capital": 2084250000.0,
         "Reserves and Surplus": 587420000.0,
@@ -460,8 +500,8 @@
         "Total Investment and Loans": 13049218000.0,
         "Total Revenue": 237204000.0,
         "Income From Investment Loans And Others": 250977000.0,
-        "Total Expenses And Provisions": 62095.0,
-        "Management Expenses": 35603.0,
+        "Total Expenses And Provisions": 62095000.0,
+        "Management Expenses": 35603000.0,
         "Net Profit": 175108000.0,
         "Net Premium": 3050076000.0,
         "Net Claim Payment": 1628515000.0,
@@ -538,14 +578,22 @@
         "Book Value(Rs.)": -2.4,
         "ROE": 123.08
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:49:27.779363",
+      "parsed_at": "2026-11-14T20:58:18.273106",
       "raw": {
         "Paid Up Capital": 2084250000.0,
         "Reserves and Surplus": 644570000.0,
@@ -558,8 +606,8 @@
         "Total Investment and Loans": 13593276000.0,
         "Total Revenue": 77623000.0,
         "Income From Investment Loans And Others": 67110000.0,
-        "Total Expenses And Provisions": 14122.0,
-        "Management Expenses": 7672.0,
+        "Total Expenses And Provisions": 14122000.0,
+        "Management Expenses": 7672000.0,
         "Net Profit": 63501000.0,
         "Net Premium": 743223000.0,
         "Net Claim Payment": 241356000.0,
@@ -636,14 +684,22 @@
         "Book Value(Rs.)": -1.22,
         "ROE": 301.78
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:49:27.779069",
+      "parsed_at": "2026-11-14T20:58:18.273020",
       "raw": {
         "Paid Up Capital": 2239370000.0,
         "Reserves and Surplus": 547103000.0,
@@ -656,8 +712,8 @@
         "Total Investment and Loans": 14049596000.0,
         "Total Revenue": 155515000.0,
         "Income From Investment Loans And Others": 141238000.0,
-        "Total Expenses And Provisions": 27956.0,
-        "Management Expenses": 14448.0,
+        "Total Expenses And Provisions": 27956000.0,
+        "Management Expenses": 14448000.0,
         "Net Profit": 127559000.0,
         "Net Premium": 1422091000.0,
         "Net Claim Payment": 588431000.0,
@@ -735,14 +791,22 @@
         "Book Value(Rs.)": -7.44,
         "ROE": 175.78
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLICL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:49:27.778756",
+      "parsed_at": "2026-11-14T20:58:18.272818",
       "raw": {
         "Paid Up Capital": 2239370000.0,
         "Reserves and Surplus": 652864000.0,
@@ -755,8 +819,8 @@
         "Total Investment and Loans": 14895641000.0,
         "Total Revenue": 217905000.0,
         "Income From Investment Loans And Others": 207157000.0,
-        "Total Expenses And Provisions": 56678.0,
-        "Management Expenses": 24156.0,
+        "Total Expenses And Provisions": 56678000.0,
+        "Management Expenses": 24156000.0,
         "Net Profit": 161227000.0,
         "Net Premium": 2221443000.0,
         "Net Claim Payment": 980338000.0,
@@ -836,8 +900,16 @@
         "Book Value(Rs.)": 3.13,
         "ROE": 10.63
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:49:27.784266"
+  "last_updated": "2026-11-14T20:58:18.275711"
 }

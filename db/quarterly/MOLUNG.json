@@ -27,7 +27,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:18:09.536800",
+      "parsed_at": "2026-11-15T11:53:11.301562",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -47,7 +47,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:18:09.536796",
+      "parsed_at": "2026-11-15T11:53:11.301556",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -67,7 +67,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:18:09.536792",
+      "parsed_at": "2026-11-15T11:53:11.301550",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -87,7 +87,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:18:09.536785",
+      "parsed_at": "2026-11-15T11:53:11.301544",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -107,7 +107,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:18:09.536781",
+      "parsed_at": "2026-11-15T11:53:11.301537",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -127,7 +127,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:18:09.536776",
+      "parsed_at": "2026-11-15T11:53:11.301531",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -147,7 +147,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:18:09.536765",
+      "parsed_at": "2026-11-15T11:53:11.301522",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -161,7 +161,27 @@
       },
       "yoy": {},
       "sector": "Hydropower"
+    },
+    {
+      "symbol": "MOLUNG",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-15T11:53:11.301504",
+      "raw": {},
+      "raw_keys_order": [],
+      "computed": {
+        "eps_ttm": 7.397323364486,
+        "bvps": 92.23648224299066,
+        "roe_ttm": 8.3856044332627,
+        "roa_ttm": 5.140898333262999,
+        "net_profit_ttm": 59363520.0,
+        "revenue_ttm": 178001350.0,
+        "graham_number": 123.9
+      },
+      "yoy": {},
+      "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-07T09:18:09.537412"
+  "last_updated": "2026-11-15T11:53:11.302214"
 }

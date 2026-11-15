@@ -18,7 +18,7 @@
         "Current Assets": 354954050.0,
         "Total Assets": 5619056990.0,
         "Revenue": 179223420.0,
-        "Operating Profit": 121839.08,
+        "Operating Profit": 121839080.0,
         "Net Profit": -289049310.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -26.1,
@@ -50,7 +50,14 @@
         "revenue_ttm": 179223420.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -115,7 +122,7 @@
         "Total Assets": 5290878980.0,
         "Revenue": 155037720.0,
         "Gross Profit": 151937430.0,
-        "Operating Profit": 138049.45,
+        "Operating Profit": 138049450.0,
         "Net Profit": -34832270.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -9.44,
@@ -148,7 +155,14 @@
         "revenue_ttm": 155037720.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -165,7 +179,7 @@
         "Current Assets": 390156870.0,
         "Total Assets": 5017588920.0,
         "Revenue": 226813570.0,
-        "Operating Profit": 197391.23,
+        "Operating Profit": 197391230.0,
         "Net Profit": -130598500.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -17.69,
@@ -197,7 +211,14 @@
         "revenue_ttm": 226813570.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -214,7 +235,7 @@
         "Current Assets": 335490420.0,
         "Total Assets": 5303877320.0,
         "Revenue": 268042140.0,
-        "Operating Profit": 229038.46,
+        "Operating Profit": 229038460.0,
         "Net Profit": -237933220.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -21.49,
@@ -265,7 +286,14 @@
         "Book Value(Rs.)": -26.86,
         "ROE": -12.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -282,7 +310,7 @@
         "Current Assets": 434732050.0,
         "Total Assets": 5173030420.0,
         "Revenue": 352026350.0,
-        "Operating Profit": 297263.05,
+        "Operating Profit": 297263050.0,
         "Net Profit": -308853030.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -20.92,
@@ -332,7 +360,14 @@
         "Book Value(Rs.)": -47.25,
         "ROE": -61.03
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -349,7 +384,7 @@
         "Current Assets": 379415990.0,
         "Total Assets": 5067188660.0,
         "Revenue": 171024080.0,
-        "Operating Profit": 151869.0,
+        "Operating Profit": 151869000.0,
         "Net Profit": -7235840.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -1.96,
@@ -400,7 +435,14 @@
         "Book Value(Rs.)": -34.76,
         "ROE": 68.16
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -417,7 +459,7 @@
         "Current Assets": 402106630.0,
         "Total Assets": 5040101520.0,
         "Revenue": 247691130.0,
-        "Operating Profit": 217708.87,
+        "Operating Profit": 217708870.0,
         "Net Profit": -89362380.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -12.11,
@@ -468,7 +510,14 @@
         "Book Value(Rs.)": -48.72,
         "ROE": -33.45
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -485,7 +534,7 @@
         "Current Assets": 404430400.0,
         "Total Assets": 4995909840.0,
         "Revenue": 293324130.0,
-        "Operating Profit": 233293.33,
+        "Operating Profit": 233293330.0,
         "Net Profit": -221720380.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -20.02,
@@ -536,7 +585,14 @@
         "Book Value(Rs.)": -57.49,
         "ROE": -119.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -553,7 +609,7 @@
         "Current Assets": 321920030.0,
         "Total Assets": 4987661910.0,
         "Revenue": 319956600.0,
-        "Operating Profit": 262297.13,
+        "Operating Profit": 262297130.0,
         "Net Profit": -358814180.0,
         "Number of Shares": 14764000.0,
         "EPS(Rs.)": -24.3,
@@ -604,7 +660,14 @@
         "Book Value(Rs.)": -60.13,
         "ROE": -191.46
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -622,7 +685,7 @@
         "Total Assets": 5018713190.0,
         "Revenue": 154814390.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 138520.22,
+        "Operating Profit": 138520220.0,
         "Net Profit": -12338870.0,
         "Number of Shares": 14764000.0,
         "EPS Reported": -3.34,
@@ -671,7 +734,14 @@
         "Net Profit": -70.52,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -689,7 +759,7 @@
         "Total Assets": 4974112340.0,
         "Revenue": 278275970.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 250651.53,
+        "Operating Profit": 250651530.0,
         "Net Profit": -61545430.0,
         "Number of Shares": 14764000.0,
         "EPS Reported": -8.34,
@@ -738,7 +808,14 @@
         "Net Profit": 31.13,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -756,7 +833,7 @@
         "Total Assets": 4937510560.0,
         "Revenue": 320795190.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 277259.36,
+        "Operating Profit": 277259360.0,
         "Net Profit": 85269540.0,
         "Number of Shares": 14764000.0,
         "EPS Reported": 7.7,
@@ -806,7 +883,14 @@
         "Net Profit": 138.46,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -824,7 +908,7 @@
         "Total Assets": 4959779840.0,
         "Revenue": 396993390.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 327350.62,
+        "Operating Profit": 327350620.0,
         "Net Profit": 10062850.0,
         "Number of Shares": 14764000.0,
         "EPS Reported": 0.68,
@@ -874,7 +958,14 @@
         "Net Profit": 102.8,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -892,7 +983,7 @@
         "Total Assets": 4991449210.0,
         "Revenue": 149690650.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 120605.41,
+        "Operating Profit": 120605410.0,
         "Net Profit": -306050.0,
         "Number of Shares": 18541483.0,
         "EPS Reported": -0.07,
@@ -944,7 +1035,14 @@
         "Book Value Reported": 98.82,
         "ROE Reported": 98.99
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -962,7 +1060,7 @@
         "Total Assets": 5038103440.0,
         "Revenue": 257668790.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 211863.8,
+        "Operating Profit": 211863800.0,
         "Net Profit": -22967260.0,
         "Number of Shares": 29528000.0,
         "EPS Reported": -1.56,
@@ -1014,7 +1112,14 @@
         "Book Value Reported": 374.79,
         "ROE Reported": 96.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -1032,7 +1137,7 @@
         "Total Assets": 4953418780.0,
         "Revenue": 320610660.0,
         "Gross Profit": 312874560.0,
-        "Operating Profit": 137361.18,
+        "Operating Profit": 137361180.0,
         "Net Profit": -68890550.0,
         "Number of Shares": 29528000.0,
         "EPS Reported": -3.11,
@@ -1084,7 +1189,14 @@
         "Book Value Reported": 209.12,
         "ROE Reported": -113.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SSHL",
@@ -1102,7 +1214,7 @@
         "Total Assets": 4917861500.0,
         "Revenue": 375129340.0,
         "Gross Profit": 363091890.0,
-        "Operating Profit": 138239.79,
+        "Operating Profit": 138239790.0,
         "Net Profit": -119110370.0,
         "Number of Shares": 29528000.0,
         "EPS Reported": -4.03,
@@ -1154,7 +1266,14 @@
         "Book Value Reported": 321.1,
         "ROE Reported": -240.52
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:12:16.534478"

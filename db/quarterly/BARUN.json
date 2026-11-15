@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:25:33.469467",
+      "parsed_at": "2026-11-14T20:34:36.880794",
       "raw": {
         "Paid Up Capital": 267907500.0,
         "Reserve and Surplus": 26524090.0,
@@ -19,7 +19,7 @@
         "Total Assets": 518685330.0,
         "Revenue": 69909200.0,
         "Gross Profit": 62239920.0,
-        "Operating Profit": 49341.35,
+        "Operating Profit": 49341350.0,
         "Net Profit": 23778180.0,
         "Number of Shares": 2679075.0,
         "EPS(Rs.)": 11.83,
@@ -53,14 +53,21 @@
         "graham_number": 171.03
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:25:33.469375",
+      "parsed_at": "2026-11-14T20:34:36.880727",
       "raw": {
         "Paid Up Capital": 267907500.0,
         "Reserve and Surplus": 8224110.0,
@@ -71,7 +78,7 @@
         "Total Assets": 492728460.0,
         "Revenue": 93988640.0,
         "Gross Profit": 76028140.0,
-        "Operating Profit": 40555.18,
+        "Operating Profit": 40555180.0,
         "Net Profit": 3554870.0,
         "Number of Shares": 2679075.0,
         "EPS(Rs.)": 1.33,
@@ -105,14 +112,21 @@
         "graham_number": 55.54
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:25:33.469282",
+      "parsed_at": "2026-11-14T20:34:36.880661",
       "raw": {
         "Paid Up Capital": 267907500.0,
         "Reserve and Surplus": 17106220.0,
@@ -123,7 +137,7 @@
         "Total Assets": 689064330.0,
         "Revenue": 38357440.0,
         "Gross Profit": 34805550.0,
-        "Operating Profit": 21333.75,
+        "Operating Profit": 21333750.0,
         "Net Profit": 8882110.0,
         "Number of Shares": 2679075.0,
         "EPS(Rs.)": 13.26,
@@ -157,14 +171,21 @@
         "graham_number": 178.16
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:25:33.469190",
+      "parsed_at": "2026-11-14T20:34:36.880595",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 71026830.0,
@@ -175,7 +196,7 @@
         "Total Assets": 815117170.0,
         "Revenue": 59972290.0,
         "Gross Profit": 53754160.0,
-        "Operating Profit": 38096.18,
+        "Operating Profit": 38096180.0,
         "Net Profit": 16541110.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": 6.17,
@@ -209,14 +230,21 @@
         "graham_number": 125.39
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:25:33.469094",
+      "parsed_at": "2026-11-14T20:34:36.880531",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 68703290.0,
@@ -227,7 +255,7 @@
         "Total Assets": 806417640.0,
         "Revenue": 70663470.0,
         "Gross Profit": 59308900.0,
-        "Operating Profit": 46500.44,
+        "Operating Profit": 46500440.0,
         "Net Profit": 17663310.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": 4.4,
@@ -281,14 +309,21 @@
         "Book Value(Rs.)": 2.66,
         "ROE": -136.21
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:25:33.469002",
+      "parsed_at": "2026-11-14T20:34:36.880463",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 64631440.0,
@@ -299,7 +334,7 @@
         "Total Assets": 798605710.0,
         "Revenue": 79708950.0,
         "Gross Profit": 63283800.0,
-        "Operating Profit": 69353.84,
+        "Operating Profit": 69353840.0,
         "Net Profit": 11200270.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": 2.09,
@@ -353,14 +388,21 @@
         "Book Value(Rs.)": 8.72,
         "ROE": 44.96
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:25:33.468905",
+      "parsed_at": "2026-11-14T20:34:36.880397",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 38851050.0,
@@ -370,7 +412,7 @@
         "Current Assets": 200453480.0,
         "Total Assets": 768446210.0,
         "Gross Profit": -7083050.0,
-        "Operating Profit": -11091.67,
+        "Operating Profit": -11091670.0,
         "Net Profit": -20972030.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": -15.66,
@@ -420,14 +462,21 @@
         "Book Value(Rs.)": 0.81,
         "ROE": -217.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:25:33.468817",
+      "parsed_at": "2026-11-14T20:34:36.880336",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 22484930.0,
@@ -437,7 +486,7 @@
         "Current Assets": 148448680.0,
         "Total Assets": 750508230.0,
         "Gross Profit": -11783790.0,
-        "Operating Profit": -17360.84,
+        "Operating Profit": -17360840.0,
         "Net Profit": -37338150.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": -13.94,
@@ -487,14 +536,21 @@
         "Book Value(Rs.)": -8.0,
         "ROE": -345.5
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:25:33.468725",
+      "parsed_at": "2026-11-14T20:34:36.880274",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 12905260.0,
@@ -504,7 +560,7 @@
         "Current Assets": 116664810.0,
         "Total Assets": 741560570.0,
         "Gross Profit": -14354780.0,
-        "Operating Profit": -21893.35,
+        "Operating Profit": -21893350.0,
         "Net Profit": -49293780.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": -12.27,
@@ -554,14 +610,21 @@
         "Book Value(Rs.)": -9.23,
         "ROE": -207.18
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:25:33.468629",
+      "parsed_at": "2026-11-14T20:34:36.880211",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 61402430.0,
@@ -572,7 +635,7 @@
         "Total Assets": 932999940.0,
         "Revenue": 3492190.0,
         "Gross Profit": -11849150.0,
-        "Operating Profit": 48793.06,
+        "Operating Profit": 48793060.0,
         "Net Profit": 301330.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": 0.06,
@@ -626,14 +689,21 @@
         "Book Value(Rs.)": -0.54,
         "ROE": -97.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:25:33.468479",
+      "parsed_at": "2026-11-14T20:34:36.880144",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 81584210.0,
@@ -644,7 +714,7 @@
         "Total Assets": 971141620.0,
         "Revenue": 39919640.0,
         "Gross Profit": 32369800.0,
-        "Operating Profit": 31167.64,
+        "Operating Profit": 31167640.0,
         "Net Profit": 16049220.0,
         "Number of Shares": 5358150.0,
         "EPS(Rs.)": 11.98,
@@ -696,14 +766,21 @@
         "Book Value(Rs.)": 7.44,
         "ROE": 171.23
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:25:33.468382",
+      "parsed_at": "2026-11-14T20:34:36.880076",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 88402340.0,
@@ -714,7 +791,7 @@
         "Total Assets": 966576340.0,
         "Revenue": 62564050.0,
         "Gross Profit": 53249150.0,
-        "Operating Profit": 58336.0,
+        "Operating Profit": 58336000.0,
         "Net Profit": 26975020.0,
         "Number of Shares": 5358150.0,
         "EPS Reported": 10.07,
@@ -763,14 +840,21 @@
         "Net Profit": 172.25,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:25:33.468283",
+      "parsed_at": "2026-11-14T20:34:36.880009",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 69113130.0,
@@ -781,7 +865,7 @@
         "Total Assets": 936992660.0,
         "Revenue": 72717850.0,
         "Gross Profit": 47403090.0,
-        "Operating Profit": 50258.92,
+        "Operating Profit": 50258920.0,
         "Net Profit": 3578140.0,
         "Number of Shares": 5358150.0,
         "EPS Reported": 0.89,
@@ -830,14 +914,21 @@
         "Net Profit": 107.26,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:25:33.468188",
+      "parsed_at": "2026-11-14T20:34:36.879941",
       "raw": {
         "Paid Up Capital": 535815000.0,
         "Reserve and Surplus": 84318570.0,
@@ -848,7 +939,7 @@
         "Total Assets": 948224000.0,
         "Revenue": 97021470.0,
         "Gross Profit": 81251990.0,
-        "Operating Profit": 83053.04,
+        "Operating Profit": 83053040.0,
         "Net Profit": 19855210.0,
         "Number of Shares": 5358150.0,
         "EPS Reported": 3.71,
@@ -899,14 +990,21 @@
         "Net Profit": 6489.19,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:25:33.468094",
+      "parsed_at": "2026-11-14T20:34:36.879874",
       "raw": {
         "Paid Up Capital": 1047786700.0,
         "Reserve and Surplus": 94750190.0,
@@ -917,7 +1015,7 @@
         "Total Assets": 1440609400.0,
         "Revenue": 39473750.0,
         "Gross Profit": 33306250.0,
-        "Operating Profit": 30747.78,
+        "Operating Profit": 30747780.0,
         "Net Profit": 18990580.0,
         "Number of Shares": 10477867.0,
         "EPS Reported": 7.25,
@@ -968,14 +1066,21 @@
         "Net Profit": 18.33,
         "Number of Shares": 95.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:25:33.467997",
+      "parsed_at": "2026-11-14T20:34:36.879788",
       "raw": {
         "Paid Up Capital": 1071630000.0,
         "Reserve and Surplus": 143846650.0,
@@ -986,7 +1091,7 @@
         "Total Assets": 1503640600.0,
         "Revenue": 62624050.0,
         "Gross Profit": 54218740.0,
-        "Operating Profit": 49241.18,
+        "Operating Profit": 49241180.0,
         "Net Profit": 21696030.0,
         "Number of Shares": 10716300.0,
         "EPS Reported": 4.05,
@@ -1040,14 +1145,21 @@
         "Book Value Reported": -2.64,
         "ROE Reported": -58.68
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:25:33.467898",
+      "parsed_at": "2026-11-14T20:34:36.879720",
       "raw": {
         "Paid Up Capital": 1122532430.0,
         "Reserve and Surplus": 86608990.0,
@@ -1058,7 +1170,7 @@
         "Total Assets": 1492110720.0,
         "Revenue": 75366950.0,
         "Gross Profit": 64651070.0,
-        "Operating Profit": 34706.08,
+        "Operating Profit": 34706080.0,
         "Net Profit": 16953840.0,
         "Number of Shares": 11225324.25,
         "EPS Reported": 2.01,
@@ -1112,14 +1224,21 @@
         "Book Value Reported": -4.59,
         "ROE Reported": 136.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:25:33.467796",
+      "parsed_at": "2026-11-14T20:34:36.879650",
       "raw": {
         "Paid Up Capital": 1122532430.0,
         "Reserve and Surplus": 91909070.0,
@@ -1130,7 +1249,7 @@
         "Total Assets": 1490067880.0,
         "Revenue": 109238010.0,
         "Gross Profit": 90330630.0,
-        "Operating Profit": 50670.5,
+        "Operating Profit": 50670500.0,
         "Net Profit": 23367220.0,
         "Number of Shares": 11225324.25,
         "EPS Reported": 2.08,
@@ -1184,14 +1303,21 @@
         "Book Value Reported": -6.52,
         "ROE Reported": -40.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BARUN",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:25:33.467679",
+      "parsed_at": "2026-11-14T20:34:36.879531",
       "raw": {
         "Paid Up Capital": 1122532430.0,
         "Reserve and Surplus": 150373690.0,
@@ -1202,7 +1328,7 @@
         "Total Assets": 1536764530.0,
         "Revenue": 41434110.0,
         "Gross Profit": 35005810.0,
-        "Operating Profit": 27638.95,
+        "Operating Profit": 27638950.0,
         "Net Profit": 22644860.0,
         "Number of Shares": 11225324.25,
         "EPS Reported": 8.07,
@@ -1256,8 +1382,15 @@
         "Book Value Reported": 4.0,
         "ROE Reported": 7.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:25:33.472285"
+  "last_updated": "2026-11-14T20:34:36.882667"
 }

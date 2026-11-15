@@ -8,7 +8,7 @@
       "fy": "2076-77",
       "quarter": 2,
       "quarter_label": "Q2 76-77",
-      "parsed_at": "2026-11-07T09:08:57.422022",
+      "parsed_at": "2026-11-15T11:53:07.571818",
       "raw": {
         "Paid Up Capital": 236875000.0,
         "Reserves": 136865000.0,
@@ -18,7 +18,7 @@
         "Loans and Advances to Customers": 103348000.0,
         "Investment Securities": 10946000.0,
         "Net Interest Income": 21703000.0,
-        "Total Operating Income": 21741.0,
+        "Total Operating Income": 21741000.0,
         "Net Profit": 38506000.0,
         "Number of Shares": 2368747.13,
         "EPS(Rs.)": 32.51,
@@ -51,18 +51,25 @@
         "roe_ttm": 41.63,
         "roa_ttm": null,
         "net_profit_ttm": 38506000.0,
-        "revenue_ttm": 21741.0,
+        "revenue_ttm": 21741000.0,
         "graham_number": 239.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LFC",
       "fy": "2076-77",
       "quarter": 3,
       "quarter_label": "Q3 76-77",
-      "parsed_at": "2026-11-07T09:08:57.421907",
+      "parsed_at": "2026-11-15T11:53:07.571612",
       "raw": {
         "Paid Up Capital": 236875000.0,
         "Reserves": 134504000.0,
@@ -72,7 +79,7 @@
         "Loans and Advances to Customers": 63368000.0,
         "Investment Securities": 22663000.0,
         "Net Interest Income": 23326000.0,
-        "Total Operating Income": 24312.0,
+        "Total Operating Income": 24312000.0,
         "Net Profit": 23564000.0,
         "Number of Shares": 2368747.13,
         "EPS(Rs.)": 13.26,
@@ -105,18 +112,25 @@
         "roe_ttm": 18.48,
         "roa_ttm": null,
         "net_profit_ttm": 23564000.0,
-        "revenue_ttm": 24312.0,
+        "revenue_ttm": 24312000.0,
         "graham_number": 146.34
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LFC",
       "fy": "2076-77",
       "quarter": 4,
       "quarter_label": "Q4 76-77",
-      "parsed_at": "2026-11-07T09:08:57.421786",
+      "parsed_at": "2026-11-15T11:53:07.571388",
       "raw": {
         "Paid Up Capital": 236875000.0,
         "Reserves": 135142000.0,
@@ -126,7 +140,7 @@
         "Loans and Advances to Customers": 37615000.0,
         "Investment Securities": 24268000.0,
         "Net Interest Income": 23378000.0,
-        "Total Operating Income": 24519.0,
+        "Total Operating Income": 24519000.0,
         "Net Profit": -7170000.0,
         "Number of Shares": 2368747.0,
         "EPS(Rs.)": -3.03,
@@ -159,17 +173,24 @@
         "roe_ttm": -5.15,
         "roa_ttm": null,
         "net_profit_ttm": -7170000.0,
-        "revenue_ttm": 24519.0
+        "revenue_ttm": 24519000.0
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "LFC",
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T09:08:57.421639",
+      "parsed_at": "2026-11-15T11:53:07.571115",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -188,7 +209,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T09:08:57.421613",
+      "parsed_at": "2026-11-15T11:53:07.571075",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -203,5 +224,5 @@
       "sector": "Finance"
     }
   ],
-  "last_updated": "2026-11-07T09:08:57.423331"
+  "last_updated": "2026-11-15T11:53:07.573479"
 }

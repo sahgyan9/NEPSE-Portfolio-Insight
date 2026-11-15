@@ -340,7 +340,7 @@
         "Total Assets": 1214930150.0,
         "Revenue": 11139070.0,
         "Gross Profit": 10208740.0,
-        "Operating Profit": -21340.0,
+        "Operating Profit": -21340000.0,
         "Net Profit": -6066070.0,
         "Number of Shares": 5098040.0,
         "EPS Reported": -1.59,
@@ -384,7 +384,14 @@
         "Number of Shares": 0.0,
         "Book Value Reported": -6.05
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULHC",

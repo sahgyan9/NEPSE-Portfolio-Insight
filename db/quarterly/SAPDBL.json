@@ -20,8 +20,8 @@
         "Investment Securities": 185662280.0,
         "Interest Income": 385584160.0,
         "Net Interest Income": 167076980.0,
-        "Total Operating Income": 184498.84,
-        "Operating Profit": -75812.77,
+        "Total Operating Income": 184498840.0,
+        "Operating Profit": -75812770.0,
         "Net Profit": -73844490.0,
         "Distributable Profit": -134583020.0,
         "Number of Shares": 8343384.32,
@@ -70,7 +70,15 @@
         "revenue_ttm": 385584160.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -90,8 +98,8 @@
         "Investment Securities": 265481340.0,
         "Interest Income": 538379300.0,
         "Net Interest Income": 228216560.0,
-        "Total Operating Income": 251520.53,
-        "Operating Profit": 21884.77,
+        "Total Operating Income": 251520530.0,
+        "Operating Profit": 21884770.0,
         "Net Profit": 16697140.0,
         "Distributable Profit": -71012140.0,
         "Number of Shares": 8343384.32,
@@ -142,7 +150,15 @@
         "graham_number": 67.95
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -162,8 +178,8 @@
         "Investment Securities": 302011940.0,
         "Interest Income": 155315360.0,
         "Net Interest Income": 54843670.0,
-        "Total Operating Income": 61429.58,
-        "Operating Profit": -130797.59,
+        "Total Operating Income": 61429580.0,
+        "Operating Profit": -130797590.0,
         "Net Profit": -130797590.0,
         "Distributable Profit": -224779520.0,
         "Number of Shares": 8343384.32,
@@ -213,7 +229,15 @@
         "revenue_ttm": 155315360.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -233,8 +257,8 @@
         "Investment Securities": 352971570.0,
         "Interest Income": 307610560.0,
         "Net Interest Income": 100512850.0,
-        "Total Operating Income": 111030.76,
-        "Operating Profit": -252528.26,
+        "Total Operating Income": 111030760.0,
+        "Operating Profit": -252528260.0,
         "Net Profit": -252528260.0,
         "Distributable Profit": -358767170.0,
         "Number of Shares": 8343384.32,
@@ -284,7 +308,15 @@
         "revenue_ttm": 307610560.0
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -304,8 +336,8 @@
         "Investment Securities": 609331670.0,
         "Interest Income": 458768000.0,
         "Net Interest Income": 144534660.0,
-        "Total Operating Income": 159116.34,
-        "Operating Profit": -274950.63,
+        "Total Operating Income": 159116340.0,
+        "Operating Profit": -274950630.0,
         "Net Profit": -274950630.0,
         "Distributable Profit": -384714830.0,
         "Number of Shares": 8343384.32,
@@ -384,7 +416,15 @@
         "Base Rate": 1.55,
         "Interest Spread Rate": 18.56
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -404,8 +444,8 @@
         "Investment Securities": 775516670.0,
         "Interest Income": 607987630.0,
         "Net Interest Income": 188425290.0,
-        "Total Operating Income": 208543.81,
-        "Operating Profit": -205661.86,
+        "Total Operating Income": 208543810.0,
+        "Operating Profit": -205661860.0,
         "Net Profit": -205661860.0,
         "Distributable Profit": -352920170.0,
         "Number of Shares": 8343384.32,
@@ -485,7 +525,15 @@
         "Base Rate": -3.95,
         "Interest Spread Rate": -10.24
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -505,8 +553,8 @@
         "Investment Securities": 715801470.0,
         "Interest Income": 128151840.0,
         "Net Interest Income": 23833020.0,
-        "Total Operating Income": 31804.73,
-        "Operating Profit": -119219.23,
+        "Total Operating Income": 31804730.0,
+        "Operating Profit": -119219230.0,
         "Net Profit": -119219230.0,
         "Distributable Profit": -499935550.0,
         "Number of Shares": 8343384.32,
@@ -586,7 +634,15 @@
         "Base Rate": -7.4,
         "Interest Spread Rate": 0.67
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -606,8 +662,8 @@
         "Investment Securities": 532046330.0,
         "Interest Income": 274937500.0,
         "Net Interest Income": 69559830.0,
-        "Total Operating Income": 82944.48,
-        "Operating Profit": -119186.19,
+        "Total Operating Income": 82944480.0,
+        "Operating Profit": -119186190.0,
         "Net Profit": -119186190.0,
         "Distributable Profit": -527323250.0,
         "Number of Shares": 8343384.32,
@@ -687,7 +743,15 @@
         "Base Rate": -13.18,
         "Interest Spread Rate": 0.44
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -707,8 +771,8 @@
         "Investment Securities": 1428220700.0,
         "Interest Income": 421152640.0,
         "Net Interest Income": 114279740.0,
-        "Total Operating Income": 133401.39,
-        "Operating Profit": -73114.65,
+        "Total Operating Income": 133401390.0,
+        "Operating Profit": -73114650.0,
         "Net Profit": -73114650.0,
         "Distributable Profit": -478773460.0,
         "Number of Shares": 8343384.32,
@@ -788,7 +852,15 @@
         "Base Rate": -19.97,
         "Interest Spread Rate": -6.47
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -808,8 +880,8 @@
         "Investment Securities": 1582488300.0,
         "Interest Income": 594371660.0,
         "Net Interest Income": 179594560.0,
-        "Total Operating Income": 211553.83,
-        "Operating Profit": 33431.55,
+        "Total Operating Income": 211553830.0,
+        "Operating Profit": 33431550.0,
         "Net Profit": 22520440.0,
         "Distributable Profit": -436589600.0,
         "Number of Shares": 8343384.32,
@@ -890,7 +962,15 @@
         "Base Rate": -24.94,
         "Interest Spread Rate": 1.79
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -910,8 +990,8 @@
         "Investment Securities": 1043558100.0,
         "Interest Income": 145175810.0,
         "Net Interest Income": 44171040.0,
-        "Total Operating Income": 55105.87,
-        "Operating Profit": -87784.36,
+        "Total Operating Income": 55105870.0,
+        "Operating Profit": -87784360.0,
         "Net Profit": -87784360.0,
         "Distributable Profit": -540152890.0,
         "Number of Shares": 8343384.32,
@@ -991,7 +1071,15 @@
         "Base Rate": -34.06,
         "Interest Spread Rate": -2.86
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1011,8 +1099,8 @@
         "Investment Securities": 841388520.0,
         "Interest Income": 300619260.0,
         "Net Interest Income": 109630050.0,
-        "Total Operating Income": 131532.56,
-        "Operating Profit": -29917.8,
+        "Total Operating Income": 131532560.0,
+        "Operating Profit": -29917800.0,
         "Net Profit": -29917800.0,
         "Distributable Profit": -476043700.0,
         "Number of Shares": 8343384.32,
@@ -1089,7 +1177,15 @@
         "Base Rate": -37.77,
         "Interest Spread Rate": -3.49
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1111,8 +1207,8 @@
         "Investment Securities": 597302780.0,
         "Interest Income": 445939780.0,
         "Net Interest Income": 174093530.0,
-        "Total Operating Income": 203543.88,
-        "Operating Profit": -27811.9,
+        "Total Operating Income": 203543880.0,
+        "Operating Profit": -27811900.0,
         "Net Profit": -27797840.0,
         "Distributable Profit": -505501590.0,
         "Number of Shares": 8343384.32,
@@ -1191,7 +1287,15 @@
         "Base Rate": -33.75,
         "Interest Spread Rate": -6.92
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1213,8 +1317,8 @@
         "Investment Securities": 624704310.0,
         "Interest Income": 581701240.0,
         "Net Interest Income": 228428280.0,
-        "Total Operating Income": 282030.55,
-        "Operating Profit": 109424.75,
+        "Total Operating Income": 282030550.0,
+        "Operating Profit": 109424750.0,
         "Net Profit": 76618550.0,
         "Distributable Profit": -621088390.0,
         "Number of Shares": 8343384.32,
@@ -1294,7 +1398,15 @@
         "Base Rate": -29.06,
         "Interest Spread Rate": -11.43
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1316,8 +1428,8 @@
         "Investment Securities": 463783190.0,
         "Interest Income": 143466190.0,
         "Net Interest Income": 65004560.0,
-        "Total Operating Income": 75109.58,
-        "Operating Profit": -1259.15,
+        "Total Operating Income": 75109580.0,
+        "Operating Profit": -1259150.0,
         "Net Profit": -1215050.0,
         "Distributable Profit": -601051750.0,
         "Number of Shares": 8343384.32,
@@ -1396,7 +1508,15 @@
         "Base Rate": -22.52,
         "Interest Spread Rate": -14.29
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1418,8 +1538,8 @@
         "Investment Securities": 464134000.0,
         "Interest Income": 262911090.0,
         "Net Interest Income": 107951800.0,
-        "Total Operating Income": 128011.95,
-        "Operating Profit": 38270.21,
+        "Total Operating Income": 128011950.0,
+        "Operating Profit": 38270210.0,
         "Net Profit": 26820020.0,
         "Distributable Profit": -625093040.0,
         "Number of Shares": 8343384.32,
@@ -1502,7 +1622,15 @@
         "Base Rate": -12.47,
         "Interest Spread Rate": -13.32
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1524,8 +1652,8 @@
         "Investment Securities": 613681500.0,
         "Interest Income": 388336170.0,
         "Net Interest Income": 153645220.0,
-        "Total Operating Income": 184363.25,
-        "Operating Profit": 84104.0,
+        "Total Operating Income": 184363250.0,
+        "Operating Profit": 84104000.0,
         "Net Profit": 59024770.0,
         "Distributable Profit": -634518350.0,
         "Number of Shares": 8343384.32,
@@ -1608,7 +1736,15 @@
         "Base Rate": -8.95,
         "Interest Spread Rate": -4.32
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1630,8 +1766,8 @@
         "Investment Securities": 2103994100.0,
         "Interest Income": 551870510.0,
         "Net Interest Income": 233425940.0,
-        "Total Operating Income": 277832.91,
-        "Operating Profit": 247965.9,
+        "Total Operating Income": 277832910.0,
+        "Operating Profit": 247965900.0,
         "Net Profit": 150473890.0,
         "Distributable Profit": -558853730.0,
         "Number of Shares": 8343384.32,
@@ -1713,7 +1849,15 @@
         "Base Rate": -9.58,
         "Interest Spread Rate": 4.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SAPDBL",
@@ -1735,8 +1879,8 @@
         "Investment Securities": 2116537320.0,
         "Interest Income": 134467900.0,
         "Net Interest Income": 53518080.0,
-        "Total Operating Income": 67235.13,
-        "Operating Profit": 6196.42,
+        "Total Operating Income": 67235130.0,
+        "Operating Profit": 6196420.0,
         "Net Profit": 4360310.0,
         "Distributable Profit": -515311560.0,
         "Number of Shares": 8343384.32,
@@ -1819,7 +1963,15 @@
         "Base Rate": -4.58,
         "Interest Spread Rate": 10.32
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:58:18.734857"

@@ -1036,7 +1036,7 @@
         "Total Assets": 3889888540.0,
         "Revenue": 298312290.0,
         "Gross Profit": 300478720.0,
-        "Operating Profit": 162310.17,
+        "Operating Profit": 162310170.0,
         "Net Profit": 74921160.0,
         "Number of Shares": 23233518.0,
         "EPS Reported": 4.3,
@@ -1089,7 +1089,14 @@
         "Book Value Reported": 9.47,
         "ROE Reported": 1126.47
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RIDI",
@@ -1107,7 +1114,7 @@
         "Total Assets": 3839866810.0,
         "Revenue": 364781730.0,
         "Gross Profit": 360899830.0,
-        "Operating Profit": 149318.24,
+        "Operating Profit": 149318240.0,
         "Net Profit": 47336060.0,
         "Number of Shares": 23233518.0,
         "EPS Reported": 2.04,
@@ -1160,7 +1167,14 @@
         "Book Value Reported": 3.45,
         "ROE Reported": -57.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:52:40.976681"

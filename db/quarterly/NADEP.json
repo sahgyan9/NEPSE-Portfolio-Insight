@@ -20,8 +20,8 @@
         "Investments": 2000000.0,
         "Interest Income": 524102550.0,
         "Net Interest Income": 291725550.0,
-        "Total Operating Income": 345605.58,
-        "Operating Profit": 86778.08,
+        "Total Operating Income": 345605580.0,
+        "Operating Profit": 86778080.0,
         "Net Profit": 56903170.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 15.62,
@@ -65,7 +65,15 @@
         "graham_number": 244.12
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -84,8 +92,8 @@
         "Investments": 2000000.0,
         "Interest Income": 726793350.0,
         "Net Interest Income": 391016980.0,
-        "Total Operating Income": 465243.44,
-        "Operating Profit": 130493.52,
+        "Total Operating Income": 465243440.0,
+        "Operating Profit": 130493520.0,
         "Net Profit": 114096280.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 23.49,
@@ -129,7 +137,15 @@
         "graham_number": 309.16
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -148,8 +164,8 @@
         "Investments": 2000000.0,
         "Interest Income": 176590560.0,
         "Net Interest Income": 71402040.0,
-        "Total Operating Income": 85538.87,
-        "Operating Profit": 16671.42,
+        "Total Operating Income": 85538870.0,
+        "Operating Profit": 16671420.0,
         "Net Profit": 12246860.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 10.08,
@@ -193,7 +209,15 @@
         "graham_number": 206.75
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -212,8 +236,8 @@
         "Investments": 2000000.0,
         "Interest Income": 376251350.0,
         "Net Interest Income": 162817690.0,
-        "Total Operating Income": 190902.42,
-        "Operating Profit": 24258.25,
+        "Total Operating Income": 190902420.0,
+        "Operating Profit": 24258250.0,
         "Net Profit": 18029600.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 7.42,
@@ -257,7 +281,15 @@
         "graham_number": 174.11
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -276,8 +308,8 @@
         "Investments": 2000000.0,
         "Interest Income": 538459010.0,
         "Net Interest Income": 216727650.0,
-        "Total Operating Income": 255735.42,
-        "Operating Profit": 5325.41,
+        "Total Operating Income": 255735420.0,
+        "Operating Profit": 5325410.0,
         "Net Profit": 5222500.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 1.43,
@@ -347,7 +379,15 @@
         "Cost of funds": 12.11,
         "CD ratio": -4.93
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -366,8 +406,8 @@
         "Investments": 2000000.0,
         "Interest Income": 728584340.0,
         "Net Interest Income": 293572440.0,
-        "Total Operating Income": 342128.8,
-        "Operating Profit": 20741.39,
+        "Total Operating Income": 342128800.0,
+        "Operating Profit": 20741390.0,
         "Net Profit": 16463100.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 3.39,
@@ -437,7 +477,15 @@
         "Cost of funds": 8.2,
         "CD ratio": -2.51
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -456,17 +504,17 @@
         "Investments": 2000000.0,
         "Interest Income": 161090950.0,
         "Net Interest Income": 51922770.0,
-        "Total Operating Income": 68402.33,
-        "Operating Profit": 113.12,
+        "Total Operating Income": 68402330.0,
+        "Operating Profit": 113120.0,
         "Net Profit": 510180.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 0.42,
         "Book Value(Rs.)": 183.55,
         "ROE": 0.23,
-        "CAR": 1077.0,
-        "NPL": 655.0,
-        "Cost of funds": 1090.0,
-        "CD ratio": 29649.0
+        "CAR": 10.77,
+        "NPL": 6.55,
+        "Cost of funds": 10.9,
+        "CD ratio": 296.49
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -522,12 +570,26 @@
         "EPS(Rs.)": -95.83,
         "Book Value(Rs.)": -2.61,
         "ROE": -95.7,
-        "CAR": 8634.79,
-        "NPL": 13079.07,
-        "Cost of funds": 9528.98,
-        "CD ratio": 10273.31
+        "CAR": -12.65,
+        "NPL": 31.79,
+        "Cost of funds": -3.71,
+        "CD ratio": 3.73
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "CAR",
+        "CD ratio",
+        "Cost of funds",
+        "NPL"
+      ]
     },
     {
       "symbol": "NADEP",
@@ -546,8 +608,8 @@
         "Investments": 1156640.0,
         "Interest Income": 345415540.0,
         "Net Interest Income": 123486200.0,
-        "Total Operating Income": 152124.76,
-        "Operating Profit": 14825.14,
+        "Total Operating Income": 152124760.0,
+        "Operating Profit": 14825140.0,
         "Net Profit": 11210830.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 4.62,
@@ -617,7 +679,15 @@
         "Cost of funds": -5.19,
         "CD ratio": 9.71
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -636,8 +706,8 @@
         "Investments": 1156640.0,
         "Interest Income": 512487060.0,
         "Net Interest Income": 170123220.0,
-        "Total Operating Income": 214362.22,
-        "Operating Profit": 17473.18,
+        "Total Operating Income": 214362220.0,
+        "Operating Profit": 17473180.0,
         "Net Profit": 1811340.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 0.5,
@@ -707,7 +777,15 @@
         "Cost of funds": -11.07,
         "CD ratio": 1.83
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -726,8 +804,8 @@
         "Investments": 1156640.0,
         "Interest Income": 845401100.0,
         "Net Interest Income": 380905480.0,
-        "Total Operating Income": 440237.45,
-        "Operating Profit": 198137.41,
+        "Total Operating Income": 440237450.0,
+        "Operating Profit": 198137410.0,
         "Net Profit": 130136130.0,
         "Number of Shares": 4857600.0,
         "EPS(Rs.)": 26.79,
@@ -797,7 +875,15 @@
         "Cost of funds": -21.12,
         "CD ratio": -1.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -817,8 +903,8 @@
         "Investments": 1156640.0,
         "Interest Income": 169826170.0,
         "Net Interest Income": 58394650.0,
-        "Total Operating Income": 69016.59,
-        "Operating Profit": -50236.81,
+        "Total Operating Income": 69016590.0,
+        "Operating Profit": -50236810.0,
         "Net Profit": -49724980.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": -40.95,
@@ -880,12 +966,20 @@
         "Operating Profit": -44510.19,
         "Net Profit": -9846.56,
         "Number of Shares": 0.0,
-        "CAR": -99.18,
-        "NPL": -98.4,
-        "Cost of funds": -99.27,
-        "CD ratio": -99.06
+        "CAR": -18.11,
+        "NPL": 60.46,
+        "Cost of funds": -26.79,
+        "CD ratio": -6.34
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -905,8 +999,8 @@
         "Investments": 1156640.0,
         "Interest Income": 379313540.0,
         "Net Interest Income": 161535830.0,
-        "Total Operating Income": 182936.57,
-        "Operating Profit": 22823.17,
+        "Total Operating Income": 182936570.0,
+        "Operating Profit": 22823170.0,
         "Net Profit": 16666670.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 6.86,
@@ -974,7 +1068,15 @@
         "Cost of funds": -18.64,
         "CD ratio": -5.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -994,8 +1096,8 @@
         "Investments": 1156640.0,
         "Interest Income": 589932960.0,
         "Net Interest Income": 269936150.0,
-        "Total Operating Income": 301698.35,
-        "Operating Profit": 10975.83,
+        "Total Operating Income": 301698350.0,
+        "Operating Profit": 10975830.0,
         "Net Profit": 7705280.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 2.11,
@@ -1063,7 +1165,15 @@
         "Cost of funds": -20.45,
         "CD ratio": -58.81
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -1083,8 +1193,8 @@
         "Investments": 1156640.0,
         "Interest Income": 821291340.0,
         "Net Interest Income": 401096720.0,
-        "Total Operating Income": 448871.52,
-        "Operating Profit": 76332.55,
+        "Total Operating Income": 448871520.0,
+        "Operating Profit": 76332550.0,
         "Net Profit": 53727150.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 11.06,
@@ -1152,7 +1262,15 @@
         "Cost of funds": -14.58,
         "CD ratio": 19.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -1172,8 +1290,8 @@
         "Investments": 1156640.0,
         "Interest Income": 184280450.0,
         "Net Interest Income": 90686400.0,
-        "Total Operating Income": 101460.79,
-        "Operating Profit": 8240.11,
+        "Total Operating Income": 101460790.0,
+        "Operating Profit": 8240110.0,
         "Net Profit": 5768080.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 4.75,
@@ -1244,7 +1362,15 @@
         "Cost of funds": -1.13,
         "CD ratio": 14.72
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -1268,8 +1394,8 @@
         "Interest Income": 393210100.0,
         "Net Interest Income": 213268120.0,
         "Investment Securities": 0.0,
-        "Total Operating Income": 240235.57,
-        "Operating Profit": 53837.77,
+        "Total Operating Income": 240235570.0,
+        "Operating Profit": 53837770.0,
         "Net Profit": 37686440.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 15.52,
@@ -1346,7 +1472,15 @@
         "Cost of funds": -32.59,
         "CD ratio": 7.93
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -1366,8 +1500,8 @@
         "Investments": 1156640.0,
         "Interest Income": 588746250.0,
         "Net Interest Income": 324713610.0,
-        "Total Operating Income": 367596.69,
-        "Operating Profit": 93008.55,
+        "Total Operating Income": 367596690.0,
+        "Operating Profit": 93008550.0,
         "Net Profit": 65105980.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 17.87,
@@ -1438,7 +1572,15 @@
         "Cost of funds": -21.63,
         "CD ratio": 135.05
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NADEP",
@@ -1458,8 +1600,8 @@
         "Investments": 1156640.0,
         "Interest Income": 838681740.0,
         "Net Interest Income": 487144060.0,
-        "Total Operating Income": 551264.71,
-        "Operating Profit": 204855.86,
+        "Total Operating Income": 551264710.0,
+        "Operating Profit": 204855860.0,
         "Net Profit": 143399100.0,
         "Number of Shares": 4857600.0,
         "EPS Reported": 29.52,
@@ -1530,7 +1672,15 @@
         "Cost of funds": -27.78,
         "CD ratio": -17.45
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:21:29.439681"

@@ -8,7 +8,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:49:56.645470",
+      "parsed_at": "2026-11-14T20:58:46.331202",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -76,7 +76,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:49:56.645454",
+      "parsed_at": "2026-11-14T20:58:46.331196",
       "raw": {},
       "raw_keys_order": [
         "Paid Up Capital",
@@ -144,7 +144,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:49:56.645438",
+      "parsed_at": "2026-11-14T20:58:46.331182",
       "raw": {
         "Paid Up Capital": 750000000.0,
         "Reserves and Surplus": 48157740.0,
@@ -234,7 +234,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:49:56.645422",
+      "parsed_at": "2026-11-14T20:58:46.331166",
       "raw": {
         "Paid Up Capital": 750000000.0,
         "Reserves and Surplus": 22191800.0,
@@ -324,7 +324,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:49:56.645406",
+      "parsed_at": "2026-11-14T20:58:46.331151",
       "raw": {
         "Paid Up Capital": 750000000.0,
         "Reserves and Surplus": 27682320.0,
@@ -414,7 +414,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:49:56.645388",
+      "parsed_at": "2026-11-14T20:58:46.331134",
       "raw": {
         "Paid Up Capital": 750000000.0,
         "Reserves and Surplus": 49086850.0,
@@ -504,7 +504,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:49:56.645360",
+      "parsed_at": "2026-11-14T20:58:46.331106",
       "raw": {
         "Paid Up Capital": 750000000.0,
         "Reserves and Surplus": 50423030.0,
@@ -590,5 +590,5 @@
       "sector": "Others"
     }
   ],
-  "last_updated": "2026-11-07T08:49:56.647507"
+  "last_updated": "2026-11-14T20:58:46.333034"
 }

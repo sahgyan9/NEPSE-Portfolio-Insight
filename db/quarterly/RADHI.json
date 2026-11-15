@@ -19,7 +19,7 @@
         "Total Assets": 1026508370.0,
         "Revenue": 109366840.0,
         "Gross Profit": 91956420.0,
-        "Operating Profit": 66566.49,
+        "Operating Profit": 66566490.0,
         "Net Profit": 47107820.0,
         "Number of Shares": 6464046.23,
         "EPS(Rs.)": 9.72,
@@ -53,7 +53,14 @@
         "graham_number": 160.77
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -71,7 +78,7 @@
         "Total Assets": 1041759500.0,
         "Revenue": 134964790.0,
         "Gross Profit": 112551660.0,
-        "Operating Profit": 77085.21,
+        "Operating Profit": 77085210.0,
         "Net Profit": 50946350.0,
         "Number of Shares": 6464046.23,
         "EPS(Rs.)": 7.88,
@@ -105,7 +112,14 @@
         "graham_number": 146.28
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -123,7 +137,7 @@
         "Total Assets": 1088182360.0,
         "Revenue": 40092620.0,
         "Gross Profit": 35433100.0,
-        "Operating Profit": 25017.13,
+        "Operating Profit": 25017130.0,
         "Net Profit": 20565110.0,
         "Number of Shares": 6464046.23,
         "EPS(Rs.)": 12.73,
@@ -157,7 +171,14 @@
         "graham_number": 191.66
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -175,7 +196,7 @@
         "Total Assets": 2210529400.0,
         "Revenue": 77915980.0,
         "Gross Profit": 68424880.0,
-        "Operating Profit": 51551.33,
+        "Operating Profit": 51551330.0,
         "Net Profit": 53693930.0,
         "Number of Shares": 16759798.06,
         "EPS(Rs.)": 6.41,
@@ -209,7 +230,14 @@
         "graham_number": 130.16
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -227,7 +255,7 @@
         "Total Assets": 2215238240.0,
         "Revenue": 108290700.0,
         "Gross Profit": 92940930.0,
-        "Operating Profit": 67866.44,
+        "Operating Profit": 67866440.0,
         "Net Profit": 86404670.0,
         "Number of Shares": 16759798.06,
         "EPS(Rs.)": 6.87,
@@ -281,7 +309,14 @@
         "Book Value(Rs.)": 1.62,
         "ROE": -30.41
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -299,7 +334,7 @@
         "Total Assets": 2199792380.0,
         "Revenue": 128464640.0,
         "Gross Profit": 108995440.0,
-        "Operating Profit": 76516.86,
+        "Operating Profit": 76516860.0,
         "Net Profit": 112757840.0,
         "Number of Shares": 16759798.06,
         "EPS(Rs.)": 6.73,
@@ -353,7 +388,14 @@
         "Book Value(Rs.)": -0.12,
         "ROE": -14.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -371,7 +413,7 @@
         "Total Assets": 2182980610.0,
         "Revenue": 31767880.0,
         "Gross Profit": 26201140.0,
-        "Operating Profit": 17596.77,
+        "Operating Profit": 17596770.0,
         "Net Profit": 32577920.0,
         "Number of Shares": 16759798.06,
         "EPS(Rs.)": 7.78,
@@ -425,7 +467,14 @@
         "Book Value(Rs.)": -5.45,
         "ROE": -35.38
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -443,7 +492,7 @@
         "Total Assets": 2234201910.0,
         "Revenue": 74005550.0,
         "Gross Profit": 64230390.0,
-        "Operating Profit": 47184.43,
+        "Operating Profit": 47184430.0,
         "Net Profit": 73156530.0,
         "Number of Shares": 16759798.06,
         "EPS(Rs.)": 8.73,
@@ -497,7 +546,14 @@
         "Book Value(Rs.)": 6.15,
         "ROE": 28.21
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -515,7 +571,7 @@
         "Total Assets": 2234636360.0,
         "Revenue": 90340500.0,
         "Gross Profit": 76374450.0,
-        "Operating Profit": 50406.04,
+        "Operating Profit": 50406040.0,
         "Net Profit": 93113800.0,
         "Number of Shares": 17555888.46,
         "EPS(Rs.)": 7.07,
@@ -569,7 +625,14 @@
         "Book Value(Rs.)": 0.01,
         "ROE": 2.97
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -587,7 +650,7 @@
         "Total Assets": 2285607200.0,
         "Revenue": 204023380.0,
         "Gross Profit": 77204500.0,
-        "Operating Profit": 27140.03,
+        "Operating Profit": 27140030.0,
         "Net Profit": 92779500.0,
         "Number of Shares": 17555888.46,
         "EPS(Rs.)": 5.28,
@@ -641,7 +704,14 @@
         "Book Value(Rs.)": -0.61,
         "ROE": -20.97
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -659,7 +729,7 @@
         "Total Assets": 2484598740.0,
         "Revenue": 38894280.0,
         "Gross Profit": 33786230.0,
-        "Operating Profit": 24754.42,
+        "Operating Profit": 24754420.0,
         "Net Profit": 30551430.0,
         "Number of Shares": 17555888.46,
         "EPS Reported": 6.96,
@@ -710,7 +780,14 @@
         "Net Profit": -6.22,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -728,7 +805,7 @@
         "Total Assets": 2698220450.0,
         "Revenue": 122175350.0,
         "Gross Profit": 65250720.0,
-        "Operating Profit": 46349.2,
+        "Operating Profit": 46349200.0,
         "Net Profit": 63398530.0,
         "Number of Shares": 17555888.47,
         "EPS Reported": 7.22,
@@ -779,7 +856,14 @@
         "Net Profit": -13.34,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -797,7 +881,7 @@
         "Total Assets": 2805748850.0,
         "Revenue": 103883200.0,
         "Gross Profit": 87749620.0,
-        "Operating Profit": 55706.66,
+        "Operating Profit": 55706660.0,
         "Net Profit": 81100770.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 5.88,
@@ -848,7 +932,14 @@
         "Net Profit": -12.9,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -866,7 +957,7 @@
         "Total Assets": 3151186710.0,
         "Revenue": 623290530.0,
         "Gross Profit": 90196990.0,
-        "Operating Profit": 430869.1,
+        "Operating Profit": 430869100.0,
         "Net Profit": 379817560.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 20.65,
@@ -917,7 +1008,14 @@
         "Net Profit": 309.38,
         "Number of Shares": 4.75
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -935,7 +1033,7 @@
         "Total Assets": 3325637570.0,
         "Revenue": 400173170.0,
         "Gross Profit": 32639700.0,
-        "Operating Profit": 370341.0,
+        "Operating Profit": 370341000.0,
         "Net Profit": 278513410.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 60.58,
@@ -989,7 +1087,14 @@
         "Book Value Reported": 24.08,
         "ROE Reported": 601.95
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -1007,7 +1112,7 @@
         "Total Assets": 3745580240.0,
         "Revenue": 461989490.0,
         "Gross Profit": 59459100.0,
-        "Operating Profit": 386414.65,
+        "Operating Profit": 386414650.0,
         "Net Profit": 298454020.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 32.46,
@@ -1061,7 +1166,14 @@
         "Book Value Reported": 38.77,
         "ROE Reported": 223.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -1079,7 +1191,7 @@
         "Total Assets": 3841886620.0,
         "Revenue": 109625700.0,
         "Gross Profit": 82113990.0,
-        "Operating Profit": 33579.51,
+        "Operating Profit": 33579510.0,
         "Net Profit": 323942440.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 23.49,
@@ -1133,7 +1245,14 @@
         "Book Value Reported": 49.87,
         "ROE Reported": 166.4
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RADHI",
@@ -1151,7 +1270,7 @@
         "Total Assets": 3604241270.0,
         "Revenue": 584951290.0,
         "Gross Profit": 101704870.0,
-        "Operating Profit": 44120.19,
+        "Operating Profit": 44120190.0,
         "Net Profit": 363251020.0,
         "Number of Shares": 18389793.17,
         "EPS Reported": 19.75,
@@ -1205,7 +1324,14 @@
         "Book Value Reported": 24.74,
         "ROE Reported": -23.32
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:49:53.522465"

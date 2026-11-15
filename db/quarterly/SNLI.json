@@ -101,7 +101,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:48.242740",
+      "parsed_at": "2026-11-14T20:25:39.512235",
       "computed": {
         "pe_ratio": 44.1,
         "pb_ratio": 4.1,
@@ -199,7 +199,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:48.242724",
+      "parsed_at": "2026-11-14T20:25:39.512224",
       "computed": {
         "pe_ratio": 45.8,
         "pb_ratio": 4.1,
@@ -297,7 +297,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:48.242708",
+      "parsed_at": "2026-11-14T20:25:39.512213",
       "computed": {
         "pe_ratio": 47.0,
         "pb_ratio": 3.2,
@@ -417,7 +417,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:48.242691",
+      "parsed_at": "2026-11-14T20:25:39.512202",
       "computed": {
         "pe_ratio": 56.5,
         "pb_ratio": 3.6,
@@ -537,7 +537,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:48.242675",
+      "parsed_at": "2026-11-14T20:25:39.512191",
       "computed": {
         "pe_ratio": 43.8,
         "pb_ratio": 3.1,
@@ -657,7 +657,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:48.242659",
+      "parsed_at": "2026-11-14T20:25:39.512180",
       "computed": {
         "pe_ratio": 40.0,
         "pb_ratio": 3.0,
@@ -777,7 +777,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:48.242641",
+      "parsed_at": "2026-11-14T20:25:39.512168",
       "computed": {
         "pe_ratio": 43.6,
         "pb_ratio": 3.2,
@@ -896,7 +896,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:48.242612",
+      "parsed_at": "2026-11-14T20:25:39.512149",
       "raw": {
         "Paid Up Capital": 5282793600.0,
         "Reserves and Surplus": 723066840.0,
@@ -982,5 +982,5 @@
       "sector": "Others"
     }
   ],
-  "last_updated": "2026-11-07T08:42:48.245417"
+  "last_updated": "2026-11-14T20:25:39.513280"
 }

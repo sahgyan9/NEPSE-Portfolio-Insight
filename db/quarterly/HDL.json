@@ -8,7 +8,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:42:05.033008",
+      "parsed_at": "2026-11-14T20:24:46.418833",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -27,7 +27,7 @@
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:42:05.032999",
+      "parsed_at": "2026-11-14T20:24:46.418823",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -46,7 +46,7 @@
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:42:05.032991",
+      "parsed_at": "2026-11-14T20:24:46.418812",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -65,7 +65,7 @@
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:42:05.032981",
+      "parsed_at": "2026-11-14T20:24:46.418801",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -84,7 +84,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:42:05.032970",
+      "parsed_at": "2026-11-14T20:24:46.418787",
       "raw": {
         "Paid Up Capital": 1518479160.0,
         "Reserve and Surplus": 1057514670.0,
@@ -93,9 +93,9 @@
         "Current Liabilities": 842465160.0,
         "Current Assets": 1869295540.0,
         "Total Assets": 3454079930.0,
-        "Revenue from Operation": 5187815.21,
+        "Revenue from Operation": 5187815210.0,
         "Gross Profit": 1759304140.0,
-        "Total Operating Profit": 1096625.65,
+        "Total Operating Profit": 1096625650.0,
         "Net Profit": 788324480.0,
         "Number of Shares": 15184791.56,
         "EPS(Rs.)": 69.22,
@@ -125,18 +125,26 @@
         "roe_ttm": 40.8,
         "roa_ttm": null,
         "net_profit_ttm": 788324480.0,
-        "revenue_ttm": 5187815.21,
+        "revenue_ttm": 5187815210.0,
         "graham_number": 514.01
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:42:05.032915",
+      "parsed_at": "2026-11-14T20:24:46.418721",
       "raw": {
         "Paid Up Capital": 1518479160.0,
         "Reserve and Surplus": 1324481980.0,
@@ -144,9 +152,9 @@
         "Current Liabilities": 409162830.0,
         "Current Assets": 2700976700.0,
         "Total Assets": 3287744910.0,
-        "Revenue from Operation": 7583030.94,
+        "Revenue from Operation": 7583030940.0,
         "Gross Profit": 2503115200.0,
-        "Total Operating Profit": 1469100.79,
+        "Total Operating Profit": 1469100790.0,
         "Net Profit": 1055291790.0,
         "Number of Shares": 15184791.56,
         "EPS(Rs.)": 69.5,
@@ -175,18 +183,26 @@
         "roe_ttm": 37.12,
         "roa_ttm": null,
         "net_profit_ttm": 1055291790.0,
-        "revenue_ttm": 7583030.94,
+        "revenue_ttm": 7583030940.0,
         "graham_number": 541.08
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:42:05.032866",
+      "parsed_at": "2026-11-14T20:24:46.418656",
       "raw": {
         "Paid Up Capital": 1518479160.0,
         "Reserve and Surplus": 1543367650.0,
@@ -195,9 +211,9 @@
         "Current Liabilities": 795354220.0,
         "Current Assets": 3281617320.0,
         "Total Assets": 3890018300.0,
-        "Revenue from Operation": 1382400.38,
+        "Revenue from Operation": 1382400380.0,
         "Gross Profit": 470029140.0,
-        "Total Operating Profit": 303775.17,
+        "Total Operating Profit": 303775170.0,
         "Net Profit": 215760710.0,
         "Number of Shares": 15184791.56,
         "EPS(Rs.)": 56.84,
@@ -227,18 +243,26 @@
         "roe_ttm": 28.19,
         "roa_ttm": null,
         "net_profit_ttm": 215760710.0,
-        "revenue_ttm": 1382400.38,
+        "revenue_ttm": 1382400380.0,
         "graham_number": 507.82
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:42:05.032816",
+      "parsed_at": "2026-11-14T20:24:46.418589",
       "raw": {
         "Paid Up Capital": 2429566650.0,
         "Reserve and Surplus": 557458310.0,
@@ -246,9 +270,9 @@
         "Current Liabilities": 843754280.0,
         "Current Assets": 3240361790.0,
         "Total Assets": 3869858770.0,
-        "Revenue from Operation": 2768109.67,
+        "Revenue from Operation": 2768109670.0,
         "Gross Profit": 799002410.0,
-        "Total Operating Profit": 424689.94,
+        "Total Operating Profit": 424689940.0,
         "Net Profit": 294263040.0,
         "Number of Shares": 24295666.5,
         "EPS(Rs.)": 24.22,
@@ -277,18 +301,26 @@
         "roe_ttm": 19.7,
         "roa_ttm": null,
         "net_profit_ttm": 294263040.0,
-        "revenue_ttm": 2768109.67,
+        "revenue_ttm": 2768109670.0,
         "graham_number": 258.84
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:42:05.032766",
+      "parsed_at": "2026-11-14T20:24:46.418525",
       "raw": {
         "Paid Up Capital": 2429566650.0,
         "Reserve and Surplus": 839883980.0,
@@ -296,9 +328,9 @@
         "Current Liabilities": 748635610.0,
         "Current Assets": 3440172070.0,
         "Total Assets": 4052786380.0,
-        "Revenue from Operation": 5129753.3,
+        "Revenue from Operation": 5129753300.0,
         "Gross Profit": 1450496300.0,
-        "Total Operating Profit": 822556.45,
+        "Total Operating Profit": 822556450.0,
         "Net Profit": 576688730.0,
         "Number of Shares": 24295666.5,
         "EPS(Rs.)": 31.65,
@@ -327,7 +359,7 @@
         "roe_ttm": 23.52,
         "roa_ttm": null,
         "net_profit_ttm": 576688730.0,
-        "revenue_ttm": 5129753.3,
+        "revenue_ttm": 5129753300.0,
         "graham_number": 309.57
       },
       "yoy": {
@@ -350,14 +382,22 @@
         "eps_ttm": -54.28,
         "bvps": -20.67
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:42:05.032719",
+      "parsed_at": "2026-11-14T20:24:46.418461",
       "raw": {
         "Paid Up Capital": 2429566650.0,
         "Reserve and Surplus": 923312870.0,
@@ -365,9 +405,9 @@
         "Current Liabilities": 282004650.0,
         "Current Assets": 3067142680.0,
         "Total Assets": 3666126690.0,
-        "Revenue from Operation": 6389911.07,
+        "Revenue from Operation": 6389911070.0,
         "Gross Profit": 1775208930.0,
-        "Total Operating Profit": 950241.89,
+        "Total Operating Profit": 950241890.0,
         "Net Profit": 660117610.0,
         "Number of Shares": 24295666.5,
         "EPS(Rs.)": 27.17,
@@ -396,7 +436,7 @@
         "roe_ttm": 19.69,
         "roa_ttm": null,
         "net_profit_ttm": 660117610.0,
-        "revenue_ttm": 6389911.07,
+        "revenue_ttm": 6389911070.0,
         "graham_number": 290.45
       },
       "yoy": {
@@ -419,14 +459,22 @@
         "eps_ttm": -60.91,
         "bvps": -26.29
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:42:05.032670",
+      "parsed_at": "2026-11-14T20:24:46.418398",
       "raw": {
         "Paid Up Capital": 2429566650.0,
         "Reserve and Surplus": 1030436550.0,
@@ -434,9 +482,9 @@
         "Current Liabilities": 387727880.0,
         "Current Assets": 3279078650.0,
         "Total Assets": 3889746000.0,
-        "Revenue from Operation": 971815.39,
+        "Revenue from Operation": 971815390.0,
         "Gross Profit": 288147250.0,
-        "Total Operating Profit": 156281.54,
+        "Total Operating Profit": 156281540.0,
         "Net Profit": 105199390.0,
         "Number of Shares": 24295666.5,
         "EPS(Rs.)": 17.32,
@@ -465,7 +513,7 @@
         "roe_ttm": 12.16,
         "roa_ttm": null,
         "net_profit_ttm": 105199390.0,
-        "revenue_ttm": 971815.39,
+        "revenue_ttm": 971815390.0,
         "graham_number": 235.58
       },
       "yoy": {
@@ -488,14 +536,22 @@
         "eps_ttm": -69.53,
         "bvps": -29.37
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:42:05.032615",
+      "parsed_at": "2026-11-14T20:24:46.418331",
       "raw": {
         "Paid Up Capital": 2672523320.0,
         "Reserve and Surplus": 481501150.0,
@@ -503,9 +559,9 @@
         "Current Liabilities": 811750800.0,
         "Current Assets": 3281279690.0,
         "Total Assets": 4007656140.0,
-        "Revenue from Operation": 1898816.3,
+        "Revenue from Operation": 1898816300.0,
         "Gross Profit": 553466350.0,
-        "Total Operating Profit": 247582.59,
+        "Total Operating Profit": 247582590.0,
         "Net Profit": 163655650.0,
         "Number of Shares": 26725233.15,
         "EPS(Rs.)": 12.25,
@@ -534,7 +590,7 @@
         "roe_ttm": 10.38,
         "roa_ttm": null,
         "net_profit_ttm": 163655650.0,
-        "revenue_ttm": 1898816.3,
+        "revenue_ttm": 1898816300.0,
         "graham_number": 180.36
       },
       "yoy": {
@@ -557,14 +613,22 @@
         "eps_ttm": -49.42,
         "bvps": -4.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:42:05.032564",
+      "parsed_at": "2026-11-14T20:24:46.418268",
       "raw": {
         "Paid Up Capital": 2672523320.0,
         "Reserve and Surplus": 528261590.0,
@@ -572,9 +636,9 @@
         "Current Liabilities": 517604060.0,
         "Current Assets": 2971164810.0,
         "Total Assets": 3761218290.0,
-        "Revenue from Operation": 2744113.24,
+        "Revenue from Operation": 2744113240.0,
         "Gross Profit": 814787540.0,
-        "Total Operating Profit": 323633.87,
+        "Total Operating Profit": 323633870.0,
         "Net Profit": 210416090.0,
         "Number of Shares": 26725233.15,
         "EPS(Rs.)": 10.5,
@@ -603,7 +667,7 @@
         "roe_ttm": 8.77,
         "roa_ttm": null,
         "net_profit_ttm": 210416090.0,
-        "revenue_ttm": 2744113.24,
+        "revenue_ttm": 2744113240.0,
         "graham_number": 168.21
       },
       "yoy": {
@@ -626,7 +690,15 @@
         "eps_ttm": -66.82,
         "bvps": -11.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "HDL",
@@ -634,7 +706,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:42:05.032512",
+      "parsed_at": "2026-11-14T20:24:46.418204",
       "computed": {
         "pe_ratio": 140.9,
         "pb_ratio": 12.9,
@@ -648,7 +720,7 @@
         "net_profit_till_qtr": 353100000.0,
         "revenue_till_qtr": 4155200000.0,
         "net_profit_ttm": 353053660.0,
-        "revenue_ttm": 4155236.99,
+        "revenue_ttm": 4155236990.0,
         "graham_number": 192.83,
         "earnings_yield": 0.71,
         "peg_ratio": null,
@@ -675,9 +747,9 @@
         "Current Liabilities": 256056130.0,
         "Current Assets": 2678353690.0,
         "Total Assets": 3633620010.0,
-        "Revenue from Operation": 4155236.99,
+        "Revenue from Operation": 4155236990.0,
         "Gross Profit": 1231687980.0,
-        "Total Operating Profit": 1296130.95,
+        "Total Operating Profit": 1296130950.0,
         "Net Profit": 353053660.0,
         "Number of Shares": 26725233.15,
         "EPS(Rs.)": 13.21,
@@ -728,6 +800,14 @@
         "EPS(Rs.)": -51.38,
         "Book Value(Rs.)": -9.35,
         "ROE": -46.37
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -736,7 +816,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:05.032466",
+      "parsed_at": "2026-11-14T20:24:46.418139",
       "computed": {
         "pe_ratio": 107.7,
         "pb_ratio": 11.4,
@@ -750,11 +830,11 @@
         "net_profit_till_qtr": 198900000.0,
         "revenue_till_qtr": 1486600000.0,
         "net_profit_ttm": 198871350.0,
-        "revenue_ttm": 1486614.58,
+        "revenue_ttm": 1486614580.0,
         "graham_number": 298.8,
         "earnings_yield": 0.93,
         "peg_ratio": null,
-        "dupont_net_margin": 9.57,
+        "dupont_net_margin": 13.38,
         "dupont_asset_turnover": null,
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
@@ -777,9 +857,9 @@
         "Current Liabilities": 778844010.0,
         "Current Assets": 3365227930.0,
         "Total Assets": 4381203040.0,
-        "Revenue from Operation": 1486614.58,
+        "Revenue from Operation": 1486614580.0,
         "Gross Profit": 425566700.0,
-        "Total Operating Profit": 281947.87,
+        "Total Operating Profit": 281947870.0,
         "Net Profit": 198871350.0,
         "Number of Shares": 26725233.15,
         "EPS(Rs.)": 29.77,
@@ -830,6 +910,14 @@
         "EPS(Rs.)": 71.88,
         "Book Value(Rs.)": -6.4,
         "ROE": 83.63
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -838,7 +926,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:05.032416",
+      "parsed_at": "2026-11-14T20:24:46.418073",
       "computed": {
         "pe_ratio": 83.1,
         "pb_ratio": 10.4,
@@ -852,11 +940,11 @@
         "net_profit_till_qtr": 404900000.0,
         "revenue_till_qtr": 3032200000.0000005,
         "net_profit_ttm": 404919380.0,
-        "revenue_ttm": 3032232.78,
+        "revenue_ttm": 3032232780.0,
         "graham_number": 264.5,
         "earnings_yield": 1.2,
         "peg_ratio": 6.79,
-        "dupont_net_margin": 11.24,
+        "dupont_net_margin": 13.35,
         "dupont_asset_turnover": null,
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
@@ -880,9 +968,9 @@
         "Current Liabilities": 659725120.0,
         "Current Assets": 3318152990.0,
         "Total Assets": 4327888340.0,
-        "Revenue from Operation": 3032232.78,
+        "Revenue from Operation": 3032232780.0,
         "Gross Profit": 911435240.0,
-        "Total Operating Profit": 534556.84,
+        "Total Operating Profit": 534556840.0,
         "Net Profit": 404919380.0,
         "Number of Shares": 30734018.12,
         "EPS Reported": 26.35,
@@ -927,6 +1015,14 @@
         "EPS Reported": 5.46,
         "Book Value Reported": 4.11,
         "ROE Reported": 1.3
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -935,7 +1031,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:05.032361",
+      "parsed_at": "2026-11-14T20:24:46.418004",
       "computed": {
         "pe_ratio": 63.6,
         "pb_ratio": 10.4,
@@ -949,18 +1045,18 @@
         "net_profit_till_qtr": 739200000.0,
         "revenue_till_qtr": 5358400000.0,
         "net_profit_ttm": 739241560.0,
-        "revenue_ttm": 5358392.73,
+        "revenue_ttm": 5358392730.0,
         "graham_number": 304.95,
         "earnings_yield": 1.57,
         "peg_ratio": 0.32,
-        "dupont_net_margin": 13.03,
-        "dupont_asset_turnover": 1.4203,
+        "dupont_net_margin": 13.8,
+        "dupont_asset_turnover": 1.1242,
         "dupont_equity_multiplier": 1.2,
-        "dupont_roe": 22.21,
+        "dupont_roe": 18.62,
         "debt_to_equity": null,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 220.26,
+        "revenue_per_share": 174.35,
         "qoq_profit_momentum": null,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -976,9 +1072,9 @@
         "Current Liabilities": 751442260.0,
         "Current Assets": 3653185460.0,
         "Total Assets": 4766224340.0,
-        "Revenue from Operation": 5358392.73,
+        "Revenue from Operation": 5358392730.0,
         "Gross Profit": 1630594020.0,
-        "Total Operating Profit": 986756.01,
+        "Total Operating Profit": 986756010.0,
         "Net Profit": 739241560.0,
         "Number of Shares": 30734018.13,
         "EPS Reported": 32.07,
@@ -1024,6 +1120,14 @@
         "EPS Reported": 5.46,
         "Book Value Reported": 4.11,
         "ROE Reported": 1.3
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1032,7 +1136,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:05.032308",
+      "parsed_at": "2026-11-14T20:24:46.417919",
       "computed": {
         "pe_ratio": 46.9,
         "pb_ratio": 10.4,
@@ -1046,7 +1150,7 @@
         "net_profit_till_qtr": 953300000.0,
         "revenue_till_qtr": 7201200000.0,
         "net_profit_ttm": 953263670.0,
-        "revenue_ttm": 7201150.9,
+        "revenue_ttm": 7201150900.0,
         "graham_number": 307.91,
         "earnings_yield": 2.13,
         "peg_ratio": 0.28,
@@ -1073,9 +1177,9 @@
         "Current Liabilities": 345895280.0,
         "Current Assets": 3431227580.0,
         "Total Assets": 4572987620.0,
-        "Revenue from Operation": 7201150.9,
+        "Revenue from Operation": 7201150900.0,
         "Gross Profit": 2168669760.0,
-        "Total Operating Profit": 1289166.72,
+        "Total Operating Profit": 1289166720.0,
         "Net Profit": 953263670.0,
         "Number of Shares": 30734018.12,
         "EPS Reported": 31.02,
@@ -1121,6 +1225,14 @@
         "EPS Reported": 5.46,
         "Book Value Reported": 4.11,
         "ROE Reported": 1.3
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1129,7 +1241,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:05.032263",
+      "parsed_at": "2026-11-14T20:24:46.417825",
       "computed": {
         "pe_ratio": 49.1,
         "pb_ratio": 9.8,
@@ -1143,18 +1255,18 @@
         "net_profit_till_qtr": 90300000.0,
         "revenue_till_qtr": 1075800000.0,
         "net_profit_ttm": 90258160.0,
-        "revenue_ttm": 1075788.93,
+        "revenue_ttm": 1075788930.0,
         "graham_number": 191.28,
         "earnings_yield": 2.04,
         "peg_ratio": 0.55,
-        "dupont_net_margin": 12.44,
-        "dupont_asset_turnover": 1.3717,
+        "dupont_net_margin": 8.39,
+        "dupont_asset_turnover": 0.2173,
         "dupont_equity_multiplier": 1.16,
-        "dupont_roe": 19.79,
+        "dupont_roe": 2.11,
         "debt_to_equity": null,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 220.94,
+        "revenue_per_share": 35.0,
         "qoq_profit_momentum": -57.83,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1170,9 +1282,9 @@
         "Current Liabilities": 644523390.0,
         "Current Assets": 3755729830.0,
         "Total Assets": 4950110170.0,
-        "Revenue from Operation": 1075788.93,
+        "Revenue from Operation": 1075788930.0,
         "Gross Profit": 361066120.0,
-        "Total Operating Profit": 125791.83,
+        "Total Operating Profit": 125791830.0,
         "Net Profit": 90258160.0,
         "Number of Shares": 30734018.12,
         "EPS Reported": 11.75,
@@ -1218,6 +1330,14 @@
         "EPS Reported": 5.46,
         "Book Value Reported": 4.11,
         "ROE Reported": 1.3
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1226,7 +1346,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:05.032213",
+      "parsed_at": "2026-11-14T20:24:46.417728",
       "computed": {
         "pe_ratio": 50.3,
         "pb_ratio": 10.0,
@@ -1240,18 +1360,18 @@
         "net_profit_till_qtr": 448400000.00000006,
         "revenue_till_qtr": 3233100000.0,
         "net_profit_ttm": 448367370.0,
-        "revenue_ttm": 3233088.22,
+        "revenue_ttm": 3233088220.0,
         "graham_number": 257.12,
         "earnings_yield": 1.99,
         "peg_ratio": 0.74,
-        "dupont_net_margin": 13.47,
-        "dupont_asset_turnover": 1.4322,
+        "dupont_net_margin": 13.87,
+        "dupont_asset_turnover": 0.6256,
         "dupont_equity_multiplier": 1.16,
-        "dupont_roe": 22.38,
+        "dupont_roe": 10.07,
         "debt_to_equity": null,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 200.7,
+        "revenue_per_share": 87.66,
         "qoq_profit_momentum": 296.76,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1267,9 +1387,9 @@
         "Current Liabilities": 633063950.0,
         "Current Assets": 3892159830.0,
         "Total Assets": 5168267360.0,
-        "Revenue from Operation": 3233088.22,
+        "Revenue from Operation": 3233088220.0,
         "Gross Profit": 1169406840.0,
-        "Total Operating Profit": 612534.96,
+        "Total Operating Profit": 612534960.0,
         "Net Profit": 448367370.0,
         "Number of Shares": 36880821.75,
         "EPS Reported": 24.31,
@@ -1315,6 +1435,14 @@
         "EPS Reported": -7.74,
         "Book Value Reported": 2.43,
         "ROE Reported": -9.9
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1323,7 +1451,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:05.032167",
+      "parsed_at": "2026-11-14T20:24:46.417630",
       "computed": {
         "pe_ratio": 39.7,
         "pb_ratio": 8.7,
@@ -1337,18 +1465,18 @@
         "net_profit_till_qtr": 851300000.0,
         "revenue_till_qtr": 5719200000.0,
         "net_profit_ttm": 851305530.0,
-        "revenue_ttm": 5719178.6,
+        "revenue_ttm": 5719178600.0,
         "graham_number": 302.12,
         "earnings_yield": 2.52,
         "peg_ratio": 1.91,
-        "dupont_net_margin": 14.09,
-        "dupont_asset_turnover": 1.2969,
+        "dupont_net_margin": 14.89,
+        "dupont_asset_turnover": 0.9809,
         "dupont_equity_multiplier": 1.2,
-        "dupont_roe": 21.93,
+        "dupont_roe": 17.53,
         "debt_to_equity": null,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 205.04,
+        "revenue_per_share": 155.07,
         "qoq_profit_momentum": 12.52,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1364,9 +1492,9 @@
         "Current Liabilities": 888949640.0,
         "Current Assets": 4521691130.0,
         "Total Assets": 5830750560.0,
-        "Revenue from Operation": 5719178.6,
+        "Revenue from Operation": 5719178600.0,
         "Gross Profit": 2144156420.0,
-        "Total Operating Profit": 1169155.87,
+        "Total Operating Profit": 1169155870.0,
         "Net Profit": 851305530.0,
         "Number of Shares": 36880821.75,
         "EPS Reported": 30.78,
@@ -1412,6 +1540,14 @@
         "EPS Reported": -4.02,
         "Book Value Reported": 2.27,
         "ROE Reported": -6.15
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1419,7 +1555,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:05.032126",
+      "parsed_at": "2026-11-14T20:24:46.417512",
       "raw": {
         "Paid Up Capital": 3688082180.0,
         "Reserve and Surplus": 1527823340.0,
@@ -1428,9 +1564,9 @@
         "Current Liabilities": 472299990.0,
         "Current Assets": 4427329280.0,
         "Total Assets": 5773015760.0,
-        "Revenue from Operation": 8113792.6,
+        "Revenue from Operation": 8113792600.0,
         "Gross Profit": 3059304960.0,
-        "Total Operating Profit": 1677545.22,
+        "Total Operating Profit": 1677545220.0,
         "Net Profit": 1206337740.0,
         "Number of Shares": 36880821.75,
         "EPS Reported": 32.71,
@@ -1460,7 +1596,7 @@
         "roe_ttm": 23.13,
         "roa_ttm": 22.938423817662,
         "net_profit_ttm": 1206337740.0,
-        "revenue_ttm": 8113792.6,
+        "revenue_ttm": 8113792600.0,
         "graham_number": 322.63
       },
       "yoy": {
@@ -1483,8 +1619,16 @@
         "Book Value Reported": 4.12,
         "ROE Reported": 1.31
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:05.034419"
+  "last_updated": "2026-11-14T20:24:46.421027"
 }

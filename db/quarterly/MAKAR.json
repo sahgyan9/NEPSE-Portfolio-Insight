@@ -8,7 +8,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:11:29.967487",
+      "parsed_at": "2026-11-14T21:20:34.382840",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": -44771810.0,
@@ -19,7 +19,7 @@
         "Total Assets": 2524353170.0,
         "Revenue": 164208600.0,
         "Gross Profit": 154905640.0,
-        "Operating Profit": 103075.46,
+        "Operating Profit": 103075460.0,
         "Net Profit": -5971120.0,
         "Number of Shares": 7600000.0,
         "EPS(Rs.)": -0.79,
@@ -52,14 +52,21 @@
         "revenue_ttm": 164208600.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:11:29.967450",
+      "parsed_at": "2026-11-14T21:20:34.382730",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": -20993640.0,
@@ -70,7 +77,7 @@
         "Total Assets": 2651677440.0,
         "Revenue": 67792990.0,
         "Gross Profit": 66033850.0,
-        "Operating Profit": 51418.53,
+        "Operating Profit": 51418530.0,
         "Net Profit": 23778170.0,
         "Number of Shares": 7600000.0,
         "EPS(Rs.)": 12.51,
@@ -104,14 +111,21 @@
         "graham_number": 165.44
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:11:29.967411",
+      "parsed_at": "2026-11-14T21:20:34.382601",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": -32985340.0,
@@ -122,7 +136,7 @@
         "Total Assets": 2801989640.0,
         "Revenue": 611706790.0,
         "Gross Profit": 116224270.0,
-        "Operating Profit": 80183.3,
+        "Operating Profit": 80183300.0,
         "Net Profit": 17227770.0,
         "Number of Shares": 7600000.0,
         "EPS(Rs.)": 4.53,
@@ -156,14 +170,21 @@
         "graham_number": 98.74
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:11:29.967373",
+      "parsed_at": "2026-11-14T21:20:34.382488",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": -38197810.0,
@@ -174,7 +195,7 @@
         "Total Assets": 2779336250.0,
         "Revenue": 190036170.0,
         "Gross Profit": 182666870.0,
-        "Operating Profit": 120021.47,
+        "Operating Profit": 120021470.0,
         "Net Profit": 12015290.0,
         "Number of Shares": 7600000.0,
         "EPS(Rs.)": 2.11,
@@ -208,14 +229,21 @@
         "graham_number": 67.15
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:11:29.967333",
+      "parsed_at": "2026-11-14T21:20:34.382372",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": -53874080.0,
@@ -226,7 +254,7 @@
         "Total Assets": 2809739570.0,
         "Revenue": 759961550.0,
         "Gross Profit": 247163020.0,
-        "Operating Profit": 156012.55,
+        "Operating Profit": 156012550.0,
         "Net Profit": -3660980.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": -0.48,
@@ -276,14 +304,21 @@
         "Net Profit": 38.69,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:11:29.967293",
+      "parsed_at": "2026-11-14T21:20:34.382258",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 42287280.0,
@@ -294,7 +329,7 @@
         "Total Assets": 2830362600.0,
         "Revenue": 137859890.0,
         "Gross Profit": 134822980.0,
-        "Operating Profit": 103690.53,
+        "Operating Profit": 103690530.0,
         "Net Profit": 56124910.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 29.54,
@@ -345,14 +380,21 @@
         "Net Profit": 136.04,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:11:29.967255",
+      "parsed_at": "2026-11-14T21:20:34.382146",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 62072340.0,
@@ -421,7 +463,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:11:29.967216",
+      "parsed_at": "2026-11-14T21:20:34.382031",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 41854900.0,
@@ -432,7 +474,7 @@
         "Total Assets": 2805064290.0,
         "Revenue": 314288150.0,
         "Gross Profit": 299664380.0,
-        "Operating Profit": 194561.98,
+        "Operating Profit": 194561980.0,
         "Net Profit": 55692530.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 9.77,
@@ -483,14 +525,21 @@
         "Net Profit": 363.51,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:11:29.967177",
+      "parsed_at": "2026-11-14T21:20:34.381918",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 35654830.0,
@@ -501,7 +550,7 @@
         "Total Assets": 2740889010.0,
         "Revenue": 388709310.0,
         "Gross Profit": 373126380.0,
-        "Operating Profit": 232020.38,
+        "Operating Profit": 232020380.0,
         "Net Profit": 49492460.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 6.51,
@@ -555,14 +604,21 @@
         "Book Value Reported": 12.68,
         "ROE Reported": 1296.15
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:11:29.967139",
+      "parsed_at": "2026-11-14T21:20:34.381816",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 60944130.0,
@@ -573,7 +629,7 @@
         "Total Assets": 2750934880.0,
         "Revenue": 127764240.0,
         "Gross Profit": 123511160.0,
-        "Operating Profit": 74579.98,
+        "Operating Profit": 74579980.0,
         "Net Profit": 28087220.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 14.78,
@@ -627,14 +683,21 @@
         "Book Value Reported": 2.33,
         "ROE Reported": -51.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:11:29.967100",
+      "parsed_at": "2026-11-14T21:20:34.381719",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 112871660.0,
@@ -645,7 +708,7 @@
         "Total Assets": 2777171800.0,
         "Revenue": 251842490.0,
         "Gross Profit": 243797470.0,
-        "Operating Profit": 163556.07,
+        "Operating Profit": 163556070.0,
         "Net Profit": 80014740.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 21.06,
@@ -698,14 +761,21 @@
         "Book Value Reported": 6.18,
         "ROE Reported": -0.76
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:11:29.967001",
+      "parsed_at": "2026-11-14T21:20:34.381615",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 119974390.0,
@@ -716,7 +786,7 @@
         "Total Assets": 2719034220.0,
         "Revenue": 323952010.0,
         "Gross Profit": 313686300.0,
-        "Operating Profit": 202248.87,
+        "Operating Profit": 202248870.0,
         "Net Profit": 87117470.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 15.28,
@@ -770,14 +840,21 @@
         "Book Value Reported": 9.74,
         "ROE Reported": 42.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:11:29.966890",
+      "parsed_at": "2026-11-14T21:20:34.381551",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 111100840.0,
@@ -788,7 +865,7 @@
         "Total Assets": 2671316090.0,
         "Revenue": 392099570.0,
         "Gross Profit": 365370960.0,
-        "Operating Profit": 228969.22,
+        "Operating Profit": 228969220.0,
         "Net Profit": 78243930.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 10.3,
@@ -842,14 +919,21 @@
         "Book Value Reported": 9.49,
         "ROE Reported": 44.37
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "MAKAR",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T09:11:29.966762",
+      "parsed_at": "2026-11-14T21:20:34.381502",
       "raw": {
         "Paid Up Capital": 760000000.0,
         "Reserve and Surplus": 171652060.0,
@@ -860,7 +944,7 @@
         "Total Assets": 2664491500.0,
         "Revenue": 128966850.0,
         "Gross Profit": 125150530.0,
-        "Operating Profit": 90659.6,
+        "Operating Profit": 90659600.0,
         "Net Profit": 64000310.0,
         "Number of Shares": 7600000.0,
         "EPS Reported": 33.68,
@@ -914,8 +998,15 @@
         "Book Value Reported": 13.49,
         "ROE Reported": 100.73
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:11:29.968636"
+  "last_updated": "2026-11-14T21:20:34.385417"
 }

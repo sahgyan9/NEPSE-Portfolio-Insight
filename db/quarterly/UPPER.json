@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:42:51.070966",
+      "parsed_at": "2026-11-14T20:25:44.819146",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -2714514540.0,
@@ -18,7 +18,7 @@
         "Current Assets": 3646814860.0,
         "Total Assets": 89924066020.0,
         "Revenue": 5163334200.0,
-        "Operating Profit": 1903219.53,
+        "Operating Profit": 1903219530.0,
         "Net Profit": -1650655390.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": -20.78,
@@ -50,14 +50,21 @@
         "revenue_ttm": 5163334200.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:42:51.070939",
+      "parsed_at": "2026-11-14T20:25:44.819050",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -2717986540.0,
@@ -67,7 +74,7 @@
         "Current Assets": 4078908890.0,
         "Total Assets": 89600261320.0,
         "Revenue": 7173587920.0,
-        "Operating Profit": 3749122.2,
+        "Operating Profit": 3749122200.0,
         "Net Profit": -1873900050.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": -17.69,
@@ -99,14 +106,21 @@
         "revenue_ttm": 7173587920.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:42:51.070913",
+      "parsed_at": "2026-11-14T20:25:44.818953",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -1949478810.0,
@@ -117,7 +131,7 @@
         "Total Assets": 89880871970.0,
         "Revenue": 3561782480.0,
         "Gross Profit": 3453182020.0,
-        "Operating Profit": 2404534.09,
+        "Operating Profit": 2404534090.0,
         "Net Profit": 797726570.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": 30.13,
@@ -151,14 +165,21 @@
         "graham_number": 235.18
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:42:51.070884",
+      "parsed_at": "2026-11-14T20:25:44.818848",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -3983956710.0,
@@ -168,7 +189,7 @@
         "Current Assets": 2767718860.0,
         "Total Assets": 87754810170.0,
         "Revenue": 4985186660.0,
-        "Operating Profit": 2786250.31,
+        "Operating Profit": 2786250310.0,
         "Net Profit": -824846620.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": -15.58,
@@ -200,14 +221,21 @@
         "revenue_ttm": 4985186660.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:42:51.070859",
+      "parsed_at": "2026-11-14T20:25:44.818752",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -5182524450.0,
@@ -217,7 +245,7 @@
         "Current Assets": 2603033950.0,
         "Total Assets": 87261755280.0,
         "Revenue": 6176036050.0,
-        "Operating Profit": 3053183.81,
+        "Operating Profit": 3053183810.0,
         "Net Profit": -2023414360.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": -25.48,
@@ -268,14 +296,21 @@
         "Book Value(Rs.)": -31.34,
         "ROE": -78.5
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:42:51.070833",
+      "parsed_at": "2026-11-14T20:25:44.818656",
       "raw": {
         "Paid Up Capital": 10590000000.0,
         "Reserve and Surplus": -6918024150.0,
@@ -285,7 +320,7 @@
         "Current Assets": 3510117640.0,
         "Total Assets": 87532513240.0,
         "Revenue": 8128079050.0,
-        "Operating Profit": 3570564.21,
+        "Operating Profit": 3570564210.0,
         "Net Profit": -3758914060.0,
         "Number of Shares": 105900000.0,
         "EPS(Rs.)": -35.49,
@@ -336,14 +371,21 @@
         "Book Value(Rs.)": -53.36,
         "ROE": -330.13
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:42:51.070807",
+      "parsed_at": "2026-11-14T20:25:44.818556",
       "raw": {
         "Paid Up Capital": 15990900000.0,
         "Reserve and Surplus": -6241036340.0,
@@ -353,7 +395,7 @@
         "Current Assets": 4566579120.0,
         "Total Assets": 87773939310.0,
         "Revenue": 3715847760.0,
-        "Operating Profit": 2601995.26,
+        "Operating Profit": 2601995260.0,
         "Net Profit": 1007258720.0,
         "Number of Shares": 159909000.0,
         "EPS(Rs.)": 25.2,
@@ -405,14 +447,21 @@
         "Book Value(Rs.)": -25.27,
         "ROE": 11.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:42:51.070781",
+      "parsed_at": "2026-11-14T20:25:44.818456",
       "raw": {
         "Paid Up Capital": 19478047000.0,
         "Reserve and Surplus": -7574065830.0,
@@ -422,7 +471,7 @@
         "Current Assets": 3915935060.0,
         "Total Assets": 86326322190.0,
         "Revenue": 5356392040.0,
-        "Operating Profit": 3162750.09,
+        "Operating Profit": 3162750090.0,
         "Net Profit": -257640260.0,
         "Number of Shares": 194780470.0,
         "EPS(Rs.)": -2.65,
@@ -473,14 +522,21 @@
         "Book Value(Rs.)": -2.04,
         "ROE": 82.66
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:42:51.070751",
+      "parsed_at": "2026-11-14T20:25:44.818343",
       "raw": {
         "Paid Up Capital": 21180000000.0,
         "Reserve and Surplus": -7782665270.0,
@@ -490,7 +546,7 @@
         "Current Assets": 5279457070.0,
         "Total Assets": 87191522250.0,
         "Revenue": 6530295170.0,
-        "Operating Profit": 3286471.47,
+        "Operating Profit": 3286471470.0,
         "Net Profit": -1391358190.0,
         "Number of Shares": 211800000.0,
         "EPS(Rs.)": -8.76,
@@ -541,7 +597,14 @@
         "Book Value(Rs.)": 23.87,
         "ROE": 72.24
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UPPER",
@@ -549,7 +612,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:42:51.070671",
+      "parsed_at": "2026-11-14T20:25:44.818244",
       "computed": {
         "pe_ratio": -17.4,
         "pb_ratio": 4.1,
@@ -592,7 +655,7 @@
         "Total Assets": 85907488020.0,
         "Revenue": 8785352750.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 3979726.25,
+        "Operating Profit": 3979726250.0,
         "Net Profit": -2686819010.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": -12.69,
@@ -634,6 +697,13 @@
         "net_profit_ttm": 28.52,
         "Reserve and Surplus": -32.02,
         "Net Profit": 28.52
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -642,7 +712,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:51.070592",
+      "parsed_at": "2026-11-14T20:25:44.818140",
       "computed": {
         "pe_ratio": -17.2,
         "pb_ratio": 3.8,
@@ -686,7 +756,7 @@
         "Total Assets": 86366335580.0,
         "Revenue": 2938377600.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 1825411.37,
+        "Operating Profit": 1825411370.0,
         "Net Profit": 631984640.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": 11.94,
@@ -729,6 +799,13 @@
         "net_profit_ttm": -37.26,
         "Reserve and Surplus": -34.31,
         "Net Profit": -37.26
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -737,7 +814,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:51.070509",
+      "parsed_at": "2026-11-14T20:25:44.818035",
       "computed": {
         "pe_ratio": -14.0,
         "pb_ratio": 3.4,
@@ -780,7 +857,7 @@
         "Total Assets": 85352979590.0,
         "Revenue": 3366327520.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 1168824.65,
+        "Operating Profit": 1168824650.0,
         "Net Profit": -821185650.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": -7.75,
@@ -822,6 +899,13 @@
         "net_profit_ttm": -218.73,
         "Reserve and Surplus": -21.51,
         "Net Profit": -218.73
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -830,7 +914,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:51.070383",
+      "parsed_at": "2026-11-14T20:25:44.817926",
       "computed": {
         "pe_ratio": -13.1,
         "pb_ratio": 3.6,
@@ -872,7 +956,7 @@
         "Current Assets": 3820514210.0,
         "Total Assets": 82897866080.0,
         "Revenue": 5272005190.0,
-        "Operating Profit": 1001098.02,
+        "Operating Profit": 1001098020.0,
         "Net Profit": -2067482160.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": -13.02,
@@ -915,6 +999,13 @@
         "net_profit_ttm": -48.59,
         "Reserve and Surplus": -44.82,
         "Net Profit": -48.59
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -923,7 +1014,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:51.070264",
+      "parsed_at": "2026-11-14T20:25:44.817817",
       "computed": {
         "pe_ratio": -16.1,
         "pb_ratio": 4.3,
@@ -965,7 +1056,7 @@
         "Current Assets": 5718933270.0,
         "Total Assets": 84402176290.0,
         "Revenue": 7812048600.0,
-        "Operating Profit": 2368000.71,
+        "Operating Profit": 2368000710.0,
         "Net Profit": -2572538620.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": -12.15,
@@ -1010,6 +1101,13 @@
         "Net Profit": 4.25,
         "EPS Reported": 4.26,
         "ROE Reported": -20.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1018,7 +1116,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:51.070217",
+      "parsed_at": "2026-11-14T20:25:44.817709",
       "computed": {
         "pe_ratio": -14.3,
         "pb_ratio": 3.8,
@@ -1061,7 +1159,7 @@
         "Current Assets": 7049473180.0,
         "Total Assets": 85007782970.0,
         "Revenue": 3861100930.0,
-        "Operating Profit": 2714734.63,
+        "Operating Profit": 2714734630.0,
         "Net Profit": 1674689000.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": 31.63,
@@ -1106,6 +1204,13 @@
         "Net Profit": 164.99,
         "EPS Reported": 164.91,
         "ROE Reported": 200.76
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1114,7 +1219,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:51.070183",
+      "parsed_at": "2026-11-14T20:25:44.817599",
       "computed": {
         "pe_ratio": 81.8,
         "pb_ratio": 3.8,
@@ -1157,7 +1262,7 @@
         "Current Assets": 5800594060.0,
         "Total Assets": 82788806560.0,
         "Revenue": 6086158150.0,
-        "Operating Profit": 3743125.06,
+        "Operating Profit": 3743125060.0,
         "Net Profit": 996539150.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": 9.41,
@@ -1202,6 +1307,13 @@
         "Net Profit": 221.35,
         "EPS Reported": 221.42,
         "ROE Reported": 237.13
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1210,7 +1322,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:51.070149",
+      "parsed_at": "2026-11-14T20:25:44.817480",
       "computed": {
         "pe_ratio": 88.5,
         "pb_ratio": 4.1,
@@ -1232,7 +1344,7 @@
         "dupont_roe": 2.9,
         "debt_to_equity": 7.06,
         "net_interest_margin": null,
-        "operating_profit_margin": 55.95,
+        "operating_profit_margin": 56.05,
         "revenue_per_share": 36.44,
         "qoq_profit_momentum": null,
         "loan_to_asset": null,
@@ -1254,7 +1366,7 @@
         "Total Assets": 81320181880.0,
         "Revenue": 7718105750.0,
         "Gross Profit": 7529543630.0,
-        "Operating Profit": 4325817.19,
+        "Operating Profit": 4325817190.0,
         "Net Profit": 286757590.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": 1.81,
@@ -1298,6 +1410,13 @@
         "Net Profit": 113.87,
         "EPS Reported": 113.9,
         "ROE Reported": 113.91
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1305,7 +1424,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:51.070111",
+      "parsed_at": "2026-11-14T20:25:44.817330",
       "raw": {
         "Paid Up Capital": 21180000000.0,
         "Reserve and Surplus": -11758926020.0,
@@ -1316,7 +1435,7 @@
         "Total Assets": 80943425810.0,
         "Revenue": 10685613640.0,
         "Gross Profit": 10409836540.0,
-        "Operating Profit": 6160228.95,
+        "Operating Profit": 6160228950.0,
         "Net Profit": 989048260.0,
         "Number of Shares": 211800000.0,
         "EPS Reported": 4.67,
@@ -1369,8 +1488,15 @@
         "Book Value Reported": -1.9,
         "ROE Reported": 139.19
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:42:51.072136"
+  "last_updated": "2026-11-14T20:25:44.820969"
 }

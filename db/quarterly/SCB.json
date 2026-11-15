@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 26923699000.0,
         "Interest Income": 615731000.0,
         "Net Interest Income": 452031000.0,
-        "Total Operating Income": 716677.0,
-        "Operating Profit": 484415.0,
+        "Total Operating Income": 716677000.0,
+        "Operating Profit": 484415000.0,
         "Net Profit": 345245000.0,
         "Number of Shares": 22481610.0,
         "EPS(Rs.)": 61.43,
@@ -88,7 +88,15 @@
         "graham_number": 643.03
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -105,8 +113,8 @@
         "Loans and Advances to Customers": 26102396000.0,
         "Interest Income": 1169373000.0,
         "Net Interest Income": 854339000.0,
-        "Total Operating Income": 1352399.0,
-        "Operating Profit": 878684.0,
+        "Total Operating Income": 1352399000.0,
+        "Operating Profit": 878684000.0,
         "Net Profit": 612007000.0,
         "Number of Shares": 22481610.0,
         "EPS(Rs.)": 54.45,
@@ -152,7 +160,15 @@
         "graham_number": 589.78
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -169,8 +185,8 @@
         "Loans and Advances to Customers": 29696191000.0,
         "Interest Income": 1750789000.0,
         "Net Interest Income": 1307255000.0,
-        "Total Operating Income": 2052586.0,
-        "Operating Profit": 1319211.0,
+        "Total Operating Income": 2052586000.0,
+        "Operating Profit": 1319211000.0,
         "Net Profit": 906780000.0,
         "Number of Shares": 22481610.0,
         "EPS(Rs.)": 53.78,
@@ -216,7 +232,15 @@
         "graham_number": 607.44
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -234,8 +258,8 @@
         "Loans and Advances to Customers": 31697345000.0,
         "Interest Income": 2426886000.0,
         "Net Interest Income": 1857796000.0,
-        "Total Operating Income": 2884644.0,
-        "Operating Profit": 1672861.0,
+        "Total Operating Income": 2884644000.0,
+        "Operating Profit": 1672861000.0,
         "Net Profit": 1265498000.0,
         "Number of Shares": 28124260.0,
         "EPS(Rs.)": 45.96,
@@ -285,7 +309,15 @@
         "eps_ttm": -19.9,
         "EPS(Rs.)": -19.9
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -302,8 +334,8 @@
         "Loans and Advances to Customers": 32391272000.0,
         "Interest Income": 630224000.0,
         "Net Interest Income": 500043000.0,
-        "Total Operating Income": 768445.0,
-        "Operating Profit": 532510.0,
+        "Total Operating Income": 768445000.0,
+        "Operating Profit": 532510000.0,
         "Net Profit": 349424000.0,
         "Number of Shares": 28124260.0,
         "EPS(Rs.)": 49.7,
@@ -375,7 +407,15 @@
         "Base Rate": -7.98,
         "Interest Spread Rate": 1.12
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -393,8 +433,8 @@
         "Loans and Advances to Customers": 35106968000.0,
         "Interest Income": 1308494000.0,
         "Net Interest Income": 1047398000.0,
-        "Total Operating Income": 1658210.0,
-        "Operating Profit": 1120212.0,
+        "Total Operating Income": 1658210000.0,
+        "Operating Profit": 1120212000.0,
         "Net Profit": 740146000.0,
         "Number of Shares": 37499010.0,
         "EPS(Rs.)": 39.48,
@@ -467,7 +507,15 @@
         "Base Rate": -1.3,
         "Interest Spread Rate": -1.95
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -484,8 +532,8 @@
         "Loans and Advances to Customers": 37355946000.0,
         "Interest Income": 2063519000.0,
         "Net Interest Income": 1555535000.0,
-        "Total Operating Income": 2448886.0,
-        "Operating Profit": 1613991.0,
+        "Total Operating Income": 2448886000.0,
+        "Operating Profit": 1613991000.0,
         "Net Profit": 1064283000.0,
         "Number of Shares": 37499010.0,
         "EPS(Rs.)": 37.84,
@@ -557,7 +605,15 @@
         "Base Rate": 28.94,
         "Interest Spread Rate": 7.38
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -574,8 +630,8 @@
         "Loans and Advances to Customers": 39203690000.0,
         "Interest Income": 3058891000.0,
         "Net Interest Income": 2195431000.0,
-        "Total Operating Income": 3347248.0,
-        "Operating Profit": 1923546.0,
+        "Total Operating Income": 3347248000.0,
+        "Operating Profit": 1923546000.0,
         "Net Profit": 1381953000.0,
         "Number of Shares": 40057150.0,
         "EPS(Rs.)": 35.49,
@@ -647,7 +703,15 @@
         "Base Rate": 43.14,
         "Interest Spread Rate": 5.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -667,8 +731,8 @@
         "Investment Securities": 15685609000.0,
         "Interest Income": 4924731000.0,
         "Net Interest Income": 2471065000.0,
-        "Total Operating Income": 3703117.0,
-        "Operating Profit": 2332880.0,
+        "Total Operating Income": 3703117000.0,
+        "Operating Profit": 2332880000.0,
         "Net Profit": 1628774000.0,
         "Distributable Profit": 2270158000.0,
         "Number of Shares": 94294540.0,
@@ -745,7 +809,15 @@
         "Base Rate": 67.78,
         "Interest Spread Rate": -34.37
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -765,8 +837,8 @@
         "Investment Securities": 7910946000.0,
         "Interest Income": 7532675000.0,
         "Net Interest Income": 3757380000.0,
-        "Total Operating Income": 5350439.0,
-        "Operating Profit": 3251138.0,
+        "Total Operating Income": 5350439000.0,
+        "Operating Profit": 3251138000.0,
         "Net Profit": 2269855000.0,
         "Distributable Profit": 2911240000.0,
         "Number of Shares": 94294540.0,
@@ -843,7 +915,15 @@
         "Base Rate": 93.63,
         "Interest Spread Rate": -6.42
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -864,8 +944,8 @@
         "Investment Securities": 6606460000.0,
         "Interest Income": 2826697000.0,
         "Net Interest Income": 1414090000.0,
-        "Total Operating Income": 1789237.0,
-        "Operating Profit": 1165417.0,
+        "Total Operating Income": 1789237000.0,
+        "Operating Profit": 1165417000.0,
         "Net Profit": 811397000.0,
         "Distributable Profit": 3009300000.0,
         "Number of Shares": 94294540.0,
@@ -943,7 +1023,15 @@
         "Base Rate": 55.11,
         "Interest Spread Rate": -23.97
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -964,8 +1052,8 @@
         "Investment Securities": 11918530.0,
         "Interest Income": 5900836000.0,
         "Net Interest Income": 2846040000.0,
-        "Total Operating Income": 3764328.0,
-        "Operating Profit": 2513639.0,
+        "Total Operating Income": 3764328000.0,
+        "Operating Profit": 2513639000.0,
         "Net Profit": 1753635000.0,
         "Distributable Profit": 2394735000.0,
         "Number of Shares": 94294540.0,
@@ -1043,7 +1131,15 @@
         "Base Rate": 49.46,
         "Interest Spread Rate": -21.56
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1064,8 +1160,8 @@
         "Investment Securities": 14970820000.0,
         "Interest Income": 9215455000.0,
         "Net Interest Income": 4407274000.0,
-        "Total Operating Income": 5833530.0,
-        "Operating Profit": 3738066.0,
+        "Total Operating Income": 5833530000.0,
+        "Operating Profit": 3738066000.0,
         "Net Profit": 2610087000.0,
         "Distributable Profit": 2565997000.0,
         "Number of Shares": 94294540.0,
@@ -1147,7 +1243,15 @@
         "Base Rate": 22.78,
         "Interest Spread Rate": 41.89
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1168,8 +1272,8 @@
         "Investment Securities": 8578067000.0,
         "Interest Income": 12743270000.0,
         "Net Interest Income": 5955257000.0,
-        "Total Operating Income": 7907713.0,
-        "Operating Profit": 5048400.0,
+        "Total Operating Income": 7907713000.0,
+        "Operating Profit": 5048400000.0,
         "Net Profit": 3525417000.0,
         "Distributable Profit": 2733936000.0,
         "Number of Shares": 94294540.0,
@@ -1251,7 +1355,15 @@
         "Base Rate": 2.38,
         "Interest Spread Rate": -5.44
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1272,8 +1384,8 @@
         "Investment Securities": 19854626000.0,
         "Interest Income": 3312258000.0,
         "Net Interest Income": 1387512000.0,
-        "Total Operating Income": 1773751.0,
-        "Operating Profit": 1188883.0,
+        "Total Operating Income": 1773751000.0,
+        "Operating Profit": 1188883000.0,
         "Net Profit": 827700000.0,
         "Distributable Profit": 435555000.0,
         "Number of Shares": 94294540.0,
@@ -1356,7 +1468,15 @@
         "Base Rate": -9.07,
         "Interest Spread Rate": 1.55
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1377,8 +1497,8 @@
         "Investment Securities": 19940741000.0,
         "Interest Income": 6133645000.0,
         "Net Interest Income": 2631421000.0,
-        "Total Operating Income": 3660065.0,
-        "Operating Profit": 2475896.0,
+        "Total Operating Income": 3660065000.0,
+        "Operating Profit": 2475896000.0,
         "Net Profit": 1726428000.0,
         "Distributable Profit": 1131784000.0,
         "Number of Shares": 94294540.0,
@@ -1461,7 +1581,15 @@
         "Base Rate": -21.82,
         "Interest Spread Rate": 1.78
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1481,8 +1609,8 @@
         "Investment Securities": 15651610000.0,
         "Interest Income": 8716639000.0,
         "Net Interest Income": 3920033000.0,
-        "Total Operating Income": 5432857.0,
-        "Operating Profit": 3509204.0,
+        "Total Operating Income": 5432857000.0,
+        "Operating Profit": 3509204000.0,
         "Net Profit": 2447122000.0,
         "Distributable Profit": 1817237000.0,
         "Number of Shares": 94294540.0,
@@ -1563,7 +1691,15 @@
         "Base Rate": -29.56,
         "Interest Spread Rate": -4.76
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1583,8 +1719,8 @@
         "Investment Securities": 17833740000.0,
         "Interest Income": 11080324000.0,
         "Net Interest Income": 5154494000.0,
-        "Total Operating Income": 7252178.0,
-        "Operating Profit": 4746506.0,
+        "Total Operating Income": 7252178000.0,
+        "Operating Profit": 4746506000.0,
         "Net Profit": 3308954000.0,
         "Distributable Profit": 2499167000.0,
         "Number of Shares": 94294540.0,
@@ -1665,7 +1801,15 @@
         "Base Rate": -26.83,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1685,8 +1829,8 @@
         "Investment Securities": 19252444000.0,
         "Interest Income": 2197626000.0,
         "Net Interest Income": 1169012000.0,
-        "Total Operating Income": 1745132.0,
-        "Operating Profit": 1231482.0,
+        "Total Operating Income": 1745132000.0,
+        "Operating Profit": 1231482000.0,
         "Net Profit": 862201000.0,
         "Distributable Profit": 3231329000.0,
         "Number of Shares": 94294540.0,
@@ -1767,7 +1911,15 @@
         "Base Rate": -32.19,
         "Interest Spread Rate": 1.78
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1787,8 +1939,8 @@
         "Investment Securities": 11096434000.0,
         "Interest Income": 4141986000.0,
         "Net Interest Income": 2172469000.0,
-        "Total Operating Income": 3218855.0,
-        "Operating Profit": 2346902.0,
+        "Total Operating Income": 3218855000.0,
+        "Operating Profit": 2346902000.0,
         "Net Profit": 1640630000.0,
         "Distributable Profit": 1139059000.0,
         "Number of Shares": 100423680.0,
@@ -1866,7 +2018,15 @@
         "Base Rate": -32.14,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1888,8 +2048,8 @@
         "Investment Securities": 15256846000.0,
         "Interest Income": 6129603000.0,
         "Net Interest Income": 3240777000.0,
-        "Total Operating Income": 4863979.0,
-        "Operating Profit": 3321867.0,
+        "Total Operating Income": 4863979000.0,
+        "Operating Profit": 3321867000.0,
         "Net Profit": 2173776000.0,
         "Distributable Profit": 1471651000.0,
         "Number of Shares": 100423680.0,
@@ -1969,7 +2129,15 @@
         "Base Rate": -22.05,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -1991,8 +2159,8 @@
         "Investment Securities": 13571456000.0,
         "Interest Income": 8337194000.0,
         "Net Interest Income": 4488425000.0,
-        "Total Operating Income": 6597470.0,
-        "Operating Profit": 4710124.0,
+        "Total Operating Income": 6597470000.0,
+        "Operating Profit": 4710124000.0,
         "Net Profit": 3029303000.0,
         "Distributable Profit": 1993326000.0,
         "Number of Shares": 100423680.0,
@@ -2072,7 +2240,15 @@
         "Base Rate": -24.39,
         "Interest Spread Rate": -11.75
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -2094,8 +2270,8 @@
         "Investment Securities": 12255519000.0,
         "Interest Income": 2197626000.0,
         "Net Interest Income": 1169012000.0,
-        "Total Operating Income": 1745132.0,
-        "Operating Profit": 1231482.0,
+        "Total Operating Income": 1745132000.0,
+        "Operating Profit": 1231482000.0,
         "Net Profit": 862201000.0,
         "Distributable Profit": 2411048000.0,
         "Number of Shares": 100423680.0,
@@ -2175,7 +2351,15 @@
         "Base Rate": -25.22,
         "Interest Spread Rate": -9.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -2197,8 +2381,8 @@
         "Investment Securities": 26005852000.0,
         "Interest Income": 3727076000.0,
         "Net Interest Income": 1974216000.0,
-        "Total Operating Income": 3127082.0,
-        "Operating Profit": 1966434.0,
+        "Total Operating Income": 3127082000.0,
+        "Operating Profit": 1966434000.0,
         "Net Profit": 1373324000.0,
         "Distributable Profit": 912547000.0,
         "Number of Shares": 100423680.0,
@@ -2281,7 +2465,15 @@
         "Base Rate": -7.21,
         "Interest Spread Rate": -16.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -2303,8 +2495,8 @@
         "Investment Securities": 26585186000.0,
         "Interest Income": 5496601000.0,
         "Net Interest Income": 2914742000.0,
-        "Total Operating Income": 4646764.0,
-        "Operating Profit": 2971438.0,
+        "Total Operating Income": 4646764000.0,
+        "Operating Profit": 2971438000.0,
         "Net Profit": 2081621000.0,
         "Distributable Profit": 1354747000.0,
         "Number of Shares": 100423680.0,
@@ -2387,7 +2579,15 @@
         "Base Rate": -14.15,
         "Interest Spread Rate": -8.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -2409,8 +2609,8 @@
         "Investment Securities": 27682168000.0,
         "Interest Income": 7423825000.0,
         "Net Interest Income": 3943296000.0,
-        "Total Operating Income": 6407544.0,
-        "Operating Profit": 4165150.0,
+        "Total Operating Income": 6407544000.0,
+        "Operating Profit": 4165150000.0,
         "Net Profit": 2850210000.0,
         "Distributable Profit": 1911592000.0,
         "Number of Shares": 100423680.0,
@@ -2494,7 +2694,15 @@
         "Base Rate": -11.42,
         "Interest Spread Rate": 6.8
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SCB",
@@ -2516,8 +2724,8 @@
         "Investment Securities": 27291462000.0,
         "Interest Income": 1897141000.0,
         "Net Interest Income": 1029879000.0,
-        "Total Operating Income": 1634288.0,
-        "Operating Profit": 1082363.0,
+        "Total Operating Income": 1634288000.0,
+        "Operating Profit": 1082363000.0,
         "Net Profit": 671443000.0,
         "Distributable Profit": 2228206000.0,
         "Number of Shares": 100423680.0,
@@ -2601,7 +2809,15 @@
         "Base Rate": -7.73,
         "Interest Spread Rate": 1.38
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:59:57.505537"

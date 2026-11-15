@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 4554780620.0,
         "Interest Income": 441982650.0,
         "Net Interest Income": 283552930.0,
-        "Total Operating Income": 355777.89,
-        "Operating Profit": 261521.71,
+        "Total Operating Income": 355777890.0,
+        "Operating Profit": 261521710.0,
         "Net Profit": 164758680.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 86.15,
@@ -63,7 +63,15 @@
         "graham_number": 798.92
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -81,8 +89,8 @@
         "Loans and Advances to Customers": 4583690810.0,
         "Interest Income": 601514520.0,
         "Net Interest Income": 382331980.0,
-        "Total Operating Income": 481986.8,
-        "Operating Profit": 352302.65,
+        "Total Operating Income": 481986800.0,
+        "Operating Profit": 352302650.0,
         "Net Profit": 221950670.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 87.04,
@@ -125,7 +133,15 @@
         "graham_number": 819.33
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -143,8 +159,8 @@
         "Loans and Advances to Customers": 4705670640.0,
         "Interest Income": 160801980.0,
         "Net Interest Income": 99800460.0,
-        "Total Operating Income": 120760.68,
-        "Operating Profit": 89622.72,
+        "Total Operating Income": 120760680.0,
+        "Operating Profit": 89622720.0,
         "Net Profit": 56462320.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 88.57,
@@ -187,7 +203,15 @@
         "graham_number": 831.99
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -205,8 +229,8 @@
         "Loans and Advances to Customers": 4562550250.0,
         "Interest Income": 318468510.0,
         "Net Interest Income": 198830140.0,
-        "Total Operating Income": 235423.44,
-        "Operating Profit": 174959.95,
+        "Total Operating Income": 235423440.0,
+        "Operating Profit": 174959950.0,
         "Net Profit": 110224760.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 86.45,
@@ -249,7 +273,15 @@
         "graham_number": 828.36
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -267,8 +299,8 @@
         "Loans and Advances to Customers": 4293777110.0,
         "Interest Income": 459629680.0,
         "Net Interest Income": 274488990.0,
-        "Total Operating Income": 323350.61,
-        "Operating Profit": 233136.97,
+        "Total Operating Income": 323350610.0,
+        "Operating Profit": 233136970.0,
         "Net Profit": 146876290.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 76.8,
@@ -336,7 +368,15 @@
         "Cost of funds": 0.2,
         "CD ratio": -10.3
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -354,8 +394,8 @@
         "Loans and Advances to Customers": 3656829320.0,
         "Interest Income": 641074380.0,
         "Net Interest Income": 381164240.0,
-        "Total Operating Income": 440229.48,
-        "Operating Profit": 209641.33,
+        "Total Operating Income": 440229480.0,
+        "Operating Profit": 209641330.0,
         "Net Profit": 146748930.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 57.55,
@@ -423,7 +463,15 @@
         "Cost of funds": -16.39,
         "CD ratio": -12.51
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -441,8 +489,8 @@
         "Loans and Advances to Customers": 3653363330.0,
         "Interest Income": 132668920.0,
         "Net Interest Income": 60060240.0,
-        "Total Operating Income": 73582.68,
-        "Operating Profit": 38108.63,
+        "Total Operating Income": 73582680.0,
+        "Operating Profit": 38108630.0,
         "Net Profit": 26676040.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 41.84,
@@ -510,7 +558,15 @@
         "Cost of funds": -29.23,
         "CD ratio": -11.96
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -528,8 +584,8 @@
         "Loans and Advances to Customers": 3557008800.0,
         "Interest Income": 266619610.0,
         "Net Interest Income": 126566140.0,
-        "Total Operating Income": 154024.55,
-        "Operating Profit": 40703.92,
+        "Total Operating Income": 154024550.0,
+        "Operating Profit": 40703920.0,
         "Net Profit": 28492740.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 22.35,
@@ -597,7 +653,15 @@
         "Cost of funds": -21.02,
         "CD ratio": -6.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -615,8 +679,8 @@
         "Loans and Advances to Customers": 3614447120.0,
         "Interest Income": 400659750.0,
         "Net Interest Income": 194626750.0,
-        "Total Operating Income": 237130.34,
-        "Operating Profit": 65824.89,
+        "Total Operating Income": 237130340.0,
+        "Operating Profit": 65824890.0,
         "Net Profit": 46077420.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 24.09,
@@ -684,7 +748,15 @@
         "Cost of funds": -12.89,
         "CD ratio": 0.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -701,8 +773,8 @@
         "Loans and Advances to Customers": 3532520330.0,
         "Interest Income": 626275550.0,
         "Net Interest Income": 352377520.0,
-        "Total Operating Income": 416029.88,
-        "Operating Profit": 140180.45,
+        "Total Operating Income": 416029880.0,
+        "Operating Profit": 140180450.0,
         "Net Profit": 67863500.0,
         "Number of Shares": 2550000.0,
         "EPS(Rs.)": 26.61,
@@ -768,7 +840,15 @@
         "Cost of funds": -3.23,
         "CD ratio": 8.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -788,8 +868,8 @@
         "Investments": 0.0,
         "Interest Income": 120930380.0,
         "Net Interest Income": 59800280.0,
-        "Total Operating Income": 79565.54,
-        "Operating Profit": 11415.84,
+        "Total Operating Income": 79565540.0,
+        "Operating Profit": 11415840.0,
         "Net Profit": 7991090.0,
         "Number of Shares": 2550000.0,
         "EPS Reported": 12.54,
@@ -857,7 +937,15 @@
         "CD ratio": 9.03,
         "Book Value Reported": 8.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -877,8 +965,8 @@
         "Investments": 0.0,
         "Interest Income": 254937060.0,
         "Net Interest Income": 135741740.0,
-        "Total Operating Income": 197316.16,
-        "Operating Profit": -135187.44,
+        "Total Operating Income": 197316160.0,
+        "Operating Profit": -135187440.0,
         "Net Profit": -135187440.0,
         "Number of Shares": 2550000.0,
         "EPS Reported": -106.03,
@@ -945,7 +1033,15 @@
         "CD ratio": 6.7,
         "Book Value Reported": 8.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -965,8 +1061,8 @@
         "Investments": 0.0,
         "Interest Income": 379933770.0,
         "Net Interest Income": 202174980.0,
-        "Total Operating Income": 264539.82,
-        "Operating Profit": -116058.13,
+        "Total Operating Income": 264539820.0,
+        "Operating Profit": -116058130.0,
         "Net Profit": -116058130.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": -53.12,
@@ -1033,7 +1129,15 @@
         "CD ratio": 3.05,
         "Book Value Reported": 8.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1053,8 +1157,8 @@
         "Investments": 0.0,
         "Interest Income": 530408060.0,
         "Net Interest Income": 291891970.0,
-        "Total Operating Income": 518164.04,
-        "Operating Profit": 103725.87,
+        "Total Operating Income": 518164040.0,
+        "Operating Profit": 103725870.0,
         "Net Profit": -10099620.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": -3.47,
@@ -1120,7 +1224,15 @@
         "CD ratio": -2.44,
         "Book Value Reported": 8.22
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1140,8 +1252,8 @@
         "Investments": 0.0,
         "Interest Income": 130812220.0,
         "Net Interest Income": 71889450.0,
-        "Total Operating Income": 89238.2,
-        "Operating Profit": 46614.16,
+        "Total Operating Income": 89238200.0,
+        "Operating Profit": 46614160.0,
         "Net Profit": 32629910.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": 44.8,
@@ -1210,7 +1322,15 @@
         "Cost of funds": 9.66,
         "CD ratio": -5.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1234,8 +1354,8 @@
         "Interest Income": 262530900.0,
         "Investment Securities": 0.0,
         "Net Interest Income": 147184850.0,
-        "Total Operating Income": 256138.27,
-        "Operating Profit": 133165.8,
+        "Total Operating Income": 256138270.0,
+        "Operating Profit": 133165800.0,
         "Net Profit": 93216060.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": 63.99,
@@ -1316,7 +1436,15 @@
         "Cost of funds": 1.39,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1336,8 +1464,8 @@
         "Investments": 0.0,
         "Interest Income": 385835330.0,
         "Net Interest Income": 213694410.0,
-        "Total Operating Income": 340498.87,
-        "Operating Profit": 203164.38,
+        "Total Operating Income": 340498870.0,
+        "Operating Profit": 203164380.0,
         "Net Profit": 142215070.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": 65.09,
@@ -1406,7 +1534,15 @@
         "Cost of funds": 1.4,
         "CD ratio": -4.8
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1426,8 +1562,8 @@
         "Investments": 0.0,
         "Interest Income": 527579880.0,
         "Net Interest Income": 295381200.0,
-        "Total Operating Income": 441746.81,
-        "Operating Profit": 209218.07,
+        "Total Operating Income": 441746810.0,
+        "Operating Profit": 209218070.0,
         "Net Profit": 137014110.0,
         "Number of Shares": 2913375000.0,
         "EPS Reported": 47.03,
@@ -1495,7 +1631,15 @@
         "Cost of funds": -99.89,
         "CD ratio": -1.45
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NESDO",
@@ -1515,8 +1659,8 @@
         "Investments": 0.0,
         "Interest Income": 132172710.0,
         "Net Interest Income": 72795140.0,
-        "Total Operating Income": 88409.7,
-        "Operating Profit": 52085.9,
+        "Total Operating Income": 88409700.0,
+        "Operating Profit": 52085900.0,
         "Net Profit": 36460130.0,
         "Number of Shares": 2913375.0,
         "EPS Reported": 50.06,
@@ -1585,7 +1729,15 @@
         "Cost of funds": -2.1,
         "CD ratio": 3.37
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:28:13.374787"

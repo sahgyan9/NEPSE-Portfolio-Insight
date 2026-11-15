@@ -43,8 +43,10 @@ ROOT_DIR = os.path.dirname(TOOLS_DIR)
 sys.path.insert(0, TOOLS_DIR)
 sys.path.insert(0, ROOT_DIR)
 
+import portfolio_common
 import quarterly_db
 from quarterly_db import normalize_sector, upsert_quarters, load_symbol_data
+import fix_quarterly_percents
 
 # Optional NepseAlpha fallback scraper
 try:
@@ -86,14 +88,22 @@ def _num(v):
         return None
 
 
+# Whole words that mark a ratio, percentage or per-share figure.
+_RATIO_WORDS = {"ratio", "rate", "npl", "car", "spread", "eps", "roe", "roa", "yield", "margin", "pe", "pb", "pvb"}
+_RATIO_PHRASES = ("cost of funds", "book value", "per share")
+
+
 def is_ratio_or_per_share(key: str) -> bool:
-    """Identify per-share metrics, percentages, and regulatory ratios that should not be scaled by 1,000."""
+    """Identify per-share metrics, percentages, and regulatory ratios that should not be scaled by 1,000.
+
+    Matches whole words. The earlier substring test also matched "pe" in "Operating" and
+    "Expenses" and "ratio" in "Operation", so those amounts were stored in thousands
+    (repaired by tools/fix_quarterly_units.py, 2026-11-15).
+    """
     k = key.lower()
-    return any(term in k for term in [
-        "ratio", "rate", "npl", "car", "cost of funds", "spread",
-        "eps", "book value", "roe", "roa", "yield", "margin", "%",
-        "per share", "pe", "pb", "pvb"
-    ])
+    if "%" in k or any(phrase in k for phrase in _RATIO_PHRASES):
+        return True
+    return any(word in _RATIO_WORDS for word in re.findall(r"[a-z]+", k))
 
 
 def lookup_company_meta(symbol: str) -> dict:
@@ -331,6 +341,7 @@ def parse_hamroshare_response(symbol: str, text: str) -> tuple:
         net_profit = raw_dict.get("Net Profit")
         revenue = (raw_dict.get("Revenue") or
                    raw_dict.get("Revenue from Operation") or
+                   raw_dict.get("Revenue from Contract with Customers") or
                    raw_dict.get("Interest Income") or
                    raw_dict.get("Total Operating Income"))
 
@@ -469,9 +480,7 @@ def fallback_nepsealpha_fetch(symbol: str) -> tuple:
                         val = _num(cell.replace("%", "").replace(",", ""))
                         if val is not None:
                             lower = label.lower()
-                            if ("%" in cell or "eps" in lower or "book value" in lower or
-                                "shares" in lower or "npl" in lower or "rate" in lower or
-                                "ratio" in lower or "car" in lower or "spread" in lower):
+                            if "%" in cell or "shares" in lower or is_ratio_or_per_share(label):
                                 fin_data[fq_k][label] = val
                             else:
                                 fin_data[fq_k][label] = val * 1000.0
@@ -621,6 +630,10 @@ def merge_fundamentals_json(symbol: str, meta: dict, snapshot: dict):
         if v is not None:
             record[k_fund] = v
 
+    # The snapshot's P/E is the source site's own figure; derive it from the EPS just
+    # stored so the two cannot disagree. The archive snapshot keeps the source value.
+    portfolio_common.recompute_ratios(symbol, record)
+
     with open(FUNDAMENTALS_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
@@ -668,6 +681,11 @@ def harvest_symbol(client: httpx.Client, symbol_meta: dict, force: bool = False,
 
     # 3. Non-destructive Ingestion
     upsert_quarters(symbol, quarters, company_name=comp_name, sector=sec)
+    # The source sometimes serves bank ratios without the decimal point (CAR 11.12 as 1112);
+    # the upsert above writes them back, so repair the file after every harvest.
+    pct_changes = fix_quarterly_percents.fix_file(quarterly_db._db_path(symbol))
+    if pct_changes:
+        print(f"  [{symbol}] Divided {sum(len(c['raw']) for c in pct_changes)} ratio value(s) stored x100 by 100.")
     upsert_archive_snapshot(symbol, comp_name, sec, snapshot)
     symbol_meta["sector"] = sec
     symbol_meta["name"] = comp_name

@@ -17,7 +17,7 @@
         "Current Liabilities": 3482426920.0,
         "Current Assets": 5108863630.0,
         "Total Assets": 12778978060.0,
-        "Revenue from Operation": 7253392.99,
+        "Revenue from Operation": 7253392990.0,
         "Net Profit": 654852740.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 19.84,
@@ -45,11 +45,18 @@
         "roe_ttm": 9.51,
         "roa_ttm": null,
         "net_profit_ttm": 654852740.0,
-        "revenue_ttm": 7253392.99,
+        "revenue_ttm": 7253392990.0,
         "graham_number": 305.27
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -65,7 +72,7 @@
         "Current Liabilities": 2997065790.0,
         "Current Assets": 4495877590.0,
         "Total Assets": 12332865170.0,
-        "Revenue from Operation": 9260381.11,
+        "Revenue from Operation": 9260381110.0,
         "Net Profit": 689397650.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 15.67,
@@ -93,11 +100,18 @@
         "roe_ttm": 7.47,
         "roa_ttm": null,
         "net_profit_ttm": 689397650.0,
-        "revenue_ttm": 9260381.11,
+        "revenue_ttm": 9260381110.0,
         "graham_number": 271.99
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -113,7 +127,7 @@
         "Current Liabilities": 2760922210.0,
         "Current Assets": 4328291130.0,
         "Total Assets": 12366752830.0,
-        "Revenue from Operation": 1534531.71,
+        "Revenue from Operation": 1534531710.0,
         "Net Profit": 274765080.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 24.98,
@@ -141,11 +155,18 @@
         "roe_ttm": 11.56,
         "roa_ttm": null,
         "net_profit_ttm": 274765080.0,
-        "revenue_ttm": 1534531.71,
+        "revenue_ttm": 1534531710.0,
         "graham_number": 348.5
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -161,7 +182,7 @@
         "Current Liabilities": 3297415050.0,
         "Current Assets": 4527917140.0,
         "Total Assets": 12498934650.0,
-        "Revenue from Operation": 3343070.86,
+        "Revenue from Operation": 3343070860.0,
         "Net Profit": 329088840.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 14.96,
@@ -189,11 +210,18 @@
         "roe_ttm": 7.23,
         "roa_ttm": null,
         "net_profit_ttm": 329088840.0,
-        "revenue_ttm": 3343070.86,
+        "revenue_ttm": 3343070860.0,
         "graham_number": 263.87
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -209,7 +237,7 @@
         "Current Liabilities": 3193412650.0,
         "Current Assets": 4491202750.0,
         "Total Assets": 12377836990.0,
-        "Revenue from Operation": 5458105.99,
+        "Revenue from Operation": 5458105990.0,
         "Net Profit": 319917550.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 9.69,
@@ -237,7 +265,7 @@
         "roe_ttm": 4.69,
         "roa_ttm": null,
         "net_profit_ttm": 319917550.0,
-        "revenue_ttm": 5458105.99,
+        "revenue_ttm": 5458105990.0,
         "graham_number": 212.26
       },
       "yoy": {
@@ -259,7 +287,14 @@
         "Book Value(Rs.)": -1.02,
         "ROE": -50.68
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -275,7 +310,7 @@
         "Current Liabilities": 2454354220.0,
         "Current Assets": 3846584370.0,
         "Total Assets": 11612357690.0,
-        "Revenue from Operation": 7752793.19,
+        "Revenue from Operation": 7752793190.0,
         "Net Profit": 302490190.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": 6.87,
@@ -303,7 +338,7 @@
         "roe_ttm": 3.33,
         "roa_ttm": null,
         "net_profit_ttm": 302490190.0,
-        "revenue_ttm": 7752793.19,
+        "revenue_ttm": 7752793190.0,
         "graham_number": 178.55
       },
       "yoy": {
@@ -325,7 +360,14 @@
         "Book Value(Rs.)": -1.71,
         "ROE": -55.42
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -341,7 +383,7 @@
         "Current Liabilities": 2822587350.0,
         "Current Assets": 4257996980.0,
         "Total Assets": 11924310800.0,
-        "Revenue from Operation": 1627586.92,
+        "Revenue from Operation": 1627586920.0,
         "Net Profit": -53420120.0,
         "Number of Shares": 44000000.0,
         "EPS(Rs.)": -4.86,
@@ -369,7 +411,7 @@
         "roe_ttm": -2.37,
         "roa_ttm": null,
         "net_profit_ttm": -53420120.0,
-        "revenue_ttm": 1627586.92
+        "revenue_ttm": 1627586920.0
       },
       "yoy": {
         "eps_ttm": -119.46,
@@ -390,7 +432,14 @@
         "Book Value(Rs.)": -5.11,
         "ROE": -120.5
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -406,7 +455,7 @@
         "Current Liabilities": 2759789380.0,
         "Current Assets": 4309155530.0,
         "Total Assets": 12333574540.0,
-        "Revenue from Operation": 3519981.77,
+        "Revenue from Operation": 3519981770.0,
         "Gross Profit": 504223180.0,
         "Net Profit": 148597960.0,
         "Number of Shares": 50270000.0,
@@ -436,7 +485,7 @@
         "roe_ttm": 3.15,
         "roa_ttm": null,
         "net_profit_ttm": 148597960.0,
-        "revenue_ttm": 3519981.77,
+        "revenue_ttm": 3519981770.0,
         "graham_number": 157.98
       },
       "yoy": {
@@ -458,7 +507,14 @@
         "Book Value(Rs.)": -9.26,
         "ROE": -56.43
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -474,7 +530,7 @@
         "Current Liabilities": 2657052390.0,
         "Current Assets": 3923971230.0,
         "Total Assets": 12258245390.0,
-        "Revenue from Operation": 5997753.71,
+        "Revenue from Operation": 5997753710.0,
         "Gross Profit": 763746960.0,
         "Net Profit": 204282320.0,
         "Number of Shares": 50270000.0,
@@ -504,7 +560,7 @@
         "roe_ttm": 2.88,
         "roa_ttm": null,
         "net_profit_ttm": 204282320.0,
-        "revenue_ttm": 5997753.71,
+        "revenue_ttm": 5997753710.0,
         "graham_number": 151.49
       },
       "yoy": {
@@ -526,7 +582,14 @@
         "Book Value(Rs.)": -8.93,
         "ROE": -38.59
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHIVM",
@@ -548,11 +611,11 @@
         "net_profit_till_qtr": 250200000.0,
         "revenue_till_qtr": 7906000000.0,
         "net_profit_ttm": 250222350.0,
-        "revenue_ttm": 7707488.36,
+        "revenue_ttm": 7707488360.0,
         "graham_number": 145.53,
         "earnings_yield": 0.55,
         "peg_ratio": null,
-        "dupont_net_margin": 3.16,
+        "dupont_net_margin": 3.25,
         "dupont_asset_turnover": null,
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
@@ -576,7 +639,7 @@
         "Current Liabilities": 2310773550.0,
         "Current Assets": 3612852390.0,
         "Total Assets": 11958682210.0,
-        "Revenue from Operation": 7707488.36,
+        "Revenue from Operation": 7707488360.0,
         "Gross Profit": 1034892820.0,
         "Net Profit": 250222350.0,
         "Number of Shares": 50270000.0,
@@ -628,6 +691,13 @@
         "EPS(Rs.)": -27.51,
         "Book Value(Rs.)": -8.35,
         "ROE": -21.02
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -650,11 +720,11 @@
         "net_profit_till_qtr": 12800000.0,
         "revenue_till_qtr": 1406399999.9999998,
         "net_profit_ttm": 12799150.0,
-        "revenue_ttm": 1406380.58,
+        "revenue_ttm": 1406380580.0,
         "graham_number": 65.91,
         "earnings_yield": 0.66,
         "peg_ratio": 2.76,
-        "dupont_net_margin": 4.12,
+        "dupont_net_margin": 0.91,
         "dupont_asset_turnover": null,
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
@@ -678,7 +748,7 @@
         "Current Liabilities": 2077437600.0,
         "Current Assets": 3420286700.0,
         "Total Assets": 11742999140.0,
-        "Revenue from Operation": 1406380.58,
+        "Revenue from Operation": 1406380580.0,
         "Gross Profit": 103649860.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 12799150.0,
@@ -724,6 +794,13 @@
         "ROE Reported": 47.39,
         "eps_ttm": 120.99,
         "net_profit_ttm": 123.96
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -746,11 +823,11 @@
         "net_profit_till_qtr": 56800000.0,
         "revenue_till_qtr": 3101700000.0,
         "net_profit_ttm": 56810410.0,
-        "revenue_ttm": 3101696.48,
+        "revenue_ttm": 3101696480.0,
         "graham_number": 90.58,
         "earnings_yield": 0.39,
         "peg_ratio": 8.59,
-        "dupont_net_margin": 2.12,
+        "dupont_net_margin": 1.83,
         "dupont_asset_turnover": null,
         "dupont_equity_multiplier": null,
         "dupont_roe": null,
@@ -774,7 +851,7 @@
         "Current Liabilities": 2210380020.0,
         "Current Assets": 3587894640.0,
         "Total Assets": 11945777860.0,
-        "Revenue from Operation": 3101696.48,
+        "Revenue from Operation": 3101696480.0,
         "Gross Profit": 400186380.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 56810410.0,
@@ -821,6 +898,13 @@
         "EPS Reported": 50.82,
         "Book Value Reported": 2.32,
         "ROE Reported": 47.39
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -843,18 +927,18 @@
         "net_profit_till_qtr": 400500000.0,
         "revenue_till_qtr": 5397300000.0,
         "net_profit_ttm": 400547400.0,
-        "revenue_ttm": 5397296.52,
+        "revenue_ttm": 5397296520.0,
         "graham_number": 199.73,
         "earnings_yield": 0.39,
         "peg_ratio": 1.86,
-        "dupont_net_margin": 6.11,
-        "dupont_asset_turnover": 0.5869,
+        "dupont_net_margin": 7.42,
+        "dupont_asset_turnover": 0.4336,
         "dupont_equity_multiplier": 1.26,
-        "dupont_roe": 4.52,
+        "dupont_roe": 4.05,
         "debt_to_equity": 0.11,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 133.88,
+        "revenue_per_share": 98.91,
         "qoq_profit_momentum": null,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -871,7 +955,7 @@
         "Current Liabilities": 2365829250.0,
         "Current Assets": 3828563660.0,
         "Total Assets": 12447450130.0,
-        "Revenue from Operation": 5397296.52,
+        "Revenue from Operation": 5397296520.0,
         "Gross Profit": 1003817630.0,
         "Net Profit": 400547400.0,
         "Number of Shares": 54568085.0,
@@ -918,6 +1002,13 @@
         "EPS Reported": 50.82,
         "Book Value Reported": 2.32,
         "ROE Reported": 47.39
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -940,7 +1031,7 @@
         "net_profit_till_qtr": 794100000.0,
         "revenue_till_qtr": 7764299999.999999,
         "net_profit_ttm": 794108000.0,
-        "revenue_ttm": 7764296.4,
+        "revenue_ttm": 7764296400.0,
         "graham_number": 248.46,
         "earnings_yield": 2.3,
         "peg_ratio": 0.2,
@@ -968,7 +1059,7 @@
         "Current Liabilities": 2094236240.0,
         "Current Assets": 3777444320.0,
         "Total Assets": 12598276930.0,
-        "Revenue from Operation": 7764296.4,
+        "Revenue from Operation": 7764296400.0,
         "Gross Profit": 1729378590.0,
         "Net Profit": 794108000.0,
         "Number of Shares": 54568085.0,
@@ -1015,6 +1106,13 @@
         "EPS Reported": 50.82,
         "Book Value Reported": 2.32,
         "ROE Reported": 47.39
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1037,18 +1135,18 @@
         "net_profit_till_qtr": 209700000.0,
         "revenue_till_qtr": 1533300000.0000002,
         "net_profit_ttm": 209668870.0,
-        "revenue_ttm": 1533309.62,
+        "revenue_ttm": 1533309620.0,
         "graham_number": 257.8,
         "earnings_yield": 2.44,
         "peg_ratio": 0.19,
-        "dupont_net_margin": 12.56,
-        "dupont_asset_turnover": 0.6108,
+        "dupont_net_margin": 13.67,
+        "dupont_asset_turnover": 0.1187,
         "dupont_equity_multiplier": 1.23,
-        "dupont_roe": 9.44,
+        "dupont_roe": 2.0,
         "debt_to_equity": 0.02,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 144.61,
+        "revenue_per_share": 28.1,
         "qoq_profit_momentum": -46.73,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1065,7 +1163,7 @@
         "Current Liabilities": 2210692190.0,
         "Current Assets": 4103367050.0,
         "Total Assets": 12920369760.0,
-        "Revenue from Operation": 1533309.62,
+        "Revenue from Operation": 1533309620.0,
         "Gross Profit": 326572420.0,
         "Net Profit": 209668870.0,
         "Number of Shares": 54568085.0,
@@ -1112,6 +1210,13 @@
         "EPS Reported": 1406.86,
         "Book Value Reported": 1.53,
         "ROE Reported": 1381.48
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1134,18 +1239,18 @@
         "net_profit_till_qtr": 357100000.0,
         "revenue_till_qtr": 3098300000.0,
         "net_profit_ttm": 357064890.0,
-        "revenue_ttm": 3098286.2,
+        "revenue_ttm": 3098286200.0,
         "graham_number": 227.66,
         "earnings_yield": 3.21,
         "peg_ratio": 0.05,
-        "dupont_net_margin": 14.1,
-        "dupont_asset_turnover": 0.5902,
+        "dupont_net_margin": 11.52,
+        "dupont_asset_turnover": 0.2356,
         "dupont_equity_multiplier": 1.3,
-        "dupont_roe": 10.82,
+        "dupont_roe": 3.53,
         "debt_to_equity": 0.06,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 138.76,
+        "revenue_per_share": 55.39,
         "qoq_profit_momentum": -29.7,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1162,7 +1267,7 @@
         "Current Liabilities": 2841838840.0,
         "Current Assets": 4323070890.0,
         "Total Assets": 13149715230.0,
-        "Revenue from Operation": 3098286.2,
+        "Revenue from Operation": 3098286200.0,
         "Gross Profit": 654486250.0,
         "Net Profit": 357064890.0,
         "Number of Shares": 55932287.13,
@@ -1209,6 +1314,13 @@
         "EPS Reported": 513.94,
         "Book Value Reported": 2.89,
         "ROE Reported": 494.96
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1231,18 +1343,18 @@
         "net_profit_till_qtr": 619200000.0,
         "revenue_till_qtr": 4954700000.0,
         "net_profit_ttm": 619192410.0,
-        "revenue_ttm": 4954741.8,
+        "revenue_ttm": 4954741800.0,
         "graham_number": 248.08,
         "earnings_yield": 2.89,
         "peg_ratio": 0.27,
-        "dupont_net_margin": 13.83,
-        "dupont_asset_turnover": 0.5594,
+        "dupont_net_margin": 12.5,
+        "dupont_asset_turnover": 0.3786,
         "dupont_equity_multiplier": 1.26,
-        "dupont_roe": 9.75,
+        "dupont_roe": 5.96,
         "debt_to_equity": 0.03,
         "net_interest_margin": null,
         "operating_profit_margin": null,
-        "revenue_per_share": 130.9,
+        "revenue_per_share": 88.58,
         "qoq_profit_momentum": 77.84,
         "loan_to_asset": null,
         "efficiency_ratio": null,
@@ -1259,7 +1371,7 @@
         "Current Liabilities": 2513915140.0,
         "Current Assets": 4273971770.0,
         "Total Assets": 13088712090.0,
-        "Revenue from Operation": 4954741.8,
+        "Revenue from Operation": 4954741800.0,
         "Gross Profit": 1143696490.0,
         "Net Profit": 619192410.0,
         "Number of Shares": 55932287.13,
@@ -1306,6 +1418,13 @@
         "EPS Reported": 50.77,
         "Book Value Reported": 2.32,
         "ROE Reported": 47.59
+      },
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1322,7 +1441,7 @@
         "Current Liabilities": 2308188820.0,
         "Current Assets": 3782435650.0,
         "Total Assets": 13072154550.0,
-        "Revenue from Operation": 6922657.42,
+        "Revenue from Operation": 6922657420.0,
         "Gross Profit": 1597511130.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 784474150.0,
@@ -1354,7 +1473,7 @@
         "roe_ttm": 7.43,
         "roa_ttm": null,
         "net_profit_ttm": 784474150.0,
-        "revenue_ttm": 6922657.42,
+        "revenue_ttm": 6922657420.0,
         "graham_number": 244.1
       },
       "yoy": {
@@ -1377,7 +1496,14 @@
         "Book Value Reported": 0.1,
         "ROE Reported": -3.76
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:04:39.665430"

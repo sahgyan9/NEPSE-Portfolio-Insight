@@ -63,7 +63,7 @@
         "Current Assets": 180192000.0,
         "Total Assets": 6201235000.0,
         "Gross Profit": 103110000.0,
-        "Operating Profit": 83950.0,
+        "Operating Profit": 83950000.0,
         "Net Profit": 13700000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": 0.91,
@@ -96,7 +96,14 @@
         "graham_number": 43.94
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -114,7 +121,7 @@
         "Total Assets": 6113128000.0,
         "Revenue": 153341000.0,
         "Gross Profit": 90949000.0,
-        "Operating Profit": 75606.0,
+        "Operating Profit": 75606000.0,
         "Net Profit": -34493000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -9.2,
@@ -147,7 +154,14 @@
         "revenue_ttm": 153341000.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -164,7 +178,7 @@
         "Current Assets": 143164000.0,
         "Total Assets": 6218515000.0,
         "Gross Profit": 156794000.0,
-        "Operating Profit": 120991.0,
+        "Operating Profit": 120991000.0,
         "Net Profit": -111108000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -14.81,
@@ -196,7 +210,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -214,7 +235,7 @@
         "Total Assets": 6176054000.0,
         "Revenue": 434979000.0,
         "Gross Profit": 237740000.0,
-        "Operating Profit": 190739.0,
+        "Operating Profit": 190739000.0,
         "Net Profit": -158973000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -14.13,
@@ -263,7 +284,14 @@
         "Book Value(Rs.)": -16.57,
         "ROE": -938.42
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -281,7 +309,7 @@
         "Total Assets": 6131386000.0,
         "Revenue": 591644000.0,
         "Gross Profit": 333348000.0,
-        "Operating Profit": 273809.0,
+        "Operating Profit": 273809000.0,
         "Net Profit": -209321000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -13.95,
@@ -332,7 +360,14 @@
         "Book Value(Rs.)": -22.02,
         "ROE": -2056.7
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -350,7 +385,7 @@
         "Total Assets": 60644459000.0,
         "Revenue": 130851000.0,
         "Gross Profit": 69958000.0,
-        "Operating Profit": 60957.0,
+        "Operating Profit": 60957000.0,
         "Net Profit": -33734000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -9.0,
@@ -403,7 +438,14 @@
         "Book Value(Rs.)": -15.13,
         "ROE": -15.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -421,7 +463,7 @@
         "Total Assets": 6047916000.0,
         "Revenue": 287039000.0,
         "Gross Profit": 154766000.0,
-        "Operating Profit": 138644.0,
+        "Operating Profit": 138644000.0,
         "Net Profit": -106443000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -14.19,
@@ -472,7 +514,14 @@
         "Book Value(Rs.)": -15.71,
         "ROE": -13.68
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -490,7 +539,7 @@
         "Total Assets": 5970668000.0,
         "Revenue": 430562000.0,
         "Gross Profit": 233479000.0,
-        "Operating Profit": 209813.0,
+        "Operating Profit": 209813000.0,
         "Net Profit": -151180000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -13.44,
@@ -543,7 +592,14 @@
         "Book Value(Rs.)": -12.81,
         "ROE": -9.03
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -561,7 +617,7 @@
         "Total Assets": 5946305000.0,
         "Revenue": 592046000.0,
         "Gross Profit": 327903000.0,
-        "Operating Profit": 290859.0,
+        "Operating Profit": 290859000.0,
         "Net Profit": -166673000.0,
         "Number of Shares": 15000000.0,
         "EPS(Rs.)": -11.11,
@@ -614,7 +670,14 @@
         "Book Value(Rs.)": -10.23,
         "ROE": 11.33
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -632,7 +695,7 @@
         "Total Assets": 5914556000.0,
         "Revenue": 212160000.0,
         "Gross Profit": 142828000.0,
-        "Operating Profit": 134640.0,
+        "Operating Profit": 134640000.0,
         "Net Profit": -7575000.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": -2.02,
@@ -682,7 +745,14 @@
         "Net Profit": 77.54,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -768,7 +838,7 @@
         "Total Assets": 5963456000.0,
         "Revenue": 508953000.0,
         "Gross Profit": 302952000.0,
-        "Operating Profit": 276565.0,
+        "Operating Profit": 276565000.0,
         "Net Profit": -42903000.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": -3.81,
@@ -818,7 +888,14 @@
         "Net Profit": 71.62,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -904,7 +981,7 @@
         "Total Assets": 5661725000.0,
         "Revenue": 170728000.0,
         "Gross Profit": 95620000.0,
-        "Operating Profit": 87710.0,
+        "Operating Profit": 87710000.0,
         "Net Profit": -7697000.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": -2.05,
@@ -957,7 +1034,14 @@
         "Book Value Reported": 5.82,
         "ROE Reported": 4.1
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -1046,7 +1130,7 @@
         "Total Assets": 5715321000.0,
         "Revenue": 609770000.0,
         "Gross Profit": 388185000.0,
-        "Operating Profit": 364719.0,
+        "Operating Profit": 364719000.0,
         "Net Profit": 147778000.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": 13.14,
@@ -1100,7 +1184,14 @@
         "Book Value Reported": 6.36,
         "ROE Reported": 423.78
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NYADI",
@@ -1118,7 +1209,7 @@
         "Total Assets": 5525604000.0,
         "Revenue": 652012000.0,
         "Gross Profit": 352840000.0,
-        "Operating Profit": 320109.0,
+        "Operating Profit": 320109000.0,
         "Net Profit": 40446000.0,
         "Number of Shares": 15000000.0,
         "EPS Reported": 2.7,
@@ -1171,7 +1262,14 @@
         "Book Value Reported": 1.09,
         "ROE Reported": 142.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:39:50.429206"

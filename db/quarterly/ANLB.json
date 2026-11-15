@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:22:50.472011",
+      "parsed_at": "2026-11-14T20:31:56.832745",
       "raw": {
         "Paid Up Capital": 42000000.0,
         "Reserve and Surplus": 175614000.0,
@@ -19,8 +19,8 @@
         "Loans and Advances to Customers": 1443933000.0,
         "Interest Income": 172093000.0,
         "Net Interest Income": 111304000.0,
-        "Total Operating Income": 132203.0,
-        "Operating Profit": 96945.0,
+        "Total Operating Income": 132203000.0,
+        "Operating Profit": 96945000.0,
         "Net Profit": 61641000.0,
         "Number of Shares": 420000.0,
         "EPS(Rs.)": 195.69,
@@ -61,14 +61,22 @@
         "graham_number": 1510.41
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:22:50.471894",
+      "parsed_at": "2026-11-14T20:31:56.832654",
       "raw": {
         "Paid Up Capital": 42000000.0,
         "Reserve and Surplus": 177506000.0,
@@ -79,8 +87,8 @@
         "Loans and Advances to Customers": 1359550000.0,
         "Interest Income": 94199000.0,
         "Net Interest Income": 62969000.0,
-        "Total Operating Income": 72300.0,
-        "Operating Profit": 17944.0,
+        "Total Operating Income": 72300000.0,
+        "Operating Profit": 17944000.0,
         "Net Profit": 12401000.0,
         "Number of Shares": 420000.0,
         "EPS(Rs.)": 39.37,
@@ -121,14 +129,22 @@
         "graham_number": 680.41
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:22:50.471765",
+      "parsed_at": "2026-11-14T20:31:56.832563",
       "raw": {
         "Paid Up Capital": 62338000.0,
         "Reserve and Surplus": 210006010.0,
@@ -139,8 +155,8 @@
         "Loans and Advances to Customers": 1279671200.0,
         "Interest Income": 137844520.0,
         "Net Interest Income": 92175350.0,
-        "Total Operating Income": 105228.1,
-        "Operating Profit": 55174.14,
+        "Total Operating Income": 105228100.0,
+        "Operating Profit": 55174140.0,
         "Net Profit": 44605920.0,
         "Number of Shares": 623380.0,
         "EPS(Rs.)": 95.41,
@@ -181,14 +197,22 @@
         "graham_number": 968.43
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:22:50.471651",
+      "parsed_at": "2026-11-14T20:31:56.832472",
       "raw": {
         "Paid Up Capital": 62338000.0,
         "Reserve and Surplus": 212577230.0,
@@ -199,8 +223,8 @@
         "Loans and Advances to Customers": 1305121730.0,
         "Interest Income": 182625930.0,
         "Net Interest Income": 119559710.0,
-        "Total Operating Income": 17782.89,
-        "Operating Profit": 33852.53,
+        "Total Operating Income": 17782890.0,
+        "Operating Profit": 33852530.0,
         "Net Profit": 48607760.0,
         "Number of Shares": 623380.0,
         "EPS(Rs.)": 77.97,
@@ -241,14 +265,22 @@
         "graham_number": 879.59
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:22:50.471538",
+      "parsed_at": "2026-11-14T20:31:56.832385",
       "raw": {
         "Paid Up Capital": 62338000.0,
         "Reserve and Surplus": 242519470.0,
@@ -259,8 +291,8 @@
         "Loans and Advances to Customers": 1356348870.0,
         "Interest Income": 44743670.0,
         "Net Interest Income": 26980000.0,
-        "Total Operating Income": 31750.07,
-        "Operating Profit": -3667.76,
+        "Total Operating Income": 31750070.0,
+        "Operating Profit": -3667760.0,
         "Net Profit": 5283650.0,
         "Number of Shares": 623380.0,
         "EPS(Rs.)": 33.9,
@@ -327,14 +359,22 @@
         "NPL": 93.86,
         "Cost of funds": 13.29
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:22:50.471421",
+      "parsed_at": "2026-11-14T20:31:56.832294",
       "raw": {
         "Paid Up Capital": 68571800.0,
         "Reserve and Surplus": 198722480.0,
@@ -345,8 +385,8 @@
         "Loans and Advances to Customers": 1411231120.0,
         "Interest Income": 91228880.0,
         "Net Interest Income": 56868030.0,
-        "Total Operating Income": 66419.59,
-        "Operating Profit": -63074.93,
+        "Total Operating Income": 66419590.0,
+        "Operating Profit": -63074930.0,
         "Net Profit": 11822210.0,
         "Number of Shares": 685718.0,
         "EPS(Rs.)": 34.48,
@@ -411,14 +451,22 @@
         "NPL": 74.23,
         "Cost of funds": 25.86
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:22:50.471308",
+      "parsed_at": "2026-11-14T20:31:56.832208",
       "raw": {
         "Paid Up Capital": 68571800.0,
         "Reserve and Surplus": 198079670.0,
@@ -429,8 +477,8 @@
         "Loans and Advances to Customers": 1460022930.0,
         "Interest Income": 139623610.0,
         "Net Interest Income": 86490820.0,
-        "Total Operating Income": 100683.91,
-        "Operating Profit": 61421.76,
+        "Total Operating Income": 100683910.0,
+        "Operating Profit": 61421760.0,
         "Net Profit": 12705150.0,
         "Number of Shares": 685718.0,
         "EPS(Rs.)": 24.7,
@@ -495,14 +543,22 @@
         "NPL": 54.86,
         "Cost of funds": 5.12
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:22:50.471195",
+      "parsed_at": "2026-11-14T20:31:56.832119",
       "raw": {
         "Paid Up Capital": 68571800.0,
         "Reserve and Surplus": 198750540.0,
@@ -513,8 +569,8 @@
         "Loans and Advances to Customers": 1478651510.0,
         "Interest Income": 196606310.0,
         "Net Interest Income": 123829250.0,
-        "Total Operating Income": 142255.71,
-        "Operating Profit": -86155.78,
+        "Total Operating Income": 142255710.0,
+        "Operating Profit": -86155780.0,
         "Net Profit": 13969710.0,
         "Number of Shares": 685718.0,
         "EPS(Rs.)": 20.37,
@@ -579,14 +635,22 @@
         "NPL": 74.41,
         "Cost of funds": 7.24
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:22:50.471080",
+      "parsed_at": "2026-11-14T20:31:56.832028",
       "raw": {
         "Paid Up Capital": 68571800.0,
         "Reserve and Surplus": 200544640.0,
@@ -597,8 +661,8 @@
         "Loans and Advances to Customers": 1464583880.0,
         "Interest Income": 51202740.0,
         "Net Interest Income": 31343140.0,
-        "Total Operating Income": 34651.08,
-        "Operating Profit": -23044.5,
+        "Total Operating Income": 34651080.0,
+        "Operating Profit": -23044500.0,
         "Net Profit": -4353450.0,
         "Number of Shares": 685718.0,
         "EPS(Rs.)": -25.39,
@@ -662,14 +726,22 @@
         "NPL": 69.17,
         "Cost of funds": -1.43
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:22:50.470965",
+      "parsed_at": "2026-11-14T20:31:56.831935",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Reserve and Surplus": 188395150.0,
@@ -682,8 +754,8 @@
         "Investments": 0.0,
         "Interest Income": 104239750.0,
         "Net Interest Income": 65674930.0,
-        "Total Operating Income": 72658.75,
-        "Operating Profit": -3126.39,
+        "Total Operating Income": 72658750.0,
+        "Operating Profit": -3126390.0,
         "Net Profit": 8431010.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 21.52,
@@ -749,14 +821,22 @@
         "NPL": -1.24,
         "Cost of funds": 5.07
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:22:50.470838",
+      "parsed_at": "2026-11-14T20:31:56.831834",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Reserve and Surplus": 200007010.0,
@@ -769,8 +849,8 @@
         "Investments": 0.0,
         "Interest Income": 156863740.0,
         "Net Interest Income": 98633140.0,
-        "Total Operating Income": 110048.38,
-        "Operating Profit": 21170.01,
+        "Total Operating Income": 110048380.0,
+        "Operating Profit": 21170010.0,
         "Net Profit": 21462090.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 36.53,
@@ -836,14 +916,22 @@
         "NPL": 26.3,
         "Cost of funds": 0.26
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:22:50.470707",
+      "parsed_at": "2026-11-14T20:31:56.831731",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Reserve and Surplus": 223139010.0,
@@ -856,8 +944,8 @@
         "Investments": 0.0,
         "Interest Income": 215071300.0,
         "Net Interest Income": 135787420.0,
-        "Total Operating Income": 151798.7,
-        "Operating Profit": 49765.83,
+        "Total Operating Income": 151798700.0,
+        "Operating Profit": 49765830.0,
         "Net Profit": 44711900.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 57.07,
@@ -923,14 +1011,22 @@
         "NPL": -3.18,
         "Cost of funds": -2.86
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:22:50.470577",
+      "parsed_at": "2026-11-14T20:31:56.831629",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Reserve and Surplus": 239190720.0,
@@ -943,8 +1039,8 @@
         "Investments": 0.0,
         "Interest Income": 54844450.0,
         "Net Interest Income": 35706530.0,
-        "Total Operating Income": 39527.24,
-        "Operating Profit": 11102.24,
+        "Total Operating Income": 39527240.0,
+        "Operating Profit": 11102240.0,
         "Net Profit": 11464440.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 58.53,
@@ -1010,14 +1106,22 @@
         "NPL": -11.09,
         "Cost of funds": -1.85
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:22:50.470445",
+      "parsed_at": "2026-11-14T20:31:56.831525",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Share Premium": 0.0,
@@ -1034,8 +1138,8 @@
         "Interest Income": 109231140.0,
         "Investment Securities": 0.0,
         "Net Interest Income": 71846970.0,
-        "Total Operating Income": 80680.98,
-        "Operating Profit": 27742.18,
+        "Total Operating Income": 80680980.0,
+        "Operating Profit": 27742180.0,
         "Net Profit": 30514620.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 77.9,
@@ -1116,14 +1220,22 @@
         "NPL": -21.74,
         "Cost of funds": -7.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:22:50.470263",
+      "parsed_at": "2026-11-14T20:31:56.831380",
       "raw": {
         "Paid Up Capital": 78343280.0,
         "Reserve and Surplus": 301417260.0,
@@ -1136,8 +1248,8 @@
         "Investments": 0.0,
         "Interest Income": 165665490.0,
         "Net Interest Income": 109832700.0,
-        "Total Operating Income": 125423.8,
-        "Operating Profit": 47647.35,
+        "Total Operating Income": 125423800.0,
+        "Operating Profit": 47647350.0,
         "Net Profit": 48469670.0,
         "Number of Shares": 783432.8,
         "EPS Reported": 82.49,
@@ -1145,7 +1257,7 @@
         "ROE Reported": 17.02,
         "CAR": 19.13,
         "NPL": 11.17,
-        "Cost of funds": 683.0,
+        "Cost of funds": 6.83,
         "CD ratio": 0.0
       },
       "raw_keys_order": [
@@ -1204,16 +1316,27 @@
         "ROE Reported": 65.56,
         "CAR": 18.01,
         "NPL": -25.93,
-        "Cost of funds": 8634.02
+        "Cost of funds": -12.66
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Cost of funds"
+      ]
     },
     {
       "symbol": "ANLB",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:22:50.470125",
+      "parsed_at": "2026-11-14T20:31:56.831275",
       "raw": {
         "Paid Up Capital": 89507200.0,
         "Reserve and Surplus": 234850930.0,
@@ -1226,8 +1349,8 @@
         "Investments": 0.0,
         "Interest Income": 232898680.0,
         "Net Interest Income": 153659590.0,
-        "Total Operating Income": 175107.13,
-        "Operating Profit": 51771.28,
+        "Total Operating Income": 175107130.0,
+        "Operating Profit": 51771280.0,
         "Net Profit": 62399530.0,
         "Number of Shares": 895072.0,
         "EPS Reported": 69.71,
@@ -1296,14 +1419,22 @@
         "NPL": -15.78,
         "Cost of funds": 12.97
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ANLB",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:22:50.469968",
+      "parsed_at": "2026-11-14T20:31:56.831155",
       "raw": {
         "Paid Up Capital": 89507200.0,
         "Reserve and Surplus": 252223420.0,
@@ -1316,8 +1447,8 @@
         "Investments": 0.0,
         "Interest Income": 69573980.0,
         "Net Interest Income": 47298340.0,
-        "Total Operating Income": 52780.25,
-        "Operating Profit": 25540.99,
+        "Total Operating Income": 52780250.0,
+        "Operating Profit": 25540990.0,
         "Net Profit": 21339850.0,
         "Number of Shares": 895072.0,
         "EPS Reported": 95.37,
@@ -1386,8 +1517,16 @@
         "NPL": -18.08,
         "Cost of funds": -8.63
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:22:50.475185"
+  "last_updated": "2026-11-14T20:31:56.834592"
 }

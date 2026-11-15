@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:30:43.854545",
+      "parsed_at": "2026-11-14T20:39:45.093488",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -27,7 +27,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:30:43.854527",
+      "parsed_at": "2026-11-14T20:39:45.093482",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -58695590.0,
@@ -38,7 +38,7 @@
         "Total Assets": 1388024840.0,
         "Revenue": 84848130.0,
         "Gross Profit": 76001390.0,
-        "Operating Profit": 45254.08,
+        "Operating Profit": 45254080.0,
         "Net Profit": 8452430.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 4.23,
@@ -72,14 +72,21 @@
         "graham_number": 90.12
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:30:43.854434",
+      "parsed_at": "2026-11-14T20:39:45.093450",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -50463750.0,
@@ -90,7 +97,7 @@
         "Total Assets": 1416828130.0,
         "Revenue": 125519500.0,
         "Gross Profit": 111385020.0,
-        "Operating Profit": 65086.98,
+        "Operating Profit": 65086980.0,
         "Net Profit": -3416860.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -1.14,
@@ -123,14 +130,21 @@
         "revenue_ttm": 125519500.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:30:43.854343",
+      "parsed_at": "2026-11-14T20:39:45.093419",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -35933570.0,
@@ -141,7 +155,7 @@
         "Total Assets": 1453847870.0,
         "Revenue": 164485270.0,
         "Gross Profit": 145568690.0,
-        "Operating Profit": 83659.47,
+        "Operating Profit": 83659470.0,
         "Net Profit": 11113320.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 2.78,
@@ -175,14 +189,21 @@
         "graham_number": 75.45
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:30:43.854247",
+      "parsed_at": "2026-11-14T20:39:45.093387",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -40883010.0,
@@ -193,7 +214,7 @@
         "Total Assets": 1436804010.0,
         "Revenue": 49219890.0,
         "Gross Profit": 47107690.0,
-        "Operating Profit": 25435.74,
+        "Operating Profit": 25435740.0,
         "Net Profit": -4949440.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -4.95,
@@ -226,14 +247,21 @@
         "revenue_ttm": 49219890.0
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:30:43.854153",
+      "parsed_at": "2026-11-14T20:39:45.093355",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -32670930.0,
@@ -244,7 +272,7 @@
         "Total Assets": 1421155230.0,
         "Revenue": 95492330.0,
         "Gross Profit": 91691780.0,
-        "Operating Profit": 55535.94,
+        "Operating Profit": 55535940.0,
         "Net Profit": 3262650.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 1.63,
@@ -298,14 +326,21 @@
         "Book Value(Rs.)": 7.62,
         "ROE": -64.04
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:30:43.854059",
+      "parsed_at": "2026-11-14T20:39:45.093323",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -34913400.0,
@@ -316,7 +351,7 @@
         "Total Assets": 1411196490.0,
         "Revenue": 127943060.0,
         "Gross Profit": 122540560.0,
-        "Operating Profit": 70971.81,
+        "Operating Profit": 70971810.0,
         "Net Profit": 1020170.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": 0.34,
@@ -370,14 +405,21 @@
         "Book Value(Rs.)": 4.45,
         "ROE": 137.76
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:30:43.853961",
+      "parsed_at": "2026-11-14T20:39:45.093290",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -50823350.0,
@@ -388,7 +430,7 @@
         "Total Assets": 1389063450.0,
         "Revenue": 152144310.0,
         "Gross Profit": 140244180.0,
-        "Operating Profit": 77473.97,
+        "Operating Profit": 77473970.0,
         "Net Profit": -14889780.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -3.72,
@@ -441,14 +483,21 @@
         "Book Value(Rs.)": -4.1,
         "ROE": -239.67
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:30:43.853867",
+      "parsed_at": "2026-11-14T20:39:45.093258",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -62193160.0,
@@ -459,7 +508,7 @@
         "Total Assets": 1394618690.0,
         "Revenue": 42944210.0,
         "Gross Profit": 41439220.0,
-        "Operating Profit": 25999.13,
+        "Operating Profit": 25999130.0,
         "Net Profit": -11369810.0,
         "Number of Shares": 4000000.0,
         "EPS(Rs.)": -11.37,
@@ -512,14 +561,21 @@
         "Book Value(Rs.)": -5.94,
         "ROE": -144.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:30:43.853773",
+      "parsed_at": "2026-11-14T20:39:45.093224",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -62093430.0,
@@ -530,7 +586,7 @@
         "Total Assets": 1380773820.0,
         "Revenue": 91164320.0,
         "Gross Profit": 87022980.0,
-        "Operating Profit": 49706.41,
+        "Operating Profit": 49706410.0,
         "Net Profit": 6259060.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 3.13,
@@ -581,14 +637,21 @@
         "Net Profit": 91.84,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:30:43.853676",
+      "parsed_at": "2026-11-14T20:39:45.093191",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -67805340.0,
@@ -599,7 +662,7 @@
         "Total Assets": 1361181380.0,
         "Revenue": 122630840.0,
         "Gross Profit": 117519530.0,
-        "Operating Profit": 64081.56,
+        "Operating Profit": 64081560.0,
         "Net Profit": 562020.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 0.19,
@@ -650,14 +713,21 @@
         "Net Profit": -44.91,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:30:43.853552",
+      "parsed_at": "2026-11-14T20:39:45.093158",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -91420270.0,
@@ -668,7 +738,7 @@
         "Total Assets": 1366576000.0,
         "Revenue": 145175100.0,
         "Gross Profit": 136243430.0,
-        "Operating Profit": 63553.32,
+        "Operating Profit": 63553320.0,
         "Net Profit": -22594430.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": -5.65,
@@ -718,14 +788,21 @@
         "Net Profit": -51.74,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:30:43.853455",
+      "parsed_at": "2026-11-14T20:39:45.093125",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -80289130.0,
@@ -736,7 +813,7 @@
         "Total Assets": 1350587420.0,
         "Revenue": 50916160.0,
         "Gross Profit": 49395440.0,
-        "Operating Profit": 31824.59,
+        "Operating Profit": 31824590.0,
         "Net Profit": 7518320.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 7.52,
@@ -787,14 +864,21 @@
         "Net Profit": 166.13,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:30:43.853355",
+      "parsed_at": "2026-11-14T20:39:45.093091",
       "raw": {
         "Paid Up Capital": 400000000.0,
         "Reserve and Surplus": -65667690.0,
@@ -805,7 +889,7 @@
         "Total Assets": 1356978800.0,
         "Revenue": 105167130.0,
         "Gross Profit": 100419330.0,
-        "Operating Profit": 66418.13,
+        "Operating Profit": 66418130.0,
         "Net Profit": 20481430.0,
         "Number of Shares": 4000000.0,
         "EPS Reported": 10.24,
@@ -859,14 +943,21 @@
         "Book Value Reported": -1.07,
         "ROE Reported": 231.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:30:43.853251",
+      "parsed_at": "2026-11-14T20:39:45.093057",
       "raw": {
         "Paid Up Capital": 413304400.0,
         "Reserve and Surplus": -76123330.0,
@@ -877,7 +968,7 @@
         "Total Assets": 1328961060.0,
         "Revenue": 146587040.0,
         "Gross Profit": 139149850.0,
-        "Operating Profit": 87614.59,
+        "Operating Profit": 87614590.0,
         "Net Profit": 23342800.0,
         "Number of Shares": 4133044.0,
         "EPS Reported": 7.53,
@@ -931,14 +1022,21 @@
         "Book Value Reported": -1.77,
         "ROE Reported": 3913.04
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BNHC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:30:43.853131",
+      "parsed_at": "2026-11-14T20:39:45.093013",
       "raw": {
         "Paid Up Capital": 800000000.0,
         "Reserve and Surplus": 4749430.0,
@@ -949,7 +1047,7 @@
         "Total Assets": 1587996250.0,
         "Revenue": 185017460.0,
         "Gross Profit": 172928800.0,
-        "Operating Profit": 90534.54,
+        "Operating Profit": 90534540.0,
         "Net Profit": 11953740.0,
         "Number of Shares": 8000000.0,
         "EPS Reported": 1.49,
@@ -1003,8 +1101,15 @@
         "Book Value Reported": 30.4,
         "ROE Reported": 120.36
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:30:43.857135"
+  "last_updated": "2026-11-14T20:39:45.095656"
 }

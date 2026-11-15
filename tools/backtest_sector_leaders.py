@@ -36,9 +36,10 @@ from tools import score_sector_leaders as SL  # noqa: E402
 from tools.report_availability import quarter_end  # noqa: E402
 
 FROZEN = {
-    # v2 (2026-11-08): checklist prior-year fix, see the deviation log in
-    # docs/research/PHASE2_PREREGISTRATION.md. v1 was 76ee5142...f455.
-    "tools/score_sector_leaders.py": "ece6ac96dbd20c631c8c836920b6c15f46936b3548e3276cffd9bac9c1f47c58",
+    # v3 (2026-11-15): profit growth in Growth, cash and bonus ranked separately in Payout.
+    # See the deviation log in docs/research/PHASE2_PREREGISTRATION.md.
+    # v2 (2026-11-08, checklist prior-year fix) was ece6ac96...7c58; v1 was 76ee5142...f455.
+    "tools/score_sector_leaders.py": "bc87cc97f2013bbaa299cd67928b4826f0310d759798d8c7a091c231ff916be1",
     "quarterly_db.py": "14c723ec2de32ba6a2415ef44e8285ac7cbf5c8b7a3cce7c751dbfb88cf338a2",
 }
 PRICES_DIR = os.path.join(ROOT, "db", "prices")
@@ -248,10 +249,9 @@ def build_record(sym, doc, signal: date, lag: int, prices: Prices, dividends: di
 
     # Dividends announced on or before the signal date only.
     rows = [x for x in dividends.get(sym, []) if x["announcementDateAD"] <= signal.isoformat()][-5:]
-    rec["payout_ratio"] = rec["div_yield"] = rec["bonus_avg5"] = rec["bonus_years_frac"] = None
+    rec["payout_ratio"] = rec["div_yield"] = None
+    rec.update(SL.dividend_stats(rows))
     if rows:
-        rec["bonus_avg5"] = statistics.fmean(num(x.get("totalPercent")) or 0.0 for x in rows)
-        rec["bonus_years_frac"] = sum(1 for x in rows if (num(x.get("totalPercent")) or 0) > 0) / 5.0
         cash = num(rows[-1].get("cashPercent")) or 0.0                # % of Rs 100 face = Rs/share
         rec["payout_ratio"] = cash / eps if eps and eps > 0 else None
         rec["div_yield"] = cash / price

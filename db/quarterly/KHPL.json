@@ -8,7 +8,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:27:53.271730",
+      "parsed_at": "2026-11-14T21:15:40.084988",
       "raw": {
         "Paid Up Capital": 550000000.0,
         "Reserve and Surplus": 34688180.0,
@@ -55,5 +55,5 @@
       "sector": "Others"
     }
   ],
-  "last_updated": "2026-11-07T09:27:53.272203"
+  "last_updated": "2026-11-14T21:15:40.086383"
 }

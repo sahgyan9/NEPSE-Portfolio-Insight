@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:31:14.826767",
+      "parsed_at": "2026-11-14T20:40:13.267026",
       "raw": {
         "EPS(Rs.)": 37.88
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:31:14.826757",
+      "parsed_at": "2026-11-14T20:40:13.266999",
       "raw": {
         "EPS(Rs.)": 36.64
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T08:31:14.826743",
+      "parsed_at": "2026-11-14T20:40:13.266972",
       "raw": {
         "Paid Up Capital": 9658176430.0,
         "Retained Earnings": 1387087750.0,
@@ -68,8 +68,8 @@
         "Investment Securities": 19730434980.0,
         "Interest Income": 2290657330.0,
         "Net Interest Income": 794424120.0,
-        "Total Operating Income": 1098992.02,
-        "Operating Profit": 362110.49,
+        "Total Operating Income": 1098992020.0,
+        "Operating Profit": 362110490.0,
         "Net Profit": 253477340.0,
         "Distributable Profit": 1387087750.0,
         "Number of Shares": 96581764.29,
@@ -121,14 +121,22 @@
         "graham_number": 202.46
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BOKL",
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:31:14.826646",
+      "parsed_at": "2026-11-14T20:40:13.266895",
       "raw": {
         "Paid Up Capital": 10623994070.0,
         "Retained Earnings": 372356610.0,
@@ -142,8 +150,8 @@
         "Investment Securities": 17677909780.0,
         "Interest Income": 4926826820.0,
         "Net Interest Income": 1694205890.0,
-        "Total Operating Income": 2204269.23,
-        "Operating Profit": 933268.67,
+        "Total Operating Income": 2204269230.0,
+        "Operating Profit": 933268670.0,
         "Net Profit": 719319420.0,
         "Distributable Profit": 372356610.0,
         "Number of Shares": 106239940.72,
@@ -195,14 +203,22 @@
         "graham_number": 219.74
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BOKL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:31:14.826546",
+      "parsed_at": "2026-11-14T20:40:13.266794",
       "raw": {
         "Paid Up Capital": 10623994070.0,
         "Retained Earnings": 416703450.0,
@@ -216,8 +232,8 @@
         "Investment Securities": 18410444370.0,
         "Interest Income": 7996304650.0,
         "Net Interest Income": 2797470400.0,
-        "Total Operating Income": 3475142.36,
-        "Operating Profit": 1150634.68,
+        "Total Operating Income": 3475142360.0,
+        "Operating Profit": 1150634680.0,
         "Net Profit": 870781480.0,
         "Distributable Profit": 416703450.0,
         "Number of Shares": 106239940.0,
@@ -272,14 +288,22 @@
         "eps_ttm": -71.15,
         "EPS(Rs.)": -71.15
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BOKL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:31:14.826439",
+      "parsed_at": "2026-11-14T20:40:13.266730",
       "raw": {
         "Paid Up Capital": 10623994070.0,
         "Retained Earnings": 1300943230.0,
@@ -293,8 +317,8 @@
         "Investment Securities": 18845056320.0,
         "Interest Income": 11489693690.0,
         "Net Interest Income": 4037104910.0,
-        "Total Operating Income": 4843327.91,
-        "Operating Profit": 2534368.42,
+        "Total Operating Income": 4843327910.0,
+        "Operating Profit": 2534368420.0,
         "Net Profit": 1810276510.0,
         "Distributable Profit": 1300943230.0,
         "Number of Shares": 106239940.72,
@@ -349,14 +373,22 @@
         "eps_ttm": -53.49,
         "EPS(Rs.)": -53.49
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BOKL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:31:14.826301",
+      "parsed_at": "2026-11-14T20:40:13.266645",
       "raw": {
         "Paid Up Capital": 10623994070.0,
         "Retained Earnings": 1444774510.0,
@@ -370,8 +402,8 @@
         "Investment Securities": 18896401620.0,
         "Interest Income": 3630354680.0,
         "Net Interest Income": 1225821690.0,
-        "Total Operating Income": 1390311.4,
-        "Operating Profit": 414751.01,
+        "Total Operating Income": 1390311400.0,
+        "Operating Profit": 414751010.0,
         "Net Profit": 280615310.0,
         "Distributable Profit": 1444774510.0,
         "Number of Shares": 106239940.72,
@@ -454,8 +486,16 @@
         "Base Rate": 26.99,
         "Interest Spread Rate": 46.71
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:31:14.827843"
+  "last_updated": "2026-11-14T20:40:13.268468"
 }

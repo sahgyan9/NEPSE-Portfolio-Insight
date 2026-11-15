@@ -50,3 +50,10 @@ Keep `db/dividend_data.json` current with dividend/bonus announcements for all p
 - **Non-destructive merging:** Existing user `notes` and previously fetched `bookClosureDateBS` dates are never overwritten in `db/dividend_data.json`.
 - **Mutual funds (paid-up Rs 10):** Often have no corporate dividend entries or declare unit cash dividends — handled gracefully with explicit unit face values.
 - **Manual override hierarchy:** Active entries in `manual_dividends.json` override auto data for the same symbol + fiscal year (user corrections always win), while entries marked `disabled: true` are bypassed so automated scraping takes over.
+
+## Lessons learned (2026-11-14)
+- Default run covers holdings only. Anything that reads `dividend_data.json` for non-held stocks (Sector Leaders backtest, quarterly top performers, Quarterly page history) needs `--all`. SMB showed no history for this reason.
+- HamroShare omits some fiscal years for symbols it does list (e.g. SMB 080-081), and auto mode does not query NepaliPaisa for listed symbols. Run `--all --fill-gaps` afterwards; it adds missing years only.
+- Do not run `--source nepalipaisa` over existing rows: it overwrites HamroShare values with differently rounded ones (SAPIL 082-083 cash went 0.5263 to 0.0).
+- Symbols neither source lists (about 112) are stored with an empty `dividends` list; `--missing-only` retries them.
+- Changing this file changes the forward-test data fingerprint; log it in the PHASE2 deviation log.

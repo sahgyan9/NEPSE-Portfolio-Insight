@@ -68,8 +68,8 @@
         "Investment Securities": 22480736570.0,
         "Interest Income": 9584843380.0,
         "Net Interest Income": 3053031360.0,
-        "Total Operating Income": 4233482.25,
-        "Operating Profit": 1813254.76,
+        "Total Operating Income": 4233482250.0,
+        "Operating Profit": 1813254760.0,
         "Net Profit": 1277397820.0,
         "Distributable Profit": 972488290.0,
         "Number of Shares": 101188920.0,
@@ -121,7 +121,15 @@
         "graham_number": 243.91
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SRBL",
@@ -142,8 +150,8 @@
         "Investment Securities": 28328940590.0,
         "Interest Income": 13991073280.0,
         "Net Interest Income": 4580201890.0,
-        "Total Operating Income": 5987739.96,
-        "Operating Profit": 2730981.54,
+        "Total Operating Income": 5987739960.0,
+        "Operating Profit": 2730981540.0,
         "Net Profit": 2150944810.0,
         "Distributable Profit": 1463051490.0,
         "Number of Shares": 101188928.09,
@@ -195,7 +203,15 @@
         "graham_number": 281.19
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SRBL",
@@ -216,8 +232,8 @@
         "Investment Securities": 25080370380.0,
         "Interest Income": 4467371560.0,
         "Net Interest Income": 1435198600.0,
-        "Total Operating Income": 1700147.18,
-        "Operating Profit": 230186.6,
+        "Total Operating Income": 1700147180.0,
+        "Operating Profit": 230186600.0,
         "Net Profit": 165827790.0,
         "Distributable Profit": -150708280.0,
         "Number of Shares": 101188928.09,
@@ -272,7 +288,15 @@
         "eps_ttm": 18.84,
         "EPS(Rs.)": 18.84
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SRBL",
@@ -293,8 +317,8 @@
         "Investment Securities": 25607166450.0,
         "Interest Income": 9036325340.0,
         "Net Interest Income": 2915735020.0,
-        "Total Operating Income": 3477615.99,
-        "Operating Profit": 926046.28,
+        "Total Operating Income": 3477615990.0,
+        "Operating Profit": 926046280.0,
         "Net Profit": 653957250.0,
         "Distributable Profit": -16151750.0,
         "Number of Shares": 101188928.09,
@@ -349,7 +373,15 @@
         "eps_ttm": -16.36,
         "EPS(Rs.)": -16.36
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SRBL",
@@ -370,8 +402,8 @@
         "Investment Securities": 24582725980.0,
         "Interest Income": 13391938720.0,
         "Net Interest Income": 4198397210.0,
-        "Total Operating Income": 4984364.69,
-        "Operating Profit": 1677577.84,
+        "Total Operating Income": 4984364690.0,
+        "Operating Profit": 1677577840.0,
         "Net Profit": 1170968480.0,
         "Distributable Profit": -48353430.0,
         "Number of Shares": 101188928.09,
@@ -454,7 +486,15 @@
         "Base Rate": 12.17,
         "Interest Spread Rate": 16.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:12:06.266487"

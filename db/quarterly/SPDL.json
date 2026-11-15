@@ -1024,7 +1024,7 @@
         "Total Assets": 1762872730.0,
         "Revenue": 162390380.0,
         "Gross Profit": 152521470.0,
-        "Operating Profit": 83343.76,
+        "Operating Profit": 83343760.0,
         "Net Profit": 53236530.0,
         "Number of Shares": 13308487.5,
         "EPS Reported": 5.33,
@@ -1076,7 +1076,14 @@
         "Book Value Reported": -5.97,
         "ROE Reported": 18.01
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SPDL",
@@ -1094,7 +1101,7 @@
         "Total Assets": 1795359640.0,
         "Revenue": 230614700.0,
         "Gross Profit": 230614700.0,
-        "Operating Profit": 130722.83,
+        "Operating Profit": 130722830.0,
         "Net Profit": 80495390.0,
         "Number of Shares": 13308487.5,
         "EPS Reported": 6.05,
@@ -1146,7 +1153,14 @@
         "Book Value Reported": -5.37,
         "ROE Reported": 27.65
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:11:39.005372"

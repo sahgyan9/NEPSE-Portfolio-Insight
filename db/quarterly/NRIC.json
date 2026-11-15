@@ -21,8 +21,8 @@
         "Total Investment and Loans": 18882637000.0,
         "Total Revenue": 507830000.0,
         "Income from Investment": 494946000.0,
-        "Total Expenses": 216399.0,
-        "Management Expenses": 6467.0,
+        "Total Expenses": 216399000.0,
+        "Management Expenses": 6467000.0,
         "Net Profit": 291430000.0,
         "Net Premium": 4958060000.0,
         "Net Claim Payment": 2480455000.0,
@@ -63,7 +63,15 @@
         "graham_number": 133.04
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -83,8 +91,8 @@
         "Total Investment and Loans": 19086299000.0,
         "Total Revenue": 1018275000.0,
         "Income from Investment": 693414000.0,
-        "Total Expenses": 445889.0,
-        "Management Expenses": 10439.0,
+        "Total Expenses": 445889000.0,
+        "Management Expenses": 10439000.0,
         "Net Profit": 572386000.0,
         "Net Premium": 7868947000.0,
         "Net Claim Payment": 4064624000.0,
@@ -125,7 +133,15 @@
         "graham_number": 153.8
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -145,8 +161,8 @@
         "Total Investment and Loans": 19130834000.0,
         "Total Revenue": 1230938000.0,
         "Income from Investment": 1032433000.0,
-        "Total Expenses": 557061.0,
-        "Management Expenses": 17468.0,
+        "Total Expenses": 557061000.0,
+        "Management Expenses": 17468000.0,
         "Net Profit": 673878000.0,
         "Net Premium": 10766589000.0,
         "Net Claim Payment": 1968700000.0,
@@ -187,7 +203,15 @@
         "graham_number": 144.72
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -207,8 +231,8 @@
         "Total Investment and Loans": 20511733000.0,
         "Total Revenue": 718705000.0,
         "Income from Investment": 279640000.0,
-        "Total Expenses": 529774.0,
-        "Management Expenses": 3935.0,
+        "Total Expenses": 529774000.0,
+        "Management Expenses": 3935000.0,
         "Net Profit": 188931000.0,
         "Net Premium": 858609000.0,
         "Net Claim Payment": 825391000.0,
@@ -249,7 +273,15 @@
         "graham_number": 159.1
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -269,8 +301,8 @@
         "Total Investment and Loans": 20584310000.0,
         "Total Revenue": 1268969000.0,
         "Income from Investment": 705340000.0,
-        "Total Expenses": 976502.0,
-        "Management Expenses": 8330.0,
+        "Total Expenses": 976502000.0,
+        "Management Expenses": 8330000.0,
         "Net Profit": 292467000.0,
         "Net Premium": 2807173000.0,
         "Net Claim Payment": 2815959000.0,
@@ -335,7 +367,15 @@
         "Book Value(Rs.)": 11.0,
         "ROE": -9.43
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -355,8 +395,8 @@
         "Total Investment and Loans": 20551747000.0,
         "Total Revenue": 2019481000.0,
         "Income from Investment": 1061166000.0,
-        "Total Expenses": 1423245.0,
-        "Management Expenses": 8425.0,
+        "Total Expenses": 1423245000.0,
+        "Management Expenses": 8425000.0,
         "Net Profit": 596236000.0,
         "Net Premium": 4267032000.0,
         "Net Claim Payment": 4325105000.0,
@@ -421,7 +461,15 @@
         "Book Value(Rs.)": 8.69,
         "ROE": -28.19
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -441,8 +489,8 @@
         "Total Investment and Loans": 20500246000.0,
         "Total Revenue": 1814324000.0,
         "Income from Investment": 1477886000.0,
-        "Total Expenses": 725660.0,
-        "Management Expenses": 18614.0,
+        "Total Expenses": 725660000.0,
+        "Management Expenses": 18614000.0,
         "Net Profit": 1088663000.0,
         "Net Premium": 7522697000.0,
         "Net Claim Payment": 6844266000.0,
@@ -506,7 +554,15 @@
         "Book Value(Rs.)": -0.96,
         "ROE": -62.91
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -525,7 +581,7 @@
         "Total Investment and Loans": 20510972160.0,
         "Total Revenue": 1735205090.0,
         "Income from Investment": 409784160.0,
-        "Total Expenses": 2210857.16,
+        "Total Expenses": 2210857160.0,
         "Net Profit": -475683130.0,
         "Net Premium": 1282012150.0,
         "Net Claim Payment": 1432223670.0,
@@ -586,7 +642,14 @@
         "Book Value(Rs.)": -19.73,
         "ROE": -385.29
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -605,7 +668,7 @@
         "Total Investment and Loans": 20689721780.0,
         "Total Revenue": 3968783430.0,
         "Income from Investment": 873659770.0,
-        "Total Expenses": 3486203.34,
+        "Total Expenses": 3486203340.0,
         "Net Profit": 337758680.0,
         "Net Premium": 3036491380.0,
         "Net Claim Payment": 2120697260.0,
@@ -666,7 +729,14 @@
         "Book Value(Rs.)": -16.54,
         "ROE": 25.69
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -686,7 +756,7 @@
         "Total Investment and Loans": 20655338520.0,
         "Total Revenue": 6533934630.0,
         "Income from Investment": 1289233140.0,
-        "Total Expenses": 5796917.7,
+        "Total Expenses": 5796917700.0,
         "Management Expenses": 0.0,
         "Net Profit": 737016930.0,
         "Net Premium": 5154361170.0,
@@ -749,7 +819,14 @@
         "Net Claim Payment": -15.91,
         "Number of Shares": 9.99
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -769,7 +846,7 @@
         "Total Investment and Loans": 21025598260.0,
         "Total Revenue": 11285111020.0,
         "Income from Investment": 1660818300.0,
-        "Total Expenses": 9668426.43,
+        "Total Expenses": 9668426430.0,
         "Management Expenses": 0.0,
         "Net Profit": 1131645270.0,
         "Net Premium": 9492456550.0,
@@ -832,7 +909,14 @@
         "Net Claim Payment": -15.84,
         "Number of Shares": 4.75
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -852,7 +936,7 @@
         "Total Investment and Loans": 20903212600.0,
         "Total Revenue": 2407147610.0,
         "Income from Investment": 366553220.0,
-        "Total Expenses": 2316865.07,
+        "Total Expenses": 2316865070.0,
         "Management Expenses": 0.0,
         "Net Profit": 63296770.0,
         "Net Premium": 1774580800.0,
@@ -916,7 +1000,14 @@
         "Number of Shares": 4.75,
         "Solvency Ratio": 0.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -936,7 +1027,7 @@
         "Total Investment and Loans": 21712869190.0,
         "Total Revenue": 4928507700.0,
         "Income from Investment": 627445380.0,
-        "Total Expenses": 4167780.41,
+        "Total Expenses": 4167780410.0,
         "Management Expenses": 0.0,
         "Net Profit": 532690960.0,
         "Net Premium": 4001624800.0,
@@ -1000,7 +1091,14 @@
         "Number of Shares": 4.75,
         "Solvency Ratio": 0.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -1020,7 +1118,7 @@
         "Total Investment and Loans": 22531601810.0,
         "Total Revenue": 8571701280.0,
         "Income from Investment": 942647710.0,
-        "Total Expenses": 7788504.22,
+        "Total Expenses": 7788504220.0,
         "Management Expenses": 0.0,
         "Net Profit": 548237940.0,
         "Net Premium": 7119964010.0,
@@ -1087,7 +1185,14 @@
         "ROE Reported": -6.41,
         "Solvency Ratio": 0.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -1107,7 +1212,7 @@
         "Total Investment and Loans": 21491098570.0,
         "Total Revenue": 12909133120.0,
         "Income from Investment": 1205604410.0,
-        "Total Expenses": 11429898.28,
+        "Total Expenses": 11429898280.0,
         "Management Expenses": 0.0,
         "Net Profit": 1035464380.0,
         "Net Premium": 11155208250.0,
@@ -1174,7 +1279,14 @@
         "ROE Reported": -13.25,
         "Solvency Ratio": 0.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -1194,7 +1306,7 @@
         "Total Investment and Loans": 19637193960.0,
         "Total Revenue": 1889218340.0,
         "Income from Investment": 196596510.0,
-        "Total Expenses": 9750801.06,
+        "Total Expenses": 9750801060.0,
         "Management Expenses": 0.0,
         "Net Profit": -7861582710.0,
         "Net Premium": 1652500480.0,
@@ -1260,7 +1372,14 @@
         "ROE Reported": -77762.5,
         "Solvency Ratio": 9900.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -1280,7 +1399,7 @@
         "Total Investment and Loans": 18841940700.0,
         "Total Revenue": 4275393220.0,
         "Income from Investment": 330267020.0,
-        "Total Expenses": 12260525.68,
+        "Total Expenses": 12260525680.0,
         "Management Expenses": 0.0,
         "Net Profit": -7985132450.0,
         "Net Premium": 3646407050.0,
@@ -1346,7 +1465,14 @@
         "ROE Reported": -2496.44,
         "Solvency Ratio": 9900.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NRIC",
@@ -1366,7 +1492,7 @@
         "Total Investment and Loans": 17360732490.0,
         "Total Revenue": 6681667260.0,
         "Income from Investment": 475450670.0,
-        "Total Expenses": 12521962.59,
+        "Total Expenses": 12521962590.0,
         "Management Expenses": 0.0,
         "Net Profit": -5840295340.0,
         "Net Premium": 5837519930.0,
@@ -1432,7 +1558,14 @@
         "ROE Reported": -1191.78,
         "Solvency Ratio": 0.0
       },
-      "sector": "Others"
+      "sector": "Others",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:38:22.225923"

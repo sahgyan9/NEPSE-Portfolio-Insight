@@ -16,7 +16,7 @@
         "Current Liabilities": 2000800000.0,
         "Current Assets": 3626500000.0,
         "Total Assets": 4949500000.0,
-        "Revenue from Operation": 5304200.0,
+        "Revenue from Operation": 5304200000.0,
         "Net Profit": 784400000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 1135.58,
@@ -43,11 +43,18 @@
         "roe_ttm": 35.69,
         "roa_ttm": null,
         "net_profit_ttm": 784400000.0,
-        "revenue_ttm": 5304200.0,
+        "revenue_ttm": 5304200000.0,
         "graham_number": 9016.75
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -62,7 +69,7 @@
         "Current Liabilities": 1823500000.0,
         "Current Assets": 4120100000.0,
         "Total Assets": 5474100000.0,
-        "Revenue from Operation": 7333600.0,
+        "Revenue from Operation": 7333600000.0,
         "Net Profit": 1499400000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 1628.01,
@@ -89,11 +96,18 @@
         "roe_ttm": 41.3,
         "roa_ttm": null,
         "net_profit_ttm": 1499400000.0,
-        "revenue_ttm": 7333600.0,
+        "revenue_ttm": 7333600000.0,
         "graham_number": 12016.5
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -108,7 +122,7 @@
         "Current Liabilities": 2134000000.0,
         "Current Assets": 4636100000.0,
         "Total Assets": 6345100000.0,
-        "Revenue from Operation": 2241100.0,
+        "Revenue from Operation": 2241100000.0,
         "Gross Profit": 904600000.0,
         "Net Profit": 340600000.0,
         "Number of Shares": 921000.0,
@@ -137,11 +151,18 @@
         "roe_ttm": 34.11,
         "roa_ttm": null,
         "net_profit_ttm": 340600000.0,
-        "revenue_ttm": 2241100.0,
+        "revenue_ttm": 2241100000.0,
         "graham_number": 12014.57
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -156,7 +177,7 @@
         "Current Liabilities": 2986400000.0,
         "Current Assets": 4929600000.0,
         "Total Assets": 6624000000.0,
-        "Revenue from Operation": 4443600.0,
+        "Revenue from Operation": 4443600000.0,
         "Net Profit": 893100000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 1939.41,
@@ -183,11 +204,18 @@
         "roe_ttm": 52.13,
         "roa_ttm": null,
         "net_profit_ttm": 893100000.0,
-        "revenue_ttm": 4443600.0,
+        "revenue_ttm": 4443600000.0,
         "graham_number": 12741.72
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -202,7 +230,7 @@
         "Current Liabilities": 2141400000.0,
         "Current Assets": 4457000000.0,
         "Total Assets": 6162400000.0,
-        "Revenue from Operation": 6409300.0,
+        "Revenue from Operation": 6409300000.0,
         "Net Profit": 1265700000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 1832.36,
@@ -229,7 +257,7 @@
         "roe_ttm": 44.41,
         "roa_ttm": null,
         "net_profit_ttm": 1265700000.0,
-        "revenue_ttm": 6409300.0,
+        "revenue_ttm": 6409300000.0,
         "graham_number": 13042.09
       },
       "yoy": {
@@ -250,7 +278,14 @@
         "Book Value(Rs.)": 29.66,
         "ROE": 24.43
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -265,7 +300,7 @@
         "Current Liabilities": 1766800000.0,
         "Current Assets": 4637000000.0,
         "Total Assets": 6336600000.0,
-        "Revenue from Operation": 8480400.0,
+        "Revenue from Operation": 8480400000.0,
         "Net Profit": 1830000000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 1986.97,
@@ -292,7 +327,7 @@
         "roe_ttm": 41.99,
         "roa_ttm": null,
         "net_profit_ttm": 1830000000.0,
-        "revenue_ttm": 8480400.0,
+        "revenue_ttm": 8480400000.0,
         "graham_number": 14545.56
       },
       "yoy": {
@@ -313,7 +348,14 @@
         "Book Value(Rs.)": 20.05,
         "ROE": 1.67
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -328,7 +370,7 @@
         "Current Liabilities": 2029600000.0,
         "Current Assets": 5415200000.0,
         "Total Assets": 7145900000.0,
-        "Revenue from Operation": 2325100.0,
+        "Revenue from Operation": 2325100000.0,
         "Net Profit": 552500000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 2399.57,
@@ -355,7 +397,7 @@
         "roe_ttm": 44.98,
         "roa_ttm": null,
         "net_profit_ttm": 552500000.0,
-        "revenue_ttm": 2325100.0,
+        "revenue_ttm": 2325100000.0,
         "graham_number": 16971.63
       },
       "yoy": {
@@ -376,7 +418,14 @@
         "Book Value(Rs.)": 23.01,
         "ROE": 31.87
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -391,7 +440,7 @@
         "Current Liabilities": 3356600000.0,
         "Current Assets": 5678500000.0,
         "Total Assets": 7435100000.0,
-        "Revenue from Operation": 1845700.0,
+        "Revenue from Operation": 1845700000.0,
         "Net Profit": 421000000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 914.22,
@@ -418,7 +467,7 @@
         "roe_ttm": 21.75,
         "roa_ttm": null,
         "net_profit_ttm": 421000000.0,
-        "revenue_ttm": 1845700.0,
+        "revenue_ttm": 1845700000.0,
         "graham_number": 9297.59
       },
       "yoy": {
@@ -439,7 +488,14 @@
         "Book Value(Rs.)": 12.95,
         "ROE": -58.28
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -454,7 +510,7 @@
         "Current Liabilities": 2073100000.0,
         "Current Assets": 4762200000.0,
         "Total Assets": 6625200000.0,
-        "Revenue from Operation": 1995500.0,
+        "Revenue from Operation": 1995500000.0,
         "Net Profit": 486100000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 703.73,
@@ -481,7 +537,7 @@
         "roe_ttm": 14.89,
         "roa_ttm": null,
         "net_profit_ttm": 486100000.0,
-        "revenue_ttm": 1995500.0,
+        "revenue_ttm": 1995500000.0,
         "graham_number": 8649.96
       },
       "yoy": {
@@ -502,7 +558,14 @@
         "Book Value(Rs.)": 14.54,
         "ROE": -66.47
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -517,7 +580,7 @@
         "Current Liabilities": 2193300000.0,
         "Current Assets": 5422300000.0,
         "Total Assets": 7274500000.0,
-        "Revenue from Operation": 8239800.0,
+        "Revenue from Operation": 8239800000.0,
         "Net Profit": 1974200000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 2143.54,
@@ -544,7 +607,7 @@
         "roe_ttm": 40.57,
         "roa_ttm": null,
         "net_profit_ttm": 1974200000.0,
-        "revenue_ttm": 8239800.0,
+        "revenue_ttm": 8239800000.0,
         "graham_number": 15962.46
       },
       "yoy": {
@@ -565,7 +628,14 @@
         "Book Value(Rs.)": 11.63,
         "ROE": -3.38
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -580,7 +650,7 @@
         "Current Liabilities": 2128700000.0,
         "Current Assets": 5861000000.0,
         "Total Assets": 7665500000.0,
-        "Revenue from Operation": 2254500.0,
+        "Revenue from Operation": 2254500000.0,
         "Net Profit": 526900000.0,
         "Number of Shares": 921000.0,
         "EPS(Rs.)": 2288.38,
@@ -607,7 +677,7 @@
         "roe_ttm": 39.22,
         "roa_ttm": null,
         "net_profit_ttm": 526900000.0,
-        "revenue_ttm": 2254500.0,
+        "revenue_ttm": 2254500000.0,
         "graham_number": 17332.06
       },
       "yoy": {
@@ -628,7 +698,14 @@
         "Book Value(Rs.)": 9.36,
         "ROE": -12.81
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -644,7 +721,7 @@
         "Current Liabilities": 3222700000.0,
         "Current Assets": 5909300000.0,
         "Total Assets": 7643700000.0,
-        "Revenue from Operation": 1945600.0,
+        "Revenue from Operation": 1945600000.0,
         "Gross Profit": 0.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 477800000.0,
@@ -676,7 +753,7 @@
         "roe_ttm": 22.38,
         "roa_ttm": null,
         "net_profit_ttm": 477800000.0,
-        "revenue_ttm": 1945600.0,
+        "revenue_ttm": 1945600000.0,
         "graham_number": 10403.49
       },
       "yoy": {
@@ -694,7 +771,14 @@
         "Net Profit": 13.49,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -710,7 +794,7 @@
         "Current Liabilities": 1845400000.0,
         "Current Assets": 5002100000.0,
         "Total Assets": 6726200000.0,
-        "Revenue from Operation": 1966500.0,
+        "Revenue from Operation": 1966500000.0,
         "Gross Profit": 0.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 482200000.0,
@@ -742,7 +826,7 @@
         "roe_ttm": 13.56,
         "roa_ttm": null,
         "net_profit_ttm": 482200000.0,
-        "revenue_ttm": 1966500.0,
+        "revenue_ttm": 1966500000.0,
         "graham_number": 8992.32
       },
       "yoy": {
@@ -760,7 +844,14 @@
         "Net Profit": -0.8,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -776,7 +867,7 @@
         "Current Liabilities": 2424900000.0,
         "Current Assets": 5998300000.0,
         "Total Assets": 7967700000.0,
-        "Revenue from Operation": 8245700.0,
+        "Revenue from Operation": 8245700000.0,
         "Gross Profit": 8412400000.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 1961900000.0,
@@ -808,7 +899,7 @@
         "roe_ttm": 37.61,
         "roa_ttm": null,
         "net_profit_ttm": 1961900000.0,
-        "revenue_ttm": 8245700.0,
+        "revenue_ttm": 8245700000.0,
         "graham_number": 16475.81
       },
       "yoy": {
@@ -826,7 +917,14 @@
         "Net Profit": -0.62,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -842,7 +940,7 @@
         "Current Liabilities": 2442200000.0,
         "Current Assets": 6214400000.0,
         "Total Assets": 8229400000.0,
-        "Revenue from Operation": 2003700.0,
+        "Revenue from Operation": 2003700000.0,
         "Gross Profit": 0.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 300000000.0,
@@ -874,7 +972,7 @@
         "roe_ttm": 21.71,
         "roa_ttm": null,
         "net_profit_ttm": 300000000.0,
-        "revenue_ttm": 2003700.0,
+        "revenue_ttm": 2003700000.0,
         "graham_number": 13264.0
       },
       "yoy": {
@@ -892,7 +990,14 @@
         "Net Profit": -43.06,
         "Number of Shares": 0.0
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -908,7 +1013,7 @@
         "Current Liabilities": 3855100000.0,
         "Current Assets": 6282700000.0,
         "Total Assets": 8375800000.0,
-        "Revenue from Operation": 1781200.0,
+        "Revenue from Operation": 1781200000.0,
         "Gross Profit": 0.0,
         "Total Operating Profit": 0.0,
         "Net Profit": 430900000.0,
@@ -940,7 +1045,7 @@
         "roe_ttm": 20.22,
         "roa_ttm": null,
         "net_profit_ttm": 430900000.0,
-        "revenue_ttm": 1781200.0,
+        "revenue_ttm": 1781200000.0,
         "graham_number": 9870.66
       },
       "yoy": {
@@ -961,7 +1066,14 @@
         "Book Value Reported": -0.18,
         "ROE Reported": -9.65
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -977,9 +1089,9 @@
         "Current Liabilities": 2332500000.0,
         "Current Assets": 5216000000.0,
         "Total Assets": 7297200000.0,
-        "Revenue from Operation": 1872700.0,
+        "Revenue from Operation": 1872700000.0,
         "Gross Profit": 0.0,
-        "Total Operating Profit": 455300.0,
+        "Total Operating Profit": 455300000.0,
         "Net Profit": 455300000.0,
         "Number of Shares": 921000.0,
         "EPS Reported": 659.14,
@@ -1009,7 +1121,7 @@
         "roe_ttm": 12.89,
         "roa_ttm": null,
         "net_profit_ttm": 455300000.0,
-        "revenue_ttm": 1872700.0,
+        "revenue_ttm": 1872700000.0,
         "graham_number": 8709.68
       },
       "yoy": {
@@ -1030,7 +1142,15 @@
         "Book Value Reported": -0.65,
         "ROE Reported": -4.94
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -1046,9 +1166,9 @@
         "Current Liabilities": 2368900000.0,
         "Current Assets": 5610700000.0,
         "Total Assets": 7729500000.0,
-        "Revenue from Operation": 2256000.0,
+        "Revenue from Operation": 2256000000.0,
         "Gross Profit": 0.0,
-        "Total Operating Profit": 390800.0,
+        "Total Operating Profit": 390800000.0,
         "Net Profit": 390800000.0,
         "Number of Shares": 921000.0,
         "EPS Reported": 424.32,
@@ -1078,7 +1198,7 @@
         "roe_ttm": 7.66,
         "roa_ttm": null,
         "net_profit_ttm": 390800000.0,
-        "revenue_ttm": 2256000.0,
+        "revenue_ttm": 2256000000.0,
         "graham_number": 7270.77
       },
       "yoy": {
@@ -1100,7 +1220,15 @@
         "Book Value Reported": -2.23,
         "ROE Reported": -79.63
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UNL",
@@ -1116,9 +1244,9 @@
         "Current Liabilities": 2496000000.0,
         "Current Assets": 6074500000.0,
         "Total Assets": 8070300000.0,
-        "Revenue from Operation": 2243600.0,
+        "Revenue from Operation": 2243600000.0,
         "Gross Profit": 0.0,
-        "Total Operating Profit": 252300.0,
+        "Total Operating Profit": 252300000.0,
         "Net Profit": 252300000.0,
         "Number of Shares": 921000.0,
         "EPS Reported": 1095.77,
@@ -1148,7 +1276,7 @@
         "roe_ttm": 18.8,
         "roa_ttm": null,
         "net_profit_ttm": 252300000.0,
-        "revenue_ttm": 2243600.0,
+        "revenue_ttm": 2243600000.0,
         "graham_number": 11987.13
       },
       "yoy": {
@@ -1169,7 +1297,15 @@
         "Book Value Reported": -2.89,
         "ROE Reported": -13.4
       },
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation",
+          "Total Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:22:03.338734"

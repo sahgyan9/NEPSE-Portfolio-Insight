@@ -8,7 +8,7 @@
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T09:02:01.109354",
+      "parsed_at": "2026-11-14T21:11:09.903811",
       "raw": {
         "EPS(Rs.)": 15.48
       },
@@ -31,7 +31,7 @@
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T09:02:01.109347",
+      "parsed_at": "2026-11-14T21:11:09.903792",
       "raw": {
         "Paid Up Capital": 2200000000.0,
         "Reserves and Surplus": 661024440.0,
@@ -44,8 +44,8 @@
         "Total Investment and Loans": 6741703700.0,
         "Total Revenue": 122489430.0,
         "Income From Investment Loans And Others": 60729900.0,
-        "Total Expenses And Provisions": 30209.37,
-        "Management Expenses": 10577.42,
+        "Total Expenses And Provisions": 30209370.0,
+        "Management Expenses": 10577420.0,
         "Net Profit": 92280060.0,
         "Net Premium": 790193020.0,
         "Net Claim Payment": 53663820.0,
@@ -96,14 +96,22 @@
         "graham_number": 224.6
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JLI",
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T09:02:01.109293",
+      "parsed_at": "2026-11-14T21:11:09.903625",
       "raw": {
         "Paid Up Capital": 2200000000.0,
         "Reserves and Surplus": 729000890.0,
@@ -116,8 +124,8 @@
         "Total Investment and Loans": 7380137980.0,
         "Total Revenue": 183212900.0,
         "Income From Investment Loans And Others": 112421850.0,
-        "Total Expenses And Provisions": 49205.16,
-        "Management Expenses": 23176.72,
+        "Total Expenses And Provisions": 49205160.0,
+        "Management Expenses": 23176720.0,
         "Net Profit": 134007750.0,
         "Net Premium": 1643917880.0,
         "Net Claim Payment": 94378740.0,
@@ -168,14 +176,22 @@
         "graham_number": 193.68
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JLI",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:02:01.109238",
+      "parsed_at": "2026-11-14T21:11:09.903566",
       "raw": {
         "Paid Up Capital": 2420000000.0,
         "Reserves and Surplus": 566847990.0,
@@ -188,8 +204,8 @@
         "Total Investment and Loans": 8025643310.0,
         "Total Revenue": 285913680.0,
         "Income From Investment Loans And Others": 177679610.0,
-        "Total Expenses And Provisions": 79404.25,
-        "Management Expenses": 39045.09,
+        "Total Expenses And Provisions": 79404250.0,
+        "Management Expenses": 39045090.0,
         "Net Profit": 206509430.0,
         "Net Premium": 2493867680.0,
         "Net Claim Payment": 188607700.0,
@@ -240,14 +256,22 @@
         "graham_number": 180.39
       },
       "yoy": {},
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JLI",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:02:01.109172",
+      "parsed_at": "2026-11-14T21:11:09.903503",
       "raw": {
         "Paid Up Capital": 2420000000.0,
         "Reserves and Surplus": 775082910.0,
@@ -260,8 +284,8 @@
         "Total Investment and Loans": 9052089310.0,
         "Total Revenue": 363836950.0,
         "Income From Investment Loans And Others": 224135500.0,
-        "Total Expenses And Provisions": 124639.84,
-        "Management Expenses": 70120.04,
+        "Total Expenses And Provisions": 124639840.0,
+        "Management Expenses": 70120040.0,
         "Net Profit": 239197110.0,
         "Net Premium": 3620060260.0,
         "Net Claim Payment": 283541800.0,
@@ -315,14 +339,22 @@
         "eps_ttm": -36.18,
         "EPS(Rs.)": -36.18
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "JLI",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:02:01.109040",
+      "parsed_at": "2026-11-14T21:11:09.903430",
       "raw": {
         "Paid Up Capital": 2420000000.0,
         "Reserves and Surplus": 1035791690.0,
@@ -334,8 +366,8 @@
         "Total Investment and Loans": 9665255770.0,
         "Total Revenue": 175886990.0,
         "Income From Investment Loans And Others": 74443630.0,
-        "Total Expenses And Provisions": 60615.25,
-        "Management Expenses": 11485.37,
+        "Total Expenses And Provisions": 60615250.0,
+        "Management Expenses": 11485370.0,
         "Net Profit": 215271740.0,
         "Net Premium": 914004120.0,
         "Net Claim Payment": 74681400.0,
@@ -413,8 +445,16 @@
         "Book Value(Rs.)": 6.88,
         "ROE": 98.41
       },
-      "sector": "Life Insurance"
+      "sector": "Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:02:01.110092"
+  "last_updated": "2026-11-14T21:11:09.905266"
 }

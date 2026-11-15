@@ -8,7 +8,7 @@
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T08:49:02.947259",
+      "parsed_at": "2026-11-14T20:57:54.576681",
       "raw": {
         "Paid Up Capital": 83400000.0,
         "Reserve and Surplus": 39655290.0,
@@ -20,8 +20,8 @@
         "Investments": 10000000.0,
         "Interest Income": 132970370.0,
         "Net Interest Income": 80524650.0,
-        "Total Operating Income": 105246.13,
-        "Operating Profit": 33799.62,
+        "Total Operating Income": 105246130.0,
+        "Operating Profit": 33799620.0,
         "Net Profit": 22064690.0,
         "Number of Shares": 834000.0,
         "EPS(Rs.)": 26.46,
@@ -65,14 +65,22 @@
         "graham_number": 296.38
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T08:49:02.947146",
+      "parsed_at": "2026-11-14T20:57:54.576551",
       "raw": {
         "Paid Up Capital": 83400000.0,
         "Reserve and Surplus": 42515040.0,
@@ -84,8 +92,8 @@
         "Investments": 10000000.0,
         "Interest Income": 33211090.0,
         "Net Interest Income": 16200830.0,
-        "Total Operating Income": 24719.81,
-        "Operating Profit": 4971.53,
+        "Total Operating Income": 24719810.0,
+        "Operating Profit": 4971530.0,
         "Net Profit": 3163700.0,
         "Number of Shares": 834000.0,
         "EPS(Rs.)": 15.17,
@@ -129,14 +137,22 @@
         "graham_number": 227.01
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T08:49:02.947035",
+      "parsed_at": "2026-11-14T20:57:54.576421",
       "raw": {
         "Paid Up Capital": 97500000.0,
         "Reserve and Surplus": 27630630.0,
@@ -148,8 +164,8 @@
         "Investments": 10000000.0,
         "Interest Income": 74211000.0,
         "Net Interest Income": 35123600.0,
-        "Total Operating Income": 50189.48,
-        "Operating Profit": 11611.58,
+        "Total Operating Income": 50189480.0,
+        "Operating Profit": 11611580.0,
         "Net Profit": 7389190.0,
         "Number of Shares": 975000.0,
         "EPS(Rs.)": 15.16,
@@ -193,14 +209,22 @@
         "graham_number": 209.23
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:49:02.946923",
+      "parsed_at": "2026-11-14T20:57:54.576278",
       "raw": {
         "Paid Up Capital": 97500000.0,
         "Reserve and Surplus": 30905120.0,
@@ -212,8 +236,8 @@
         "Investments": 10000000.0,
         "Interest Income": 115242220.0,
         "Net Interest Income": 48313220.0,
-        "Total Operating Income": 69701.46,
-        "Operating Profit": 16521.92,
+        "Total Operating Income": 69701460.0,
+        "Operating Profit": 16521920.0,
         "Net Profit": 10513950.0,
         "Number of Shares": 975000.0,
         "EPS(Rs.)": 14.38,
@@ -257,14 +281,22 @@
         "graham_number": 206.43
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:49:02.946810",
+      "parsed_at": "2026-11-14T20:57:54.576146",
       "raw": {
         "Paid Up Capital": 97500000.0,
         "Reserve and Surplus": 32925370.0,
@@ -276,8 +308,8 @@
         "Investments": 10000000.0,
         "Interest Income": 167501860.0,
         "Net Interest Income": 68058850.0,
-        "Total Operating Income": 95048.28,
-        "Operating Profit": 20234.52,
+        "Total Operating Income": 95048280.0,
+        "Operating Profit": 20234520.0,
         "Net Profit": 12747750.0,
         "Number of Shares": 975000.0,
         "EPS(Rs.)": 13.07,
@@ -347,14 +379,22 @@
         "Cost of funds": 61.15,
         "CD ratio": -16.61
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:49:02.946698",
+      "parsed_at": "2026-11-14T20:57:54.576011",
       "raw": {
         "Paid Up Capital": 97500000.0,
         "Reserve and Surplus": 26742210.0,
@@ -366,8 +406,8 @@
         "Investments": 10000000.0,
         "Interest Income": 36113330.0,
         "Net Interest Income": 5927520.0,
-        "Total Operating Income": 12482.06,
-        "Operating Profit": -6022.56,
+        "Total Operating Income": 12482060.0,
+        "Operating Profit": -6022560.0,
         "Net Profit": -6022560.0,
         "Number of Shares": 975000.0,
         "EPS(Rs.)": -24.71,
@@ -436,14 +476,22 @@
         "Cost of funds": 52.47,
         "CD ratio": -19.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:49:02.946587",
+      "parsed_at": "2026-11-14T20:57:54.575880",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 20549070.0,
@@ -455,8 +503,8 @@
         "Investments": 10000000.0,
         "Interest Income": 82322480.0,
         "Net Interest Income": 22453330.0,
-        "Total Operating Income": 35312.97,
-        "Operating Profit": -1382.2,
+        "Total Operating Income": 35312970.0,
+        "Operating Profit": -1382200.0,
         "Net Profit": 247970.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 0.49,
@@ -523,14 +571,22 @@
         "NPL": 40.46,
         "Cost of funds": 28.19
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:49:02.946477",
+      "parsed_at": "2026-11-14T20:57:54.575749",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 14725550.0,
@@ -542,8 +598,8 @@
         "Investments": 9500000.0,
         "Interest Income": 124547910.0,
         "Net Interest Income": 34091640.0,
-        "Total Operating Income": 51188.89,
-        "Operating Profit": -5497.15,
+        "Total Operating Income": 51188890.0,
+        "Operating Profit": -5497150.0,
         "Net Profit": -5491000.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": -7.22,
@@ -609,14 +665,22 @@
         "NPL": 42.65,
         "Cost of funds": 34.2
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:49:02.946366",
+      "parsed_at": "2026-11-14T20:57:54.575620",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 20540920.0,
@@ -628,8 +692,8 @@
         "Investments": 9500000.0,
         "Interest Income": 178587750.0,
         "Net Interest Income": 55938020.0,
-        "Total Operating Income": 78753.63,
-        "Operating Profit": 4474.38,
+        "Total Operating Income": 78753630.0,
+        "Operating Profit": 4474380.0,
         "Net Profit": 2853470.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 2.81,
@@ -699,14 +763,22 @@
         "Cost of funds": 8.66,
         "CD ratio": -4.5
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:49:02.946253",
+      "parsed_at": "2026-11-14T20:57:54.575493",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 24879410.0,
@@ -718,8 +790,8 @@
         "Investments": 9500000.0,
         "Interest Income": 45142060.0,
         "Net Interest Income": 12975910.0,
-        "Total Operating Income": 19444.63,
-        "Operating Profit": 1466.57,
+        "Total Operating Income": 19444630.0,
+        "Operating Profit": 1466570.0,
         "Net Profit": 933270.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 3.68,
@@ -789,14 +861,22 @@
         "Cost of funds": 6.67,
         "CD ratio": 21.14
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:49:02.946139",
+      "parsed_at": "2026-11-14T20:57:54.575371",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 30084150.0,
@@ -808,8 +888,8 @@
         "Investments": 9500000.0,
         "Interest Income": 93711520.0,
         "Net Interest Income": 28917430.0,
-        "Total Operating Income": 42902.96,
-        "Operating Profit": 7976.15,
+        "Total Operating Income": 42902960.0,
+        "Operating Profit": 7976150.0,
         "Net Profit": 7728300.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 15.24,
@@ -878,14 +958,22 @@
         "NPL": -12.18,
         "Cost of funds": 6.48
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:49:02.946074",
+      "parsed_at": "2026-11-14T20:57:54.575246",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 43840240.0,
@@ -897,8 +985,8 @@
         "Investments": 9000000.0,
         "Interest Income": 155965420.0,
         "Net Interest Income": 56968980.0,
-        "Total Operating Income": 82265.56,
-        "Operating Profit": 29734.06,
+        "Total Operating Income": 82265560.0,
+        "Operating Profit": 29734060.0,
         "Net Profit": 22478710.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 29.56,
@@ -967,14 +1055,22 @@
         "NPL": -60.96,
         "Cost of funds": -16.74
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:49:02.946033",
+      "parsed_at": "2026-11-14T20:57:54.575125",
       "raw": {
         "Paid Up Capital": 101400000.0,
         "Reserve and Surplus": 47168290.0,
@@ -986,8 +1082,8 @@
         "Investments": 9000000.0,
         "Interest Income": 218681290.0,
         "Net Interest Income": 82881890.0,
-        "Total Operating Income": 115633.31,
-        "Operating Profit": 36043.58,
+        "Total Operating Income": 115633310.0,
+        "Operating Profit": 36043580.0,
         "Net Profit": 25963590.0,
         "Number of Shares": 1014000.0,
         "EPS(Rs.)": 25.61,
@@ -1057,14 +1153,22 @@
         "Cost of funds": -23.83,
         "CD ratio": 21.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:49:02.945992",
+      "parsed_at": "2026-11-14T20:57:54.575001",
       "raw": {
         "Paid Up Capital": 115849500.0,
         "Reserve and Surplus": 37032120.0,
@@ -1076,8 +1180,8 @@
         "Investments": 9000000.0,
         "Interest Income": 66447970.0,
         "Net Interest Income": 31410830.0,
-        "Total Operating Income": 41281.47,
-        "Operating Profit": 16125.57,
+        "Total Operating Income": 41281470.0,
+        "Operating Profit": 16125570.0,
         "Net Profit": 10162450.0,
         "Number of Shares": 1158495.0,
         "EPS(Rs.)": 35.09,
@@ -1147,14 +1251,22 @@
         "Cost of funds": -27.35,
         "CD ratio": 9.64
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:49:02.945951",
+      "parsed_at": "2026-11-14T20:57:54.574878",
       "raw": {
         "Paid Up Capital": 115849500.0,
         "Reserve and Surplus": 42672130.0,
@@ -1166,8 +1278,8 @@
         "Investments": 9000000.0,
         "Interest Income": 124564200.0,
         "Net Interest Income": 56487220.0,
-        "Total Operating Income": 71387.83,
-        "Operating Profit": 24539.29,
+        "Total Operating Income": 71387830.0,
+        "Operating Profit": 24539290.0,
         "Net Profit": 15463090.0,
         "Number of Shares": 1158495.0,
         "EPS Reported": 26.7,
@@ -1234,14 +1346,22 @@
         "Cost of funds": -29.48,
         "CD ratio": 16.46
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:49:02.945911",
+      "parsed_at": "2026-11-14T20:57:54.574755",
       "raw": {
         "Paid Up Capital": 115849500.0,
         "Reserve and Surplus": 53594280.0,
@@ -1254,8 +1374,8 @@
         "Investments": 9000000.0,
         "Interest Income": 188566150.0,
         "Net Interest Income": 89248120.0,
-        "Total Operating Income": 110173.07,
-        "Operating Profit": 41490.22,
+        "Total Operating Income": 110173070.0,
+        "Operating Profit": 41490220.0,
         "Net Profit": 27112930.0,
         "Number of Shares": 1158495.0,
         "EPS Reported": 31.2,
@@ -1323,14 +1443,22 @@
         "Cost of funds": -26.36,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:49:02.945870",
+      "parsed_at": "2026-11-14T20:57:54.574626",
       "raw": {
         "Paid Up Capital": 115849500.0,
         "Reserve and Surplus": 65787480.0,
@@ -1343,8 +1471,8 @@
         "Investments": 9000000.0,
         "Interest Income": 263208320.0,
         "Net Interest Income": 132399950.0,
-        "Total Operating Income": 158746.03,
-        "Operating Profit": 60313.2,
+        "Total Operating Income": 158746030.0,
+        "Operating Profit": 60313200.0,
         "Net Profit": 39583450.0,
         "Number of Shares": 1158495.0,
         "EPS Reported": 34.17,
@@ -1412,14 +1540,22 @@
         "Cost of funds": -21.5,
         "CD ratio": -11.17
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:49:02.945827",
+      "parsed_at": "2026-11-14T20:57:54.574494",
       "raw": {
         "Paid Up Capital": 115849500.0,
         "Reserve and Surplus": 83724030.0,
@@ -1432,8 +1568,8 @@
         "Investments": 0.0,
         "Interest Income": 74336390.0,
         "Net Interest Income": 42946750.0,
-        "Total Operating Income": 47896.09,
-        "Operating Profit": 20250.3,
+        "Total Operating Income": 47896090.0,
+        "Operating Profit": 20250300.0,
         "Net Profit": 14488970.0,
         "Number of Shares": 1158495.0,
         "EPS Reported": 50.03,
@@ -1501,14 +1637,22 @@
         "Cost of funds": -18.45,
         "CD ratio": -21.54
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:49:02.945786",
+      "parsed_at": "2026-11-14T20:57:54.574363",
       "raw": {
         "Paid Up Capital": 132358050.0,
         "Reserve and Surplus": 78527670.0,
@@ -1521,8 +1665,8 @@
         "Investments": 0.0,
         "Interest Income": 149387880.0,
         "Net Interest Income": 87659350.0,
-        "Total Operating Income": 97190.21,
-        "Operating Profit": 37051.9,
+        "Total Operating Income": 97190210.0,
+        "Operating Profit": 37051900.0,
         "Net Profit": 26620450.0,
         "Number of Shares": 1323580.54,
         "EPS Reported": 40.22,
@@ -1593,14 +1737,22 @@
         "Cost of funds": -17.9,
         "CD ratio": -21.26
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:49:02.945742",
+      "parsed_at": "2026-11-14T20:57:54.574225",
       "raw": {
         "Paid Up Capital": 132358050.0,
         "Reserve and Surplus": 91208600.0,
@@ -1613,8 +1765,8 @@
         "Investments": 0.0,
         "Interest Income": 225175890.0,
         "Net Interest Income": 133490630.0,
-        "Total Operating Income": 147424.43,
-        "Operating Profit": 55383.84,
+        "Total Operating Income": 147424430.0,
+        "Operating Profit": 55383840.0,
         "Net Profit": 40327580.0,
         "Number of Shares": 1323580.54,
         "EPS Reported": 40.62,
@@ -1684,14 +1836,22 @@
         "NPL": 13.29,
         "Cost of funds": -13.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:49:02.945697",
+      "parsed_at": "2026-11-14T20:57:54.574086",
       "raw": {
         "Paid Up Capital": 132358050.0,
         "Reserve and Surplus": 92006660.0,
@@ -1704,8 +1864,8 @@
         "Investments": 0.0,
         "Interest Income": 308002800.0,
         "Net Interest Income": 184973850.0,
-        "Total Operating Income": 203519.46,
-        "Operating Profit": 59170.82,
+        "Total Operating Income": 203519460.0,
+        "Operating Profit": 59170820.0,
         "Net Profit": 41180520.0,
         "Number of Shares": 1323580.54,
         "EPS Reported": 31.11,
@@ -1776,14 +1936,22 @@
         "Cost of funds": -12.17,
         "CD ratio": -17.53
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GLBSL",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:49:02.945610",
+      "parsed_at": "2026-11-14T20:57:54.573926",
       "raw": {
         "Paid Up Capital": 144932070.0,
         "Reserve and Surplus": 91401030.0,
@@ -1796,8 +1964,8 @@
         "Investments": 0.0,
         "Interest Income": 74609360.0,
         "Net Interest Income": 44054610.0,
-        "Total Operating Income": 49178.41,
-        "Operating Profit": 457.6,
+        "Total Operating Income": 49178410.0,
+        "Operating Profit": 457600.0,
         "Net Profit": 14886540.0,
         "Number of Shares": 1449320.69,
         "EPS Reported": 41.09,
@@ -1867,8 +2035,16 @@
         "Cost of funds": 2091.1,
         "CD ratio": -97.55
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:49:02.949615"
+  "last_updated": "2026-11-14T20:57:54.580782"
 }

@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:40:08.113424",
+      "parsed_at": "2026-11-14T20:49:02.930074",
       "raw": {
         "EPS(Rs.)": 52.08
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:40:08.113418",
+      "parsed_at": "2026-11-14T20:49:02.930036",
       "raw": {
         "Paid Up Capital": 171949230.0,
         "Reserve and Surplus": 354999900.0,
@@ -42,8 +42,8 @@
         "Loans and Advances to Customers": 3152368250.0,
         "Interest Income": 145992590.0,
         "Net Interest Income": 110775930.0,
-        "Total Operating Income": 125724.38,
-        "Operating Profit": 60103.68,
+        "Total Operating Income": 125724380.0,
+        "Operating Profit": 60103680.0,
         "Net Profit": 43152670.0,
         "Number of Shares": 1719490.0,
         "EPS(Rs.)": 25.1,
@@ -86,14 +86,22 @@
         "graham_number": 416.02
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:40:08.113386",
+      "parsed_at": "2026-11-14T20:49:02.929908",
       "raw": {
         "Paid Up Capital": 257923850.0,
         "Reserve and Surplus": 227252620.0,
@@ -104,8 +112,8 @@
         "Loans and Advances to Customers": 3185195060.0,
         "Interest Income": 293944410.0,
         "Net Interest Income": 217873280.0,
-        "Total Operating Income": 246171.85,
-        "Operating Profit": 120597.15,
+        "Total Operating Income": 246171850.0,
+        "Operating Profit": 120597150.0,
         "Net Profit": 88582130.0,
         "Number of Shares": 2579230.0,
         "EPS(Rs.)": 34.34,
@@ -148,14 +156,22 @@
         "graham_number": 381.24
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:40:08.113353",
+      "parsed_at": "2026-11-14T20:49:02.929785",
       "raw": {
         "Paid Up Capital": 257923850.0,
         "Reserve and Surplus": 291145410.0,
@@ -166,8 +182,8 @@
         "Loans and Advances to Customers": 3522440520.0,
         "Interest Income": 454940890.0,
         "Net Interest Income": 340553030.0,
-        "Total Operating Income": 387045.96,
-        "Operating Profit": 197463.21,
+        "Total Operating Income": 387045960.0,
+        "Operating Profit": 197463210.0,
         "Net Profit": 152474920.0,
         "Number of Shares": 2579230.0,
         "EPS(Rs.)": 59.12,
@@ -210,14 +226,22 @@
         "graham_number": 532.14
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:40:08.113319",
+      "parsed_at": "2026-11-14T20:49:02.929652",
       "raw": {
         "Paid Up Capital": 257923850.0,
         "Reserve and Surplus": 333349710.0,
@@ -228,8 +252,8 @@
         "Loans and Advances to Customers": 3928095870.0,
         "Interest Income": 636355640.0,
         "Net Interest Income": 470087440.0,
-        "Total Operating Income": 540305.16,
-        "Operating Profit": 248236.35,
+        "Total Operating Income": 540305160.0,
+        "Operating Profit": 248236350.0,
         "Net Profit": 192707440.0,
         "Number of Shares": 2579230.0,
         "EPS(Rs.)": 54.48,
@@ -275,14 +299,22 @@
         "eps_ttm": 4.61,
         "EPS(Rs.)": 4.61
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-07T08:40:08.113286",
+      "parsed_at": "2026-11-14T20:49:02.929449",
       "raw": {
         "Paid Up Capital": 257923850.0,
         "Reserve and Surplus": 512862650.0,
@@ -293,8 +325,8 @@
         "Loans and Advances to Customers": 4305380640.0,
         "Interest Income": 201866390.0,
         "Net Interest Income": 152095890.0,
-        "Total Operating Income": 170547.18,
-        "Operating Profit": 89859.65,
+        "Total Operating Income": 170547180.0,
+        "Operating Profit": 89859650.0,
         "Net Profit": 69347110.0,
         "Number of Shares": 2579230.0,
         "EPS(Rs.)": 26.89,
@@ -362,14 +394,22 @@
         "Cost of funds": 0.37,
         "CD ratio": 2.48
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-07T08:40:08.113254",
+      "parsed_at": "2026-11-14T20:49:02.929280",
       "raw": {
         "Paid Up Capital": 257923850.0,
         "Reserve and Surplus": 590536100.0,
@@ -380,8 +420,8 @@
         "Loans and Advances to Customers": 4691295540.0,
         "Interest Income": 415255570.0,
         "Net Interest Income": 305176160.0,
-        "Total Operating Income": 343295.67,
-        "Operating Profit": 199141.5,
+        "Total Operating Income": 343295670.0,
+        "Operating Profit": 199141500.0,
         "Net Profit": 147020560.0,
         "Number of Shares": 2579230.0,
         "EPS(Rs.)": 57.0,
@@ -449,14 +489,22 @@
         "Cost of funds": 33.14,
         "CD ratio": -2.75
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-07T08:40:08.113221",
+      "parsed_at": "2026-11-14T20:49:02.929155",
       "raw": {
         "Paid Up Capital": 348197190.0,
         "Reserve and Surplus": 389663630.0,
@@ -467,8 +515,8 @@
         "Loans and Advances to Customers": 5067797820.0,
         "Interest Income": 637527250.0,
         "Net Interest Income": 450346680.0,
-        "Total Operating Income": 508942.61,
-        "Operating Profit": 281868.65,
+        "Total Operating Income": 508942610.0,
+        "Operating Profit": 281868650.0,
         "Net Profit": 208581880.0,
         "Number of Shares": 3481970.0,
         "EPS(Rs.)": 59.9,
@@ -536,14 +584,22 @@
         "Cost of funds": 54.01,
         "CD ratio": 0.44
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-07T08:40:08.113187",
+      "parsed_at": "2026-11-14T20:49:02.929095",
       "raw": {
         "Paid Up Capital": 606121040.0,
         "Reserve and Surplus": 451985700.0,
@@ -554,8 +610,8 @@
         "Loans and Advances to Customers": 5447846540.0,
         "Interest Income": 891647560.0,
         "Net Interest Income": 605461800.0,
-        "Total Operating Income": 685411.94,
-        "Operating Profit": 352268.56,
+        "Total Operating Income": 685411940.0,
+        "Operating Profit": 352268560.0,
         "Net Profit": 262905150.0,
         "Number of Shares": 6061210.0,
         "EPS(Rs.)": 36.39,
@@ -623,14 +679,22 @@
         "Cost of funds": 71.0,
         "CD ratio": 3.74
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:40:08.113153",
+      "parsed_at": "2026-11-14T20:49:02.929048",
       "raw": {
         "Paid Up Capital": 1387498330.0,
         "Reserve and Surplus": 1459159110.0,
@@ -642,8 +706,8 @@
         "Investments": 2010000.0,
         "Interest Income": 1852252920.0,
         "Net Interest Income": 1021101410.0,
-        "Total Operating Income": 1180003.49,
-        "Operating Profit": 621486.51,
+        "Total Operating Income": 1180003490.0,
+        "Operating Profit": 621486510.0,
         "Net Profit": 436133710.0,
         "Number of Shares": 13874983.33,
         "EPS(Rs.)": 41.91,
@@ -709,14 +773,22 @@
         "NPL": -20.27,
         "Cost of funds": 41.34
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:40:08.113118",
+      "parsed_at": "2026-11-14T20:49:02.929000",
       "raw": {
         "Paid Up Capital": 1156248610.0,
         "Reserve and Surplus": 1933184050.0,
@@ -728,8 +800,8 @@
         "Investments": 152000000.0,
         "Interest Income": 2571920390.0,
         "Net Interest Income": 1385318970.0,
-        "Total Operating Income": 1601516.56,
-        "Operating Profit": 819938.75,
+        "Total Operating Income": 1601516560.0,
+        "Operating Profit": 819938750.0,
         "Net Profit": 574022760.0,
         "Number of Shares": 11562486.11,
         "EPS(Rs.)": 49.65,
@@ -795,14 +867,22 @@
         "NPL": 33.77,
         "Cost of funds": 16.98
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:40:08.113084",
+      "parsed_at": "2026-11-14T20:49:02.928951",
       "raw": {
         "Paid Up Capital": 1156248610.0,
         "Reserve and Surplus": 2026663650.0,
@@ -814,8 +894,8 @@
         "Investments": 152000000.0,
         "Interest Income": 704288590.0,
         "Net Interest Income": 332464070.0,
-        "Total Operating Income": 400831.44,
-        "Operating Profit": 141615.65,
+        "Total Operating Income": 400831440.0,
+        "Operating Profit": 141615650.0,
         "Net Profit": 99130950.0,
         "Number of Shares": 11562486.11,
         "EPS(Rs.)": 34.29,
@@ -881,14 +961,22 @@
         "NPL": 425.71,
         "Cost of funds": 14.62
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:40:08.113050",
+      "parsed_at": "2026-11-14T20:49:02.928902",
       "raw": {
         "Paid Up Capital": 1387498330.0,
         "Reserve and Surplus": 1907958160.0,
@@ -900,8 +988,8 @@
         "Investments": 152000000.0,
         "Interest Income": 1381062260.0,
         "Net Interest Income": 648104390.0,
-        "Total Operating Income": 760618.01,
-        "Operating Profit": 307710.56,
+        "Total Operating Income": 760618010.0,
+        "Operating Profit": 307710560.0,
         "Net Profit": 215397390.0,
         "Number of Shares": 13874983.33,
         "EPS(Rs.)": 31.05,
@@ -967,14 +1055,22 @@
         "NPL": 419.44,
         "Cost of funds": 3.08
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:40:08.113016",
+      "parsed_at": "2026-11-14T20:49:02.928854",
       "raw": {
         "Paid Up Capital": 1526248170.0,
         "Reserve and Surplus": 1733531650.0,
@@ -986,8 +1082,8 @@
         "Investments": 152000000.0,
         "Interest Income": 2066796460.0,
         "Net Interest Income": 940957110.0,
-        "Total Operating Income": 1100884.57,
-        "Operating Profit": 396546.66,
+        "Total Operating Income": 1100884570.0,
+        "Operating Profit": 396546660.0,
         "Net Profit": 277582670.0,
         "Number of Shares": 15262481.66,
         "EPS(Rs.)": 24.25,
@@ -1054,14 +1150,22 @@
         "NPL": 661.02,
         "Cost of funds": 27.14
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:40:08.112983",
+      "parsed_at": "2026-11-14T20:49:02.928803",
       "raw": {
         "Paid Up Capital": 1551088170.0,
         "Reserve and Surplus": 1828327950.0,
@@ -1073,8 +1177,8 @@
         "Investments": 152000000.0,
         "Interest Income": 2798914170.0,
         "Net Interest Income": 1245383140.0,
-        "Total Operating Income": 1447131.73,
-        "Operating Profit": 531328.59,
+        "Total Operating Income": 1447131730.0,
+        "Operating Profit": 531328590.0,
         "Net Profit": 371930010.0,
         "Number of Shares": 15510881.66,
         "EPS(Rs.)": 23.98,
@@ -1143,14 +1247,22 @@
         "NPL": 288.35,
         "Cost of funds": 19.8
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:40:08.112948",
+      "parsed_at": "2026-11-14T20:49:02.928753",
       "raw": {
         "Paid Up Capital": 1551088170.0,
         "Reserve and Surplus": 1879374260.0,
@@ -1162,8 +1274,8 @@
         "Investments": 152000000.0,
         "Interest Income": 785516530.0,
         "Net Interest Income": 334242840.0,
-        "Total Operating Income": 402010.76,
-        "Operating Profit": 126093.3,
+        "Total Operating Income": 402010760.0,
+        "Operating Profit": 126093300.0,
         "Net Profit": 88265310.0,
         "Number of Shares": 15510881.66,
         "EPS(Rs.)": 22.76,
@@ -1232,14 +1344,22 @@
         "NPL": 39.67,
         "Cost of funds": 7.03
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:40:08.112914",
+      "parsed_at": "2026-11-14T20:49:02.928703",
       "raw": {
         "Paid Up Capital": 1551088170.0,
         "Reserve and Surplus": 1750268360.0,
@@ -1251,8 +1371,8 @@
         "Investments": 2000000.0,
         "Interest Income": 1472971510.0,
         "Net Interest Income": 588634630.0,
-        "Total Operating Income": 709866.3,
-        "Operating Profit": 173310.26,
+        "Total Operating Income": 709866300.0,
+        "Operating Profit": 173310260.0,
         "Net Profit": 121317180.0,
         "Number of Shares": 15510881.66,
         "EPS(Rs.)": 15.64,
@@ -1321,14 +1441,22 @@
         "NPL": 178.34,
         "Cost of funds": 3.21
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:40:08.112879",
+      "parsed_at": "2026-11-14T20:49:02.928653",
       "raw": {
         "Paid Up Capital": 1706196980.0,
         "Reserve and Surplus": 1646601340.0,
@@ -1340,8 +1468,8 @@
         "Investments": 1156600.0,
         "Interest Income": 2306354710.0,
         "Net Interest Income": 979085430.0,
-        "Total Operating Income": 1161223.69,
-        "Operating Profit": 374131.7,
+        "Total Operating Income": 1161223690.0,
+        "Operating Profit": 374131700.0,
         "Net Profit": 252981660.0,
         "Number of Shares": 17061969.83,
         "EPS(Rs.)": 19.77,
@@ -1410,14 +1538,22 @@
         "NPL": 83.74,
         "Cost of funds": -1.14
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:40:08.112844",
+      "parsed_at": "2026-11-14T20:49:02.928603",
       "raw": {
         "Paid Up Capital": 1706196980.0,
         "Reserve and Surplus": 1992888220.0,
@@ -1429,8 +1565,8 @@
         "Investments": 1156600.0,
         "Interest Income": 3258421850.0,
         "Net Interest Income": 1470111260.0,
-        "Total Operating Income": 1691829.51,
-        "Operating Profit": 927646.7,
+        "Total Operating Income": 1691829510.0,
+        "Operating Profit": 927646700.0,
         "Net Profit": 581652230.0,
         "Number of Shares": 17061969.83,
         "EPS(Rs.)": 34.09,
@@ -1500,14 +1636,22 @@
         "Cost of funds": -4.11,
         "CD ratio": -0.28
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:40:08.112809",
+      "parsed_at": "2026-11-14T20:49:02.928553",
       "raw": {
         "Paid Up Capital": 1706196980.0,
         "Reserve and Surplus": 2006902620.0,
@@ -1518,8 +1662,8 @@
         "Loans and Advances to Customers": 24164174930.0,
         "Interest Income": 854944020.0,
         "Net Interest Income": 416132690.0,
-        "Total Operating Income": 462202.49,
-        "Operating Profit": 97105.82,
+        "Total Operating Income": 462202490.0,
+        "Operating Profit": 97105820.0,
         "Net Profit": 67984470.0,
         "Number of Shares": 17061969.83,
         "EPS(Rs.)": 15.94,
@@ -1587,14 +1731,22 @@
         "Cost of funds": -15.76,
         "CD ratio": -0.82
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:40:08.112775",
+      "parsed_at": "2026-11-14T20:49:02.928503",
       "raw": {
         "Paid Up Capital": 1706196980.0,
         "Reserve and Surplus": 1778270100.0,
@@ -1607,8 +1759,8 @@
         "Investments": 1365700.0,
         "Interest Income": 1838678630.0,
         "Net Interest Income": 994647040.0,
-        "Total Operating Income": 1087910.1,
-        "Operating Profit": 367281.57,
+        "Total Operating Income": 1087910100.0,
+        "Operating Profit": 367281570.0,
         "Net Profit": 245652140.0,
         "Number of Shares": 17061969.83,
         "EPS Reported": 28.8,
@@ -1676,14 +1828,22 @@
         "Cost of funds": -16.05,
         "CD ratio": 1.02
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:40:08.112740",
+      "parsed_at": "2026-11-14T20:49:02.928451",
       "raw": {
         "Paid Up Capital": 1868285700.0,
         "Reserve and Surplus": 1784344010.0,
@@ -1696,8 +1856,8 @@
         "Investments": 1365700.0,
         "Interest Income": 2737430100.0,
         "Net Interest Income": 1491659230.0,
-        "Total Operating Income": 1633222.36,
-        "Operating Profit": 631621.72,
+        "Total Operating Income": 1633222360.0,
+        "Operating Profit": 631621720.0,
         "Net Profit": 432123310.0,
         "Number of Shares": 18682856.96,
         "EPS Reported": 30.84,
@@ -1765,14 +1925,22 @@
         "Cost of funds": -16.88,
         "CD ratio": -0.04
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:40:08.112703",
+      "parsed_at": "2026-11-14T20:49:02.928398",
       "raw": {
         "Paid Up Capital": 1868285700.0,
         "Reserve and Surplus": 0.0,
@@ -1785,8 +1953,8 @@
         "Investments": 1365700.0,
         "Interest Income": 3495545350.0,
         "Net Interest Income": 1835858440.0,
-        "Total Operating Income": 2042266.62,
-        "Operating Profit": 1053395.35,
+        "Total Operating Income": 2042266620.0,
+        "Operating Profit": 1053395350.0,
         "Net Profit": 691154540.0,
         "Number of Shares": 18682856.96,
         "EPS Reported": 36.99,
@@ -1854,14 +2022,22 @@
         "Cost of funds": -16.81,
         "CD ratio": 0.27
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:40:08.112666",
+      "parsed_at": "2026-11-14T20:49:02.928345",
       "raw": {
         "Paid Up Capital": 1868285700.0,
         "Reserve and Surplus": 2264640210.0,
@@ -1874,8 +2050,8 @@
         "Investments": 1365700.0,
         "Interest Income": 927017520.0,
         "Net Interest Income": 533543990.0,
-        "Total Operating Income": 577759.31,
-        "Operating Profit": 288137.58,
+        "Total Operating Income": 577759310.0,
+        "Operating Profit": 288137580.0,
         "Net Profit": 202215580.0,
         "Number of Shares": 18682856.96,
         "EPS Reported": 43.29,
@@ -1942,14 +2118,22 @@
         "Cost of funds": -14.87,
         "CD ratio": 2.77
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:40:08.112628",
+      "parsed_at": "2026-11-14T20:49:02.928290",
       "raw": {
         "Paid Up Capital": 1868285700.0,
         "Share Premium": 0.0,
@@ -1966,8 +2150,8 @@
         "Interest Income": 1816714710.0,
         "Investment Securities": 1219970.0,
         "Net Interest Income": 1061025570.0,
-        "Total Operating Income": 1152480.95,
-        "Operating Profit": 629913.9,
+        "Total Operating Income": 1152480950.0,
+        "Operating Profit": 629913900.0,
         "Net Profit": 442910640.0,
         "Number of Shares": 18682856.96,
         "EPS Reported": 47.41,
@@ -2050,14 +2234,22 @@
         "Cost of funds": -13.69,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:40:08.112574",
+      "parsed_at": "2026-11-14T20:49:02.928119",
       "raw": {
         "Paid Up Capital": 2055114270.0,
         "Reserve and Surplus": 2307124450.0,
@@ -2070,8 +2262,8 @@
         "Investments": 1219970.0,
         "Interest Income": 2700875200.0,
         "Net Interest Income": 1584308540.0,
-        "Total Operating Income": 1737140.98,
-        "Operating Profit": 990804.76,
+        "Total Operating Income": 1737140980.0,
+        "Operating Profit": 990804760.0,
         "Net Profit": 680132170.0,
         "Number of Shares": 20551142.66,
         "EPS Reported": 44.13,
@@ -2142,14 +2334,22 @@
         "Cost of funds": -12.61,
         "CD ratio": -1.97
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "DDBL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:40:08.112528",
+      "parsed_at": "2026-11-14T20:49:02.927977",
       "raw": {
         "Paid Up Capital": 2055114270.0,
         "Reserve and Surplus": 2607244380.0,
@@ -2162,8 +2362,8 @@
         "Investments": 1219970.0,
         "Interest Income": 3687342440.0,
         "Net Interest Income": 2185676220.0,
-        "Total Operating Income": 2407351.42,
-        "Operating Profit": 1438448.46,
+        "Total Operating Income": 2407351420.0,
+        "Operating Profit": 1438448460.0,
         "Net Profit": 989443900.0,
         "Number of Shares": 20551142.66,
         "EPS Reported": 48.15,
@@ -2233,8 +2433,116 @@
         "Cost of funds": -11.84,
         "CD ratio": -0.27
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
+    },
+    {
+      "symbol": "DDBL",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-14T20:49:02.927782",
+      "raw": {
+        "Paid Up Capital": 2055114270.0,
+        "Reserve and Surplus": 2800236730.0,
+        "Total Equity": 4855351000.0,
+        "Total Assets": 29995148250.0,
+        "Deposits from Customers": 13486841270.0,
+        "Borrowings": 11023489420.0,
+        "Loans and Advances to BFIs": 0.0,
+        "Loans and Advances to Customers": 28563148710.0,
+        "Investments": 1219970.0,
+        "Interest Income": 978661710.0,
+        "Net Interest Income": 593007190.0,
+        "Total Operating Income": 657300940.0,
+        "Operating Profit": 313575510.0,
+        "Net Profit": 219930580.0,
+        "Number of Shares": 20551142.66,
+        "EPS Reported": 42.81,
+        "Book Value Reported": 236.26,
+        "ROE Reported": 18.12,
+        "CAR": 15.04,
+        "NPL": 6.7,
+        "Cost of funds": 6.51,
+        "CD ratio": 118.0
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Total Assets",
+        "Deposits from Customers",
+        "Borrowings",
+        "Loans and Advances to BFIs",
+        "Loans and Advances to Customers",
+        "Investments",
+        "Interest Income",
+        "Net Interest Income",
+        "Total Operating Income",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported",
+        "CAR",
+        "NPL",
+        "Cost of funds",
+        "CD ratio"
+      ],
+      "computed": {
+        "eps_ttm": 42.81,
+        "bvps": 236.26,
+        "roe_ttm": 18.12,
+        "roa_ttm": null,
+        "net_profit_ttm": 219930580.0,
+        "revenue_ttm": 978661710.0,
+        "graham_number": 477.04
+      },
+      "yoy": {
+        "eps_ttm": -1.11,
+        "bvps": 6.8,
+        "net_profit_ttm": 8.76,
+        "revenue_ttm": 5.57,
+        "Paid Up Capital": 10.0,
+        "Reserve and Surplus": 23.65,
+        "Total Equity": 17.48,
+        "Total Assets": 10.54,
+        "Deposits from Customers": 18.38,
+        "Borrowings": -0.22,
+        "Loans and Advances to Customers": 12.0,
+        "Investments": -10.67,
+        "Interest Income": 5.57,
+        "Net Interest Income": 11.14,
+        "Total Operating Income": 13.77,
+        "Operating Profit": 8.83,
+        "Net Profit": 8.76,
+        "Number of Shares": 10.0,
+        "EPS Reported": -1.11,
+        "Book Value Reported": 6.8,
+        "ROE Reported": -7.41,
+        "CAR": 6.89,
+        "NPL": -23.25,
+        "Cost of funds": -8.31,
+        "CD ratio": 2.72
+      },
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:40:08.114761"
+  "last_updated": "2026-11-14T20:49:02.933377"
 }

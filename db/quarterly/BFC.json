@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:27:07.119199",
+      "parsed_at": "2026-11-14T20:36:11.462887",
       "raw": {
         "Paid Up Capital": 828913790.0,
         "Share Premium": 3025360.0,
@@ -22,8 +22,8 @@
         "Investment Securities": 878265510.0,
         "Interest Income": 275459120.0,
         "Net Interest Income": 88649410.0,
-        "Total Operating Income": 131328.2,
-        "Operating Profit": 187351.72,
+        "Total Operating Income": 131328200.0,
+        "Operating Profit": 187351720.0,
         "Net Profit": 152693570.0,
         "Distributable Profit": -246883870.0,
         "Number of Shares": 8289130.0,
@@ -75,14 +75,22 @@
         "graham_number": 281.35
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:27:07.119091",
+      "parsed_at": "2026-11-14T20:36:11.462737",
       "raw": {
         "Paid Up Capital": 828913790.0,
         "Share Premium": 3025360.0,
@@ -95,8 +103,8 @@
         "Loans and Advances to Customers": 3218427490.0,
         "Interest Income": 400816470.0,
         "Net Interest Income": 126653710.0,
-        "Total Operating Income": 198838.47,
-        "Operating Profit": 209414.96,
+        "Total Operating Income": 198838470.0,
+        "Operating Profit": 209414960.0,
         "Net Profit": 167201360.0,
         "Distributable Profit": -196575660.0,
         "Number of Shares": 8289137.89,
@@ -147,14 +155,22 @@
         "graham_number": 256.75
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:27:07.118987",
+      "parsed_at": "2026-11-14T20:36:11.462596",
       "raw": {
         "Paid Up Capital": 828913790.0,
         "Share Premium": 3025360.0,
@@ -168,8 +184,8 @@
         "Investment Securities": 843730980.0,
         "Interest Income": 138217220.0,
         "Net Interest Income": 38008560.0,
-        "Total Operating Income": 89358.04,
-        "Operating Profit": 17973.18,
+        "Total Operating Income": 89358040.0,
+        "Operating Profit": 17973180.0,
         "Net Profit": 5933530.0,
         "Distributable Profit": -225258150.0,
         "Number of Shares": 8289137.89,
@@ -221,14 +237,22 @@
         "graham_number": 93.09
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:27:07.118880",
+      "parsed_at": "2026-11-14T20:36:11.462450",
       "raw": {
         "Paid Up Capital": 828914000.0,
         "Share Premium": 3025000.0,
@@ -242,8 +266,8 @@
         "Investment Securities": 852907000.0,
         "Interest Income": 279147240.0,
         "Net Interest Income": 68628450.0,
-        "Total Operating Income": 138857.84,
-        "Operating Profit": 24392.61,
+        "Total Operating Income": 138857840.0,
+        "Operating Profit": 24392610.0,
         "Net Profit": 9702280.0,
         "Distributable Profit": -217627000.0,
         "Number of Shares": 8289140.0,
@@ -295,14 +319,22 @@
         "graham_number": 84.64
       },
       "yoy": {},
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:27:07.118770",
+      "parsed_at": "2026-11-14T20:36:11.462302",
       "raw": {
         "Paid Up Capital": 828913790.0,
         "Share Premium": 3025360.0,
@@ -315,8 +347,8 @@
         "Investment Securities": 1133574190.0,
         "Interest Income": 430415700.0,
         "Net Interest Income": 104186660.0,
-        "Total Operating Income": 178589.52,
-        "Operating Profit": 41531.16,
+        "Total Operating Income": 178589520.0,
+        "Operating Profit": 41531160.0,
         "Net Profit": 23031880.0,
         "Distributable Profit": -249231970.0,
         "Number of Shares": 8289137.89,
@@ -397,14 +429,22 @@
         "Base Rate": 20.83,
         "Interest Spread Rate": 10.39
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:27:07.118665",
+      "parsed_at": "2026-11-14T20:36:11.462158",
       "raw": {
         "Paid Up Capital": 854816780.0,
         "Share Premium": 14947990.0,
@@ -418,8 +458,8 @@
         "Investment Securities": 1155164180.0,
         "Interest Income": 581496600.0,
         "Net Interest Income": 130925790.0,
-        "Total Operating Income": 230533.09,
-        "Operating Profit": 55832.28,
+        "Total Operating Income": 230533090.0,
+        "Operating Profit": 55832280.0,
         "Net Profit": 38669450.0,
         "Distributable Profit": -208418200.0,
         "Number of Shares": 8548167.79,
@@ -501,14 +541,22 @@
         "Base Rate": 9.02,
         "Interest Spread Rate": 7.03
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:27:07.118555",
+      "parsed_at": "2026-11-14T20:36:11.462005",
       "raw": {
         "Paid Up Capital": 854816780.0,
         "Share Premium": 14947990.0,
@@ -522,8 +570,8 @@
         "Investment Securities": 1144893080.0,
         "Interest Income": 151129510.0,
         "Net Interest Income": 31334860.0,
-        "Total Operating Income": 51243.27,
-        "Operating Profit": -28527.86,
+        "Total Operating Income": 51243270.0,
+        "Operating Profit": -28527860.0,
         "Net Profit": -19822860.0,
         "Distributable Profit": -262183250.0,
         "Number of Shares": 8548167.79,
@@ -605,14 +653,22 @@
         "Base Rate": 1.82,
         "Interest Spread Rate": 8.5
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:27:07.118448",
+      "parsed_at": "2026-11-14T20:36:11.461847",
       "raw": {
         "Paid Up Capital": 854816780.0,
         "Share Premium": 14947990.0,
@@ -625,8 +681,8 @@
         "Investment Securities": 1129746240.0,
         "Interest Income": 296235860.0,
         "Net Interest Income": 59797720.0,
-        "Total Operating Income": 89886.69,
-        "Operating Profit": 20860.58,
+        "Total Operating Income": 89886690.0,
+        "Operating Profit": 20860580.0,
         "Net Profit": 10847570.0,
         "Distributable Profit": -306837900.0,
         "Number of Shares": 8548167.79,
@@ -707,14 +763,22 @@
         "Base Rate": -6.22,
         "Interest Spread Rate": -0.44
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:27:07.118344",
+      "parsed_at": "2026-11-14T20:36:11.461703",
       "raw": {
         "Paid Up Capital": 854816780.0,
         "Share Premium": 14947990.0,
@@ -728,8 +792,8 @@
         "Investment Securities": 1258648450.0,
         "Interest Income": 441277040.0,
         "Net Interest Income": 88319000.0,
-        "Total Operating Income": 129967.61,
-        "Operating Profit": 15999.44,
+        "Total Operating Income": 129967610.0,
+        "Operating Profit": 15999440.0,
         "Net Profit": 8026070.0,
         "Distributable Profit": -308772050.0,
         "Number of Shares": 8548167.79,
@@ -811,14 +875,22 @@
         "Base Rate": -13.54,
         "Interest Spread Rate": -5.23
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:27:07.118238",
+      "parsed_at": "2026-11-14T20:36:11.461552",
       "raw": {
         "Paid Up Capital": 854816780.0,
         "Share Premium": 14947990.0,
@@ -832,8 +904,8 @@
         "Investment Securities": 1557894560.0,
         "Interest Income": 603091290.0,
         "Net Interest Income": 122781560.0,
-        "Total Operating Income": 169012.59,
-        "Operating Profit": 19752.06,
+        "Total Operating Income": 169012590.0,
+        "Operating Profit": 19752060.0,
         "Net Profit": 477610.0,
         "Distributable Profit": -255778970.0,
         "Number of Shares": 8548167.79,
@@ -916,14 +988,22 @@
         "Base Rate": -16.14,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:27:07.118115",
+      "parsed_at": "2026-11-14T20:36:11.461399",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -937,8 +1017,8 @@
         "Investment Securities": 1332387350.0,
         "Interest Income": 159634700.0,
         "Net Interest Income": 40871250.0,
-        "Total Operating Income": 55739.55,
-        "Operating Profit": -12915.91,
+        "Total Operating Income": 55739550.0,
+        "Operating Profit": -12915910.0,
         "Net Profit": -8641880.0,
         "Distributable Profit": -263300270.0,
         "Number of Shares": 8904242.36,
@@ -1020,14 +1100,22 @@
         "Base Rate": -15.65,
         "Interest Spread Rate": -6.71
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:27:07.117965",
+      "parsed_at": "2026-11-14T20:36:11.461248",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1041,8 +1129,8 @@
         "Investment Securities": 1288559920.0,
         "Interest Income": 295903830.0,
         "Net Interest Income": 69680890.0,
-        "Total Operating Income": 95004.62,
-        "Operating Profit": -20537.15,
+        "Total Operating Income": 95004620.0,
+        "Operating Profit": -20537150.0,
         "Net Profit": -17262760.0,
         "Distributable Profit": -264398770.0,
         "Number of Shares": 8904242.36,
@@ -1120,14 +1208,22 @@
         "Base Rate": -21.33,
         "Interest Spread Rate": 1.33
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:27:07.117817",
+      "parsed_at": "2026-11-14T20:36:11.461097",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1142,8 +1238,8 @@
         "Investment Securities": 1436177400.0,
         "Interest Income": 393663620.0,
         "Net Interest Income": 71854360.0,
-        "Total Operating Income": 119915.07,
-        "Operating Profit": -83703.89,
+        "Total Operating Income": 119915070.0,
+        "Operating Profit": -83703890.0,
         "Net Profit": -75201730.0,
         "Distributable Profit": -434043430.0,
         "Number of Shares": 8904242.36,
@@ -1223,14 +1319,22 @@
         "Base Rate": -17.95,
         "Interest Spread Rate": -6.18
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:27:07.117663",
+      "parsed_at": "2026-11-14T20:36:11.460939",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1245,8 +1349,8 @@
         "Investment Securities": 1824497510.0,
         "Interest Income": 563756720.0,
         "Net Interest Income": 139827550.0,
-        "Total Operating Income": 204352.28,
-        "Operating Profit": -9074.63,
+        "Total Operating Income": 204352280.0,
+        "Operating Profit": -9074630.0,
         "Net Profit": 2077500.0,
         "Distributable Profit": -302060390.0,
         "Number of Shares": 8904242.36,
@@ -1327,14 +1431,22 @@
         "Base Rate": -15.91,
         "Interest Spread Rate": -4.37
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:27:07.117498",
+      "parsed_at": "2026-11-14T20:36:11.460768",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1349,8 +1461,8 @@
         "Investment Securities": 2219131760.0,
         "Interest Income": 127848980.0,
         "Net Interest Income": 32206090.0,
-        "Total Operating Income": 42130.8,
-        "Operating Profit": -58479.74,
+        "Total Operating Income": 42130800.0,
+        "Operating Profit": -58479740.0,
         "Net Profit": -54717770.0,
         "Distributable Profit": -354349290.0,
         "Number of Shares": 8904242.36,
@@ -1430,14 +1542,22 @@
         "Base Rate": -22.05,
         "Interest Spread Rate": 5.28
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:27:07.117338",
+      "parsed_at": "2026-11-14T20:36:11.460612",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1452,8 +1572,8 @@
         "Investment Securities": 1480058970.0,
         "Interest Income": 253264330.0,
         "Net Interest Income": 71208900.0,
-        "Total Operating Income": 90957.08,
-        "Operating Profit": 14808.8,
+        "Total Operating Income": 90957080.0,
+        "Operating Profit": 14808800.0,
         "Net Profit": 17485620.0,
         "Distributable Profit": -523311210.0,
         "Number of Shares": 8904242.36,
@@ -1537,14 +1657,22 @@
         "Base Rate": -18.77,
         "Interest Spread Rate": -8.53
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:27:07.117174",
+      "parsed_at": "2026-11-14T20:36:11.460458",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1559,8 +1687,8 @@
         "Investment Securities": 1924164410.0,
         "Interest Income": 364635380.0,
         "Net Interest Income": 103609610.0,
-        "Total Operating Income": 130901.16,
-        "Operating Profit": 72819.02,
+        "Total Operating Income": 130901160.0,
+        "Operating Profit": 72819020.0,
         "Net Profit": 58755960.0,
         "Distributable Profit": -489267410.0,
         "Number of Shares": 8904242.36,
@@ -1643,14 +1771,22 @@
         "Base Rate": -20.58,
         "Interest Spread Rate": -1.41
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:27:07.117007",
+      "parsed_at": "2026-11-14T20:36:11.460296",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1665,8 +1801,8 @@
         "Investment Securities": 2115258110.0,
         "Interest Income": 465121730.0,
         "Net Interest Income": 118404880.0,
-        "Total Operating Income": 155692.76,
-        "Operating Profit": 99055.47,
+        "Total Operating Income": 155692760.0,
+        "Operating Profit": 99055470.0,
         "Net Profit": 69778870.0,
         "Distributable Profit": -455589480.0,
         "Number of Shares": 8904242.36,
@@ -1749,14 +1885,22 @@
         "Base Rate": -22.14,
         "Interest Spread Rate": -6.39
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "BFC",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:27:07.116820",
+      "parsed_at": "2026-11-14T20:36:11.460101",
       "raw": {
         "Paid Up Capital": 890424240.0,
         "Share Premium": 14947990.0,
@@ -1771,8 +1915,8 @@
         "Investment Securities": 1968792900.0,
         "Interest Income": 122340100.0,
         "Net Interest Income": 46878750.0,
-        "Total Operating Income": 54503.67,
-        "Operating Profit": 30518.74,
+        "Total Operating Income": 54503670.0,
+        "Operating Profit": 30518740.0,
         "Net Profit": 21432010.0,
         "Distributable Profit": -441678610.0,
         "Number of Shares": 8904242.36,
@@ -1855,8 +1999,16 @@
         "Base Rate": -21.92,
         "Interest Spread Rate": -1.14
       },
-      "sector": "Finance"
+      "sector": "Finance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:27:07.122030"
+  "last_updated": "2026-11-14T20:36:11.465585"
 }

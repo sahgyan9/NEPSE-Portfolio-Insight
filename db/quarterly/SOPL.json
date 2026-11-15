@@ -17,7 +17,7 @@
         "Current Liabilities": 129805150.0,
         "Current Assets": 1019115510.0,
         "Total Assets": 2708220550.0,
-        "Revenue from Operation": 511472.51,
+        "Revenue from Operation": 511472510.0,
         "Gross Profit": 231155210.0,
         "Total Operating Profit": 38289090.0,
         "Net Profit": 8928360.0,
@@ -53,7 +53,14 @@
         "graham_number": 37.7
       },
       "yoy": {},
-      "sector": "Manufacturing"
+      "sector": "Manufacturing",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operation"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:25:24.921786"

@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T08:46:04.675147",
+      "parsed_at": "2026-11-14T20:54:57.133773",
       "raw": {
         "EPS(Rs.)": 11.79
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T08:46:04.675142",
+      "parsed_at": "2026-11-14T20:54:57.133754",
       "raw": {
         "EPS(Rs.)": 16.15
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:46:04.675136",
+      "parsed_at": "2026-11-14T20:54:57.133726",
       "raw": {
         "Paid Up Capital": 23795753000.0,
         "Retained Earnings": 1919114000.0,
@@ -68,8 +68,8 @@
         "Investment Securities": 44036265000.0,
         "Interest Income": 20473859000.0,
         "Net Interest Income": 7439744000.0,
-        "Total Operating Income": 9575737.0,
-        "Operating Profit": 5175667.0,
+        "Total Operating Income": 9575737000.0,
+        "Operating Profit": 5175667000.0,
         "Net Profit": 3726212000.0,
         "Distributable Profit": 1919114000.0,
         "Number of Shares": 237957530.0,
@@ -121,14 +121,22 @@
         "graham_number": 264.97
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:46:04.675095",
+      "parsed_at": "2026-11-14T20:54:57.133544",
       "raw": {
         "Paid Up Capital": 23795753000.0,
         "Retained Earnings": 3199536000.0,
@@ -142,8 +150,8 @@
         "Investment Securities": 47211552000.0,
         "Interest Income": 29509611000.0,
         "Net Interest Income": 10740618000.0,
-        "Total Operating Income": 13478368.0,
-        "Operating Profit": 7560150.0,
+        "Total Operating Income": 13478368000.0,
+        "Operating Profit": 7560150000.0,
         "Net Profit": 5206455000.0,
         "Distributable Profit": 3199536000.0,
         "Number of Shares": 237957530.0,
@@ -195,14 +203,22 @@
         "graham_number": 277.22
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:46:04.675052",
+      "parsed_at": "2026-11-14T20:54:57.133490",
       "raw": {
         "Paid Up Capital": 23795753000.0,
         "Retained Earnings": 3459027000.0,
@@ -216,8 +232,8 @@
         "Investment Securities": 42952398000.0,
         "Interest Income": 9425299000.0,
         "Net Interest Income": 3202704000.0,
-        "Total Operating Income": 3874641.0,
-        "Operating Profit": 1690087.0,
+        "Total Operating Income": 3874641000.0,
+        "Operating Profit": 1690087000.0,
         "Net Profit": 1189545000.0,
         "Distributable Profit": 3459027000.0,
         "Number of Shares": 237957530.0,
@@ -272,14 +288,22 @@
         "eps_ttm": 69.64,
         "EPS(Rs.)": 69.64
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:46:04.675009",
+      "parsed_at": "2026-11-14T20:54:57.133438",
       "raw": {
         "Paid Up Capital": 35771060000.0,
         "Retained Earnings": 1119199000.0,
@@ -293,8 +317,8 @@
         "Investment Securities": 66616877000.0,
         "Interest Income": 19342404000.0,
         "Net Interest Income": 6543089000.0,
-        "Total Operating Income": 7802398.0,
-        "Operating Profit": 3794569.0,
+        "Total Operating Income": 7802398000.0,
+        "Operating Profit": 3794569000.0,
         "Net Profit": 2782379000.0,
         "Distributable Profit": 1119199000.0,
         "Number of Shares": 357710600.0,
@@ -349,14 +373,22 @@
         "eps_ttm": -3.65,
         "EPS(Rs.)": -3.65
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:46:04.674967",
+      "parsed_at": "2026-11-14T20:54:57.133386",
       "raw": {
         "Paid Up Capital": 35771060000.0,
         "Retained Earnings": 962673000.0,
@@ -370,8 +402,8 @@
         "Investment Securities": 76479685000.0,
         "Interest Income": 33607617000.0,
         "Net Interest Income": 11792154000.0,
-        "Total Operating Income": 13746117.0,
-        "Operating Profit": 6066067.0,
+        "Total Operating Income": 13746117000.0,
+        "Operating Profit": 6066067000.0,
         "Net Profit": 4358264000.0,
         "Distributable Profit": 962673000.0,
         "Number of Shares": 357710600.0,
@@ -454,14 +486,22 @@
         "Base Rate": 19.44,
         "Interest Spread Rate": 47.73
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:46:04.674924",
+      "parsed_at": "2026-11-14T20:54:57.133283",
       "raw": {
         "Paid Up Capital": 35771060000.0,
         "Retained Earnings": 2956956000.0,
@@ -475,8 +515,8 @@
         "Investment Securities": 98651339000.0,
         "Interest Income": 48221364000.0,
         "Net Interest Income": 17118275000.0,
-        "Total Operating Income": 19882893.0,
-        "Operating Profit": 10368893.0,
+        "Total Operating Income": 19882893000.0,
+        "Operating Profit": 10368893000.0,
         "Net Profit": 7253455000.0,
         "Distributable Profit": 2956956000.0,
         "Number of Shares": 357710600.0,
@@ -559,14 +599,22 @@
         "Base Rate": 8.51,
         "Interest Spread Rate": 16.43
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:46:04.674876",
+      "parsed_at": "2026-11-14T20:54:57.133130",
       "raw": {
         "Paid Up Capital": 35771060000.0,
         "Retained Earnings": 3323302000.0,
@@ -580,8 +628,8 @@
         "Investment Securities": 91659744000.0,
         "Interest Income": 14200951000.0,
         "Net Interest Income": 4801588000.0,
-        "Total Operating Income": 5709198.0,
-        "Operating Profit": 1798587.0,
+        "Total Operating Income": 5709198000.0,
+        "Operating Profit": 1798587000.0,
         "Net Profit": 1225754000.0,
         "Distributable Profit": 3323302000.0,
         "Number of Shares": 357710600.0,
@@ -664,14 +712,22 @@
         "Base Rate": -1.18,
         "Interest Spread Rate": 4.83
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:46:04.674812",
+      "parsed_at": "2026-11-14T20:54:57.132968",
       "raw": {
         "Paid Up Capital": 36128770000.0,
         "Retained Earnings": -1277075000.0,
@@ -685,8 +741,8 @@
         "Investment Securities": 93405297000.0,
         "Interest Income": 27348108000.0,
         "Net Interest Income": 9028790000.0,
-        "Total Operating Income": 10862624.0,
-        "Operating Profit": 2843016.0,
+        "Total Operating Income": 10862624000.0,
+        "Operating Profit": 2843016000.0,
         "Net Profit": 2042329000.0,
         "Distributable Profit": -1277075000.0,
         "Number of Shares": 361287700.0,
@@ -769,14 +825,22 @@
         "Base Rate": -11.11,
         "Interest Spread Rate": -8.9
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:46:04.674735",
+      "parsed_at": "2026-11-14T20:54:57.132806",
       "raw": {
         "Paid Up Capital": 36128770000.0,
         "Retained Earnings": -423102000.0,
@@ -790,8 +854,8 @@
         "Investment Securities": 86621826000.0,
         "Interest Income": 39672547000.0,
         "Net Interest Income": 13029041000.0,
-        "Total Operating Income": 15634484.0,
-        "Operating Profit": 4714323.0,
+        "Total Operating Income": 15634484000.0,
+        "Operating Profit": 4714323000.0,
         "Net Profit": 3306552000.0,
         "Distributable Profit": -423102000.0,
         "Number of Shares": 361287700.0,
@@ -874,14 +938,22 @@
         "Base Rate": -17.31,
         "Interest Spread Rate": -23.46
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:46:04.674652",
+      "parsed_at": "2026-11-14T20:54:57.132619",
       "raw": {
         "Paid Up Capital": 36128770000.0,
         "Retained Earnings": 1104566000.0,
@@ -895,8 +967,8 @@
         "Investment Securities": 120793833000.0,
         "Interest Income": 51461621000.0,
         "Net Interest Income": 16637925000.0,
-        "Total Operating Income": 20444768.0,
-        "Operating Profit": 8743811.0,
+        "Total Operating Income": 20444768000.0,
+        "Operating Profit": 8743811000.0,
         "Net Profit": 6016216000.0,
         "Distributable Profit": 1104566000.0,
         "Number of Shares": 361287700.0,
@@ -979,14 +1051,22 @@
         "Base Rate": -20.69,
         "Interest Spread Rate": -19.56
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:46:04.674604",
+      "parsed_at": "2026-11-14T20:54:57.132431",
       "raw": {
         "Paid Up Capital": 36128770000.0,
         "Retained Earnings": 1916101000.0,
@@ -1000,8 +1080,8 @@
         "Investment Securities": 115307130000.0,
         "Interest Income": 11659269000.0,
         "Net Interest Income": 4118971000.0,
-        "Total Operating Income": 5235821.0,
-        "Operating Profit": 2147495.0,
+        "Total Operating Income": 5235821000.0,
+        "Operating Profit": 2147495000.0,
         "Net Profit": 1512140000.0,
         "Distributable Profit": 1916101000.0,
         "Number of Shares": 361287700.0,
@@ -1084,14 +1164,22 @@
         "Base Rate": -27.61,
         "Interest Spread Rate": -8.76
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:46:04.674560",
+      "parsed_at": "2026-11-14T20:54:57.132271",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Retained Earnings": 2645342000.0,
@@ -1105,8 +1193,8 @@
         "Investment Securities": 118592852000.0,
         "Interest Income": 22682599000.0,
         "Net Interest Income": 8298525000.0,
-        "Total Operating Income": 10383943.0,
-        "Operating Profit": 4204219.0,
+        "Total Operating Income": 10383943000.0,
+        "Operating Profit": 4204219000.0,
         "Net Profit": 3053489000.0,
         "Distributable Profit": 2645342000.0,
         "Number of Shares": 381158530.0,
@@ -1186,14 +1274,22 @@
         "Base Rate": -27.6,
         "Interest Spread Rate": -0.25
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:46:04.674517",
+      "parsed_at": "2026-11-14T20:54:57.132106",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1208,8 +1304,8 @@
         "Investment Securities": 113282021000.0,
         "Interest Income": 33153390000.0,
         "Net Interest Income": 12317191000.0,
-        "Total Operating Income": 15539810.0,
-        "Operating Profit": 6336653.0,
+        "Total Operating Income": 15539810000.0,
+        "Operating Profit": 6336653000.0,
         "Net Profit": 4534099000.0,
         "Distributable Profit": 3549252000.0,
         "Number of Shares": 381158530.0,
@@ -1290,14 +1386,22 @@
         "Base Rate": -27.83,
         "Interest Spread Rate": -4.77
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:46:04.674471",
+      "parsed_at": "2026-11-14T20:54:57.131936",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1312,8 +1416,8 @@
         "Investment Securities": 148734000000.0,
         "Interest Income": 43961495000.0,
         "Net Interest Income": 16712277000.0,
-        "Total Operating Income": 21276431.0,
-        "Operating Profit": 8770578.0,
+        "Total Operating Income": 21276431000.0,
+        "Operating Profit": 8770578000.0,
         "Net Profit": 6204745000.0,
         "Distributable Profit": 5379300000.0,
         "Number of Shares": 381158530.0,
@@ -1394,14 +1498,22 @@
         "Base Rate": -28.8,
         "Interest Spread Rate": -9.02
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:46:04.674426",
+      "parsed_at": "2026-11-14T20:54:57.131762",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1416,8 +1528,8 @@
         "Investment Securities": 162229212000.0,
         "Interest Income": 10321005000.0,
         "Net Interest Income": 4133063000.0,
-        "Total Operating Income": 5516210.0,
-        "Operating Profit": 2371636.0,
+        "Total Operating Income": 5516210000.0,
+        "Operating Profit": 2371636000.0,
         "Net Profit": 1858650000.0,
         "Distributable Profit": 4849506000.0,
         "Number of Shares": 381158530.0,
@@ -1498,14 +1610,22 @@
         "Base Rate": -25.93,
         "Interest Spread Rate": -12.12
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:46:04.674380",
+      "parsed_at": "2026-11-14T20:54:57.131560",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1520,8 +1640,8 @@
         "Investment Securities": 153407414000.0,
         "Interest Income": 20087055000.0,
         "Net Interest Income": 8022317000.0,
-        "Total Operating Income": 10870932.0,
-        "Operating Profit": 4276327.0,
+        "Total Operating Income": 10870932000.0,
+        "Operating Profit": 4276327000.0,
         "Net Profit": 3252117000.0,
         "Distributable Profit": 2426675000.0,
         "Number of Shares": 381158530.0,
@@ -1605,14 +1725,22 @@
         "Base Rate": -25.76,
         "Interest Spread Rate": -13.82
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:46:04.674333",
+      "parsed_at": "2026-11-14T20:54:57.131387",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1627,8 +1755,8 @@
         "Investment Securities": 147500051000.0,
         "Interest Income": 29818037000.0,
         "Net Interest Income": 11884413000.0,
-        "Total Operating Income": 16027749.0,
-        "Operating Profit": 5904678.0,
+        "Total Operating Income": 16027749000.0,
+        "Operating Profit": 5904678000.0,
         "Net Profit": 4401178000.0,
         "Distributable Profit": 3005479000.0,
         "Number of Shares": 381158530.0,
@@ -1712,14 +1840,22 @@
         "Base Rate": -22.41,
         "Interest Spread Rate": -12.93
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:46:04.674283",
+      "parsed_at": "2026-11-14T20:54:57.131326",
       "raw": {
         "Paid Up Capital": 38115853000.0,
         "Share Premium": 0.0,
@@ -1734,8 +1870,8 @@
         "Investment Securities": 199657347000.0,
         "Interest Income": 40302472000.0,
         "Net Interest Income": 16203053000.0,
-        "Total Operating Income": 21803975.0,
-        "Operating Profit": 8682113.0,
+        "Total Operating Income": 21803975000.0,
+        "Operating Profit": 8682113000.0,
         "Net Profit": 6227157000.0,
         "Distributable Profit": 4581064000.0,
         "Number of Shares": 381158530.0,
@@ -1819,14 +1955,22 @@
         "Base Rate": -17.53,
         "Interest Spread Rate": -9.37
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "GBIME",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:46:04.674084",
+      "parsed_at": "2026-11-14T20:54:57.131256",
       "raw": {
         "Paid Up Capital": 39640487000.0,
         "Share Premium": 0.0,
@@ -1841,8 +1985,8 @@
         "Investment Securities": 171216933000.0,
         "Interest Income": 10135569000.0,
         "Net Interest Income": 4193254000.0,
-        "Total Operating Income": 6000863.0,
-        "Operating Profit": 3222528.0,
+        "Total Operating Income": 6000863000.0,
+        "Operating Profit": 3222528000.0,
         "Net Profit": 2313798000.0,
         "Distributable Profit": 2070220000.0,
         "Number of Shares": 396404870.0,
@@ -1926,8 +2070,16 @@
         "Base Rate": -14.63,
         "Interest Spread Rate": -8.91
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T08:46:04.676362"
+  "last_updated": "2026-11-14T20:54:57.136141"
 }

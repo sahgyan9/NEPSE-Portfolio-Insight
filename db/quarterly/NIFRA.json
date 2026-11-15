@@ -20,8 +20,8 @@
         "Investment Securities": 123893000.0,
         "Interest Income": 1253683000.0,
         "Net Interest Income": 1230665000.0,
-        "Total Operating Income": 1231039.0,
-        "Operating Profit": 1101698.0,
+        "Total Operating Income": 1231039000.0,
+        "Operating Profit": 1101698000.0,
         "Net Profit": 847146000.0,
         "Distributable Profit": 609792000.0,
         "Number of Shares": 120000000.0,
@@ -65,7 +65,15 @@
         "graham_number": 134.34
       },
       "yoy": {},
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -85,8 +93,8 @@
         "Investment Securities": 577034000.0,
         "Interest Income": 289579000.0,
         "Net Interest Income": 283585000.0,
-        "Total Operating Income": 283585.0,
-        "Operating Profit": 257642.0,
+        "Total Operating Income": 283585000.0,
+        "Operating Profit": 257642000.0,
         "Net Profit": 180122000.0,
         "Distributable Profit": 140005000.0,
         "Number of Shares": 120000000.0,
@@ -129,7 +137,15 @@
         "graham_number": 124.66
       },
       "yoy": {},
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -149,8 +165,8 @@
         "Investment Securities": 681027000.0,
         "Interest Income": 581607000.0,
         "Net Interest Income": 569485000.0,
-        "Total Operating Income": 570711.0,
-        "Operating Profit": 503576.0,
+        "Total Operating Income": 570711000.0,
+        "Operating Profit": 503576000.0,
         "Net Profit": 352255000.0,
         "Distributable Profit": 276048000.0,
         "Number of Shares": 120000000.0,
@@ -195,7 +211,15 @@
         "graham_number": 123.88
       },
       "yoy": {},
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -215,8 +239,8 @@
         "Investment Securities": 879515000.0,
         "Interest Income": 953799000.0,
         "Net Interest Income": 935225000.0,
-        "Total Operating Income": 937201.0,
-        "Operating Profit": 835539.0,
+        "Total Operating Income": 937201000.0,
+        "Operating Profit": 835539000.0,
         "Net Profit": 589289000.0,
         "Distributable Profit": 463256000.0,
         "Number of Shares": 200000000.0,
@@ -261,7 +285,15 @@
         "graham_number": 111.85
       },
       "yoy": {},
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -281,8 +313,8 @@
         "Investment Securities": 1286746000.0,
         "Interest Income": 1360600000.0,
         "Net Interest Income": 1333536000.0,
-        "Total Operating Income": 1335470.0,
-        "Operating Profit": 1188926.0,
+        "Total Operating Income": 1335470000.0,
+        "Operating Profit": 1188926000.0,
         "Net Profit": 836432000.0,
         "Distributable Profit": 658552000.0,
         "Number of Shares": 200000000.0,
@@ -353,7 +385,15 @@
         "Cost of funds": 0.0,
         "Credit To Deposit Ratio": 172.03
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -372,8 +412,8 @@
         "Loans and Advances to Customers": 15539275000.0,
         "Interest Income": 1928611000.0,
         "Net Interest Income": 1886328000.0,
-        "Total Operating Income": 1895963.0,
-        "Operating Profit": 1465772.0,
+        "Total Operating Income": 1895963000.0,
+        "Operating Profit": 1465772000.0,
         "Net Profit": 1026111000.0,
         "Distributable Profit": 808532000.0,
         "Number of Shares": 216000000.0,
@@ -442,7 +482,15 @@
         "CAR": -65.37,
         "Cost of funds": 0.0
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -460,8 +508,8 @@
         "Loans and Advances to Customers": 17810613000.0,
         "Interest Income": 666137000.0,
         "Net Interest Income": 655700000.0,
-        "Total Operating Income": 661296.0,
-        "Operating Profit": 540970.0,
+        "Total Operating Income": 661296000.0,
+        "Operating Profit": 540970000.0,
         "Net Profit": 378679000.0,
         "Distributable Profit": 298577000.0,
         "Number of Shares": 216000000.0,
@@ -529,7 +577,15 @@
         "Cost of funds": 0.0,
         "Credit To Deposit Ratio": 584.91
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -548,8 +604,8 @@
         "Investment Securities": 50000000.0,
         "Interest Income": 1352237000.0,
         "Net Interest Income": 1324948000.0,
-        "Total Operating Income": 1336486.0,
-        "Operating Profit": 1094515.0,
+        "Total Operating Income": 1336486000.0,
+        "Operating Profit": 1094515000.0,
         "Net Profit": 766160000.0,
         "Distributable Profit": 604108000.0,
         "Number of Shares": 216000000.0,
@@ -619,7 +675,15 @@
         "Cost of funds": 5.0,
         "Credit To Deposit Ratio": 796.37
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -638,8 +702,8 @@
         "Investment Securities": 2785676000.0,
         "Interest Income": 2087473000.0,
         "Net Interest Income": 2004402000.0,
-        "Total Operating Income": 2021816.0,
-        "Operating Profit": 1659769.0,
+        "Total Operating Income": 2021816000.0,
+        "Operating Profit": 1659769000.0,
         "Net Profit": 1161838000.0,
         "Distributable Profit": 916114000.0,
         "Number of Shares": 216000000.0,
@@ -709,7 +773,15 @@
         "Cost of funds": -18.62,
         "Credit To Deposit Ratio": 772.07
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -728,8 +800,8 @@
         "Investment Securities": 4678679000.0,
         "Interest Income": 2872561000.0,
         "Net Interest Income": 2725332000.0,
-        "Total Operating Income": 2748097.0,
-        "Operating Profit": 2088289.0,
+        "Total Operating Income": 2748097000.0,
+        "Operating Profit": 2088289000.0,
         "Net Profit": 1459262000.0,
         "Distributable Profit": 1054978000.0,
         "Number of Shares": 216000000.0,
@@ -798,7 +870,15 @@
         "Cost of funds": -18.62,
         "Credit To Deposit Ratio": 14.98
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -817,8 +897,8 @@
         "Investment Securities": 4526338000.0,
         "Interest Income": 760866000.0,
         "Net Interest Income": 701545000.0,
-        "Total Operating Income": 706546.0,
-        "Operating Profit": 591189.0,
+        "Total Operating Income": 706546000.0,
+        "Operating Profit": 591189000.0,
         "Net Profit": 413899000.0,
         "Distributable Profit": 212431000.0,
         "Number of Shares": 216000000.0,
@@ -887,7 +967,15 @@
         "Cost of funds": -18.62,
         "Credit To Deposit Ratio": -1.77
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -906,8 +994,8 @@
         "Investment Securities": 4422243000.0,
         "Interest Income": 1478400000.0,
         "Net Interest Income": 1362404000.0,
-        "Total Operating Income": 1368024.0,
-        "Operating Profit": 985549.0,
+        "Total Operating Income": 1368024000.0,
+        "Operating Profit": 985549000.0,
         "Net Profit": 689983000.0,
         "Number of Shares": 216000000.0,
         "EPS(Rs.)": 6.39,
@@ -974,7 +1062,15 @@
         "Cost of funds": -22.49,
         "Credit To Deposit Ratio": -14.45
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -993,8 +1089,8 @@
         "Investment Securities": 3324300000.0,
         "Interest Income": 2128518000.0,
         "Net Interest Income": 1952877000.0,
-        "Total Operating Income": 1959272.0,
-        "Operating Profit": 1410983.0,
+        "Total Operating Income": 1959272000.0,
+        "Operating Profit": 1410983000.0,
         "Net Profit": 987373000.0,
         "Distributable Profit": 478880000.0,
         "Number of Shares": 216000000.0,
@@ -1064,7 +1160,15 @@
         "Cost of funds": 0.0,
         "Credit To Deposit Ratio": -10.57
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1083,8 +1187,8 @@
         "Investment Securities": 3624011000.0,
         "Interest Income": 2783332000.0,
         "Net Interest Income": 2549736000.0,
-        "Total Operating Income": 2560148.0,
-        "Operating Profit": 1901073.0,
+        "Total Operating Income": 2560148000.0,
+        "Operating Profit": 1901073000.0,
         "Net Profit": 1330593000.0,
         "Distributable Profit": 707237000.0,
         "Number of Shares": 216000000.0,
@@ -1156,7 +1260,15 @@
         "Cost of funds": -1.57,
         "Credit To Deposit Ratio": 3.56
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1175,8 +1287,8 @@
         "Investment Securities": 4105803000.0,
         "Interest Income": 622262000.0,
         "Net Interest Income": 562611000.0,
-        "Total Operating Income": 576245.0,
-        "Operating Profit": 501265.0,
+        "Total Operating Income": 576245000.0,
+        "Operating Profit": 501265000.0,
         "Net Profit": 350900000.0,
         "Distributable Profit": 236206000.0,
         "Number of Shares": 216000000.0,
@@ -1248,7 +1360,15 @@
         "Cost of funds": -1.57,
         "Credit To Deposit Ratio": 8.37
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1267,8 +1387,8 @@
         "Investment Securities": 7081116000.0,
         "Interest Income": 1243919000.0,
         "Net Interest Income": 1044533000.0,
-        "Total Operating Income": 1059069.0,
-        "Operating Profit": 917189.0,
+        "Total Operating Income": 1059069000.0,
+        "Operating Profit": 917189000.0,
         "Net Profit": 641986000.0,
         "Distributable Profit": 522111000.0,
         "Number of Shares": 216000000.0,
@@ -1336,7 +1456,15 @@
         "Cost of funds": -9.93,
         "Credit To Deposit Ratio": -3.22
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1359,8 +1487,8 @@
         "Investment Securities": 6879779000.0,
         "Interest Income": 1848008000.0,
         "Net Interest Income": 1481882000.0,
-        "Total Operating Income": 1495248.0,
-        "Operating Profit": 1285958.0,
+        "Total Operating Income": 1495248000.0,
+        "Operating Profit": 1285958000.0,
         "Net Profit": 900074000.0,
         "Distributable Profit": 769513000.0,
         "Number of Shares": 216000000.0,
@@ -1437,7 +1565,15 @@
         "Cost of funds": -9.93,
         "Credit To Deposit Ratio": -7.4
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1460,8 +1596,8 @@
         "Investment Securities": 11504721000.0,
         "Interest Income": 2469017000.0,
         "Net Interest Income": 1899858000.0,
-        "Total Operating Income": 1920955.0,
-        "Operating Profit": 1640208.0,
+        "Total Operating Income": 1920955000.0,
+        "Operating Profit": 1640208000.0,
         "Net Profit": 1154079000.0,
         "Distributable Profit": 1176163000.0,
         "Number of Shares": 216000000.0,
@@ -1539,7 +1675,15 @@
         "Cost of funds": -13.55,
         "Credit To Deposit Ratio": -17.23
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1561,8 +1705,8 @@
         "Investment Securities": 10451643000.0,
         "Interest Income": 621865000.0,
         "Net Interest Income": 373094000.0,
-        "Total Operating Income": 385834.0,
-        "Operating Profit": 298315.0,
+        "Total Operating Income": 385834000.0,
+        "Operating Profit": 298315000.0,
         "Net Profit": 208540000.0,
         "Distributable Profit": 0.0,
         "Number of Shares": 216000000.0,
@@ -1638,7 +1782,15 @@
         "Cost of funds": -15.8,
         "Credit To Deposit Ratio": -15.34
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1660,8 +1812,8 @@
         "Investment Securities": 8127659000.0,
         "Interest Income": 1228133000.0,
         "Net Interest Income": 740720000.0,
-        "Total Operating Income": 755911.0,
-        "Operating Profit": 586590.0,
+        "Total Operating Income": 755911000.0,
+        "Operating Profit": 586590000.0,
         "Net Profit": 409940000.0,
         "Distributable Profit": 347892000.0,
         "Number of Shares": 216000000.0,
@@ -1740,7 +1892,15 @@
         "Cost of funds": -9.0,
         "Credit To Deposit Ratio": 0.06
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1762,8 +1922,8 @@
         "Investment Securities": 9033776000.0,
         "Interest Income": 1806987000.0,
         "Net Interest Income": 1081269000.0,
-        "Total Operating Income": 1103502.0,
-        "Operating Profit": 920247.0,
+        "Total Operating Income": 1103502000.0,
+        "Operating Profit": 920247000.0,
         "Net Profit": 643310000.0,
         "Distributable Profit": 643311000.0,
         "Number of Shares": 216000000.0,
@@ -1842,7 +2002,15 @@
         "Cost of funds": -7.4,
         "Credit To Deposit Ratio": 5.77
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1864,8 +2032,8 @@
         "Investment Securities": 6642033000.0,
         "Interest Income": 2424011000.0,
         "Net Interest Income": 1446677000.0,
-        "Total Operating Income": 1504730.0,
-        "Operating Profit": 1416849.0,
+        "Total Operating Income": 1504730000.0,
+        "Operating Profit": 1416849000.0,
         "Net Profit": 987395000.0,
         "Distributable Profit": 0.0,
         "Number of Shares": 216000000.0,
@@ -1944,7 +2112,15 @@
         "Credit To Deposit Ratio": 22.48,
         "Base Rate": -2.87
       },
-      "sector": "Investment"
+      "sector": "Investment",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NIFRA",
@@ -1966,8 +2142,8 @@
         "Investment Securities": 5811264000.0,
         "Interest Income": 597411000.0,
         "Net Interest Income": 344265000.0,
-        "Total Operating Income": 364452.0,
-        "Operating Profit": 240134.0,
+        "Total Operating Income": 364452000.0,
+        "Operating Profit": 240134000.0,
         "Net Profit": 166497000.0,
         "Distributable Profit": 92122000.0,
         "Number of Shares": 216000000.0,
@@ -2045,7 +2221,15 @@
         "Credit To Deposit Ratio": 16.04,
         "Base Rate": -6.47
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:32:41.871251"

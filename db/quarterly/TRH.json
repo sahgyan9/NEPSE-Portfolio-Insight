@@ -17,7 +17,7 @@
         "Current Liabilities": 975539040.0,
         "Current Assets": 1572161290.0,
         "Total Assets": 3283803820.0,
-        "Revenue from Operations": 418295.37,
+        "Revenue from Operations": 418295370.0,
         "Net Profit": 41429180.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 2.93,
@@ -49,7 +49,14 @@
         "graham_number": 87.03
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -65,7 +72,7 @@
         "Current Liabilities": 1091804370.0,
         "Current Assets": 1824631340.0,
         "Total Assets": 3555902670.0,
-        "Revenue from Operations": 700535.14,
+        "Revenue from Operations": 700535140.0,
         "Net Profit": 188083370.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 9.97,
@@ -97,7 +104,14 @@
         "graham_number": 166.38
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -113,7 +127,7 @@
         "Current Liabilities": 1016258730.0,
         "Current Assets": 1807552150.0,
         "Total Assets": 3592790110.0,
-        "Revenue from Operations": 181551.73,
+        "Revenue from Operations": 181551730.0,
         "Net Profit": 24671710.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 5.23,
@@ -145,7 +159,14 @@
         "graham_number": 123.61
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -161,7 +182,7 @@
         "Current Liabilities": 992894340.0,
         "Current Assets": 1835660890.0,
         "Total Assets": 3609562900.0,
-        "Revenue from Operations": 531179.09,
+        "Revenue from Operations": 531179090.0,
         "Net Profit": 106167130.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 11.25,
@@ -193,7 +214,14 @@
         "graham_number": 180.44
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -209,7 +237,7 @@
         "Current Liabilities": 1071568150.0,
         "Current Assets": 1897056430.0,
         "Total Assets": 3665135600.0,
-        "Revenue from Operations": 906176.81,
+        "Revenue from Operations": 906176810.0,
         "Net Profit": 238845610.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 16.88,
@@ -258,7 +286,14 @@
         "Book Value(Rs.)": 10.74,
         "ROE": 420.39
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -274,7 +309,7 @@
         "Current Liabilities": 1102600090.0,
         "Current Assets": 2084521990.0,
         "Total Assets": 3842542830.0,
-        "Revenue from Operations": 1383218.48,
+        "Revenue from Operations": 1383218480.0,
         "Net Profit": 382640110.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 20.28,
@@ -323,7 +358,14 @@
         "Book Value(Rs.)": 9.28,
         "ROE": 86.14
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -339,7 +381,7 @@
         "Current Liabilities": 1136724390.0,
         "Current Assets": 2170998770.0,
         "Total Assets": 3922280670.0,
-        "Revenue from Operations": 232262.11,
+        "Revenue from Operations": 232262110.0,
         "Net Profit": 44087680.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 9.35,
@@ -388,7 +430,14 @@
         "Book Value(Rs.)": 5.66,
         "ROE": 68.98
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -404,7 +453,7 @@
         "Current Liabilities": 1187469880.0,
         "Current Assets": 2370615030.0,
         "Total Assets": 4127236910.0,
-        "Revenue from Operations": 638553.84,
+        "Revenue from Operations": 638553840.0,
         "Net Profit": 181624790.0,
         "Number of Shares": 18866540.0,
         "EPS(Rs.)": 19.25,
@@ -453,7 +502,14 @@
         "Book Value(Rs.)": 13.22,
         "ROE": 51.09
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -469,7 +525,7 @@
         "Current Liabilities": 1201677830.0,
         "Current Assets": 2304902690.0,
         "Total Assets": 4085605240.0,
-        "Revenue from Operations": 1009697.81,
+        "Revenue from Operations": 1009697810.0,
         "Net Profit": 333281740.0,
         "Number of Shares": 19621201.6,
         "EPS(Rs.)": 22.65,
@@ -518,7 +574,14 @@
         "Book Value(Rs.)": 7.82,
         "ROE": 24.42
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -534,7 +597,7 @@
         "Current Liabilities": 1259101620.0,
         "Current Assets": 2533949130.0,
         "Total Assets": 4335432340.0,
-        "Revenue from Operations": 1496459.03,
+        "Revenue from Operations": 1496459030.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": 518268720.0,
@@ -584,7 +647,14 @@
         "Net Profit": 35.45,
         "Number of Shares": 4.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -600,7 +670,7 @@
         "Current Liabilities": 1299022130.0,
         "Current Assets": 2606143500.0,
         "Total Assets": 4423687570.0,
-        "Revenue from Operations": 275246.12,
+        "Revenue from Operations": 275246120.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": 45639840.0,
@@ -650,7 +720,14 @@
         "Net Profit": 3.52,
         "Number of Shares": 4.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -666,7 +743,7 @@
         "Current Liabilities": 1228875610.0,
         "Current Assets": 2663571570.0,
         "Total Assets": 4499360100.0,
-        "Revenue from Operations": 694860.65,
+        "Revenue from Operations": 694860650.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": 186782630.0,
@@ -716,7 +793,14 @@
         "Net Profit": 2.84,
         "Number of Shares": 4.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -732,7 +816,7 @@
         "Current Liabilities": 1309334400.0,
         "Current Assets": 2662908490.0,
         "Total Assets": 4503126320.0,
-        "Revenue from Operations": 1082935.3,
+        "Revenue from Operations": 1082935300.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": 337556550.0,
@@ -782,7 +866,14 @@
         "Net Profit": 1.28,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -798,7 +889,7 @@
         "Current Liabilities": 1231967360.0,
         "Current Assets": 2740518500.0,
         "Total Assets": 4604126050.0,
-        "Revenue from Operations": 1521649.49,
+        "Revenue from Operations": 1521649490.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": 515433970.0,
@@ -851,7 +942,14 @@
         "Book Value Reported": 10.25,
         "ROE Reported": -9.82
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -867,7 +965,7 @@
         "Current Liabilities": 1361053840.0,
         "Current Assets": 2757648780.0,
         "Total Assets": 4653009430.0,
-        "Revenue from Operations": 171044.68,
+        "Revenue from Operations": 171044680.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -23742880.0,
@@ -919,7 +1017,14 @@
         "Book Value Reported": 5.56,
         "ROE Reported": -149.2
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -935,7 +1040,7 @@
         "Current Liabilities": 1128565050.0,
         "Current Assets": 2346918200.0,
         "Total Assets": 4239805940.0,
-        "Revenue from Operations": 171942.65,
+        "Revenue from Operations": 171942650.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -90830990.0,
@@ -987,7 +1092,14 @@
         "Book Value Reported": -4.11,
         "ROE Reported": -150.7
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -1003,7 +1115,7 @@
         "Current Liabilities": 1050964780.0,
         "Current Assets": 1404549040.0,
         "Total Assets": 4102545770.0,
-        "Revenue from Operations": 171942.65,
+        "Revenue from Operations": 171942650.0,
         "Gross Profit": 0.0,
         "Operating Profit": 0.0,
         "Net Profit": -144831730.0,
@@ -1055,7 +1167,14 @@
         "Book Value Reported": -3.47,
         "ROE Reported": -144.44
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "TRH",
@@ -1071,7 +1190,7 @@
         "Current Liabilities": 1118149360.0,
         "Current Assets": 1225188310.0,
         "Total Assets": 3601445930.0,
-        "Revenue from Operations": 171942.65,
+        "Revenue from Operations": 171942650.0,
         "Gross Profit": -79177860.0,
         "Operating Profit": 0.0,
         "Net Profit": -705788590.0,
@@ -1123,7 +1242,14 @@
         "Book Value Reported": -26.56,
         "ROE Reported": -286.46
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:18:04.248503"

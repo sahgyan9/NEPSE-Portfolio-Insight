@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-07T08:42:17.552678",
+      "parsed_at": "2026-11-14T20:24:59.636245",
       "raw": {
         "EPS(Rs.)": 25.59
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-07T08:42:17.552649",
+      "parsed_at": "2026-11-14T20:24:59.636239",
       "raw": {
         "Paid Up Capital": 2658285000.0,
         "Reserves": 3074690000.0,
@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 44244089000.0,
         "Interest Income": 1025608000.0,
         "Net Interest Income": 373152000.0,
-        "Total Operating Income": 512730.0,
-        "Operating Profit": 182644.0,
+        "Total Operating Income": 512730000.0,
+        "Operating Profit": 182644000.0,
         "Net Profit": 157391000.0,
         "Number of Shares": 26582850.0,
         "EPS(Rs.)": 23.68,
@@ -88,14 +88,22 @@
         "graham_number": 338.97
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-07T08:42:17.552483",
+      "parsed_at": "2026-11-14T20:24:59.636205",
       "raw": {
         "Paid Up Capital": 3695016000.0,
         "Reserves": 2305830000.0,
@@ -106,8 +114,8 @@
         "Loans and Advances to Customers": 46271552000.0,
         "Interest Income": 2073755000.0,
         "Net Interest Income": 841129000.0,
-        "Total Operating Income": 1120238.0,
-        "Operating Profit": 615997.0,
+        "Total Operating Income": 1120238000.0,
+        "Operating Profit": 615997000.0,
         "Net Profit": 502061000.0,
         "Number of Shares": 36950160.0,
         "EPS(Rs.)": 27.18,
@@ -154,14 +162,22 @@
         "graham_number": 315.14
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-07T08:42:17.552302",
+      "parsed_at": "2026-11-14T20:24:59.636170",
       "raw": {
         "Paid Up Capital": 3695016000.0,
         "Reserves": 2563300000.0,
@@ -172,8 +188,8 @@
         "Loans and Advances to Customers": 52498344000.0,
         "Interest Income": 3163693000.0,
         "Net Interest Income": 1376694000.0,
-        "Total Operating Income": 1836226.0,
-        "Operating Profit": 926546.0,
+        "Total Operating Income": 1836226000.0,
+        "Operating Profit": 926546000.0,
         "Net Profit": 759532000.0,
         "Number of Shares": 36950160.0,
         "EPS(Rs.)": 27.41,
@@ -220,14 +236,22 @@
         "graham_number": 323.19
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-07T08:42:17.552166",
+      "parsed_at": "2026-11-14T20:24:59.636134",
       "raw": {
         "Paid Up Capital": 4575374000.0,
         "Reserves": 2873859000.0,
@@ -238,8 +262,8 @@
         "Loans and Advances to Customers": 58457110000.0,
         "Interest Income": 4421136000.0,
         "Net Interest Income": 1976960000.0,
-        "Total Operating Income": 2632471.0,
-        "Operating Profit": 1349353.0,
+        "Total Operating Income": 2632471000.0,
+        "Operating Profit": 1349353000.0,
         "Net Profit": 1070091000.0,
         "Number of Shares": 45753740.0,
         "EPS(Rs.)": 28.31,
@@ -289,14 +313,22 @@
         "eps_ttm": 10.63,
         "EPS(Rs.)": 10.63
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T08:42:17.552072",
+      "parsed_at": "2026-11-14T20:24:59.636099",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 2984119500.0,
@@ -309,8 +341,8 @@
         "Investment Securities": 46474454260.0,
         "Interest Income": 23556926650.0,
         "Net Interest Income": 8258443300.0,
-        "Total Operating Income": 10034288.88,
-        "Operating Profit": 5113400.15,
+        "Total Operating Income": 10034288880.0,
+        "Operating Profit": 5113400150.0,
         "Net Profit": 3604598210.0,
         "Distributable Profit": 2984119500.0,
         "Number of Shares": 115640053.66,
@@ -387,14 +419,22 @@
         "Base Rate": 28.63,
         "Interest Spread Rate": 46.18
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T08:42:17.551966",
+      "parsed_at": "2026-11-14T20:24:59.636059",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 3845991380.0,
@@ -407,8 +447,8 @@
         "Investment Securities": 39393738100.0,
         "Interest Income": 33254500130.0,
         "Net Interest Income": 11772187990.0,
-        "Total Operating Income": 14297056.78,
-        "Operating Profit": 6409941.85,
+        "Total Operating Income": 14297056780.0,
+        "Operating Profit": 6409941850.0,
         "Net Profit": 4525422360.0,
         "Distributable Profit": 3845991380.0,
         "Number of Shares": 115640053.66,
@@ -485,14 +525,22 @@
         "Base Rate": 38.27,
         "Interest Spread Rate": 37.07
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T08:42:17.551861",
+      "parsed_at": "2026-11-14T20:24:59.636019",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 4206419990.0,
@@ -506,8 +554,8 @@
         "Investment Securities": 31012769910.0,
         "Interest Income": 9955456060.0,
         "Net Interest Income": 3410496120.0,
-        "Total Operating Income": 4171293.59,
-        "Operating Profit": 2526962.67,
+        "Total Operating Income": 4171293590.0,
+        "Operating Profit": 2526962670.0,
         "Net Profit": 1756779380.0,
         "Distributable Profit": 4206419990.0,
         "Number of Shares": 115640053.66,
@@ -586,14 +634,22 @@
         "Base Rate": 70.18,
         "Interest Spread Rate": 26.15
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T08:42:17.551752",
+      "parsed_at": "2026-11-14T20:24:59.635978",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 3752455660.0,
@@ -606,8 +662,8 @@
         "Investment Securities": 38882459360.0,
         "Interest Income": 19373903530.0,
         "Net Interest Income": 6295713590.0,
-        "Total Operating Income": 7625942.45,
-        "Operating Profit": 4693463.93,
+        "Total Operating Income": 7625942450.0,
+        "Operating Profit": 4693463930.0,
         "Net Profit": 3273330260.0,
         "Distributable Profit": 3752455660.0,
         "Number of Shares": 115640053.66,
@@ -684,14 +740,22 @@
         "Base Rate": 71.12,
         "Interest Spread Rate": 25.79
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T08:42:17.551646",
+      "parsed_at": "2026-11-14T20:24:59.635938",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 3023163040.0,
@@ -704,8 +768,8 @@
         "Investment Securities": 33115529450.0,
         "Interest Income": 28777480660.0,
         "Net Interest Income": 9217033650.0,
-        "Total Operating Income": 11466566.67,
-        "Operating Profit": 5783110.35,
+        "Total Operating Income": 11466566670.0,
+        "Operating Profit": 5783110350.0,
         "Net Profit": 4014924550.0,
         "Distributable Profit": 3023163040.0,
         "Number of Shares": 115640053.66,
@@ -786,14 +850,22 @@
         "Base Rate": 11.61,
         "Interest Spread Rate": -4.77
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T08:42:17.551541",
+      "parsed_at": "2026-11-14T20:24:59.635898",
       "raw": {
         "Paid Up Capital": 11564005370.0,
         "Retained Earnings": 3698834030.0,
@@ -806,8 +878,8 @@
         "Investment Securities": 34404124800.0,
         "Interest Income": 38371659150.0,
         "Net Interest Income": 12371164310.0,
-        "Total Operating Income": 15139065.24,
-        "Operating Profit": 6827332.94,
+        "Total Operating Income": 15139065240.0,
+        "Operating Profit": 6827332940.0,
         "Net Profit": 4651338480.0,
         "Distributable Profit": 3698834030.0,
         "Number of Shares": 115640053.66,
@@ -888,14 +960,22 @@
         "Base Rate": 7.89,
         "Interest Spread Rate": -9.32
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T08:42:17.551448",
+      "parsed_at": "2026-11-14T20:24:59.635858",
       "raw": {
         "Paid Up Capital": 14917566920.0,
         "Retained Earnings": -988242970.0,
@@ -908,8 +988,8 @@
         "Investment Securities": 63230322640.0,
         "Interest Income": 10168652550.0,
         "Net Interest Income": 2746634130.0,
-        "Total Operating Income": 3637353.84,
-        "Operating Profit": 1542933.5,
+        "Total Operating Income": 3637353840.0,
+        "Operating Profit": 1542933500.0,
         "Net Profit": 1010383860.0,
         "Distributable Profit": -988242970.0,
         "Number of Shares": 149175669.22,
@@ -990,14 +1070,22 @@
         "Base Rate": -1.03,
         "Interest Spread Rate": -9.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T08:42:17.551348",
+      "parsed_at": "2026-11-14T20:24:59.635818",
       "raw": {
         "Paid Up Capital": 14917566920.0,
         "Retained Earnings": -592267790.0,
@@ -1010,8 +1098,8 @@
         "Investment Securities": 61065263180.0,
         "Interest Income": 20545519410.0,
         "Net Interest Income": 5541417320.0,
-        "Total Operating Income": 7124653.24,
-        "Operating Profit": 3561040.37,
+        "Total Operating Income": 7124653240.0,
+        "Operating Profit": 3561040370.0,
         "Net Profit": 1903807550.0,
         "Distributable Profit": -592267790.0,
         "Number of Shares": 149175669.22,
@@ -1092,14 +1180,22 @@
         "Base Rate": -12.16,
         "Interest Spread Rate": -9.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T08:42:17.551247",
+      "parsed_at": "2026-11-14T20:24:59.635778",
       "raw": {
         "Paid Up Capital": 14917566920.0,
         "Retained Earnings": -1725642820.0,
@@ -1112,8 +1208,8 @@
         "Investment Securities": 53119813130.0,
         "Interest Income": 29420745130.0,
         "Net Interest Income": 8188170540.0,
-        "Total Operating Income": 10301947.09,
-        "Operating Profit": 3625277.82,
+        "Total Operating Income": 10301947090.0,
+        "Operating Profit": 3625277820.0,
         "Net Profit": 1914891670.0,
         "Distributable Profit": -1725642820.0,
         "Number of Shares": 149175669.22,
@@ -1194,7 +1290,15 @@
         "Base Rate": -15.46,
         "Interest Spread Rate": -4.77
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
@@ -1202,7 +1306,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T08:42:17.551145",
+      "parsed_at": "2026-11-14T20:24:59.635684",
       "computed": {
         "pe_ratio": 29.0,
         "pb_ratio": 2.4,
@@ -1248,8 +1352,8 @@
         "Investment Securities": 58895083160.0,
         "Interest Income": 38375019310.0,
         "Net Interest Income": 10617172520.0,
-        "Total Operating Income": 13169365.46,
-        "Operating Profit": 3018161.17,
+        "Total Operating Income": 13169365460.0,
+        "Operating Profit": 3018161170.0,
         "Net Profit": 1381869720.0,
         "Distributable Profit": -2304059250.0,
         "Number of Shares": 149175669.22,
@@ -1330,6 +1434,14 @@
         "EPS(Rs.)": -76.98,
         "Book Value(Rs.)": -21.13,
         "ROE": -66.12
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1338,7 +1450,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T08:42:17.551038",
+      "parsed_at": "2026-11-14T20:24:59.635537",
       "computed": {
         "pe_ratio": 48.8,
         "pb_ratio": 2.2,
@@ -1384,8 +1496,8 @@
         "Investment Securities": 56557136380.0,
         "Interest Income": 8491519240.0,
         "Net Interest Income": 2552587850.0,
-        "Total Operating Income": 3070615.58,
-        "Operating Profit": 173865.92,
+        "Total Operating Income": 3070615580.0,
+        "Operating Profit": 173865920.0,
         "Net Profit": 110526690.0,
         "Distributable Profit": -2214087560.0,
         "Number of Shares": 149175669.22,
@@ -1466,6 +1578,14 @@
         "EPS(Rs.)": -89.07,
         "Book Value(Rs.)": 0.86,
         "ROE": -89.19
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1474,7 +1594,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T08:42:17.550928",
+      "parsed_at": "2026-11-14T20:24:59.635388",
       "computed": {
         "pe_ratio": -144.1,
         "pb_ratio": 1.8,
@@ -1520,8 +1640,8 @@
         "Investment Securities": 59141159030.0,
         "Interest Income": 15652901380.0,
         "Net Interest Income": 5186964000.0,
-        "Total Operating Income": 6053907.81,
-        "Operating Profit": 341964.25,
+        "Total Operating Income": 6053907810.0,
+        "Operating Profit": 341964250.0,
         "Net Profit": 151730290.0,
         "Distributable Profit": -2655772870.0,
         "Number of Shares": 149175669.22,
@@ -1596,6 +1716,14 @@
         "net_profit_ttm": -92.03,
         "Retained Earnings": -348.41,
         "Distributable Profit": -348.41
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1604,7 +1732,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T08:42:17.550823",
+      "parsed_at": "2026-11-14T20:24:59.635236",
       "computed": {
         "pe_ratio": -146.6,
         "pb_ratio": 1.8,
@@ -1650,8 +1778,8 @@
         "Investment Securities": 59204570820.0,
         "Interest Income": 22469316150.0,
         "Net Interest Income": 7962519140.0,
-        "Total Operating Income": 9192248.14,
-        "Operating Profit": 1290509.87,
+        "Total Operating Income": 9192248140.0,
+        "Operating Profit": 1290509870.0,
         "Net Profit": 156775960.0,
         "Distributable Profit": -3569202810.0,
         "Number of Shares": 149175669.22,
@@ -1728,6 +1856,14 @@
         "net_profit_ttm": -91.81,
         "Retained Earnings": -106.83,
         "Distributable Profit": -106.83
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1736,7 +1872,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T08:42:17.550711",
+      "parsed_at": "2026-11-14T20:24:59.635078",
       "computed": {
         "pe_ratio": 321.9,
         "pb_ratio": 1.8,
@@ -1782,8 +1918,8 @@
         "Investment Securities": 47488617560.0,
         "Interest Income": 28816212120.0,
         "Net Interest Income": 10256235570.0,
-        "Total Operating Income": 11772497.65,
-        "Operating Profit": 1272125.86,
+        "Total Operating Income": 11772497650.0,
+        "Operating Profit": 1272125860.0,
         "Net Profit": 161573230.0,
         "Distributable Profit": -5211822270.0,
         "Number of Shares": 149175669.22,
@@ -1860,6 +1996,14 @@
         "Interest Spread Rate": 0.0,
         "Retained Earnings": -126.2,
         "Distributable Profit": -126.2
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -1868,7 +2012,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T08:42:17.550605",
+      "parsed_at": "2026-11-14T20:24:59.634919",
       "computed": {
         "pe_ratio": 272.3,
         "pb_ratio": 1.6,
@@ -1914,8 +2058,8 @@
         "Investment Securities": 45245039210.0,
         "Interest Income": 6335002940.0,
         "Net Interest Income": 2286038410.0,
-        "Total Operating Income": 2779091.43,
-        "Operating Profit": 193522.28,
+        "Total Operating Income": 2779091430.0,
+        "Operating Profit": 193522280.0,
         "Net Profit": 122160860.0,
         "Distributable Profit": -6248213390.0,
         "Number of Shares": 149175669.22,
@@ -1992,6 +2136,14 @@
         "Interest Spread Rate": -0.25,
         "Retained Earnings": -182.2,
         "Distributable Profit": -182.2
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2000,7 +2152,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T08:42:17.550492",
+      "parsed_at": "2026-11-14T20:24:59.634765",
       "computed": {
         "pe_ratio": 290.5,
         "pb_ratio": 1.7,
@@ -2046,8 +2198,8 @@
         "Investment Securities": 55844546750.0,
         "Interest Income": 12033063160.0,
         "Net Interest Income": 4363883870.0,
-        "Total Operating Income": 5339157.72,
-        "Operating Profit": 197777.54,
+        "Total Operating Income": 5339157720.0,
+        "Operating Profit": 197777540.0,
         "Net Profit": 131191670.0,
         "Distributable Profit": -7399536340.0,
         "Number of Shares": 149175669.22,
@@ -2124,6 +2276,14 @@
         "net_profit_ttm": -13.54,
         "Retained Earnings": -178.62,
         "Distributable Profit": -178.62
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2132,7 +2292,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T08:42:17.550371",
+      "parsed_at": "2026-11-14T20:24:59.634604",
       "computed": {
         "pe_ratio": 379.7,
         "pb_ratio": 1.8,
@@ -2178,8 +2338,8 @@
         "Investment Securities": 53768183440.0,
         "Interest Income": 17487944030.0,
         "Net Interest Income": 6308251640.0,
-        "Total Operating Income": 7679993.13,
-        "Operating Profit": 672906.36,
+        "Total Operating Income": 7679993130.0,
+        "Operating Profit": 672906360.0,
         "Net Profit": 140324170.0,
         "Distributable Profit": -13658214170.0,
         "Number of Shares": 149175669.22,
@@ -2256,6 +2416,14 @@
         "net_profit_ttm": -10.49,
         "Retained Earnings": -282.67,
         "Distributable Profit": -282.67
+      },
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
       }
     },
     {
@@ -2263,7 +2431,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T08:42:17.550253",
+      "parsed_at": "2026-11-14T20:24:59.634436",
       "raw": {
         "Paid Up Capital": 14917566920.0,
         "Share Premium": 0.0,
@@ -2278,8 +2446,8 @@
         "Investment Securities": 66539481190.0,
         "Interest Income": 22732145620.0,
         "Net Interest Income": 7845055510.0,
-        "Total Operating Income": 9619821.7,
-        "Operating Profit": 979108.85,
+        "Total Operating Income": 9619821700.0,
+        "Operating Profit": 979108850.0,
         "Net Profit": 181702470.0,
         "Distributable Profit": -14865023040.0,
         "Number of Shares": 149175669.22,
@@ -2362,14 +2530,22 @@
         "Base Rate": -17.19,
         "Interest Spread Rate": -12.28
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NICA",
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-07T08:42:17.550119",
+      "parsed_at": "2026-11-14T20:24:59.634242",
       "raw": {
         "Paid Up Capital": 14917566920.0,
         "Share Premium": 0.0,
@@ -2384,20 +2560,20 @@
         "Investment Securities": 63555539120.0,
         "Interest Income": 5270109950.0,
         "Net Interest Income": 1889271150.0,
-        "Total Operating Income": 2426814.97,
-        "Operating Profit": 161419.46,
+        "Total Operating Income": 2426814970.0,
+        "Operating Profit": 161419460.0,
         "Net Profit": 127442910.0,
         "Distributable Profit": -15396912530.0,
         "Number of Shares": 149175669.22,
         "EPS Reported": 3.42,
         "Book Value Reported": 172.53,
         "ROE Reported": 1.98,
-        "CAR": 1112.0,
-        "NPL": 981.0,
-        "Cost of funds": 378.0,
-        "Credit To Deposit Ratio": 6022.0,
-        "Base Rate": 555.0,
-        "Interest Spread Rate": 331.0
+        "CAR": 11.12,
+        "NPL": 9.81,
+        "Cost of funds": 3.78,
+        "Credit To Deposit Ratio": 60.22,
+        "Base Rate": 5.55,
+        "Interest Spread Rate": 3.31
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -2461,15 +2637,31 @@
         "EPS Reported": -60.64,
         "Book Value Reported": -13.19,
         "ROE Reported": 20.0,
-        "CAR": 7825.87,
-        "NPL": 13934.33,
-        "Cost of funds": 8117.39,
-        "Credit To Deposit Ratio": 9013.2,
-        "Base Rate": 8309.09,
-        "Interest Spread Rate": 8195.74
+        "CAR": -20.74,
+        "NPL": 40.34,
+        "Cost of funds": -17.83,
+        "Credit To Deposit Ratio": -8.87,
+        "Base Rate": -15.91,
+        "Interest Spread Rate": -17.04
       },
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "Base Rate",
+        "CAR",
+        "Cost of funds",
+        "Credit To Deposit Ratio",
+        "Interest Spread Rate",
+        "NPL"
+      ]
     }
   ],
-  "last_updated": "2026-11-07T08:42:17.555688"
+  "last_updated": "2026-11-14T20:24:59.637680"
 }

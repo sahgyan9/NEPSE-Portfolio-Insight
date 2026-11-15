@@ -19,7 +19,7 @@
         "Total Assets": 1501307750.0,
         "Revenue": 120130830.0,
         "Gross Profit": 116870600.0,
-        "Operating Profit": 108337.59,
+        "Operating Profit": 108337590.0,
         "Net Profit": 46350830.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 12.36,
@@ -53,7 +53,14 @@
         "graham_number": 174.7
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -71,7 +78,7 @@
         "Total Assets": 1596965450.0,
         "Revenue": 54896350.0,
         "Gross Profit": 54591820.0,
-        "Operating Profit": 45528.66,
+        "Operating Profit": 45528660.0,
         "Net Profit": 2413790.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 1.93,
@@ -105,7 +112,14 @@
         "graham_number": 66.06
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -123,7 +137,7 @@
         "Total Assets": 1437729850.0,
         "Revenue": 77633820.0,
         "Gross Profit": 75470000.0,
-        "Operating Profit": 71543.86,
+        "Operating Profit": 71543860.0,
         "Net Profit": 36820210.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 29.46,
@@ -157,7 +171,14 @@
         "graham_number": 267.37
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -175,7 +196,7 @@
         "Total Assets": 1501307750.0,
         "Revenue": 120130830.0,
         "Gross Profit": 116870600.0,
-        "Operating Profit": 108337.59,
+        "Operating Profit": 108337590.0,
         "Net Profit": 46350830.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 18.54,
@@ -209,7 +230,14 @@
         "graham_number": 213.97
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -227,7 +255,7 @@
         "Total Assets": 1500526270.0,
         "Revenue": 153890950.0,
         "Gross Profit": 150209230.0,
-        "Operating Profit": 135072.39,
+        "Operating Profit": 135072390.0,
         "Net Profit": 23060390.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 6.15,
@@ -281,7 +309,14 @@
         "Book Value(Rs.)": -4.26,
         "ROE": -48.05
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -299,7 +334,7 @@
         "Total Assets": 1492450540.0,
         "Revenue": 177576420.0,
         "Gross Profit": 172304470.0,
-        "Operating Profit": 150828.9,
+        "Operating Profit": 150828900.0,
         "Net Profit": 1781420.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 0.36,
@@ -353,7 +388,14 @@
         "Book Value(Rs.)": 0.34,
         "ROE": -81.77
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -369,7 +411,7 @@
         "Current Liabilities": 55912320.0,
         "Current Assets": 113462120.0,
         "Total Assets": 1448659370.0,
-        "Operating Profit": -15534.12,
+        "Operating Profit": -15534120.0,
         "Net Profit": -31494730.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": -25.2,
@@ -417,7 +459,14 @@
         "Book Value(Rs.)": -14.29,
         "ROE": -199.82
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -434,7 +483,7 @@
         "Total Assets": 1500316020.0,
         "Revenue": 4041710.0,
         "Gross Profit": 4041710.0,
-        "Operating Profit": -27321.04,
+        "Operating Profit": -27321040.0,
         "Net Profit": -86863340.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": -34.75,
@@ -485,7 +534,14 @@
         "Book Value(Rs.)": -20.82,
         "ROE": -336.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -502,7 +558,7 @@
         "Total Assets": 1599656500.0,
         "Revenue": 31786670.0,
         "Gross Profit": 136218170.0,
-        "Operating Profit": 88095.41,
+        "Operating Profit": 88095410.0,
         "Net Profit": -852490.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": -0.23,
@@ -553,7 +609,14 @@
         "Book Value(Rs.)": -0.89,
         "ROE": -103.76
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -570,7 +633,7 @@
         "Total Assets": 1546225580.0,
         "Revenue": 177991500.0,
         "Gross Profit": 176813910.0,
-        "Operating Profit": 111680.41,
+        "Operating Profit": 111680410.0,
         "Net Profit": 3413120.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 0.68,
@@ -622,7 +685,14 @@
         "Book Value(Rs.)": 3.51,
         "ROE": 85.71
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -639,7 +709,7 @@
         "Total Assets": 1545081460.0,
         "Revenue": 91324100.0,
         "Gross Profit": 91307190.0,
-        "Operating Profit": 69360.33,
+        "Operating Profit": 69360330.0,
         "Net Profit": 45143350.0,
         "Number of Shares": 5000000.0,
         "EPS(Rs.)": 36.11,
@@ -688,7 +758,14 @@
         "Book Value(Rs.)": 22.97,
         "ROE": 216.54
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -706,7 +783,7 @@
         "Total Assets": 1487110790.0,
         "Revenue": 141972270.0,
         "Gross Profit": 138953770.0,
-        "Operating Profit": 99455.82,
+        "Operating Profit": 99455820.0,
         "Net Profit": 55871910.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 22.35,
@@ -756,7 +833,14 @@
         "Net Profit": 164.32,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -774,7 +858,7 @@
         "Total Assets": 1504455480.0,
         "Revenue": 167274060.0,
         "Gross Profit": 163413310.0,
-        "Operating Profit": 104750.65,
+        "Operating Profit": 104750650.0,
         "Net Profit": 44611140.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 11.9,
@@ -824,7 +908,14 @@
         "Net Profit": 5333.04,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -842,7 +933,7 @@
         "Total Assets": 1545458410.0,
         "Revenue": 223120580.0,
         "Gross Profit": 223060960.0,
-        "Operating Profit": 143604.08,
+        "Operating Profit": 143604080.0,
         "Net Profit": 65431980.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 13.09,
@@ -892,7 +983,14 @@
         "Net Profit": 1817.07,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -910,7 +1008,7 @@
         "Total Assets": 1585300940.0,
         "Revenue": 93359910.0,
         "Gross Profit": 91687120.0,
-        "Operating Profit": 70953.51,
+        "Operating Profit": 70953510.0,
         "Net Profit": 51827920.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 41.46,
@@ -960,7 +1058,14 @@
         "Net Profit": 14.81,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -978,7 +1083,7 @@
         "Total Assets": 1563390840.0,
         "Revenue": 151551880.0,
         "Gross Profit": 148014320.0,
-        "Operating Profit": 108441.94,
+        "Operating Profit": 108441940.0,
         "Net Profit": 74517050.0,
         "Number of Shares": 5000000.0,
         "EPS Reported": 29.81,
@@ -1031,7 +1136,14 @@
         "Book Value Reported": 15.91,
         "ROE Reported": 15.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -1049,7 +1161,7 @@
         "Total Assets": 1573815510.0,
         "Revenue": 191556860.0,
         "Gross Profit": 187332960.0,
-        "Operating Profit": 127907.42,
+        "Operating Profit": 127907420.0,
         "Net Profit": 80728390.0,
         "Number of Shares": 5750000.0,
         "EPS Reported": 18.72,
@@ -1102,7 +1214,14 @@
         "Book Value Reported": 3.45,
         "ROE Reported": 52.15
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "UHEWA",
@@ -1120,7 +1239,7 @@
         "Total Assets": 1608019710.0,
         "Revenue": 262559470.0,
         "Gross Profit": 252990590.0,
-        "Operating Profit": 170284.46,
+        "Operating Profit": 170284460.0,
         "Net Profit": 108703990.0,
         "Number of Shares": 5750000.0,
         "EPS Reported": 18.91,
@@ -1173,7 +1292,14 @@
         "Book Value Reported": 4.04,
         "ROE Reported": 38.85
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:21:10.920305"

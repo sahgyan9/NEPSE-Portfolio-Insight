@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:05:41.194896",
+      "parsed_at": "2026-11-14T21:14:50.487553",
       "raw": {
         "Paid Up Capital": 480000000.0,
         "Reserve and Surplus": -38330460.0,
@@ -17,7 +17,7 @@
         "Current Liabilities": 473780.0,
         "Current Assets": 262297310.0,
         "Total Assets": 671225050.0,
-        "Revenue from Operations": 45943.03,
+        "Revenue from Operations": 45943030.0,
         "Gross Profit": 41320570.0,
         "Net Profit": 15613360.0,
         "Number of Shares": 4800000.0,
@@ -51,14 +51,21 @@
         "graham_number": 94.79
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:05:41.194802",
+      "parsed_at": "2026-11-14T21:14:50.487465",
       "raw": {
         "Paid Up Capital": 497400000.0,
         "Reserve and Surplus": -37799880.0,
@@ -67,7 +74,7 @@
         "Current Liabilities": 1232450.0,
         "Current Assets": 268524300.0,
         "Total Assets": 671524110.0,
-        "Revenue from Operations": 26180.24,
+        "Revenue from Operations": 26180240.0,
         "Gross Profit": 22504070.0,
         "Net Profit": 5466340.0,
         "Number of Shares": 4974000.0,
@@ -101,14 +108,21 @@
         "graham_number": 67.63
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:05:41.194704",
+      "parsed_at": "2026-11-14T21:14:50.487376",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -17223870.0,
@@ -117,7 +131,7 @@
         "Current Liabilities": 320430.0,
         "Current Assets": 365953140.0,
         "Total Assets": 777079890.0,
-        "Revenue from Operations": 53748.02,
+        "Revenue from Operations": 53748020.0,
         "Gross Profit": 48267740.0,
         "Net Profit": 22704030.0,
         "Number of Shares": 6000000.0,
@@ -151,14 +165,21 @@
         "graham_number": 105.05
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-07T09:05:41.194610",
+      "parsed_at": "2026-11-14T21:14:50.487288",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": -18037210.0,
@@ -167,7 +188,7 @@
         "Current Liabilities": 90987580.0,
         "Current Assets": 182645640.0,
         "Total Assets": 827824630.0,
-        "Revenue from Operations": 75940.26,
+        "Revenue from Operations": 75940260.0,
         "Gross Profit": 68299220.0,
         "Net Profit": 31905450.0,
         "Number of Shares": 6000000.0,
@@ -201,14 +222,21 @@
         "graham_number": 107.75
       },
       "yoy": {},
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-07T09:05:41.194513",
+      "parsed_at": "2026-11-14T21:14:50.487198",
       "raw": {
         "Paid Up Capital": 596369170.0,
         "Reserve and Surplus": -28780340.0,
@@ -217,8 +245,8 @@
         "Current Liabilities": 461937150.0,
         "Current Assets": 124910670.0,
         "Total Assets": 816647780.0,
-        "Revenue from Operations": 4561.46,
-        "Operating Profit": -6801.16,
+        "Revenue from Operations": 4561460.0,
+        "Operating Profit": -6801160.0,
         "Net Profit": -9887250.0,
         "Number of Shares": 5963691.68,
         "EPS(Rs.)": -6.63,
@@ -267,14 +295,22 @@
         "Book Value(Rs.)": 3.43,
         "ROE": -239.4
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-07T09:05:41.194421",
+      "parsed_at": "2026-11-14T21:14:50.487106",
       "raw": {
         "Paid Up Capital": 596369170.0,
         "Reserve and Surplus": -12458460.0,
@@ -283,8 +319,8 @@
         "Current Liabilities": 26683080.0,
         "Current Assets": 39541390.0,
         "Total Assets": 732133850.0,
-        "Revenue from Operations": 34348.24,
-        "Operating Profit": 13730.01,
+        "Revenue from Operations": 34348240.0,
+        "Operating Profit": 13730010.0,
         "Net Profit": 6434630.0,
         "Number of Shares": 5963691.68,
         "EPS(Rs.)": 2.16,
@@ -334,14 +370,22 @@
         "Book Value(Rs.)": 5.96,
         "ROE": 10.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-07T09:05:41.194323",
+      "parsed_at": "2026-11-14T21:14:50.487016",
       "raw": {
         "Paid Up Capital": 596369170.0,
         "Reserve and Surplus": 5856690.0,
@@ -350,8 +394,8 @@
         "Current Liabilities": 18529270.0,
         "Current Assets": 51340420.0,
         "Total Assets": 742710170.0,
-        "Revenue from Operations": 69346.99,
-        "Operating Profit": 38560.66,
+        "Revenue from Operations": 69346990.0,
+        "Operating Profit": 38560660.0,
         "Net Profit": 24749790.0,
         "Number of Shares": 5963691.68,
         "EPS(Rs.)": 5.53,
@@ -401,14 +445,22 @@
         "Book Value(Rs.)": 3.96,
         "ROE": 9.6
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-07T09:05:41.194225",
+      "parsed_at": "2026-11-14T21:14:50.486926",
       "raw": {
         "Paid Up Capital": 596369170.0,
         "Reserve and Surplus": 7773640.0,
@@ -417,9 +469,9 @@
         "Current Liabilities": 76231860.0,
         "Current Assets": 80415830.0,
         "Total Assets": 777996550.0,
-        "Revenue from Operations": 85449.61,
+        "Revenue from Operations": 85449610.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 42563.89,
+        "Operating Profit": 42563890.0,
         "Net Profit": 26666740.0,
         "Number of Shares": 5963691.68,
         "EPS Reported": 4.47,
@@ -468,14 +520,22 @@
         "Net Profit": -16.42,
         "Number of Shares": -0.61
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-07T09:05:41.194125",
+      "parsed_at": "2026-11-14T21:14:50.486831",
       "raw": {
         "Paid Up Capital": 596369170.0,
         "Reserve and Surplus": -778290.0,
@@ -484,9 +544,9 @@
         "Current Liabilities": 82805570.0,
         "Current Assets": 70744810.0,
         "Total Assets": 766801330.0,
-        "Revenue from Operations": 4465.77,
+        "Revenue from Operations": 4465770.0,
         "Gross Profit": 0.0,
-        "Operating Profit": -5721.99,
+        "Operating Profit": -5721990.0,
         "Net Profit": -8570160.0,
         "Number of Shares": 5963691.68,
         "EPS Reported": -5.75,
@@ -534,14 +594,22 @@
         "Net Profit": 13.32,
         "Number of Shares": 0.0
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T09:05:41.194026",
+      "parsed_at": "2026-11-14T21:14:50.486728",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": 8597310.0,
@@ -550,9 +618,9 @@
         "Current Liabilities": 41751090.0,
         "Current Assets": 34355430.0,
         "Total Assets": 729427810.0,
-        "Revenue from Operations": 29064.06,
+        "Revenue from Operations": 29064060.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 10258.66,
+        "Operating Profit": 10258660.0,
         "Net Profit": 4746480.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 1.58,
@@ -601,14 +669,22 @@
         "Net Profit": -26.24,
         "Number of Shares": 0.61
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T09:05:41.193924",
+      "parsed_at": "2026-11-14T21:14:50.486642",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": 22753400.0,
@@ -617,9 +693,9 @@
         "Current Liabilities": 42368660.0,
         "Current Assets": 31074370.0,
         "Total Assets": 735169070.0,
-        "Revenue from Operations": 56290.23,
+        "Revenue from Operations": 56290230.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 26817.67,
+        "Operating Profit": 26817670.0,
         "Net Profit": 18902560.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 4.2,
@@ -668,14 +744,22 @@
         "Net Profit": -23.63,
         "Number of Shares": 0.61
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T09:05:41.193824",
+      "parsed_at": "2026-11-14T21:14:50.486555",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": 31653700.0,
@@ -684,9 +768,9 @@
         "Current Liabilities": 39137910.0,
         "Current Assets": 47184020.0,
         "Total Assets": 736023040.0,
-        "Revenue from Operations": 79355.2,
+        "Revenue from Operations": 79355200.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 37418.27,
+        "Operating Profit": 37418270.0,
         "Net Profit": 27802860.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 4.63,
@@ -738,14 +822,22 @@
         "Book Value Reported": 3.93,
         "ROE Reported": -0.23
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T09:05:41.193719",
+      "parsed_at": "2026-11-14T21:14:50.486467",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": 28570930.0,
@@ -754,9 +846,9 @@
         "Current Liabilities": 84319600.0,
         "Current Assets": 77184220.0,
         "Total Assets": 774072590.0,
-        "Revenue from Operations": 7985.21,
+        "Revenue from Operations": 7985210.0,
         "Gross Profit": 0.0,
-        "Operating Profit": -1816.63,
+        "Operating Profit": -1816630.0,
         "Net Profit": -3386730.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": -2.26,
@@ -807,14 +899,22 @@
         "Book Value Reported": 4.9,
         "ROE Reported": 62.5
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T09:05:41.193618",
+      "parsed_at": "2026-11-14T21:14:50.486378",
       "raw": {
         "Paid Up Capital": 600000000.0,
         "Reserve and Surplus": 43900780.0,
@@ -823,9 +923,9 @@
         "Current Liabilities": 83308930.0,
         "Current Assets": 81726120.0,
         "Total Assets": 783566240.0,
-        "Revenue from Operations": 35466.73,
+        "Revenue from Operations": 35466730.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 14905.62,
+        "Operating Profit": 14905620.0,
         "Net Profit": 11993520.0,
         "Number of Shares": 6000000.0,
         "EPS Reported": 4.0,
@@ -877,14 +977,22 @@
         "Book Value Reported": 5.81,
         "ROE Reported": 139.1
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T09:05:41.193507",
+      "parsed_at": "2026-11-14T21:14:50.486283",
       "raw": {
         "Paid Up Capital": 630000000.0,
         "Reserve and Surplus": 50018830.0,
@@ -893,9 +1001,9 @@
         "Current Liabilities": 89571870.0,
         "Current Assets": 126693570.0,
         "Total Assets": 826641610.0,
-        "Revenue from Operations": 66585.86,
+        "Revenue from Operations": 66585860.0,
         "Gross Profit": 63318370.0,
-        "Operating Profit": 22256.16,
+        "Operating Profit": 22256160.0,
         "Net Profit": 49690530.0,
         "Number of Shares": 6300000.0,
         "EPS Reported": 10.52,
@@ -947,14 +1055,22 @@
         "Book Value Reported": 4.0,
         "ROE Reported": 140.49
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KDL",
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T09:05:41.193380",
+      "parsed_at": "2026-11-14T21:14:50.486173",
       "raw": {
         "Paid Up Capital": 630000000.0,
         "Reserve and Surplus": 58012770.0,
@@ -963,9 +1079,9 @@
         "Current Liabilities": 38574960.0,
         "Current Assets": 69313920.0,
         "Total Assets": 771970060.0,
-        "Revenue from Operations": 89694.95,
+        "Revenue from Operations": 89694950.0,
         "Gross Profit": 0.0,
-        "Operating Profit": 31603.56,
+        "Operating Profit": 31603560.0,
         "Net Profit": 57684460.0,
         "Number of Shares": 6300000.0,
         "EPS Reported": 9.16,
@@ -1017,8 +1133,16 @@
         "Book Value Reported": 3.73,
         "ROE Reported": 90.45
       },
-      "sector": "Hotels & Tourism"
+      "sector": "Hotels & Tourism",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Revenue from Operations"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:05:41.197282"
+  "last_updated": "2026-11-14T21:14:50.489549"
 }

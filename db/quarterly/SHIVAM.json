@@ -28,7 +28,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-07T10:04:38.966893",
+      "parsed_at": "2026-11-15T11:53:34.717198",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -48,7 +48,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-07T10:04:38.966877",
+      "parsed_at": "2026-11-15T11:53:34.717171",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -68,7 +68,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-07T10:04:38.966861",
+      "parsed_at": "2026-11-15T11:53:34.717146",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -88,7 +88,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-07T10:04:38.966844",
+      "parsed_at": "2026-11-15T11:53:34.717124",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -108,7 +108,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-07T10:04:38.966827",
+      "parsed_at": "2026-11-15T11:53:34.717097",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -128,7 +128,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-07T10:04:38.966810",
+      "parsed_at": "2026-11-15T11:53:34.717068",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -148,7 +148,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-07T10:04:38.966781",
+      "parsed_at": "2026-11-15T11:53:34.717026",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -164,5 +164,5 @@
       "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-07T10:04:38.968369"
+  "last_updated": "2026-11-15T11:53:34.719003"
 }

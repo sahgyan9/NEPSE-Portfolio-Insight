@@ -21,8 +21,8 @@
         "Total Investment and Loans": 3530335000.0,
         "Total Revenue": 555400000.0,
         "Income From Investment Loans And Others": 155995000.0,
-        "Total Expenses And Provisions": 268216.0,
-        "Management Expenses": 26165.0,
+        "Total Expenses And Provisions": 268216000.0,
+        "Management Expenses": 26165000.0,
         "Net Profit": 287184000.0,
         "Net Premium": 1095790000.0,
         "Net Claim Payment": 678954000.0,
@@ -71,7 +71,15 @@
         "graham_number": 458.65
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -91,8 +99,8 @@
         "Total Investment and Loans": 3457366000.0,
         "Total Revenue": 783983000.0,
         "Income From Investment Loans And Others": 193381000.0,
-        "Total Expenses And Provisions": 381705.0,
-        "Management Expenses": 41823.0,
+        "Total Expenses And Provisions": 381705000.0,
+        "Management Expenses": 41823000.0,
         "Net Profit": 402278000.0,
         "Net Premium": 1411174000.0,
         "Net Claim Payment": 956178000.0,
@@ -141,7 +149,15 @@
         "graham_number": 400.2
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -161,8 +177,8 @@
         "Total Investment and Loans": 3521136000.0,
         "Total Revenue": 165363000.0,
         "Income From Investment Loans And Others": 50264000.0,
-        "Total Expenses And Provisions": 132832.0,
-        "Management Expenses": 8925.0,
+        "Total Expenses And Provisions": 132832000.0,
+        "Management Expenses": 8925000.0,
         "Net Profit": 32531000.0,
         "Net Premium": 404200000.0,
         "Net Claim Payment": 233338000.0,
@@ -211,7 +227,15 @@
         "graham_number": 227.38
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -231,8 +255,8 @@
         "Total Investment and Loans": 3685085000.0,
         "Total Revenue": 375000000.0,
         "Income From Investment Loans And Others": 99703000.0,
-        "Total Expenses And Provisions": 195651.0,
-        "Management Expenses": 19136.0,
+        "Total Expenses And Provisions": 195651000.0,
+        "Management Expenses": 19136000.0,
         "Net Profit": 179349000.0,
         "Net Premium": 726929000.0,
         "Net Claim Payment": 445995000.0,
@@ -281,7 +305,15 @@
         "graham_number": 384.33
       },
       "yoy": {},
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -301,8 +333,8 @@
         "Total Investment and Loans": 5778100000.0,
         "Total Revenue": 583000000.0,
         "Income From Investment Loans And Others": 139600000.0,
-        "Total Expenses And Provisions": 288300.0,
-        "Management Expenses": 31400.0,
+        "Total Expenses And Provisions": 288300000.0,
+        "Management Expenses": 31400000.0,
         "Net Profit": 294700000.0,
         "Net Premium": 1034500000.0,
         "Net Claim Payment": 818600000.0,
@@ -379,7 +411,15 @@
         "Book Value(Rs.)": -17.99,
         "ROE": -47.01
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -399,8 +439,8 @@
         "Total Investment and Loans": 6036478000.0,
         "Total Revenue": 869482000.0,
         "Income From Investment Loans And Others": 244094000.0,
-        "Total Expenses And Provisions": 411219.0,
-        "Management Expenses": 49014.0,
+        "Total Expenses And Provisions": 411219000.0,
+        "Management Expenses": 49014000.0,
         "Net Profit": 458263000.0,
         "Net Premium": 1523809000.0,
         "Net Claim Payment": 1116667000.0,
@@ -477,7 +517,15 @@
         "Book Value(Rs.)": -3.0,
         "ROE": -40.3
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Management Expenses",
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -496,7 +544,7 @@
         "Total Investment and Loans": 6164809460.0,
         "Total Revenue": 967420230.0,
         "Income From Investment Loans And Others": 150129910.0,
-        "Total Expenses And Provisions": 885911.79,
+        "Total Expenses And Provisions": 885911790.0,
         "Net Profit": 57055910.0,
         "Net Premium": 692720940.0,
         "Net Claim Payment": 687435270.0,
@@ -565,7 +613,14 @@
         "Book Value(Rs.)": -2.46,
         "ROE": -8.45
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -584,7 +639,7 @@
         "Total Investment and Loans": 6591409620.0,
         "Total Revenue": 1239446180.0,
         "Income From Investment Loans And Others": 206351000.0,
-        "Total Expenses And Provisions": 952526.22,
+        "Total Expenses And Provisions": 952526220.0,
         "Net Profit": 200843970.0,
         "Net Premium": 795939330.0,
         "Net Claim Payment": 590865750.0,
@@ -656,7 +711,14 @@
         "Book Value(Rs.)": -4.75,
         "ROE": -40.2
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -675,7 +737,7 @@
         "Total Investment and Loans": 6548778090.0,
         "Total Revenue": 2059453330.0,
         "Income From Investment Loans And Others": 371889440.0,
-        "Total Expenses And Provisions": 1380300.94,
+        "Total Expenses And Provisions": 1380300940.0,
         "Net Profit": 475406670.0,
         "Net Premium": 1373754610.0,
         "Net Claim Payment": 779040120.0,
@@ -744,7 +806,14 @@
         "Book Value(Rs.)": 7.41,
         "ROE": 50.22
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -763,7 +832,7 @@
         "Total Investment and Loans": 6413393250.0,
         "Total Revenue": 2974053330.0,
         "Income From Investment Loans And Others": 473464420.0,
-        "Total Expenses And Provisions": 2104194.49,
+        "Total Expenses And Provisions": 2104194490.0,
         "Net Profit": 608901180.0,
         "Net Premium": 1910021590.0,
         "Net Claim Payment": 1256177280.0,
@@ -832,7 +901,14 @@
         "Book Value(Rs.)": 5.73,
         "ROE": 25.69
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -852,7 +928,7 @@
         "Total Investment and Loans": 6597478510.0,
         "Total Revenue": 660262700.0,
         "Income From Investment Loans And Others": 115185430.0,
-        "Total Expenses And Provisions": 749772.59,
+        "Total Expenses And Provisions": 749772590.0,
         "Management Expenses": 0.0,
         "Net Profit": -89509890.0,
         "Net Premium": 311816170.0,
@@ -923,7 +999,14 @@
         "Gross Claim Payments": -52.1,
         "Number of Shares": 0.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -943,7 +1026,7 @@
         "Total Investment and Loans": 6698328370.0,
         "Total Revenue": 1314043130.0,
         "Income From Investment Loans And Others": 208446180.0,
-        "Total Expenses And Provisions": 1219966.32,
+        "Total Expenses And Provisions": 1219966320.0,
         "Management Expenses": 0.0,
         "Net Profit": 65853770.0,
         "Net Premium": 719125650.0,
@@ -1016,7 +1099,14 @@
         "Claims Payables": -100.0,
         "Number of Shares": 0.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1036,7 +1126,7 @@
         "Total Investment and Loans": 6778896420.0,
         "Total Revenue": 2091308620.0,
         "Income From Investment Loans And Others": 290244100.0,
-        "Total Expenses And Provisions": 1731381.33,
+        "Total Expenses And Provisions": 1731381330.0,
         "Management Expenses": 0.0,
         "Net Profit": 251949110.0,
         "Net Premium": 1292453140.0,
@@ -1108,7 +1198,14 @@
         "Gross Claim Payments": 33.92,
         "Number of Shares": 0.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1128,7 +1225,7 @@
         "Total Investment and Loans": 6721718410.0,
         "Total Revenue": 3118859440.0,
         "Income From Investment Loans And Others": 342485450.0,
-        "Total Expenses And Provisions": 2542850.66,
+        "Total Expenses And Provisions": 2542850660.0,
         "Management Expenses": 0.0,
         "Net Profit": 403206150.0,
         "Net Premium": 2113504490.0,
@@ -1200,7 +1297,14 @@
         "Gross Claim Payments": 27.95,
         "Number of Shares": 0.0
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1220,7 +1324,7 @@
         "Total Investment and Loans": 6592570980.0,
         "Total Revenue": 841981380.0,
         "Income From Investment Loans And Others": 63778290.0,
-        "Total Expenses And Provisions": 1109353.59,
+        "Total Expenses And Provisions": 1109353590.0,
         "Management Expenses": 0.0,
         "Net Profit": -267372210.0,
         "Net Premium": 621134480.0,
@@ -1294,7 +1398,14 @@
         "Book Value Reported": -4.94,
         "ROE Reported": -213.96
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1314,7 +1425,7 @@
         "Total Investment and Loans": 6278926170.0,
         "Total Revenue": 1605379620.0,
         "Income From Investment Loans And Others": 137851210.0,
-        "Total Expenses And Provisions": 1552029.64,
+        "Total Expenses And Provisions": 1552029640.0,
         "Management Expenses": 0.0,
         "Net Profit": 37344990.0,
         "Net Premium": 1164552630.0,
@@ -1389,7 +1500,14 @@
         "Book Value Reported": -7.24,
         "ROE Reported": -39.02
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1409,7 +1527,7 @@
         "Total Investment and Loans": 5931000290.0,
         "Total Revenue": 2111885660.0,
         "Income From Investment Loans And Others": 183973390.0,
-        "Total Expenses And Provisions": 1921580.33,
+        "Total Expenses And Provisions": 1921580330.0,
         "Management Expenses": 0.0,
         "Net Profit": 133213730.0,
         "Net Premium": 1474600930.0,
@@ -1484,7 +1602,14 @@
         "Book Value Reported": -6.1,
         "ROE Reported": -43.69
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SALICO",
@@ -1504,7 +1629,7 @@
         "Total Investment and Loans": 5857232260.0,
         "Total Revenue": 3253225600.0,
         "Income From Investment Loans And Others": 233279720.0,
-        "Total Expenses And Provisions": 2805944.41,
+        "Total Expenses And Provisions": 2805944410.0,
         "Management Expenses": 0.0,
         "Net Profit": 313096830.0,
         "Net Premium": 2340038520.0,
@@ -1579,7 +1704,14 @@
         "Book Value Reported": -2.68,
         "ROE Reported": -20.22
       },
-      "sector": "Non-Life Insurance"
+      "sector": "Non-Life Insurance",
+      "unit_fix": {
+        "fields": [
+          "Total Expenses And Provisions"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:57:26.073789"

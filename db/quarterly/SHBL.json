@@ -8,7 +8,7 @@
       "fy": "2076-77",
       "quarter": 4,
       "quarter_label": "Q4 76-77",
-      "parsed_at": "2026-11-07T10:04:30.576566",
+      "parsed_at": "2026-11-15T11:53:33.126685",
       "raw": {
         "Paid Up Capital": 163367000.0,
         "Reserves": 75427260.0,
@@ -17,7 +17,7 @@
         "Deposits from Customers": 853876330.0,
         "Loans and Advances to Customers": 725162880.0,
         "Net Interest Income": 48276400.0,
-        "Total Operating Income": 61230.21,
+        "Total Operating Income": 61230210.0,
         "Net Profit": 12587340.0,
         "Number of Shares": 1633669.3,
         "EPS(Rs.)": 7.7,
@@ -49,18 +49,25 @@
         "roe_ttm": 5.09,
         "roa_ttm": null,
         "net_profit_ttm": 12587340.0,
-        "revenue_ttm": 61230.21,
+        "revenue_ttm": 61230210.0,
         "graham_number": 162.02
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SHBL",
       "fy": "2077-78",
       "quarter": 1,
       "quarter_label": "Q1 77-78",
-      "parsed_at": "2026-11-07T10:04:30.576511",
+      "parsed_at": "2026-11-15T11:53:33.126599",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -79,7 +86,7 @@
       "fy": "2077-78",
       "quarter": 2,
       "quarter_label": "Q2 77-78",
-      "parsed_at": "2026-11-07T10:04:30.576506",
+      "parsed_at": "2026-11-15T11:53:33.126594",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -98,7 +105,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T10:04:30.576500",
+      "parsed_at": "2026-11-15T11:53:33.126589",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -117,7 +124,7 @@
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T10:04:30.576489",
+      "parsed_at": "2026-11-15T11:53:33.126578",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -132,5 +139,5 @@
       "sector": "Development Bank"
     }
   ],
-  "last_updated": "2026-11-07T10:04:30.577260"
+  "last_updated": "2026-11-15T11:53:33.127194"
 }

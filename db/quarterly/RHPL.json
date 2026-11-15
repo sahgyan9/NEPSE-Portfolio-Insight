@@ -17,7 +17,7 @@
         "Current Liabilities": 678017000.0,
         "Current Assets": 339846000.0,
         "Total Assets": 16575329000.0,
-        "Operating Profit": -21422.0,
+        "Operating Profit": -21422000.0,
         "Net Profit": -28114000.0,
         "Number of Shares": 61578900.0,
         "EPS(Rs.)": -0.61,
@@ -48,7 +48,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -64,7 +71,7 @@
         "Current Liabilities": 788642000.0,
         "Current Assets": 413991000.0,
         "Total Assets": 17232910000.0,
-        "Operating Profit": -33329.0,
+        "Operating Profit": -33329000.0,
         "Net Profit": -52346000.0,
         "Number of Shares": 61578900.0,
         "EPS(Rs.)": -0.85,
@@ -95,7 +102,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -111,7 +125,7 @@
         "Current Liabilities": 549437000.0,
         "Current Assets": 737477000.0,
         "Total Assets": 17958862000.0,
-        "Operating Profit": -9643.0,
+        "Operating Profit": -9643000.0,
         "Net Profit": -17822000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -1.04,
@@ -142,7 +156,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -158,7 +179,7 @@
         "Current Liabilities": 558281000.0,
         "Current Assets": 955923000.0,
         "Total Assets": 18704861000.0,
-        "Operating Profit": -20714.0,
+        "Operating Profit": -20714000.0,
         "Net Profit": -27196000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.79,
@@ -189,7 +210,14 @@
         "revenue_ttm": null
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -205,7 +233,7 @@
         "Current Liabilities": 513676000.0,
         "Current Assets": 1005531000.0,
         "Total Assets": 19430143000.0,
-        "Operating Profit": -31673.0,
+        "Operating Profit": -31673000.0,
         "Net Profit": -41415000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.81,
@@ -253,7 +281,14 @@
         "Book Value(Rs.)": -0.62,
         "ROE": -32.81
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -269,7 +304,7 @@
         "Current Liabilities": 493266000.0,
         "Current Assets": 1093036000.0,
         "Total Assets": 20220389000.0,
-        "Operating Profit": -37594.0,
+        "Operating Profit": -37594000.0,
         "Net Profit": -50406000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.74,
@@ -317,7 +352,14 @@
         "Book Value(Rs.)": -0.34,
         "ROE": 13.48
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -333,7 +375,7 @@
         "Current Liabilities": 1424087000.0,
         "Current Assets": 1019138000.0,
         "Total Assets": 21598767000.0,
-        "Operating Profit": -9826.0,
+        "Operating Profit": -9826000.0,
         "Net Profit": -15331000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.9,
@@ -381,7 +423,14 @@
         "Book Value(Rs.)": -0.73,
         "ROE": 13.76
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -397,7 +446,7 @@
         "Current Liabilities": 614805000.0,
         "Current Assets": 1730406000.0,
         "Total Assets": 22705824000.0,
-        "Operating Profit": -17387.0,
+        "Operating Profit": -17387000.0,
         "Net Profit": -20690000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.6,
@@ -445,7 +494,14 @@
         "Book Value(Rs.)": -0.68,
         "ROE": 22.89
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -461,7 +517,7 @@
         "Current Liabilities": 46924000.0,
         "Current Assets": 1146710000.0,
         "Total Assets": 22533244000.0,
-        "Operating Profit": -26424.0,
+        "Operating Profit": -26424000.0,
         "Net Profit": -27170000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.53,
@@ -509,7 +565,14 @@
         "Book Value(Rs.)": -0.56,
         "ROE": 34.12
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -525,7 +588,7 @@
         "Current Liabilities": 975329000.0,
         "Current Assets": 798172000.0,
         "Total Assets": 23104813000.0,
-        "Operating Profit": -36848.0,
+        "Operating Profit": -36848000.0,
         "Net Profit": -42905000.0,
         "Number of Shares": 68421000.0,
         "EPS(Rs.)": -0.63,
@@ -573,7 +636,14 @@
         "Book Value(Rs.)": -0.68,
         "ROE": 14.29
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -591,7 +661,7 @@
         "Total Assets": 23486104000.0,
         "Revenue": 0.0,
         "Gross Profit": 0.0,
-        "Operating Profit": -8540.0,
+        "Operating Profit": -8540000.0,
         "Net Profit": -10449000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -0.61,
@@ -638,7 +708,14 @@
         "Net Profit": 31.84,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -656,7 +733,7 @@
         "Total Assets": 23917465000.0,
         "Revenue": 99816000.0,
         "Gross Profit": 94651000.0,
-        "Operating Profit": 36452.0,
+        "Operating Profit": 36452000.0,
         "Net Profit": -30183000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -0.88,
@@ -703,7 +780,14 @@
         "Net Profit": -45.88,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -721,7 +805,7 @@
         "Total Assets": 23988355000.0,
         "Revenue": 611075000.0,
         "Gross Profit": 576583000.0,
-        "Operating Profit": 263480.0,
+        "Operating Profit": 263480000.0,
         "Net Profit": -146032000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -2.85,
@@ -768,7 +852,14 @@
         "Net Profit": -437.48,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -786,7 +877,7 @@
         "Total Assets": 23683585000.0,
         "Revenue": 970304000.0,
         "Gross Profit": 838520000.0,
-        "Operating Profit": 272275.0,
+        "Operating Profit": 272275000.0,
         "Net Profit": -487234000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -7.12,
@@ -833,7 +924,14 @@
         "Net Profit": -1035.61,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -851,7 +949,7 @@
         "Total Assets": 23340865000.0,
         "Revenue": -10712000.0,
         "Gross Profit": -42550000.0,
-        "Operating Profit": -299807.0,
+        "Operating Profit": -299807000.0,
         "Net Profit": -653354000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -38.2,
@@ -901,7 +999,14 @@
         "Book Value Reported": -17.77,
         "ROE Reported": -7480.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -919,7 +1024,7 @@
         "Total Assets": 23450192000.0,
         "Revenue": 255152000.0,
         "Gross Profit": 122044000.0,
-        "Operating Profit": -385555.0,
+        "Operating Profit": -385555000.0,
         "Net Profit": -1081474000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -31.61,
@@ -972,7 +1077,14 @@
         "Book Value Reported": -23.03,
         "ROE Reported": -4548.94
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -990,7 +1102,7 @@
         "Total Assets": 23492441000.0,
         "Revenue": 777725000.0,
         "Gross Profit": 578552000.0,
-        "Operating Profit": -183936.0,
+        "Operating Profit": -183936000.0,
         "Net Profit": -1239653000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -24.16,
@@ -1043,7 +1155,14 @@
         "Book Value Reported": -24.11,
         "ROE Reported": -1019.81
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHPL",
@@ -1061,7 +1180,7 @@
         "Total Assets": 23554436000.0,
         "Revenue": 1209300000.0,
         "Gross Profit": 956167000.0,
-        "Operating Profit": -62063.0,
+        "Operating Profit": -62063000.0,
         "Net Profit": -1445890000.0,
         "Number of Shares": 68421000.0,
         "EPS Reported": -21.13,
@@ -1114,7 +1233,14 @@
         "Book Value Reported": -23.24,
         "ROE Reported": -286.4
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:52:40.259062"

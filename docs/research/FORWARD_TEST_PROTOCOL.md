@@ -15,7 +15,7 @@ their returns exist, and they are scored later with the same method as the backt
 
 | File | Role | SHA-256 (CRLF normalised to LF) |
 |---|---|---|
-| `tools/score_sector_leaders.py` | scorer, frozen v2 | `ece6ac96dbd20c631c8c836920b6c15f46936b3548e3276cffd9bac9c1f47c58` |
+| `tools/score_sector_leaders.py` | scorer, frozen v3 (since 2026-11-15; see the log) | `bc87cc97f2013bbaa299cd67928b4826f0310d759798d8c7a091c231ff916be1` |
 | `quarterly_db.py` | sector naming | `14c723ec2de32ba6a2415ef44e8285ac7cbf5c8b7a3cce7c751dbfb88cf338a2` |
 
 These are the values in `FROZEN` in `tools/backtest_sector_leaders.py`. The recording tool calls
@@ -148,4 +148,47 @@ quarter. The validation record was not written to `db/research/forward_test/`.
 
 ## Deviation log
 
-No deviations yet.
+### 2026-11-14: stored P/E in the snapshot archive disagrees with stored EPS (reported, not changed)
+
+**What was found.** The harvester (`tools/harvest_all_quarterly.py`) writes each snapshot's
+`pe_ratio` / `pb_ratio` as published by HamroShare (`report.peRatio`) or NepseAlpha
+(`funda_table.pe_ratio`). Those sites compute P/E on their own EPS figure, which lags the
+quarterly `eps_ttm` stored in the same snapshot. In the latest snapshot of each
+`db/fundamentals_archive/*.json` file, 45 of 306 checkable companies have a `pe_ratio` more than
+25% away from price / `eps_ttm`, and 8 have the wrong sign. Example: NIMB 2083-84 Q1 stores
+`eps_ttm` 0.53 with `pe_ratio` 14.81; at the 2026-11-06 close of 205.1 the P/E is 387.
+
+**What it touches.** Only `load_universe()` in the frozen scorer, which takes `pe` / `pb` from the
+latest archive snapshot and from `computed.pe_ratio` in `db/quarterly`. That path drives the live
+Sector Leaders ranking shown in the app.
+
+**Effect on the Phase 2 backtest and on this forward test.** None. `build_record()` in
+`tools/backtest_sector_leaders.py` computes `pe = price / eps_ttm` and `pb = price / bvps` from the
+signal-day close and does not read `pe_ratio` from the archive. Forward records use the same
+builder.
+
+**Status.** No data, code or `FROZEN` hash was changed. The app-facing `db/fundamentals.json`
+was repaired the same day (P/E and P/B re-derived from close and stored EPS / book value by
+`portfolio_common.recompute_ratios`), and both scrapers now derive the ratios that way. Whether to
+repair the archive snapshots (and so the live ranking) is an open decision; doing so changes
+`load_universe()` inputs, not the frozen code.
+
+### 2026-11-15: scorer re-frozen as v3, and bank ratio data corrected (before any record)
+
+**What changed.** The scorer was re-frozen as v3 (profit growth in the Growth pillar; cash and
+bonus dividends ranked separately in Payout). `build_record()` in
+`tools/backtest_sector_leaders.py` was changed by the same patch so the backtest and the live
+loader compute the dividend fields identically. Separately, bank ratios that the source serves
+100 times too large (CAR 11.12 as 1112) were corrected in `db/quarterly`, and the harvester now
+repairs them after every upsert. Both are recorded in the deviation log of
+[PHASE2_PREREGISTRATION.md](PHASE2_PREREGISTRATION.md).
+
+**Why now.** No forward record exists yet; the first is due on 2026-12-16. Changing the rule set
+now keeps the forward record under one rule set. v3 was proposed after an exploratory look at
+backtest returns, so the forward test, not the backtest, is its test.
+
+**Effect.** The frozen table above holds the v3 hash. Forward records store the hashes of
+`tools/backtest_sector_leaders.py` and `tools/forward_test_sector_leaders.py` as they are at
+recording time, so every record carries the v3 code. The data correction makes NICA and SFCL
+eligible again; they had been excluded on NPL values of 981% and 809%.
+

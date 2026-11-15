@@ -20,8 +20,8 @@
         "Investments": 1200000.0,
         "Interest Income": 213291000.0,
         "Net Interest Income": 99276000.0,
-        "Total Operating Income": 134373.0,
-        "Operating Profit": 40630.0,
+        "Total Operating Income": 134373000.0,
+        "Operating Profit": 40630000.0,
         "Net Profit": 29818000.0,
         "Number of Shares": 420000.0,
         "EPS(Rs.)": 94.66,
@@ -65,7 +65,15 @@
         "graham_number": 1003.58
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -83,8 +91,8 @@
         "Loans and Advances to Customers": 2214706000.0,
         "Interest Income": 298565000.0,
         "Net Interest Income": 132796000.0,
-        "Total Operating Income": 186640.0,
-        "Operating Profit": 62264.0,
+        "Total Operating Income": 186640000.0,
+        "Operating Profit": 62264000.0,
         "Net Profit": 44685000.0,
         "Number of Shares": 656250.0,
         "EPS(Rs.)": 68.09,
@@ -127,7 +135,15 @@
         "graham_number": 742.19
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -145,8 +161,8 @@
         "Loans and Advances to Customers": 2189967000.0,
         "Interest Income": 83819000.0,
         "Net Interest Income": 35573000.0,
-        "Total Operating Income": 43655.0,
-        "Operating Profit": 5663.0,
+        "Total Operating Income": 43655000.0,
+        "Operating Profit": 5663000.0,
         "Net Profit": 4296000.0,
         "Number of Shares": 656250.0,
         "EPS(Rs.)": 26.19,
@@ -189,7 +205,15 @@
         "graham_number": 466.02
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -207,8 +231,8 @@
         "Loans and Advances to Customers": 2121587000.0,
         "Interest Income": 158325000.0,
         "Net Interest Income": 62902000.0,
-        "Total Operating Income": 81237.0,
-        "Operating Profit": -19975.0,
+        "Total Operating Income": 81237000.0,
+        "Operating Profit": -19975000.0,
         "Net Profit": -16102000.0,
         "Number of Shares": 656250.0,
         "EPS(Rs.)": -49.07,
@@ -250,7 +274,15 @@
         "revenue_ttm": 158325000.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -268,8 +300,8 @@
         "Loans and Advances to Customers": 1958236000.0,
         "Interest Income": 232176000.0,
         "Net Interest Income": 89535000.0,
-        "Total Operating Income": 112675.0,
-        "Operating Profit": -4511.0,
+        "Total Operating Income": 112675000.0,
+        "Operating Profit": -4511000.0,
         "Net Profit": 1526000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": 1.92,
@@ -334,7 +366,15 @@
         "NPL": 261.01,
         "Cost of funds": 8.5
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -352,8 +392,8 @@
         "Loans and Advances to Customers": 1928357000.0,
         "Interest Income": 307451000.0,
         "Net Interest Income": 118291000.0,
-        "Total Operating Income": 147052.0,
-        "Operating Profit": 20993.0,
+        "Total Operating Income": 147052000.0,
+        "Operating Profit": 20993000.0,
         "Net Profit": 23640000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": 22.27,
@@ -421,7 +461,15 @@
         "Cost of funds": 8.95,
         "CD ratio": 1.99
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -439,8 +487,8 @@
         "Loans and Advances to Customers": 1996041000.0,
         "Interest Income": 58539000.0,
         "Net Interest Income": 17583000.0,
-        "Total Operating Income": 20613.0,
-        "Operating Profit": -36791.0,
+        "Total Operating Income": 20613000.0,
+        "Operating Profit": -36791000.0,
         "Net Profit": -33751000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": -127.18,
@@ -507,7 +555,15 @@
         "Cost of funds": 859.18,
         "CD ratio": 0.52
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -525,8 +581,8 @@
         "Loans and Advances to Customers": 2045418000.0,
         "Interest Income": 131198000.0,
         "Net Interest Income": 49551000.0,
-        "Total Operating Income": 56264.0,
-        "Operating Profit": -19038.0,
+        "Total Operating Income": 56264000.0,
+        "Operating Profit": -19038000.0,
         "Net Profit": -17529000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": -33.03,
@@ -593,7 +649,15 @@
         "Cost of funds": 45.18,
         "CD ratio": 63.67
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -611,8 +675,8 @@
         "Loans and Advances to Customers": 2163212000.0,
         "Interest Income": 215356000.0,
         "Net Interest Income": 94169000.0,
-        "Total Operating Income": 108637.0,
-        "Operating Profit": 8530.0,
+        "Total Operating Income": 108637000.0,
+        "Operating Profit": 8530000.0,
         "Net Profit": 7298000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": 9.17,
@@ -679,7 +743,15 @@
         "NPL": -73.34,
         "Cost of funds": -8.76
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -697,8 +769,8 @@
         "Loans and Advances to Customers": 2177629000.0,
         "Interest Income": 299384000.0,
         "Net Interest Income": 132999000.0,
-        "Total Operating Income": 153978.0,
-        "Operating Profit": 20841.0,
+        "Total Operating Income": 153978000.0,
+        "Operating Profit": 20841000.0,
         "Net Profit": 18578000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": 17.5,
@@ -766,7 +838,15 @@
         "Cost of funds": -23.36,
         "CD ratio": 57.59
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -784,8 +864,8 @@
         "Loans and Advances to Customers": 2243975000.0,
         "Interest Income": 71016000.0,
         "Net Interest Income": 25984000.0,
-        "Total Operating Income": 31285.0,
-        "Operating Profit": -1437.0,
+        "Total Operating Income": 31285000.0,
+        "Operating Profit": -1437000.0,
         "Net Profit": 2779000.0,
         "Number of Shares": 1061480.0,
         "EPS(Rs.)": 10.47,
@@ -853,7 +933,15 @@
         "Cost of funds": -90.0,
         "CD ratio": 59.64
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -873,8 +961,8 @@
         "Investments": 0.0,
         "Interest Income": 157334000.0,
         "Net Interest Income": 70523000.0,
-        "Total Operating Income": 82134.0,
-        "Operating Profit": 11801.0,
+        "Total Operating Income": 82134000.0,
+        "Operating Profit": 11801000.0,
         "Net Profit": 16836000.0,
         "Number of Shares": 1061480.0,
         "EPS Reported": 31.72,
@@ -941,7 +1029,15 @@
         "Cost of funds": -40.73,
         "CD ratio": -0.02
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -961,8 +1057,8 @@
         "Investments": 0.0,
         "Interest Income": 235126000.0,
         "Net Interest Income": 106861000.0,
-        "Total Operating Income": 124944.0,
-        "Operating Profit": 22150.0,
+        "Total Operating Income": 124944000.0,
+        "Operating Profit": 22150000.0,
         "Net Profit": 22380000.0,
         "Number of Shares": 1061480.0,
         "EPS Reported": 28.11,
@@ -1029,7 +1125,15 @@
         "Cost of funds": -18.69,
         "CD ratio": -1.86
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1049,8 +1153,8 @@
         "Investments": 0.0,
         "Interest Income": 324786000.0,
         "Net Interest Income": 155373000.0,
-        "Total Operating Income": 179416.0,
-        "Operating Profit": 46581.0,
+        "Total Operating Income": 179416000.0,
+        "Operating Profit": 46581000.0,
         "Net Profit": 34245000.0,
         "Number of Shares": 1061480.0,
         "EPS Reported": 32.26,
@@ -1117,7 +1221,15 @@
         "Cost of funds": -17.5,
         "CD ratio": -3.71
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1137,8 +1249,8 @@
         "Investments": 0.0,
         "Interest Income": 84893940.0,
         "Net Interest Income": 42778540.0,
-        "Total Operating Income": 50609.43,
-        "Operating Profit": 12322.05,
+        "Total Operating Income": 50609430.0,
+        "Operating Profit": 12322050.0,
         "Net Profit": 7727090.0,
         "Number of Shares": 1061482.0,
         "EPS Reported": 29.12,
@@ -1205,7 +1317,15 @@
         "Cost of funds": -20.81,
         "CD ratio": -37.16
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1229,8 +1349,8 @@
         "Interest Income": 172983300.0,
         "Net Interest Income": 90247710.0,
         "Investment Securities": 0.0,
-        "Total Operating Income": 105166.88,
-        "Operating Profit": 20890.22,
+        "Total Operating Income": 105166880.0,
+        "Operating Profit": 20890220.0,
         "Net Profit": 14359680.0,
         "Number of Shares": 1061482.0,
         "EPS Reported": 27.06,
@@ -1312,7 +1432,15 @@
         "Cost of funds": -29.64,
         "CD ratio": -100.0
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1332,8 +1460,8 @@
         "Investments": 0.0,
         "Interest Income": 275187000.0,
         "Net Interest Income": 151509000.0,
-        "Total Operating Income": 176037.0,
-        "Operating Profit": 45029.6,
+        "Total Operating Income": 176037000.0,
+        "Operating Profit": 45029600.0,
         "Net Profit": 30652020.0,
         "Number of Shares": 1061482.0,
         "EPS Reported": 38.5,
@@ -1403,7 +1531,15 @@
         "Cost of funds": -12.17,
         "CD ratio": -38.87
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1423,8 +1559,8 @@
         "Investments": 0.0,
         "Interest Income": 379140000.0,
         "Net Interest Income": 215388000.0,
-        "Total Operating Income": 245119.0,
-        "Operating Profit": 80260.0,
+        "Total Operating Income": 245119000.0,
+        "Operating Profit": 80260000.0,
         "Net Profit": 56182000.0,
         "Number of Shares": 1061482.0,
         "EPS Reported": 52.93,
@@ -1494,7 +1630,15 @@
         "Cost of funds": -3.03,
         "CD ratio": -19.93
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "ULBSL",
@@ -1514,8 +1658,8 @@
         "Investments": 0.0,
         "Interest Income": 72349160.0,
         "Net Interest Income": 33980170.0,
-        "Total Operating Income": 41716.67,
-        "Operating Profit": 3327.43,
+        "Total Operating Income": 41716670.0,
+        "Operating Profit": 3327430.0,
         "Net Profit": 2329200.0,
         "Number of Shares": 1061482.0,
         "EPS Reported": 8.78,
@@ -1585,7 +1729,15 @@
         "Cost of funds": -12.22,
         "CD ratio": 17.89
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:21:11.867667"

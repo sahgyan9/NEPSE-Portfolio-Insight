@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-07T09:21:55.127299",
+      "parsed_at": "2026-11-15T11:53:27.897071",
       "raw": {
         "EPS(Rs.)": 40.28
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-07T09:21:55.127280",
+      "parsed_at": "2026-11-15T11:53:27.897065",
       "raw": {
         "EPS(Rs.)": 38.75
       },
@@ -54,7 +54,7 @@
       "fy": "2077-78",
       "quarter": 3,
       "quarter_label": "Q3 77-78",
-      "parsed_at": "2026-11-07T09:21:55.127259",
+      "parsed_at": "2026-11-15T11:53:27.897058",
       "raw": {
         "Paid Up Capital": 9004821200.0,
         "Retained Earnings": 1110858810.0,
@@ -67,8 +67,8 @@
         "Investment Securities": 12783268220.0,
         "Interest Income": 5133011740.0,
         "Net Interest Income": 1983579460.0,
-        "Total Operating Income": 3283515.77,
-        "Operating Profit": 2288535.41,
+        "Total Operating Income": 3283515770.0,
+        "Operating Profit": 2288535410.0,
         "Net Profit": 1638409680.0,
         "Distributable Profit": 983229280.0,
         "Number of Shares": 90048211.95,
@@ -119,14 +119,22 @@
         "graham_number": 300.53
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBB",
       "fy": "2077-78",
       "quarter": 4,
       "quarter_label": "Q4 77-78",
-      "parsed_at": "2026-11-07T09:21:55.127096",
+      "parsed_at": "2026-11-15T11:53:27.896998",
       "raw": {
         "Paid Up Capital": 9004821200.0,
         "Share Premium": 101560.0,
@@ -140,8 +148,8 @@
         "Investment Securities": 19514628170.0,
         "Interest Income": 6966184720.0,
         "Net Interest Income": 2631275120.0,
-        "Total Operating Income": 4731225.3,
-        "Operating Profit": 3208922.24,
+        "Total Operating Income": 4731225300.0,
+        "Operating Profit": 3208922240.0,
         "Net Profit": 2292592700.0,
         "Distributable Profit": 1475283810.0,
         "Number of Shares": 90048211.95,
@@ -193,14 +201,22 @@
         "graham_number": 312.66
       },
       "yoy": {},
-      "sector": "Commercial Bank"
+      "sector": "Commercial Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NBB",
       "fy": "2078-79",
       "quarter": 1,
       "quarter_label": "Q1 78-79",
-      "parsed_at": "2026-11-07T09:21:55.126892",
+      "parsed_at": "2026-11-15T11:53:27.896918",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -219,7 +235,7 @@
       "fy": "2078-79",
       "quarter": 2,
       "quarter_label": "Q2 78-79",
-      "parsed_at": "2026-11-07T09:21:55.126877",
+      "parsed_at": "2026-11-15T11:53:27.896914",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -238,7 +254,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:21:55.126850",
+      "parsed_at": "2026-11-15T11:53:27.896906",
       "raw": {},
       "raw_keys_order": [],
       "computed": {
@@ -253,5 +269,5 @@
       "sector": "Commercial Bank"
     }
   ],
-  "last_updated": "2026-11-07T09:21:55.128627"
+  "last_updated": "2026-11-15T11:53:27.897551"
 }

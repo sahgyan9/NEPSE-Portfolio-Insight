@@ -20,8 +20,8 @@
         "Investments": 10000.0,
         "Interest Income": 406752170.0,
         "Net Interest Income": 188671310.0,
-        "Total Operating Income": 251950.91,
-        "Operating Profit": 115559.48,
+        "Total Operating Income": 251950910.0,
+        "Operating Profit": 115559480.0,
         "Net Profit": 64072310.0,
         "Number of Shares": 2549540.0,
         "EPS(Rs.)": 33.51,
@@ -65,7 +65,15 @@
         "graham_number": 403.4
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NSLB",
@@ -84,8 +92,8 @@
         "Investments": 10000.0,
         "Interest Income": 579074900.0,
         "Net Interest Income": 257358990.0,
-        "Total Operating Income": 340078.27,
-        "Operating Profit": 142686.15,
+        "Total Operating Income": 340078270.0,
+        "Operating Profit": 142686150.0,
         "Net Profit": 79087790.0,
         "Number of Shares": 3033952.6,
         "EPS(Rs.)": 26.07,
@@ -129,7 +137,15 @@
         "graham_number": 300.31
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NSLB",
@@ -148,8 +164,8 @@
         "Investments": 10000.0,
         "Interest Income": 148408030.0,
         "Net Interest Income": 44129110.0,
-        "Total Operating Income": 70457.96,
-        "Operating Profit": 5463.51,
+        "Total Operating Income": 70457960.0,
+        "Operating Profit": 5463510.0,
         "Net Profit": 6286820.0,
         "Number of Shares": 3033952.6,
         "EPS(Rs.)": 8.29,
@@ -193,7 +209,15 @@
         "graham_number": 177.76
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NSLB",
@@ -212,8 +236,8 @@
         "Investments": 10000.0,
         "Interest Income": 326288370.0,
         "Net Interest Income": 109402870.0,
-        "Total Operating Income": 153660.74,
-        "Operating Profit": 30580.02,
+        "Total Operating Income": 153660740.0,
+        "Operating Profit": 30580020.0,
         "Net Profit": 21406020.0,
         "Number of Shares": 3033952.6,
         "EPS(Rs.)": 14.11,
@@ -257,7 +281,15 @@
         "graham_number": 228.26
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NSLB",
@@ -276,8 +308,8 @@
         "Investments": 10000.0,
         "Interest Income": 483520760.0,
         "Net Interest Income": 147242440.0,
-        "Total Operating Income": 203777.94,
-        "Operating Profit": 27592.26,
+        "Total Operating Income": 203777940.0,
+        "Operating Profit": 27592260.0,
         "Net Profit": 19314580.0,
         "Number of Shares": 3033952.6,
         "EPS(Rs.)": 8.49,
@@ -347,7 +379,15 @@
         "Cost of funds": 19.84,
         "CD ratio": 5.89
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:38:51.943523"

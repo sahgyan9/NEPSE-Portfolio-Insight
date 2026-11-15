@@ -669,7 +669,7 @@
         "Total Assets": 1737719920.0,
         "Revenue": 91793210.0,
         "Gross Profit": 76380700.0,
-        "Operating Profit": 31276.39,
+        "Operating Profit": 31276390.0,
         "Net Profit": -37288110.0,
         "Number of Shares": 6127938.0,
         "EPS Reported": -8.11,
@@ -717,7 +717,14 @@
         "Net Profit": 44.56,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHGCL",
@@ -735,7 +742,7 @@
         "Total Assets": 2237889990.0,
         "Revenue": 100412150.0,
         "Gross Profit": 76896000.0,
-        "Operating Profit": 17441.52,
+        "Operating Profit": 17441520.0,
         "Net Profit": -73739380.0,
         "Number of Shares": 11551765.0,
         "EPS Reported": -6.38,
@@ -783,7 +790,14 @@
         "Net Profit": -13.55,
         "Number of Shares": 88.51
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHGCL",
@@ -801,7 +815,7 @@
         "Total Assets": 1786063200.0,
         "Revenue": 17380010.0,
         "Gross Profit": 12327300.0,
-        "Operating Profit": -4093.29,
+        "Operating Profit": -4093290.0,
         "Net Profit": -12776550.0,
         "Number of Shares": 12255876.0,
         "EPS Reported": -4.17,
@@ -852,7 +866,14 @@
         "Book Value Reported": 0.11,
         "ROE Reported": -430.12
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHGCL",
@@ -870,7 +891,7 @@
         "Total Assets": 1797708730.0,
         "Revenue": 57084910.0,
         "Gross Profit": 47383590.0,
-        "Operating Profit": 14536.77,
+        "Operating Profit": 14536770.0,
         "Net Profit": 106210.0,
         "Number of Shares": 12255876.0,
         "EPS Reported": 0.02,
@@ -922,7 +943,14 @@
         "Book Value Reported": 1.41,
         "ROE Reported": 102.38
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHGCL",
@@ -940,7 +968,7 @@
         "Total Assets": 1796497510.0,
         "Revenue": 83271450.0,
         "Gross Profit": 60942650.0,
-        "Operating Profit": 11829.0,
+        "Operating Profit": 11829000.0,
         "Net Profit": 263830.0,
         "Number of Shares": 12255876.0,
         "EPS Reported": 0.03,
@@ -994,7 +1022,14 @@
         "Book Value Reported": 19.51,
         "ROE Reported": 100.3
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "RHGCL",
@@ -1012,7 +1047,7 @@
         "Total Assets": 1769468880.0,
         "Revenue": 87361130.0,
         "Gross Profit": 60663680.0,
-        "Operating Profit": -1196.8,
+        "Operating Profit": -1196800.0,
         "Net Profit": -26419390.0,
         "Number of Shares": 12255876.0,
         "EPS Reported": -2.16,
@@ -1065,7 +1100,14 @@
         "Book Value Reported": 8.5,
         "ROE Reported": 68.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:52:38.767855"

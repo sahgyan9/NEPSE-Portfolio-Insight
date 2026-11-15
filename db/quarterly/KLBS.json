@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-07T09:07:40.897259",
+      "parsed_at": "2026-11-14T21:16:47.100612",
       "raw": {
         "Paid Up Capital": 26800000.0,
         "Reserve and Surplus": 2819430.0,
@@ -20,8 +20,8 @@
         "Investments": 0.0,
         "Interest Income": 23531250.0,
         "Net Interest Income": 6132700.0,
-        "Total Operating Income": 10117.17,
-        "Operating Profit": 2962.32,
+        "Total Operating Income": 10117170.0,
+        "Operating Profit": 2962320.0,
         "Net Profit": 2594100.0,
         "Number of Shares": 268000.0,
         "EPS(Rs.)": 12.91,
@@ -65,14 +65,22 @@
         "graham_number": 179.17
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KLBS",
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-07T09:07:40.897190",
+      "parsed_at": "2026-11-14T21:16:47.100470",
       "raw": {
         "Paid Up Capital": 26800000.0,
         "Reserve and Surplus": 3270110.0,
@@ -84,8 +92,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 31451870.0,
         "Net Interest Income": 994580.0,
-        "Total Operating Income": 15500.57,
-        "Operating Profit": 3437.43,
+        "Total Operating Income": 15500570.0,
+        "Operating Profit": 3437430.0,
         "Net Profit": 2998860.0,
         "Number of Shares": 268000.0,
         "EPS(Rs.)": 11.19,
@@ -129,14 +137,22 @@
         "graham_number": 168.07
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KLBS",
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-07T09:07:40.897144",
+      "parsed_at": "2026-11-14T21:16:47.100328",
       "raw": {
         "Paid Up Capital": 40000000.0,
         "Reserve and Surplus": 4572120.0,
@@ -148,8 +164,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 11532990.0,
         "Net Interest Income": 2839730.0,
-        "Total Operating Income": 4673.85,
-        "Operating Profit": -815.31,
+        "Total Operating Income": 4673850.0,
+        "Operating Profit": -815310.0,
         "Net Profit": -413280.0,
         "Number of Shares": 400000.0,
         "EPS(Rs.)": -4.13,
@@ -192,14 +208,22 @@
         "revenue_ttm": 11532990.0
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KLBS",
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-07T09:07:40.897101",
+      "parsed_at": "2026-11-14T21:16:47.100185",
       "raw": {
         "Paid Up Capital": 40000000.0,
         "Reserve and Surplus": 1891410.0,
@@ -211,8 +235,8 @@
         "Investment Securities": 0.0,
         "Interest Income": 22921430.0,
         "Net Interest Income": 7644430.0,
-        "Total Operating Income": 11619.56,
-        "Operating Profit": 348.73,
+        "Total Operating Income": 11619560.0,
+        "Operating Profit": 348730.0,
         "Net Profit": 472970.0,
         "Number of Shares": 400000.0,
         "EPS(Rs.)": 2.36,
@@ -254,14 +278,22 @@
         "graham_number": 74.57
       },
       "yoy": {},
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "KLBS",
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-07T09:07:40.897055",
+      "parsed_at": "2026-11-14T21:16:47.100024",
       "raw": {
         "Paid Up Capital": 40000000.0,
         "Reserve and Surplus": -7518410.0,
@@ -273,8 +305,8 @@
         "Investments": 0.0,
         "Interest Income": 33016560.0,
         "Net Interest Income": 3922920.0,
-        "Total Operating Income": 9240.51,
-        "Operating Profit": -9405.52,
+        "Total Operating Income": 9240510.0,
+        "Operating Profit": -9405520.0,
         "Net Profit": -8936840.0,
         "Number of Shares": 400000.0,
         "EPS(Rs.)": -29.79,
@@ -342,8 +374,16 @@
         "Cost of funds": 45.45,
         "CD ratio": 1868.82
       },
-      "sector": "Microfinance"
+      "sector": "Microfinance",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
-  "last_updated": "2026-11-07T09:07:40.898061"
+  "last_updated": "2026-11-14T21:16:47.102184"
 }

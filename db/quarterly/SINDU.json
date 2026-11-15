@@ -41,8 +41,8 @@
         "Loans and Advances to Customers": 724742960.0,
         "Interest Income": 25286190.0,
         "Net Interest Income": 13081720.0,
-        "Total Operating Income": 15865.01,
-        "Operating Profit": 5604.39,
+        "Total Operating Income": 15865010.0,
+        "Operating Profit": 5604390.0,
         "Net Profit": 4021380.0,
         "Number of Shares": 1209370.0,
         "EPS(Rs.)": 13.3,
@@ -84,7 +84,15 @@
         "graham_number": 188.69
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -101,8 +109,8 @@
         "Loans and Advances to Customers": 783703900.0,
         "Interest Income": 53244380.0,
         "Net Interest Income": 30160300.0,
-        "Total Operating Income": 36350.93,
-        "Operating Profit": 16521.55,
+        "Total Operating Income": 36350930.0,
+        "Operating Profit": 16521550.0,
         "Net Profit": 10513710.0,
         "Number of Shares": 1209370.0,
         "EPS(Rs.)": 17.38,
@@ -144,7 +152,15 @@
         "graham_number": 212.86
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -161,8 +177,8 @@
         "Loans and Advances to Customers": 855974040.0,
         "Interest Income": 78857850.0,
         "Net Interest Income": 45412200.0,
-        "Total Operating Income": 55497.73,
-        "Operating Profit": 22842.46,
+        "Total Operating Income": 55497730.0,
+        "Operating Profit": 22842460.0,
         "Net Profit": 14536110.0,
         "Number of Shares": 1209370.0,
         "EPS(Rs.)": 16.02,
@@ -204,7 +220,15 @@
         "graham_number": 207.28
       },
       "yoy": {},
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -221,8 +245,8 @@
         "Loans and Advances to Customers": 888953170.0,
         "Interest Income": 112089140.0,
         "Net Interest Income": 68393980.0,
-        "Total Operating Income": 84199.51,
-        "Operating Profit": 42813.13,
+        "Total Operating Income": 84199510.0,
+        "Operating Profit": 42813130.0,
         "Net Profit": 27244720.0,
         "Number of Shares": 1209370.0,
         "EPS(Rs.)": 26.87,
@@ -267,7 +291,15 @@
         "eps_ttm": 56.04,
         "EPS(Rs.)": 56.04
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -284,8 +316,8 @@
         "Loans and Advances to Customers": 1024727540.0,
         "Interest Income": 28325780.0,
         "Net Interest Income": 17417160.0,
-        "Total Operating Income": 21072.52,
-        "Operating Profit": 5357.24,
+        "Total Operating Income": 21072520.0,
+        "Operating Profit": 5357240.0,
         "Net Profit": 3409150.0,
         "Number of Shares": 1412550.0,
         "EPS(Rs.)": 9.65,
@@ -351,7 +383,15 @@
         "Cost of funds": -26.35,
         "Credit To Deposit Ratio": -22.44
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -368,14 +408,14 @@
         "Loans and Advances to Customers": 1355604210.0,
         "Interest Income": 69431320.0,
         "Net Interest Income": 46162120.0,
-        "Total Operating Income": 55362.92,
-        "Operating Profit": 21698.15,
+        "Total Operating Income": 55362920.0,
+        "Operating Profit": 21698150.0,
         "Net Profit": 13807920.0,
         "Number of Shares": 2621920.0,
         "EPS(Rs.)": 10.53,
         "Book Value(Rs.)": 117.75,
         "ROE": 8.94,
-        "CAR": 1926.0,
+        "CAR": 19.26,
         "NPL": 1.19,
         "Cost of funds": 4.06,
         "Credit To Deposit Ratio": 66.95
@@ -430,12 +470,23 @@
         "EPS(Rs.)": -39.41,
         "Book Value(Rs.)": 1.62,
         "ROE": -40.4,
-        "CAR": 13064.73,
+        "CAR": 31.65,
         "NPL": -11.85,
         "Cost of funds": -0.25,
         "Credit To Deposit Ratio": -0.92
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      },
+      "pct_fix": [
+        "CAR"
+      ]
     },
     {
       "symbol": "SINDU",
@@ -452,8 +503,8 @@
         "Loans and Advances to Customers": 1355007730.0,
         "Interest Income": 114479950.0,
         "Net Interest Income": 40551180.0,
-        "Total Operating Income": 86068.62,
-        "Operating Profit": 40150.58,
+        "Total Operating Income": 86068620.0,
+        "Operating Profit": 40150580.0,
         "Net Profit": 25550370.0,
         "Number of Shares": 2621920.0,
         "EPS(Rs.)": 13.0,
@@ -519,7 +570,15 @@
         "Cost of funds": 33.24,
         "Credit To Deposit Ratio": -5.2
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -536,8 +595,8 @@
         "Loans and Advances to Customers": 1397921420.0,
         "Interest Income": 164079520.0,
         "Net Interest Income": 99979590.0,
-        "Total Operating Income": 122053.06,
-        "Operating Profit": 58516.47,
+        "Total Operating Income": 122053060.0,
+        "Operating Profit": 58516470.0,
         "Net Profit": 37237750.0,
         "Number of Shares": 2621920.0,
         "EPS(Rs.)": 12.68,
@@ -607,7 +666,15 @@
         "Cost of funds": 84.0,
         "Credit To Deposit Ratio": -5.73
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -627,8 +694,8 @@
         "Investment Securities": 53539900.0,
         "Interest Income": 311650150.0,
         "Net Interest Income": 118993780.0,
-        "Total Operating Income": 137379.33,
-        "Operating Profit": 61894.66,
+        "Total Operating Income": 137379330.0,
+        "Operating Profit": 61894660.0,
         "Net Profit": 43326260.0,
         "Distributable Profit": -33074290.0,
         "Number of Shares": 5574560.67,
@@ -703,7 +770,15 @@
         "Cost of funds": 126.84,
         "Credit To Deposit Ratio": 52.32
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -724,8 +799,8 @@
         "Investment Securities": 49236840.0,
         "Interest Income": 447023310.0,
         "Net Interest Income": 167503080.0,
-        "Total Operating Income": 190166.89,
-        "Operating Profit": 97365.05,
+        "Total Operating Income": 190166890.0,
+        "Operating Profit": 97365050.0,
         "Net Profit": 68101910.0,
         "Distributable Profit": -30811220.0,
         "Number of Shares": 5574560.67,
@@ -801,7 +876,15 @@
         "Cost of funds": 89.16,
         "Credit To Deposit Ratio": 25.45
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -822,8 +905,8 @@
         "Investment Securities": 48223410.0,
         "Interest Income": 141051160.0,
         "Net Interest Income": 45738230.0,
-        "Total Operating Income": 52776.33,
-        "Operating Profit": 1811.6,
+        "Total Operating Income": 52776330.0,
+        "Operating Profit": 1811600.0,
         "Net Profit": 2158830.0,
         "Distributable Profit": -40445260.0,
         "Number of Shares": 5574560.67,
@@ -899,7 +982,15 @@
         "Cost of funds": 95.27,
         "Credit To Deposit Ratio": 37.38
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -920,8 +1011,8 @@
         "Investment Securities": 79061770.0,
         "Interest Income": 289775060.0,
         "Net Interest Income": 89280260.0,
-        "Total Operating Income": 101782.4,
-        "Operating Profit": -18714.93,
+        "Total Operating Income": 101782400.0,
+        "Operating Profit": -18714930.0,
         "Net Profit": -18714930.0,
         "Distributable Profit": -89878750.0,
         "Number of Shares": 5574560.67,
@@ -998,7 +1089,15 @@
         "Base Rate": 23.04,
         "Interest Spread Rate": -17.17
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1019,8 +1118,8 @@
         "Investment Securities": 66149230.0,
         "Interest Income": 438705540.0,
         "Net Interest Income": 130953700.0,
-        "Total Operating Income": 143964.94,
-        "Operating Profit": -14875.07,
+        "Total Operating Income": 143964940.0,
+        "Operating Profit": -14875070.0,
         "Net Profit": -14875070.0,
         "Distributable Profit": -92506920.0,
         "Number of Shares": 5574560.67,
@@ -1101,7 +1200,15 @@
         "Base Rate": 26.33,
         "Interest Spread Rate": -3.61
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1122,8 +1229,8 @@
         "Investment Securities": 78164960.0,
         "Interest Income": 600515230.0,
         "Net Interest Income": 188865950.0,
-        "Total Operating Income": 208015.27,
-        "Operating Profit": 27232.15,
+        "Total Operating Income": 208015270.0,
+        "Operating Profit": 27232150.0,
         "Net Profit": 13403340.0,
         "Distributable Profit": -76496620.0,
         "Number of Shares": 5574560.67,
@@ -1206,7 +1313,15 @@
         "Base Rate": 10.56,
         "Interest Spread Rate": -7.65
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1227,8 +1342,8 @@
         "Investment Securities": 64174820.0,
         "Interest Income": 153617720.0,
         "Net Interest Income": 55773830.0,
-        "Total Operating Income": 62185.65,
-        "Operating Profit": 6612.55,
+        "Total Operating Income": 62185650.0,
+        "Operating Profit": 6612550.0,
         "Net Profit": 1929840.0,
         "Distributable Profit": -110136760.0,
         "Number of Shares": 5574560.67,
@@ -1311,7 +1426,15 @@
         "Base Rate": -7.85,
         "Interest Spread Rate": -4.98
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1332,8 +1455,8 @@
         "Investment Securities": 74290110.0,
         "Interest Income": 285700640.0,
         "Net Interest Income": 95757960.0,
-        "Total Operating Income": 106361.04,
-        "Operating Profit": 34857.72,
+        "Total Operating Income": 106361040.0,
+        "Operating Profit": 34857720.0,
         "Net Profit": 25163070.0,
         "Distributable Profit": -31738880.0,
         "Number of Shares": 5574560.67,
@@ -1416,7 +1539,15 @@
         "Base Rate": -11.9,
         "Interest Spread Rate": -8.25
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1437,8 +1568,8 @@
         "Investment Securities": 69126810.0,
         "Interest Income": 435503050.0,
         "Net Interest Income": 146144100.0,
-        "Total Operating Income": 165927.86,
-        "Operating Profit": -55169.45,
+        "Total Operating Income": 165927860.0,
+        "Operating Profit": -55169450.0,
         "Net Profit": -54079920.0,
         "Distributable Profit": -73315910.0,
         "Number of Shares": 5574560.67,
@@ -1520,7 +1651,15 @@
         "Base Rate": -17.83,
         "Interest Spread Rate": -4.79
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1541,8 +1680,8 @@
         "Investment Securities": 72538710.0,
         "Interest Income": 590302270.0,
         "Net Interest Income": 200623690.0,
-        "Total Operating Income": 225955.8,
-        "Operating Profit": 85380.22,
+        "Total Operating Income": 225955800.0,
+        "Operating Profit": 85380220.0,
         "Net Profit": 59064020.0,
         "Distributable Profit": -373589160.0,
         "Number of Shares": 5574560.67,
@@ -1625,7 +1764,15 @@
         "Base Rate": -19.98,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1646,8 +1793,8 @@
         "Investment Securities": 68738500.0,
         "Interest Income": 112917380.0,
         "Net Interest Income": 25857230.0,
-        "Total Operating Income": 28597.24,
-        "Operating Profit": 32941.02,
+        "Total Operating Income": 28597240.0,
+        "Operating Profit": 32941020.0,
         "Net Profit": 23058710.0,
         "Distributable Profit": -357866060.0,
         "Number of Shares": 5574560.67,
@@ -1730,7 +1877,15 @@
         "Base Rate": -23.36,
         "Interest Spread Rate": -0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1751,8 +1906,8 @@
         "Investment Securities": 1166276670.0,
         "Interest Income": 221730620.0,
         "Net Interest Income": 56698770.0,
-        "Total Operating Income": 64842.11,
-        "Operating Profit": 69577.32,
+        "Total Operating Income": 64842110.0,
+        "Operating Profit": 69577320.0,
         "Net Profit": 48704120.0,
         "Distributable Profit": -318920600.0,
         "Number of Shares": 5574560.67,
@@ -1832,7 +1987,15 @@
         "Base Rate": -25.65,
         "Interest Spread Rate": 0.44
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1854,8 +2017,8 @@
         "Investment Securities": 1385948260.0,
         "Interest Income": 333055190.0,
         "Net Interest Income": 95378230.0,
-        "Total Operating Income": 106573.14,
-        "Operating Profit": 112068.38,
+        "Total Operating Income": 106573140.0,
+        "Operating Profit": 112068380.0,
         "Net Profit": 78451030.0,
         "Distributable Profit": -243897080.0,
         "Number of Shares": 5574560.67,
@@ -1936,7 +2099,15 @@
         "Base Rate": -21.25,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -1958,8 +2129,8 @@
         "Investment Securities": 1527597540.0,
         "Interest Income": 448921030.0,
         "Net Interest Income": 133752990.0,
-        "Total Operating Income": 150676.98,
-        "Operating Profit": 153561.44,
+        "Total Operating Income": 150676980.0,
+        "Operating Profit": 153561440.0,
         "Net Profit": 117878750.0,
         "Distributable Profit": -207594620.0,
         "Number of Shares": 5574560.67,
@@ -2040,7 +2211,15 @@
         "Base Rate": -14.64,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -2062,8 +2241,8 @@
         "Investment Securities": 1574278450.0,
         "Interest Income": 101498330.0,
         "Net Interest Income": 30507780.0,
-        "Total Operating Income": 34953.16,
-        "Operating Profit": 44635.6,
+        "Total Operating Income": 34953160.0,
+        "Operating Profit": 44635600.0,
         "Net Profit": -44597700.0,
         "Distributable Profit": -253660110.0,
         "Number of Shares": 5574560.67,
@@ -2143,7 +2322,15 @@
         "Base Rate": -8.91,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -2165,8 +2352,8 @@
         "Investment Securities": 1076130370.0,
         "Interest Income": 193773760.0,
         "Net Interest Income": 58805190.0,
-        "Total Operating Income": 69952.8,
-        "Operating Profit": -15518.92,
+        "Total Operating Income": 69952800.0,
+        "Operating Profit": -15518920.0,
         "Net Profit": -15468120.0,
         "Distributable Profit": -228582590.0,
         "Number of Shares": 5574560.67,
@@ -2249,7 +2436,15 @@
         "Base Rate": -9.26,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -2271,8 +2466,8 @@
         "Investment Securities": 1378597370.0,
         "Interest Income": 293380010.0,
         "Net Interest Income": 100719270.0,
-        "Total Operating Income": 117187.86,
-        "Operating Profit": -16849.27,
+        "Total Operating Income": 117187860.0,
+        "Operating Profit": -16849270.0,
         "Net Profit": -33073690.0,
         "Distributable Profit": -266349180.0,
         "Number of Shares": 5574560.67,
@@ -2355,7 +2550,15 @@
         "Base Rate": -13.02,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -2377,8 +2580,8 @@
         "Investment Securities": 1024844360.0,
         "Interest Income": 391633360.0,
         "Net Interest Income": 143564830.0,
-        "Total Operating Income": 163990.25,
-        "Operating Profit": 26479.65,
+        "Total Operating Income": 163990250.0,
+        "Operating Profit": 26479650.0,
         "Net Profit": 1001550.0,
         "Distributable Profit": -236683670.0,
         "Number of Shares": 5574560.67,
@@ -2462,7 +2665,15 @@
         "Base Rate": -14.81,
         "Interest Spread Rate": 0.0
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "SINDU",
@@ -2484,8 +2695,8 @@
         "Investment Securities": 774754670.0,
         "Interest Income": 82942220.0,
         "Net Interest Income": 32830160.0,
-        "Total Operating Income": 39122.35,
-        "Operating Profit": -62136.47,
+        "Total Operating Income": 39122350.0,
+        "Operating Profit": -62136470.0,
         "Net Profit": -62136470.0,
         "Distributable Profit": -303152140.0,
         "Number of Shares": 5574560.67,
@@ -2567,7 +2778,15 @@
         "Base Rate": -11.11,
         "Interest Spread Rate": 0.22
       },
-      "sector": "Development Bank"
+      "sector": "Development Bank",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit",
+          "Total Operating Income"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T10:05:41.117713"

@@ -19,7 +19,7 @@
         "Total Assets": 1672934060.0,
         "Revenue": 97513060.0,
         "Gross Profit": 84584180.0,
-        "Operating Profit": 124995.35,
+        "Operating Profit": 124995350.0,
         "Net Profit": 54477360.0,
         "Number of Shares": 7069324.0,
         "EPS(Rs.)": 10.27,
@@ -53,7 +53,14 @@
         "graham_number": 158.52
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -71,7 +78,7 @@
         "Total Assets": 1868741200.0,
         "Revenue": 127596370.0,
         "Gross Profit": 108488510.0,
-        "Operating Profit": 179942.19,
+        "Operating Profit": 179942190.0,
         "Net Profit": 76145630.0,
         "Number of Shares": 7069324.0,
         "EPS(Rs.)": 10.77,
@@ -105,7 +112,14 @@
         "graham_number": 164.6
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -123,7 +137,7 @@
         "Total Assets": 2813710210.0,
         "Revenue": 46621930.0,
         "Gross Profit": 38510740.0,
-        "Operating Profit": 126404.67,
+        "Operating Profit": 126404670.0,
         "Net Profit": 99433970.0,
         "Number of Shares": 17673310.0,
         "EPS(Rs.)": 22.5,
@@ -157,7 +171,14 @@
         "graham_number": 236.42
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -175,7 +196,7 @@
         "Total Assets": 2604849530.0,
         "Revenue": 80428000.0,
         "Gross Profit": 68517040.0,
-        "Operating Profit": 65802.93,
+        "Operating Profit": 65802930.0,
         "Net Profit": 24513310.0,
         "Number of Shares": 17673310.0,
         "EPS(Rs.)": 2.77,
@@ -209,7 +230,14 @@
         "graham_number": 83.37
       },
       "yoy": {},
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -227,7 +255,7 @@
         "Total Assets": 2610557100.0,
         "Revenue": 100106410.0,
         "Gross Profit": 85668740.0,
-        "Operating Profit": 108334.08,
+        "Operating Profit": 108334080.0,
         "Net Profit": 49946990.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 3.6,
@@ -281,7 +309,14 @@
         "Book Value(Rs.)": -1.16,
         "ROE": -64.55
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -299,7 +334,7 @@
         "Total Assets": 2616252050.0,
         "Revenue": 123509670.0,
         "Gross Profit": 101412900.0,
-        "Operating Profit": 137939.88,
+        "Operating Profit": 137939880.0,
         "Net Profit": 67481140.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 3.65,
@@ -353,7 +388,14 @@
         "Book Value(Rs.)": -3.01,
         "ROE": -65.11
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -371,7 +413,7 @@
         "Total Assets": 2634422640.0,
         "Revenue": 48269500.0,
         "Gross Profit": 45329520.0,
-        "Operating Profit": 37188.99,
+        "Operating Profit": 37188990.0,
         "Net Profit": 24444950.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 5.28,
@@ -425,7 +467,14 @@
         "Book Value(Rs.)": -0.99,
         "ROE": -76.3
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -443,7 +492,7 @@
         "Total Assets": 3785370660.0,
         "Revenue": 81340850.0,
         "Gross Profit": 76856220.0,
-        "Operating Profit": 67056.17,
+        "Operating Profit": 67056170.0,
         "Net Profit": 33252920.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 3.59,
@@ -497,7 +546,14 @@
         "Book Value(Rs.)": 43.9,
         "ROE": -10.04
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -515,7 +571,7 @@
         "Total Assets": 3893048900.0,
         "Revenue": 100200220.0,
         "Gross Profit": 89444120.0,
-        "Operating Profit": 77663.39,
+        "Operating Profit": 77663390.0,
         "Net Profit": 28500450.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 2.05,
@@ -569,7 +625,14 @@
         "Book Value(Rs.)": 53.66,
         "ROE": -62.99
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -587,7 +650,7 @@
         "Total Assets": 4130953670.0,
         "Revenue": 121221890.0,
         "Gross Profit": 106393110.0,
-        "Operating Profit": 92378.05,
+        "Operating Profit": 92378050.0,
         "Net Profit": 25345780.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 1.37,
@@ -641,7 +704,14 @@
         "Book Value(Rs.)": 68.48,
         "ROE": -77.68
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -659,7 +729,7 @@
         "Total Assets": 4629861430.0,
         "Revenue": 43001210.0,
         "Gross Profit": 39612220.0,
-        "Operating Profit": 36527.26,
+        "Operating Profit": 36527260.0,
         "Net Profit": 17732800.0,
         "Number of Shares": 18512792.23,
         "EPS(Rs.)": 3.83,
@@ -713,7 +783,14 @@
         "Book Value(Rs.)": 86.81,
         "ROE": -61.08
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -731,7 +808,7 @@
         "Total Assets": 4963844520.0,
         "Revenue": 72790320.0,
         "Gross Profit": 63768840.0,
-        "Operating Profit": 58954.03,
+        "Operating Profit": 58954030.0,
         "Net Profit": 23235180.0,
         "Number of Shares": 18512792.23,
         "EPS Reported": 2.51,
@@ -782,7 +859,14 @@
         "Net Profit": -30.13,
         "Number of Shares": 0.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -869,7 +953,7 @@
         "Total Assets": 7111498430.0,
         "Revenue": 114948390.0,
         "Gross Profit": 99188890.0,
-        "Operating Profit": 96026.32,
+        "Operating Profit": 96026320.0,
         "Net Profit": 17115620.0,
         "Number of Shares": 37025584.46,
         "EPS Reported": 0.46,
@@ -920,7 +1004,14 @@
         "Net Profit": -32.47,
         "Number of Shares": 100.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -938,7 +1029,7 @@
         "Total Assets": 6838756360.0,
         "Revenue": 46224280.0,
         "Gross Profit": 42934610.0,
-        "Operating Profit": 43370.0,
+        "Operating Profit": 43370000.0,
         "Net Profit": 21724200.0,
         "Number of Shares": 37025584.46,
         "EPS Reported": 2.35,
@@ -989,7 +1080,14 @@
         "Net Profit": 22.51,
         "Number of Shares": 100.0
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -1007,7 +1105,7 @@
         "Total Assets": 7086102970.0,
         "Revenue": 84365000.0,
         "Gross Profit": 74136700.0,
-        "Operating Profit": 72657.56,
+        "Operating Profit": 72657560.0,
         "Net Profit": 36164790.0,
         "Number of Shares": 37025584.46,
         "EPS Reported": 1.95,
@@ -1061,7 +1159,14 @@
         "Book Value Reported": -26.6,
         "ROE Reported": 5.98
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -1079,7 +1184,7 @@
         "Total Assets": 7014584890.0,
         "Revenue": 113647450.0,
         "Gross Profit": 93214100.0,
-        "Operating Profit": 62818.55,
+        "Operating Profit": 62818550.0,
         "Net Profit": 40469240.0,
         "Number of Shares": 38784299.74,
         "EPS Reported": 1.39,
@@ -1132,7 +1237,14 @@
         "Book Value Reported": -3.89,
         "ROE Reported": 76.92
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     },
     {
       "symbol": "NGPL",
@@ -1150,7 +1262,7 @@
         "Total Assets": 6441420700.0,
         "Revenue": 138054460.0,
         "Gross Profit": 118588760.0,
-        "Operating Profit": 88699.42,
+        "Operating Profit": 88699420.0,
         "Net Profit": 49150180.0,
         "Number of Shares": 38784299.74,
         "EPS Reported": 1.27,
@@ -1204,7 +1316,14 @@
         "Book Value Reported": -15.41,
         "ROE Reported": 228.57
       },
-      "sector": "Hydropower"
+      "sector": "Hydropower",
+      "unit_fix": {
+        "fields": [
+          "Operating Profit"
+        ],
+        "factor": 1000,
+        "tool": "tools/fix_quarterly_units.py"
+      }
     }
   ],
   "last_updated": "2026-11-07T09:29:26.300104"

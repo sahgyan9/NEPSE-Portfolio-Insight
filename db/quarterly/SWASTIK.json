@@ -225,7 +225,7 @@
         "CAR": 10.26,
         "NPL": 23.5,
         "Cost of funds": 5.95,
-        "CD ratio": 9816.0
+        "CD ratio": 98.16
       },
       "raw_keys_order": [
         "Paid Up Capital",
@@ -261,7 +261,10 @@
         "graham_number": 263.89
       },
       "yoy": {},
-      "sector": "Others"
+      "sector": "Others",
+      "pct_fix": [
+        "CD ratio"
+      ]
     }
   ],
   "last_updated": "2026-11-07T10:14:30.952381"
