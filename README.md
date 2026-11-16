@@ -6,13 +6,6 @@
   <a href="#नेपाली"><b>नेपाली</b></a> &nbsp;|&nbsp; <a href="#english"><b>English</b></a>
 </p>
 
-<p align="center">
-  <img src="docs/images/overview-simple-ne.png" alt="सारांश पृष्ठ, सरल दृश्य, नेपालीमा" width="100%">
-</p>
-
-> स्क्रिनसटमा देखिएका सेयर र रकम नमुना मात्र हुन्। मूल्य र समाचार चलिरहेको एपबाट लिइएका हुन्।
-> The shares and amounts in the screenshots are sample data. Prices and news come from the running app.
-
 ---
 
 # नेपाली
@@ -45,14 +38,10 @@
 | **मूल्याङ्कन, बजार, क्षेत्र तुलना, उपकरण** | P/E र किताबी मूल्य, आजको बजार र नयाँ निष्कासन, क्षेत्रभित्र कम्पनीको क्रम, स्वास्थ्य अंक र बचत प्रक्षेपण |
 
 <p align="center">
-  <img src="docs/images/learn-ne.png" alt="सिक्नुहोस् पृष्ठ: छ पाठ र शब्दकोश" width="100%">
+  <img src="docs/images/phone-learn-ne.png" alt="फोनमा सिक्नुहोस् पृष्ठ" width="30%">
 </p>
 
 <p align="center">
-  <img src="docs/images/phone-overview-ne.png" alt="फोनमा सारांश पृष्ठ" width="30%">
-  &nbsp;
-  <img src="docs/images/phone-risk-ne.png" alt="फोनमा जोखिम पृष्ठ" width="30%">
-  &nbsp;
   <img src="docs/images/phone-learn-ne.png" alt="फोनमा सिक्नुहोस् पृष्ठ" width="30%">
 </p>
 
@@ -126,33 +115,17 @@ The earlier README (July 2026) described a dark, English-only dashboard. It is k
 
 Simple view gives the answer in sentences. Advanced view adds the value trend, a comparison with the NEPSE index, sector split, a health grade, the holdings table, watchlist and news.
 
-<p align="center">
-  <img src="docs/images/overview-advanced-en.png" alt="Overview page in advanced view: value, profit, trend chart and comparison with the NEPSE index" width="100%">
-</p>
-
 ### Risk
 
 How much the portfolio swings compared with the market, the deepest fall so far, which sectors carry more risk than their share of money, and which holdings move together.
-
-<p align="center">
-  <img src="docs/images/risk-en.png" alt="Risk page: overall risk level, volatility, biggest fall and share of risk by sector" width="100%">
-</p>
 
 ### Dividends
 
 Cash dividends after tax and bonus shares for each fiscal year. Bonus shares are valued at the last traded price.
 
-<p align="center">
-  <img src="docs/images/dividends-en.png" alt="Dividends page: cash received, bonus shares, yield and yearly totals" width="100%">
-</p>
-
 ### Quarterly reports
 
 The main figures from each company's quarterly reports, how they are moving, and how they compare with the same period last year.
-
-<p align="center">
-  <img src="docs/images/quarterly-en.png" alt="Quarterly reports page: profit change for each holding and key ratios for the selected company" width="100%">
-</p>
 
 ### All pages
 

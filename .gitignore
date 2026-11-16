@@ -57,3 +57,15 @@ db/eps_insights.json
 
 # Claude Code session worktrees (local only)
 .claude/worktrees/
+
+# Personal data: never commit
+My Wacc Report.csv
+db/portfolio_backup.json
+db/book_values_backup.json
+prompt_history/
+prompt_learnings.md
+.agents/
+docs/images/*.png
+!docs/images/learn-ne.png
+!docs/images/phone-learn-ne.png
+public/NEPSE_*.png
