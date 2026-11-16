@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Keys } from "@/components/Kbd";
 import { cycleTheme } from "@/hooks/useTheme";
+import { useT } from "@/i18n";
 import { jumpToSection, scrollToTop } from "@/lib/jumpTo";
 import {
   EVENT_OPEN_HELP,
@@ -32,6 +33,7 @@ const overlayOpen = (): boolean =>
  * and renders the help dialog.
  */
 export const ShortcutsProvider = () => {
+  const { t } = useT();
   const navigate = useNavigate();
   const location = useLocation();
   const [helpOpen, setHelpOpen] = useState(false);
@@ -120,30 +122,29 @@ export const ShortcutsProvider = () => {
   }, []);
 
   const groups: ShortcutGroup[] = ["Navigate", "Actions"];
+  const groupLabel: Record<ShortcutGroup, string> = { Navigate: t("nav.groupNavigate"), Actions: t("nav.groupActions") };
 
   return (
     <Dialog open={helpOpen} onOpenChange={setHelpOpen}>
       <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Keyboard shortcuts</DialogTitle>
-          <DialogDescription>
-            Press <span className="font-mono">g</span> then a letter. Shortcuts are off while you type in a field.
-          </DialogDescription>
+          <DialogTitle>{t("nav.shortcutsTitle")}</DialogTitle>
+          <DialogDescription>{t("nav.shortcutsHint")}</DialogDescription>
         </DialogHeader>
         <div className="space-y-5">
           {groups.map((g) => (
             <section key={g}>
-              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{g}</h3>
+              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{groupLabel[g]}</h3>
               <ul className="divide-y divide-border rounded-md border border-border">
                 {SHORTCUTS.filter((s) => s.group === g).map((s) => (
                   <li key={s.id} className="flex items-center justify-between gap-4 px-3 py-2 text-sm">
-                    <span>{s.label}</span>
+                    <span>{t(s.labelKey)}</span>
                     <Keys keys={s.keys} />
                   </li>
                 ))}
                 {g === "Actions" && (
                   <li className="flex items-center justify-between gap-4 px-3 py-2 text-sm">
-                    <span>Close this dialog</span>
+                    <span>{t("nav.scClose")}</span>
                     <Keys keys={["Esc"]} />
                   </li>
                 )}

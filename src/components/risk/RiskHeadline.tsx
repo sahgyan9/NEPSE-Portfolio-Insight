@@ -2,9 +2,12 @@ import type { ReactNode } from "react";
 import { Explain } from "@/components/Explain";
 import type { GlossaryKey } from "@/lib/glossary";
 import { Skeleton } from "@/components/ui/skeleton";
-import { fmtFrac, fmtRs } from "@/components/charts";
+import { fmtFrac } from "@/components/charts";
+import { fmtMoney } from "@/i18n/format";
+import { useT } from "@/i18n";
 import type { RiskData } from "@/services/riskApi";
 import { cn } from "@/lib/utils";
+import { riskLevelKey } from "./riskText";
 
 const Tile = ({
   label,
@@ -39,6 +42,7 @@ const Tile = ({
 );
 
 export const RiskHeadline = ({ risk, loading }: { risk?: RiskData; loading?: boolean }) => {
+  const { t } = useT();
   if (loading || !risk) {
     return (
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
@@ -59,30 +63,34 @@ export const RiskHeadline = ({ risk, loading }: { risk?: RiskData; loading?: boo
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       <Tile
-        label="Overall risk level"
+        label={t("risk.tileLevel")}
         term="volatilityVsMarket"
-        value={risk.riskLevel}
+        value={t(riskLevelKey(risk.riskLevel))}
         tone={tone}
-        sub={`Your swings are ${p.volatilityVsMarket.toFixed(2)}x those of the market index`}
+        sub={
+          p.volatilityVsMarket === null || p.volatilityVsMarket === undefined
+            ? t("risk.tileLevelSubNone")
+            : t("risk.tileLevelSub", { ratio: p.volatilityVsMarket.toFixed(2) })
+        }
       />
       <Tile
-        label="Yearly volatility"
+        label={t("risk.tileVol")}
         term="volatility"
         value={fmtFrac(p.volatility)}
-        sub={`Market index: ${fmtFrac(m.volatility)}`}
+        sub={t("risk.tileMarketValue", { value: fmtFrac(m.volatility) })}
       />
       <Tile
-        label="Worst historical drop"
+        label={t("risk.tileDrawdown")}
         term="maxDrawdown"
         value={`-${fmtFrac(Math.abs(p.maxDrawdown))}`}
         tone="loss"
-        sub={`Market index: -${fmtFrac(Math.abs(m.maxDrawdown))} over the same period`}
+        sub={t("risk.tileDrawdownSub", { value: `-${fmtFrac(Math.abs(m.maxDrawdown))}` })}
       />
       <Tile
-        label="A bad week (1 in 20)"
+        label={t("risk.tileVar")}
         term="var95"
-        value={`about ${fmtRs(p.weeklyVar95Amount)}`}
-        sub={`${fmtFrac(p.weeklyVar95)} of today's value. Worse weeks are possible.`}
+        value={t("risk.about", { value: fmtMoney(p.weeklyVar95Amount) })}
+        sub={t("risk.tileVarSub", { pct: fmtFrac(p.weeklyVar95) })}
       />
     </div>
   );

@@ -11,17 +11,20 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
-import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Clock, Target } from "lucide-react";
+import { TrendingUp, Clock, Target, AlertTriangle } from "lucide-react";
 import { usePortfolioAnalytics } from "@/hooks/usePortfolio";
-import { projectPortfolioGrowth, formatCurrency, yearsToDouble } from "@/lib/finance";
+import { projectPortfolioGrowth, yearsToDouble } from "@/lib/finance";
 import { CHART_COLORS } from "@/lib/constants";
+import { fmtAxisCompact } from "@/components/charts";
+import { useT } from "@/i18n";
+import { fmtMoney, fmtMoneyCompact, fmtPercent } from "@/i18n/format";
 
 interface CompoundingProjectorProps {
     className?: string;
 }
 
 export const CompoundingProjector = ({ className }: CompoundingProjectorProps) => {
+    const { t } = useT();
     const { summary, estimatedCAGR } = usePortfolioAnalytics();
     const [projectionYears, setProjectionYears] = useState(10);
     const [assumedCAGR, setAssumedCAGR] = useState(
@@ -37,30 +40,29 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
     const finalValue = projections[projections.length - 1]?.value || 0;
     const totalGrowth = finalValue - summary.currentValue;
     const growthMultiple = finalValue / summary.currentValue;
+    const growthPct = (totalGrowth / summary.currentValue) * 100;
 
     // Create chart data with comparison lines
     const chartData = useMemo(() => {
         return projections.map((p) => ({
-            year: `Year ${p.year}`,
+            year: t("dividends.projYearN", { n: p.year }),
             projected: Math.round(p.value),
             noGrowth: Math.round(summary.currentValue), // Flat line for comparison
         }));
-    }, [projections, summary.currentValue]);
+    }, [projections, summary.currentValue, t]);
 
     const CustomTooltip = ({ active, payload, label }: any) => {
         if (active && payload && payload.length) {
-            const projected = payload[0]?.value;
+            const projected = payload[0]?.value as number;
             const gain = projected - summary.currentValue;
-            const gainPercent = ((gain / summary.currentValue) * 100).toFixed(1);
+            const gainPercent = (gain / summary.currentValue) * 100;
 
             return (
                 <div className="bg-card border border-border rounded-lg p-3 shadow-sm">
                     <p className="font-semibold text-foreground">{label}</p>
-                    <p className="text-sm text-primary">
-                        Projected: Rs. {projected?.toLocaleString("en-NP")}
-                    </p>
-                    <p className="text-sm text-green-700">
-                        Growth: +Rs. {gain?.toLocaleString("en-NP")} ({gainPercent}%)
+                    <p className="text-sm text-foreground">{t("dividends.projTipValue", { amount: fmtMoney(projected) })}</p>
+                    <p className="text-sm text-muted-foreground">
+                        {t("dividends.projTipGrowth", { amount: fmtMoney(gain), pct: fmtPercent(gainPercent, 1, false) })}
                     </p>
                 </div>
             );
@@ -68,68 +70,60 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
         return null;
     };
 
+    const finite = (v: number) => Number.isFinite(v);
+
     return (
         <Card className={className}>
             <CardHeader>
-                <div className="flex items-center justify-between">
-                    <CardTitle className="flex items-center gap-2">
-                        <TrendingUp className="h-5 w-5 text-primary" />
-                        Compounding Growth Projector
-                    </CardTitle>
-                    <Badge variant="outline" className="text-xs">
-                        The Power of Compounding
-                    </Badge>
-                </div>
+                <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-primary" aria-hidden="true" />
+                    {t("dividends.projTitle")}
+                </CardTitle>
+                <p className="text-sm leading-relaxed text-muted-foreground">{t("dividends.projSub")}</p>
             </CardHeader>
             <CardContent className="space-y-6">
                 {/* Key Metrics */}
-                <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="text-center p-3 bg-muted/40 rounded-lg">
                         <div className="flex items-center justify-center gap-1 text-primary mb-1">
-                            <Target className="h-4 w-4" />
-                            <span className="text-xs font-medium">In {projectionYears} Years</span>
+                            <Target className="h-4 w-4" aria-hidden="true" />
+                            <span className="text-xs font-medium">{t("dividends.projInYears", { n: projectionYears })}</span>
                         </div>
-                        <p className="text-lg font-bold text-foreground">
-                            Rs. {Math.round(finalValue / 1000)}K
-                        </p>
+                        <p className="text-lg font-bold text-foreground">{fmtMoneyCompact(finalValue)}</p>
                         <p className="text-xs text-muted-foreground">
-                            {growthMultiple.toFixed(1)}x your money
+                            {finite(growthMultiple) ? t("dividends.projMultiple", { x: growthMultiple.toFixed(1) }) : "-"}
                         </p>
                     </div>
 
-                    <div className="text-center p-3 bg-green-500/5 rounded-lg">
-                        <div className="flex items-center justify-center gap-1 text-green-700 mb-1">
-                            <TrendingUp className="h-4 w-4" />
-                            <span className="text-xs font-medium">Total Growth</span>
+                    <div className="text-center p-3 bg-muted/40 rounded-lg">
+                        <div className="flex items-center justify-center gap-1 text-primary mb-1">
+                            <TrendingUp className="h-4 w-4" aria-hidden="true" />
+                            <span className="text-xs font-medium">{t("dividends.projTotalGrowth")}</span>
                         </div>
-                        <p className="text-lg font-bold text-green-700">
-                            +Rs. {Math.round(totalGrowth / 1000)}K
-                        </p>
+                        <p className="text-lg font-bold text-foreground">{fmtMoneyCompact(totalGrowth)}</p>
                         <p className="text-xs text-muted-foreground">
-                            {((totalGrowth / summary.currentValue) * 100).toFixed(0)}% gain
+                            {finite(growthPct) ? t("dividends.projGrowthPct", { pct: fmtPercent(growthPct, 0, false) }) : "-"}
                         </p>
                     </div>
 
-                    <div className="text-center p-3 bg-amber-500/5 rounded-lg">
-                        <div className="flex items-center justify-center gap-1 text-amber-700 mb-1">
-                            <Clock className="h-4 w-4" />
-                            <span className="text-xs font-medium">Doubling Time</span>
+                    <div className="text-center p-3 bg-muted/40 rounded-lg">
+                        <div className="flex items-center justify-center gap-1 text-primary mb-1">
+                            <Clock className="h-4 w-4" aria-hidden="true" />
+                            <span className="text-xs font-medium">{t("dividends.projDoubling")}</span>
                         </div>
                         <p className="text-lg font-bold text-foreground">
-                            {doublingTime.toFixed(1)} Years
+                            {finite(doublingTime) ? t("dividends.projYears", { n: doublingTime.toFixed(1) }) : "-"}
                         </p>
-                        <p className="text-xs text-muted-foreground">
-                            Rule of 72
-                        </p>
+                        <p className="text-xs text-muted-foreground">{t("dividends.projRule72")}</p>
                     </div>
                 </div>
 
                 {/* Controls */}
                 <div className="space-y-4 p-4 bg-muted/30 rounded-lg">
-                    <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Projection Period</span>
-                            <span className="font-medium">{projectionYears} years</span>
+                    <div className="space-y-1 w-full">
+                        <div className="flex justify-between gap-2 text-sm">
+                            <span id="proj-years-label" className="text-muted-foreground">{t("dividends.projPeriod")}</span>
+                            <span className="font-medium">{t("dividends.projYears", { n: projectionYears })}</span>
                         </div>
                         <Slider
                             value={[projectionYears]}
@@ -137,14 +131,15 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                             min={1}
                             max={30}
                             step={1}
-                            className="py-2"
+                            className="w-full py-5 md:py-2"
+                            aria-labelledby="proj-years-label"
                         />
                     </div>
 
-                    <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Assumed Annual Return</span>
-                            <span className="font-medium">{assumedCAGR.toFixed(1)}%</span>
+                    <div className="space-y-1 w-full">
+                        <div className="flex justify-between gap-2 text-sm">
+                            <span id="proj-return-label" className="text-muted-foreground">{t("dividends.projReturn")}</span>
+                            <span className="font-medium">{fmtPercent(assumedCAGR, 1, false)}</span>
                         </div>
                         <Slider
                             value={[assumedCAGR]}
@@ -152,12 +147,27 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                             min={1}
                             max={25}
                             step={0.5}
-                            className="py-2"
+                            className="w-full py-5 md:py-2"
+                            aria-labelledby="proj-return-label"
                         />
                     </div>
                 </div>
 
+                <p className="flex items-start gap-2 text-sm leading-relaxed text-warning">
+                    <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                    <span>{t("dividends.projCaveat")}</span>
+                </p>
+
                 {/* Chart */}
+                <p className="text-sm leading-relaxed text-foreground">
+                    {t("dividends.projSummary", {
+                        pct: fmtPercent(assumedCAGR, 1, false),
+                        start: fmtMoneyCompact(summary.currentValue),
+                        end: fmtMoneyCompact(finalValue),
+                        n: projectionYears,
+                        growth: fmtMoneyCompact(totalGrowth),
+                    })}
+                </p>
                 <div className="h-64">
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={chartData}>
@@ -175,10 +185,11 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                                 axisLine={{ stroke: "hsl(var(--border))" }}
                             />
                             <YAxis
+                                width={48}
                                 tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
                                 tickLine={false}
                                 axisLine={{ stroke: "hsl(var(--border))" }}
-                                tickFormatter={(value) => `${(value / 1000).toFixed(0)}K`}
+                                tickFormatter={fmtAxisCompact}
                             />
                             <Tooltip content={<CustomTooltip />} />
                             <ReferenceLine
@@ -186,8 +197,8 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                                 stroke={CHART_COLORS.neutral}
                                 strokeDasharray="5 5"
                                 label={{
-                                    value: "Today",
-                                    position: "right",
+                                    value: t("common.today"),
+                                    position: "insideTopRight",
                                     fill: "hsl(var(--muted-foreground))",
                                     fontSize: 10,
                                 }}
@@ -195,25 +206,14 @@ export const CompoundingProjector = ({ className }: CompoundingProjectorProps) =
                             <Area
                                 type="monotone"
                                 dataKey="projected"
+                                name={t("dividends.projLegend")}
                                 stroke={CHART_COLORS.positive}
                                 strokeWidth={2}
                                 fill="url(#projectedGradient)"
+                                isAnimationActive={false}
                             />
                         </AreaChart>
                     </ResponsiveContainer>
-                </div>
-
-                {/* Insight */}
-                <div className="text-center p-4 border border-border rounded-lg bg-muted/50">
-                    <p className="text-sm text-muted-foreground">
-                        <strong className="text-foreground">How compounding works:</strong>{" "}
-                        At {assumedCAGR.toFixed(1)}% annual return, your Rs.{" "}
-                        {(summary.currentValue / 1000).toFixed(0)}K will grow to Rs.{" "}
-                        {(finalValue / 1000).toFixed(0)}K in {projectionYears} years —{" "}
-                        <span className="text-green-700 font-medium">
-                            that's Rs. {(totalGrowth / 1000).toFixed(0)}K in pure growth!
-                        </span>
-                    </p>
                 </div>
             </CardContent>
         </Card>

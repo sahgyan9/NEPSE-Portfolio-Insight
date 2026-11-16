@@ -16,6 +16,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { StockHolding, PortfolioSummary } from "@/data/portfolioData";
 import { STORAGE_KEYS } from "@/lib/constants";
+import { useT } from "@/i18n";
+import { buildChatPrompt, classifyAiError, AiRequestError, toAiRequestError } from "@/lib/aiPrompt";
 
 interface Message {
     id: string;
@@ -31,7 +33,12 @@ interface AIChatbotProps {
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 
+const STARTER_KEYS = ["ai.starter1", "ai.starter2", "ai.starter3", "ai.starter4", "ai.starter5"];
+
 export const AIChatbot = ({ holdings, summary }: AIChatbotProps) => {
+    const { t, lang } = useT();
+    // Visible height on phones: shrinks when the on-screen keyboard opens so the input stays in view
+    const [viewportHeight, setViewportHeight] = useState<number | null>(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -84,126 +91,102 @@ export const AIChatbot = ({ holdings, summary }: AIChatbotProps) => {
         }
     }, [isOpen, isMinimized]);
 
-    const getPortfolioContext = () => {
-        const holdingsContext = holdings
-            .map(
-                (h) =>
-                    `- ${h.scrip} (${h.fullName}): ${h.quantity} units @ Rs.${h.currentPrice.toFixed(2)}, Cost: Rs.${h.waccRate.toFixed(2)}, Gain/Loss: ${h.gainLossPercent.toFixed(2)}%, P/E: ${h.peRatio || "N/A"}, P/B: ${h.pbRatio || "N/A"}, EPS: ${h.eps || "N/A"}, Dividend Yield: ${h.dividendYield || 0}%, Sector: ${h.sector}`
-            )
-            .join("\n");
+    useEffect(() => {
+        if (!isOpen) return;
+        const vv = window.visualViewport;
+        if (!vv) return;
+        const update = () => setViewportHeight(vv.height);
+        update();
+        vv.addEventListener("resize", update);
+        return () => vv.removeEventListener("resize", update);
+    }, [isOpen]);
 
-        return `
-PORTFOLIO SUMMARY:
-- Total Invested: Rs. ${summary.totalInvested.toLocaleString()}
-- Current Value: Rs. ${summary.currentValue.toLocaleString()}
-- Total Gain/Loss: Rs. ${summary.totalGainLoss.toLocaleString()} (${summary.totalGainLossPercent.toFixed(2)}%)
-- Total Holdings: ${summary.totalHoldings} stocks
-- Profitable Holdings: ${summary.profitableHoldings}
-- Unprofitable Holdings: ${summary.unprofitableHoldings}
+    const addAssistant = (content: string) =>
+        setMessages((prev) => [
+            ...prev,
+            { id: `${Date.now()}-a`, role: "assistant", content, timestamp: new Date() },
+        ]);
 
-INDIVIDUAL HOLDINGS:
-${holdingsContext}
-`;
-    };
-
-    const sendMessage = async () => {
-        if (!input.trim() || isLoading) return;
+    const sendMessage = async (override?: string) => {
+        const text = (override ?? input).trim();
+        if (!text || isLoading) return;
 
         const userMessage: Message = {
             id: Date.now().toString(),
             role: "user",
-            content: input.trim(),
+            content: text,
             timestamp: new Date(),
         };
 
         setMessages((prev) => [...prev, userMessage]);
         setInput("");
-        setIsLoading(true);
 
-        // Retrieve API key from local storage, falling back to the hardcoded key if not configured
+        // Key from local storage, falling back to the build-time key
         const configuredKey = localStorage.getItem(STORAGE_KEYS.apiKey) || GEMINI_API_KEY;
+        if (!configuredKey) {
+            addAssistant(t("ai.noKey"));
+            return;
+        }
+
+        setIsLoading(true);
 
         try {
             // Build conversation history for context
             const conversationHistory = messages.slice(-10).map((m) => ({
-                role: m.role,
+                role: m.role === "assistant" ? "model" : "user",
                 parts: [{ text: m.content }],
             }));
 
-            const systemPrompt = `You are an intelligent financial assistant for Portfolio Insight, a NEPSE (Nepal Stock Exchange) portfolio tracker application. You can help users with:
+            // Built per message so the reply language follows the app language right now
+            const systemPrompt = buildChatPrompt(lang, holdings, summary);
 
-1. **Portfolio Analysis**: Answer questions about their specific holdings, performance, gains/losses, sector allocation, etc.
-2. **Investment Advice**: Provide insights based on value investing principles (Benjamin Graham style) for long-term investing.
-3. **Stock Information**: Explain fundamentals like P/E ratio, P/B ratio, EPS, dividend yields, and what they mean.
-4. **General Finance**: Answer any general questions about investing, markets, financial concepts, etc.
-5. **NEPSE Specific**: Information about Nepal Stock Exchange, trading rules, sectors, etc.
-
-CURRENT USER'S PORTFOLIO DATA:
-${getPortfolioContext()}
-
-GUIDELINES:
-- Be helpful, concise, and accurate
-- When discussing the user's portfolio, reference their actual holdings and data
-- Use Rs. (Nepali Rupees) for currency
-- For investment advice, always remind that this is for educational purposes and not financial advice
-- Be conversational and friendly
-- If asked about stocks not in the portfolio, provide general information
-- Format responses with markdown for better readability (use **bold**, *italic*, bullet points, etc.)`;
-
-            const response = await fetch(
-                `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${configuredKey}`,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        contents: [
-                            {
-                                role: "user",
-                                parts: [{ text: systemPrompt }],
+            let response: Response;
+            try {
+                response = await fetch(
+                    `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${configuredKey}`,
+                    {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            contents: [
+                                {
+                                    role: "user",
+                                    parts: [{ text: systemPrompt }],
+                                },
+                                ...conversationHistory,
+                                {
+                                    role: "user",
+                                    parts: [{ text: userMessage.content }],
+                                },
+                            ],
+                            generationConfig: {
+                                temperature: 0.7,
+                                maxOutputTokens: 1024,
+                                topP: 0.95,
+                                topK: 40,
                             },
-                            ...conversationHistory,
-                            {
-                                role: "user",
-                                parts: [{ text: userMessage.content }],
-                            },
-                        ],
-                        generationConfig: {
-                            temperature: 0.7,
-                            maxOutputTokens: 1024,
-                            topP: 0.95,
-                            topK: 40,
-                        },
-                    }),
-                }
-            );
+                        }),
+                    }
+                );
+            } catch {
+                throw new AiRequestError("network");
+            }
 
             if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error?.message || "Failed to get response");
+                const errorData = await response.json().catch(() => null);
+                const msg: string = errorData?.error?.message || "";
+                throw new AiRequestError(classifyAiError(response.status, msg), msg);
             }
 
             const data = await response.json();
-            const assistantText =
-                data.candidates?.[0]?.content?.parts?.[0]?.text ||
-                "I apologize, but I couldn't generate a response. Please try again.";
-
-            const assistantMessage: Message = {
-                id: (Date.now() + 1).toString(),
-                role: "assistant",
-                content: assistantText,
-                timestamp: new Date(),
-            };
-
-            setMessages((prev) => [...prev, assistantMessage]);
+            const assistantText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+            addAssistant(assistantText || t("ai.errEmpty"));
         } catch (error) {
             console.error("Chat error:", error);
-            const errorMessage: Message = {
-                id: (Date.now() + 1).toString(),
-                role: "assistant",
-                content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : "Unknown error"}. Please try again.`,
-                timestamp: new Date(),
-            };
-            setMessages((prev) => [...prev, errorMessage]);
+            const kind = toAiRequestError(error).kind;
+            const key =
+                kind === "network" ? "ai.errNetwork" : kind === "invalidKey" ? "ai.errInvalidKey" : kind === "quota" ? "ai.errQuota" : "ai.errOther";
+            addAssistant(t(key));
         } finally {
             setIsLoading(false);
         }
@@ -222,7 +205,7 @@ GUIDELINES:
     };
 
     const formatTime = (date: Date) => {
-        return date.toLocaleTimeString("en-US", {
+        return date.toLocaleTimeString("en-GB", {
             hour: "2-digit",
             minute: "2-digit",
         });
@@ -231,6 +214,9 @@ GUIDELINES:
     // Simple markdown-like formatting
     const formatMessage = (content: string) => {
         return content
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
             .split("\n")
             .map((line, i) => {
                 // Bold
@@ -255,8 +241,9 @@ GUIDELINES:
         return (
             <Button
                 onClick={() => setIsOpen(true)}
-                className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-sm bg-primary hover:bg-primary/90 z-50"
+                className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] right-4 lg:bottom-6 lg:right-6 h-14 w-14 rounded-full shadow-sm bg-primary hover:bg-primary/90 z-50"
                 size="icon"
+                aria-label={t("ai.open")}
             >
                 <MessageCircle className="h-6 w-6" />
             </Button>
@@ -266,21 +253,28 @@ GUIDELINES:
     return (
         <div
             className={cn(
-                "fixed bottom-6 right-6 z-50 flex flex-col bg-card border border-border rounded-xl shadow-sm transition-all duration-300",
-                isMinimized ? "w-80 max-w-[calc(100vw-3rem)] h-14" : "w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[80vh]"
+                "fixed z-50 flex flex-col bg-card border border-border shadow-sm",
+                // Phones: full width and height above the bottom tab bar
+                "inset-x-0 top-0 bottom-[calc(4rem+env(safe-area-inset-bottom))] h-[calc(100dvh-4rem-env(safe-area-inset-bottom))]",
+                // Desktop: floating panel
+                "lg:inset-x-auto lg:top-auto lg:bottom-6 lg:right-6 lg:rounded-xl",
+                isMinimized
+                    ? "lg:w-80 lg:h-14"
+                    : "lg:w-96 lg:h-[600px] lg:max-h-[80dvh]"
             )}
+            style={viewportHeight ? { maxHeight: viewportHeight } : undefined}
         >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-muted/50 rounded-t-xl">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-muted/50 lg:rounded-t-xl">
                 <div className="flex items-center gap-2">
                     <div className="p-1.5 rounded-full bg-primary hover:bg-primary/90">
                         <Bot className="h-4 w-4 text-primary-foreground" />
                     </div>
                     <div>
-                        <h3 className="font-semibold text-sm">AI second opinion</h3>
+                        <h3 className="font-semibold text-sm">{t("ai.title")}</h3>
                         {!isMinimized && (
                             <p className="text-xs text-muted-foreground">
-                                Ask about your portfolio or investing
+                                {t("ai.subtitle")}
                             </p>
                         )}
                     </div>
@@ -290,9 +284,10 @@ GUIDELINES:
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="h-7 w-7"
+                            className="h-11 w-11 lg:h-8 lg:w-8"
                             onClick={clearChat}
-                            title="Clear chat"
+                            title={t("ai.clear")}
+                            aria-label={t("ai.clear")}
                         >
                             <Trash2 className="h-4 w-4" />
                         </Button>
@@ -300,8 +295,9 @@ GUIDELINES:
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="h-7 w-7"
+                        className="hidden lg:inline-flex h-8 w-8"
                         onClick={() => setIsMinimized(!isMinimized)}
+                        aria-label={isMinimized ? t("ai.expand") : t("ai.minimize")}
                     >
                         {isMinimized ? (
                             <Maximize2 className="h-4 w-4" />
@@ -312,8 +308,10 @@ GUIDELINES:
                     <Button
                         variant="ghost"
                         size="icon"
-                        className="h-7 w-7"
+                        className="h-11 w-11 lg:h-8 lg:w-8"
                         onClick={() => setIsOpen(false)}
+                        aria-label={t("ai.close")}
+                        title={t("ai.close")}
                     >
                         <X className="h-4 w-4" />
                     </Button>
@@ -323,51 +321,27 @@ GUIDELINES:
             {!isMinimized && (
                 <>
                     {/* Messages */}
-                    <ScrollArea ref={scrollAreaRef} className="flex-1 p-4">
+                    <ScrollArea ref={scrollAreaRef} className="flex-1 min-h-0 p-4">
                         {messages.length === 0 ? (
-                            <div className="flex flex-col items-center justify-center h-full text-center px-4">
-                                <div className="p-4 rounded-full bg-muted/50 mb-4">
-                                    <Bot className="h-8 w-8 text-blue-700" />
+                            <div className="flex flex-col items-center text-center px-2 py-2">
+                                <div className="p-4 rounded-full bg-muted/50 mb-3">
+                                    <Bot className="h-8 w-8 text-primary" />
                                 </div>
-                                <h4 className="font-semibold mb-2">Welcome</h4>
-                                <p className="text-sm text-muted-foreground mb-4">
-                                    I'm your AI portfolio assistant. Ask me anything about your
-                                    investments or general finance questions.
+                                <h4 className="font-semibold mb-2 leading-relaxed">{t("ai.welcomeTitle")}</h4>
+                                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                                    {t("ai.welcomeBody")}
                                 </p>
-                                <div className="grid gap-2 w-full">
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="text-xs justify-start"
-                                        onClick={() => {
-                                            setInput("What's my portfolio performance summary?");
-                                            setTimeout(() => sendMessage(), 100);
-                                        }}
-                                    >
-                                        What's my portfolio performance?
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="text-xs justify-start"
-                                        onClick={() => {
-                                            setInput("Which of my holdings look weakest, and why?");
-                                            setTimeout(() => sendMessage(), 100);
-                                        }}
-                                    >
-                                        Which holdings look weakest?
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        size="sm"
-                                        className="text-xs justify-start"
-                                        onClick={() => {
-                                            setInput("Explain P/E ratio and how to use it");
-                                            setTimeout(() => sendMessage(), 100);
-                                        }}
-                                    >
-                                        Explain P/E ratio
-                                    </Button>
+                                <div className="flex flex-wrap justify-center gap-2 w-full">
+                                    {STARTER_KEYS.map((key) => (
+                                        <button
+                                            key={key}
+                                            type="button"
+                                            className="min-h-11 rounded-full border border-border bg-background px-4 py-2 text-sm leading-relaxed text-left hover:bg-muted"
+                                            onClick={() => sendMessage(t(key))}
+                                        >
+                                            {t(key)}
+                                        </button>
+                                    ))}
                                 </div>
                             </div>
                         ) : (
@@ -396,7 +370,7 @@ GUIDELINES:
                                             )}
                                         >
                                             <div
-                                                className="text-sm leading-relaxed"
+                                                className="text-sm leading-relaxed break-words"
                                                 dangerouslySetInnerHTML={{
                                                     __html: formatMessage(message.content),
                                                 }}
@@ -432,7 +406,7 @@ GUIDELINES:
                                             <div className="flex items-center gap-2">
                                                 <Loader2 className="h-4 w-4 animate-spin" />
                                                 <span className="text-sm text-muted-foreground">
-                                                    Thinking...
+                                                    {t("ai.thinking")}
                                                 </span>
                                             </div>
                                         </div>
@@ -443,22 +417,23 @@ GUIDELINES:
                     </ScrollArea>
 
                     {/* Input */}
-                    <div className="p-3 border-t border-border">
+                    <div className="p-3 border-t border-border shrink-0">
                         <div className="flex gap-2">
                             <Input
                                 ref={inputRef}
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 onKeyDown={handleKeyPress}
-                                placeholder="Ask about your portfolio..."
+                                placeholder={t("ai.placeholder")}
                                 disabled={isLoading}
-                                className="flex-1"
+                                className="flex-1 h-11 text-base lg:text-sm"
                             />
                             <Button
-                                onClick={sendMessage}
+                                onClick={() => sendMessage()}
                                 disabled={!input.trim() || isLoading}
                                 size="icon"
-                                className="bg-primary hover:bg-primary/90"
+                                className="h-11 w-11 shrink-0 bg-primary hover:bg-primary/90"
+                                aria-label={t("ai.send")}
                             >
                                 {isLoading ? (
                                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -467,8 +442,8 @@ GUIDELINES:
                                 )}
                             </Button>
                         </div>
-                        <p className="text-[10px] text-muted-foreground text-center mt-2">
-                            Generated text from Gemini, not advice. It can be wrong.
+                        <p className="text-xs text-muted-foreground text-center mt-2 leading-relaxed">
+                            {t("ai.notice")}
                         </p>
                     </div>
                 </>

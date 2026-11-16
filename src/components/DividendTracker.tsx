@@ -1,7 +1,7 @@
 /**
  * Dividend Tracker Component
  * ==========================
- * 
+ *
  * Displays dividend information including:
  * - Expected annual dividends
  * - Dividend calendar
@@ -13,137 +13,80 @@ import { useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
 import { StockHolding } from '@/data/portfolioData';
 import { calculateDividendProjections } from '@/lib/valuationScoring';
-import { Coins, Calendar, TrendingUp, Gift, Info, PiggyBank } from 'lucide-react';
+import { Coins, Calendar, TrendingUp, Gift, PiggyBank } from 'lucide-react';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
+import { Explain } from '@/components/Explain';
+import { useT } from '@/i18n';
+import { fmtMoney, fmtNumber, fmtPercent } from '@/i18n/format';
 
 interface DividendTrackerProps {
     holdings: StockHolding[];
 }
 
+const CONFIDENCE_KEY: Record<string, string> = {
+    high: 'dividends.confidenceHigh',
+    medium: 'dividends.confidenceMedium',
+    low: 'dividends.confidenceLow',
+};
+
+/** Month windows produced by calculateDividendProjections (English, Gregorian). */
+const MONTH_KEY: Record<string, string> = {
+    'July-Aug': 'dividends.monthJulAug',
+    'July-Sept': 'dividends.monthJulSep',
+    'Aug-Oct': 'dividends.monthAugOct',
+};
+
 export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
+    const { t } = useT();
     const dividendData = useMemo(() => calculateDividendProjections(holdings), [holdings]);
 
-    const formatCurrency = (amount: number) => {
-        return new Intl.NumberFormat('en-NP', {
-            style: 'currency',
-            currency: 'NPR',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-        }).format(amount);
-    };
-
-    const getConfidenceColor = (confidence: string) => {
-        switch (confidence) {
-            case 'high': return 'hsl(var(--status-1))';
-            case 'medium': return 'hsl(var(--status-3))';
-            case 'low': return 'hsl(var(--status-4))';
-            default: return 'hsl(var(--status-0))';
-        }
-    };
-
-    const getConfidenceLabel = (confidence: string) => {
-        switch (confidence) {
-            case 'high': return 'High';
-            case 'medium': return 'Medium';
-            case 'low': return 'Low';
-            default: return 'Unknown';
-        }
-    };
+    const tiles = [
+        { icon: PiggyBank, label: t('dividends.trackerExpectedCash'), value: fmtMoney(dividendData.totalExpectedCashDividend), sub: t('dividends.trackerExpectedCashSub') },
+        { icon: Gift, label: t('dividends.trackerBonusValue'), value: fmtMoney(dividendData.totalExpectedBonusValue), sub: t('dividends.trackerBonusValueSub') },
+        { icon: TrendingUp, label: t('dividends.trackerYield'), value: fmtPercent(dividendData.portfolioDividendYield, 2, false), sub: t('dividends.trackerYieldSub'), term: 'dividendYield' as const },
+        { icon: Calendar, label: t('dividends.trackerYoc'), value: fmtPercent(dividendData.yieldOnCost, 2, false), sub: t('dividends.trackerYocSub'), term: 'yieldOnCost' as const },
+    ];
 
     return (
         <Card className="w-full">
             <CardHeader>
-                <div className="flex items-center justify-between">
+                <div className="flex items-start justify-between gap-2">
                     <div>
                         <CardTitle className="flex items-center gap-2">
-                            <Coins className="w-5 h-5 text-primary" />
-                            Dividend Tracker
+                            <Coins className="w-5 h-5 text-primary" aria-hidden="true" />
+                            {t('dividends.trackerTitle')}
                         </CardTitle>
-                        <CardDescription>
-                            Expected dividend income from your portfolio
+                        <CardDescription className="leading-relaxed">
+                            {t('dividends.trackerSub')}
                         </CardDescription>
                     </div>
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <Info className="w-4 h-4 text-muted-foreground" />
-                            </TooltipTrigger>
-                            <TooltipContent className="max-w-xs">
-                                <p className="text-sm">
-                                    Projections are based on historical dividend patterns.
-                                    Actual dividends depend on company performance and board decisions.
-                                </p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                    <Explain title={t('dividends.trackerInfoTitle')} text={t('dividends.trackerInfo')} className="h-6 w-6" />
                 </div>
             </CardHeader>
 
             <CardContent>
                 {/* Summary Cards */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                    {/* Total Expected Cash */}
-                    <div className="p-4 rounded-xl bg-muted/50 border border-green-500/20">
-                        <div className="flex items-center gap-2 mb-2">
-                            <PiggyBank className="w-4 h-4 text-green-700" />
-                            <span className="text-xs font-medium text-muted-foreground">Expected Cash</span>
+                <div className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    {tiles.map(({ icon: Icon, label, value, sub, term }) => (
+                        <div key={label} className="p-4 rounded-xl bg-muted/50 border border-border">
+                            <div className="flex items-center gap-2 mb-2">
+                                <Icon className="w-4 h-4 text-primary" aria-hidden="true" />
+                                <span className="text-xs font-medium text-muted-foreground">{label}</span>
+                                {term && <Explain term={term} />}
+                            </div>
+                            <p className="text-xl sm:text-2xl font-bold text-foreground break-words">{value}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{sub}</p>
                         </div>
-                        <p className="text-2xl font-bold text-green-700 dark:text-green-700">
-                            {formatCurrency(dividendData.totalExpectedCashDividend)}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">Annual estimate</p>
-                    </div>
-
-                    {/* Bonus Value */}
-                    <div className="p-4 rounded-xl bg-muted/50 border border-purple-500/20">
-                        <div className="flex items-center gap-2 mb-2">
-                            <Gift className="w-4 h-4 text-purple-700" />
-                            <span className="text-xs font-medium text-muted-foreground">Bonus Value</span>
-                        </div>
-                        <p className="text-2xl font-bold text-purple-700 dark:text-purple-700">
-                            {formatCurrency(dividendData.totalExpectedBonusValue)}
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">In bonus shares</p>
-                    </div>
-
-                    {/* Portfolio Yield */}
-                    <div className="p-4 rounded-xl bg-muted/50 border border-blue-500/20">
-                        <div className="flex items-center gap-2 mb-2">
-                            <TrendingUp className="w-4 h-4 text-blue-700" />
-                            <span className="text-xs font-medium text-muted-foreground">Portfolio Yield</span>
-                        </div>
-                        <p className="text-2xl font-bold text-blue-700 dark:text-blue-700">
-                            {dividendData.portfolioDividendYield.toFixed(2)}%
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">Current value basis</p>
-                    </div>
-
-                    {/* Yield on Cost */}
-                    <div className="p-4 rounded-xl bg-muted/50 border border-amber-500/20">
-                        <div className="flex items-center gap-2 mb-2">
-                            <Calendar className="w-4 h-4 text-amber-700" />
-                            <span className="text-xs font-medium text-muted-foreground">Yield on Cost</span>
-                        </div>
-                        <p className="text-2xl font-bold text-amber-700 dark:text-amber-700">
-                            {dividendData.yieldOnCost.toFixed(2)}%
-                        </p>
-                        <p className="text-xs text-muted-foreground mt-1">Based on purchase price</p>
-                    </div>
+                    ))}
                 </div>
 
-                {/* Dividend Projections Table */}
+                {/* Dividend Projections */}
                 <div className="mt-6">
                     <h4 className="font-semibold mb-4 flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        Expected Dividends by Stock
+                        <Calendar className="w-4 h-4" aria-hidden="true" />
+                        {t('dividends.trackerByStock')}
                     </h4>
 
                     <div className="space-y-3">
@@ -153,30 +96,22 @@ export const DividendTracker = ({ holdings }: DividendTrackerProps) => {
                             ))
                         ) : (
                             <p className="text-sm text-muted-foreground text-center py-8">
-                                No dividend-paying stocks in portfolio
+                                {t('dividends.trackerEmpty')}
                             </p>
                         )}
                     </div>
                 </div>
 
                 {/* Educational Note */}
-                <div className="mt-6 p-4 rounded-lg bg-muted/50 border">
-                    <h5 className="font-semibold text-sm mb-2 flex items-center gap-2">
-                        Understanding Dividends in Nepal
+                <div className="mt-6 p-4 rounded-lg bg-muted/50 border border-border">
+                    <h5 className="font-semibold text-sm mb-2">
+                        {t('dividends.trackerLearnTitle')}
                     </h5>
-                    <div className="space-y-2 text-xs text-muted-foreground">
-                        <p>
-                            <strong>Cash Dividend:</strong> Direct cash payment per share. A 20% cash dividend means Rs. 20 per Rs. 100 face value share.
-                        </p>
-                        <p>
-                            <strong>Bonus Shares:</strong> Free additional shares. A 10% bonus means 1 free share for every 10 shares held.
-                        </p>
-                        <p>
-                            <strong>Book Close Date:</strong> You must own shares before this date to receive dividends.
-                        </p>
-                        <p>
-                            <strong>Typical Timeline:</strong> AGMs usually happen July-October. Dividends announced at AGM, distributed within ~3 months.
-                        </p>
+                    <div className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                        <p><strong className="text-foreground">{t('dividends.trackerLearnCashLabel')}</strong> {t('dividends.trackerLearnCash')}</p>
+                        <p><strong className="text-foreground">{t('dividends.trackerLearnBonusLabel')}</strong> {t('dividends.trackerLearnBonus')}</p>
+                        <p><strong className="text-foreground">{t('dividends.trackerLearnBookLabel')}</strong> {t('dividends.trackerLearnBook')}</p>
+                        <p><strong className="text-foreground">{t('dividends.trackerLearnAgmLabel')}</strong> {t('dividends.trackerLearnAgm')}</p>
                     </div>
                 </div>
             </CardContent>
@@ -200,67 +135,70 @@ interface DividendProjectionRowProps {
 }
 
 const DividendProjectionRow = ({ dividend }: DividendProjectionRowProps) => {
-    const getConfidenceColor = (confidence: string) => {
-        switch (confidence) {
-            case 'high': return 'bg-green-500/10 text-green-700 border-green-500/20';
-            case 'medium': return 'bg-yellow-500/10 text-yellow-700 border-yellow-500/20';
-            case 'low': return 'bg-orange-500/10 text-orange-700 border-orange-500/20';
-            default: return 'bg-muted text-muted-foreground border-border';
-        }
+    const { t } = useT();
+    const confidenceClass: Record<string, string> = {
+        high: 'bg-success/10 text-success border-success/20',
+        medium: 'bg-warning/10 text-warning border-warning/20',
+        low: 'bg-muted text-muted-foreground border-border',
     };
 
     return (
-        <div className="p-4 rounded-lg border bg-card hover:bg-muted/30 transition-colors">
-            <div className="flex items-start justify-between">
-                <div className="flex-1">
-                    <div className="flex items-center gap-2">
+        <div className="p-4 rounded-lg border border-border bg-card">
+            <div className="flex items-start justify-between gap-3">
+                <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
                         <StockSymbolLink symbol={dividend.symbol} className="font-bold" />
-                        <Badge variant="outline" className="text-xs">
-                            {dividend.quantity} units
+                        <Badge variant="outline" className="text-xs font-normal">
+                            {t('dividends.kittaCount', { n: fmtNumber(dividend.quantity) })}
                         </Badge>
-                        <Badge className={`text-xs ${getConfidenceColor(dividend.confidence)}`}>
-                            {dividend.confidence} confidence
+                        <Badge variant="outline" className={`text-xs font-normal ${confidenceClass[dividend.confidence] ?? confidenceClass.low}`}>
+                            {t(CONFIDENCE_KEY[dividend.confidence] ?? 'dividends.confidenceLow')}
                         </Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground truncate max-w-[300px]">
+                    <p className="text-sm text-muted-foreground truncate">
                         {dividend.name}
                     </p>
                 </div>
 
-                <div className="text-right">
-                    <p className="text-lg font-bold text-green-700 dark:text-green-700">
-                        Rs. {dividend.expectedCashAmount.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                <div className="text-right shrink-0">
+                    <p className="text-lg font-bold text-foreground">
+                        {fmtMoney(dividend.expectedCashAmount)}
                     </p>
-                    <p className="text-xs text-muted-foreground">
-                        {dividend.expectedMonth && `Expected: ${dividend.expectedMonth}`}
-                    </p>
+                    {dividend.expectedMonth && (
+                        <p className="text-xs text-muted-foreground">
+                            {t('dividends.trackerExpectedMonth', {
+                                month: MONTH_KEY[dividend.expectedMonth] ? t(MONTH_KEY[dividend.expectedMonth]) : dividend.expectedMonth,
+                            })}
+                        </p>
+                    )}
                 </div>
             </div>
 
-            <div className="mt-3 grid grid-cols-3 gap-4 pt-3 border-t">
+            <div className="mt-3 grid grid-cols-3 gap-3 pt-3 border-t border-border">
                 <div>
-                    <span className="text-xs text-muted-foreground">Yield</span>
-                    <p className="font-medium">{dividend.expectedDividendPercent.toFixed(1)}%</p>
+                    <span className="text-xs text-muted-foreground">{t('dividends.trackerRowYield')}</span>
+                    <p className="font-medium">{fmtPercent(dividend.expectedDividendPercent, 1, false)}</p>
                 </div>
                 <div>
-                    <span className="text-xs text-muted-foreground">Cash Dividend</span>
-                    <p className="font-medium">Rs. {dividend.expectedCashAmount.toFixed(0)}</p>
+                    <span className="text-xs text-muted-foreground">{t('dividends.trackerRowCash')}</span>
+                    <p className="font-medium">{fmtMoney(dividend.expectedCashAmount)}</p>
                 </div>
                 <div>
-                    <span className="text-xs text-muted-foreground">Bonus Shares</span>
-                    <p className="font-medium">{dividend.expectedBonusShares} shares</p>
+                    <span className="text-xs text-muted-foreground">{t('dividends.trackerRowBonus')}</span>
+                    <p className="font-medium">{t('dividends.kittaCount', { n: fmtNumber(dividend.expectedBonusShares) })}</p>
                 </div>
             </div>
 
             {/* Visual yield bar */}
             <div className="mt-3">
                 <div className="flex justify-between text-xs mb-1">
-                    <span className="text-muted-foreground">Yield Strength</span>
-                    <span className="font-medium">{dividend.expectedDividendPercent.toFixed(1)}%</span>
+                    <span className="text-muted-foreground">{t('dividends.trackerRowStrength')}</span>
+                    <span className="font-medium">{fmtPercent(dividend.expectedDividendPercent, 1, false)}</span>
                 </div>
                 <Progress
                     value={Math.min(dividend.expectedDividendPercent * 10, 100)}
                     className="h-1.5"
+                    aria-label={t('dividends.trackerRowStrength')}
                 />
             </div>
         </div>
@@ -269,30 +207,37 @@ const DividendProjectionRow = ({ dividend }: DividendProjectionRowProps) => {
 
 // Compact version for dashboard
 export const DividendSummaryCard = ({ holdings }: DividendTrackerProps) => {
+    const { t } = useT();
     const dividendData = useMemo(() => calculateDividendProjections(holdings), [holdings]);
 
     return (
         <Card>
             <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
-                    <Coins className="w-4 h-4 text-green-700" />
-                    Dividend Income
+                    <Coins className="w-4 h-4 text-primary" aria-hidden="true" />
+                    {t('dividends.summaryCardTitle')}
                 </CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="text-3xl font-bold text-green-700 dark:text-green-700">
-                    Rs. {dividendData.totalExpectedCashDividend.toLocaleString(undefined, { maximumFractionDigits: 0 })}
+                <div className="text-2xl sm:text-3xl font-bold text-foreground break-words">
+                    {fmtMoney(dividendData.totalExpectedCashDividend)}
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">
-                    Expected annual dividend
+                    {t('dividends.summaryCardSub')}
                 </p>
-                <div className="mt-4 flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Portfolio Yield</span>
-                    <span className="font-medium">{dividendData.portfolioDividendYield.toFixed(2)}%</span>
+                <div className="mt-4 flex items-center justify-between gap-2 text-sm">
+                    <span className="flex items-center gap-1 text-muted-foreground">
+                        {t('dividends.trackerYield')}
+                        <Explain term="dividendYield" />
+                    </span>
+                    <span className="font-medium">{fmtPercent(dividendData.portfolioDividendYield, 2, false)}</span>
                 </div>
-                <div className="flex items-center justify-between text-sm mt-1">
-                    <span className="text-muted-foreground">Yield on Cost</span>
-                    <span className="font-medium text-amber-700">{dividendData.yieldOnCost.toFixed(2)}%</span>
+                <div className="flex items-center justify-between gap-2 text-sm mt-1">
+                    <span className="flex items-center gap-1 text-muted-foreground">
+                        {t('dividends.trackerYoc')}
+                        <Explain term="yieldOnCost" />
+                    </span>
+                    <span className="font-medium">{fmtPercent(dividendData.yieldOnCost, 2, false)}</span>
                 </div>
             </CardContent>
         </Card>

@@ -14,6 +14,9 @@ import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Database, Loader2, RefreshCw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { useT } from "@/i18n";
+import { fmtDate, fmtNumber } from "@/i18n/format";
+import { useViewMode } from "@/hooks/useViewMode";
 
 interface ArchiveStatus {
     last_run: string | null;
@@ -37,7 +40,10 @@ const triggerUrl = () =>
         ? "/api/portfolio-db/api/fundamentals/archive"
         : "http://localhost:5001/api/fundamentals/archive";
 
+/** Advanced-mode tool: it is hidden in simple mode. */
 export const FundamentalsArchiveCard = () => {
+    const { t } = useT();
+    const { isSimple } = useViewMode();
     const [status, setStatus] = useState<ArchiveStatus | null>(null);
     const [starting, setStarting] = useState(false);
     const [reachable, setReachable] = useState(true);
@@ -74,32 +80,34 @@ export const FundamentalsArchiveCard = () => {
             const data = await res.json().catch(() => ({}));
             if (res.ok && data.success) {
                 toast({
-                    title: "Collection started",
-                    description: "Fetching fundamentals for every listed company. This takes a few minutes — the status below will update automatically.",
+                    title: t("valuation.arToastStartedTitle"),
+                    description: t("valuation.arToastStartedDesc"),
                 });
                 setTimeout(fetchStatus, 1500);
             } else if (data.status === "running") {
-                toast({ title: "Already running", description: "A collection is already in progress." });
+                toast({ title: t("valuation.arToastRunningTitle"), description: t("valuation.arToastRunningDesc") });
             } else {
-                toast({ title: "Could not start", description: data.message || "Is the database server running?", variant: "destructive" });
+                toast({ title: t("valuation.arToastFailTitle"), description: t("valuation.arToastFailDesc"), variant: "destructive" });
             }
         } catch {
-            toast({ title: "Could not start", description: "Could not reach the database server.", variant: "destructive" });
+            toast({ title: t("valuation.arToastFailTitle"), description: t("valuation.arToastNoServer"), variant: "destructive" });
         } finally {
             setStarting(false);
         }
     };
 
     const lastRunText = () => {
-        if (!status?.last_run) return "Never collected yet";
+        if (!status?.last_run) return t("valuation.arNever");
         const d = status.days_since;
-        const when = new Date(status.last_run).toLocaleDateString();
-        if (d === 0) return `Last collected today (${when})`;
-        if (d === 1) return `Last collected yesterday (${when})`;
-        return `Last collected ${d} days ago (${when})`;
+        const when = fmtDate(status.last_run);
+        if (d === 0) return t("valuation.arToday", { date: when });
+        if (d === 1) return t("valuation.arYesterday", { date: when });
+        return t("valuation.arDaysAgo", { days: fmtNumber(d), date: when });
     };
 
     const isRunning = status?.running || false;
+
+    if (isSimple) return null;
 
     return (
         <div className="mt-8 p-4 rounded-lg bg-muted/50 border">
@@ -107,14 +115,14 @@ export const FundamentalsArchiveCard = () => {
                 <div className="flex items-start gap-3">
                     <Database className="w-5 h-5 mt-0.5 text-primary shrink-0" />
                     <div>
-                        <h4 className="font-semibold">Fundamentals Archive</h4>
-                        <p className="text-sm text-muted-foreground">
-                            A growing quarterly record of every listed company's fundamentals — build history now to spot the best performers later.
+                        <h4 className="font-semibold">{t("valuation.arTitle")}</h4>
+                        <p className="text-sm leading-relaxed text-muted-foreground">
+                            {t("valuation.arDesc")}
                         </p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                            {!reachable ? "Database server offline — start it to enable collection." : lastRunText()}
+                        <p className="text-sm leading-relaxed text-muted-foreground mt-1">
+                            {!reachable ? t("valuation.arOffline") : lastRunText()}
                             {status?.last_stats?.new != null && reachable && (
-                                <span> · {status.last_stats.new} new + {status.last_stats.updated ?? 0} refreshed last run</span>
+                                <span> · {t("valuation.arStats", { added: fmtNumber(status.last_stats.new), updated: fmtNumber(status.last_stats.updated ?? 0) })}</span>
                             )}
                         </p>
                     </div>
@@ -122,15 +130,14 @@ export const FundamentalsArchiveCard = () => {
                 <Button
                     onClick={handleCollect}
                     disabled={starting || isRunning || !reachable}
-                    size="sm"
-                    className="shrink-0"
+                    className="h-11 w-full shrink-0 sm:w-auto"
                 >
                     {isRunning ? (
-                        <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> Collecting…</>
+                        <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> {t("valuation.arCollecting")}</>
                     ) : starting ? (
-                        <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> Starting…</>
+                        <><Loader2 className="h-4 w-4 mr-1 animate-spin" /> {t("valuation.arStarting")}</>
                     ) : (
-                        <><RefreshCw className="h-4 w-4 mr-1" /> Collect now</>
+                        <><RefreshCw className="h-4 w-4 mr-1" /> {t("valuation.arCollect")}</>
                     )}
                 </Button>
             </div>

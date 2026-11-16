@@ -8,9 +8,24 @@
  *  - Investor presentation -> rare in Nepal; the quarterly report and AGM notice fill the gap
  *  - Industry report       -> regulator statistics (NRB, Nepal Insurance Authority, NEA, NTA)
  *
- * The numbers the app scores cover only part of this. The checklist below is the part a
- * score cannot do: reading and judgement. Content only, no UI.
+ * All text lives in the `research` locale namespace. The objects below expose the same
+ * fields as before (title, why, keyNumbers, ...) as getters that read the current language,
+ * so callers keep working. Checklist ticks are stored by position ("kn:0", "q:1", "rf:2"),
+ * so the number and order of items in each group must not change.
+ *
+ * Regulatory figures (checked 2026-11-15):
+ *  - CAR minimum 11% for class A and national-level class B, 10% for other class B and C:
+ *    NRB Unified Directive 2082, Directive 1  https://www.nrb.org.np/contents/uploads/2026/01/Unified-Directive-ABC-2082.pdf
+ *  - CD ratio ceiling 90% for A/B/C: same document, Directive 5, clause 6(6)
+ *  - Microfinance CAR minimum 8% and the dividend cap tied to capital and NPL:
+ *    https://www.nrb.org.np/contents/uploads/2026/01/MFI-Unified-Directive-2082.pdf
+ *  - Promoter lock-in 3 years: Securities Registration and Issue Regulations 2073, Rule 38(1)
+ *    https://www.sebon.gov.np/uploads/2023/09/24/4J6mY5hhWf86mzkHVzIcr83TG8g8YYLpz5miKJrt.pdf
  */
+import { translate } from "@/i18n";
+
+const tr = (key: string) => translate(`research.${key}`);
+const list = (prefix: string, n: number) => Array.from({ length: n }, (_, i) => tr(`${prefix}${i}`));
 
 export interface ResearchSource {
     name: string;
@@ -21,6 +36,10 @@ export interface ResearchSource {
 export interface ResearchStep {
     id: string;
     title: string;
+    /** The step as one yes/no question a beginner can answer */
+    question: string;
+    /** One line on where to find what the question needs */
+    where: string;
     nepalEquivalent: string;
     why: string;
     lookFor: string[];
@@ -30,230 +49,153 @@ export interface ResearchStep {
 }
 
 export interface SectorResearch {
+    /** English sector name as stored in the data; used for matching, not for display */
     sector: string;
+    /** Sector name in the current language */
+    label: string;
     regulator: string;
+    /** One line on where most of this sector's numbers are found */
+    where: string;
     keyNumbers: string[];
     questions: string[];
     redFlags: string[];
     sources: ResearchSource[];
 }
 
+/** Source catalogue: id -> URL. Name and description come from research.src_<id>_name / _what. */
+const SOURCE_URLS = {
+    nepseDisclosures: 'https://www.nepalstock.com',
+    appQuarterly: '/quarterly',
+    companyWebsite: '',
+    sebon: 'https://www.sebon.gov.np',
+    sebonProspectus: 'https://www.sebon.gov.np',
+    meroshare: 'https://meroshare.cdsc.com.np',
+    creditRating: 'https://www.icranepal.com',
+    agmNotices: 'https://www.nepalstock.com',
+    nrbBankingStats: 'https://www.nrb.org.np',
+    nrbMacro: 'https://www.nrb.org.np',
+    appIntelligence: '/intelligence',
+    nba: 'https://nepalbankers.com.np',
+    ippan: 'https://www.ippan.org.np',
+    fncci: 'https://www.fncci.org',
+    nrbBankByBank: 'https://www.nrb.org.np',
+    nrbDirectives: 'https://www.nrb.org.np',
+    nrbClassB: 'https://www.nrb.org.np',
+    nrbMicrofinance: 'https://www.nrb.org.np',
+    neaReport: 'https://www.nea.org.np',
+    doed: 'https://www.doed.gov.np',
+    ippanSector: 'https://www.ippan.org.np',
+    nia: 'https://nia.gov.np',
+    fnccIndustry: 'https://www.fncci.org',
+    nrbIndustry: 'https://www.nrb.org.np',
+    ntb: 'https://ntb.gov.np',
+    nta: 'https://nta.gov.np',
+    fundNav: 'https://www.sebon.gov.np',
+} as const;
+
+type SourceId = keyof typeof SOURCE_URLS;
+
+const source = (id: SourceId): ResearchSource => ({
+    url: SOURCE_URLS[id],
+    get name() {
+        return tr(`src_${id}_name`);
+    },
+    get what() {
+        return tr(`src_${id}_what`);
+    },
+});
+
+const step = (
+    id: string,
+    slug: string,
+    lookFor: number,
+    availability: ResearchStep['availability'],
+    sources: SourceId[]
+): ResearchStep => ({
+    id,
+    availability,
+    sources: sources.map(source),
+    get title() {
+        return tr(`step_${slug}_title`);
+    },
+    get question() {
+        return tr(`step_${slug}_q`);
+    },
+    get where() {
+        return tr(`step_${slug}_where`);
+    },
+    get nepalEquivalent() {
+        return tr(`step_${slug}_nepal`);
+    },
+    get why() {
+        return tr(`step_${slug}_why`);
+    },
+    get lookFor() {
+        return list(`step_${slug}_look`, lookFor);
+    },
+});
+
+/** Step ids are stable; do not rename them. */
 export const RESEARCH_STEPS: ResearchStep[] = [
-    {
-        id: 'quarterly-report',
-        title: 'Quarterly report',
-        nepalEquivalent: 'Unaudited quarterly financial statement, published within about a month of quarter end',
-        why: 'The most frequent and most current disclosure in Nepal. It moves prices more than any other document.',
-        lookFor: [
-            'Is profit growing against the same quarter last year, not just against the previous quarter?',
-            'Did profit come from the core business or from a one-off (asset sale, provision write-back)?',
-            'Are the numbers cumulative for the fiscal year? Nepali quarterlies are; Q3 profit includes Q1 and Q2.',
-        ],
-        availability: 'good',
-        sources: [
-            { name: 'NEPSE company disclosures', url: 'https://www.nepalstock.com', what: 'Official filings per company' },
-            { name: 'This app: Quarterly page', url: '/quarterly', what: 'Parsed quarterly numbers and trends' },
-        ],
-    },
-    {
-        id: 'annual-report',
-        title: 'Annual report',
-        nepalEquivalent: 'Audited annual report, sent before the AGM',
-        why: 'Audited numbers, the auditor’s opinion, and the notes that explain what the headline figures hide.',
-        lookFor: [
-            'Auditor’s report: any qualification or "emphasis of matter" paragraph.',
-            'Related-party transactions: loans or purchases involving directors and their companies.',
-            'Contingent liabilities and tax disputes in the notes.',
-            'Cash flow from operations against reported profit over several years. Profit without cash is a warning.',
-            'Board and management changes, and how much of the company the promoters still hold.',
-        ],
-        availability: 'partial',
-        sources: [
-            { name: 'Company website (Investor Relations / Reports)', url: '', what: 'Most listed companies post PDFs; quality varies' },
-            { name: 'SEBON', url: 'https://www.sebon.gov.np', what: 'Regulator filings and notices' },
-        ],
-    },
-    {
-        id: 'prospectus',
-        title: 'Offer document',
-        nepalEquivalent: 'Prospectus (Bibaran Patra) for an IPO, FPO or rights issue; the DRHP equivalent',
-        why: 'The single most detailed document a company ever publishes: business model, risks, project costs, promoters and how the money will be used.',
-        lookFor: [
-            'Risk factors section. Companies must list them; read it before the summary.',
-            'Use of proceeds: growth, or repaying promoter loans?',
-            'Promoter lock-in period and when locked shares become tradable (supply hits the market then).',
-            'For hydropower: PPA rate, required commercial operation date, cost per megawatt, loan size.',
-            'Projected financials. Compare them later with what was delivered.',
-        ],
-        availability: 'good',
-        sources: [
-            { name: 'SEBON approved prospectuses', url: 'https://www.sebon.gov.np', what: 'Offer documents approved by the regulator' },
-            { name: 'CDSC MeroShare', url: 'https://meroshare.cdsc.com.np', what: 'Current issues and applications' },
-            { name: 'Credit rating reports (ICRA Nepal, CARE Ratings Nepal)', url: 'https://www.icranepal.com', what: 'An independent grading is mandatory for most IPOs; the rationale is a short, candid read' },
-        ],
-    },
-    {
-        id: 'investor-presentation',
-        title: 'Investor presentation and management commentary',
-        nepalEquivalent: 'Rare. Use AGM minutes, the chairman’s statement and press interviews instead',
-        why: 'Shows what management says it will do, which you can later hold against what it did.',
-        lookFor: [
-            'Specific targets with dates, versus general optimism.',
-            'Whether earlier promises (branch expansion, project completion, dividend policy) were kept.',
-        ],
-        availability: 'rare',
-        sources: [
-            { name: 'AGM notices and minutes', url: 'https://www.nepalstock.com', what: 'Dividend proposals, capital plans, special resolutions' },
-        ],
-    },
-    {
-        id: 'industry-data',
-        title: 'Industry report',
-        nepalEquivalent: 'Regulator statistics; there are few independent industry reports',
-        why: 'A company can only be judged against its industry. A bank growing loans 8% is weak in a 15% year and strong in a 3% year.',
-        lookFor: [
-            'Industry growth rate, and whether the company is gaining or losing share.',
-            'Policy changes: NRB directives, insurance capital requirements, PPA and tariff rules.',
-            'Interest-rate direction. It drives bank margins, hydropower loan costs and the whole market’s valuation.',
-        ],
-        availability: 'good',
-        sources: [
-            { name: 'NRB: Banking and Financial Statistics (monthly)', url: 'https://www.nrb.org.np', what: 'Deposits, credit, NPL, rates for every bank class' },
-            { name: 'NRB: Current Macroeconomic and Financial Situation', url: 'https://www.nrb.org.np', what: 'Monthly economy-wide data and Monetary Policy' },
-            { name: 'This app: Intelligence page', url: '/intelligence', what: 'Recent NRB research and policy notes' },
-        ],
-    },
-    {
-        id: 'industry-association',
-        title: 'Industry association',
-        nepalEquivalent: 'Sector bodies that publish positions and data',
-        why: 'Associations say out loud what is hurting their members: unpaid dues, policy bottlenecks, pricing pressure.',
-        lookFor: [
-            'Recurring complaints. They point at the industry’s real constraint.',
-            'Demands made of the regulator, which hint at coming policy changes.',
-        ],
-        availability: 'partial',
-        sources: [
-            { name: 'Nepal Bankers’ Association', url: 'https://nepalbankers.com.np', what: 'Commercial banks' },
-            { name: 'IPPAN (Independent Power Producers)', url: 'https://www.ippan.org.np', what: 'Private hydropower developers' },
-            { name: 'FNCCI', url: 'https://www.fncci.org', what: 'Manufacturing and trade' },
-        ],
-    },
+    step('quarterly-report', 'quarterly', 3, 'good', ['nepseDisclosures', 'appQuarterly']),
+    step('annual-report', 'annual', 5, 'partial', ['companyWebsite', 'sebon']),
+    step('prospectus', 'prospectus', 5, 'good', ['sebonProspectus', 'meroshare', 'creditRating']),
+    step('investor-presentation', 'presentation', 2, 'rare', ['agmNotices']),
+    step('industry-data', 'industry', 3, 'good', ['nrbBankingStats', 'nrbMacro', 'appIntelligence']),
+    step('industry-association', 'association', 2, 'partial', ['nba', 'ippan', 'fncci']),
 ];
 
+/**
+ * "Before you buy: 5 questions" shown in simple view. Each points at one existing
+ * look-for item of a step above, so no new data source is involved.
+ */
+export const QUICK_CHECKS: { stepId: string; index: number }[] = [
+    { stepId: 'quarterly-report', index: 0 },
+    { stepId: 'quarterly-report', index: 1 },
+    { stepId: 'annual-report', index: 0 },
+    { stepId: 'annual-report', index: 3 },
+    { stepId: 'prospectus', index: 2 },
+];
+
+const sector = (
+    name: string,
+    slug: string,
+    counts: { kn: number; q: number; rf: number },
+    sources: SourceId[]
+): SectorResearch => ({
+    sector: name,
+    sources: sources.map(source),
+    get label() {
+        return tr(`sec_${slug}_name`);
+    },
+    get regulator() {
+        return tr(`sec_${slug}_regulator`);
+    },
+    get where() {
+        return tr(`sec_${slug}_where`);
+    },
+    get keyNumbers() {
+        return list(`sec_${slug}_kn`, counts.kn);
+    },
+    get questions() {
+        return list(`sec_${slug}_q`, counts.q);
+    },
+    get redFlags() {
+        return list(`sec_${slug}_rf`, counts.rf);
+    },
+});
+
 export const SECTOR_RESEARCH: SectorResearch[] = [
-    {
-        sector: 'Commercial Bank',
-        regulator: 'Nepal Rastra Bank (NRB)',
-        keyNumbers: ['Non-performing loans (NPL)', 'Capital adequacy (CAR, minimum 11%)', 'Credit-to-deposit ratio (ceiling 90%)', 'Cost of funds and interest spread', 'Distributable profit per share'],
-        questions: [
-            'Is NPL rising faster than at peer banks?',
-            'Is CAR close to the 11% floor? A bank near the floor cannot pay cash dividends freely or grow lending.',
-            'Is distributable profit much lower than net profit? Regulatory reserves can block dividends even in a profitable year.',
-        ],
-        redFlags: ['NPL above 5%', 'CAR within 0.5 points of the minimum', 'Profit growth driven by provision write-backs'],
-        sources: [
-            { name: 'NRB monthly banking statistics', url: 'https://www.nrb.org.np', what: 'Bank-by-bank and class-wide figures' },
-            { name: 'NRB unified directives', url: 'https://www.nrb.org.np', what: 'Rules on capital, provisioning, dividends' },
-        ],
-    },
-    {
-        sector: 'Development Bank',
-        regulator: 'Nepal Rastra Bank (NRB)',
-        keyNumbers: ['NPL', 'CAR (minimum 10%)', 'Credit-to-deposit ratio', 'Cost of funds'],
-        questions: ['Is it a merger or acquisition candidate, and on what swap ratio?', 'How concentrated is lending in one region or sector?'],
-        redFlags: ['NPL well above the class average', 'Deposit growth lagging the class'],
-        sources: [{ name: 'NRB monthly banking statistics', url: 'https://www.nrb.org.np', what: 'Class B institution data' }],
-    },
-    {
-        sector: 'Microfinance',
-        regulator: 'Nepal Rastra Bank (NRB)',
-        keyNumbers: ['NPL', 'Borrowings from banks against own deposits', 'Cost of funds', 'CAR (minimum 8%)'],
-        questions: [
-            'How dependent is it on wholesale loans from commercial banks? Its margin moves with their rates.',
-            'Are borrower repayment problems rising in its operating districts?',
-            'NRB caps microfinance dividends; what is the cap this year?',
-        ],
-        redFlags: ['NPL above 5%', 'Sharp fall in member count', 'Dividend capped by regulation while priced as a high-dividend stock'],
-        sources: [{ name: 'NRB microfinance statistics', url: 'https://www.nrb.org.np', what: 'Class D institution data and directives' }],
-    },
-    {
-        sector: 'Hydropower',
-        regulator: 'Electricity Regulatory Commission, Department of Electricity Development, NEA as buyer',
-        keyNumbers: ['Debt to equity', 'Installed capacity (MW) and actual generation against contract energy', 'PPA rate and remaining licence years', 'Interest cost as a share of revenue'],
-        questions: [
-            'Is the plant generating what the PPA assumes? Hydrology and transmission cuts both reduce it.',
-            'How many licence years remain? The plant is handed to the government at the end, so the share is worth less each year.',
-            'Is the company building new projects with new debt or rights issues?',
-            'Is profit seasonal? Compare the same quarter across years, never consecutive quarters.',
-        ],
-        redFlags: ['Debt to equity above 2', 'Repeated rights issues', 'Project past its required commercial operation date', 'Price far above book value with under 20 licence years left'],
-        sources: [
-            { name: 'NEA annual report', url: 'https://www.nea.org.np', what: 'Generation, PPAs, transmission status' },
-            { name: 'DoED licence database', url: 'https://www.doed.gov.np', what: 'Licence dates, capacity, project status' },
-            { name: 'IPPAN', url: 'https://www.ippan.org.np', what: 'Developer-side issues' },
-        ],
-    },
-    {
-        sector: 'Life Insurance',
-        regulator: 'Nepal Insurance Authority (NIA)',
-        keyNumbers: ['Life fund size and growth', 'First-year premium growth', 'Solvency ratio', 'Investment yield'],
-        questions: [
-            'Profit depends on the actuarial valuation, which is not done every quarter. Is the reported profit before or after it?',
-            'Has it met the paid-up capital requirement, or is a rights issue or merger coming?',
-        ],
-        redFlags: ['Falling first-year premium', 'Capital below the regulatory requirement'],
-        sources: [{ name: 'Nepal Insurance Authority', url: 'https://nia.gov.np', what: 'Insurer statistics and directives' }],
-    },
-    {
-        sector: 'Non-Life Insurance',
-        regulator: 'Nepal Insurance Authority (NIA)',
-        keyNumbers: ['Combined ratio (claims plus expenses over premium)', 'Net premium growth', 'Reinsurance share', 'Solvency ratio'],
-        questions: ['Is underwriting itself profitable, or does all profit come from investment income?', 'How exposed is it to a single large catastrophe after reinsurance?'],
-        redFlags: ['Combined ratio above 100% for several years', 'Large outstanding claims against reserves'],
-        sources: [{ name: 'Nepal Insurance Authority', url: 'https://nia.gov.np', what: 'Insurer statistics and directives' }],
-    },
-    {
-        sector: 'Manufacturing',
-        regulator: 'Department of Industry; sector-specific rules',
-        keyNumbers: ['Operating margin', 'Capacity utilisation', 'Debt to equity', 'Inventory and receivable days'],
-        questions: ['Who sets its selling price: the company, competitors or imports from India?', 'Is demand tied to construction or remittance cycles?', 'How much of the cost is imported raw material or energy?'],
-        redFlags: ['Receivables growing faster than sales', 'Margins falling while volumes rise', 'Very high P/E on a small free float'],
-        sources: [
-            { name: 'FNCCI', url: 'https://www.fncci.org', what: 'Industry positions and data' },
-            { name: 'NRB macroeconomic situation', url: 'https://www.nrb.org.np', what: 'Industrial production, imports, credit to industry' },
-        ],
-    },
-    {
-        sector: 'Hotels',
-        regulator: 'Department of Tourism',
-        keyNumbers: ['Occupancy rate', 'Average room rate', 'Debt to equity'],
-        questions: ['How do tourist arrivals compare with pre-2020 levels?', 'Is new room supply in its city outpacing demand?'],
-        redFlags: ['High debt with low occupancy', 'Profit only in peak season quarters'],
-        sources: [{ name: 'Nepal Tourism Board statistics', url: 'https://ntb.gov.np', what: 'Monthly arrivals' }],
-    },
-    {
-        sector: 'Telecom',
-        regulator: 'Nepal Telecommunications Authority (NTA)',
-        keyNumbers: ['Subscribers and revenue per user', 'Data revenue against voice revenue', 'Capital spending', 'Dividend payout'],
-        questions: ['Is data growth replacing falling voice and international call revenue?', 'What are the licence renewal fees and when are they due?'],
-        redFlags: ['Falling revenue per user for several years', 'Dividend paid out of reserves instead of profit'],
-        sources: [{ name: 'NTA Management Information System reports', url: 'https://nta.gov.np', what: 'Subscriber and market share data' }],
-    },
-    {
-        sector: 'Mutual Fund',
-        regulator: 'SEBON',
-        keyNumbers: ['Net asset value (NAV) per unit', 'Market price discount or premium to NAV', 'Years to maturity (closed-end funds)', 'Expense ratio'],
-        questions: [
-            'Is it closed-end (listed on NEPSE, fixed maturity) or open-ended (bought and redeemed at NAV, often by monthly SIP)? The checks differ.',
-            'Open-ended / SIP: what are the exit load and the lock-in, and how has NAV grown against the NEPSE index over three years or more?',
-            'Open-ended / SIP: keep the SIP statement. Your real return depends on every instalment date and the NAV paid, not on the face value of Rs. 10.',
-            'Is the unit trading below NAV? A closed-end fund converges to NAV at maturity.',
-            'What are the top holdings, and do they duplicate stocks you already own directly?',
-        ],
-        redFlags: ['Paying a premium over NAV', 'Long maturity with a persistent deep discount'],
-        sources: [{ name: 'Fund manager monthly NAV reports', url: 'https://www.sebon.gov.np', what: 'NAV, portfolio and expenses' }],
-    },
+    sector('Commercial Bank', 'commercialBank', { kn: 5, q: 3, rf: 3 }, ['nrbBankByBank', 'nrbDirectives']),
+    sector('Development Bank', 'developmentBank', { kn: 4, q: 2, rf: 2 }, ['nrbClassB']),
+    sector('Microfinance', 'microfinance', { kn: 4, q: 3, rf: 3 }, ['nrbMicrofinance']),
+    sector('Hydropower', 'hydropower', { kn: 4, q: 4, rf: 4 }, ['neaReport', 'doed', 'ippanSector']),
+    sector('Life Insurance', 'lifeInsurance', { kn: 4, q: 2, rf: 2 }, ['nia']),
+    sector('Non-Life Insurance', 'nonLifeInsurance', { kn: 4, q: 2, rf: 2 }, ['nia']),
+    sector('Manufacturing', 'manufacturing', { kn: 4, q: 3, rf: 3 }, ['fnccIndustry', 'nrbIndustry']),
+    sector('Hotels', 'hotels', { kn: 3, q: 2, rf: 2 }, ['ntb']),
+    sector('Telecom', 'telecom', { kn: 4, q: 2, rf: 2 }, ['nta']),
+    sector('Mutual Fund', 'mutualFund', { kn: 4, q: 5, rf: 2 }, ['fundNav']),
 ];
 
 export const getSectorResearch = (sector: string): SectorResearch | undefined => {
@@ -261,3 +203,7 @@ export const getSectorResearch = (sector: string): SectorResearch | undefined =>
     return SECTOR_RESEARCH.find(r => r.sector.toLowerCase() === s)
         ?? SECTOR_RESEARCH.find(r => s.includes(r.sector.toLowerCase().split(' ')[0]));
 };
+
+/** Sector name in the current language when it is one of ours; otherwise the name as given. */
+export const sectorLabel = (sector: string): string =>
+    SECTOR_RESEARCH.find(r => r.sector.toLowerCase() === sector.toLowerCase())?.label ?? sector;

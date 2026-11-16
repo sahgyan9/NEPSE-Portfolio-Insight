@@ -1,11 +1,14 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } from "recharts";
 import { StockHolding } from "@/data/portfolioData";
+import { useT } from "@/i18n";
+import { fmtPercent } from "@/i18n/format";
 
 interface PerformanceChartProps {
   holdings: StockHolding[];
 }
 
 export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
+  const { t } = useT();
   const sortedData = [...holdings]
     .sort((a, b) => b.gainLossPercent - a.gainLossPercent)
     .map((h) => ({
@@ -13,6 +16,7 @@ export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
       value: h.gainLossPercent,
       isPositive: h.gainLossPercent >= 0,
     }));
+  const upCount = sortedData.filter((d) => d.isPositive).length;
 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
@@ -26,8 +30,7 @@ export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
               payload[0].value >= 0 ? "text-success" : "text-destructive"
             }`}
           >
-            {payload[0].value >= 0 ? "+" : ""}
-            {payload[0].value.toFixed(2)}%
+            {fmtPercent(payload[0].value, 2)}
           </p>
         </div>
       );
@@ -36,10 +39,16 @@ export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
   };
 
   return (
-    <div className="surface p-4 h-[400px] ">
-      <h3 className="text-lg font-semibold mb-4">Individual Stock Performance</h3>
-      <ResponsiveContainer width="100%" height="90%">
-        <BarChart data={sortedData} layout="vertical" margin={{ top: 5, right: 30, left: 50, bottom: 5 }}>
+    <div className="surface p-4">
+      <h3 className="text-base font-semibold sm:text-lg">{t("home.pcTitle")}</h3>
+      <p className="mb-3 mt-0.5 text-sm leading-relaxed text-muted-foreground">
+        {sortedData.length > 0
+          ? t("home.pcSummary", { up: upCount, down: sortedData.length - upCount })
+          : t("home.chartEmpty")}
+      </p>
+      <div style={{ height: Math.max(220, sortedData.length * 26 + 40) }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={sortedData} layout="vertical" margin={{ top: 5, right: 16, left: 0, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
           <XAxis
             type="number"
@@ -50,13 +59,13 @@ export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
           <YAxis
             dataKey="name"
             type="category"
-            width={45}
+            width={56}
             tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
             axisLine={{ stroke: "hsl(var(--chart-grid))" }}
           />
           <Tooltip content={<CustomTooltip />} cursor={{ fill: "hsl(var(--chart-cursor))" }} />
           <ReferenceLine x={0} stroke="hsl(var(--chart-axis))" strokeWidth={1} />
-          <Bar dataKey="value" radius={[0, 4, 4, 0]} animationDuration={1500}>
+          <Bar dataKey="value" name={t("home.pcSeries")} radius={[0, 4, 4, 0]} isAnimationActive={false}>
             {sortedData.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
@@ -66,6 +75,7 @@ export const PerformanceChart = ({ holdings }: PerformanceChartProps) => {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+      </div>
     </div>
   );
 };

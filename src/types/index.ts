@@ -7,6 +7,22 @@
 // Re-export from data for backward compatibility
 export type { StockHolding, PortfolioSummary } from '@/data/portfolioData';
 
+import type { StockHolding, PortfolioSummary } from '@/data/portfolioData';
+
+/** Holding as built by useLivePortfolio: adds the previous close when the live feed supplied it. */
+export type LiveStockHolding = StockHolding & {
+    /** Previous session close (NPR), only set when it came from the same live feed as currentPrice. */
+    previousClose?: number;
+};
+
+/** Summary as built by useLivePortfolio: adds the day's change when previous closes are available. */
+export type LivePortfolioSummary = PortfolioSummary & {
+    /** Sum of quantity * (currentPrice - previousClose) over holdings with both prices. Absent when none. */
+    todayChange?: number;
+    /** todayChange as a percent of the previous-close value of those same holdings. */
+    todayChangePercent?: number;
+};
+
 /**
  * Sector allocation for charts
  */

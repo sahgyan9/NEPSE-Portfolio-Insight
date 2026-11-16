@@ -71,6 +71,10 @@ export interface ValuationScore {
         epsScore: number;
     };
     recommendations: string[];
+    /** Translation key for the plain description of the status (display text). */
+    labelKey?: string;
+    /** Translation keys, one per entry of `recommendations`, same order. */
+    recommendationKeys?: string[];
 }
 
 /**

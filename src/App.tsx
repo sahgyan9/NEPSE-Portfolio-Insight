@@ -12,13 +12,16 @@ import QuarterlyPage from "./pages/QuarterlyPage";
 import IntelligencePage from "./pages/Intelligence";
 import RiskPage from "./pages/RiskPage";
 import ResearchPage from "./pages/ResearchPage";
+import LearnPage from "./pages/LearnPage";
 import { ShortcutsProvider } from "./components/ShortcutsProvider";
 import NotFound from "./pages/NotFound";
+import { LanguageProvider } from "./i18n";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <LanguageProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -33,12 +36,14 @@ const App = () => (
           <Route path="/intelligence" element={<IntelligencePage />} />
           <Route path="/risk" element={<RiskPage />} />
           <Route path="/research" element={<ResearchPage />} />
+          <Route path="/learn" element={<LearnPage />} />
           <Route path="/misc" element={<MiscPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+    </LanguageProvider>
   </QueryClientProvider>
 );
 

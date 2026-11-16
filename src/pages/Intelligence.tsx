@@ -9,6 +9,8 @@ import { useApiKey } from '@/hooks/useApiKey';
 import { ExternalLink, RefreshCw, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
+import { useViewMode } from '@/hooks/useViewMode';
+import { useT } from '@/i18n';
 
 interface SectorLeaderPillars {
     P?: number;
@@ -61,6 +63,8 @@ interface MacroPaper {
 }
 
 export default function IntelligencePage() {
+    const { t } = useT();
+    const { isSimple } = useViewMode();
     const { apiKey, setApiKey: handleApiKeyChange } = useApiKey();
     const { holdings, summary, isLoading: portfolioLoading, refetch } = usePortfolioAnalytics();
 
@@ -88,7 +92,7 @@ export default function IntelligencePage() {
             // Fetch Quarterly Top Performers
             const performersUrl = import.meta.env.DEV
                 ? '/api/nepse-server/api/quarterly/top-performers'
-                : 'http://localhost:8000/api/quarterly/top-performers';
+                : 'http://localhost:8002/api/quarterly/top-performers';
             const perfRes = await fetch(performersUrl);
             if (perfRes.ok) {
                 const perfData = await perfRes.json();
@@ -99,8 +103,8 @@ export default function IntelligencePage() {
         } catch (error) {
             console.error("Failed to fetch intelligence data", error);
             toast({
-                title: 'Could not load data',
-                description: 'Sector screen or policy research failed to load.',
+                title: t('sector.errorTitle'),
+                description: t('sector.errorBody'),
                 variant: 'destructive'
             });
         } finally {
@@ -116,17 +120,17 @@ export default function IntelligencePage() {
         await refetch();
         await fetchIntelligence(true);
         toast({
-            title: 'Data refreshed',
-            description: 'Sector screen and policy research updated.',
+            title: t('sector.refreshedTitle'),
+            description: t('sector.refreshedBody'),
         });
     };
 
     const PILLARS: { key: keyof SectorLeaderPillars; label: string }[] = [
-        { key: 'P', label: 'Profitability' },
-        { key: 'G', label: 'Growth' },
-        { key: 'S', label: 'Safety' },
-        { key: 'Y', label: 'Payout' },
-        { key: 'V', label: 'Valuation' },
+        { key: 'P', label: t('sector.pillarP') },
+        { key: 'G', label: t('sector.pillarG') },
+        { key: 'S', label: t('sector.pillarS') },
+        { key: 'Y', label: t('sector.pillarY') },
+        { key: 'V', label: t('sector.pillarV') },
     ];
     const sectors = Object.keys(quarterlyPerformers);
 
@@ -137,22 +141,22 @@ export default function IntelligencePage() {
             <main className="container space-y-8 px-4 py-6">
                 <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
-                        <h1 className="text-2xl font-semibold tracking-tight">Sector screen and policy research</h1>
+                        <h1 className="text-2xl font-semibold tracking-tight">{t('sector.pageTitle')}</h1>
                         <p className="text-sm text-muted-foreground">
-                            A company-quality screen to start your own research, and recent academic papers on Nepal's economy.
+                            {t('sector.pageIntro')}
                         </p>
                     </div>
-                    <Button onClick={() => handleRefresh()} disabled={isLoading} variant="outline" size="sm" className="gap-2">
-                        <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
-                        Refresh
+                    <Button onClick={() => handleRefresh()} disabled={isLoading} variant="outline" size="sm" className="min-h-[44px] gap-2 md:min-h-0">
+                        <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} aria-hidden="true" />
+                        {t('common.refresh')}
                     </Button>
                 </div>
 
                 <div className="surface flex flex-wrap items-center justify-between gap-3 p-4 text-sm">
-                    <p className="text-muted-foreground">Looking for portfolio risk? It has its own page.</p>
-                    <div className="flex gap-4">
-                        <Link to="/risk" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">Risk <ArrowRight className="h-3.5 w-3.5" /></Link>
-                        <Link to="/research" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">Research checklist <ArrowRight className="h-3.5 w-3.5" /></Link>
+                    <p className="text-muted-foreground">{t('sector.riskPrompt')}</p>
+                    <div className="flex flex-wrap gap-x-4">
+                        <Link to="/risk" className="inline-flex min-h-[44px] items-center gap-1 font-medium text-primary hover:underline md:min-h-0">{t('sector.linkRisk')} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" /></Link>
+                        <Link to="/research" className="inline-flex min-h-[44px] items-center gap-1 font-medium text-primary hover:underline md:min-h-0">{t('sector.linkResearch')} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" /></Link>
                     </div>
                 </div>
 
@@ -160,27 +164,39 @@ export default function IntelligencePage() {
                 <section className="space-y-3" id="screen">
                     <div>
                         <h2 className="flex items-center gap-1.5 text-lg font-semibold">
-                            Which companies look strongest within their sector?
+                            {t('sector.screenTitle')}
                             <Explain term="sectorLeaders" />
                         </h2>
                         <p className="mt-1 max-w-3xl text-sm text-muted-foreground">
-                            This is a quality screen, a list of companies worth researching further. It is not a list of stocks to buy. A backtest found no evidence that holding the highest-ranked companies beat the average of their sector.
-                            {latestPeriod && <> Data period: <span className="font-mono text-foreground">{latestPeriod}</span>.</>}
+                            {t('sector.screenIntro')}
+                            {latestPeriod && <> {t('sector.period', { period: latestPeriod })}</>}
                         </p>
+                        <div className="mt-3 max-w-3xl rounded-md border border-border bg-muted/40 p-3 text-sm leading-relaxed">
+                            <p>{t('sector.orderNote')}</p>
+                            <Link to="/research" className="mt-1 inline-flex min-h-[44px] items-center gap-1 font-medium text-primary hover:underline md:min-h-0">
+                                {t('sector.orderNoteLink')} <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                            </Link>
+                        </div>
+                        {isSimple && (
+                            <div className="mt-3 max-w-3xl rounded-md border border-border p-3 text-sm leading-relaxed">
+                                <p className="font-semibold">{t('sector.howTitle')}</p>
+                                <p className="mt-1">{t('sector.how1')} {t('sector.how2')} {t('sector.how3')}</p>
+                            </div>
+                        )}
                     </div>
 
                     {sectors.length === 0 ? (
                         <div className="surface p-6 text-center text-sm text-muted-foreground">
-                            {isLoading ? 'Loading the screen...' : 'No screen data available. Start the NEPSE server and refresh.'}
+                            {isLoading ? t('sector.loading') : t('sector.empty')}
                         </div>
                     ) : (
                         <>
-                            <div className="no-scrollbar flex items-center gap-1.5 overflow-x-auto pb-1">
-                                <Button size="sm" variant={selectedSector === 'ALL' ? 'default' : 'outline'} onClick={() => setSelectedSector('ALL')} className="h-8 shrink-0 text-xs">
-                                    All sectors ({sectors.length})
+                            <div className="no-scrollbar flex items-center gap-1.5 overflow-x-auto pb-1" role="group" aria-label={t('sector.sectorFilter')}>
+                                <Button size="sm" variant={selectedSector === 'ALL' ? 'default' : 'outline'} onClick={() => setSelectedSector('ALL')} aria-pressed={selectedSector === 'ALL'} className="h-11 shrink-0 text-xs md:h-8">
+                                    {t('sector.allSectors', { n: sectors.length })}
                                 </Button>
                                 {sectors.map((sec) => (
-                                    <Button key={sec} size="sm" variant={selectedSector === sec ? 'default' : 'outline'} onClick={() => setSelectedSector(sec)} className="h-8 shrink-0 text-xs">
+                                    <Button key={sec} size="sm" variant={selectedSector === sec ? 'default' : 'outline'} onClick={() => setSelectedSector(sec)} aria-pressed={selectedSector === sec} className="h-11 shrink-0 text-xs md:h-8">
                                         {sec}
                                     </Button>
                                 ))}
@@ -204,7 +220,7 @@ export default function IntelligencePage() {
                                                                 <div className="flex items-start justify-between gap-2">
                                                                     <div className="min-w-0">
                                                                         <div className="flex items-center gap-2">
-                                                                            <span className="font-mono text-xs text-muted-foreground">#{rank}</span>
+                                                                            <span className="text-xs text-muted-foreground">{t('sector.rank', { n: rank })}</span>
                                                                             <Link to={`/quarterly?symbol=${stock.symbol}`} className="font-mono text-base font-semibold hover:underline">
                                                                                 {stock.symbol}
                                                                             </Link>
@@ -213,33 +229,33 @@ export default function IntelligencePage() {
                                                                     </div>
                                                                     <div className="text-right">
                                                                         <p className="font-mono text-sm font-semibold">{stock.score.toFixed(1)}</p>
-                                                                        <p className="text-[11px] text-muted-foreground">quality score</p>
+                                                                        <p className="text-xs text-muted-foreground">{t('sector.score')}</p>
                                                                         {check && (
-                                                                            <p className="mt-0.5 flex items-center justify-end gap-1 text-[11px] text-muted-foreground" title="Checklist signals passed">
-                                                                                <ShieldCheck className="h-3 w-3" /> {check.passed}/{check.assessable} checks
+                                                                            <p className="mt-0.5 flex items-center justify-end gap-1 text-xs text-muted-foreground" title={t('sector.checksTitle')}>
+                                                                                <ShieldCheck className="h-3 w-3" aria-hidden="true" /> {t('sector.checks', { passed: check.passed, total: check.assessable })}
                                                                             </p>
                                                                         )}
                                                                     </div>
                                                                 </div>
 
                                                                 <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
-                                                                    <div><span className="block text-muted-foreground">ROE</span><span className="font-mono">{stock.roe.toFixed(1)}%</span></div>
-                                                                    <div><span className="block text-muted-foreground">P/E</span><span className="font-mono">{stock.pe > 0 ? stock.pe.toFixed(1) : '-'}</span></div>
-                                                                    <div><span className="block text-muted-foreground">Div. yield</span><span className="font-mono">{stock.divYield !== undefined && stock.divYield > 0 ? `${stock.divYield.toFixed(1)}%` : '-'}</span></div>
+                                                                    <div><span className="block text-muted-foreground">{t('sector.roe')}</span><span className="font-mono">{stock.roe.toFixed(1)}%</span></div>
+                                                                    <div><span className="block text-muted-foreground">{t('sector.pe')}</span><span className="font-mono">{stock.pe > 0 ? stock.pe.toFixed(1) : '-'}</span></div>
+                                                                    <div><span className="block text-muted-foreground">{t('sector.divYield')}</span><span className="font-mono">{stock.divYield !== undefined && stock.divYield > 0 ? `${stock.divYield.toFixed(1)}%` : '-'}</span></div>
                                                                 </div>
 
                                                                 {Object.keys(pillars).length > 0 && (
-                                                                    <ul className="mt-2.5 space-y-1" aria-label="Factor scores, 0 to 100">
+                                                                    <ul className="mt-2.5 space-y-1" aria-label={t('sector.pillarsLabel')}>
                                                                         {PILLARS.map(({ key, label }) => {
                                                                             const v = pillars[key];
                                                                             const has = v !== undefined && v !== null;
                                                                             return (
-                                                                                <li key={key} className="grid grid-cols-[84px_1fr_28px] items-center gap-2 text-[11px]">
+                                                                                <li key={key} className="grid grid-cols-[96px_1fr_28px] items-center gap-2 text-xs">
                                                                                     <span className="text-muted-foreground">{label}</span>
                                                                                     <span className="h-1.5 overflow-hidden rounded-full bg-muted">
                                                                                         {has && <span className="block h-full rounded-full bg-primary" style={{ width: `${Math.min(100, Math.max(0, v as number))}%` }} />}
                                                                                     </span>
-                                                                                    <span className="text-right font-mono">{has ? (v as number).toFixed(0) : 'n/a'}</span>
+                                                                                    <span className="text-right font-mono">{has ? (v as number).toFixed(0) : t('sector.na')}</span>
                                                                                 </li>
                                                                             );
                                                                         })}
@@ -260,8 +276,8 @@ export default function IntelligencePage() {
                 {/* Policy research */}
                 <section className="space-y-3" id="policy">
                     <div>
-                        <h2 className="text-lg font-semibold">What does recent research say about Nepal's economy?</h2>
-                        <p className="text-sm text-muted-foreground">The most cited papers from OpenAlex on Nepal's monetary policy, bank liquidity and the NEPSE market.</p>
+                        <h2 className="text-lg font-semibold">{t('sector.policyTitle')}</h2>
+                        <p className="text-sm text-muted-foreground">{t('sector.policyIntro')}</p>
                     </div>
                     {macroResearch.length > 0 ? (
                         <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -269,15 +285,15 @@ export default function IntelligencePage() {
                                 <li key={idx} className="surface p-4">
                                     <h4 className="mb-2 text-sm font-semibold leading-snug">{paper.title}</h4>
                                     <p className="mb-3 text-xs text-muted-foreground">
-                                        {paper.publication_year} &middot; cited {paper.cited_by_count} times
+                                        {t('sector.cited', { year: paper.publication_year, n: paper.cited_by_count })}
                                     </p>
-                                    <div className="flex gap-4 text-xs">
-                                        <a href={paper.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline">
-                                            View paper <ExternalLink className="h-3 w-3" />
+                                    <div className="flex flex-wrap gap-x-4 text-sm">
+                                        <a href={paper.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-1 text-primary hover:underline md:min-h-0">
+                                            {t('sector.viewPaper')} <ExternalLink className="h-3 w-3" aria-hidden="true" />
                                         </a>
                                         {paper.open_access_pdf && (
-                                            <a href={paper.open_access_pdf} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:underline">
-                                                PDF <ExternalLink className="h-3 w-3" />
+                                            <a href={paper.open_access_pdf} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-1 text-primary hover:underline md:min-h-0">
+                                                {t('sector.pdf')} <ExternalLink className="h-3 w-3" aria-hidden="true" />
                                             </a>
                                         )}
                                     </div>
@@ -286,7 +302,7 @@ export default function IntelligencePage() {
                         </ul>
                     ) : (
                         <div className="surface p-6 text-center text-sm text-muted-foreground">
-                            {isLoading ? 'Loading papers...' : 'No research data found.'}
+                            {isLoading ? t('sector.loadingPapers') : t('sector.noPapers')}
                         </div>
                     )}
                 </section>

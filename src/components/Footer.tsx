@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { toast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 import { STORAGE_KEYS } from '@/lib/constants';
+import { useT } from '@/i18n';
 
 interface FooterProps {
   apiKey?: string;
@@ -14,6 +15,7 @@ interface FooterProps {
 }
 
 export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
+  const { t } = useT();
   // Fall back to localStorage when the page doesn't pass props
   const effectiveApiKey = apiKey ?? (localStorage.getItem(STORAGE_KEYS.apiKey) || '');
   const [tempApiKey, setTempApiKey] = useState(effectiveApiKey);
@@ -27,8 +29,8 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
     }
     setIsDialogOpen(false);
     toast({
-      title: "API Key Saved",
-      description: "Your Gemini API key has been saved.",
+      title: t("nav.aiSavedTitle"),
+      description: t("nav.aiSavedBody"),
     });
   };
 
@@ -38,12 +40,14 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
         <div>
           <div className="flex items-center gap-2 font-semibold text-foreground mb-1">
             <ShieldCheck className="w-4 h-4 text-primary" />
-            <span>NEPSE Portfolio Insight</span>
+            <span>{t('common.appName')}</span>
           </div>
-          <p className="text-xs text-muted-foreground max-w-md">
-            Value investing and portfolio health metrics inspired by Benjamin Graham's <em>The Intelligent Investor</em>.
-            Disclaimer: This is not official financial advice. Always verify with official sources.
-          </p>
+          <div className="max-w-md space-y-1 text-xs leading-relaxed text-muted-foreground">
+            <p>{t('nav.footerAbout')}</p>
+            <p>
+              {t('common.notAdvice')} {t('nav.footerVerify')}
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
@@ -60,35 +64,32 @@ export const Footer = ({ apiKey, onApiKeyChange }: FooterProps) => {
                 variant="outline"
                 size="sm"
                 className={cn(
-                  "gap-2",
-                  effectiveApiKey && "border-green-500/50 hover:bg-green-500/10 text-green-700 hover:text-green-700"
+                  "min-h-[44px] gap-2 lg:min-h-0",
+                  effectiveApiKey && "border-success/50 text-success hover:bg-success/10 hover:text-success"
                 )}
               >
                 <Key className="h-4 w-4" />
-                <span>{effectiveApiKey ? "API Active" : "Configure AI (optional)"}</span>
-                {effectiveApiKey && <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>}
+                <span>{effectiveApiKey ? t('nav.aiActive') : t('nav.aiConfigure')}</span>
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md bg-card border-border">
               <DialogHeader>
-                <DialogTitle>Configure Gemini API Key</DialogTitle>
+                <DialogTitle>{t('nav.aiDialogTitle')}</DialogTitle>
               </DialogHeader>
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
-                  <Label htmlFor="apiKey">Gemini API Key</Label>
+                  <Label htmlFor="apiKey">{t('nav.aiKeyLabel')}</Label>
                   <Input
                     id="apiKey"
                     type="password"
-                    placeholder="Enter your Gemini API key"
+                    placeholder={t('nav.aiKeyPlaceholder')}
                     value={tempApiKey}
                     onChange={(e) => setTempApiKey(e.target.value)}
                   />
-                  <p className="text-xs text-muted-foreground">
-                    Used for AI-powered investment recommendations. Your key is stored locally.
-                  </p>
+                  <p className="text-xs leading-relaxed text-muted-foreground">{t('nav.aiKeyHelp')}</p>
                 </div>
                 <Button onClick={handleSaveApiKey} className="w-full">
-                  Save API Key
+                  {t('nav.aiSave')}
                 </Button>
               </div>
             </DialogContent>

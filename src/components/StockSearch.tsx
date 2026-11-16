@@ -1,7 +1,7 @@
 import { EVENT_OPEN_SEARCH } from "@/lib/shortcuts";
 import { StockResearchBlock } from "@/components/research/StockResearchBlock";
 import { useState, useCallback, useEffect } from "react";
-import { Search, X, Loader2, BookOpen, TrendingUp, Building2, DollarSign, BarChart3 } from "lucide-react";
+import { Search, X, Loader2, BookOpen, TrendingUp, TrendingDown, Building2, DollarSign, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -15,8 +15,15 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchMerolaganiFundamentals, MerolaganiFundamentals } from "@/services/merolaganiApi";
 import { toast } from "@/hooks/use-toast";
+import { useT } from "@/i18n";
+import { fmtMoney, fmtMoneyCompact, fmtPercent } from "@/i18n/format";
+
+/** Plain ratio with two decimals; "-" when missing. */
+const fmtRatio = (v: number | null | undefined): string =>
+    v === null || v === undefined || Number.isNaN(v) ? "-" : v.toFixed(2);
 
 export const StockSearch = () => {
+    const { t } = useT();
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -33,8 +40,8 @@ export const StockSearch = () => {
         const query = (targetSymbol || searchQuery).trim().toUpperCase();
         if (!query) {
             toast({
-                title: "Enter a symbol",
-                description: "Please enter a stock symbol to search",
+                title: t("nav.searchEmptyTitle"),
+                description: t("nav.searchEmptyBody"),
                 variant: "destructive",
             });
             return;
@@ -50,15 +57,15 @@ export const StockSearch = () => {
             if (data) {
                 setStockData(data);
             } else {
-                setError(`No data found for "${query}". Make sure the symbol is correct.`);
+                setError(t("nav.searchNotFound", { symbol: query }));
             }
         } catch (err) {
-            setError("Failed to fetch stock data. Please try again.");
+            setError(t("nav.searchFailed"));
             console.error("Search error:", err);
         } finally {
             setIsLoading(false);
         }
-    }, [searchQuery]);
+    }, [searchQuery, t]);
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (e.key === "Enter") {
@@ -73,42 +80,25 @@ export const StockSearch = () => {
         setError(null);
     };
 
-    const formatNumber = (value: number | null, decimals = 2): string => {
-        if (value === null || value === undefined) return "N/A";
-        return value.toLocaleString("en-NP", {
-            minimumFractionDigits: decimals,
-            maximumFractionDigits: decimals,
-        });
-    };
-
-    const formatLargeNumber = (value: number | null): string => {
-        if (value === null || value === undefined) return "N/A";
-        if (value >= 1e12) return `${(value / 1e12).toFixed(2)}T`;
-        if (value >= 1e9) return `${(value / 1e9).toFixed(2)}B`;
-        if (value >= 1e7) return `${(value / 1e7).toFixed(2)}Cr`;
-        if (value >= 1e5) return `${(value / 1e5).toFixed(2)}L`;
-        return value.toLocaleString();
-    };
-
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2 hidden sm:flex">
-                    <Search className="h-4 w-4" />
-                    <span className="hidden xl:inline">Search</span>
-                </Button>
-            </DialogTrigger>
-            <DialogTrigger asChild>
-                <Button variant="ghost" size="icon" className="sm:hidden">
+                <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-11 w-11 shrink-0 lg:h-9 lg:w-9"
+                    aria-label={t("nav.searchOpen")}
+                    title={t("nav.searchOpen")}
+                >
                     <Search className="h-4 w-4" />
                 </Button>
             </DialogTrigger>
 
-            <DialogContent className="sm:max-w-lg">
+            <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-lg">
                 <DialogHeader>
                     <DialogTitle className="flex items-center gap-2">
                         <Search className="h-5 w-5 text-primary" />
-                        Stock Search
+                        {t("nav.searchTitle")}
                     </DialogTitle>
                 </DialogHeader>
 
@@ -117,25 +107,32 @@ export const StockSearch = () => {
                     <div className="flex gap-2">
                         <div className="relative flex-1">
                             <Input
-                                placeholder="Enter stock symbol (e.g., NABIL, NICA)"
+                                placeholder={t("nav.searchPlaceholder")}
+                                aria-label={t("nav.searchPlaceholder")}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value.toUpperCase())}
                                 onKeyDown={handleKeyDown}
-                                className="pr-8 uppercase"
+                                className="h-11 pr-10 uppercase placeholder:normal-case lg:h-10"
                                 autoFocus
                             />
                             {searchQuery && (
                                 <Button
                                     variant="ghost"
                                     size="icon"
-                                    className="absolute right-1 top-1/2 -translate-y-1/2 h-6 w-6"
+                                    className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8"
                                     onClick={() => setSearchQuery("")}
+                                    aria-label={t("nav.searchClear")}
                                 >
                                     <X className="h-3 w-3" />
                                 </Button>
                             )}
                         </div>
-                        <Button onClick={() => handleSearch()} disabled={isLoading}>
+                        <Button
+                            onClick={() => handleSearch()}
+                            disabled={isLoading}
+                            className="h-11 lg:h-10"
+                            aria-label={t("nav.searchGo")}
+                        >
                             {isLoading ? (
                                 <Loader2 className="h-4 w-4 animate-spin" />
                             ) : (
@@ -149,7 +146,7 @@ export const StockSearch = () => {
                         <div className="flex items-center justify-center py-8">
                             <div className="flex flex-col items-center gap-2">
                                 <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                                <p className="text-sm text-muted-foreground">Fetching data...</p>
+                                <p className="text-sm text-muted-foreground">{t("common.loading")}</p>
                             </div>
                         </div>
                     )}
@@ -179,7 +176,11 @@ export const StockSearch = () => {
                                     variant={stockData.isLiveData ? "default" : "outline"}
                                     className={stockData.isLiveData ? "bg-success" : ""}
                                 >
-                                    {stockData.source === "live" ? "Live" : stockData.source === "cache" ? "Cached" : "Fallback"}
+                                    {stockData.source === "live"
+                                        ? t("nav.sourceLive")
+                                        : stockData.source === "cache"
+                                          ? t("nav.sourceCache")
+                                          : t("nav.sourceFallback")}
                                 </Badge>
                             </div>
 
@@ -192,16 +193,16 @@ export const StockSearch = () => {
                                                 <BookOpen className="h-6 w-6 text-primary" />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-muted-foreground font-medium">Book Value</p>
+                                                <p className="text-sm text-muted-foreground font-medium">{t("nav.bookValue")}</p>
                                                 <p className="text-3xl font-bold text-primary">
-                                                    Rs. {formatNumber(stockData.bookValue)}
+                                                    {fmtMoney(stockData.bookValue, true)}
                                                 </p>
                                             </div>
                                         </div>
                                         {stockData.pbRatio !== null && (
                                             <div className="text-right">
-                                                <p className="text-xs text-muted-foreground">P/B Ratio</p>
-                                                <p className="text-lg font-semibold">{formatNumber(stockData.pbRatio)}</p>
+                                                <p className="text-xs text-muted-foreground">{t("nav.pbRatio")}</p>
+                                                <p className="text-lg font-semibold">{fmtRatio(stockData.pbRatio)}</p>
                                             </div>
                                         )}
                                     </div>
@@ -215,10 +216,10 @@ export const StockSearch = () => {
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
                                             <DollarSign className="h-4 w-4 text-muted-foreground" />
-                                            <span className="text-xs text-muted-foreground">EPS</span>
+                                            <span className="text-xs text-muted-foreground">{t("nav.eps")}</span>
                                         </div>
                                         <p className="text-lg font-semibold mt-1">
-                                            Rs. {formatNumber(stockData.eps)}
+                                            {fmtMoney(stockData.eps, true)}
                                         </p>
                                         {stockData.epsInfo && (
                                             <p className="text-xs text-muted-foreground">{stockData.epsInfo}</p>
@@ -231,10 +232,10 @@ export const StockSearch = () => {
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
                                             <BarChart3 className="h-4 w-4 text-muted-foreground" />
-                                            <span className="text-xs text-muted-foreground">P/E Ratio</span>
+                                            <span className="text-xs text-muted-foreground">{t("nav.pe")}</span>
                                         </div>
                                         <p className="text-lg font-semibold mt-1">
-                                            {formatNumber(stockData.peRatio)}
+                                            {fmtRatio(stockData.peRatio)}
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -244,10 +245,10 @@ export const StockSearch = () => {
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
                                             <TrendingUp className="h-4 w-4 text-muted-foreground" />
-                                            <span className="text-xs text-muted-foreground">Last Traded Price</span>
+                                            <span className="text-xs text-muted-foreground">{t("nav.ltp")}</span>
                                         </div>
                                         <p className="text-lg font-semibold mt-1">
-                                            Rs. {formatNumber(stockData.lastTradedPrice)}
+                                            {fmtMoney(stockData.lastTradedPrice, true)}
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -257,10 +258,10 @@ export const StockSearch = () => {
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
                                             <Building2 className="h-4 w-4 text-muted-foreground" />
-                                            <span className="text-xs text-muted-foreground">Market Cap</span>
+                                            <span className="text-xs text-muted-foreground">{t("nav.marketCap")}</span>
                                         </div>
                                         <p className="text-lg font-semibold mt-1">
-                                            {formatLargeNumber(stockData.marketCap)}
+                                            {fmtMoneyCompact(stockData.marketCap)}
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -269,11 +270,11 @@ export const StockSearch = () => {
                                 <Card>
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
-                                            <TrendingUp className="h-4 w-4 text-green-700" />
-                                            <span className="text-xs text-muted-foreground">52W High</span>
+                                            <TrendingUp className="h-4 w-4 text-success" aria-hidden="true" />
+                                            <span className="text-xs text-muted-foreground">{t("nav.high52")}</span>
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 text-green-700">
-                                            Rs. {formatNumber(stockData.week52High)}
+                                        <p className="text-lg font-semibold mt-1">
+                                            {fmtMoney(stockData.week52High, true)}
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -282,11 +283,11 @@ export const StockSearch = () => {
                                 <Card>
                                     <CardContent className="p-3">
                                         <div className="flex items-center gap-2">
-                                            <TrendingUp className="h-4 w-4 text-red-700 rotate-180" />
-                                            <span className="text-xs text-muted-foreground">52W Low</span>
+                                            <TrendingDown className="h-4 w-4 text-destructive" aria-hidden="true" />
+                                            <span className="text-xs text-muted-foreground">{t("nav.low52")}</span>
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 text-red-700">
-                                            Rs. {formatNumber(stockData.week52Low)}
+                                        <p className="text-lg font-semibold mt-1">
+                                            {fmtMoney(stockData.week52Low, true)}
                                         </p>
                                     </CardContent>
                                 </Card>
@@ -297,10 +298,10 @@ export const StockSearch = () => {
                                         <CardContent className="p-3">
                                             <div className="flex items-center gap-2">
                                                 <BarChart3 className="h-4 w-4 text-muted-foreground" />
-                                                <span className="text-xs text-muted-foreground">ROE</span>
+                                                <span className="text-xs text-muted-foreground">{t("nav.roe")}</span>
                                             </div>
                                             <p className="text-lg font-semibold mt-1">
-                                                {formatNumber(stockData.roe)}%
+                                                {fmtPercent(stockData.roe, 2, false)}
                                             </p>
                                         </CardContent>
                                     </Card>
@@ -312,10 +313,10 @@ export const StockSearch = () => {
                                         <CardContent className="p-3">
                                             <div className="flex items-center gap-2">
                                                 <DollarSign className="h-4 w-4 text-muted-foreground" />
-                                                <span className="text-xs text-muted-foreground">Div. Yield</span>
+                                                <span className="text-xs text-muted-foreground">{t("nav.divYield")}</span>
                                             </div>
                                             <p className="text-lg font-semibold mt-1">
-                                                {formatNumber(stockData.dividendYield)}%
+                                                {fmtPercent(stockData.dividendYield, 2, false)}
                                             </p>
                                         </CardContent>
                                     </Card>
@@ -336,21 +337,22 @@ export const StockSearch = () => {
                         <div className="py-8 text-center">
                             <Search className="h-12 w-12 mx-auto text-muted-foreground/30" />
                             <p className="mt-2 text-sm text-muted-foreground">
-                                Enter a NEPSE stock symbol to see its fundamental data
+                                {t("nav.searchIntro")}
                             </p>
                             <div className="mt-4 flex flex-wrap justify-center gap-2">
                                 {["NABIL", "NICA", "SBI", "UPPER", "NLIC"].map((symbol) => (
-                                    <Badge
+                                    <Button
                                         key={symbol}
                                         variant="outline"
-                                        className="cursor-pointer hover:bg-primary/10"
+                                        size="sm"
+                                        className="h-11 lg:h-8"
                                         onClick={() => {
                                             setSearchQuery(symbol);
                                             handleSearch(symbol);
                                         }}
                                     >
                                         {symbol}
-                                    </Badge>
+                                    </Button>
                                 ))}
                             </div>
                         </div>

@@ -55,9 +55,10 @@ export interface ShareBazaarResponse {
 
 // Use Vite proxy in development to avoid CORS issues
 // In production, you may need to set up your own backend proxy
-const API_BASE_URL = import.meta.env.DEV
-    ? '/api/sharebazaar'  // Proxied through Vite dev server
-    : 'https://sharebazaar.vercel.app/api';  // Direct in production
+// Always through the local proxy: both the dev server and the production
+// preview server (scripts/launch.ps1) forward /api/sharebazaar, and the
+// external site does not allow direct cross-origin requests from the app.
+const API_BASE_URL = '/api/sharebazaar';
 
 const NEPSE_SERVER_URL = import.meta.env.DEV
     ? '/api/nepse-server'
@@ -83,7 +84,9 @@ async function fetchFromNepseServer(): Promise<Map<string, ShareBazaarResponse> 
 
     try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s strict timeout
+        // 10 s: on a freshly started NEPSE server the first snapshot takes ~3 s. Timing out
+        // sooner sends every symbol to the external fallback below, which takes ~30 s.
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
 
         const response = await fetch(`${NEPSE_SERVER_URL}/api/live-market`, {
             signal: controller.signal,

@@ -5,9 +5,21 @@ const BASE = import.meta.env.DEV ? "/api/portfolio-db/api" : "http://localhost:5
 
 export type EpsFlagSeverity = "high" | "medium" | "low" | "info";
 
+/** Raw values behind a server sentence, used to rebuild it in the reader's language. */
+export type EpsParams = Record<string, string | number | null>;
+
 export interface EpsFlag {
   code: string;
   severity: EpsFlagSeverity;
+  /** English sentence from the server; shown when the sentence cannot be rebuilt. */
+  text: string;
+  /** Absent in insights saved before params were added. */
+  params?: EpsParams;
+}
+
+export interface EpsNote {
+  code: string;
+  params?: EpsParams;
   text: string;
 }
 
@@ -46,7 +58,10 @@ export interface EpsHolding {
   payback_years: number | null;
   gain_pct: number | null;
   eps_history: EpsHistoryPoint[];
+  /** Plain English notes (older shape). */
   notes: string[];
+  /** Same notes with code and params; absent in older saved insights. */
+  note_items?: EpsNote[];
   flags: EpsFlag[];
 }
 
@@ -67,7 +82,15 @@ export interface EpsInsights {
   sector_median_pe: Record<string, number>;
   portfolio: EpsPortfolio;
   holdings: EpsHolding[];
-  skipped: { symbol: string; reason: string }[];
+  skipped: EpsSkipped[];
+}
+
+export interface EpsSkipped {
+  symbol: string;
+  /** English reason from the server. */
+  reason: string;
+  /** MUTUAL_FUND, NO_QUARTERLY, NO_SHARES or NO_PROFIT; absent in older saved insights. */
+  reason_code?: string;
 }
 
 export async function fetchEpsInsights(): Promise<EpsInsights> {

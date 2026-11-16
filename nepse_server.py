@@ -223,6 +223,23 @@ class HamroShareMarketFetcher:
             print(f"[nepse_server] HamroShare all securities fetch failed: {e}")
         return []
 
+    @staticmethod
+    def _label_issue_tranche(iss):
+        """HamroShare reports every IPO tranche as 'Others'. Recover the
+        tranche (local, foreign employee, general public) from the
+        announcement link slug so separate tranches are not conflated."""
+        base = iss.get("displayable_share_type") or "IPO"
+        if base.strip().lower() != "others":
+            return base
+        slug = (iss.get("announcement_link") or "").lower()
+        if "foreign" in slug and "employ" in slug:
+            return "IPO - Foreign Employees"
+        if "local" in slug or "project-affected" in slug:
+            return "IPO - Local"
+        if "general-public" in slug:
+            return "IPO - General Public"
+        return base
+
     async def get_ipos(self):
         """Fetch upcoming and active corporate issues (IPOs, Right Shares, Mutual Funds)."""
         cache_key = 'hamro_ipos'
@@ -249,7 +266,8 @@ class HamroShareMarketFetcher:
                         cname_clean = re.sub(r'<[^>]+>', '', str(cname)).strip()
                         sym_clean = re.sub(r'<[^>]+>', '', str(sym)).strip().upper()
                         
-                        unique_id = f"{sym_clean}_{iss.get('opening_date')}_{iss.get('displayable_share_type')}"
+                        share_type = self._label_issue_tranche(iss)
+                        unique_id = f"{sym_clean}_{iss.get('opening_date')}_{share_type}_{iss.get('total_units')}"
                         if unique_id in seen_keys:
                             continue
                         seen_keys.add(unique_id)
@@ -257,7 +275,7 @@ class HamroShareMarketFetcher:
                         all_issues.append({
                             "symbol": sym_clean or None,
                             "company_name": cname_clean or sym_clean,
-                            "share_type": iss.get("displayable_share_type") or "IPO",
+                            "share_type": share_type,
                             "issue_price": float(iss.get("issue_price") or 100),
                             "total_units": float(iss.get("total_units") or 0),
                             "opening_date": iss.get("opening_date"),
@@ -2058,6 +2076,9 @@ def fetch_news(symbol: str):
             print(f"[nepse_server] News fetch failed for {symbol}: {detail}")
             return jsonify({'error': f'Fetch failed for {symbol}', 'details': detail}), 500
             
+        # Re-run event extraction in the background so the response is not delayed
+        start_news_event_extraction()
+
         # Return updated news for this symbol
         db = load_news_db()
         return jsonify({'symbol': symbol, 'news': db.get(symbol, []), 'message': 'Successfully fetched news'})
@@ -2067,14 +2088,99 @@ def fetch_news(symbol: str):
         return jsonify({'error': f'Failed to fetch news for {symbol}', 'details': str(e)}), 500
 
 
+# --- News events (tools/extract_news_events.py -> db/news_events.json) ------
+
+NEWS_EVENTS_PATH = os.path.join(os.path.dirname(__file__), "db", "news_events.json")
+_news_extract_lock = threading.Lock()
+_news_extract_pending = threading.Event()
+
+
+def run_news_event_extraction(timeout: int = 300) -> bool:
+    """Run the rule-based news event extractor. Logs failures, never raises."""
+    project_root = os.path.dirname(os.path.abspath(__file__))
+    try:
+        res = subprocess.run(
+            [sys.executable, "tools/extract_news_events.py"],
+            capture_output=True, text=True, cwd=project_root, timeout=timeout
+        )
+        if res.returncode != 0:
+            print(f"[nepse_server] News event extraction failed: {res.stderr or res.stdout}")
+            return False
+        print(f"[nepse_server] News events updated: {(res.stdout or '').strip().splitlines()[-1:]}")
+        return True
+    except Exception as e:
+        print(f"[nepse_server] News event extraction error: {e}")
+        return False
+
+
+def _news_extract_worker():
+    # Several fetches in a row (one per symbol) collapse into one or two runs.
+    while True:
+        _news_extract_pending.clear()
+        run_news_event_extraction()
+        if not _news_extract_pending.is_set():
+            break
+    _news_extract_lock.release()
+
+
+def start_news_event_extraction():
+    """Start the extractor in a background thread; if one is running, queue one more run."""
+    _news_extract_pending.set()
+    if _news_extract_lock.acquire(blocking=False):
+        threading.Thread(target=_news_extract_worker, daemon=True).start()
+
+
+@app.route('/api/news/events', methods=['GET'])
+def get_news_events():
+    """Structured news events, newest first. ?symbols=A,B limits to those symbols.
+    'upcoming' lists events whose action_date is today or later, soonest first."""
+    try:
+        with open(NEWS_EVENTS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        data = {}
+    except Exception as e:
+        print(f"[nepse_server] Error loading news events: {e}")
+        return jsonify({'error': 'Could not read news events', 'details': str(e)}), 500
+
+    events = data.get("events", []) if isinstance(data, dict) else []
+    raw = request.args.get("symbols", "")
+    wanted = {s.strip().upper() for s in raw.split(",") if s.strip()}
+    if wanted:
+        events = [e for e in events if str(e.get("symbol", "")).upper() in wanted]
+    events = sorted(events, key=lambda e: e.get("date") or "", reverse=True)
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    upcoming = sorted(
+        (e for e in events if e.get("action_date") and e["action_date"] >= today),
+        key=lambda e: e["action_date"]
+    )
+    return jsonify({
+        'generated_at': data.get("generated_at") if isinstance(data, dict) else None,
+        'today': today,
+        'events': events,
+        'upcoming': upcoming,
+    })
+
+
 # ============================================================================
 # Main
 # ============================================================================
 
 def _warmup_nepse():
-    """Pre-fetch NEPSE data at startup so the token handshake is done
-    before the first browser request arrives."""
-    time.sleep(3)  # Give Flask a moment to bind its port first
+    """Pre-fetch data at startup so the first browser request finds it cached.
+
+    Live prices go first and without delay: they are what the dashboard waits
+    on, take ~3-7 s cold (two HamroShare pages over the internet), and do not
+    need Flask to be listening. The cache (30 s) is still fresh when the page
+    asks for it. The slower NEPSE index/token work follows.
+    """
+    print("[Warmup] Pre-fetching live market...")
+    try:
+        run_async(nepse_fetcher.get_live_market())
+        print("[Warmup] Live market cached OK")
+    except Exception as e:
+        print(f"[Warmup] Live market failed (will retry on first request): {e}")
     print("[Warmup] Pre-fetching NEPSE index...")
     try:
         run_async(nepse_fetcher.get_nepse_index())
@@ -2133,6 +2239,9 @@ def _daily_refresh_loop():
                     print("[DailyRefresh] Dividend announcements refreshed")
                 except Exception as e:
                     print(f"[DailyRefresh] dividends failed: {e}")
+
+                # Turn the fresh headlines into structured events (logs and continues on failure)
+                meta["newsEventsOk"] = run_news_event_extraction()
 
                 meta["lastDailyRefresh"] = today
                 meta["lastDailyRefreshAt"] = datetime.now().isoformat(timespec="seconds")

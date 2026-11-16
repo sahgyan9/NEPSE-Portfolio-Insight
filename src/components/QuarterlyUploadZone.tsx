@@ -2,7 +2,7 @@
 // Drag-and-drop PDF upload with status feedback, duplicate warning, and unknown-company dialog
 
 import { useState, useRef, useCallback } from 'react';
-import { Upload, FileText, CheckCircle2, AlertTriangle, XCircle, Loader2, X, HelpCircle } from 'lucide-react';
+import { Upload, CheckCircle2, AlertTriangle, XCircle, Loader2, X, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
@@ -20,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { useT } from '@/i18n';
 import { uploadQuarterlyPdf } from '@/services/quarterlyApi';
 import type { UploadResponse, UploadSuccessResponse, UploadNeedsConfirmationResponse } from '@/types/quarterly';
 
@@ -37,6 +38,7 @@ type UploadState =
   | { phase: 'error'; message: string };
 
 export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProps) => {
+  const { t } = useT();
   const [state, setState] = useState<UploadState>({ phase: 'idle' });
   const [confirmSymbol, setConfirmSymbol] = useState('');
   const [confirmSector, setConfirmSector] = useState('hydro');
@@ -45,7 +47,7 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
 
   const processFile = useCallback(async (file: File, opts?: { overrideSymbol?: string; overrideSector?: string }) => {
     if (!file.name.toLowerCase().endsWith('.pdf')) {
-      setState({ phase: 'error', message: 'Only PDF files are accepted.' });
+      setState({ phase: 'error', message: t('quarterly.upOnlyPdf') });
       return;
     }
 
@@ -68,12 +70,12 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         setConfirmSymbol('');
         setState({ phase: 'needs_confirmation', partialResult: response as UploadNeedsConfirmationResponse });
       } else {
-        setState({ phase: 'error', message: (response as { error: string }).error || 'Unknown error.' });
+        setState({ phase: 'error', message: (response as { error: string }).error || t('quarterly.upUnknown') });
       }
     } catch (err) {
-      setState({ phase: 'error', message: 'Could not connect to the server. Is nepse_server.py running?' });
+      setState({ phase: 'error', message: t('quarterly.upNoServer') });
     }
-  }, [onUploadSuccess]);
+  }, [onUploadSuccess, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -115,31 +117,31 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         onDrop={handleDrop}
         onClick={() => (isIdle || isDragging) && fileInputRef.current?.click()}
         className={`
-          relative border-2 border-dashed rounded-xl p-8 transition-all duration-200 cursor-pointer
+          relative border-2 border-dashed rounded-xl p-5 sm:p-8 transition-colors duration-200 cursor-pointer
           flex flex-col items-center justify-center gap-3 min-h-[160px]
-          ${isDragging ? 'border-primary bg-primary/10 scale-[1.01]' : ''}
+          ${isDragging ? 'border-primary bg-primary/10' : ''}
           ${isIdle ? 'border-border hover:border-primary/60 hover:bg-primary/5' : ''}
-          ${isParsing ? 'border-blue-500/50 bg-blue-500/5 cursor-wait' : ''}
-          ${state.phase === 'success' ? 'border-green-500/50 bg-green-500/5 cursor-default' : ''}
-          ${state.phase === 'duplicate' ? 'border-yellow-500/50 bg-yellow-500/5 cursor-default' : ''}
-          ${state.phase === 'error' ? 'border-red-500/50 bg-red-500/5 cursor-default' : ''}
+          ${isParsing ? 'border-primary/50 bg-primary/5 cursor-wait' : ''}
+          ${state.phase === 'success' ? 'border-success/50 bg-success/5 cursor-default' : ''}
+          ${state.phase === 'duplicate' ? 'border-warning/50 bg-warning/5 cursor-default' : ''}
+          ${state.phase === 'error' ? 'border-destructive/50 bg-destructive/5 cursor-default' : ''}
         `}
       >
         {/* Idle / Dragging */}
         {(isIdle || isDragging) && (
           <>
             <div className={`p-4 rounded-full ${isDragging ? 'bg-primary/20' : 'bg-muted'} transition-colors`}>
-              <Upload className={`w-8 h-8 ${isDragging ? 'text-primary' : 'text-muted-foreground'}`} />
+              <Upload className={`w-8 h-8 ${isDragging ? 'text-primary' : 'text-muted-foreground'}`} aria-hidden="true" />
             </div>
             <div className="text-center">
-              <p className="font-semibold text-foreground">
-                {isDragging ? 'Drop the PDF here' : 'Drop quarterly report PDF'}
+              <p className="font-semibold leading-relaxed text-foreground">
+                {isDragging ? t('quarterly.upDropHere') : t('quarterly.upDrop')}
               </p>
               <p className="text-sm text-muted-foreground mt-1">
-                or <span className="text-primary underline underline-offset-2">browse files</span>
+                {t('quarterly.upOr')} <span className="text-primary underline underline-offset-2">{t('quarterly.upBrowse')}</span>
               </p>
-              <p className="text-xs text-muted-foreground mt-2">
-                Any filename works — company, year &amp; quarter auto-detected from PDF content
+              <p className="text-xs leading-relaxed text-muted-foreground mt-2">
+                {t('quarterly.upAnyName')}
               </p>
             </div>
           </>
@@ -148,11 +150,11 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Parsing */}
         {isParsing && (
           <>
-            <Loader2 className="w-10 h-10 text-blue-700 animate-spin" />
-            <div className="text-center">
-              <p className="font-semibold">Parsing PDF…</p>
+            <Loader2 className="w-10 h-10 text-primary animate-spin" aria-hidden="true" />
+            <div className="text-center" role="status">
+              <p className="font-semibold">{t('quarterly.upParsing')}</p>
               <p className="text-sm text-muted-foreground mt-1 max-w-xs truncate">{(state as { filename: string }).filename}</p>
-              <p className="text-xs text-muted-foreground mt-1">Detecting company, quarter &amp; extracting financials</p>
+              <p className="text-xs leading-relaxed text-muted-foreground mt-1">{t('quarterly.upParsingHelp')}</p>
             </div>
           </>
         )}
@@ -160,16 +162,16 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Success */}
         {state.phase === 'success' && (
           <>
-            <CheckCircle2 className="w-10 h-10 text-green-700" />
+            <CheckCircle2 className="w-10 h-10 text-success" aria-hidden="true" />
             <div className="text-center">
-              <p className="font-semibold text-green-700">Saved successfully!</p>
+              <p className="font-semibold text-success">{t('quarterly.upSaved')}</p>
               <p className="text-sm font-mono font-bold mt-1">
-                {state.result.symbol} – {state.result.quarter_label}
+                {state.result.symbol} - {state.result.quarter_label}
               </p>
               <p className="text-xs text-muted-foreground">{state.result.company_name}</p>
             </div>
-            <Button size="sm" variant="outline" onClick={reset} className="mt-2">
-              Upload another
+            <Button size="sm" variant="outline" onClick={reset} className="mt-2 h-11 sm:h-9">
+              {t('quarterly.upAnother')}
             </Button>
           </>
         )}
@@ -177,16 +179,16 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Duplicate */}
         {state.phase === 'duplicate' && (
           <>
-            <AlertTriangle className="w-10 h-10 text-yellow-700" />
+            <AlertTriangle className="w-10 h-10 text-warning" aria-hidden="true" />
             <div className="text-center">
-              <p className="font-semibold text-yellow-700">Already exists</p>
+              <p className="font-semibold text-warning">{t('quarterly.upExists')}</p>
               <p className="text-sm mt-1">
-                <span className="font-mono font-bold">{state.symbol}</span> – {state.quarter_label}
+                <span className="font-mono font-bold">{state.symbol}</span> - {state.quarter_label}
               </p>
-              <p className="text-xs text-muted-foreground mt-1">This quarter is already in the database.</p>
+              <p className="text-xs leading-relaxed text-muted-foreground mt-1">{t('quarterly.upExistsHelp')}</p>
             </div>
-            <Button size="sm" variant="outline" onClick={reset} className="mt-2">
-              OK
+            <Button size="sm" variant="outline" onClick={reset} className="mt-2 h-11 sm:h-9">
+              {t('quarterly.upOk')}
             </Button>
           </>
         )}
@@ -194,13 +196,13 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         {/* Error */}
         {state.phase === 'error' && (
           <>
-            <XCircle className="w-10 h-10 text-red-700" />
-            <div className="text-center">
-              <p className="font-semibold text-red-700">Error</p>
-              <p className="text-sm text-muted-foreground mt-1 max-w-xs">{state.message}</p>
+            <XCircle className="w-10 h-10 text-destructive" aria-hidden="true" />
+            <div className="text-center" role="alert">
+              <p className="font-semibold text-destructive">{t('quarterly.upError')}</p>
+              <p className="text-sm leading-relaxed text-muted-foreground mt-1 max-w-xs">{state.message}</p>
             </div>
-            <Button size="sm" variant="outline" onClick={reset} className="mt-2">
-              Try again
+            <Button size="sm" variant="outline" onClick={reset} className="mt-2 h-11 sm:h-9">
+              {t('quarterly.upTryAgain')}
             </Button>
           </>
         )}
@@ -222,59 +224,59 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-yellow-700" />
-              Company Not Recognized
+              <HelpCircle className="w-5 h-5 text-warning" aria-hidden="true" />
+              {t('quarterly.upDialogTitle')}
             </DialogTitle>
           </DialogHeader>
 
           {state.phase === 'needs_confirmation' && (
             <div className="space-y-4 py-2">
               <div className="p-3 bg-muted rounded-lg text-sm space-y-1">
-                <p><span className="text-muted-foreground">Detected name:</span> <span className="font-medium">{state.partialResult.detected_company_name}</span></p>
-                <p><span className="text-muted-foreground">FY:</span> <span className="font-mono">{state.partialResult.detected_fy}</span></p>
-                <p><span className="text-muted-foreground">Quarter:</span> <span className="font-mono">Q{state.partialResult.detected_quarter}</span></p>
+                <p><span className="text-muted-foreground">{t('quarterly.upDetectedName')}</span> <span className="font-medium">{state.partialResult.detected_company_name}</span></p>
+                <p><span className="text-muted-foreground">{t('quarterly.upFy')}</span> <span className="font-mono">{state.partialResult.detected_fy}</span></p>
+                <p><span className="text-muted-foreground">{t('quarterly.upQuarter')}</span> <span className="font-mono">Q{state.partialResult.detected_quarter}</span></p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="confirm-symbol">NEPSE Symbol <span className="text-red-700">*</span></Label>
+                <Label htmlFor="confirm-symbol">{t('quarterly.upSymbolLabel')} <span className="text-destructive">*</span></Label>
                 <Input
                   id="confirm-symbol"
-                  placeholder="e.g. SAHAS, UPPER, CHCL"
+                  placeholder={t('quarterly.upSymbolPlaceholder')}
                   value={confirmSymbol}
                   onChange={(e) => setConfirmSymbol(e.target.value.toUpperCase())}
-                  className="font-mono"
+                  className="h-11 font-mono"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label>Sector</Label>
+                <Label>{t('quarterly.upSector')}</Label>
                 <Select value={confirmSector} onValueChange={setConfirmSector}>
-                  <SelectTrigger>
+                  <SelectTrigger className="h-11">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="hydro">Hydro Power</SelectItem>
-                    <SelectItem value="bank">Commercial Bank</SelectItem>
-                    <SelectItem value="microfinance">Microfinance</SelectItem>
-                    <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                    <SelectItem value="insurance">Insurance</SelectItem>
+                    <SelectItem value="hydro">{t('quarterly.upSecHydro')}</SelectItem>
+                    <SelectItem value="bank">{t('quarterly.upSecBank')}</SelectItem>
+                    <SelectItem value="microfinance">{t('quarterly.upSecMicrofinance')}</SelectItem>
+                    <SelectItem value="manufacturing">{t('quarterly.upSecManufacturing')}</SelectItem>
+                    <SelectItem value="insurance">{t('quarterly.upSecInsurance')}</SelectItem>
                   </SelectContent>
                 </Select>
-                <p className="text-xs text-muted-foreground">
-                  This symbol will be added automatically for future PDFs.
+                <p className="text-xs leading-relaxed text-muted-foreground">
+                  {t('quarterly.upSectorHelp')}
                 </p>
               </div>
 
               <div className="flex gap-2 pt-2">
                 <Button
-                  className="flex-1"
+                  className="h-11 flex-1"
                   disabled={!confirmSymbol.trim()}
                   onClick={handleConfirmSubmit}
                 >
-                  Save as {confirmSymbol || '…'}
+                  {t('quarterly.upSaveAs', { symbol: confirmSymbol || '...' })}
                 </Button>
-                <Button variant="outline" onClick={reset}>
-                  <X className="w-4 h-4" />
+                <Button variant="outline" className="h-11 w-11 p-0" onClick={reset} aria-label={t('quarterly.upCloseAria')}>
+                  <X className="w-4 h-4" aria-hidden="true" />
                 </Button>
               </div>
             </div>
@@ -290,7 +292,7 @@ export const QuarterlyUploadZone = ({ onUploadSuccess }: QuarterlyUploadZoneProp
               {sym}
             </Badge>
           ))}
-          <Badge variant="outline" className="text-xs text-muted-foreground">+ any hydro PDF</Badge>
+          <Badge variant="outline" className="text-xs text-muted-foreground">{t('quarterly.upAnyHydro')}</Badge>
         </div>
       )}
     </div>

@@ -1,5 +1,6 @@
 /** Portfolio risk data from the local optimisation endpoint. */
 import { useQuery } from "@tanstack/react-query";
+import { translate } from "@/i18n";
 
 const BASE = import.meta.env.DEV ? "/api/portfolio-db/api" : "http://localhost:5001/api";
 
@@ -11,6 +12,12 @@ export interface RiskFinding {
   title: string;
   detail: string;
   symbols: string[];
+  /**
+   * Raw values behind title/detail (symbol, sector, percent numbers such as 23.4, counts),
+   * used to rebuild the sentence in the reader's language. Absent in reports made
+   * before this field existed; see src/lib/findingText.ts.
+   */
+  params?: Record<string, string | number | boolean>;
 }
 
 export interface RiskHolding {
@@ -78,6 +85,9 @@ export interface RiskData {
     billedShare?: number;
     firstFlow?: string;
     note?: string;
+    /** Names the `home.rvmNote_<noteCode>` template; absent in reports saved before it existed. */
+    noteCode?: string;
+    noteParams?: Record<string, string | number>;
   };
   coverage: { measuredWeight: number; proxied: { symbol: string; method: string }[] };
   holdings: RiskHolding[];
@@ -100,10 +110,10 @@ export interface OptimizationResponse {
 
 export async function fetchOptimization(): Promise<OptimizationResponse> {
   const res = await fetch(`${BASE}/portfolio-optimization`);
-  if (!res.ok) throw new Error(`Risk data unavailable (${res.status})`);
+  if (!res.ok) throw new Error(translate("risk.errStatus", { status: res.status }));
   const data = await res.json();
   if (!data.optimization || data.optimization.error) {
-    throw new Error(data.optimization?.error || "No risk data returned");
+    throw new Error(data.optimization?.error || translate("risk.errNoData"));
   }
   return data.optimization as OptimizationResponse;
 }

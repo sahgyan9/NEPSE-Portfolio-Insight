@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ChartCard, TooltipBox, axisLine, axisTick, fmtAxisCompact, fmtRs, makeSectorColorer, CHART } from "@/components/charts";
+import { ChartCard, TooltipBox, axisLine, axisTick, fmtAxisCompact, makeSectorColorer, CHART } from "@/components/charts";
 import type { StockHolding } from "@/data/portfolioData";
+import { useT } from "@/i18n";
+import { fmtMoney } from "@/i18n/format";
 
 interface Props {
   holdings: StockHolding[];
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export const TopHoldingsBars = ({ holdings, loading, limit = 8 }: Props) => {
+  const { t } = useT();
   const { rows, total } = useMemo(() => {
     const total = holdings.reduce((s, h) => s + h.currentValue, 0);
     const rows = [...holdings]
@@ -23,10 +26,11 @@ export const TopHoldingsBars = ({ holdings, loading, limit = 8 }: Props) => {
 
   return (
     <ChartCard
-      title="Which stocks matter most?"
-      subtitle={rows.length ? `The top 3 make up ${(topShare * 100).toFixed(0)}% of the portfolio` : undefined}
+      title={t("home.thbTitle")}
+      subtitle={rows.length ? t("home.thbSubtitle", { percent: (topShare * 100).toFixed(0) }) : undefined}
       loading={loading}
       empty={rows.length === 0}
+      emptyMessage={t("home.chartEmpty")}
       height={260}
     >
       <div style={{ height: Math.max(180, rows.length * 30 + 30) }}>
@@ -41,9 +45,9 @@ export const TopHoldingsBars = ({ holdings, loading, limit = 8 }: Props) => {
                   <TooltipBox
                     title={payload[0].payload.name}
                     rows={[
-                      { label: "Value", value: fmtRs(payload[0].value as number) },
-                      { label: "Share", value: `${(payload[0].payload.share * 100).toFixed(1)}%` },
-                      { label: "Sector", value: payload[0].payload.sector, color: color(payload[0].payload.sector) },
+                      { label: t("home.tipValue"), value: fmtMoney(payload[0].value as number) },
+                      { label: t("home.tipShare"), value: `${(payload[0].payload.share * 100).toFixed(1)}%` },
+                      { label: t("home.tipSector"), value: payload[0].payload.sector, color: color(payload[0].payload.sector) },
                     ]}
                   />
                 ) : null
@@ -57,7 +61,7 @@ export const TopHoldingsBars = ({ holdings, loading, limit = 8 }: Props) => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <p className="mt-1 text-xs text-muted-foreground">Bar colour matches the sector colours in the chart beside it. Total {fmtRs(total)}.</p>
+      <p className="mt-1 text-xs text-muted-foreground">{t("home.thbFooter", { total: fmtMoney(total) })}</p>
     </ChartCard>
   );
 };

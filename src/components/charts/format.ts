@@ -1,20 +1,26 @@
 /** Number formatting helpers shared by all charts. NPR uses lakh/crore wording. */
 
+import { getLang } from "@/i18n";
+
+const rs = () => (getLang() === "ne" ? "रु." : "Rs.");
+const lakh = () => (getLang() === "ne" ? "लाख" : "lakh");
+const crore = () => (getLang() === "ne" ? "करोड" : "cr");
+
 const inr = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
 
 /** Rs. 12,34,567 (Indian digit grouping) */
 export const fmtRs = (v: number | null | undefined): string =>
-  v === null || v === undefined || Number.isNaN(v) ? "-" : `Rs. ${inr.format(Math.round(v))}`;
+  v === null || v === undefined || Number.isNaN(v) ? "-" : `${rs()} ${inr.format(Math.round(v))}`;
 
 /** Compact: Rs. 1.20 lakh, Rs. 3.40 cr. Used on tight labels. */
 export const fmtRsCompact = (v: number | null | undefined): string => {
   if (v === null || v === undefined || Number.isNaN(v)) return "-";
   const a = Math.abs(v);
   const sign = v < 0 ? "-" : "";
-  if (a >= 1e7) return `${sign}Rs. ${(a / 1e7).toFixed(2)} cr`;
-  if (a >= 1e5) return `${sign}Rs. ${(a / 1e5).toFixed(2)} lakh`;
-  if (a >= 1e3) return `${sign}Rs. ${(a / 1e3).toFixed(1)}k`;
-  return `${sign}Rs. ${a.toFixed(0)}`;
+  if (a >= 1e7) return `${sign}${rs()} ${(a / 1e7).toFixed(2)} ${crore()}`;
+  if (a >= 1e5) return `${sign}${rs()} ${(a / 1e5).toFixed(2)} ${lakh()}`;
+  if (a >= 1e3) return `${sign}${rs()} ${(a / 1e3).toFixed(1)}k`;
+  return `${sign}${rs()} ${a.toFixed(0)}`;
 };
 
 /** Axis version without the currency prefix */

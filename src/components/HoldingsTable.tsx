@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect, useMemo } from "react";
-import { ArrowUpDown, TrendingUp, TrendingDown, Info, Loader2, Search, X, Gift } from "lucide-react";
+import { ArrowUpDown, TrendingUp, TrendingDown, Info, Loader2, Search, X, Gift, ChevronDown } from "lucide-react";
 import { TableCell, TableHead, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -8,8 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { StockHolding } from "@/data/portfolioData";
-import { fetchMultipleFundamentals, MerolaganiFundamentals } from "@/services/merolaganiApi";
+import { fetchMultipleFundamentals } from "@/services/merolaganiApi";
 import { StockSymbolLink } from "@/components/StockSymbolLink";
+import { useT } from "@/i18n";
+import { fmtMoney, fmtNumber, fmtPercent } from "@/i18n/format";
+import { useViewMode } from "@/hooks/useViewMode";
 
 import { Link } from "react-router-dom";
 
@@ -28,11 +31,177 @@ interface EnhancedHolding extends StockHolding {
 type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio" | "totalDividendValue";
 type SortOrder = "asc" | "desc";
 
+/** Options for the single sort control shown above the phone card list. */
+const MOBILE_SORTS: { value: string; key: SortKey; order: SortOrder; label: string }[] = [
+  { value: "currentValue:desc", key: "currentValue", order: "desc", label: "holdings.sortValueDesc" },
+  { value: "gainLoss:desc", key: "gainLoss", order: "desc", label: "holdings.sortGainDesc" },
+  { value: "gainLossPercent:desc", key: "gainLossPercent", order: "desc", label: "holdings.sortGainPctDesc" },
+  { value: "gainLossPercent:asc", key: "gainLossPercent", order: "asc", label: "holdings.sortGainPctAsc" },
+  { value: "totalDividendValue:desc", key: "totalDividendValue", order: "desc", label: "holdings.sortDividendDesc" },
+  { value: "quantity:desc", key: "quantity", order: "desc", label: "holdings.sortKittaDesc" },
+  { value: "scrip:asc", key: "scrip", order: "asc", label: "holdings.sortSymbolAsc" },
+];
+
+const bookValueOf = (h: EnhancedHolding): number | null =>
+  h.liveBookValue !== null && h.liveBookValue !== undefined ? h.liveBookValue : h.bookValue ?? null;
+
+const pbOf = (h: EnhancedHolding): number | null =>
+  h.livePbRatio !== null && h.livePbRatio !== undefined ? h.livePbRatio : h.pbRatio ?? null;
+
+const hasDividend = (h: EnhancedHolding) =>
+  (!!h.latestDividendPercent && h.latestDividendPercent > 0) || !!h.latestBonusRatio;
+
+/** Profit or loss with an icon and a word, so colour is never the only signal. */
+const GainLoss = ({ holding, size = "sm" }: { holding: EnhancedHolding; size?: "sm" | "lg" }) => {
+  const { t } = useT();
+  const up = holding.gainLoss >= 0;
+  const Icon = up ? TrendingUp : TrendingDown;
+  return (
+    <div className={cn("flex items-center gap-1.5", up ? "text-success" : "text-destructive")}>
+      <Icon className={size === "lg" ? "h-5 w-5" : "h-4 w-4"} aria-hidden="true" />
+      <span className={cn("font-medium", size === "lg" ? "text-base" : "text-sm")}>
+        {up ? t("holdings.gain") : t("holdings.loss")}
+      </span>
+      <span className={cn("font-mono font-medium", size === "lg" ? "text-base" : "text-sm")}>
+        {fmtMoney(Math.abs(holding.gainLoss))}
+      </span>
+      <span className="font-mono text-xs">({fmtPercent(holding.gainLossPercent, 2)})</span>
+    </div>
+  );
+};
+
+/** Short dividend summary (cash % and amount, bonus ratio and kitta). */
+const DividendLines = ({ holding }: { holding: EnhancedHolding }) => {
+  const { t } = useT();
+  if (!hasDividend(holding)) return <span className="text-xs text-muted-foreground">-</span>;
+  const hasCash = !!holding.latestDividendPercent && holding.latestDividendPercent > 0;
+  return (
+    <div className="flex flex-col items-start gap-0.5">
+      {hasCash && (
+        <>
+          <span className="font-mono font-medium text-xs text-foreground">
+            {t("holdings.cashShort", { pct: fmtPercent(holding.latestDividendPercent, 1, false) })}
+          </span>
+          <span className="font-mono text-xs text-muted-foreground">{fmtMoney(holding.dividendIncome ?? 0)}</span>
+        </>
+      )}
+      {holding.latestBonusRatio && (
+        <>
+          <span className="font-mono font-medium text-xs text-foreground">
+            {t("holdings.bonusShort", { ratio: holding.latestBonusRatio })}
+          </span>
+          {!hasCash && (
+            <span className="font-mono text-xs text-muted-foreground">
+              {holding.bonusShares
+                ? t("holdings.bonusKitta", { n: fmtNumber(holding.bonusShares), value: fmtMoney(holding.bonusShareValue || 0) })
+                : holding.bonusShareValue
+                  ? fmtMoney(holding.bonusShareValue)
+                  : ""}
+            </span>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+/** One holding as a card, used below the md breakpoint. */
+const HoldingCard = ({ holding, isSimple }: { holding: EnhancedHolding; isSimple: boolean }) => {
+  const { t } = useT();
+  const [open, setOpen] = useState(false);
+  const detailsId = `holding-more-${holding.scrip}`;
+  const book = bookValueOf(holding);
+  const pb = pbOf(holding);
+
+  return (
+    <li className="surface p-4">
+      <div className="flex items-baseline gap-2 min-w-0">
+        <StockSymbolLink symbol={holding.scrip} className="font-semibold text-primary text-base shrink-0" />
+        <Link
+          to={`/quarterly?symbol=${holding.scrip}`}
+          className="truncate text-sm text-muted-foreground hover:text-primary"
+          title={holding.fullName}
+        >
+          {holding.fullName}
+        </Link>
+      </div>
+
+      <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-sm leading-relaxed">
+        <div>
+          <dt className="text-muted-foreground">{t("holdings.colKitta")}</dt>
+          <dd className="font-mono">{fmtNumber(holding.quantity)}</dd>
+        </div>
+        <div>
+          <dt className="text-muted-foreground">{t("holdings.colAvgCost")}</dt>
+          <dd className="font-mono">{fmtMoney(holding.waccRate, true)}</dd>
+        </div>
+      </dl>
+
+      <div className="mt-3">
+        <p className="text-xs text-muted-foreground">{t("holdings.colValue")}</p>
+        <p className="font-mono text-2xl font-bold text-foreground">{fmtMoney(holding.currentValue)}</p>
+      </div>
+
+      <div className="mt-1">
+        <GainLoss holding={holding} size="lg" />
+      </div>
+
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls={detailsId}
+        className="mt-2 -mx-1 flex min-h-[44px] w-full items-center justify-between rounded-md px-1 text-sm font-medium text-primary"
+      >
+        {open ? t("common.seeLess") : t("common.seeMore")}
+        <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} aria-hidden="true" />
+      </button>
+
+      {open && (
+        <dl id={detailsId} className="grid grid-cols-2 gap-x-4 gap-y-3 border-t border-border pt-3 text-sm leading-relaxed">
+          <div>
+            <dt className="text-muted-foreground">{t("holdings.colLtp")}</dt>
+            <dd className="font-mono">{fmtMoney(holding.currentPrice, true)}</dd>
+          </div>
+          <div>
+            <dt className="text-muted-foreground">{t("holdings.colSector")}</dt>
+            <dd>{holding.sector}</dd>
+          </div>
+          <div className="col-span-2">
+            <dt className="text-muted-foreground">{t("holdings.dividendHeading")}</dt>
+            <dd>
+              <DividendLines holding={holding} />
+            </dd>
+          </div>
+          {!isSimple && (
+            <>
+              <div>
+                <dt className="text-muted-foreground">{t("holdings.colBookValue")}</dt>
+                <dd className="font-mono">
+                  {holding.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : book !== null ? fmtMoney(book, true) : "-"}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-muted-foreground">{t("holdings.colPb")}</dt>
+                <dd className="font-mono">
+                  {holding.isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : pb !== null ? pb.toFixed(2) : "-"}
+                </dd>
+              </div>
+            </>
+          )}
+        </dl>
+      )}
+    </li>
+  );
+};
+
 export const HoldingsTable = ({
   holdings,
   dividendFiscalYear = "082-083",
   onDividendFiscalYearChange,
 }: HoldingsTableProps) => {
+  const { t } = useT();
+  const { isSimple } = useViewMode();
   const [sortKey, setSortKey] = useState<SortKey>("currentValue");
   const [sortOrder, setSortOrder] = useState<SortOrder>("desc");
   const [enhancedHoldings, setEnhancedHoldings] = useState<EnhancedHolding[]>([]);
@@ -173,35 +342,15 @@ export const HoldingsTable = ({
     });
   }, [filteredHoldings, sortKey, sortOrder]);
 
-  const formatCurrency = (value: number) => `Rs. ${value.toLocaleString("en-NP", { maximumFractionDigits: 2 })}`;
-  const formatPercent = (value: number) => `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
-
-  // Color scheme for different columns (avoiding green which is used for Gain/Loss)
-  const columnColors = {
-    index: "text-muted-foreground",
-    symbol: "text-primary",
-    company: "text-muted-foreground",
-    qty: "text-cyan-700",
-    avgCost: "text-amber-700",
-    ltp: "text-violet-500",
-    value: "text-blue-700",
-    gainLoss: "", // Uses success/destructive based on value
-    dividend: "text-amber-700",
-    bookVal: "text-pink-700",
-    pb: "text-orange-700",
-    sector: "text-teal-700",
-  };
-
   // forwardRef and prop spreading let Radix TooltipTrigger asChild attach its ref and handlers.
   const SortableHeader = React.forwardRef<
     HTMLButtonElement,
     {
       label: string;
       sortKeyName: SortKey;
-      colorClass?: string;
       children?: React.ReactNode;
     } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">
-  >(({ label, sortKeyName, colorClass, children, className, onClick, ...rest }, ref) => (
+  >(({ label, sortKeyName, children, className, onClick, ...rest }, ref) => (
     <button
       ref={ref}
       type="button"
@@ -210,93 +359,85 @@ export const HoldingsTable = ({
         onClick?.(e);
         handleSort(sortKeyName);
       }}
-      className={cn("flex items-center gap-1 hover:opacity-80 transition-colors font-semibold", colorClass, className)}
+      className={cn(
+        "flex items-center gap-1 text-left font-semibold text-foreground hover:text-primary transition-colors",
+        sortKey === sortKeyName && "text-primary",
+        className
+      )}
     >
       {label}
-      <ArrowUpDown className="h-3 w-3" />
+      <ArrowUpDown className="h-3 w-3 shrink-0" aria-hidden="true" />
       {children}
     </button>
   ));
   SortableHeader.displayName = "SortableHeader";
 
-  const getPBRatioColor = (pb: number | null) => {
-    if (!pb) return "text-muted-foreground";
-    if (pb < 1) return "text-success"; // Undervalued
-    if (pb < 1.5) return "text-primary"; // Fair value
-    if (pb < 2.5) return "text-accent"; // Slightly overvalued
-    return "text-destructive"; // Overvalued
-  };
+  const fyButton = (fy: string, label: string) => (
+    <button
+      type="button"
+      onClick={() => onDividendFiscalYearChange?.(fy)}
+      aria-pressed={dividendFiscalYear === fy}
+      className={cn(
+        "min-h-[44px] md:min-h-0 md:h-7 px-2.5 rounded-md font-mono text-xs font-medium transition-colors outline-none",
+        dividendFiscalYear === fy
+          ? "bg-primary text-primary-foreground font-semibold"
+          : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+      )}
+    >
+      {label}
+    </button>
+  );
+
+  const isOtherFy = !["082-083", "081-082"].includes(dividendFiscalYear);
+  const dividendHeader =
+    dividendFiscalYear === "latest"
+      ? t("holdings.colDividendLatest")
+      : t("holdings.colDividend", { fy: dividendFiscalYear });
+  const mobileSortValue = `${String(sortKey)}:${sortOrder}`;
 
   return (
-    <div className="surface overflow-hidden ">
+    <div className="surface overflow-hidden">
       <div className="p-4 border-b border-border">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <h3 className="text-lg font-semibold flex items-center gap-2">
-            Portfolio Holdings
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <h3 className="text-lg font-semibold flex flex-wrap items-center gap-2">
+            {t("holdings.title")}
             <Badge variant="secondary" className="font-mono">
-              {holdings.length} stocks
+              {t("holdings.stocksCount", { n: holdings.length })}
             </Badge>
             {isLoadingFundamentals && (
-              <Badge variant="outline" className="gap-1">
-                <Loader2 className="h-3 w-3 animate-spin" />
-                Loading fundamentals...
+              <Badge variant="outline" className="gap-1 font-normal">
+                <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+                {t("holdings.loadingFundamentals")}
               </Badge>
             )}
           </h3>
 
           {onDividendFiscalYearChange && (
-            <div className="flex items-center gap-1.5 bg-muted/40 p-1 rounded-lg border border-border text-xs self-start sm:self-auto">
-              <span className="text-muted-foreground font-semibold px-2 uppercase tracking-wider text-[11px]">
-                Dividend FY
+            <div className="flex flex-wrap items-center gap-1.5 bg-muted/40 p-1 rounded-lg border border-border text-xs self-stretch md:self-auto">
+              <span className="text-muted-foreground font-semibold px-2 text-xs">
+                {t("holdings.dividendFy")}
               </span>
-              <button
-                type="button"
-                onClick={() => onDividendFiscalYearChange("082-083")}
-                className={cn(
-                  "px-2.5 py-1 rounded-md font-mono text-xs font-medium transition-all outline-none",
-                  dividendFiscalYear === "082-083"
-                    ? "bg-primary text-primary-foreground shadow-sm font-semibold"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                )}
-              >
-                082-083 (Current)
-              </button>
-              <button
-                type="button"
-                onClick={() => onDividendFiscalYearChange("081-082")}
-                className={cn(
-                  "px-2.5 py-1 rounded-md font-mono text-xs font-medium transition-all outline-none",
-                  dividendFiscalYear === "081-082"
-                    ? "bg-primary text-primary-foreground shadow-sm font-semibold"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                )}
-              >
-                081-082
-              </button>
+              {fyButton("082-083", t("holdings.fyCurrent", { fy: "082-083" }))}
+              {fyButton("081-082", "081-082")}
               <select
-                value={["082-083", "081-082"].includes(dividendFiscalYear) ? "" : dividendFiscalYear}
+                value={isOtherFy ? dividendFiscalYear : ""}
                 onChange={(e) => {
                   if (e.target.value) onDividendFiscalYearChange(e.target.value);
                 }}
                 className={cn(
-                  "h-7 px-2 text-xs rounded-md border border-input bg-background font-mono focus:outline-none cursor-pointer",
-                  !["082-083", "081-082"].includes(dividendFiscalYear)
-                    ? "bg-primary text-primary-foreground font-semibold"
-                    : "text-muted-foreground hover:text-foreground"
+                  "min-h-[44px] md:min-h-0 md:h-7 px-2 text-xs rounded-md border border-input bg-background font-mono focus:outline-none cursor-pointer",
+                  isOtherFy ? "bg-primary text-primary-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
                 )}
-                title="Select other fiscal years"
+                title={t("holdings.moreFysTitle")}
+                aria-label={t("holdings.moreFysTitle")}
               >
                 <option value="" disabled className="bg-background text-foreground">
-                  More FYs...
+                  {t("holdings.moreFys")}
                 </option>
-                <option value="080-081" className="bg-background text-foreground">
-                  080-081
-                </option>
-                <option value="079-080" className="bg-background text-foreground">
-                  079-080
-                </option>
+                <option value="080-081" className="bg-background text-foreground">080-081</option>
+                <option value="079-080" className="bg-background text-foreground">079-080</option>
                 <option value="latest" className="bg-background text-foreground">
-                  All-Time Latest
+                  {t("holdings.allTimeLatest")}
                 </option>
               </select>
             </div>
@@ -305,19 +446,21 @@ export const HoldingsTable = ({
 
         {/* Search Bar */}
         <div className="mt-3 relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
           <Input
-            placeholder="Search by symbol, company, or sector..."
+            placeholder={t("holdings.searchPlaceholder")}
+            aria-label={t("holdings.searchPlaceholder")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-9 pr-9 h-9"
+            className="pl-9 pr-11 h-11 md:h-9 text-base md:text-sm"
           />
           {searchQuery && (
             <Button
               variant="ghost"
               size="icon"
-              className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7"
+              className="absolute right-0.5 top-1/2 -translate-y-1/2 h-10 w-10 md:h-7 md:w-7"
               onClick={() => setSearchQuery("")}
+              aria-label={t("holdings.clearSearch")}
             >
               <X className="h-3 w-3" />
             </Button>
@@ -327,174 +470,187 @@ export const HoldingsTable = ({
         {/* Search Results Count */}
         {searchQuery && (
           <p className="mt-2 text-xs text-muted-foreground">
-            Found {filteredHoldings.length} of {holdings.length} stocks
+            {t("holdings.foundCount", { shown: filteredHoldings.length, total: holdings.length })}
           </p>
         )}
+
+        {/* Phone sort control */}
+        <div className="mt-3 md:hidden">
+          <label htmlFor="holdings-sort" className="mb-1 block text-xs font-medium text-muted-foreground">
+            {t("holdings.sortLabel")}
+          </label>
+          <select
+            id="holdings-sort"
+            value={MOBILE_SORTS.some((s) => s.value === mobileSortValue) ? mobileSortValue : ""}
+            onChange={(e) => {
+              const opt = MOBILE_SORTS.find((s) => s.value === e.target.value);
+              if (opt) {
+                setSortKey(opt.key);
+                setSortOrder(opt.order);
+              }
+            }}
+            className="h-11 w-full rounded-md border border-input bg-background px-3 text-sm"
+          >
+            {!MOBILE_SORTS.some((s) => s.value === mobileSortValue) && <option value="" disabled>-</option>}
+            {MOBILE_SORTS.map((s) => (
+              <option key={s.value} value={s.value}>
+                {t(s.label)}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
-      <div className="max-h-[500px] overflow-auto scrollbar-thin relative">
+
+      {/* Phones: one card per holding */}
+      <div className="md:hidden p-3">
+        {sortedHoldings.length === 0 ? (
+          <p className="py-8 text-center text-sm text-muted-foreground">
+            {searchQuery ? t("holdings.emptySearch") : t("holdings.empty")}
+          </p>
+        ) : (
+          <ul className="space-y-3">
+            {sortedHoldings.map((holding) => (
+              <HoldingCard key={holding.scrip} holding={holding} isSimple={isSimple} />
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Tablets and desktops: table */}
+      <div className="hidden md:block max-h-[500px] overflow-auto scrollbar-thin relative">
         <table className="w-full caption-bottom text-sm">
           <thead className="sticky top-0 bg-card z-10 shadow-sm [&_tr]:border-b">
             <tr className="border-b transition-colors bg-card">
-              <TableHead className={cn("w-12", columnColors.index)}>#</TableHead>
-              <TableHead><SortableHeader label="Symbol" sortKeyName="scrip" colorClass={columnColors.symbol} /></TableHead>
-              <TableHead className={cn("hidden lg:table-cell", columnColors.company)}>Company</TableHead>
-              <TableHead><SortableHeader label="Qty" sortKeyName="quantity" colorClass={columnColors.qty} /></TableHead>
-              <TableHead><SortableHeader label="Avg. Cost" sortKeyName="waccRate" colorClass={columnColors.avgCost} /></TableHead>
-              <TableHead><SortableHeader label="LTP" sortKeyName="currentPrice" colorClass={columnColors.ltp} /></TableHead>
-              <TableHead><SortableHeader label="Value" sortKeyName="currentValue" colorClass={columnColors.value} /></TableHead>
-              <TableHead><SortableHeader label="Gain/Loss" sortKeyName="gainLossPercent" colorClass="text-emerald-700" /></TableHead>
+              <TableHead className="w-12 text-muted-foreground">#</TableHead>
+              <TableHead><SortableHeader label={t("holdings.colSymbol")} sortKeyName="scrip" /></TableHead>
+              {!isSimple && <TableHead className="hidden lg:table-cell text-muted-foreground">{t("holdings.colCompany")}</TableHead>}
+              <TableHead><SortableHeader label={t("holdings.colKitta")} sortKeyName="quantity" /></TableHead>
+              <TableHead><SortableHeader label={t("holdings.colAvgCost")} sortKeyName="waccRate" /></TableHead>
+              <TableHead><SortableHeader label={t("holdings.colLtp")} sortKeyName="currentPrice" /></TableHead>
+              <TableHead><SortableHeader label={t("holdings.colValue")} sortKeyName="currentValue" /></TableHead>
+              <TableHead><SortableHeader label={t("holdings.colGainLoss")} sortKeyName="gainLossPercent" /></TableHead>
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <SortableHeader
-                      label={dividendFiscalYear === "latest" ? "Dividend (Latest)" : `Dividend (${dividendFiscalYear})`}
-                      sortKeyName="totalDividendValue"
-                      colorClass={columnColors.dividend}
-                    >
-                      <Gift className="h-3 w-3" />
+                    <SortableHeader label={dividendHeader} sortKeyName="totalDividendValue">
+                      <Gift className="h-3 w-3" aria-hidden="true" />
                     </SortableHeader>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-xs">
-                    <p className="text-xs">
-                      <strong>FY {dividendFiscalYear} Dividend:</strong><br />
-                      Shows declared cash and bonus dividends for FY {dividendFiscalYear}. Click the Dividend FY toggle buttons above the table to switch between current (082-083) and past years.
+                    <p className="text-xs leading-relaxed">
+                      <strong>{t("holdings.dividendTipTitle", { fy: dividendFiscalYear })}</strong>
+                      <br />
+                      {t("holdings.dividendTipBody", { fy: dividendFiscalYear })}
                     </p>
                   </TooltipContent>
                 </Tooltip>
               </TableHead>
-              <TableHead>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <SortableHeader label="Book Val" sortKeyName="liveBookValue" colorClass={columnColors.bookVal}>
-                      <Info className="h-3 w-3" />
-                    </SortableHeader>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-xs">
-                    <p className="text-xs">
-                      <strong>Book Value per Share:</strong><br />
-                      Net asset value divided by outstanding shares.
-                      Compare with LTP to assess if stock is undervalued.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TableHead>
-              <TableHead>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <SortableHeader label="P/B" sortKeyName="livePbRatio" colorClass={columnColors.pb}>
-                      <Info className="h-3 w-3" />
-                    </SortableHeader>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-xs">
-                    <p className="text-xs">
-                      <strong>Price-to-Book Ratio:</strong><br />
-                      &lt; 1.0 = Potentially undervalued<br />
-                      1.0-1.5 = Fair value<br />
-                      1.5-2.5 = Slightly overvalued<br />
-                      &gt; 2.5 = May be overvalued
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TableHead>
-              <TableHead className={cn("hidden md:table-cell font-semibold", columnColors.sector)}>Sector</TableHead>
+              {!isSimple && (
+                <>
+                  <TableHead>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <SortableHeader label={t("holdings.colBookValue")} sortKeyName="liveBookValue">
+                          <Info className="h-3 w-3" aria-hidden="true" />
+                        </SortableHeader>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" className="max-w-xs">
+                        <p className="text-xs leading-relaxed">
+                          <strong>{t("holdings.bookValueTipTitle")}</strong>
+                          <br />
+                          {t("holdings.bookValueTipBody")}
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TableHead>
+                  <TableHead>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <SortableHeader label={t("holdings.colPb")} sortKeyName="livePbRatio">
+                          <Info className="h-3 w-3" aria-hidden="true" />
+                        </SortableHeader>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" className="max-w-xs">
+                        <p className="text-xs leading-relaxed">
+                          <strong>{t("holdings.pbTipTitle")}</strong>
+                          <br />
+                          {t("holdings.pbTipBody")}
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TableHead>
+                  <TableHead className="font-semibold text-foreground">{t("holdings.colSector")}</TableHead>
+                </>
+              )}
             </tr>
           </thead>
           <tbody className="[&_tr:last-child]:border-0">
+            {sortedHoldings.length === 0 && (
+              <TableRow>
+                <TableCell colSpan={isSimple ? 8 : 12} className="h-20 text-center text-muted-foreground">
+                  {searchQuery ? t("holdings.emptySearch") : t("holdings.empty")}
+                </TableCell>
+              </TableRow>
+            )}
             {sortedHoldings.map((holding, index) => (
               <TableRow key={holding.scrip} className="table-row-hover">
-                <TableCell className={cn("font-mono", columnColors.index)}>{index + 1}</TableCell>
+                <TableCell className="font-mono text-muted-foreground">{index + 1}</TableCell>
                 <TableCell>
-                  <StockSymbolLink
-                    symbol={holding.scrip}
-                    className={cn("font-semibold", columnColors.symbol)}
-                  />
+                  <StockSymbolLink symbol={holding.scrip} className="font-semibold text-primary" />
                 </TableCell>
-                <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate">
-                  <Link
-                    to={`/quarterly?symbol=${holding.scrip}`}
-                    className={cn(
-                      columnColors.company,
-                      "border-b border-dashed border-muted-foreground/45 hover:border-solid hover:border-primary hover:text-primary transition-all cursor-pointer inline-block max-w-full"
-                    )}
-                  >
-                    {holding.fullName}
-                  </Link>
-                </TableCell>
-                <TableCell className={cn("font-mono", columnColors.qty)}>{holding.quantity.toLocaleString()}</TableCell>
-                <TableCell className={cn("font-mono text-sm", columnColors.avgCost)}>{formatCurrency(holding.waccRate)}</TableCell>
-                <TableCell className={cn("font-mono", columnColors.ltp)}>{formatCurrency(holding.currentPrice)}</TableCell>
-                <TableCell className={cn("font-mono font-medium", columnColors.value)}>{formatCurrency(holding.currentValue)}</TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-1">
-                    {holding.gainLoss >= 0 ? (
-                      <TrendingUp className="h-4 w-4 text-success" />
-                    ) : (
-                      <TrendingDown className="h-4 w-4 text-destructive" />
-                    )}
-                    <span
-                      className={cn(
-                        "font-mono font-medium",
-                        holding.gainLoss >= 0 ? "text-success" : "text-destructive"
-                      )}
+                {!isSimple && (
+                  <TableCell className="hidden lg:table-cell text-sm max-w-[200px] truncate">
+                    <Link
+                      to={`/quarterly?symbol=${holding.scrip}`}
+                      className="text-muted-foreground border-b border-dashed border-muted-foreground/45 hover:border-solid hover:border-primary hover:text-primary transition-colors cursor-pointer inline-block max-w-full"
                     >
-                      {formatPercent(holding.gainLossPercent)}
-                    </span>
-                  </div>
+                      {holding.fullName}
+                    </Link>
+                  </TableCell>
+                )}
+                <TableCell className="font-mono">{fmtNumber(holding.quantity)}</TableCell>
+                <TableCell className="font-mono text-sm">{fmtMoney(holding.waccRate, true)}</TableCell>
+                <TableCell className="font-mono">{fmtMoney(holding.currentPrice, true)}</TableCell>
+                <TableCell className="font-mono font-medium">{fmtMoney(holding.currentValue)}</TableCell>
+                <TableCell>
+                  <GainLoss holding={holding} />
                 </TableCell>
                 <TableCell>
-                  {(holding.latestDividendPercent && holding.latestDividendPercent > 0) || holding.latestBonusRatio ? (
+                  {hasDividend(holding) ? (
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <div className="flex flex-col items-start gap-0.5">
-                          {holding.latestDividendPercent && holding.latestDividendPercent > 0 && (
-                            <>
-                              <span className={cn("font-mono font-medium text-xs", columnColors.dividend)}>
-                                Cash: {holding.latestDividendPercent.toFixed(1)}%
-                              </span>
-                              <span className="font-mono text-xs text-muted-foreground">
-                                Rs. {holding.dividendIncome?.toLocaleString("en-NP", { maximumFractionDigits: 0 }) || 0}
-                              </span>
-                            </>
-                          )}
-                          {holding.latestBonusRatio && (
-                            <>
-                              <span className="font-mono font-medium text-xs text-emerald-700">
-                                Bonus: {holding.latestBonusRatio}
-                              </span>
-                              {(!holding.latestDividendPercent || holding.latestDividendPercent === 0) && (
-                                <span className="font-mono text-xs text-muted-foreground">
-                                  {holding.bonusShares
-                                    ? `+${holding.bonusShares} sh (${formatCurrency(holding.bonusShareValue || 0)})`
-                                    : (holding.bonusShareValue ? formatCurrency(holding.bonusShareValue) : "")}
-                                </span>
-                              )}
-                            </>
-                          )}
+                        <div>
+                          <DividendLines holding={holding} />
                         </div>
                       </TooltipTrigger>
                       <TooltipContent side="top">
-                        <div className="text-xs space-y-1">
+                        <div className="text-xs space-y-1 leading-relaxed">
                           {holding.latestDividendFiscalYear && (
                             <div className="font-semibold text-primary pb-0.5 border-b border-border/50">
-                              FY {holding.latestDividendFiscalYear} Dividend
+                              {t("holdings.dividendTipTitle", { fy: holding.latestDividendFiscalYear })}
                             </div>
                           )}
-                          {holding.latestDividendPercent && holding.latestDividendPercent > 0 && (
+                          {!!holding.latestDividendPercent && holding.latestDividendPercent > 0 && (
                             <div>
-                              <strong>Cash: {holding.latestDividendPercent}%</strong><br />
-                              Estimated income: Rs. {holding.dividendIncome?.toLocaleString("en-NP") || 0}
+                              <strong>{t("holdings.cashShort", { pct: fmtPercent(holding.latestDividendPercent, 2, false) })}</strong>
+                              <br />
+                              {t("holdings.tipEstIncome", { amount: fmtMoney(holding.dividendIncome ?? 0) })}
                             </div>
                           )}
                           {holding.latestBonusRatio && (
                             <div>
-                              <strong>Bonus: {holding.latestBonusRatio}</strong><br />
-                              Bonus shares: {holding.bonusShares || 0}<br />
-                              Value: Rs. {holding.bonusShareValue?.toLocaleString("en-NP") || 0}
+                              <strong>{t("holdings.bonusShort", { ratio: holding.latestBonusRatio })}</strong>
+                              <br />
+                              {t("holdings.tipBonusShares", { n: fmtNumber(holding.bonusShares || 0) })}
+                              <br />
+                              {t("holdings.tipValue", { amount: fmtMoney(holding.bonusShareValue ?? 0) })}
                             </div>
                           )}
                           {(holding.totalDividendValue || 0) > 0 && (
                             <div className="pt-1 border-t border-border/50 font-semibold text-foreground">
-                              Total Dividend Value: Rs. {(holding.totalDividendValue || ((holding.dividendIncome || 0) + (holding.bonusShareValue || 0))).toLocaleString("en-NP", { maximumFractionDigits: 0 })}
+                              {t("holdings.tipTotal", {
+                                amount: fmtMoney(holding.totalDividendValue || ((holding.dividendIncome || 0) + (holding.bonusShareValue || 0))),
+                              })}
                             </div>
                           )}
                         </div>
@@ -504,55 +660,44 @@ export const HoldingsTable = ({
                     <span className="text-xs text-muted-foreground">-</span>
                   )}
                 </TableCell>
-                <TableCell>
-                  {holding.isLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-                  ) : (
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <span className={cn(
-                          "font-mono font-medium",
-                          columnColors.bookVal
-                        )}>
-                          {holding.liveBookValue !== null && holding.liveBookValue !== undefined
-                            ? `Rs. ${holding.liveBookValue.toFixed(2)}`
-                            : holding.bookValue
-                              ? `Rs. ${holding.bookValue.toFixed(2)}`
-                              : "N/A"
-                          }
+                {!isSimple && (
+                  <>
+                    <TableCell>
+                      {holding.isLoading ? (
+                        <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" aria-label={t("common.loading")} />
+                      ) : (
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <span className="font-mono font-medium">
+                              {bookValueOf(holding) !== null ? fmtMoney(bookValueOf(holding), true) : "-"}
+                            </span>
+                          </TooltipTrigger>
+                          <TooltipContent side="top">
+                            <p className="text-xs">
+                              {holding.liveBookValue !== null && holding.liveBookValue !== undefined
+                                ? t("holdings.liveBookValue")
+                                : t("holdings.fallbackBookValue")}
+                            </p>
+                          </TooltipContent>
+                        </Tooltip>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      {holding.isLoading ? (
+                        <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" aria-label={t("common.loading")} />
+                      ) : (
+                        <span className="font-mono font-medium">
+                          {pbOf(holding) !== null ? (pbOf(holding) as number).toFixed(2) : "-"}
                         </span>
-                      </TooltipTrigger>
-                      <TooltipContent side="top">
-                        <p className="text-xs">
-                          {holding.liveBookValue !== null && holding.liveBookValue !== undefined
-                            ? "Live book value from Merolagani"
-                            : "Fallback data"
-                          }
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
-                  )}
-                </TableCell>
-                <TableCell>
-                  {holding.isLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-                  ) : (
-                    <span className={cn(
-                      "font-mono font-medium",
-                      columnColors.pb
-                    )}>
-                      {holding.livePbRatio !== null && holding.livePbRatio !== undefined
-                        ? holding.livePbRatio.toFixed(2)
-                        : holding.pbRatio?.toFixed(2) || "N/A"
-                      }
-                    </span>
-                  )}
-                </TableCell>
-                <TableCell className="hidden md:table-cell">
-                  <Badge variant="outline" className={cn("text-xs", columnColors.sector)}>
-                    {holding.sector}
-                  </Badge>
-                </TableCell>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant="outline" className="text-xs font-normal">
+                        {holding.sector}
+                      </Badge>
+                    </TableCell>
+                  </>
+                )}
               </TableRow>
             ))}
           </tbody>

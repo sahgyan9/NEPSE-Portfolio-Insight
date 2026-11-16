@@ -3,6 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Explain } from "@/components/Explain";
 import type { GlossaryKey } from "@/lib/glossary";
 import { cn } from "@/lib/utils";
+import { translate } from "@/i18n";
 
 interface ChartCardProps {
   /** State the takeaway question, e.g. "Where is my risk out of proportion to my money?" */
@@ -31,7 +32,7 @@ export const ChartCard = ({
   actions,
   loading,
   empty,
-  emptyMessage = "Not enough data to draw this chart yet.",
+  emptyMessage,
   height,
   footer,
   className,
@@ -58,7 +59,7 @@ export const ChartCard = ({
           className="flex items-center justify-center rounded-md border border-dashed border-border px-3 text-center text-sm text-muted-foreground"
           style={{ height: height ?? 160 }}
         >
-          {emptyMessage}
+          {emptyMessage ?? translate("tools.chartEmpty")}
         </div>
       ) : (
         children

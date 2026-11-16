@@ -2,28 +2,30 @@ import { Link, useNavigate } from "react-router-dom";
 import { Keys } from "@/components/Kbd";
 import { jumpToSection } from "@/lib/jumpTo";
 import { findShortcut } from "@/lib/shortcuts";
+import { useT } from "@/i18n";
 
-const LINKS: { label: string; route: string; section?: string; }[] = [
-  { label: "Holdings", route: "/", section: "holdings" },
-  { label: "Watchlist", route: "/", section: "watchlist" },
-  { label: "News", route: "/", section: "news" },
-  { label: "Dividends", route: "/dividends" },
-  { label: "Risk", route: "/risk" },
-  { label: "Research", route: "/research" },
+const LINKS: { labelKey: string; route: string; section?: string }[] = [
+  { labelKey: "nav.holdings", route: "/", section: "holdings" },
+  { labelKey: "nav.watchlist", route: "/", section: "watchlist" },
+  { labelKey: "nav.news", route: "/", section: "news" },
+  { labelKey: "nav.dividends", route: "/dividends" },
+  { labelKey: "nav.risk", route: "/risk" },
+  { labelKey: "nav.research", route: "/research" },
 ];
 
-/** Plain "Jump to" links for mouse and touch users; key caps show on desktop. */
+/** Plain "Jump to" links for mouse and touch users; key caps show on wide screens only. */
 export const JumpLinks = () => {
+  const { t } = useT();
   const navigate = useNavigate();
   return (
-    <nav aria-label="Jump to" className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm">
-      <span className="text-muted-foreground">Jump to</span>
+    <nav aria-label={t("nav.jumpTo")} className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm">
+      <span className="text-muted-foreground">{t("nav.jumpTo")}</span>
       {LINKS.map((l) => {
         const sc = findShortcut(l.route, l.section);
         const href = l.route + (l.section ? `#${l.section}` : "");
         return (
           <Link
-            key={l.label}
+            key={l.labelKey}
             to={href}
             onClick={(e) => {
               // Already on this page: the hash may not change, so scroll directly.
@@ -33,10 +35,10 @@ export const JumpLinks = () => {
                 jumpToSection(l.section);
               }
             }}
-            className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+            className="inline-flex min-h-[44px] items-center gap-1.5 font-medium lg:min-h-0 text-primary hover:underline"
           >
-            {l.label}
-            {sc && <Keys keys={sc.keys} className="hidden md:inline-flex" />}
+            {t(l.labelKey)}
+            {sc && <Keys keys={sc.keys} className="hidden lg:inline-flex" />}
           </Link>
         );
       })}

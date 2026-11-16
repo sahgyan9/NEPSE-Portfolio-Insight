@@ -2,6 +2,9 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { PortfolioSummary } from "@/data/portfolioData";
 import { useEffect, useState } from "react";
 import { getValueHistory, isServerRunning, ValueHistoryPoint, recordPortfolioValue, getTransactions, DBTransaction } from "@/services/portfolioDb";
+import { useT } from "@/i18n";
+import { bsMonthName, fmtDate, fmtMoney, fmtNumber, fmtPercent, toBS } from "@/i18n/format";
+import { fmtAxisCompact } from "@/components/charts";
 
 interface PortfolioValueChartProps {
   summary: PortfolioSummary;
@@ -21,7 +24,9 @@ interface ChartDataPoint {
   transactions?: TransactionSummary;
 }
 
+/** Older value chart (the home page uses PortfolioValueTrendChart). Draws only recorded history, never simulated data. */
 export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
+  const { t } = useT();
   const [dbData, setDbData] = useState<ChartDataPoint[]>([]);
   const [isDbConnected, setIsDbConnected] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -35,26 +40,25 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
         if (serverUp) {
           const [history, transactions] = await Promise.all([
             getValueHistory(),
-            getTransactions().catch(() => [] as DBTransaction[])
+            getTransactions().catch(() => [] as DBTransaction[]),
           ]);
 
           // Group transactions by date
           const transactionsByDate: Record<string, TransactionSummary> = {};
           transactions.forEach((tx: DBTransaction) => {
-            const dateKey = tx.date.split(' ')[0]; // Extract just the date part
+            const dateKey = tx.date.split(" ")[0];
             if (!transactionsByDate[dateKey]) {
               transactionsByDate[dateKey] = { buys: [], sells: [] };
             }
             const txInfo = { symbol: tx.symbol, quantity: tx.quantity, price: tx.price };
-            if (tx.type === 'BUY') {
+            if (tx.type === "BUY") {
               transactionsByDate[dateKey].buys.push(txInfo);
             } else {
               transactionsByDate[dateKey].sells.push(txInfo);
             }
           });
 
-          // Aggregate history by date - keep only the last entry for each date
-          // and filter out entries with value = 0
+          // Keep only the last entry for each date and drop zero values
           const historyByDate: Record<string, ValueHistoryPoint> = {};
           history.forEach((point: ValueHistoryPoint) => {
             if (point.value > 0) {
@@ -62,33 +66,24 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
             }
           });
 
-          // Convert to array and sort by date
-          const aggregatedHistory = Object.values(historyByDate)
-            .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+          const aggregatedHistory = Object.values(historyByDate).sort(
+            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          );
 
-          // Convert database history to chart format
           const chartData = aggregatedHistory.map((point: ValueHistoryPoint) => {
-            const date = new Date(point.date);
-            const displayDate = date.toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric"
-            });
+            const bs = toBS(point.date);
             return {
-              month: displayDate,
+              month: bs ? `${bs.day} ${bsMonthName(bs.month)}` : point.date,
               value: Math.round(point.value),
               invested: Math.round(point.invested),
               fullDate: point.date,
-              displayDate: date.toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
-              }),
+              displayDate: fmtDate(point.date),
               transactions: transactionsByDate[point.date],
             };
           });
 
           // Update the last point with current actual values
-          if (chartData.length > 0) {
+          if (chartData.length > 0 && summary.currentValue > 0) {
             const lastPoint = chartData[chartData.length - 1];
             lastPoint.value = Math.round(summary.currentValue);
             lastPoint.invested = Math.round(summary.totalInvested);
@@ -96,13 +91,13 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
 
           setDbData(chartData);
 
-          // Record today's value to the database
-          await recordPortfolioValue(summary.currentValue).catch(() => {
-            // Silently fail if recording doesn't work
-          });
+          if (summary.currentValue > 0) {
+            await recordPortfolioValue(summary.currentValue).catch(() => {
+              // Recording is best-effort
+            });
+          }
         }
       } catch (error) {
-        console.log("Database not connected, using simulated data");
         setIsDbConnected(false);
       } finally {
         setLoading(false);
@@ -112,87 +107,53 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
     fetchData();
   }, [summary.currentValue, summary.totalInvested]);
 
-  // Fallback: Simulated historical data for visualization
-  const generateHistoricalData = (): ChartDataPoint[] => {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
-    const baseValue = summary.totalInvested;
-    let currentValue = baseValue * 0.85;
-
-    return months.map((month, index) => {
-      // Simulate gradual growth with some volatility
-      const growth = 1 + (Math.random() * 0.08 - 0.02);
-      currentValue = currentValue * growth;
-
-      // Last month should match actual current value
-      if (index === months.length - 1) {
-        currentValue = summary.currentValue;
-      }
-
-      return {
-        month,
-        value: Math.round(currentValue),
-        invested: baseValue,
-      };
-    });
-  };
-
-  const data = isDbConnected && dbData.length > 0 ? dbData : generateHistoricalData();
+  const data = isDbConnected ? dbData : [];
 
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
-      // Find the correct values by dataKey
       const valueData = payload.find((p: any) => p.dataKey === "value");
       const investedData = payload.find((p: any) => p.dataKey === "invested");
       const dataPoint = payload[0]?.payload as ChartDataPoint;
       const transactions = dataPoint?.transactions;
       const gainLoss = (valueData?.value || 0) - (investedData?.value || 0);
-      const gainLossPercent = investedData?.value ? ((gainLoss / investedData.value) * 100).toFixed(2) : "0";
+      const gainLossPercent = investedData?.value ? fmtPercent((gainLoss / investedData.value) * 100, 2) : "0%";
 
       return (
-        <div className="bg-card border border-border rounded-lg p-3 shadow-sm min-w-[200px]">
-          <p className="font-semibold text-foreground border-b border-border pb-2 mb-2">
-            {dataPoint?.displayDate || label}
-          </p>
+        <div className="w-[220px] max-w-[80vw] rounded-lg border border-border bg-card p-3 shadow-sm">
+          <p className="mb-2 border-b border-border pb-2 font-semibold text-foreground">{dataPoint?.displayDate || label}</p>
           <div className="space-y-1">
-            <p className="text-sm text-primary flex justify-between">
-              <span>Current Value:</span>
-              <span className="font-medium">Rs. {valueData?.value?.toLocaleString("en-NP")}</span>
+            <p className="flex justify-between gap-2 text-sm text-primary">
+              <span>{t("home.tipPortfolioValue")}</span>
+              <span className="font-medium">{fmtMoney(valueData?.value)}</span>
             </p>
-            <p className="text-sm text-muted-foreground flex justify-between">
-              <span>Invested:</span>
-              <span>Rs. {investedData?.value?.toLocaleString("en-NP")}</span>
+            <p className="flex justify-between gap-2 text-sm text-muted-foreground">
+              <span>{t("home.tipInvested")}</span>
+              <span>{fmtMoney(investedData?.value)}</span>
             </p>
-            <p className={`text-sm flex justify-between ${gainLoss >= 0 ? 'text-green-700' : 'text-red-700'}`}>
-              <span>Gain/Loss:</span>
-              <span className="font-medium">
-                {gainLoss >= 0 ? '+' : ''}Rs. {gainLoss.toLocaleString("en-NP")} ({gainLossPercent}%)
+            <p className={`flex justify-between gap-2 text-sm ${gainLoss >= 0 ? "text-success" : "text-destructive"}`}>
+              <span>{t("home.tipGainLoss")}</span>
+              <span className="text-right font-medium">
+                {gainLoss > 0 ? "+" : gainLoss < 0 ? "-" : ""}
+                {fmtMoney(Math.abs(gainLoss))} ({gainLossPercent})
               </span>
             </p>
           </div>
 
           {transactions && (transactions.buys.length > 0 || transactions.sells.length > 0) && (
-            <div className="border-t border-border mt-2 pt-2">
-              <p className="text-xs font-medium text-muted-foreground mb-1">Transactions:</p>
-              {transactions.buys.length > 0 && (
-                <div className="mb-1">
-                  {transactions.buys.map((tx, idx) => (
-                    <p key={`buy-${idx}`} className="text-xs text-green-700 flex items-center gap-1">
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                      Bought {tx.quantity} {tx.symbol} @ Rs. {tx.price.toLocaleString("en-NP")}
-                    </p>
-                  ))}
-                </div>
-              )}
-              {transactions.sells.length > 0 && (
-                <div>
-                  {transactions.sells.map((tx, idx) => (
-                    <p key={`sell-${idx}`} className="text-xs text-red-700 flex items-center gap-1">
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                      Sold {tx.quantity} {tx.symbol} @ Rs. {tx.price.toLocaleString("en-NP")}
-                    </p>
-                  ))}
-                </div>
-              )}
+            <div className="mt-2 border-t border-border pt-2">
+              <p className="mb-1 text-xs font-medium text-muted-foreground">{t("home.tipTransactions")}</p>
+              {transactions.buys.map((tx, idx) => (
+                <p key={`buy-${idx}`} className="flex items-center gap-1 text-xs text-success">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-success"></span>
+                  {t("home.txBought")}: {t("home.txLine", { qty: fmtNumber(tx.quantity), symbol: tx.symbol, price: fmtMoney(tx.price, true) })}
+                </p>
+              ))}
+              {transactions.sells.map((tx, idx) => (
+                <p key={`sell-${idx}`} className="flex items-center gap-1 text-xs text-destructive">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-destructive"></span>
+                  {t("home.txSold")}: {t("home.txLine", { qty: fmtNumber(tx.quantity), symbol: tx.symbol, price: fmtMoney(tx.price, true) })}
+                </p>
+              ))}
             </div>
           )}
         </div>
@@ -202,68 +163,58 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
   };
 
   return (
-    <div className="surface p-4 h-[300px] ">
-      <div className="flex items-center justify-between mb-4">
+    <div className="surface p-4">
+      <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
         <div>
-          <h3 className="text-lg font-semibold">Portfolio Value Trend</h3>
+          <h3 className="text-base font-semibold sm:text-lg">{t("home.pvtTitle")}</h3>
           <p className="text-xs text-muted-foreground">
-            {loading ? "Loading..." : isDbConnected ? "Historical data from database" : "Simulated historical performance"}
+            {loading ? t("common.loading") : isDbConnected ? t("home.pvtConnected") : t("home.pvtNoDb")}
           </p>
         </div>
-        <div className="flex items-center gap-4 text-xs">
-          {isDbConnected && (
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-green-700 text-[10px]">DB Connected</span>
-            </div>
-          )}
+        <div className="flex flex-wrap items-center gap-3 text-xs">
           <div className="flex items-center gap-1">
-            <div className="w-3 h-3 rounded bg-primary" />
-            <span className="text-muted-foreground">Current Value</span>
+            <div className="h-3 w-3 rounded bg-primary" />
+            <span className="text-muted-foreground">{t("home.legendValue")}</span>
           </div>
           <div className="flex items-center gap-1">
-            <div className="w-3 h-3 rounded bg-muted-foreground/30" />
-            <span className="text-muted-foreground">Invested</span>
+            <div className="h-3 w-3 rounded bg-muted-foreground/30" />
+            <span className="text-muted-foreground">{t("home.legendInvested")}</span>
           </div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height="85%">
-        <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-          <defs>
-            <linearGradient id="valueGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="hsl(var(--chart-accent))" stopOpacity={0.4} />
-              <stop offset="95%" stopColor="hsl(var(--chart-accent))" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
-          <XAxis
-            dataKey="month"
-            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 12 }}
-            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
-          />
-          <YAxis
-            tickFormatter={(value) => `${(value / 1000).toFixed(0)}K`}
-            tick={{ fill: "hsl(var(--chart-axis))", fontSize: 12 }}
-            axisLine={{ stroke: "hsl(var(--chart-grid))" }}
-          />
-          <Tooltip content={<CustomTooltip />} />
-          <Area
-            type="monotone"
-            dataKey="invested"
-            stroke="hsl(var(--chart-axis))"
-            strokeWidth={1}
-            strokeDasharray="5 5"
-            fill="none"
-          />
-          <Area
-            type="monotone"
-            dataKey="value"
-            stroke="hsl(var(--chart-accent))"
-            strokeWidth={2}
-            fill="url(#valueGradient)"
-          />
-        </AreaChart>
-      </ResponsiveContainer>
+      <div className="relative h-[220px] sm:h-[240px]">
+        {!loading && data.length === 0 && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center text-sm leading-relaxed text-muted-foreground">
+            {isDbConnected ? t("home.pvtEmpty") : t("home.pvtEmptyNoDb")}
+          </div>
+        )}
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={data} margin={{ top: 10, right: 8, left: 0, bottom: 0 }}>
+            <defs>
+              <linearGradient id="valueGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="hsl(var(--chart-accent))" stopOpacity={0.4} />
+                <stop offset="95%" stopColor="hsl(var(--chart-accent))" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
+            <XAxis
+              dataKey="month"
+              tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
+              axisLine={{ stroke: "hsl(var(--chart-grid))" }}
+              minTickGap={24}
+            />
+            <YAxis
+              tickFormatter={fmtAxisCompact}
+              tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
+              axisLine={{ stroke: "hsl(var(--chart-grid))" }}
+              width={44}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Area type="monotone" dataKey="invested" name={t("home.legendInvested")} stroke="hsl(var(--chart-axis))" strokeWidth={1} strokeDasharray="5 5" fill="none" />
+            <Area type="monotone" dataKey="value" name={t("home.legendValue")} stroke="hsl(var(--chart-accent))" strokeWidth={2} fill="url(#valueGradient)" />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

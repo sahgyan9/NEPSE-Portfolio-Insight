@@ -1,141 +1,60 @@
 /**
- * Metric Thresholds Educational Component
- * ========================================
- * 
- * Visual representation of financial metric thresholds
- * with educational content for investors.
+ * How to read the valuation numbers used by the app's scoring (P/E, P/B, dividend yield, EPS).
+ * The bands match the thresholds in src/lib/valuationScoring.ts. Text lives in the `learn`
+ * namespace (mt_* keys). On phones each band is a row in a list; from sm up it is also a bar.
  */
-
+import type { ReactNode } from 'react';
+import { BarChart3, BookOpen, Coins, Info, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
-import {
-    PE_THRESHOLDS,
-    PB_THRESHOLDS,
-    DIVIDEND_THRESHOLDS,
-    METRIC_EDUCATION,
-} from '@/lib/valuationScoring';
-import { Info, TrendingUp, BookOpen, Coins, BarChart3 } from 'lucide-react';
+import { useT } from '@/i18n';
+
+type MetricId = 'pe' | 'pb' | 'dividend' | 'eps';
+
+/** Band ranges per metric, best-scoring first (same order as valuationScoring). */
+const BANDS: Record<MetricId, string[]> = {
+    pe: ['< 10', '10-15', '15-25', '25-35', '> 35'],
+    pb: ['< 1.0', '1.0-1.5', '1.5-2.5', '2.5-4.0', '> 4.0'],
+    dividend: ['> 6%', '4-6%', '2-4%', '1-2%', '< 1%'],
+    eps: ['> 50', '30-50', '15-30', '5-15', '< 5'],
+};
+
+const ICONS: Record<MetricId, ReactNode> = {
+    pe: <TrendingUp className="h-5 w-5" aria-hidden="true" />,
+    pb: <BarChart3 className="h-5 w-5" aria-hidden="true" />,
+    dividend: <Coins className="h-5 w-5" aria-hidden="true" />,
+    eps: <TrendingUp className="h-5 w-5" aria-hidden="true" />,
+};
+
+const NOTES = ['sector', 'growth', 'dividend', 'faceValue', 'bookValue'] as const;
 
 export const MetricThresholdsGuide = () => {
+    const { t } = useT();
     return (
         <Card className="w-full">
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-primary" />
-                    Understanding Valuation Metrics
+                    <BookOpen className="h-5 w-5 text-primary" aria-hidden="true" />
+                    {t('learn.mt_title')}
                 </CardTitle>
-                <CardDescription>
-                    Learn what each metric means and how to interpret the values
-                </CardDescription>
+                <CardDescription className="leading-relaxed">{t('learn.mt_subtitle')}</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-                {/* P/E Ratio */}
-                <MetricExplainer
-                    title="P/E Ratio (Price-to-Earnings)"
-                    icon={<TrendingUp className="w-5 h-5" />}
-                    education={METRIC_EDUCATION.peRatio}
-                    thresholds={[
-                        { range: '< 10', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'Potentially undervalued' },
-                        { range: '10-15', label: 'Good', color: 'hsl(var(--status-2))', description: 'Fairly priced' },
-                        { range: '15-25', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Average valuation' },
-                        { range: '25-35', label: 'High', color: 'hsl(var(--status-4))', description: 'Expensive' },
-                        { range: '> 35', label: 'Very High', color: 'hsl(var(--status-5))', description: 'Significantly overvalued' },
-                    ]}
-                    lowerIsBetter={true}
-                    nepseAverage="15-20"
-                />
+            <CardContent className="space-y-5">
+                {(Object.keys(BANDS) as MetricId[]).map((id) => (
+                    <MetricExplainer key={id} id={id} />
+                ))}
 
-                {/* P/B Ratio */}
-                <MetricExplainer
-                    title="P/B Ratio (Price-to-Book)"
-                    icon={<BarChart3 className="w-5 h-5" />}
-                    education={METRIC_EDUCATION.pbRatio}
-                    thresholds={[
-                        { range: '< 1.0', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'Below book value' },
-                        { range: '1.0-1.5', label: 'Good', color: 'hsl(var(--status-2))', description: 'Near book value' },
-                        { range: '1.5-2.5', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate premium' },
-                        { range: '2.5-4.0', label: 'High', color: 'hsl(var(--status-4))', description: 'Significant premium' },
-                        { range: '> 4.0', label: 'Very High', color: 'hsl(var(--status-5))', description: 'Large premium' },
-                    ]}
-                    lowerIsBetter={true}
-                    nepseAverage="0.8-1.5 (Banks)"
-                />
-
-                {/* Dividend Yield */}
-                <MetricExplainer
-                    title="Dividend Yield"
-                    icon={<Coins className="w-5 h-5" />}
-                    education={METRIC_EDUCATION.dividendYield}
-                    thresholds={[
-                        { range: '> 6%', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'High income' },
-                        { range: '4-6%', label: 'Good', color: 'hsl(var(--status-2))', description: 'Good income' },
-                        { range: '2-4%', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate income' },
-                        { range: '1-2%', label: 'Low', color: 'hsl(var(--status-4))', description: 'Low income' },
-                        { range: '< 1%', label: 'Very Low', color: 'hsl(var(--status-5))', description: 'Minimal income' },
-                    ]}
-                    lowerIsBetter={false}
-                    nepseAverage="3-5%"
-                />
-
-                {/* EPS */}
-                <MetricExplainer
-                    title="EPS (Earnings Per Share)"
-                    icon={<TrendingUp className="w-5 h-5" />}
-                    education={METRIC_EDUCATION.eps}
-                    thresholds={[
-                        { range: '> Rs 50', label: 'Excellent', color: 'hsl(var(--status-1))', description: 'High profitability' },
-                        { range: 'Rs 30-50', label: 'Good', color: 'hsl(var(--status-2))', description: 'Good profitability' },
-                        { range: 'Rs 15-30', label: 'Fair', color: 'hsl(var(--status-3))', description: 'Moderate' },
-                        { range: 'Rs 5-15', label: 'Low', color: 'hsl(var(--status-4))', description: 'Low profitability' },
-                        { range: '< Rs 5', label: 'Very Low', color: 'hsl(var(--status-5))', description: 'Poor profitability' },
-                    ]}
-                    lowerIsBetter={false}
-                    nepseAverage="Varies by sector"
-                />
-
-                {/* Educational Notes */}
-                <div className="mt-8 p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
-                    <h4 className="font-semibold text-blue-700 dark:text-blue-700 flex items-center gap-2 mb-3">
-                        <Info className="w-4 h-4" />
-                        Important Notes for Nepal Market
+                <div className="rounded-lg border border-border bg-muted/40 p-4">
+                    <h4 className="mb-3 flex items-center gap-2 font-semibold">
+                        <Info className="h-4 w-4 text-primary" aria-hidden="true" />
+                        {t('learn.mt_notesTitle')}
                     </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                            <span className="text-blue-700 mt-1">•</span>
-                            <span>
-                                <strong>Sector Matters:</strong> Banks typically have lower P/B ratios (0.7-1.5) while manufacturing might have higher ones. Compare within sectors.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-blue-700 mt-1">•</span>
-                            <span>
-                                <strong>Growth vs Value:</strong> High P/E might be justified for fast-growing companies. Consider growth prospects.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-blue-700 mt-1">•</span>
-                            <span>
-                                <strong>Dividend Sustainability:</strong> Very high dividend yields (&gt;10%) may indicate unsustainable payouts or falling stock prices.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-blue-700 mt-1">•</span>
-                            <span>
-                                <strong>Face Value:</strong> Nepal uses Rs. 100 face value. Dividends are calculated on face value, not market price.
-                            </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-blue-700 mt-1">•</span>
-                            <span>
-                                <strong>Book Value Importance:</strong> For financial institutions, book value is crucial as it represents net asset backing.
-                            </span>
-                        </li>
+                    <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
+                        {NOTES.map((n) => (
+                            <li key={n}>
+                                <span className="font-medium text-foreground">{t(`learn.mt_note_${n}_title`)}: </span>
+                                {t(`learn.mt_note_${n}`)}
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </CardContent>
@@ -143,133 +62,73 @@ export const MetricThresholdsGuide = () => {
     );
 };
 
-interface ThresholdItem {
-    range: string;
-    label: string;
-    color: string;
-    description: string;
-}
-
-interface MetricExplainerProps {
-    title: string;
-    icon: React.ReactNode;
-    education: {
-        term: string;
-        definition: string;
-        example?: string;
-        goodRange: string;
-        warningThreshold: string;
-    };
-    thresholds: ThresholdItem[];
-    lowerIsBetter: boolean;
-    nepseAverage?: string;
-}
-
-const MetricExplainer = ({
-    title,
-    icon,
-    education,
-    thresholds,
-    lowerIsBetter,
-    nepseAverage,
-}: MetricExplainerProps) => (
-    <div className="p-4 rounded-lg border bg-card">
-        <div className="flex items-start gap-3">
-            <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                {icon}
-            </div>
-            <div className="flex-1">
-                <h4 className="font-semibold text-lg">{title}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{education.definition}</p>
-
-                {education.example && (
-                    <div className="mt-2 p-2 rounded bg-muted/50 text-sm">
-                        <span className="font-medium">Example:</span> {education.example}
-                    </div>
-                )}
-
-                {/* Threshold Visual */}
-                <div className="mt-4">
-                    <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-medium text-muted-foreground">
-                            {lowerIsBetter ? 'Lower is Better ←' : '→ Higher is Better'}
-                        </span>
-                        {nepseAverage && (
-                            <span className="text-xs text-muted-foreground">
-                                NEPSE Avg: {nepseAverage}
-                            </span>
-                        )}
+const MetricExplainer = ({ id }: { id: MetricId }) => {
+    const { t } = useT();
+    const bands = BANDS[id];
+    return (
+        <div className="rounded-lg border border-border bg-card p-4">
+            <div className="flex items-start gap-3">
+                <div className="hidden rounded-lg bg-primary/10 p-2 text-primary sm:block">{ICONS[id]}</div>
+                <div className="min-w-0 flex-1">
+                    <h4 className="text-base font-semibold sm:text-lg">{t(`learn.mt_${id}_title`)}</h4>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{t(`learn.mt_${id}_def`)}</p>
+                    <div className="mt-2 rounded bg-muted/50 p-2 text-sm leading-relaxed">
+                        <span className="font-medium">{t('learn.example')}: </span>
+                        {t(`learn.mt_${id}_example`)}
                     </div>
 
-                    <div className="flex rounded-lg overflow-hidden h-8">
-                        {thresholds.map((threshold, idx) => (
-                            <TooltipProvider key={idx}>
-                                <Tooltip>
-                                    <TooltipTrigger asChild>
-                                        <div
-                                            className="flex-1 flex items-center justify-center cursor-help transition-opacity hover:opacity-80"
-                                            style={{ backgroundColor: threshold.color }}
-                                        >
-                                            <span className="text-xs font-medium text-card">
-                                                {threshold.range}
-                                            </span>
-                                        </div>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p className="font-semibold">{threshold.label}</p>
-                                        <p className="text-sm">{threshold.description}</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        ))}
-                    </div>
+                    <p className="mt-4 text-xs font-medium text-muted-foreground">{t(`learn.mt_${id}_direction`)}</p>
 
-                    <div className="flex mt-1">
-                        {thresholds.map((threshold, idx) => (
-                            <div key={idx} className="flex-1 text-center">
-                                <span className="text-xs text-muted-foreground">{threshold.label}</span>
+                    {/* Colour bar from sm up; every band is also listed in words below. */}
+                    <div className="mt-2 hidden h-8 overflow-hidden rounded-lg sm:flex" aria-hidden="true">
+                        {bands.map((range, i) => (
+                            <div
+                                key={range}
+                                className="flex flex-1 items-center justify-center"
+                                style={{ backgroundColor: `hsl(var(--status-${i + 1}))` }}
+                            >
+                                <span className="text-xs font-medium text-card">{range}</span>
                             </div>
                         ))}
                     </div>
-                </div>
 
-                {/* Quick reference badges */}
-                <div className="mt-3 flex flex-wrap gap-2">
-                    <Badge variant="outline" className="text-xs bg-green-500/10 border-green-500/20">
-                        Good: {education.goodRange}
-                    </Badge>
-                    <Badge variant="outline" className="text-xs bg-yellow-500/10 border-yellow-500/20">
-                        Watch: {education.warningThreshold}
-                    </Badge>
+                    <ul className="mt-2 divide-y divide-border rounded-md border border-border text-sm">
+                        {bands.map((range, i) => (
+                            <li key={range} className="flex items-start gap-3 px-3 py-2">
+                                <span
+                                    className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full"
+                                    style={{ backgroundColor: `hsl(var(--status-${i + 1}))` }}
+                                    aria-hidden="true"
+                                />
+                                <span className="w-16 shrink-0 font-mono text-xs leading-6">{range}</span>
+                                <span className="min-w-0 leading-relaxed">
+                                    <span className="font-medium">{t(`learn.mt_${id}_band${i}`)}</span>
+                                    <span className="text-muted-foreground">. {t(`learn.mt_${id}_band${i}_desc`)}</span>
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <p className="mt-3 text-sm leading-relaxed">
+                        <span className="font-medium">{t('learn.mt_watch')}: </span>
+                        {t(`learn.mt_${id}_watch`)}
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
-// Compact version for tooltips
-export const MetricTooltipContent = ({
-    metric,
-}: {
-    metric: 'pe' | 'pb' | 'dividend' | 'eps';
-}) => {
-    const educationMap = {
-        pe: METRIC_EDUCATION.peRatio,
-        pb: METRIC_EDUCATION.pbRatio,
-        dividend: METRIC_EDUCATION.dividendYield,
-        eps: METRIC_EDUCATION.eps,
-    };
-
-    const edu = educationMap[metric];
-
+/** Compact version for tooltips. */
+export const MetricTooltipContent = ({ metric }: { metric: MetricId }) => {
+    const { t } = useT();
     return (
         <div className="max-w-xs">
-            <p className="font-semibold mb-1">{edu.term}</p>
-            <p className="text-sm text-muted-foreground mb-2">{edu.definition}</p>
-            <div className="space-y-1">
-                <p className="text-xs text-green-700">Good: {edu.goodRange}</p>
-                <p className="text-xs text-yellow-700">Watch: {edu.warningThreshold}</p>
-            </div>
+            <p className="mb-1 font-semibold">{t(`learn.mt_${metric}_title`)}</p>
+            <p className="mb-2 text-sm text-muted-foreground">{t(`learn.mt_${metric}_def`)}</p>
+            <p className="text-xs">
+                {t('learn.mt_watch')}: {t(`learn.mt_${metric}_watch`)}
+            </p>
         </div>
     );
 };

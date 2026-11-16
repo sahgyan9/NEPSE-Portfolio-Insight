@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Brain, TrendingUp, TrendingDown, Pause, Plus, Loader2, RefreshCw } from "lucide-react";
+import { Brain, Loader2, RefreshCw, Eye, ListChecks, KeyRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
 import { StockHolding, PortfolioSummary } from "@/data/portfolioData";
 import { toast } from "@/hooks/use-toast";
+import { useT } from "@/i18n";
+import {
+  buildExplanationPrompt,
+  parseExplanation,
+  classifyAiError,
+  AiRequestError,
+  toAiRequestError,
+  type Explanation,
+} from "@/lib/aiPrompt";
 
 interface AIRecommendationsProps {
   holdings: StockHolding[];
@@ -13,274 +19,165 @@ interface AIRecommendationsProps {
   apiKey: string;
 }
 
-interface Recommendation {
-  scrip: string;
-  action: "BUY" | "SELL" | "HOLD" | "ADD MORE";
-  reason: string;
-  confidence: "HIGH" | "MEDIUM" | "LOW";
-}
-
-interface AIAnalysis {
-  overallAssessment: string;
-  recommendations: Recommendation[];
-  riskWarnings: string[];
-  longTermOutlook: string;
-}
-
-const getActionIcon = (action: string) => {
-  switch (action) {
-    case "BUY":
-      return <TrendingUp className="h-4 w-4" />;
-    case "SELL":
-      return <TrendingDown className="h-4 w-4" />;
-    case "HOLD":
-      return <Pause className="h-4 w-4" />;
-    case "ADD MORE":
-      return <Plus className="h-4 w-4" />;
-    default:
-      return null;
-  }
-};
-
-const getActionClass = (action: string) => {
-  switch (action) {
-    case "BUY":
-      return "recommendation-buy";
-    case "SELL":
-      return "recommendation-sell";
-    case "HOLD":
-      return "recommendation-hold";
-    case "ADD MORE":
-      return "recommendation-add";
-    default:
-      return "";
-  }
-};
-
 export const AIRecommendations = ({ holdings, summary, apiKey }: AIRecommendationsProps) => {
-  const [analysis, setAnalysis] = useState<AIAnalysis | null>(null);
+  const { t, lang } = useT();
+  const [analysis, setAnalysis] = useState<Explanation | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Runs only when the user presses the button
   const generateAnalysis = async () => {
     if (!apiKey) {
-      toast({
-        title: "API Key Required",
-        description: "Please enter your Gemini API key to get AI recommendations.",
-        variant: "destructive",
-      });
+      toast({ title: t("ai.noKeyTitle"), description: t("ai.noKeyBody"), variant: "destructive" });
       return;
     }
 
     setIsLoading(true);
-
-    const portfolioContext = holdings
-      .map(
-        (h) =>
-          `${h.scrip} (${h.fullName}): Qty=${h.quantity}, Cost=Rs.${h.waccRate.toFixed(2)}, Current=Rs.${h.currentPrice}, Gain=${h.gainLossPercent.toFixed(2)}%, P/B=${h.pbRatio || "N/A"}, P/E=${h.peRatio || "N/A"}, Div Yield=${h.dividendYield || 0}%, Sector=${h.sector}`
-      )
-      .join("\n");
-
-    const prompt = `You are an expert investment advisor inspired by Benjamin Graham's "The Intelligent Investor" principles. Analyze this NEPSE (Nepal Stock Exchange) portfolio for a 20-year long-term investment horizon.
-
-Portfolio Summary:
-- Total Invested: Rs. ${summary.totalInvested.toLocaleString()}
-- Current Value: Rs. ${summary.currentValue.toLocaleString()}
-- Overall Gain/Loss: ${summary.totalGainLossPercent.toFixed(2)}%
-- Total Holdings: ${summary.totalHoldings}
-
-Individual Holdings:
-${portfolioContext}
-
-Provide analysis in this EXACT JSON format (no markdown, just pure JSON):
-{
-  "overallAssessment": "2-3 sentence overall portfolio health assessment",
-  "recommendations": [
-    {
-      "scrip": "STOCK_SYMBOL",
-      "action": "BUY|SELL|HOLD|ADD MORE",
-      "reason": "Specific reason based on fundamentals, P/B ratio, sector outlook, dividend yield for long-term",
-      "confidence": "HIGH|MEDIUM|LOW"
-    }
-  ],
-  "riskWarnings": ["Warning 1", "Warning 2"],
-  "longTermOutlook": "2-3 sentences about 20-year portfolio potential"
-}
-
-Focus on:
-1. Value investing principles (low P/B, consistent dividends, margin of safety)
-2. Sector diversification
-3. Blue-chip vs speculative holdings
-4. Dividend income for compounding
-5. Avoid market timing, focus on fundamentals`;
+    const prompt = buildExplanationPrompt(lang, holdings, summary);
 
     try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: {
-              temperature: 0.7,
-              maxOutputTokens: 2048,
-            },
-          }),
-        }
-      );
+      let response: Response;
+      try {
+        response = await fetch(
+          `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: {
+                temperature: 0.7,
+                maxOutputTokens: 2048,
+              },
+            }),
+          }
+        );
+      } catch {
+        throw new AiRequestError("network");
+      }
 
       if (!response.ok) {
-        throw new Error("Failed to get AI response");
+        const errorData = await response.json().catch(() => null);
+        const msg: string = errorData?.error?.message || "";
+        throw new AiRequestError(classifyAiError(response.status, msg), msg);
       }
 
       const data = await response.json();
-      const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      const text: string | undefined = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      const parsed = text ? parseExplanation(text) : null;
+      if (!parsed) throw new AiRequestError("other", "parse");
 
-      if (!text) {
-        throw new Error("Empty response from AI");
-      }
-
-      // Parse JSON from response (handle potential markdown wrapping)
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) {
-        throw new Error("Could not parse AI response");
-      }
-
-      const analysisData = JSON.parse(jsonMatch[0]) as AIAnalysis;
-      setAnalysis(analysisData);
-
-      toast({
-        title: "Analysis Complete",
-        description: "AI recommendations have been generated based on Intelligent Investor principles.",
-      });
+      setAnalysis(parsed);
+      toast({ title: t("ai.doneTitle") });
     } catch (error) {
-      console.error("AI Analysis error:", error);
-      toast({
-        title: "Analysis Failed",
-        description: error instanceof Error ? error.message : "Failed to generate AI analysis",
-        variant: "destructive",
-      });
+      console.error("AI explanation error:", error);
+      const err = toAiRequestError(error);
+      const description =
+        err.kind === "network"
+          ? t("ai.errNetwork")
+          : err.kind === "invalidKey"
+            ? t("ai.errInvalidKey")
+            : err.kind === "quota"
+              ? t("ai.errQuota")
+              : err.message === "parse"
+                ? t("ai.errParse")
+                : t("ai.errOther");
+      toast({ title: t("ai.failedTitle"), description, variant: "destructive" });
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="surface p-4 ">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <div className="p-2 rounded-lg bg-primary/10">
+    <div className="surface p-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+        <div className="flex items-start gap-2">
+          <div className="p-2 rounded-lg bg-primary/10 shrink-0">
             <Brain className="h-5 w-5 text-primary" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">AI second opinion</h3>
-            <p className="text-xs text-muted-foreground">
-              Generated text, not advice. It can be wrong and does not know your goals or finances.
-            </p>
+            <h3 className="text-lg font-semibold leading-snug">{t("ai.cardTitle")}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{t("ai.cardSubtitle")}</p>
           </div>
         </div>
         <Button
           onClick={generateAnalysis}
-          disabled={isLoading}
-          className="gap-2"
+          disabled={isLoading || !apiKey}
+          className="gap-2 min-h-11"
           variant={analysis ? "outline" : "default"}
         >
           {isLoading ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" />
-              Analyzing...
+              {t("ai.running")}
             </>
           ) : analysis ? (
             <>
               <RefreshCw className="h-4 w-4" />
-              Refresh
+              {t("ai.rerun")}
             </>
           ) : (
-            <>
-              Run analysis
-            </>
+            t("ai.run")
           )}
         </Button>
       </div>
 
-      {!analysis && !isLoading && (
-        <div className="text-center py-8 text-muted-foreground">
-          <Brain className="h-12 w-12 mx-auto mb-4 opacity-50" />
-          <p>Click "Generate Analysis" to get AI-powered investment recommendations</p>
-          <p className="text-xs mt-2">Based on Benjamin Graham's value investing principles</p>
+      {!apiKey && (
+        <div className="flex items-start gap-3 rounded-lg border border-border bg-muted/50 p-4">
+          <KeyRound className="h-5 w-5 mt-0.5 shrink-0 text-muted-foreground" />
+          <div>
+            <p className="font-medium text-sm leading-relaxed">{t("ai.noKeyTitle")}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{t("ai.noKeyBody")}</p>
+          </div>
+        </div>
+      )}
+
+      {apiKey && !analysis && !isLoading && (
+        <div className="text-center py-6 text-muted-foreground">
+          <Brain className="h-10 w-10 mx-auto mb-3 opacity-50" />
+          <p className="text-sm font-medium leading-relaxed">{t("ai.emptyTitle")}</p>
+          <p className="text-sm mt-1 leading-relaxed">{t("ai.emptyBody")}</p>
         </div>
       )}
 
       {analysis && (
-        <ScrollArea className="h-[500px] pr-4">
-          <div className="space-y-6">
-            {/* Overall Assessment */}
-            <div className="p-4 rounded-lg bg-secondary/50 border border-border">
-              <h4 className="font-semibold text-primary mb-2">Portfolio Assessment</h4>
-              <p className="text-sm text-foreground/90">{analysis.overallAssessment}</p>
-            </div>
-
-            {/* Recommendations */}
-            <div>
-              <h4 className="font-semibold mb-3">Stock Recommendations</h4>
-              <div className="space-y-3">
-                {analysis.recommendations.map((rec, index) => (
-                  <div
-                    key={index}
-                    className={cn(
-                      "p-3 rounded-lg border transition-all duration-200",
-                      getActionClass(rec.action)
-                    )}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        {getActionIcon(rec.action)}
-                        <span className="font-bold">{rec.scrip}</span>
-                        <Badge variant="outline" className="text-xs">
-                          {rec.action}
-                        </Badge>
-                      </div>
-                      <Badge
-                        variant="secondary"
-                        className={cn(
-                          "text-xs",
-                          rec.confidence === "HIGH" && "bg-success/20 text-success",
-                          rec.confidence === "MEDIUM" && "bg-accent/20 text-accent",
-                          rec.confidence === "LOW" && "bg-muted text-muted-foreground"
-                        )}
-                      >
-                        {rec.confidence} confidence
-                      </Badge>
-                    </div>
-                    <p className="text-sm text-foreground/80">{rec.reason}</p>
-                  </div>
+        <div className="space-y-4">
+          {analysis.observations.length > 0 && (
+            <section className="rounded-lg border border-border bg-secondary/50 p-4">
+              <h4 className="flex items-center gap-2 font-semibold text-primary mb-2">
+                <Eye className="h-4 w-4" />
+                {t("ai.observations")}
+              </h4>
+              <ul className="space-y-2">
+                {analysis.observations.map((item, i) => (
+                  <li key={i} className="text-sm leading-relaxed text-foreground/90 flex gap-2">
+                    <span className="font-medium text-muted-foreground">{i + 1}.</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </section>
+          )}
 
-            {/* Risk Warnings */}
-            {analysis.riskWarnings.length > 0 && (
-              <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/30">
-                <h4 className="font-semibold text-destructive mb-2">Risk Warnings</h4>
-                <ul className="space-y-1">
-                  {analysis.riskWarnings.map((warning, index) => (
-                    <li key={index} className="text-sm text-foreground/80 flex items-start gap-2">
-                      <span className="text-destructive">•</span>
-                      {warning}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Long Term Outlook */}
-            <div className="p-4 rounded-lg bg-primary/10 border border-primary/30">
-              <h4 className="font-semibold text-primary mb-2">20-Year Outlook</h4>
-              <p className="text-sm text-foreground/90">{analysis.longTermOutlook}</p>
-            </div>
-          </div>
-        </ScrollArea>
+          {analysis.thingsToCheck.length > 0 && (
+            <section className="rounded-lg border border-border bg-card p-4">
+              <h4 className="flex items-center gap-2 font-semibold text-primary mb-2">
+                <ListChecks className="h-4 w-4" />
+                {t("ai.thingsToCheck")}
+              </h4>
+              <ul className="space-y-2">
+                {analysis.thingsToCheck.map((item, i) => (
+                  <li key={i} className="text-sm leading-relaxed text-foreground/90 flex gap-2">
+                    <span className="font-medium text-muted-foreground">{i + 1}.</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
       )}
+
+      <p className="text-xs text-muted-foreground mt-4 leading-relaxed">{t("ai.notice")}</p>
     </div>
   );
 };

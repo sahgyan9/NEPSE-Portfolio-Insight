@@ -23,6 +23,7 @@ import {
     PortfolioDividendSummary,
 } from '@/types/fundamentals';
 import { StockHolding } from '@/data/portfolioData';
+import { translate } from '@/i18n';
 
 // ============================================================
 // THRESHOLD DEFINITIONS
@@ -282,6 +283,8 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
                 epsScore: 0,
             },
             recommendations: ['Valuation metrics are not applicable to Mutual Funds. Analyze fund Net Asset Value (NAV) instead.'],
+            labelKey: 'valuation.statusFund',
+            recommendationKeys: ['valuation.insightFund'],
         };
     }
 
@@ -321,6 +324,8 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
             icon: 'unknown',
             breakdown: { peScore, pbScore, dividendScore, epsScore },
             recommendations: ['Not enough fundamental data to rate this stock yet.'],
+            labelKey: 'valuation.statusNoData',
+            recommendationKeys: ['valuation.insightNoData'],
         };
     }
 
@@ -333,51 +338,63 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
     let label: string;
     let color: string;
     let icon: string;
+    let labelKey: string;
 
     if (overallScore >= 80) {
         status = 'excellent';
         label = 'Excellent Value';
+        labelKey = 'valuation.statusExcellent';
         color = 'hsl(var(--status-1))';
         icon = 'excellent';
     } else if (overallScore >= 65) {
         status = 'good';
         label = 'Good Value';
+        labelKey = 'valuation.statusGood';
         color = 'hsl(var(--status-2))';
         icon = 'good';
     } else if (overallScore >= 50) {
         status = 'fair';
         label = 'Fair Value';
+        labelKey = 'valuation.statusFair';
         color = 'hsl(var(--status-3))';
         icon = 'fair';
     } else if (overallScore >= 35) {
         status = 'overvalued';
         label = 'Overvalued';
+        labelKey = 'valuation.statusOvervalued';
         color = 'hsl(var(--status-4))';
         icon = 'overvalued';
     } else {
         status = 'highly-overvalued';
         label = 'Highly Overvalued';
+        labelKey = 'valuation.statusHighlyOvervalued';
         color = 'hsl(var(--status-5))';
         icon = 'highly-overvalued';
     }
 
     // Generate recommendations
     const recommendations: string[] = [];
+    const recommendationKeys: string[] = [];
 
     if (peHealth === 'poor' || peHealth === 'critical') {
         recommendations.push('High P/E ratio suggests stock may be overpriced relative to earnings');
+        recommendationKeys.push('valuation.insightHighPe');
     }
     if (pbHealth === 'poor' || pbHealth === 'critical') {
         recommendations.push('High P/B ratio indicates premium valuation - verify growth justifies price');
+        recommendationKeys.push('valuation.insightHighPb');
     }
     if (dividendHealth === 'poor' || dividendHealth === 'critical') {
         recommendations.push('Low dividend yield - consider if growth potential compensates');
+        recommendationKeys.push('valuation.insightLowDividend');
     }
     if (pbHealth === 'excellent') {
         recommendations.push('Trading below book value - potential value opportunity');
+        recommendationKeys.push('valuation.insightBelowBook');
     }
     if (dividendHealth === 'excellent') {
         recommendations.push('Strong dividend yield provides good income potential');
+        recommendationKeys.push('valuation.insightHighDividend');
     }
 
     return {
@@ -393,8 +410,32 @@ export const calculateValuationScore = (holding: StockHolding): ValuationScore =
             epsScore,
         },
         recommendations,
+        labelKey,
+        recommendationKeys,
     };
 };
+
+/** Plain description of the valuation status in the current language (no verdict wording). */
+export const valuationLabel = (score: ValuationScore): string =>
+    score.labelKey ? translate(score.labelKey) : score.label;
+
+/** Plain notes about the numbers in the current language. */
+export const valuationInsights = (score: ValuationScore): string[] =>
+    score.recommendationKeys ? score.recommendationKeys.map(k => translate(k)) : score.recommendations;
+
+/**
+ * Display text for a health band ("excellent" ... "unknown"). The codes stay internal;
+ * the words only describe where the number falls.
+ */
+export const healthWord = (health: MetricHealth): string =>
+    translate({
+        excellent: 'valuation.hExcellent',
+        good: 'valuation.hGood',
+        fair: 'valuation.hFair',
+        poor: 'valuation.hPoor',
+        critical: 'valuation.hCritical',
+        unknown: 'valuation.hUnknown',
+    }[health]);
 
 /**
  * Create financial metric object with educational content
@@ -509,33 +550,33 @@ export const calculatePortfolioHealth = (holdings: StockHolding[]): PortfolioHea
 
     const indicators = {
         diversification: createIndicator(
-            'Diversification',
+            translate('valuation.phDiversification'),
             diversificationScore,
-            'How well-spread your investments are across different stocks',
+            translate('valuation.phDiversificationDesc'),
             'diversification'
         ),
         valuation: createIndicator(
-            'Valuation Quality',
+            translate('valuation.phValuation'),
             avgValuationScore,
-            'Average fundamental value score of your holdings',
+            translate('valuation.phValuationDesc'),
             'valuation'
         ),
         dividendQuality: createIndicator(
-            'Dividend Quality',
+            translate('valuation.phDividend'),
             dividendScore,
-            'Income generation potential from dividends',
+            translate('valuation.phDividendDesc'),
             'dividend'
         ),
         concentration: createIndicator(
-            'Low Concentration',
+            translate('valuation.phConcentration'),
             concentrationScore,
-            'Risk from having too much in single stocks',
+            translate('valuation.phConcentrationDesc'),
             'concentration'
         ),
         sectorBalance: createIndicator(
-            'Sector Balance',
+            translate('valuation.phSector'),
             sectorBalanceScore,
-            'Distribution across different market sectors',
+            translate('valuation.phSectorDesc'),
             'sector'
         ),
     };
@@ -546,33 +587,33 @@ export const calculatePortfolioHealth = (holdings: StockHolding[]): PortfolioHea
     const recommendations: string[] = [];
 
     if (diversificationScore >= 70) {
-        strengths.push('Well-diversified portfolio reduces risk');
+        strengths.push(translate('valuation.phStrengthSpread'));
     } else if (diversificationScore < 50) {
-        warnings.push('Portfolio concentration is high');
-        recommendations.push('Consider adding more stocks to improve diversification');
+        warnings.push(translate('valuation.phWarnConcentrated'));
+        recommendations.push(translate('valuation.phCheckSpread'));
     }
 
     if (avgValuationScore >= 65) {
-        strengths.push('Holdings are generally well-valued');
+        strengths.push(translate('valuation.phStrengthValuation'));
     } else if (avgValuationScore < 50) {
-        warnings.push('Several holdings appear overvalued');
-        recommendations.push('Review high P/E and P/B ratio stocks for potential rebalancing');
+        warnings.push(translate('valuation.phWarnValuation'));
+        recommendations.push(translate('valuation.phCheckValuation'));
     }
 
     if (avgDividendYield >= 4) {
-        strengths.push('Strong dividend income potential');
+        strengths.push(translate('valuation.phStrengthDividend'));
     }
 
     if (maxWeight > 0.25) {
-        warnings.push(`Single stock makes up ${(maxWeight * 100).toFixed(1)}% of portfolio`);
-        recommendations.push('Consider reducing position in largest holding');
+        warnings.push(translate('valuation.phWarnSingle', { pct: (maxWeight * 100).toFixed(1) }));
+        recommendations.push(translate('valuation.phCheckSingle'));
     }
 
     if (uniqueSectors >= 6) {
-        strengths.push('Good sector diversification');
+        strengths.push(translate('valuation.phStrengthSectors'));
     } else if (uniqueSectors < 4) {
-        warnings.push('Limited sector exposure');
-        recommendations.push('Consider adding stocks from different sectors');
+        warnings.push(translate('valuation.phWarnSectors'));
+        recommendations.push(translate('valuation.phCheckSectors'));
     }
 
     return {

@@ -8,6 +8,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertCircle } from 'lucide-react';
+import { translate } from '@/i18n';
 
 interface State {
   hasError: boolean;
@@ -34,25 +35,25 @@ export class ErrorBoundary extends React.Component<Props, State> {
     console.error('[ErrorBoundary] Caught render error:', error, info.componentStack);
   }
 
-  handleReset = () => {
-    this.setState({ hasError: false, error: null });
+  handleRefresh = () => {
+    window.location.reload();
   };
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex flex-col items-center justify-center min-h-[260px] rounded-xl border border-destructive/40 bg-destructive/5 p-8 gap-4 text-center">
-          <AlertCircle className="w-10 h-10 text-destructive/70" />
+        <div role="alert" className="flex flex-col items-center justify-center min-h-[260px] rounded-xl border border-destructive/40 bg-destructive/5 p-6 sm:p-8 gap-4 text-center">
+          <AlertCircle className="w-10 h-10 text-destructive/70" aria-hidden="true" />
           <div>
             <p className="font-semibold text-destructive">
-              {this.props.label ? `${this.props.label} crashed` : 'Something went wrong'}
+              {this.props.label ? translate('tools.errorTitleLabel', { label: this.props.label }) : translate('tools.errorTitle')}
             </p>
-            <p className="text-sm text-muted-foreground mt-1 max-w-sm">
-              {this.state.error?.message ?? 'An unexpected error occurred while rendering this component.'}
+            <p className="text-sm leading-relaxed text-muted-foreground mt-1 max-w-sm">
+              {translate('tools.errorBody')}
             </p>
           </div>
-          <Button variant="outline" size="sm" onClick={this.handleReset}>
-            Try again
+          <Button variant="outline" onClick={this.handleRefresh} className="min-h-[44px]">
+            {translate('tools.errorRefresh')}
           </Button>
         </div>
       );

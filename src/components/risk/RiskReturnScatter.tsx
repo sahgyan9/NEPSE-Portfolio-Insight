@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import { CartesianGrid, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
 import { ChartCard, CHART, TooltipBox, axisLine, axisTick, fmtFrac, fmtFracSigned, makeSectorColorer } from "@/components/charts";
+import { useT } from "@/i18n";
+import { sectorLabel } from "@/lib/findingText";
 import type { RiskData } from "@/services/riskApi";
 
 interface Point {
@@ -40,6 +42,7 @@ const Dot = (props: { cx?: number; cy?: number; payload?: Point; size?: number }
 };
 
 export const RiskReturnScatter = ({ risk, loading }: { risk?: RiskData; loading?: boolean }) => {
+  const { t } = useT();
   const { points, hidden, sectors, color } = useMemo(() => {
     const color = makeSectorColorer((risk?.holdings ?? []).map((h) => h.sector));
     const pts: Point[] = [];
@@ -55,18 +58,27 @@ export const RiskReturnScatter = ({ risk, loading }: { risk?: RiskData; loading?
     return { points: pts, hidden, sectors, color };
   }, [risk]);
 
+  // Plain summary: how many holdings gained over the year, and which gained most for its swing.
+  const summary = (() => {
+    if (points.length === 0) return undefined;
+    const up = points.filter((p) => p.y > 0).length;
+    const best = [...points].sort((a, b) => b.y / Math.max(b.x, 0.01) - a.y / Math.max(a.x, 0.01))[0];
+    const first = t("risk.scatterSummary", { up, total: points.length });
+    return best && best.y > 0 ? `${first} ${t("risk.scatterBest", { symbol: best.symbol })}` : first;
+  })();
   return (
     <ChartCard
-      title="Which holdings paid for the risk they carry?"
-      subtitle="Left and up is better: less swing, more return. Bigger circles are bigger holdings."
-      explainText="Each circle is one holding. Across is its yearly volatility, up is its price change over the last year. Circles with a dashed outline are estimated because the holding has little price history."
+      title={t("risk.scatterTitle")}
+      subtitle={summary ? `${summary} ${t("risk.scatterHowTo")}` : t("risk.scatterHowTo")}
+      explainText={t("risk.scatterExplain")}
       loading={loading}
       empty={points.length === 0}
+      emptyMessage={t("risk.chartEmpty")}
       height={360}
       footer={
         <>
-          {hidden > 0 && `${hidden} holding${hidden > 1 ? "s" : ""} without a one-year return ${hidden > 1 ? "are" : "is"} not shown. `}
-          One year of prices is a short record; do not read a single dot as a verdict on a company.
+          {hidden > 0 && `${t("risk.scatterHidden", { count: hidden })} `}
+          {t("risk.scatterFooter")}
         </>
       }
     >
@@ -74,8 +86,8 @@ export const RiskReturnScatter = ({ risk, loading }: { risk?: RiskData; loading?
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 16, right: 20, left: 0, bottom: 24 }}>
             <CartesianGrid stroke={CHART.grid} strokeDasharray="3 3" />
-            <XAxis type="number" dataKey="x" name="Volatility" tick={axisTick} axisLine={axisLine} tickLine={false} tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} label={{ value: "Yearly volatility (more swing, to the right)", position: "insideBottom", offset: -14, fontSize: 11, fill: CHART.axis }} />
-            <YAxis type="number" dataKey="y" name="Return" width={52} tick={axisTick} axisLine={axisLine} tickLine={false} tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} label={{ value: "1-year return", angle: -90, position: "insideLeft", fontSize: 11, fill: CHART.axis }} />
+            <XAxis type="number" dataKey="x" name="Volatility" tick={axisTick} axisLine={axisLine} tickLine={false} tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} label={{ value: t("risk.scatterXAxis"), position: "insideBottom", offset: -14, fontSize: 11, fill: CHART.axis }} />
+            <YAxis type="number" dataKey="y" name="Return" width={52} tick={axisTick} axisLine={axisLine} tickLine={false} tickFormatter={(v) => `${(v * 100).toFixed(0)}%`} label={{ value: t("risk.scatterYAxis"), angle: -90, position: "insideLeft", fontSize: 11, fill: CHART.axis }} />
             <ZAxis type="number" dataKey="w" range={[70, 700]} />
             <ReferenceLine y={0} stroke={CHART.axis} />
             <Tooltip
@@ -84,12 +96,12 @@ export const RiskReturnScatter = ({ risk, loading }: { risk?: RiskData; loading?
                 const p = payload?.[0]?.payload as Point | undefined;
                 return active && p ? (
                   <TooltipBox
-                    title={`${p.symbol}${p.measured ? "" : " (estimated)"}`}
+                    title={p.measured ? p.symbol : `${p.symbol} (${t("risk.estimated")})`}
                     rows={[
-                      { label: "Sector", value: p.sector, color: p.color },
-                      { label: "Volatility", value: fmtFrac(p.x) },
-                      { label: "1-year return", value: fmtFracSigned(p.y) },
-                      { label: "Share of money", value: fmtFrac(p.w) },
+                      { label: t("risk.colSector"), value: sectorLabel(p.sector), color: p.color },
+                      { label: t("risk.colVolatility"), value: fmtFrac(p.x) },
+                      { label: t("risk.colReturn1y"), value: fmtFracSigned(p.y) },
+                      { label: t("risk.shareOfMoney"), value: fmtFrac(p.w) },
                     ]}
                   />
                 ) : null;
@@ -103,12 +115,12 @@ export const RiskReturnScatter = ({ risk, loading }: { risk?: RiskData; loading?
         {sectors.map((s) => (
           <li key={s} className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: color(s) }} />
-            {s}
+            {sectorLabel(s)}
           </li>
         ))}
         <li className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full border-2 border-dashed" style={{ borderColor: CHART.market }} />
-          estimated
+          {t("risk.estimated")}
         </li>
       </ul>
     </ChartCard>

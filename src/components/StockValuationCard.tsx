@@ -1,25 +1,22 @@
 /**
  * Stock Valuation Card Component
  * ===============================
- * 
+ *
  * Individual stock card showing:
- * - Valuation score with visual gauge
- * - Key metrics (P/E, P/B, EPS, Dividend)
- * - Educational tooltips for each metric
- * - Health indicators
+ * - A plain description of how the price compares with earnings and net worth
+ * - Key numbers (P/E, PBV, EPS, dividend yield), each with a tap-to-open explanation
+ * - How the score is made, with the number written next to every bar
+ *
+ * Nothing here is a recommendation. A low price can also mean a weak company, and the
+ * card says so wherever it describes a valuation.
  */
 
 import { StockResearchBlock } from "@/components/research/StockResearchBlock";
 import { StatusIcon } from "@/components/StatusIcon";
-import { useMemo } from 'react';
+import { Explain } from "@/components/Explain";
+import { useMemo, type ReactNode } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
 import { Progress } from '@/components/ui/progress';
 import { StockHolding } from '@/data/portfolioData';
 import {
@@ -27,13 +24,18 @@ import {
     getMetricHealth,
     getHealthColor,
     getHealthIcon,
+    healthWord,
+    valuationLabel,
+    valuationInsights,
     PE_THRESHOLDS,
     PB_THRESHOLDS,
     DIVIDEND_THRESHOLDS,
-    METRIC_EDUCATION,
 } from '@/lib/valuationScoring';
-import { Info, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { TrendingUp, TrendingDown, Minus, Info } from 'lucide-react';
 import { StockSymbolLink } from '@/components/StockSymbolLink';
+import { useT } from '@/i18n';
+import { fmtMoney, fmtNumber, fmtPercent } from '@/i18n/format';
+import { MetricHealth, ValuationScore } from '@/types/fundamentals';
 
 interface StockValuationCardProps {
     holding: StockHolding;
@@ -41,23 +43,43 @@ interface StockValuationCardProps {
     allHoldings?: StockHolding[];
 }
 
+const ratio = (value: number | null | undefined, na: string, suffix = ''): string =>
+    value === null || value === undefined || Number.isNaN(value) ? na : `${value.toFixed(2)}${suffix}`;
+
+/** Status icon, plain description and the "low price can mean a weak company" note. */
+const ValuationDescription = ({ valuation, align = 'left' }: { valuation: ValuationScore; align?: 'left' | 'right' }) => {
+    const { t } = useT();
+    const rated = valuation.status !== 'unknown';
+    return (
+        <div className={align === 'right' ? 'text-right' : ''}>
+            <p
+                className={`inline-flex items-start gap-1.5 text-sm font-medium leading-relaxed ${align === 'right' ? 'text-right' : ''}`}
+                style={{ color: valuation.color }}
+            >
+                <span className="mt-1 shrink-0"><StatusIcon name={valuation.icon} /></span>
+                <span>{valuationLabel(valuation)}</span>
+            </p>
+            {rated && (
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{t('valuation.lowPriceNote')}</p>
+            )}
+        </div>
+    );
+};
+
 export const StockValuationCard = ({ holding, showDetails = true, allHoldings }: StockValuationCardProps) => {
+    const { t } = useT();
     const valuation = useMemo(() => calculateValuationScore(holding), [holding]);
+    const na = t('valuation.na');
 
     const peHealth = getMetricHealth(holding.peRatio, PE_THRESHOLDS);
     const pbHealth = getMetricHealth(holding.pbRatio, PB_THRESHOLDS);
     const dividendHealth = getMetricHealth(holding.dividendYield, DIVIDEND_THRESHOLDS);
 
-    const formatValue = (value: number | null, suffix = ''): string => {
-        if (value === null) return 'N/A';
-        return `${value.toFixed(2)}${suffix}`;
-    };
-
-    const getGainIcon = () => {
-        if (holding.gainLossPercent > 0) return <TrendingUp className="w-4 h-4 text-green-700" />;
-        if (holding.gainLossPercent < 0) return <TrendingDown className="w-4 h-4 text-red-700" />;
-        return <Minus className="w-4 h-4 text-muted-foreground" />;
-    };
+    const up = holding.gainLossPercent > 0;
+    const down = holding.gainLossPercent < 0;
+    const GainIcon = up ? TrendingUp : down ? TrendingDown : Minus;
+    const gainTone = up ? 'text-success' : down ? 'text-destructive' : 'text-muted-foreground';
+    const gainWord = up ? t('valuation.profit') : down ? t('valuation.loss') : t('valuation.profitLoss');
 
     const sectorAverages = useMemo(() => {
         if (!allHoldings) return { pe: null, pb: null };
@@ -72,249 +94,226 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
 
     const has52w = holding.high52 !== null && holding.high52 !== undefined && holding.low52 !== null && holding.low52 !== undefined;
     const hasGovernance = (holding.promoterHolding !== null && holding.promoterHolding !== undefined) || (holding.avgVolume120d !== null && holding.avgVolume120d !== undefined);
+    const insights = valuationInsights(valuation).slice(0, 2);
 
     return (
-        <Card className="w-full relative overflow-hidden">
-            <CardHeader className="pb-2 relative z-10">
-                <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                            <StockSymbolLink symbol={holding.scrip} className="font-bold text-lg" />
+        <Card className="w-full overflow-hidden">
+            <CardHeader className="pb-2">
+                <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <StockSymbolLink symbol={holding.scrip} className="text-lg font-bold" />
                             <Badge variant="outline" className="text-xs">
                                 {holding.sector}
                             </Badge>
                         </div>
-                        <p className="text-sm text-muted-foreground truncate max-w-[200px]">
+                        <p className="truncate text-sm text-muted-foreground">
                             {holding.fullName}
                         </p>
                     </div>
 
-                    {/* Valuation Badge */}
-                    <div className="flex flex-col items-end">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger>
-                                    <Badge
-                                        className="text-sm font-bold px-3 py-1"
-                                        style={{
-                                            backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
-                                            color: valuation.color,
-                                        }}
-                                    >
-                                        <span className="inline-flex items-center gap-1"><StatusIcon name={valuation.icon} />{valuation.overallScore}</span>
-                                    </Badge>
-                                </TooltipTrigger>
-                                <TooltipContent className="max-w-xs">
-                                    <p className="font-semibold">{valuation.label}</p>
-                                    <p className="text-sm text-muted-foreground mt-1">
-                                        Score based on P/E, P/B, EPS, and Dividend metrics
-                                    </p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                        <span className="text-xs text-muted-foreground mt-1">
-                            {valuation.label}
-                        </span>
+                    <div className="shrink-0 text-right">
+                        <Badge
+                            className="px-3 py-1 text-sm font-bold"
+                            style={{
+                                backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
+                                color: valuation.color,
+                            }}
+                        >
+                            <span className="inline-flex items-center gap-1">
+                                <StatusIcon name={valuation.icon} />
+                                <span className="sr-only">{t('valuation.lblScore')}: </span>
+                                {valuation.overallScore}
+                            </span>
+                        </Badge>
+                        <p className="mt-1 flex items-center justify-end gap-1 text-xs text-muted-foreground">
+                            {t('valuation.scoreValue', { score: valuation.overallScore })}
+                            <Explain text={t('valuation.scoreTip')} title={t('valuation.lblScore')} />
+                        </p>
                     </div>
+                </div>
+                <div className="pt-2">
+                    <ValuationDescription valuation={valuation} />
                 </div>
             </CardHeader>
 
-            <CardContent className="relative z-10">
-                {/* Price & Gain/Loss Row */}
-                <div className="flex items-center justify-between mb-4 p-3 rounded-lg bg-muted/50">
-                    <div>
-                        <span className="text-xs text-muted-foreground">Current Price</span>
-                        <p className="text-lg font-bold">Rs. {holding.currentPrice.toLocaleString()}</p>
+            <CardContent>
+                {/* Price and profit or loss */}
+                <div className="mb-4 flex items-center justify-between gap-3 rounded-lg bg-muted/50 p-3">
+                    <div className="min-w-0">
+                        <span className="text-xs text-muted-foreground">{t('valuation.currentPrice')}</span>
+                        <p className="text-lg font-bold">{fmtMoney(holding.currentPrice, true)}</p>
                     </div>
-                    <div className="text-right flex items-center gap-2">
-                        {getGainIcon()}
+                    <div className={`flex items-center gap-2 text-right ${gainTone}`}>
+                        <GainIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
                         <div>
-                            <span className="text-xs text-muted-foreground">Gain/Loss</span>
-                            <p className={`text-lg font-bold ${holding.gainLossPercent >= 0 ? 'text-green-700' : 'text-red-700'}`}>
-                                {holding.gainLossPercent >= 0 ? '+' : ''}{holding.gainLossPercent.toFixed(2)}%
-                            </p>
+                            <span className="text-xs text-muted-foreground">{gainWord}</span>
+                            <p className="text-lg font-bold">{fmtPercent(holding.gainLossPercent, 2)}</p>
                         </div>
                     </div>
                 </div>
 
                 {showDetails && (
                     <>
-                        {/* 52-Week Range Bar */}
-                        {has52w && (
-                            <div className="mb-4 p-3 rounded-lg border border-border bg-card/30 space-y-2">
-                                <div className="flex justify-between text-[10px] text-muted-foreground">
-                                    <span>52W L: Rs. {holding.low52!.toFixed(2)}</span>
-                                    <span className="font-semibold text-foreground uppercase tracking-wider text-[9px]">52-Week Range</span>
-                                    <span>52W H: Rs. {holding.high52!.toFixed(2)}</span>
+                        {/* 52-week range */}
+                        {has52w && (() => {
+                            const range = holding.high52! - holding.low52!;
+                            const pct = range > 0 ? ((holding.currentPrice - holding.low52!) / range) * 100 : 0;
+                            const clamped = Math.min(100, Math.max(0, pct));
+                            return (
+                                <div className="mb-4 space-y-2 rounded-lg border border-border p-3">
+                                    <p className="text-sm font-semibold">{t('valuation.range52')}</p>
+                                    <p className="text-sm leading-relaxed text-muted-foreground">
+                                        {t('valuation.rangePosition', { pct: Math.round(clamped) })}
+                                    </p>
+                                    <div className="relative h-2 w-full rounded-full bg-muted" role="img" aria-label={t('valuation.rangePosition', { pct: Math.round(clamped) })}>
+                                        <div className="h-full w-full rounded-full bg-primary/20" />
+                                        <div
+                                            className="absolute -top-1 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-background bg-primary shadow"
+                                            style={{ left: `${clamped}%` }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between gap-2 text-xs text-muted-foreground">
+                                        <span>{t('valuation.low52')}: {fmtMoney(holding.low52, true)}</span>
+                                        <span className="text-right">{t('valuation.high52')}: {fmtMoney(holding.high52, true)}</span>
+                                    </div>
                                 </div>
-                                <div className="relative h-2 rounded-full bg-muted w-full">
-                                    {(() => {
-                                        const range = holding.high52! - holding.low52!;
-                                        const pct = range > 0 ? ((holding.currentPrice - holding.low52!) / range) * 100 : 0;
-                                        const clamped = Math.min(100, Math.max(0, pct));
-                                        return (
-                                            <div 
-                                                className="absolute h-4 w-4 bg-primary border-2 border-background rounded-full -top-1 shadow -translate-x-1/2 cursor-help" 
-                                                style={{ left: `${clamped}%` }}
-                                            />
-                                        );
-                                    })()}
-                                    <div className="h-full bg-primary/20 rounded-full w-full" />
-                                </div>
-                            </div>
-                        )}
+                            );
+                        })()}
 
-                        {/* Metrics Grid */}
-                        <div className="grid grid-cols-2 gap-3">
-                            {/* P/E Ratio */}
+                        {/* Key numbers */}
+                        <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('valuation.keyNumbers')}</h4>
+                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                             <MetricItem
-                                label="P/E Ratio"
-                                value={formatValue(holding.peRatio)}
+                                label={t('valuation.lblPe')}
+                                explain={<Explain term="pe" />}
+                                value={ratio(holding.peRatio, na)}
                                 health={peHealth}
-                                subValue={sectorAverages.pe !== null ? `Sector Avg: ${sectorAverages.pe.toFixed(1)}` : undefined}
-                                education={METRIC_EDUCATION.peRatio}
+                                subValue={sectorAverages.pe !== null ? t('valuation.sectorAvg', { value: sectorAverages.pe.toFixed(1) }) : undefined}
                             />
-
-                            {/* P/B Ratio */}
                             <MetricItem
-                                label="P/B Ratio"
-                                value={formatValue(holding.pbRatio)}
+                                label={t('valuation.lblPb')}
+                                explain={<Explain term="pb" />}
+                                value={ratio(holding.pbRatio, na)}
                                 health={pbHealth}
-                                subValue={sectorAverages.pb !== null ? `Sector Avg: ${sectorAverages.pb.toFixed(1)}` : undefined}
-                                education={METRIC_EDUCATION.pbRatio}
+                                subValue={sectorAverages.pb !== null ? t('valuation.sectorAvg', { value: sectorAverages.pb.toFixed(1) }) : undefined}
                             />
-
-                            {/* EPS */}
                             <MetricItem
-                                label="EPS"
-                                value={holding.eps !== null ? `Rs. ${holding.eps.toFixed(2)}` : 'N/A'}
+                                label={t('valuation.lblEps')}
+                                explain={<Explain term="eps" />}
+                                value={holding.eps !== null ? fmtMoney(holding.eps, true) : na}
                                 health={holding.eps && holding.eps > 20 ? 'good' : 'fair'}
-                                education={METRIC_EDUCATION.eps}
                             />
-
-                            {/* Dividend Yield */}
                             <MetricItem
-                                label="Div. Yield"
-                                value={formatValue(holding.dividendYield, '%')}
+                                label={t('valuation.lblDividendYield')}
+                                explain={<Explain term="dividendYield" />}
+                                value={holding.dividendYield !== null ? fmtPercent(holding.dividendYield, 2, false) : na}
                                 health={dividendHealth}
-                                education={METRIC_EDUCATION.dividendYield}
                             />
+                            {holding.bookValue !== null && holding.bookValue !== undefined && (
+                                <MetricItem
+                                    label={t('valuation.lblBookValue')}
+                                    explain={<Explain term="bookValue" />}
+                                    value={fmtMoney(holding.bookValue, true)}
+                                    health="unknown"
+                                />
+                            )}
                         </div>
-                        
-                        {/* Derived Metrics Grid */}
+
+                        {/* Other measures */}
                         {(holding.grahamNumber !== undefined || holding.pegRatio !== undefined || holding.earningsYield !== undefined) && (
-                            <div className="mt-4 pt-4 border-t">
-                                <h4 className="text-xs font-semibold text-muted-foreground mb-2">ANALYST METRICS</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                            <div className="mt-4 border-t pt-4">
+                                <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('valuation.otherMeasures')}</h4>
+                                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                                     {holding.grahamNumber !== null && holding.grahamNumber !== undefined && (
                                         <MetricItem
-                                            label="Graham Number"
-                                            value={`Rs. ${holding.grahamNumber.toFixed(2)}`}
+                                            label={t('valuation.lblGraham')}
+                                            explain={<Explain title={t('valuation.xGrahamTitle')} text={t('valuation.xGrahamText')} />}
+                                            value={fmtMoney(holding.grahamNumber, true)}
                                             health={holding.currentPrice < holding.grahamNumber ? 'excellent' : 'fair'}
-                                            education={METRIC_EDUCATION.grahamNumber}
                                         />
                                     )}
                                     {holding.pegRatio !== null && holding.pegRatio !== undefined && (
                                         <MetricItem
-                                            label="PEG Ratio"
+                                            label={t('valuation.lblPeg')}
+                                            explain={<Explain title={t('valuation.xPegTitle')} text={t('valuation.xPegText')} />}
                                             value={holding.pegRatio.toFixed(2)}
                                             health={holding.pegRatio < 1.0 ? 'excellent' : holding.pegRatio <= 1.5 ? 'good' : 'poor'}
-                                            education={METRIC_EDUCATION.pegRatio}
                                         />
                                     )}
                                     {holding.earningsYield !== null && holding.earningsYield !== undefined && (
                                         <MetricItem
-                                            label="Earnings Yield"
-                                            value={`${holding.earningsYield.toFixed(2)}%`}
+                                            label={t('valuation.lblEarningsYield')}
+                                            explain={<Explain title={t('valuation.xEarningsYieldTitle')} text={t('valuation.xEarningsYieldText')} />}
+                                            value={fmtPercent(holding.earningsYield, 2, false)}
                                             health={holding.earningsYield > 8.0 ? 'excellent' : holding.earningsYield >= 5.0 ? 'good' : 'poor'}
-                                            education={METRIC_EDUCATION.earningsYield}
                                         />
                                     )}
                                     {holding.sector === 'Commercial Bank' && holding.netInterestMargin !== null && holding.netInterestMargin !== undefined && (
                                         <MetricItem
-                                            label="NIM"
-                                            value={`${holding.netInterestMargin.toFixed(2)}%`}
+                                            label={t('valuation.lblNim')}
+                                            explain={<Explain title={t('valuation.xNimTitle')} text={t('valuation.xNimText')} />}
+                                            value={fmtPercent(holding.netInterestMargin, 2, false)}
                                             health={holding.netInterestMargin > 3.5 ? 'excellent' : 'fair'}
-                                            education={{
-                                                term: 'Net Interest Margin (NIM)',
-                                                definition: 'Measures the difference between interest income generated and interest paid out relative to assets.',
-                                                goodRange: '> 3.5% is healthy',
-                                                warningThreshold: '< 2.5% signals pressure on earnings',
-                                            }}
                                         />
                                     )}
                                     {(holding.sector === 'Hydropower' || holding.sector === 'Manufacturing') && holding.debtToEquity !== null && holding.debtToEquity !== undefined && (
                                         <MetricItem
-                                            label="Debt-to-Equity"
+                                            label={t('valuation.lblDe')}
+                                            explain={<Explain title={t('valuation.xDeTitle')} text={t('valuation.xDeText')} />}
                                             value={holding.debtToEquity.toFixed(2)}
                                             health={holding.debtToEquity < 1.5 ? 'excellent' : holding.debtToEquity <= 2.5 ? 'fair' : 'critical'}
-                                            education={{
-                                                term: 'Debt-to-Equity (D/E)',
-                                                definition: 'Compares total borrowings to shareholders\' equity. Higher leverage increases interest payment risk.',
-                                                goodRange: '< 1.5 is standard',
-                                                warningThreshold: '> 2.0 indicates elevated leverage risk',
-                                            }}
                                         />
                                     )}
                                 </div>
                             </div>
                         )}
 
-                        {/* Governance & Liquidity */}
+                        {/* Ownership and trading */}
                         {hasGovernance && (
-                            <div className="mt-4 pt-4 border-t">
-                                <h4 className="text-xs font-semibold text-muted-foreground mb-2">GOVERNANCE & LIQUIDITY</h4>
-                                <div className="grid grid-cols-2 gap-3">
+                            <div className="mt-4 border-t pt-4">
+                                <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('valuation.ownership')}</h4>
+                                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                                     {holding.promoterHolding !== null && holding.promoterHolding !== undefined && (
                                         <MetricItem
-                                            label="Promoter Share"
-                                            value={`${holding.promoterHolding.toFixed(1)}%`}
+                                            label={t('valuation.lblPromoter')}
+                                            explain={<Explain term="promoterShare" />}
+                                            value={fmtPercent(holding.promoterHolding, 1, false)}
                                             health={holding.promoterHolding >= 51 ? 'excellent' : holding.promoterHolding >= 30 ? 'good' : 'poor'}
-                                            education={{
-                                                term: 'Promoter Shareholding',
-                                                definition: 'Percentage of shares held by promoters. Higher shareholding reflects strong skin-in-the-game.',
-                                                goodRange: 'Above 51% (Financials) / 30% (Others)',
-                                                warningThreshold: 'Below limits signals high governance risk',
-                                            }}
                                         />
                                     )}
                                     {holding.avgVolume120d !== null && holding.avgVolume120d !== undefined && (
                                         <MetricItem
-                                            label="120D Avg Vol"
-                                            value={holding.avgVolume120d.toLocaleString()}
+                                            label={t('valuation.lblVolume')}
+                                            explain={<Explain title={t('valuation.xVolumeTitle')} text={t('valuation.xVolumeText')} />}
+                                            value={fmtNumber(holding.avgVolume120d)}
                                             health={holding.avgVolume120d >= 5000 ? 'excellent' : 'poor'}
-                                            education={{
-                                                term: '120-Day Average Volume',
-                                                definition: 'Average trading volume over the last 120 trading days. High volume ensures easy entry/exit.',
-                                                goodRange: 'Above 5,000 shares is liquid',
-                                                warningThreshold: 'Below 5,000 indicates high liquidity risk',
-                                            }}
                                         />
                                     )}
                                 </div>
                             </div>
                         )}
 
-                        {/* Score Breakdown */}
-                        <div className="mt-4 pt-4 border-t">
-                            <h4 className="text-xs font-semibold text-muted-foreground mb-2">SCORE BREAKDOWN</h4>
-                            <div className="space-y-2">
-                                <ScoreBar label="P/E" score={valuation.breakdown.peScore} />
-                                <ScoreBar label="P/B" score={valuation.breakdown.pbScore} />
-                                <ScoreBar label="Dividend" score={valuation.breakdown.dividendScore} />
-                                <ScoreBar label="EPS" score={valuation.breakdown.epsScore} />
+                        {/* How the score is made */}
+                        <div className="mt-4 border-t pt-4">
+                            <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('valuation.breakdown')}</h4>
+                            <div className="space-y-3">
+                                <ScoreBar label={t('valuation.lblPe')} score={valuation.breakdown.peScore} />
+                                <ScoreBar label={t('valuation.lblPb')} score={valuation.breakdown.pbScore} />
+                                <ScoreBar label={t('valuation.lblDividend')} score={valuation.breakdown.dividendScore} />
+                                <ScoreBar label={t('valuation.lblEps')} score={valuation.breakdown.epsScore} />
                             </div>
                         </div>
 
-                        {/* Recommendations */}
-                        {valuation.recommendations.length > 0 && (
-                            <div className="mt-4 pt-4 border-t">
-                                <h4 className="text-xs font-semibold text-muted-foreground mb-2">INSIGHTS</h4>
-                                <ul className="space-y-1">
-                                    {valuation.recommendations.slice(0, 2).map((rec, i) => (
-                                        <li key={i} className="text-xs text-muted-foreground flex items-start gap-1">
-                                            <span>•</span>
-                                            <span>{rec}</span>
+                        {/* What the numbers show */}
+                        {insights.length > 0 && (
+                            <div className="mt-4 border-t pt-4">
+                                <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('valuation.insights')}</h4>
+                                <ul className="space-y-2">
+                                    {insights.map((text, i) => (
+                                        <li key={i} className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground">
+                                            <Info className="mt-1 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                            <span>{text}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -328,50 +327,88 @@ export const StockValuationCard = ({ holding, showDetails = true, allHoldings }:
     );
 };
 
+/**
+ * Simple-mode card: at most three numbers (P/E, PBV, dividend yield) and one plain description.
+ */
+export const SimpleValuationCard = ({ holding }: { holding: StockHolding }) => {
+    const { t } = useT();
+    const valuation = useMemo(() => calculateValuationScore(holding), [holding]);
+    const na = t('valuation.na');
+    const isFund = holding.sector === 'Mutual Fund';
+
+    return (
+        <Card className="w-full overflow-hidden">
+            <CardHeader className="pb-2">
+                <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                        <StockSymbolLink symbol={holding.scrip} className="text-lg font-bold" />
+                        <Badge variant="outline" className="text-xs">{holding.sector}</Badge>
+                    </div>
+                    <p className="truncate text-sm text-muted-foreground">{holding.fullName}</p>
+                </div>
+            </CardHeader>
+            <CardContent className="space-y-3">
+                {!isFund && (
+                    <dl className="grid grid-cols-3 gap-2">
+                        <SimpleNumber label={t('valuation.lblPe')} term="pe" value={ratio(holding.peRatio, na)} />
+                        <SimpleNumber label={t('valuation.lblPb')} term="pb" value={ratio(holding.pbRatio, na)} />
+                        <SimpleNumber
+                            label={t('valuation.lblDividendYield')}
+                            term="dividendYield"
+                            value={holding.dividendYield !== null ? fmtPercent(holding.dividendYield, 1, false) : na}
+                        />
+                    </dl>
+                )}
+                <ValuationDescription valuation={valuation} />
+            </CardContent>
+        </Card>
+    );
+};
+
+const SimpleNumber = ({ label, term, value }: { label: string; term: 'pe' | 'pb' | 'dividendYield'; value: string }) => (
+    <div className="min-w-0 rounded-lg bg-muted/40 p-2.5">
+        <dt className="flex items-center gap-1 text-xs leading-relaxed text-muted-foreground">
+            <span className="min-w-0">{label}</span>
+            <Explain term={term} />
+        </dt>
+        <dd className="mt-0.5 text-lg font-bold">{value}</dd>
+    </div>
+);
+
 // Helper component for individual metrics
 interface MetricItemProps {
     label: string;
     value: string;
-    health: string;
+    health: MetricHealth;
     subValue?: string;
-    education: {
-        term: string;
-        definition: string;
-        goodRange: string;
-        warningThreshold: string;
-    };
+    explain: ReactNode;
 }
 
-const MetricItem = ({ label, value, health, subValue, education }: MetricItemProps) => {
-    const healthColor = getHealthColor(health as 'excellent' | 'good' | 'fair' | 'poor' | 'critical' | 'unknown');
-    const healthIcon = getHealthIcon(health as 'excellent' | 'good' | 'fair' | 'poor' | 'critical' | 'unknown');
+const MetricItem = ({ label, value, health, subValue, explain }: MetricItemProps) => {
+    const healthColor = getHealthColor(health);
+    const healthIcon = getHealthIcon(health);
 
     return (
-        <div className="p-3 rounded-lg bg-muted/30 flex flex-col justify-between h-full">
+        <div className="flex h-full flex-col justify-between rounded-lg bg-muted/30 p-3">
             <div>
-                <div className="flex items-center justify-between mb-1">
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger className="flex items-center gap-1">
-                                <span className="text-xs text-muted-foreground">{label}</span>
-                                <Info className="w-3 h-3 text-muted-foreground" />
-                            </TooltipTrigger>
-                            <TooltipContent className="max-w-xs">
-                                <p className="font-semibold mb-1">{education.term}</p>
-                                <p className="text-sm mb-2">{education.definition}</p>
-                                <p className="text-xs text-green-700">Good: {education.goodRange}</p>
-                                <p className="text-xs text-yellow-700">Watch: {education.warningThreshold}</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
-                    <span style={{ color: healthColor }}><StatusIcon name={healthIcon} /></span>
+                <div className="mb-1 flex items-center justify-between gap-2">
+                    <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                        {label}
+                        {explain}
+                    </span>
+                    {health !== 'unknown' && (
+                        <span style={{ color: healthColor }}>
+                            <StatusIcon name={healthIcon} />
+                            <span className="sr-only">{healthWord(health)}</span>
+                        </span>
+                    )}
                 </div>
                 <p className="text-lg font-bold" style={{ color: healthColor }}>
                     {value}
                 </p>
             </div>
             {subValue && (
-                <p className="text-[10px] text-muted-foreground mt-1 border-t border-border/20 pt-1">
+                <p className="mt-1 border-t border-border/20 pt-1 text-xs text-muted-foreground">
                     {subValue}
                 </p>
             )}
@@ -379,13 +416,14 @@ const MetricItem = ({ label, value, health, subValue, education }: MetricItemPro
     );
 };
 
-// Helper component for score bars
+// Helper component for score bars: the number is written beside the bar
 interface ScoreBarProps {
     label: string;
     score: number;
 }
 
 const ScoreBar = ({ label, score }: ScoreBarProps) => {
+    const { t } = useT();
     const getScoreColor = (s: number) => {
         if (s >= 80) return 'hsl(var(--status-1))';
         if (s >= 60) return 'hsl(var(--status-2))';
@@ -396,19 +434,20 @@ const ScoreBar = ({ label, score }: ScoreBarProps) => {
 
     return (
         <div className="flex items-center gap-2">
-            <span className="text-xs w-16 text-muted-foreground">{label}</span>
-            <div className="flex-1">
+            <span className="w-20 shrink-0 text-sm leading-relaxed text-muted-foreground">{label}</span>
+            <div className="min-w-0 flex-1">
                 <Progress
                     value={score}
-                    className="h-1.5"
+                    className="h-2"
+                    aria-label={`${label}: ${t('valuation.scoreValue', { score })}`}
                     style={{
                         // @ts-expect-error -- CSS custom property
                         '--progress-color': getScoreColor(score),
                     }}
                 />
             </div>
-            <span className="text-xs font-medium w-8 text-right" style={{ color: getScoreColor(score) }}>
-                {score}
+            <span className="w-14 shrink-0 text-right font-mono text-sm font-medium">
+                {score}/100
             </span>
         </div>
     );
@@ -416,31 +455,23 @@ const ScoreBar = ({ label, score }: ScoreBarProps) => {
 
 // Compact version for tables
 export const StockValuationBadge = ({ holding }: { holding: StockHolding }) => {
+    const { t } = useT();
     const valuation = useMemo(() => calculateValuationScore(holding), [holding]);
 
     return (
-        <TooltipProvider>
-            <Tooltip>
-                <TooltipTrigger>
-                    <Badge
-                        className="text-xs cursor-help"
-                        style={{
-                            backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
-                            color: valuation.color,
-                        }}
-                    >
-                        <span className="inline-flex items-center gap-1"><StatusIcon name={valuation.icon} />{valuation.overallScore}</span>
-                    </Badge>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                    <p className="font-semibold">{valuation.label}</p>
-                    <div className="mt-2 space-y-1">
-                        <p className="text-xs">P/E Score: {valuation.breakdown.peScore}/100</p>
-                        <p className="text-xs">P/B Score: {valuation.breakdown.pbScore}/100</p>
-                        <p className="text-xs">Dividend Score: {valuation.breakdown.dividendScore}/100</p>
-                    </div>
-                </TooltipContent>
-            </Tooltip>
-        </TooltipProvider>
+        <Badge
+            className="text-xs"
+            title={`${valuationLabel(valuation)}. ${t('valuation.lblPe')}: ${valuation.breakdown.peScore}/100, ${t('valuation.lblPb')}: ${valuation.breakdown.pbScore}/100, ${t('valuation.lblDividend')}: ${valuation.breakdown.dividendScore}/100`}
+            style={{
+                backgroundColor: `color-mix(in srgb, ${valuation.color} 14%, transparent)`,
+                color: valuation.color,
+            }}
+        >
+            <span className="inline-flex items-center gap-1">
+                <StatusIcon name={valuation.icon} />
+                {valuation.overallScore}
+                <span className="sr-only">{valuationLabel(valuation)}</span>
+            </span>
+        </Badge>
     );
 };

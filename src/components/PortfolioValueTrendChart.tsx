@@ -26,6 +26,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { TrendingUp, TrendingDown, RefreshCw, ArrowUpCircle, ArrowDownCircle, Gift } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useT } from "@/i18n";
+import { bsMonthName, fmtDate, fmtMonthYear, fmtMoney, fmtNumber, fmtPercent, toBS } from "@/i18n/format";
+import { fmtAxisCompact } from "@/components/charts";
+
+const timeOf = (d: Date) => d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+const signedMoney = (v: number) => `${v > 0 ? "+" : v < 0 ? "-" : ""}${fmtMoney(Math.abs(v))}`;
 
 /**
  * Get total dividend income from manual entries in localStorage
@@ -100,17 +106,11 @@ interface ChartDataPoint {
     hasSell?: boolean;
 }
 
-const TIME_PERIODS: { label: string; value: TimePeriod; description: string }[] = [
-    { label: "1D", value: "1d", description: "Last 24 hours" },
-    { label: "1W", value: "1w", description: "Last 7 days" },
-    { label: "1M", value: "1m", description: "Last 30 days" },
-    { label: "3M", value: "3m", description: "Last 3 months" },
-    { label: "6M", value: "6m", description: "Last 6 months" },
-    { label: "1Y", value: "1y", description: "Last year" },
-    { label: "ALL", value: "all", description: "All time" },
-];
+/** Label and description keys live in the "home" namespace: home.period_<value> and home.periodLong_<value>. */
+const TIME_PERIODS: TimePeriod[] = ["1d", "1w", "1m", "3m", "6m", "1y", "all"];
 
 export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioValueTrendChartProps) => {
+    const { t } = useT();
     const [chartData, setChartData] = useState<ChartDataPoint[]>([]);
     const [isDbConnected, setIsDbConnected] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -120,38 +120,29 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
     const [isRefreshing, setIsRefreshing] = useState(false);
 
     const formatDateForPeriod = useCallback((dateStr: string, period: TimePeriod): { display: string; full: string } => {
+        // Bikram Sambat dates, Latin digits.
         const date = new Date(dateStr);
+        const bs = toBS(date);
 
         let display: string;
         switch (period) {
             case "1d":
-                display = date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
+                display = timeOf(date);
                 break;
             case "1w":
-                display = date.toLocaleDateString("en-US", { weekday: "short", day: "numeric" });
-                break;
             case "1m":
-                display = date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-                break;
             case "3m":
             case "6m":
-                display = date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+                display = bs ? `${bs.day} ${bsMonthName(bs.month)}` : dateStr;
                 break;
             case "1y":
             case "all":
             default:
-                display = date.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+                display = fmtMonthYear(date);
                 break;
         }
 
-        const full = date.toLocaleDateString("en-US", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            hour: period === "1d" ? "2-digit" : undefined,
-            minute: period === "1d" ? "2-digit" : undefined,
-        });
+        const full = period === "1d" ? `${fmtDate(date)}, ${timeOf(date)}` : fmtDate(date);
 
         return { display, full };
     }, []);
@@ -161,6 +152,7 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
             setLoading(true);
             const serverUp = await isServerRunning();
             setIsDbConnected(serverUp);
+            if (!serverUp) setChartData([]);
 
             if (serverUp) {
                 const [history, txns, periodStats] = await Promise.all([
@@ -236,78 +228,12 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                 }
             }
         } catch (error) {
-            console.log("Database not connected, using simulated data");
+            // No invented history: an unreachable database shows an empty chart with a clear message.
             setIsDbConnected(false);
-            generateSimulatedData();
+            setChartData([]);
         } finally {
             setLoading(false);
         }
-    }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod, ready]);
-
-    const generateSimulatedData = useCallback(() => {
-        const now = new Date();
-        const data: ChartDataPoint[] = [];
-        const baseValue = summary.totalInvested;
-        let currentValue = baseValue * 0.9;
-
-        let dataPoints: number;
-        let intervalMs: number;
-
-        switch (selectedPeriod) {
-            case "1d":
-                dataPoints = 24;
-                intervalMs = 60 * 60 * 1000; // 1 hour
-                break;
-            case "1w":
-                dataPoints = 7;
-                intervalMs = 24 * 60 * 60 * 1000; // 1 day
-                break;
-            case "1m":
-                dataPoints = 30;
-                intervalMs = 24 * 60 * 60 * 1000;
-                break;
-            case "3m":
-                dataPoints = 12;
-                intervalMs = 7 * 24 * 60 * 60 * 1000; // 1 week
-                break;
-            case "6m":
-                dataPoints = 24;
-                intervalMs = 7 * 24 * 60 * 60 * 1000;
-                break;
-            case "1y":
-                dataPoints = 12;
-                intervalMs = 30 * 24 * 60 * 60 * 1000; // 1 month
-                break;
-            default:
-                dataPoints = 12;
-                intervalMs = 30 * 24 * 60 * 60 * 1000;
-        }
-
-        for (let i = dataPoints - 1; i >= 0; i--) {
-            const date = new Date(now.getTime() - i * intervalMs);
-            const growth = 1 + (Math.random() * 0.06 - 0.02);
-            currentValue = currentValue * growth;
-
-            if (i === 0) {
-                currentValue = summary.currentValue;
-            }
-
-            const { display, full } = formatDateForPeriod(date.toISOString(), selectedPeriod);
-            const totalDividendIncome = getTotalDividendIncome();
-            const roundedValue = Math.round(currentValue);
-
-            data.push({
-                date: date.toISOString(),
-                displayDate: display,
-                fullDate: full,
-                value: roundedValue,
-                invested: Math.round(baseValue),
-                dividendIncome: totalDividendIncome,
-                totalWithDividends: roundedValue + totalDividendIncome,
-            });
-        }
-
-        setChartData(data);
     }, [selectedPeriod, summary.currentValue, summary.totalInvested, formatDateForPeriod, ready]);
 
     useEffect(() => {
@@ -343,63 +269,53 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
             const dividendIncome = dataPoint?.dividendIncome || 0;
             const gainLoss = (valueData?.value || 0) - (investedData?.value || 0);
             const totalReturn = gainLoss + dividendIncome;
-            const gainLossPercent = investedData?.value
-                ? ((gainLoss / investedData.value) * 100).toFixed(2)
-                : "0";
-            const totalReturnPercent = investedData?.value
-                ? ((totalReturn / investedData.value) * 100).toFixed(2)
-                : "0";
+            const gainLossPercent = investedData?.value ? fmtPercent((gainLoss / investedData.value) * 100, 2) : "0%";
+            const totalReturnPercent = investedData?.value ? fmtPercent((totalReturn / investedData.value) * 100, 2) : "0%";
 
             // Get dividends added on this date
             const dividendsOnDate = getDividendsForDate(dataPoint?.date || "");
 
             return (
-                <div className="bg-card border border-border rounded-lg p-3 shadow-sm min-w-[250px]">
+                <div className="bg-card border border-border rounded-lg p-3 shadow-sm w-[240px] max-w-[80vw]">
                     <p className="font-semibold text-foreground border-b border-border pb-2 mb-2">
                         {dataPoint?.fullDate}
                     </p>
                     <div className="space-y-1">
-                        <p className="text-sm text-primary flex justify-between">
-                            <span>Portfolio Value:</span>
-                            <span className="font-medium">
-                                Rs. {valueData?.value?.toLocaleString("en-NP")}
-                            </span>
+                        <p className="text-sm text-primary flex justify-between gap-2">
+                            <span>{t("home.tipPortfolioValue")}</span>
+                            <span className="font-medium">{fmtMoney(valueData?.value)}</span>
                         </p>
-                        <p className="text-sm text-muted-foreground flex justify-between">
-                            <span>Invested:</span>
-                            <span>Rs. {investedData?.value?.toLocaleString("en-NP")}</span>
+                        <p className="text-sm text-muted-foreground flex justify-between gap-2">
+                            <span>{t("home.tipInvested")}</span>
+                            <span>{fmtMoney(investedData?.value)}</span>
                         </p>
                         <p
                             className={cn(
-                                "text-sm flex justify-between",
-                                gainLoss >= 0 ? "text-green-700" : "text-red-700"
+                                "text-sm flex justify-between gap-2",
+                                gainLoss >= 0 ? "text-success" : "text-destructive"
                             )}
                         >
-                            <span>Capital Gain/Loss:</span>
-                            <span className="font-medium">
-                                {gainLoss >= 0 ? "+" : ""}Rs. {gainLoss.toLocaleString("en-NP")} (
-                                {gainLossPercent}%)
+                            <span>{t("home.tipGainLoss")}</span>
+                            <span className="font-medium text-right">
+                                {signedMoney(gainLoss)} ({gainLossPercent})
                             </span>
                         </p>
                         {dividendIncome > 0 && (
-                            <p className="text-sm text-purple-700 flex justify-between">
-                                <span>Dividend Income:</span>
-                                <span className="font-medium">
-                                    +Rs. {dividendIncome.toLocaleString("en-NP")}
-                                </span>
+                            <p className="text-sm text-primary flex justify-between gap-2">
+                                <span>{t("home.tipDividendIncome")}</span>
+                                <span className="font-medium">+{fmtMoney(dividendIncome)}</span>
                             </p>
                         )}
                         {dividendIncome > 0 && (
                             <p
                                 className={cn(
-                                    "text-sm flex justify-between font-semibold border-t border-border pt-1 mt-1",
-                                    totalReturn >= 0 ? "text-emerald-700" : "text-red-700"
+                                    "text-sm flex justify-between gap-2 font-semibold border-t border-border pt-1 mt-1",
+                                    totalReturn >= 0 ? "text-success" : "text-destructive"
                                 )}
                             >
-                                <span>Total Return:</span>
-                                <span>
-                                    {totalReturn >= 0 ? "+" : ""}Rs. {totalReturn.toLocaleString("en-NP")} (
-                                    {totalReturnPercent}%)
+                                <span>{t("home.tipTotalReturn")}</span>
+                                <span className="text-right">
+                                    {signedMoney(totalReturn)} ({totalReturnPercent})
                                 </span>
                             </p>
                         )}
@@ -408,8 +324,8 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                     {dataPoint?.transactions && dataPoint.transactions.length > 0 && (
                         <div className="border-t border-border mt-2 pt-2">
                             <p className="text-xs font-medium text-muted-foreground mb-1 flex items-center gap-1">
-                                <span className="inline-block w-2 h-2 rounded-full bg-yellow-500"></span>
-                                Transactions on this date:
+                                <span className="inline-block w-2 h-2 rounded-full bg-warning"></span>
+                                {t("home.tipTransactions")}
                             </p>
                             <div className="max-h-[150px] overflow-y-auto">
                                 {dataPoint.transactions.map((tx, idx) => (
@@ -417,17 +333,17 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                                         key={idx}
                                         className={cn(
                                             "text-xs flex items-center gap-1 py-0.5",
-                                            tx.type === "BUY" ? "text-green-700" : "text-red-700"
+                                            tx.type === "BUY" ? "text-success" : "text-destructive"
                                         )}
                                     >
                                         {tx.type === "BUY" ? (
-                                            <ArrowUpCircle className="w-3 h-3" />
+                                            <ArrowUpCircle className="w-3 h-3" aria-hidden="true" />
                                         ) : (
-                                            <ArrowDownCircle className="w-3 h-3" />
+                                            <ArrowDownCircle className="w-3 h-3" aria-hidden="true" />
                                         )}
-                                        <span className="font-medium">{tx.type}</span>
+                                        <span className="font-medium">{t(tx.type === "BUY" ? "home.txBought" : "home.txSold")}</span>
                                         <span>
-                                            {tx.quantity} {tx.symbol} @ Rs. {tx.price.toLocaleString("en-NP")}
+                                            {t("home.txLine", { qty: fmtNumber(tx.quantity), symbol: tx.symbol, price: fmtMoney(tx.price, true) })}
                                         </span>
                                     </p>
                                 ))}
@@ -437,9 +353,9 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
 
                     {dividendsOnDate.length > 0 && (
                         <div className="border-t border-border mt-2 pt-2">
-                            <p className="text-xs font-medium text-purple-700 mb-1 flex items-center gap-1">
-                                <Gift className="w-3 h-3" />
-                                Dividends added on this date:
+                            <p className="text-xs font-medium text-primary mb-1 flex items-center gap-1">
+                                <Gift className="w-3 h-3" aria-hidden="true" />
+                                {t("home.tipDividendsAdded")}
                             </p>
                             <div className="space-y-1">
                                 {dividendsOnDate.map((div, idx) => (
@@ -447,13 +363,13 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                                         <p className="font-medium text-foreground">{div.symbol}</p>
                                         <div className="ml-2 space-y-0.5">
                                             {div.cashPercent > 0 && (
-                                                <p className="text-green-700">
-                                                    Cash: {div.cashPercent}% (Rs. {div.cashIncome.toLocaleString("en-NP")})
+                                                <p className="text-success">
+                                                    {t("home.tipCash", { percent: div.cashPercent, amount: fmtMoney(div.cashIncome) })}
                                                 </p>
                                             )}
                                             {div.bonusPercent > 0 && (
-                                                <p className="text-amber-700">
-                                                    Bonus: {div.bonusPercent}%
+                                                <p className="text-warning">
+                                                    {t("home.tipBonus", { percent: div.bonusPercent })}
                                                 </p>
                                             )}
                                         </div>
@@ -503,68 +419,51 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
         );
     };
 
+
+    const dividendTotal = getTotalDividendIncome();
+    const buyCount = transactions.filter((tx) => tx.type === "BUY").length;
+    const sellCount = transactions.filter((tx) => tx.type === "SELL").length;
+    const lineColor = isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))";
+
     return (
-        <div
-            className="surface p-4 h-[380px]  relative"
-           
-        >
+        <div className="surface relative p-4">
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-                <div className="flex items-center gap-3">
-                    <div>
-                        <h3 className="text-lg font-semibold flex items-center gap-2">
-                            Portfolio Value Trend
-                            {isPositiveChange ? (
-                                <TrendingUp className="w-5 h-5 text-green-700" />
-                            ) : (
-                                <TrendingDown className="w-5 h-5 text-red-700" />
-                            )}
-                        </h3>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                            <span>
-                                {loading
-                                    ? "Loading..."
-                                    : isDbConnected
-                                        ? "Live data from database"
-                                        : "Simulated data"}
-                            </span>
-                            {isDbConnected && (
-                                <div className="flex items-center gap-1">
-                                    <div className="w-2 h-2 rounded-full bg-green-500" />
-                                    <span className="text-green-700">Connected</span>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+            <div className="mb-3 flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+                <div className="min-w-0">
+                    <h3 className="flex items-center gap-2 text-base font-semibold sm:text-lg">
+                        {t("home.pvtTitle")}
+                        {isPositiveChange ? (
+                            <TrendingUp className="h-5 w-5 text-success" aria-hidden="true" />
+                        ) : (
+                            <TrendingDown className="h-5 w-5 text-destructive" aria-hidden="true" />
+                        )}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                        {loading
+                            ? t("common.loading")
+                            : isDbConnected
+                                ? t("home.pvtConnected")
+                                : t("home.pvtNoDb")}
+                    </p>
                 </div>
 
                 {/* Period stats */}
                 <div className="flex items-center gap-4">
-                    {/* Dividend Income Badge */}
-                    {getTotalDividendIncome() > 0 && (
-                        <div className="text-right hidden sm:block">
-                            <p className="text-xs text-muted-foreground flex items-center gap-1 justify-end">
-                                <Gift className="w-3 h-3 text-purple-700" />
-                                Dividend Income
+                    {dividendTotal > 0 && (
+                        <div className="hidden text-right sm:block">
+                            <p className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
+                                <Gift className="h-3 w-3 text-primary" aria-hidden="true" />
+                                {t("home.tipDividendIncome")}
                             </p>
-                            <p className="text-sm font-semibold text-purple-700">
-                                +Rs. {getTotalDividendIncome().toLocaleString("en-NP")}
-                            </p>
+                            <p className="text-sm font-semibold text-primary">+{fmtMoney(dividendTotal)}</p>
                         </div>
                     )}
-                    <div className="text-right">
+                    <div className="sm:text-right">
                         <p className="text-xs text-muted-foreground">
-                            {TIME_PERIODS.find((p) => p.value === selectedPeriod)?.description} change
+                            {t("home.pvtChangeLabel", { period: t(`home.periodLong_${selectedPeriod}`) })}
                         </p>
-                        <p
-                            className={cn(
-                                "text-sm font-semibold",
-                                isPositiveChange ? "text-green-700" : "text-red-700"
-                            )}
-                        >
-                            {isPositiveChange ? "+" : ""}Rs. {Math.abs(periodChange).toLocaleString("en-NP")}{" "}
-                            ({isPositiveChange ? "+" : ""}
-                            {periodChangePercent.toFixed(2)}%)
+                        <p className={cn("text-sm font-semibold", isPositiveChange ? "text-success" : "text-destructive")}>
+                            {signedMoney(periodChange)} ({fmtPercent(periodChangePercent, 2)})
                         </p>
                     </div>
                     <Button
@@ -572,73 +471,82 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                         size="icon"
                         onClick={handleRefresh}
                         disabled={isRefreshing}
-                        className="h-8 w-8"
+                        className="ml-auto h-11 w-11 sm:ml-0 sm:h-8 sm:w-8"
+                        aria-label={t("common.refresh")}
                     >
-                        <RefreshCw className={cn("w-4 h-4", isRefreshing && "animate-spin")} />
+                        <RefreshCw className={cn("h-4 w-4", isRefreshing && "animate-spin")} aria-hidden="true" />
                     </Button>
                 </div>
             </div>
 
+            {/* One-sentence summary so the chart is not needed to get the point */}
+            {!loading && chartData.length >= 2 && (
+                <p className="mb-3 text-sm leading-relaxed">
+                    {t(periodChange > 0 ? "home.pvtSummaryUp" : periodChange < 0 ? "home.pvtSummaryDown" : "home.pvtSummaryFlat", {
+                        period: t(`home.periodLong_${selectedPeriod}`),
+                        amount: fmtMoney(Math.abs(periodChange)),
+                        percent: fmtPercent(Math.abs(periodChangePercent), 1, false),
+                    })}
+                </p>
+            )}
+
             {/* Time period selector */}
-            <div className="flex items-center gap-1 mb-4 overflow-x-auto pb-1">
+            <div className="mb-2 flex items-center gap-1 overflow-x-auto pb-1" role="group" aria-label={t("home.pvtPeriodAria")}>
                 {TIME_PERIODS.map((period) => (
                     <Button
-                        key={period.value}
-                        variant={selectedPeriod === period.value ? "default" : "ghost"}
+                        key={period}
+                        variant={selectedPeriod === period ? "default" : "ghost"}
                         size="sm"
-                        onClick={() => handlePeriodChange(period.value)}
+                        onClick={() => handlePeriodChange(period)}
+                        aria-pressed={selectedPeriod === period}
+                        title={t(`home.periodLong_${period}`)}
                         className={cn(
-                            "h-7 px-3 text-xs font-medium transition-all",
-                            selectedPeriod === period.value
-                                ? "bg-primary text-primary-foreground"
-                                : "hover:bg-muted"
+                            "h-9 shrink-0 px-3 text-xs font-medium",
+                            selectedPeriod === period ? "bg-primary text-primary-foreground" : "hover:bg-muted"
                         )}
                     >
-                        {period.label}
+                        {t(`home.period_${period}`)}
                     </Button>
                 ))}
+            </div>
 
-                {/* Legend */}
-                <div className="ml-auto flex items-center gap-3 text-xs">
-                    <div className="flex items-center gap-1">
-                        <div className="w-3 h-3 rounded bg-primary" />
-                        <span className="text-muted-foreground">Value</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                        <div className="w-3 h-0.5 bg-muted-foreground/50" style={{ borderStyle: "dashed" }} />
-                        <span className="text-muted-foreground">Invested</span>
-                    </div>
-                    {transactions.length > 0 && (
-                        <>
-                            <div className="flex items-center gap-1">
-                                <div className="w-2 h-2 rounded-full bg-green-500" />
-                                <span className="text-muted-foreground">Buy</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                                <div className="w-2 h-2 rounded-full bg-red-500" />
-                                <span className="text-muted-foreground">Sell</span>
-                            </div>
-                        </>
-                    )}
+            {/* Legend */}
+            <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                <div className="flex items-center gap-1">
+                    <div className="h-3 w-3 rounded bg-primary" />
+                    <span className="text-muted-foreground">{t("home.legendValue")}</span>
                 </div>
+                <div className="flex items-center gap-1">
+                    <div className="h-0.5 w-3 bg-muted-foreground/50" style={{ borderStyle: "dashed" }} />
+                    <span className="text-muted-foreground">{t("home.legendInvested")}</span>
+                </div>
+                {transactions.length > 0 && (
+                    <>
+                        <div className="flex items-center gap-1">
+                            <div className="h-2 w-2 rounded-full bg-success" />
+                            <span className="text-muted-foreground">{t("home.legendBought")}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="h-2 w-2 rounded-full bg-destructive" />
+                            <span className="text-muted-foreground">{t("home.legendSold")}</span>
+                        </div>
+                    </>
+                )}
             </div>
 
             {/* Chart */}
-            <div className="relative" style={{ height: '70%', overflow: 'visible' }}>
-                <ResponsiveContainer width="100%" height="100%" style={{ overflow: 'visible' }}>
-                    <AreaChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+            <div className="relative h-[220px] sm:h-[260px]" style={{ overflow: "visible" }}>
+                {!loading && chartData.length === 0 && (
+                    <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center text-sm leading-relaxed text-muted-foreground">
+                        {isDbConnected ? t("home.pvtEmpty") : t("home.pvtEmptyNoDb")}
+                    </div>
+                )}
+                <ResponsiveContainer width="100%" height="100%" style={{ overflow: "visible" }}>
+                    <AreaChart data={chartData} margin={{ top: 10, right: 8, left: 0, bottom: 0 }}>
                         <defs>
                             <linearGradient id="valueTrendGradient" x1="0" y1="0" x2="0" y2="1">
-                                <stop
-                                    offset="5%"
-                                    stopColor={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
-                                    stopOpacity={0.4}
-                                />
-                                <stop
-                                    offset="95%"
-                                    stopColor={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
-                                    stopOpacity={0}
-                                />
+                                <stop offset="5%" stopColor={lineColor} stopOpacity={0.4} />
+                                <stop offset="95%" stopColor={lineColor} stopOpacity={0} />
                             </linearGradient>
                         </defs>
                         <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--chart-grid))" />
@@ -648,29 +556,22 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                             axisLine={{ stroke: "hsl(var(--chart-grid))" }}
                             tickLine={false}
                             interval="preserveStartEnd"
+                            minTickGap={24}
                         />
                         <YAxis
-                            tickFormatter={(value) =>
-                                value >= 1000000
-                                    ? `${(value / 1000000).toFixed(1)}M`
-                                    : value >= 1000
-                                        ? `${(value / 1000).toFixed(0)}K`
-                                        : value.toString()
-                            }
+                            tickFormatter={fmtAxisCompact}
                             tick={{ fill: "hsl(var(--chart-axis))", fontSize: 11 }}
                             axisLine={{ stroke: "hsl(var(--chart-grid))" }}
                             tickLine={false}
-                            width={50}
+                            width={44}
                         />
-                        <Tooltip
-                            content={<CustomTooltip />}
-                            wrapperStyle={{ zIndex: 50 }}
-                        />
+                        <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 50 }} />
 
                         {/* Invested amount line (dashed) */}
                         <Area
                             type="monotone"
                             dataKey="invested"
+                            name={t("home.legendInvested")}
                             stroke="hsl(var(--chart-axis))"
                             strokeWidth={1}
                             strokeDasharray="5 5"
@@ -681,30 +582,23 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
                         <Area
                             type="monotone"
                             dataKey="value"
-                            stroke={isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))"}
+                            name={t("home.legendValue")}
+                            stroke={lineColor}
                             strokeWidth={2}
                             fill="url(#valueTrendGradient)"
                             dot={<CustomDot />}
-                            activeDot={{
-                                r: 6,
-                                stroke: isPositiveChange ? "hsl(var(--chart-accent))" : "hsl(var(--status-5))",
-                                strokeWidth: 2,
-                                fill: "hsl(var(--card))",
-                            }}
+                            activeDot={{ r: 6, stroke: lineColor, strokeWidth: 2, fill: "hsl(var(--card))" }}
                         />
                     </AreaChart>
                 </ResponsiveContainer>
             </div>
 
             {/* Transaction summary */}
-            <div className="flex items-center justify-center gap-4 mt-2 text-xs text-muted-foreground">
-                {transactions.length > 0 && (
-                    <span>
-                        {transactions.filter((t) => t.type === "BUY").length} buys,{" "}
-                        {transactions.filter((t) => t.type === "SELL").length} sells in this period
-                    </span>
-                )}
-            </div>
+            {transactions.length > 0 && (
+                <p className="mt-2 text-center text-xs text-muted-foreground">
+                    {t("home.pvtTxSummary", { bought: buyCount, sold: sellCount })}
+                </p>
+            )}
         </div>
     );
 };

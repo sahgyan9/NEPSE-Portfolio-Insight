@@ -17,12 +17,21 @@ import { getPortfolioHealth, PortfolioHealthResponse } from '@/services/portfoli
 import { StatusIcon } from '@/components/StatusIcon';
 import { HealthIndicator, MetricHealth } from '@/types/fundamentals';
 import { Check, TriangleAlert, ArrowRight } from 'lucide-react';
+import { useT } from '@/i18n';
+import {
+    clientLineText,
+    clientPillarText,
+    healthLines,
+    pillarText,
+    type HealthResponseWithItems,
+} from '@/lib/healthText';
 
 interface PortfolioHealthScoreProps {
     holdings: StockHolding[];
 }
 
 export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) => {
+    const { t } = useT();
     const [serverHealth, setServerHealth] = useState<PortfolioHealthResponse | null>(null);
     const [loading, setLoading] = useState(false);
 
@@ -71,55 +80,52 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
                 return 'critical';
             };
 
-            const pillars = serverHealth.pillars;
+            const server = serverHealth as HealthResponseWithItems;
+            const pillars = server.pillars;
+            // Pillar names and descriptions come from the `health` namespace by pillar id;
+            // the server's English is the fallback.
+            const pillar = (id: keyof typeof pillars, icon: string) => {
+                const p = pillars[id];
+                const label = pillarText(id, p.name, p.description);
+                return createIndicator(label.name, p.score, label.description, icon, getStatusFromScore(p.score));
+            };
+            const summary = Array.isArray(server.summaryItems)
+                ? healthLines(server.summaryItems, undefined).join(' ')
+                : server.textSummary;
             return {
-                overallScore: serverHealth.overallScore,
-                status: getStatusFromScore(serverHealth.overallScore),
-                grade: serverHealth.grade,
-                textSummary: serverHealth.textSummary,
+                overallScore: server.overallScore,
+                status: getStatusFromScore(server.overallScore),
+                grade: server.grade,
+                textSummary: summary,
                 indicators: {
-                    diversification: createIndicator(
-                        pillars.structure.name,
-                        pillars.structure.score,
-                        pillars.structure.description,
-                        'diversification',
-                        getStatusFromScore(pillars.structure.score)
-                    ),
-                    valuation: createIndicator(
-                        pillars.valuation.name,
-                        pillars.valuation.score,
-                        pillars.valuation.description,
-                        'valuation',
-                        getStatusFromScore(pillars.valuation.score)
-                    ),
-                    dividendQuality: createIndicator(
-                        pillars.dividend.name,
-                        pillars.dividend.score,
-                        pillars.dividend.description,
-                        'dividend',
-                        getStatusFromScore(pillars.dividend.score)
-                    ),
-                    concentration: createIndicator(
-                        pillars.fundamentals.name,
-                        pillars.fundamentals.score,
-                        pillars.fundamentals.description,
-                        'concentration',
-                        getStatusFromScore(pillars.fundamentals.score)
-                    ),
-                    sectorBalance: createIndicator(
-                        pillars.volatility.name,
-                        pillars.volatility.score,
-                        pillars.volatility.description,
-                        'sector',
-                        getStatusFromScore(pillars.volatility.score)
-                    ),
+                    diversification: pillar('structure', 'diversification'),
+                    valuation: pillar('valuation', 'valuation'),
+                    dividendQuality: pillar('dividend', 'dividend'),
+                    concentration: pillar('fundamentals', 'concentration'),
+                    sectorBalance: pillar('volatility', 'sector'),
                 },
-                strengths: serverHealth.strengths,
-                warnings: serverHealth.warnings,
-                recommendations: serverHealth.recommendations
+                strengths: healthLines(server.strengthItems, server.strengths),
+                warnings: healthLines(server.warningItems, server.warnings),
+                recommendations: healthLines(server.recommendationItems, server.recommendations),
             };
         }
-        return calculatePortfolioHealth(holdings);
+        // Server not reachable: a simpler score worked out in the browser. Its English lines
+        // and pillar names are matched to `health` templates.
+        const local = calculatePortfolioHealth(holdings);
+        const indicators = Object.fromEntries(
+            Object.entries(local.indicators).map(([id, ind]) => {
+                const label = clientPillarText(id, ind.name, ind.description);
+                return [id, { ...ind, name: label.name, description: label.description }];
+            })
+        ) as typeof local.indicators;
+        return {
+            ...local,
+            textSummary: undefined as string | undefined,
+            indicators,
+            strengths: local.strengths.map(clientLineText),
+            warnings: local.warnings.map(clientLineText),
+            recommendations: local.recommendations.map(clientLineText),
+        };
     }, [holdings, serverHealth]);
 
     const pillars = Object.values(health.indicators);
@@ -130,10 +136,10 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
             <header className="mb-4 flex items-start justify-between gap-2">
                 <div>
                     <h3 className="flex items-center gap-1.5 text-base font-semibold">
-                        How healthy is the portfolio overall?
+                        {t("home.healthTitle")}
                         <Explain term="healthScore" />
                     </h3>
-                    <p className="mt-0.5 text-xs text-muted-foreground">Five checks, each scored 0 to 100.</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{t("home.healthSub")}</p>
                 </div>
             </header>
 
@@ -142,26 +148,30 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
             ) : (
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-[160px_1fr]">
                     <div className="flex flex-col items-start justify-center">
-                        <div className="flex items-baseline gap-2">
-                            <span className="text-5xl font-bold leading-none" style={{ color: gradeColor }}>
+                        <div
+                            className="flex items-baseline gap-2"
+                            role="img"
+                            aria-label={t("health.gradeAria", { grade: health.grade, score: health.overallScore })}
+                        >
+                            <span className="text-5xl font-bold leading-none" style={{ color: gradeColor }} aria-hidden>
                                 {health.grade}
                             </span>
-                            <span className="font-mono text-sm text-muted-foreground">{health.overallScore}/100</span>
+                            <span className="font-mono text-sm text-muted-foreground" aria-hidden>{health.overallScore}/100</span>
                         </div>
-                        <p className="mt-2 text-sm capitalize text-muted-foreground">{health.status.replace('-', ' ')}</p>
+                        <p className="mt-2 text-sm text-muted-foreground">{t(`home.health_${health.status}`)}</p>
                     </div>
 
                     <ul className="space-y-3">
                         {pillars.map((p) => (
                             <li key={p.name}>
                                 <div className="mb-1 flex items-center justify-between text-sm">
-                                    <span className="flex items-center gap-1.5 font-medium">
+                                    <span className="flex min-w-0 items-center gap-1.5 font-medium">
                                         <span style={{ color: p.color }}><StatusIcon name={p.icon} className="h-4 w-4" /></span>
                                         {p.name}
                                     </span>
                                     <span className="font-mono text-muted-foreground">{p.value}</span>
                                 </div>
-                                <div className="h-2 w-full overflow-hidden rounded-full bg-muted" role="img" aria-label={`${p.name}: ${p.value} out of 100`}>
+                                <div className="h-2 w-full overflow-hidden rounded-full bg-muted" role="img" aria-label={t("home.healthBarAria", { name: p.name, value: p.value })}>
                                     <div className="h-full rounded-full" style={{ width: `${Math.min(100, Math.max(0, p.value))}%`, background: p.color }} />
                                 </div>
                                 <p className="mt-1 text-xs text-muted-foreground">{p.description}</p>
@@ -180,30 +190,30 @@ export const PortfolioHealthScore = ({ holdings }: PortfolioHealthScoreProps) =>
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
                 {health.strengths.length > 0 && (
                     <div>
-                        <h4 className="mb-2 text-sm font-semibold">Strengths</h4>
+                        <h4 className="mb-2 text-sm font-semibold">{t("home.healthStrengths")}</h4>
                         <ul className="space-y-1.5 text-sm text-muted-foreground">
-                            {health.strengths.map((t, i) => (
-                                <li key={i} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />{t}</li>
+                            {health.strengths.map((line, i) => (
+                                <li key={i} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-success" aria-hidden />{line}</li>
                             ))}
                         </ul>
                     </div>
                 )}
                 {health.warnings.length > 0 && (
                     <div>
-                        <h4 className="mb-2 text-sm font-semibold">Worth a closer look</h4>
+                        <h4 className="mb-2 text-sm font-semibold">{t("home.healthWarnings")}</h4>
                         <ul className="space-y-1.5 text-sm text-muted-foreground">
-                            {health.warnings.map((t, i) => (
-                                <li key={i} className="flex gap-2"><TriangleAlert className="mt-0.5 h-4 w-4 shrink-0 text-warning" />{t}</li>
+                            {health.warnings.map((line, i) => (
+                                <li key={i} className="flex gap-2"><TriangleAlert className="mt-0.5 h-4 w-4 shrink-0 text-warning" aria-hidden />{line}</li>
                             ))}
                         </ul>
                     </div>
                 )}
                 {health.recommendations.length > 0 && (
                     <div>
-                        <h4 className="mb-2 text-sm font-semibold">Things to consider</h4>
+                        <h4 className="mb-2 text-sm font-semibold">{t("health.checksTitle")}</h4>
                         <ul className="space-y-1.5 text-sm text-muted-foreground">
-                            {health.recommendations.map((t, i) => (
-                                <li key={i} className="flex gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{t}</li>
+                            {health.recommendations.map((line, i) => (
+                                <li key={i} className="flex gap-2"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />{line}</li>
                             ))}
                         </ul>
                     </div>

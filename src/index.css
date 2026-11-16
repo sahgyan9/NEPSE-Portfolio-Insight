@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -217,9 +217,33 @@
     @apply border-border;
   }
 
+  /* Latin text and digits use Inter; Devanagari falls through to Noto Sans Devanagari,
+     then to the fonts Windows ships (Nirmala UI, Mangal) when offline. */
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', system-ui, sans-serif;
+  }
+
+  /* Devanagari needs more room above and below the line so matras are not clipped. */
+  html[lang="ne"] body {
+    line-height: 1.6;
+  }
+
+  /* Letter-spacing breaks the headline bar (shirorekha) between Devanagari letters and can
+     crowd conjuncts, so tracking utilities are neutralised in Nepali. */
+  html[lang="ne"] .tracking-tighter,
+  html[lang="ne"] .tracking-tight,
+  html[lang="ne"] .tracking-wide,
+  html[lang="ne"] .tracking-wider,
+  html[lang="ne"] .tracking-widest {
+    letter-spacing: normal;
+  }
+
+  /* Below lg a fixed tab bar (4rem plus the phone's safe area) sits at the bottom of the screen. */
+  @media (max-width: 1023.98px) {
+    body {
+      padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+    }
   }
 
   .font-mono {
@@ -332,7 +356,22 @@
   scrollbar-color: hsl(var(--border)) transparent;
 }
 
+/* News strip: one full copy scrolls left, then the second copy takes its place (seamless loop). */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker-scroll 60s linear infinite;
+}
+.ticker-viewport:hover .ticker-track,
+.ticker-viewport:focus-within .ticker-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none !important; }
+  .ticker-viewport { overflow-x: auto; }
   * {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;

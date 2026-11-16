@@ -11,6 +11,7 @@
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getStockResearchUrl } from "@/lib/constants";
+import { translate } from "@/i18n";
 
 interface StockSymbolLinkProps {
     symbol: string;
@@ -43,7 +44,7 @@ export const StockSymbolLink = ({
                 "inline-flex items-center gap-1 hover:underline hover:opacity-80 transition-all",
                 className
             )}
-            title={`View ${symbol} on NepseAlpha`}
+            title={translate("holdings.viewOnNepseAlpha", { symbol })}
         >
             {symbol}
             {showIcon && (

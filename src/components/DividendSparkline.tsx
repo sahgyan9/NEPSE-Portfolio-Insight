@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import type { DividendTrendPoint } from '@/services/receivedDividendsApi';
+import { useT } from '@/i18n';
+import { fmtDate, fmtMoney, fmtNumber, fmtPercent } from '@/i18n/format';
 
 interface DividendSparklineProps {
     trend?: DividendTrendPoint[];
@@ -12,6 +14,7 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
     width = 118,
     height = 34,
 }) => {
+    const { t } = useT();
     const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
     const { points, linePath, areaPath, activeDots, minVal, maxVal, getX, getY } = useMemo(() => {
@@ -104,8 +107,8 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
 
     if (!linePath || points.length === 0) {
         return (
-            <div className="h-[34px] flex items-center justify-center text-xs text-muted-foreground/60 font-mono">
-                —
+            <div className="h-[34px] flex items-center justify-center text-xs text-muted-foreground font-mono" aria-label={t('dividends.sparkNoData')}>
+                -
             </div>
         );
     }
@@ -202,43 +205,42 @@ export const DividendSparkline: React.FC<DividendSparklineProps> = ({
                     }}
                 >
                     <div className="flex items-center justify-between gap-2 pb-0.5 border-b border-border/50 font-semibold text-foreground">
-                        <span>FY {hoveredPoint.fiscalYear}</span>
+                        <span>{t('dividends.chartFyLabel', { fy: hoveredPoint.fiscalYear })}</span>
                         {hoveredPoint.isCurrentFy && (
-                            <span className="text-[9px] font-normal px-1 py-0 rounded bg-emerald-500/10 text-emerald-700 font-mono">
-                                Selected
+                            <span className="text-[10px] font-normal px-1 py-0 rounded bg-success/10 text-success">
+                                {t('dividends.sparkSelected')}
                             </span>
                         )}
                     </div>
                     <div className="pt-1 space-y-0.5 font-mono">
-                        <div className="text-emerald-700 font-bold">
-                            {hoveredPoint.totalPercent.toFixed(2)}% Total
+                        <div className="text-foreground font-bold">
+                            {t('dividends.totalPct', { pct: fmtPercent(hoveredPoint.totalPercent, 2, false) })}
                         </div>
-                        <div className="text-[10px] text-muted-foreground flex gap-2">
-                            <span>Bonus: {hoveredPoint.bonusPercent}%</span>
-                            <span>Cash: {hoveredPoint.cashPercent.toFixed(2)}%</span>
+                        <div className="text-[10px] text-muted-foreground">
+                            {t('dividends.announcedSplit', { cash: fmtPercent(hoveredPoint.cashPercent, 2, false), bonus: fmtPercent(hoveredPoint.bonusPercent, 2, false) })}
                         </div>
                         {hoveredPoint.heldQty > 0 ? (
                             <div className="pt-0.5 text-[10px] text-primary font-sans border-t border-border/30 mt-1">
-                                <span className="font-semibold">Received: </span>
-                                {hoveredPoint.receivedBonus > 0 && <span>+{hoveredPoint.receivedBonus} shares </span>}
+                                <span className="font-semibold">{t('dividends.sparkReceived')} </span>
+                                {hoveredPoint.receivedBonus > 0 && <span>{t('dividends.plusKitta', { n: fmtNumber(hoveredPoint.receivedBonus) })} </span>}
                                 {hoveredPoint.receivedCash > 0 && (
-                                    <span>Rs. {hoveredPoint.receivedCash.toLocaleString('en-NP', { maximumFractionDigits: 1 })}</span>
+                                    <span>{fmtMoney(hoveredPoint.receivedCash)}</span>
                                 )}
                                 {hoveredPoint.receivedBonus === 0 && hoveredPoint.receivedCash === 0 && (
-                                    <span className="text-muted-foreground">0 received</span>
+                                    <span className="text-muted-foreground">{t('dividends.sparkNothing')}</span>
                                 )}
-                                <span className="text-muted-foreground block text-[9px] font-mono">
-                                    (Held: {hoveredPoint.heldQty} sh)
+                                <span className="text-muted-foreground block text-[10px] font-mono">
+                                    {t('dividends.kittaHeld', { n: fmtNumber(hoveredPoint.heldQty) })}
                                 </span>
                             </div>
                         ) : (
-                            <div className="pt-0.5 text-[10px] text-muted-foreground/80 italic border-t border-border/30 mt-1 font-sans">
-                                Not held in portfolio
+                            <div className="pt-0.5 text-[10px] text-muted-foreground italic border-t border-border/30 mt-1 font-sans">
+                                {t('dividends.sparkNotHeld')}
                             </div>
                         )}
                         {(hoveredPoint.bookClosureDateAD || hoveredPoint.bookClosureDateBS) && (
-                            <div className="text-[9px] text-muted-foreground/70 font-sans">
-                                BC: {hoveredPoint.bookClosureDateAD || hoveredPoint.bookClosureDateBS}
+                            <div className="text-[10px] text-muted-foreground font-sans">
+                                {t('dividends.sparkBookClose', { date: hoveredPoint.bookClosureDateAD ? fmtDate(hoveredPoint.bookClosureDateAD) : (hoveredPoint.bookClosureDateBS ?? '') })}
                             </div>
                         )}
                     </div>

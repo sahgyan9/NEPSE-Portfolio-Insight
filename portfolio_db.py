@@ -13,7 +13,7 @@ Run: python portfolio_db.py
 API runs on: http://localhost:5001
 """
 
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 import json
 import os
 import sys
@@ -41,6 +41,10 @@ ARCHIVE_SCRIPT = os.path.join(os.path.dirname(__file__), "tools",
                               "archive_fundamentals.py")
 ARCHIVE_MIN_DAYS = 85           # ~one quarter; re-collect when older than this
 _archive_running = threading.Lock()  # prevent overlapping collector runs
+# Requests are served on parallel threads (one slow analysis endpoint must not
+# stall /api/holdings). Every load-modify-save of the JSON file holds this lock
+# so two writers cannot overwrite each other.
+_db_write_lock = threading.RLock()
 
 
 def _archive_last_run():
@@ -79,6 +83,48 @@ def _run_archive_collector():
         _archive_running.release()
 
 
+# ── Stop the whole app from the dashboard ─────────────────────────────────────
+STOP_SCRIPT = os.path.join(os.path.dirname(__file__), "stop.ps1")
+LOCAL_HOSTS = {"localhost", "127.0.0.1", "::1"}
+
+
+def _is_local_origin(origin):
+    """True when a browser Origin header points at this machine."""
+    try:
+        return urlparse(origin).hostname in LOCAL_HOSTS
+    except ValueError:
+        return False
+
+
+def _stop_all_services():
+    """Run stop.ps1 in its own hidden process.
+
+    stop.ps1 kills this server, the NEPSE API and the Vite dashboard, so it must
+    not be a child that dies with us. The short sleep lets the HTTP reply reach
+    the browser before anything is killed.
+    """
+    time.sleep(0.5)
+    log_dir = os.path.join(os.path.dirname(__file__), "logs")
+    os.makedirs(log_dir, exist_ok=True)
+    log = open(os.path.join(log_dir, "portfolio_nepse.log"), "a", encoding="utf-8")
+    log.write(f"[{datetime.now():%H:%M:%S}] Stop requested from the dashboard.\n")
+    log.flush()
+    cmd = ["powershell.exe", "-NoProfile", "-ExecutionPolicy", "Bypass",
+           "-WindowStyle", "Hidden", "-File", STOP_SCRIPT]
+    base_flags = subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP
+    # Leave any job object we were started in, so the stopper outlives us.
+    # Some job objects forbid that; fall back to a plain detached launch.
+    for flags in (base_flags | subprocess.CREATE_BREAKAWAY_FROM_JOB, base_flags):
+        try:
+            subprocess.Popen(cmd, cwd=os.path.dirname(__file__), creationflags=flags,
+                             stdin=subprocess.DEVNULL, stdout=log, stderr=log,
+                             close_fds=True)
+            return
+        except OSError as e:
+            log.write(f"Stop launch failed with flags {flags}: {e}\n")
+            log.flush()
+
+
 def _archive_scheduler_loop():
     """Background thread: run the collector once per quarter (when the app is on)."""
     # small startup delay so the server is up first
@@ -112,10 +158,25 @@ def load_db():
 
 
 def save_db(data):
-    """Save data to the JSON database."""
+    """Save data to the JSON database.
+
+    Written to a temporary file and swapped in with os.replace, so a request
+    reading the file on another thread never sees a half-written file.
+    """
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    with open(DB_PATH, "w", encoding="utf-8") as f:
+    tmp_path = DB_PATH + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+    # On Windows the swap fails while another thread has the file open for
+    # reading; those reads are brief, so retry for a moment.
+    for attempt in range(20):
+        try:
+            os.replace(tmp_path, DB_PATH)
+            return
+        except PermissionError:
+            if attempt == 19:
+                raise
+            time.sleep(0.05)
 
 
 def parse_holdings_csv(text):
@@ -457,7 +518,7 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", content_type)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, X-Portfolio-Action")
         self.end_headers()
     
     def _send_json(self, data, status=200):
@@ -509,10 +570,19 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                                         fundamentals[sym]["eps"] = computed["eps_ttm"]
                                     if "bvps" in computed and computed["bvps"] is not None:
                                         fundamentals[sym]["bookValue"] = computed["bvps"]
-                                    if "pe_ratio" in computed and computed["pe_ratio"] is not None:
-                                        fundamentals[sym]["peRatio"] = computed["pe_ratio"]
-                                    if "pb_ratio" in computed and computed["pb_ratio"] is not None:
-                                        fundamentals[sym]["pbRatio"] = computed["pb_ratio"]
+                                    # P/E and P/B are not taken from the quarter row: its
+                                    # pe_ratio was captured at an old price and may rest on a
+                                    # different EPS. Re-derive both from the EPS / book value
+                                    # just set and the price fundamentals.json last used.
+                                    rec = fundamentals[sym]
+                                    price = rec.get("ratioPrice")
+                                    if isinstance(price, (int, float)) and price > 0:
+                                        eps = rec.get("eps")
+                                        if isinstance(eps, (int, float)):
+                                            rec["peRatio"] = round(price / eps, 2) if eps != 0 else None
+                                        bv = rec.get("bookValue")
+                                        if isinstance(bv, (int, float)) and bv > 0:
+                                            rec["pbRatio"] = round(price / bv, 2)
                                         
                                     # Add derived metrics
                                     for key in ["graham_number", "earnings_yield", "peg_ratio", "debt_to_equity", "net_interest_margin", "dupont_net_margin", "dupont_asset_turnover", "dupont_equity_multiplier", "dupont_roe", "operating_profit_margin", "revenue_per_share", "qoq_profit_momentum", "loan_to_asset", "efficiency_ratio", "interest_coverage", "fixed_asset_turnover", "investment_yield", "combined_ratio"]:
@@ -564,18 +634,6 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             except Exception as e:
                 health_data = {"error": str(e)}
             self._send_json({"health": health_data})
-        
-        elif path == "/api/transactions":
-            db = load_db()
-            period = query.get("period", ["all"])[0]
-            transactions = get_transactions_by_period(db, period)
-            self._send_json({"transactions": transactions})
-        
-        elif path == "/api/value-history":
-            db = load_db()
-            period = query.get("period", ["all"])[0]
-            history = get_value_history_by_period(db, period)
-            self._send_json({"history": history, "period": period})
 
         elif path == "/api/eps-insights":
             try:
@@ -589,6 +647,18 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 eps_data = {"error": str(e)}
             self._send_json({"insights": eps_data})
 
+        elif path == "/api/transactions":
+            db = load_db()
+            period = query.get("period", ["all"])[0]
+            transactions = get_transactions_by_period(db, period)
+            self._send_json({"transactions": transactions})
+        
+        elif path == "/api/value-history":
+            db = load_db()
+            period = query.get("period", ["all"])[0]
+            history = get_value_history_by_period(db, period)
+            self._send_json({"history": history, "period": period})
+        
         elif path == "/api/value-history/stats":
             # Get statistics for a period (min, max, avg, change)
             db = load_db()
@@ -620,11 +690,12 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         
         elif path == "/api/value-history/cleanup":
             # Clean up value history (remove zeros, duplicates)
-            db = load_db()
-            original_count = len(db.get("valueHistory", []))
-            cleaned = cleanup_value_history(db)
-            db["valueHistory"] = cleaned
-            save_db(db)
+            with _db_write_lock:
+                db = load_db()
+                original_count = len(db.get("valueHistory", []))
+                cleaned = cleanup_value_history(db)
+                db["valueHistory"] = cleaned
+                save_db(db)
             self._send_json({
                 "success": True,
                 "originalCount": original_count,
@@ -667,6 +738,10 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             self._send_json({"error": "Not found"}, 404)
 
     def do_POST(self):
+        with _db_write_lock:
+            self._handle_post()
+
+    def _handle_post(self):
         content_length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(content_length).decode("utf-8")
         
@@ -678,6 +753,25 @@ class PortfolioHandler(BaseHTTPRequestHandler):
         
         parsed = urlparse(self.path)
         path = parsed.path
+
+        if path == "/api/app/shutdown":
+            # Stop every Portfolio Nepse service. Only the dashboard on this
+            # machine may ask: other websites the user visits could otherwise
+            # POST here. Browsers always send Origin on cross-site POSTs, and
+            # the custom header forces a CORS preflight.
+            origin = self.headers.get("Origin")
+            if (origin and not _is_local_origin(origin)) or \
+                    self.headers.get("X-Portfolio-Action") != "shutdown":
+                self._send_json({"success": False, "error": "Not allowed"}, 403)
+                return
+            if os.name != "nt" or not os.path.exists(STOP_SCRIPT):
+                self._send_json({"success": False,
+                                 "error": "Stopping from the dashboard is only set up on Windows."}, 501)
+                return
+            self._send_json({"success": True})
+            self.wfile.flush()
+            threading.Thread(target=_stop_all_services, daemon=False).start()
+            return
 
         if path == "/api/fundamentals/archive":
             # Manually trigger a full-market fundamentals archive collection.
@@ -964,6 +1058,10 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             self._send_json({"error": "Not found"}, 404)
     
     def do_DELETE(self):
+        with _db_write_lock:
+            self._handle_delete()
+
+    def _handle_delete(self):
         parsed = urlparse(self.path)
         path = parsed.path
         query = parse_qs(parsed.query)
@@ -1028,7 +1126,11 @@ def run_server(port=5001):
     threading.Thread(target=_archive_scheduler_loop, daemon=True).start()
     print("Quarterly fundamentals-archive scheduler started.")
 
-    server = HTTPServer(("localhost", port), PortfolioHandler)
+    # Threaded: the dashboard fires several requests at once on first load and
+    # some analysis endpoints take seconds when cold; one at a time, /api/holdings
+    # queued behind them and the page timed out.
+    server = ThreadingHTTPServer(("localhost", port), PortfolioHandler)
+    server.daemon_threads = True
     print(f"""
 +------------------------------------------------------------+
 |           Portfolio Database Server Started                |

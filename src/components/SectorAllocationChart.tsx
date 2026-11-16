@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
-import { ChartCard, TooltipBox, fmtRs, fmtRsCompact, makeSectorColorer } from "@/components/charts";
+import { ChartCard, TooltipBox, makeSectorColorer } from "@/components/charts";
+import { useT } from "@/i18n";
+import { fmtMoney, fmtMoneyCompact } from "@/i18n/format";
 
 interface SectorData {
   name: string;
@@ -13,6 +15,7 @@ interface SectorAllocationChartProps {
 }
 
 export const SectorAllocationChart = ({ data, loading }: SectorAllocationChartProps) => {
+  const { t } = useT();
   const rows = useMemo(() => [...data].filter((d) => d.value > 0).sort((a, b) => b.value - a.value), [data]);
   const total = rows.reduce((s, r) => s + r.value, 0);
   const color = useMemo(() => makeSectorColorer(rows.map((r) => r.name)), [rows]);
@@ -20,11 +23,12 @@ export const SectorAllocationChart = ({ data, loading }: SectorAllocationChartPr
 
   return (
     <ChartCard
-      title="Which sectors hold my money?"
-      subtitle={top ? `${top.name} is the largest at ${((top.value / total) * 100).toFixed(0)}%` : undefined}
+      title={t("home.sacTitle")}
+      subtitle={top ? t("home.sacSubtitle", { sector: top.name, percent: ((top.value / total) * 100).toFixed(0) }) : undefined}
       explain="weight"
       loading={loading}
       empty={rows.length === 0}
+      emptyMessage={t("home.chartEmpty")}
       height={260}
     >
       <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-[180px_minmax(0,1fr)]">
@@ -42,8 +46,8 @@ export const SectorAllocationChart = ({ data, loading }: SectorAllocationChartPr
                     <TooltipBox
                       title={payload[0].name}
                       rows={[
-                        { label: "Value", value: fmtRs(payload[0].value as number), color: payload[0].payload.fill },
-                        { label: "Share", value: `${(((payload[0].value as number) / total) * 100).toFixed(1)}%` },
+                        { label: t("home.tipValue"), value: fmtMoney(payload[0].value as number), color: payload[0].payload.fill },
+                        { label: t("home.tipShare"), value: `${(((payload[0].value as number) / total) * 100).toFixed(1)}%` },
                       ]}
                     />
                   ) : null
@@ -52,8 +56,8 @@ export const SectorAllocationChart = ({ data, loading }: SectorAllocationChartPr
             </PieChart>
           </ResponsiveContainer>
           <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-xs text-muted-foreground">Total</span>
-            <span className="font-mono text-sm font-semibold">{fmtRsCompact(total)}</span>
+            <span className="text-xs text-muted-foreground">{t("home.sacTotal")}</span>
+            <span className="font-mono text-sm font-semibold">{fmtMoneyCompact(total)}</span>
           </div>
         </div>
         <ul className="min-w-0 space-y-1.5">

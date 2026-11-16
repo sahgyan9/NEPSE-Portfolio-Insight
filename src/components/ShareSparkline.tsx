@@ -17,6 +17,8 @@
 
 import { useMemo, useState } from 'react';
 import type { SharePoint } from '@/services/receivedDividendsApi';
+import { useT } from '@/i18n';
+import { fmtDate, fmtNumber } from '@/i18n/format';
 
 interface ShareSparklineProps {
     timeline: SharePoint[];
@@ -27,6 +29,7 @@ interface ShareSparklineProps {
 }
 
 export const ShareSparkline = ({ timeline, width = 110, height = 34, highlightDate, currentFyGain }: ShareSparklineProps) => {
+    const { t } = useT();
     const [hoverIdx, setHoverIdx] = useState<number | null>(null);
 
     const { points, linePath, areaPath, dots, grew, first, last, x, y } = useMemo(() => {
@@ -132,22 +135,22 @@ export const ShareSparkline = ({ timeline, width = 110, height = 34, highlightDa
                     >
                         {hovered.fiscalYear ? (
                             <>
-                                <div className="font-semibold">FY {hovered.fiscalYear}: +{hovered.gain} sh.</div>
-                                <div className="text-muted-foreground">{hovered.shares} cumulative &middot; {hovered.date}</div>
+                                <div className="font-semibold">{t('dividends.shareSparkFyGain', { fy: hovered.fiscalYear, n: fmtNumber(hovered.gain ?? 0) })}</div>
+                                <div className="text-muted-foreground">{t('dividends.shareSparkTotal', { n: fmtNumber(hovered.shares) })} &middot; {fmtDate(hovered.date)}</div>
                             </>
                         ) : (
                             <>
-                                <div className="font-semibold">{hovered.shares} cumulative</div>
-                                <div className="text-muted-foreground">{hovered.date}</div>
+                                <div className="font-semibold">{t('dividends.shareSparkTotal', { n: fmtNumber(hovered.shares) })}</div>
+                                <div className="text-muted-foreground">{fmtDate(hovered.date)}</div>
                             </>
                         )}
                     </div>
                 )}
             </div>
             <div className="flex flex-col text-[10px] font-mono whitespace-nowrap leading-tight">
-                <span className={grew ? 'text-emerald-700' : 'text-muted-foreground'}>{last} lifetime</span>
+                <span className={grew ? 'text-success' : 'text-muted-foreground'}>{t('dividends.shareSparkLifetime', { n: fmtNumber(last) })}</span>
                 {!!currentFyGain && (
-                    <span style={{ color: currentFyColor }}>+{currentFyGain} this FY</span>
+                    <span style={{ color: currentFyColor }}>{t('dividends.shareSparkThisFy', { n: fmtNumber(currentFyGain) })}</span>
                 )}
             </div>
         </div>

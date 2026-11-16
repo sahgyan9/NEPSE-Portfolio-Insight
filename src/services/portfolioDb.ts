@@ -84,8 +84,9 @@ export async function isServerRunning(): Promise<boolean> {
 /**
  * Get all holdings from the database
  */
-export async function getHoldings(): Promise<DBHolding[]> {
-    const response = await fetch(`${API_BASE}/holdings`);
+export async function getHoldings(timeoutMs?: number): Promise<DBHolding[]> {
+    const response = await fetch(`${API_BASE}/holdings`,
+        timeoutMs ? { signal: AbortSignal.timeout(timeoutMs) } : undefined);
     if (!response.ok) throw new Error("Failed to fetch holdings");
     const data = await response.json();
     return data.holdings;

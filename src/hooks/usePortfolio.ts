@@ -21,7 +21,7 @@ import { useLivePortfolio } from './useLivePortfolio';
  * Fetches real-time stock prices and correct company names from NEPSE
  */
 export const usePortfolioAnalytics = (initialFiscalYear?: string) => {
-    const { holdings, summary, isLoading, error, lastUpdated, refetch, isDbConnected, isEmpty, dividendFiscalYear, setDividendFiscalYear } = useLivePortfolio(initialFiscalYear);
+    const { holdings, summary, isLoading, error, lastUpdated, refetch, isDbConnected, dbConnection, isEmpty, dividendFiscalYear, setDividendFiscalYear } = useLivePortfolio(initialFiscalYear);
 
     const sectorData = useMemo(() => {
         const sectorMap: Record<string, number> = {};
@@ -76,6 +76,7 @@ export const usePortfolioAnalytics = (initialFiscalYear?: string) => {
         lastUpdated,
         refetch,
         isDbConnected,
+        dbConnection,
         isEmpty,
         dividendFiscalYear,
         setDividendFiscalYear,

@@ -1,12 +1,15 @@
 import { useMemo } from "react";
 import { Area, AreaChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ChartCard, CHART, TooltipBox, axisLine, axisTick, fmtDateLong, fmtDateShort, gridProps, legendStyle } from "@/components/charts";
+import { ChartCard, CHART, TooltipBox, axisLine, axisTick, gridProps, legendStyle } from "@/components/charts";
+import { fmtDate, fmtMoney, fmtMonthYear } from "@/i18n/format";
+import { useT } from "@/i18n";
 import type { RiskData } from "@/services/riskApi";
 
 const MARGIN = { top: 6, right: 12, left: 0, bottom: 0 };
 const Y_WIDTH = 48;
 
 export const GrowthOf100 = ({ risk, loading }: { risk?: RiskData; loading?: boolean }) => {
+  const { t } = useT();
   const data = useMemo(
     () =>
       (risk?.history ?? []).map((h) => ({
@@ -18,20 +21,31 @@ export const GrowthOf100 = ({ risk, loading }: { risk?: RiskData; loading?: bool
     [risk]
   );
   const last = data[data.length - 1];
+  const deepest = data.reduce<(typeof data)[number] | null>((w, d) => (!w || d.drawdown < w.drawdown ? d : w), null);
+  const mixLabel = t("risk.growthMix");
+  const marketLabel = t("risk.growthMarket");
+
+  const subtitle = last
+    ? [
+        t("risk.growthSummary", { start: fmtMoney(100), mix: fmtMoney(last.portfolio), market: fmtMoney(last.market) }),
+        deepest && deepest.drawdown < 0
+          ? t("risk.growthDeepest", { pct: Math.abs(deepest.drawdown).toFixed(1), date: fmtMonthYear(deepest.date) })
+          : "",
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : undefined;
 
   return (
     <ChartCard
-      title="How would today's holdings have grown, and how deep were the falls?"
-      subtitle={
-        last
-          ? `100 rupees became about ${last.portfolio.toFixed(0)} in this mix and ${last.market.toFixed(0)} in the market index`
-          : undefined
-      }
+      title={t("risk.growthTitle")}
+      subtitle={subtitle}
       explain="growthOf100"
       loading={loading}
       empty={data.length < 2}
+      emptyMessage={t("risk.chartEmpty")}
       height={380}
-      footer="A what-if built from past prices of the holdings you own today. It is not your actual record and ignores dividends and fees."
+      footer={t("risk.growthFooter")}
     >
       <div id="growth-chart">
         <div className="h-[230px]">
@@ -44,9 +58,9 @@ export const GrowthOf100 = ({ risk, loading }: { risk?: RiskData; loading?: bool
                 content={({ active, payload, label }) =>
                   active && payload?.length ? (
                     <TooltipBox
-                      title={fmtDateLong(String(label))}
+                      title={fmtDate(String(label))}
                       rows={payload.map((p) => ({
-                        label: p.name === "portfolio" ? "Today's mix" : "Market index",
+                        label: p.name === "portfolio" ? mixLabel : marketLabel,
                         value: (p.value as number).toFixed(1),
                         color: String(p.color),
                       }))}
@@ -54,25 +68,25 @@ export const GrowthOf100 = ({ risk, loading }: { risk?: RiskData; loading?: bool
                   ) : null
                 }
               />
-              <Legend wrapperStyle={legendStyle} iconType="plainline" formatter={(v) => (v === "portfolio" ? "Today's mix" : "Market index")} />
+              <Legend wrapperStyle={legendStyle} iconType="plainline" formatter={(v) => (v === "portfolio" ? mixLabel : marketLabel)} />
               <Line type="monotone" dataKey="portfolio" stroke={CHART.accent} strokeWidth={2} dot={false} isAnimationActive={false} />
               <Line type="monotone" dataKey="market" stroke={CHART.market} strokeWidth={1.5} strokeDasharray="4 3" dot={false} isAnimationActive={false} />
             </LineChart>
           </ResponsiveContainer>
         </div>
-        <p className="mb-1 ml-12 text-xs font-medium text-muted-foreground">Fall from the previous high (%)</p>
+        <p className="mb-1 ml-12 text-xs font-medium text-muted-foreground">{t("risk.growthFallAxis")}</p>
         <div className="h-[110px]">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={data} syncId="growth" margin={MARGIN}>
               <CartesianGrid {...gridProps} />
-              <XAxis dataKey="date" tick={axisTick} axisLine={axisLine} tickLine={false} minTickGap={40} tickFormatter={fmtDateShort} />
+              <XAxis dataKey="date" tick={axisTick} axisLine={axisLine} tickLine={false} minTickGap={48} tickFormatter={(v) => fmtMonthYear(String(v))} />
               <YAxis width={Y_WIDTH} tick={axisTick} axisLine={false} tickLine={false} tickFormatter={(v) => `${v.toFixed(0)}%`} domain={["auto", 0]} />
               <Tooltip
                 content={({ active, payload, label }) =>
                   active && payload?.length ? (
                     <TooltipBox
-                      title={fmtDateLong(String(label))}
-                      rows={[{ label: "Below previous high", value: `${(payload[0].value as number).toFixed(1)}%`, color: CHART.loss }]}
+                      title={fmtDate(String(label))}
+                      rows={[{ label: t("risk.growthBelowHigh"), value: `${(payload[0].value as number).toFixed(1)}%`, color: CHART.loss }]}
                     />
                   ) : null
                 }

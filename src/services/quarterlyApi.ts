@@ -1,6 +1,7 @@
 // src/services/quarterlyApi.ts
 // API service layer for quarterly financial report endpoints (Flask :8002)
 
+import { translate } from '@/i18n';
 import type {
   UploadResponse,
   SymbolQuarterlyData,
@@ -36,7 +37,7 @@ export async function uploadQuarterlyPdf(
   // Map HTTP status to status field for uniform handling
   if (res.status === 409) return { ...data, status: 'duplicate' };
   if (res.status === 202) return { ...data, status: 'needs_confirmation' };
-  if (!res.ok)           return { status: 'error', error: data.error || 'Upload failed' };
+  if (!res.ok)           return { status: 'error', error: data.error || translate('quarterly.upFailed') };
   return data as UploadResponse;
 }
 
@@ -47,7 +48,7 @@ export async function fetchQuarterlyData(symbol: string) {
   });
   if (!res.ok) {
     const data = await res.json().catch(() => ({}));
-    throw new Error(data.error || `Failed to fetch data for ${symbol}`);
+    throw new Error(data.error || translate('quarterly.upFetchFailed', { symbol }));
   }
   return res.json();
 }

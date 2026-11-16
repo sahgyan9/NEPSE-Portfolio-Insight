@@ -14,7 +14,7 @@ interface Props {
   children?: ReactNode;
 }
 
-/** Heading with its shortcut shown as muted key caps (desktop only). */
+/** Heading with its shortcut shown as muted key caps (wide screens only, not on touch widths). */
 export const SectionHeading = ({ title, hint, route, section, as: Tag = "h2", className, children }: Props) => {
   const sc = section ? shortcutForSection(route, section) : shortcutForRoute(route);
   return (
@@ -27,7 +27,7 @@ export const SectionHeading = ({ title, hint, route, section, as: Tag = "h2", cl
       </div>
       <div className="flex shrink-0 items-center gap-3">
         {children}
-        {sc && <Keys keys={sc.keys} className="mt-1.5 hidden md:inline-flex" />}
+        {sc && <Keys keys={sc.keys} className="mt-1.5 hidden lg:inline-flex" />}
       </div>
     </div>
   );

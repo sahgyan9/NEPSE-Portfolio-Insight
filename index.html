@@ -1,29 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="ne">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover lets the bottom tab bar use env(safe-area-inset-bottom); zoom stays enabled. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>NEPSE Portfolio Insight</title>
-    <meta name="description" content="Track your NEPSE portfolio: value, risk, sector mix and dividends in one place." />
+    <meta name="description" content="Track your NEPSE shares in Nepali or English: value, risk, sector mix and dividends in plain words." />
     <meta name="author" content="NEPSE Portfolio Tracker" />
     <meta name="keywords" content="NEPSE, Nepal Stock Exchange, portfolio tracker, investment analysis, stock market, dividend, P/B ratio" />
 
     <meta property="og:title" content="NEPSE Portfolio Insight" />
-    <meta property="og:description" content="Track your NEPSE portfolio: value, risk, sector mix and dividends in one place." />
+    <meta property="og:description" content="Track your NEPSE shares in Nepali or English: value, risk, sector mix and dividends in plain words." />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@NEPSE" />
-    
+
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#f8fafc" />
+
+    <!-- Installable on a phone ("Add to Home screen"). No service worker. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="NEPSE Insight" />
+    <link rel="apple-touch-icon" href="/assets/icon.png" />
+
     <script>
       (function () {
+        var r = document.documentElement;
+        // Language first, so the right font and line height apply before React loads (default Nepali).
+        try {
+          var l = localStorage.getItem("pi_lang");
+          r.lang = l === "en" ? "en" : "ne";
+        } catch (e) {
+          r.lang = "ne";
+        }
         try {
           var p = localStorage.getItem("pi_theme");
           if (p !== "dark" && p !== "system") p = "light";
           var dark = p === "dark" || (p === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-          var r = document.documentElement;
           if (dark) r.classList.add("dark");
           r.style.colorScheme = dark ? "dark" : "light";
           var m = document.querySelector('meta[name="theme-color"]');
