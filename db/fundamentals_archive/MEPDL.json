@@ -44,6 +44,23 @@
       "trade_turnover": 9222044.0,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": 582.0,
+      "pe_ratio": 57.677974094003,
+      "pb_ratio": 5.2252956172475,
+      "eps_ttm": 30.835213953488,
+      "book_value": 120.9355476744186,
+      "roe": 25.497229347737,
+      "roa": 11.375582687799,
+      "graham_number": 289.66,
+      "shares_outstanding": 8600000.0,
+      "week52_high": 797.6,
+      "week52_low": 345.0,
+      "captured_at": "2026-11-14"
     }
   ]
 }

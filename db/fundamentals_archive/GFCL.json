@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 20.98,
-      "pb_ratio": 2.58,
+      "pe_ratio": 20.91,
+      "pb_ratio": 2.57,
       "eps_ttm": 26.7,
       "book_value": 217.36,
       "roe": 12.28,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Goodwill Finance Limited"
     }

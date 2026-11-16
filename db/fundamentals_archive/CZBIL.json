@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 81.72,
-      "pb_ratio": 1.41,
+      "pe_ratio": 81.31,
+      "pb_ratio": 1.4,
       "eps_ttm": 2.68,
       "book_value": 155.43,
       "roe": 1.72,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Commercial Bank",
       "name": "Citizens Bank International Limited"
     }

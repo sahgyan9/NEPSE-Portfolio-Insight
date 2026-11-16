@@ -86,6 +86,28 @@
       "trade_volume": 5340,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 155.43,
+      "pb_ratio": 4.4,
+      "eps_ttm": 3.26,
+      "book_value": 115.15,
+      "roe": 2.83,
+      "roa": null,
+      "graham_number": 91.9,
+      "net_profit_ttm": 3191460.0,
+      "revenue_ttm": 17745870.0,
+      "shares_outstanding": 3921568.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "MaiKhola Hydropower Limited"
     }
   ],
   "sector": "Hydropower"

@@ -86,6 +86,28 @@
       "trade_volume": 16240,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": -14.49,
+      "pb_ratio": 3.08,
+      "eps_ttm": -20.36,
+      "book_value": 95.77,
+      "roe": -21.26,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -19156430.0,
+      "revenue_ttm": 6377670.0,
+      "shares_outstanding": 3763198.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Mailung Khola Jal Vidhyut Company Limited"
     }
   ],
   "sector": "Hydropower"

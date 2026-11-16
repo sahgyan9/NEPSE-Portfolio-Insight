@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 14.36,
-      "pb_ratio": 3.44,
+      "pe_ratio": 14.26,
+      "pb_ratio": 3.42,
       "eps_ttm": 30.08,
       "book_value": 125.36,
       "roe": 24.0,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Bindhyabasini Hydropower Development Company Limited"
     }

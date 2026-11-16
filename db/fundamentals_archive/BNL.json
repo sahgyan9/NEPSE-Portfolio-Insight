@@ -86,6 +86,28 @@
       "trade_volume": 10,
       "days_since_trade": 21,
       "price_is_stale": true
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 19.92,
+      "pb_ratio": 3.66,
+      "eps_ttm": 702.81,
+      "book_value": 3820.44,
+      "roe": 18.4,
+      "roa": null,
+      "graham_number": 7772.61,
+      "net_profit_ttm": 342424000.0,
+      "revenue_ttm": 3771224.0,
+      "shares_outstanding": 1948890.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Manufacturing",
+      "name": "Bottlers Nepal (Balaju) Limited"
     }
   ],
   "sector": "Manufacturing"

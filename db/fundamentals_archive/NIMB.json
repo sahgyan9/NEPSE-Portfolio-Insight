@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 14.81,
-      "pb_ratio": 1.02,
+      "pe_ratio": 14.88,
+      "pb_ratio": 1.03,
       "eps_ttm": 0.53,
       "book_value": 200.88,
       "roe": 0.26,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Commercial Bank",
       "name": "Nepal Investment Mega Bank Limited"
     }

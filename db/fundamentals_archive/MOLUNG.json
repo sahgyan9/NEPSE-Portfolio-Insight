@@ -19,6 +19,23 @@
       "week52_high": 417.7,
       "week52_low": 274.0,
       "captured_at": "2026-11-07"
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": 285.1,
+      "pe_ratio": 39.645210904303,
+      "pb_ratio": 3.2665457283064,
+      "eps_ttm": 7.397323364486,
+      "book_value": 92.23648224299066,
+      "roe": 8.3856044332627,
+      "roa": 5.140898333262999,
+      "graham_number": 123.9,
+      "shares_outstanding": 8025000.0,
+      "week52_high": 417.7,
+      "week52_low": 274.0,
+      "captured_at": "2026-11-15"
     }
   ]
 }

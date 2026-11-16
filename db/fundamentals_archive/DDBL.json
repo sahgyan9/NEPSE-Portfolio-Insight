@@ -86,6 +86,28 @@
       "trade_volume": 28338,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 20.32,
+      "pb_ratio": 3.68,
+      "eps_ttm": 42.81,
+      "book_value": 236.26,
+      "roe": 18.12,
+      "roa": null,
+      "graham_number": 477.04,
+      "net_profit_ttm": 219930580.0,
+      "revenue_ttm": 978661710.0,
+      "shares_outstanding": 20551142.66,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Microfinance",
+      "name": "Deprosc Laghubitta Bittiya Sanstha Limited"
     }
   ],
   "sector": "Microfinance"

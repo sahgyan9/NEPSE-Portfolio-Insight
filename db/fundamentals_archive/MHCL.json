@@ -86,6 +86,28 @@
       "trade_volume": 19391,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 13.46,
+      "pb_ratio": 3.09,
+      "eps_ttm": 21.18,
+      "book_value": 92.24,
+      "roe": 22.96,
+      "roa": null,
+      "graham_number": 209.66,
+      "net_profit_ttm": 42490800.0,
+      "revenue_ttm": 68040660.0,
+      "shares_outstanding": 8025000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Molung Hydropower Company Limited"
     }
   ],
   "sector": "Hydropower"

@@ -49,9 +49,9 @@
       "reported_quarter": "2083-84-Q1",
       "fiscal_year": "2083-84",
       "quarter": 1,
-      "ltp_at_capture": 564.9,
-      "pe_ratio": 42.95267073615,
-      "pb_ratio": 5.3430902358053,
+      "ltp_at_capture": 566.0,
+      "pe_ratio": 43.036310208286,
+      "pb_ratio": 5.3534945538428,
       "eps_ttm": 13.151685106383,
       "book_value": 105.72533404255319,
       "roe": 12.439483143264,
@@ -60,7 +60,7 @@
       "shares_outstanding": 4700000.0,
       "week52_high": 964.2,
       "week52_low": 344.6,
-      "captured_at": "2026-11-07"
+      "captured_at": "2026-11-14"
     }
   ]
 }

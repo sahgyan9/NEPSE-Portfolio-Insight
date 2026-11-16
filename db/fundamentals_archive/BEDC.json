@@ -86,6 +86,28 @@
       "trade_volume": 14487,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 24.14,
+      "pb_ratio": 6.0,
+      "eps_ttm": 12.26,
+      "book_value": 49.35,
+      "roe": 24.84,
+      "roa": null,
+      "graham_number": 116.68,
+      "net_profit_ttm": 16674940.0,
+      "revenue_ttm": 33629530.0,
+      "shares_outstanding": 5440534.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Bhugol Energy Development Company Ltd"
     }
   ],
   "sector": "Hydropower"

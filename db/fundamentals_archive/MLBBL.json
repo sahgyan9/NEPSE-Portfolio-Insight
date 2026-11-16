@@ -86,6 +86,28 @@
       "trade_volume": 1366,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 13.69,
+      "pb_ratio": 5.18,
+      "eps_ttm": 67.93,
+      "book_value": 179.6,
+      "roe": 37.82,
+      "roa": null,
+      "graham_number": 523.93,
+      "net_profit_ttm": 43449910.0,
+      "revenue_ttm": 131501300.0,
+      "shares_outstanding": 2558436.25,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Microfinance",
+      "name": "Mithila LaghuBitta Bittiya Sanstha Limited"
     }
   ],
   "sector": "Microfinance"

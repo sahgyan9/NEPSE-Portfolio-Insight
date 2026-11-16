@@ -86,6 +86,28 @@
       "trade_volume": 26581,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 16.02,
+      "pb_ratio": 4.84,
+      "eps_ttm": 19.22,
+      "book_value": 63.67,
+      "roe": 30.19,
+      "roa": null,
+      "graham_number": 165.93,
+      "net_profit_ttm": 25779690.0,
+      "revenue_ttm": 49139240.0,
+      "shares_outstanding": 5364860.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Dolti Power Company Ltd."
     }
   ],
   "sector": "Hydropower"

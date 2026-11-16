@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 47.25,
-      "pb_ratio": 3.95,
+      "pe_ratio": 48.45,
+      "pb_ratio": 4.05,
       "eps_ttm": 9.63,
       "book_value": 115.13,
       "roe": 8.36,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Best Finance Company Ltd."
     }

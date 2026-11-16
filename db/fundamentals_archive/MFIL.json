@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 101.04,
-      "pb_ratio": 3.6,
+      "pe_ratio": 98.97,
+      "pb_ratio": 3.52,
       "eps_ttm": 7.06,
       "book_value": 193.58,
       "roe": 3.65,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Manjushree Finance Ltd."
     }

@@ -4,17 +4,19 @@
     "bookValue": 188.76,
     "peRatio": 48.82,
     "pbRatio": 3.63,
-    "sharesOutstanding": 55932287.13,
+    "sharesOutstanding": 55932287,
     "publicFloat": 100.0,
     "high52": 720.0,
-    "low52": 519.02,
-    "lastTradeDate": "2026-09-16",
-    "tradeVolume": 243901,
-    "tradeTurnover": 165709479.5,
-    "capturedAt": "2026-11-07",
+    "low52": 566.24,
+    "lastTradeDate": "2026-11-13",
+    "tradeVolume": 138712,
+    "tradeTurnover": 93799907.5,
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Shivam Cements Limited",
-    "roe": 7.43
+    "roe": 7.43,
+    "ratioPrice": 685.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "JBLB": {
     "eps": 61.8,
@@ -25,20 +27,22 @@
     "promoterHolding": 67.0,
     "publicFloat": 33.0,
     "high52": 1456.0,
-    "low52": 1152.63,
-    "lastTradeDate": "2026-09-16",
-    "tradeVolume": 2036,
-    "tradeTurnover": 2589675.5,
-    "capturedAt": "2026-11-07",
+    "low52": 1226.0,
+    "lastTradeDate": "2026-11-13",
+    "tradeVolume": 2128,
+    "tradeTurnover": 2704933.7,
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Jeevan Bikas Laghubitta  Bittya Sanstha Ltd",
-    "roe": 22.07
+    "roe": 22.07,
+    "ratioPrice": 1289.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CLI": {
     "eps": 7.816088400254,
     "bookValue": 131.6024032042771,
-    "peRatio": 56.550025711792,
-    "pbRatio": 3.3586012811172,
+    "peRatio": 56.55,
+    "pbRatio": 3.36,
     "promoterHolding": 70,
     "publicFloat": 30,
     "high52": 519.9,
@@ -47,17 +51,19 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14337,
     "tradeTurnover": 6408639,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Citizen Life Insurance Company Limited",
-    "ltp": 442.0,
+    "ltp": 433.1,
     "roe": 5.6891518729479,
-    "roa": 1.484499994255
+    "roa": 1.484499994255,
+    "ratioPrice": 442.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NIMB": {
     "eps": 0.53,
     "bookValue": 200.88,
-    "peRatio": 14.81,
+    "peRatio": 386.98,
     "pbRatio": 1.02,
     "promoterHolding": 79.45,
     "publicFloat": 20.55,
@@ -67,10 +73,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 129360,
     "tradeTurnover": 25807320,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Nepal Investment Mega Bank Limited",
-    "roe": 0.26
+    "roe": 0.26,
+    "ratioPrice": 205.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "BHL": {
     "eps": 7.72,
@@ -85,16 +93,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 29231,
     "tradeTurnover": 6226203,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Balephi Hydropower Limited",
-    "roe": 9.51
+    "roe": 9.51,
+    "ratioPrice": 225.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SNLI": {
     "eps": 7.9238380163413,
     "bookValue": 142.87600713927972,
-    "peRatio": 52.499811220533,
-    "pbRatio": 2.9116155212433,
+    "peRatio": 52.5,
+    "pbRatio": 2.91,
     "promoterHolding": 70,
     "publicFloat": 30,
     "high52": 502.0,
@@ -103,12 +113,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2479,
     "tradeTurnover": 1066217.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Sun Nepal Life Insurance Company Limited",
     "ltp": 416.0,
     "roe": 5.4769570522499,
-    "roa": 2.1419376685058
+    "roa": 2.1419376685058,
+    "ratioPrice": 416.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NIBLSF": {
     "eps": 0.0,
@@ -116,21 +128,21 @@
     "peRatio": 0.0,
     "pbRatio": 0.0,
     "sector": "Mutual Fund",
-    "nav": 10.36,
-    "navDate": "05/11/2026",
-    "navChange": -0.02,
-    "navChangePct": -0.19,
-    "lastTradeDate": "05/11/2026",
-    "last_traded_price": 10.36,
-    "capturedAt": "2026-11-07T10:46:04.035688",
+    "nav": 10.37,
+    "navDate": "12/11/2026",
+    "navChange": 0.0,
+    "navChangePct": 0.0,
+    "lastTradeDate": "12/11/2026",
+    "last_traded_price": 10.37,
+    "capturedAt": "2026-11-15T13:24:21.236614",
     "fundSize": "NPR11683818673",
     "sharesOutstanding": "1168381867"
   },
   "CHCL": {
-    "eps": 7.59,
-    "bookValue": 123.9,
-    "peRatio": 44.53,
-    "pbRatio": 2.73,
+    "eps": 0.39,
+    "bookValue": 123.36,
+    "peRatio": 866.67,
+    "pbRatio": 2.74,
     "promoterHolding": 0,
     "publicFloat": 100,
     "high52": 525.0,
@@ -139,10 +151,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 79027,
     "tradeTurnover": 39039338,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Chilime Hydropower Company Limited",
-    "roe": 6.13
+    "roe": 0.31,
+    "ratioPrice": 338.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SAHAS": {
     "eps": 29.72,
@@ -157,12 +171,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 60590,
     "tradeTurnover": 40219642,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Sahas Urja Limited",
     "roe": 16.46,
     "ltp": 693.4,
-    "roa": 7.423106922433501
+    "roa": 7.423106922433501,
+    "ratioPrice": 722.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NBF3": {
     "eps": 0.0,
@@ -187,16 +203,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 171458,
     "tradeTurnover": 55689558.4,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Swet-Ganga Hydropower and Construction Limited",
-    "roe": 37.11
+    "roe": 37.11,
+    "ratioPrice": 332.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HRL": {
     "eps": -21.496620721384,
     "bookValue": 115.5837960986382,
-    "peRatio": -23.608361824757,
-    "pbRatio": 4.3907538697457,
+    "peRatio": -23.61,
+    "pbRatio": 4.39,
     "promoterHolding": 70,
     "publicFloat": 29.4,
     "high52": 944.7,
@@ -205,12 +223,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 66030,
     "tradeTurnover": 39690633,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Non-Life Insurance",
     "companyName": "Himalayan Reinsurance Limited",
-    "ltp": 507.5,
+    "ltp": 491.0,
     "roe": 0.0,
-    "roa": -9.2953599864884
+    "roa": -9.2953599864884,
+    "ratioPrice": 507.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "CSBY": {
     "eps": 0.0,
@@ -222,7 +242,7 @@
   "UPPER": {
     "eps": 4.67,
     "bookValue": 44.48,
-    "peRatio": 44.39,
+    "peRatio": 41.54,
     "pbRatio": 4.36,
     "publicFloat": 100,
     "high52": 242.6,
@@ -231,16 +251,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 48671,
     "tradeTurnover": 9510313.4,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Upper Tamakoshi Hydropower Ltd",
-    "roe": 10.5
+    "roe": 10.5,
+    "ratioPrice": 194.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GCIL": {
     "eps": -6.1314577488325,
     "bookValue": 165.7256316959139,
-    "peRatio": -61.975473951909,
-    "pbRatio": 2.2929464568116,
+    "peRatio": -61.98,
+    "pbRatio": 2.29,
     "promoterHolding": 0,
     "publicFloat": 100,
     "high52": 476.0,
@@ -249,12 +271,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15185,
     "tradeTurnover": 5436230,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Ghorahi Cement Industry Limited",
-    "ltp": 380.0,
+    "ltp": 350.1,
     "roe": 0.0,
-    "roa": -1.3967267596839
+    "roa": -1.3967267596839,
+    "ratioPrice": 380.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NTC": {
     "eps": 49.25,
@@ -269,10 +293,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14704,
     "tradeTurnover": 12789539.2,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Others",
     "companyName": "Nepal Doorsanchar Company Limited",
-    "roe": 8.83
+    "roe": 8.83,
+    "ratioPrice": 937.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "NICA": {
     "eps": 3.42,
@@ -287,16 +313,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 37121,
     "tradeTurnover": 12580306.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "NIC Asia Bank Ltd.",
-    "roe": 1.98
+    "roe": 1.98,
+    "ratioPrice": 348.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SARBTM": {
     "eps": 21.197762177527,
     "bookValue": 199.81516057251963,
-    "peRatio": 38.022881531074,
-    "pbRatio": 4.0337279598335,
+    "peRatio": 38.02,
+    "pbRatio": 4.03,
     "promoterHolding": 87.1,
     "publicFloat": 12.04,
     "high52": 924.0,
@@ -305,18 +333,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9246,
     "tradeTurnover": 7304340,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Sarbottam Cement Limited",
-    "ltp": 806.0,
+    "ltp": 797.0,
     "roe": 10.867640981487,
-    "roa": 6.9923779071074
+    "roa": 6.9923779071074,
+    "ratioPrice": 806.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SONA": {
     "eps": 10.963982699468,
     "bookValue": 200.8146504934879,
-    "peRatio": 42.594011026911,
-    "pbRatio": 2.3255275392128,
+    "peRatio": 42.59,
+    "pbRatio": 2.33,
     "promoterHolding": 60,
     "publicFloat": 37.58,
     "high52": 502.4,
@@ -325,12 +355,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15742,
     "tradeTurnover": 6418013.4,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Sonapur Minerals And Oil Limited",
-    "ltp": 467.0,
+    "ltp": 460.0,
     "roe": 5.6127276177313,
-    "roa": 2.2956454492588
+    "roa": 2.2956454492588,
+    "ratioPrice": 467.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMBSBFE": {
     "eps": null,
@@ -363,10 +395,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 45743,
     "tradeTurnover": 9057114,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Himalayan Bank Limited",
-    "roe": 6.43
+    "roe": 6.43,
+    "ratioPrice": 200.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "KDBY": {
     "eps": 0.0,
@@ -382,7 +416,7 @@
   "NABIL": {
     "eps": 34.54,
     "bookValue": 233.9,
-    "peRatio": 16.2,
+    "peRatio": 15.89,
     "pbRatio": 2.35,
     "promoterHolding": 58.44,
     "publicFloat": 41.56,
@@ -392,12 +426,14 @@
     "lastTradeDate": "2026-07-28",
     "tradeVolume": 61497,
     "tradeTurnover": 34237335.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Nabil Bank Limited",
     "roe": 14.77,
     "ltp": 562.9,
-    "roa": 1.0834421557815
+    "roa": 1.0834421557815,
+    "ratioPrice": 549.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HDL": {
     "eps": 32.71,
@@ -412,12 +448,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12284,
     "tradeTurnover": 14310860,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Himalayan Distillery Limited",
     "roe": 23.13,
     "ltp": 1224.0,
-    "roa": 22.938423817662
+    "roa": 22.938423817662,
+    "ratioPrice": 1299.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CBBL": {
     "promoterHolding": 51,
@@ -426,16 +464,18 @@
     "low52": 882.0,
     "eps": 35.91,
     "bookValue": 251.06,
-    "peRatio": 32.65,
-    "pbRatio": 3.8,
+    "peRatio": 27.49,
+    "pbRatio": 3.93,
     "sharesOutstanding": 36172641.02,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13731,
     "tradeTurnover": 12879678,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Chhimek Laghubitta Bittiya Sanstha Limited",
-    "roe": 14.3
+    "roe": 14.3,
+    "ratioPrice": 987.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SHL": {
     "sharesOutstanding": 117515254.0,
@@ -450,70 +490,78 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10693,
     "tradeTurnover": 5346500,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "Soaltee Hotel Limited",
-    "roe": 22.71
+    "roe": 22.71,
+    "ratioPrice": 545.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NBL": {
-    "eps": 22.65,
+    "eps": 32.29,
     "bookValue": 292.89,
-    "peRatio": 13.51,
+    "peRatio": 9.48,
     "pbRatio": 1.04,
-    "sharesOutstanding": 146940229.28,
+    "sharesOutstanding": 146940229,
     "promoterHolding": 51.0,
     "publicFloat": 49.0,
-    "high52": 288.0,
-    "low52": 230.0,
-    "lastTradeDate": "2026-09-16",
-    "tradeVolume": 179797,
-    "tradeTurnover": 51474888.1,
-    "capturedAt": "2026-11-07",
+    "high52": 312.9,
+    "low52": 235.6,
+    "lastTradeDate": "2026-11-13",
+    "tradeVolume": 93355,
+    "tradeTurnover": 28560044.0,
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Nepal Bank Limited",
-    "roe": 7.73
+    "roe": 7.73,
+    "ratioPrice": 306.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NRN": {
     "eps": -4.32,
     "bookValue": 169.23,
-    "peRatio": -1394.95,
-    "pbRatio": 7.69,
-    "sharesOutstanding": 17981212.0,
+    "peRatio": -319.68,
+    "pbRatio": 8.16,
+    "sharesOutstanding": 17981211,
     "promoterHolding": 0.0,
     "publicFloat": 100.0,
     "high52": 1694.0,
-    "low52": 1235.0,
-    "lastTradeDate": "2026-09-16",
-    "tradeVolume": 88769,
-    "tradeTurnover": 128238637.0,
-    "capturedAt": "2026-11-07",
+    "low52": 1339.0,
+    "lastTradeDate": "2026-11-13",
+    "tradeVolume": 8729,
+    "tradeTurnover": 12021094.0,
+    "capturedAt": "2026-11-14",
     "sector": "Investment",
     "companyName": "NRN Infrastructure and Development Limited",
-    "roe": -2.55
+    "roe": -2.55,
+    "ratioPrice": 1381.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SKBBL": {
-    "eps": 14.91,
+    "eps": 12.35,
     "bookValue": 225.24,
-    "peRatio": 51.11,
+    "peRatio": 61.7,
     "pbRatio": 3.38,
-    "sharesOutstanding": 49271700.79,
+    "sharesOutstanding": 49271700,
     "promoterHolding": 70.0,
     "publicFloat": 30.0,
     "high52": 826.0,
-    "low52": 711.6,
-    "lastTradeDate": "2026-09-16",
-    "tradeVolume": 8823,
-    "tradeTurnover": 6783507.7,
-    "capturedAt": "2026-11-07",
+    "low52": 726.48,
+    "lastTradeDate": "2026-11-13",
+    "tradeVolume": 3442,
+    "tradeTurnover": 2616648.2,
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Sana Kisan Bikas Laghubitta Bittiya Sanstha Limited",
-    "roe": 6.62
+    "roe": 6.62,
+    "ratioPrice": 762.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NLO": {
     "eps": 62.96,
     "bookValue": 579.95,
-    "peRatio": 5.1,
-    "pbRatio": 0.54,
+    "peRatio": 4.44,
+    "pbRatio": 0.48,
     "sharesOutstanding": 874352.4,
     "promoterHolding": 67.3,
     "publicFloat": 32.7,
@@ -525,12 +573,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Manufacturing",
     "companyName": "Nepal Lube Oil Limited",
-    "roe": 10.86
+    "roe": 10.86,
+    "ratioPrice": 279.4,
+    "ratioPriceDate": "2026-09-30"
   },
   "ADBL": {
     "eps": 0.73,
     "bookValue": 232.58,
-    "peRatio": 110.62,
+    "peRatio": 462.19,
     "pbRatio": 1.45,
     "sharesOutstanding": 197382310.9,
     "promoterHolding": 51,
@@ -540,10 +590,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 114881,
     "tradeTurnover": 36888289.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Agricultural Development Bank Limited",
-    "roe": 0.27
+    "roe": 0.27,
+    "ratioPrice": 337.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "BHDC": {
     "eps": 30.08,
@@ -557,10 +609,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4331,
     "tradeTurnover": 1879220.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bindhyabasini Hydropower Development Company Limited",
-    "roe": 24.0
+    "roe": 24.0,
+    "ratioPrice": 431.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "DORDI": {
     "eps": 1.42,
@@ -574,10 +628,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6738,
     "tradeTurnover": 1745142,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Dordi Khola Jal Bidyut Company Limited",
-    "roe": 1.34
+    "roe": 1.34,
+    "ratioPrice": 273.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "HHL": {
     "eps": 7.32,
@@ -592,10 +648,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22933,
     "tradeTurnover": 7797220,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Himalayan Hydropower Limited",
-    "roe": 8.59
+    "roe": 8.59,
+    "ratioPrice": 351.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CZBIL": {
     "eps": 2.68,
@@ -610,10 +668,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 82252,
     "tradeTurnover": 17017938.8,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Citizens Bank International Limited",
-    "roe": 1.72
+    "roe": 1.72,
+    "ratioPrice": 219.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "EBL": {
     "eps": 34.78,
@@ -628,10 +688,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1195,
     "tradeTurnover": 868765,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Everest Bank Limited",
-    "roe": 14.31
+    "roe": 14.31,
+    "ratioPrice": 712.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "UHEWA": {
     "eps": 18.91,
@@ -649,7 +711,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Upper Hewakhola Hydropower Company Limited",
-    "roe": 15.76
+    "roe": 15.76,
+    "ratioPrice": 595.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CHDC": {
     "eps": 61.12,
@@ -664,10 +728,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20439,
     "tradeTurnover": 45844677,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "CEDB Hydropower Development Company Limited",
-    "roe": 22.74
+    "roe": 22.74,
+    "ratioPrice": 2270.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SPHL": {
     "eps": 1.0,
@@ -684,13 +750,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Sayapatri Hydropower Limited",
-    "roe": 1.09
+    "roe": 1.09,
+    "ratioPrice": 510.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "USHL": {
     "eps": 0.86656363636364,
     "bookValue": 100.09902272727273,
-    "peRatio": 582.87698537588,
-    "pbRatio": 5.0460033099044,
+    "peRatio": 582.88,
+    "pbRatio": 5.05,
     "sharesOutstanding": 2200000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -704,12 +772,14 @@
     "companyName": "Upper Syange Hydropower Limited",
     "ltp": 505.1,
     "roe": 0.9068392422024399,
-    "roa": 0.30987064265183
+    "roa": 0.30987064265183,
+    "ratioPrice": 505.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "MBL": {
     "eps": 3.93,
     "bookValue": 164.37,
-    "peRatio": 15.02,
+    "peRatio": 67.68,
     "pbRatio": 1.62,
     "sharesOutstanding": 154487979.11,
     "promoterHolding": 51,
@@ -719,10 +789,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19807,
     "tradeTurnover": 5130013,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Machhapuchhre Bank Limited",
-    "roe": 9.54
+    "roe": 9.54,
+    "ratioPrice": 266.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "WNLB": {
     "eps": 9.89,
@@ -740,7 +812,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Wean Nepal Laghubitta Bittiya Sanstha Limited",
-    "roe": 7.57
+    "roe": 7.57,
+    "ratioPrice": 1055.0,
+    "ratioPriceDate": "2026-09-03"
   },
   "PPL": {
     "eps": -2.29,
@@ -758,12 +832,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "People's Power Limited",
-    "roe": -2.24
+    "roe": -2.24,
+    "ratioPrice": 318.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMB": {
     "eps": 22.84,
     "bookValue": 187.03,
-    "peRatio": 11.48,
+    "peRatio": 11.98,
     "pbRatio": 1.46,
     "sharesOutstanding": 222850410.0,
     "promoterHolding": 51,
@@ -776,7 +852,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "NMB Bank Limited",
-    "roe": 12.21
+    "roe": 12.21,
+    "ratioPrice": 273.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "PCBL": {
     "eps": 22.67,
@@ -794,7 +872,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Prime Commercial Bank Ltd.",
-    "roe": 12.52
+    "roe": 12.52,
+    "ratioPrice": 271.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "PRVU": {
     "eps": 10.26,
@@ -812,12 +892,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Prabhu  Bank Limited",
-    "roe": 7.14
+    "roe": 7.14,
+    "ratioPrice": 187.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "SANIMA": {
     "eps": 29.73,
     "bookValue": 185.54,
-    "peRatio": 13.71,
+    "peRatio": 13.45,
     "pbRatio": 2.16,
     "sharesOutstanding": 155815254.14,
     "promoterHolding": 51,
@@ -830,7 +912,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Sanima Bank Limited",
-    "roe": 16.02
+    "roe": 16.02,
+    "ratioPrice": 400.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SBI": {
     "eps": 19.49,
@@ -848,12 +932,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Nepal SBI Bank Limited",
-    "roe": 9.76
+    "roe": 9.76,
+    "ratioPrice": 438.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SBL": {
     "eps": 19.12,
     "bookValue": 199.61,
-    "peRatio": 20.86,
+    "peRatio": 22.83,
     "pbRatio": 2.19,
     "sharesOutstanding": 197739271.19,
     "promoterHolding": 51,
@@ -866,7 +952,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Siddhartha Bank Limited",
-    "roe": 9.58
+    "roe": 9.58,
+    "ratioPrice": 436.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "SCB": {
     "eps": 26.74,
@@ -884,7 +972,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Standard Chartered Bank  Nepal Limited",
-    "roe": 11.52
+    "roe": 11.52,
+    "ratioPrice": 671.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "CORBL": {
     "eps": 4.68,
@@ -899,14 +989,16 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 137376,
     "tradeTurnover": 180924192,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Corporate Development Bank Limited",
-    "roe": 3.47
+    "roe": 3.47,
+    "ratioPrice": 762.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "EDBL": {
-    "eps": 24.76,
-    "bookValue": 177.85,
+    "eps": 1.28,
+    "bookValue": 176.63,
     "peRatio": 444.45,
     "pbRatio": 3.22,
     "sharesOutstanding": 12496944.71,
@@ -917,10 +1009,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6434,
     "tradeTurnover": 3725286,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Excel Development Bank Ltd.",
-    "roe": 13.92
+    "roe": 0.73,
+    "ratioPrice": 568.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "GBBL": {
     "eps": 14.5,
@@ -935,10 +1029,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 54572,
     "tradeTurnover": 23029384,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Garima Bikas Bank Limited",
-    "roe": 9.32
+    "roe": 9.32,
+    "ratioPrice": 411.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "GRDBL": {
     "eps": 3.2,
@@ -953,10 +1049,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4203,
     "tradeTurnover": 4505195.7,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Green Development Bank Ltd.",
-    "roe": 2.57
+    "roe": 2.57,
+    "ratioPrice": 932.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "JBBL": {
     "eps": 18.21,
@@ -971,16 +1069,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26251,
     "tradeTurnover": 9114347.2,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Jyoti Bikas Bank Limited",
-    "roe": 10.49
+    "roe": 10.49,
+    "ratioPrice": 354.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMPDA": {
     "eps": 32.517674040862,
     "bookValue": 173.91736904344728,
-    "peRatio": 22.218686339377,
-    "pbRatio": 4.1542716749556,
+    "peRatio": 22.22,
+    "pbRatio": 4.15,
     "sharesOutstanding": 7008584.0,
     "promoterHolding": 67.68,
     "publicFloat": 32.32,
@@ -994,12 +1094,14 @@
     "companyName": "Sampada Laghubitta Bittiya Sanstha Limited",
     "ltp": 722.5,
     "roe": 19.165146470071,
-    "roa": 2.0912124831609002
+    "roa": 2.0912124831609002,
+    "ratioPrice": 722.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "KSBBL": {
     "eps": 23.13,
     "bookValue": 161.84,
-    "peRatio": 20.09,
+    "peRatio": 20.8,
     "pbRatio": 2.97,
     "sharesOutstanding": 42119308.15,
     "promoterHolding": 51,
@@ -1009,10 +1111,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22882,
     "tradeTurnover": 11047429.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Kamana Sewa Bikas Bank Limited",
-    "roe": 14.29
+    "roe": 14.29,
+    "ratioPrice": 481.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "LBBL": {
     "eps": 36.11,
@@ -1027,10 +1131,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 36457,
     "tradeTurnover": 18046215,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Lumbini Bikas Bank Ltd.",
-    "roe": 16.67
+    "roe": 16.67,
+    "ratioPrice": 527.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MDB": {
     "eps": 11.26,
@@ -1045,10 +1151,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2683,
     "tradeTurnover": 1582970,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Miteri Development Bank Limited",
-    "roe": 7.75
+    "roe": 7.75,
+    "ratioPrice": 570.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MLBL": {
     "eps": 10.5,
@@ -1063,10 +1171,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12709,
     "tradeTurnover": 4549822,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Mahalaxmi Bikas Bank Ltd.",
-    "roe": 6.3
+    "roe": 6.3,
+    "ratioPrice": 373.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MNBBL": {
     "eps": 16.12,
@@ -1081,10 +1191,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 20285,
     "tradeTurnover": 7529792,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Development Bank",
     "companyName": "Muktinath Bikas Bank Ltd.",
-    "roe": 9.73
+    "roe": 9.73,
+    "ratioPrice": 344.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SADBL": {
     "eps": 3.45,
@@ -1102,13 +1214,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Development Bank",
     "companyName": "SHANGRI-LA DEVELOPMENT BANK LIMITED",
-    "roe": 2.23
+    "roe": 2.23,
+    "ratioPrice": 393.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "SAPDBL": {
     "eps": 2.09,
     "bookValue": 86.26,
-    "peRatio": 31.26,
-    "pbRatio": 6.5,
+    "peRatio": 269.86,
+    "pbRatio": 6.54,
     "sharesOutstanding": 8343384.32,
     "promoterHolding": 56.75,
     "publicFloat": 43.25,
@@ -1120,7 +1234,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Development Bank",
     "companyName": "Saptakoshi Development Bank Ltd",
-    "roe": 2.42
+    "roe": 2.42,
+    "ratioPrice": 564.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SHINE": {
     "eps": 14.85,
@@ -1138,7 +1254,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Development Bank",
     "companyName": "Shine Resunga Development Bank Ltd.",
-    "roe": 10.36
+    "roe": 10.36,
+    "ratioPrice": 408.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "SINDU": {
     "eps": -44.59,
@@ -1156,7 +1274,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Development Bank",
     "companyName": "Sindhu Bikash Bank Ltd",
-    "roe": -51.08
+    "roe": -51.08,
+    "ratioPrice": 406.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BFC": {
     "eps": 9.63,
@@ -1171,10 +1291,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 29657,
     "tradeTurnover": 15095413,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Best Finance Company Ltd.",
-    "roe": 8.36
+    "roe": 8.36,
+    "ratioPrice": 455.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CFCL": {
     "eps": 8.83,
@@ -1189,10 +1311,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 258051,
     "tradeTurnover": 165797767.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Central Finance Co. Ltd.",
-    "roe": 7.29
+    "roe": 7.29,
+    "ratioPrice": 598.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GFCL": {
     "eps": 26.7,
@@ -1207,10 +1331,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5931,
     "tradeTurnover": 3635703,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Goodwill Finance Limited",
-    "roe": 12.28
+    "roe": 12.28,
+    "ratioPrice": 560.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "GMFIL": {
     "eps": -1.41,
@@ -1225,10 +1351,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12422,
     "tradeTurnover": 5774987.8,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Guheshowori Merchant Bank & Finance Co. Ltd.",
-    "roe": -0.9
+    "roe": -0.9,
+    "ratioPrice": 418.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GUFL": {
     "eps": 31.09,
@@ -1243,10 +1371,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 24738,
     "tradeTurnover": 14323302,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Gurkhas Finance Ltd.",
-    "roe": 17.79
+    "roe": 17.79,
+    "ratioPrice": 498.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ICFC": {
     "eps": 23.59,
@@ -1261,16 +1391,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10039,
     "tradeTurnover": 6204102,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "ICFC Finance Limited",
-    "roe": 12.82
+    "roe": 12.82,
+    "ratioPrice": 610.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "JFL": {
     "eps": -4.97,
     "bookValue": -8.22,
     "peRatio": -55.17,
-    "pbRatio": -33.36,
+    "pbRatio": -32.88,
     "sharesOutstanding": 6904728.0,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -1279,16 +1411,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1979,
     "tradeTurnover": 793579,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Janaki Finance Company Limited",
-    "roe": -151.85
+    "roe": -151.85,
+    "ratioPrice": 274.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "MFIL": {
     "eps": 7.06,
     "bookValue": 193.58,
-    "peRatio": 101.04,
-    "pbRatio": 3.6,
+    "peRatio": 96.32,
+    "pbRatio": 3.51,
     "sharesOutstanding": 13515528.49,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -1297,10 +1431,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 64463,
     "tradeTurnover": 51041803.4,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Manjushree Finance Ltd.",
-    "roe": 3.65
+    "roe": 3.65,
+    "ratioPrice": 680.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MPFL": {
     "eps": 2.14,
@@ -1315,10 +1451,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3483,
     "tradeTurnover": 2162943,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Finance",
     "companyName": "Multipurpose Finance Company  Limited",
-    "roe": 1.75
+    "roe": 1.75,
+    "ratioPrice": 570.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NFS": {
     "eps": -15.4,
@@ -1336,13 +1474,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Finance",
     "companyName": "Nepal Finance Ltd.",
-    "roe": -12.51
+    "roe": -12.51,
+    "ratioPrice": 479.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "PROFL": {
     "eps": 5.92,
     "bookValue": 83.84,
-    "peRatio": -18.43,
-    "pbRatio": 4.79,
+    "peRatio": 63.34,
+    "pbRatio": 4.47,
     "sharesOutstanding": 8481060.0,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -1354,7 +1494,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Finance",
     "companyName": "Progressive Finance Limited",
-    "roe": 7.06
+    "roe": 7.06,
+    "ratioPrice": 375.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RLFL": {
     "eps": -42.9,
@@ -1372,7 +1514,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Finance",
     "companyName": "Reliance Finance Ltd.",
-    "roe": -39.78
+    "roe": -39.78,
+    "ratioPrice": 412.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SIFC": {
     "eps": 7.86,
@@ -1390,7 +1534,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Finance",
     "companyName": "Shree Investment Finance Co. Ltd.",
-    "roe": 5.55
+    "roe": 5.55,
+    "ratioPrice": 467.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GLH": {
     "eps": 2.33,
@@ -1404,10 +1550,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11310,
     "tradeTurnover": 2868216,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "GreenLife Hydropower Limited",
-    "roe": 2.08
+    "roe": 2.08,
+    "ratioPrice": 263.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "OHL": {
     "eps": -4.01,
@@ -1425,7 +1573,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hotels & Tourism",
     "companyName": "Oriental Hotels Limited",
-    "roe": -1.23
+    "roe": -1.23,
+    "ratioPrice": 643.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "TRH": {
     "eps": -35.97,
@@ -1443,33 +1593,37 @@
     "capturedAt": "2026-11-07",
     "sector": "Hotels & Tourism",
     "companyName": "Taragaon Regency Hotel Limited",
-    "roe": -30.3
+    "roe": -30.3,
+    "ratioPrice": 835.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MABEL": {
     "eps": -1.1624911876918,
     "bookValue": 102.22191724724226,
-    "peRatio": -431.83123047733,
-    "pbRatio": 4.9108842165994,
+    "peRatio": -431.83,
+    "pbRatio": 4.91,
     "sharesOutstanding": 3858240.0,
     "promoterHolding": 51,
     "publicFloat": 38.22,
     "high52": 884.8,
-    "low52": 422.7,
+    "low52": 498.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7772,
     "tradeTurnover": 4663200,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mabilung Energy Limited",
-    "ltp": 502.0,
+    "ltp": 498.0,
     "roe": 0.0,
-    "roa": -0.35888756529166
+    "roa": -0.35888756529166,
+    "ratioPrice": 502.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "AHPC": {
     "eps": 3.41,
     "bookValue": 109.71,
-    "peRatio": 79.32,
-    "pbRatio": 2.36,
+    "peRatio": 75.6,
+    "pbRatio": 2.35,
     "sharesOutstanding": 40404031.5,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -1478,10 +1632,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34737,
     "tradeTurnover": 9319937.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Arun Valley Hydropower Development Company Limited",
-    "roe": 3.11
+    "roe": 3.11,
+    "ratioPrice": 257.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "AKJCL": {
     "eps": 3.18,
@@ -1495,10 +1651,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 235650,
     "tradeTurnover": 86012250,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Ankhu Khola Jalvidhyut Company Limited",
-    "roe": 3.39
+    "roe": 3.39,
+    "ratioPrice": 343.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "AKPL": {
     "eps": 2.05,
@@ -1512,10 +1670,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 34065,
     "tradeTurnover": 8819428.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Arun Kabeli Power Ltd.",
-    "roe": 2.01
+    "roe": 2.01,
+    "ratioPrice": 256.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "API": {
     "eps": 15.06,
@@ -1529,10 +1689,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 110338,
     "tradeTurnover": 36963230,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "API POWER COMPANY LIMITED",
-    "roe": 12.6
+    "roe": 12.6,
+    "ratioPrice": 333.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "BARUN": {
     "eps": 8.07,
@@ -1546,10 +1708,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14521,
     "tradeTurnover": 4732393.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Barun Hydropower Co. Ltd.",
-    "roe": 7.12
+    "roe": 7.12,
+    "ratioPrice": 322.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "BPCL": {
     "eps": 9.84,
@@ -1564,10 +1728,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22232,
     "tradeTurnover": 14673120,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Butwal Power Company Limited",
-    "roe": 4.67
+    "roe": 4.67,
+    "ratioPrice": 694.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CHL": {
     "eps": 1.72,
@@ -1581,16 +1747,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7768,
     "tradeTurnover": 2048421.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Chhyangdi Hydropower Ltd.",
-    "roe": 2.04
+    "roe": 2.04,
+    "ratioPrice": 257.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "DHPL": {
     "eps": 5.51,
     "bookValue": 8.38,
-    "peRatio": 12.22,
-    "pbRatio": 19.38,
+    "peRatio": 48.82,
+    "pbRatio": 32.1,
     "sharesOutstanding": 2640000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -1599,14 +1767,16 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3008,
     "tradeTurnover": 878336,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Dibyashwori Hydropower Ltd.",
-    "roe": 65.79
+    "roe": 65.79,
+    "ratioPrice": 269.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GHL": {
-    "eps": -1.33,
-    "bookValue": 95.05,
+    "eps": 0.07,
+    "bookValue": 95.07,
     "peRatio": 4614.29,
     "pbRatio": 3.4,
     "sharesOutstanding": 16500000.0,
@@ -1616,10 +1786,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 19141,
     "tradeTurnover": 4356491.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Ghalemdi Hydro Limited",
-    "roe": -1.39
+    "roe": 0.07,
+    "ratioPrice": 323.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HDHPC": {
     "eps": -3.4,
@@ -1633,10 +1805,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 77239,
     "tradeTurnover": 16567765.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Himal Dolakha Hydropower Company Limited",
-    "roe": -4.73
+    "roe": -4.73,
+    "ratioPrice": 214.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HPPL": {
     "eps": 12.57,
@@ -1650,10 +1824,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 573305,
     "tradeTurnover": 226283483.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Himalayan Power Partner Ltd.",
-    "roe": 9.63
+    "roe": 9.63,
+    "ratioPrice": 414.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HURJA": {
     "eps": 22.03,
@@ -1667,10 +1843,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 16560,
     "tradeTurnover": 3878352,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Himalaya Urja Bikas Company Limited",
-    "roe": 21.28
+    "roe": 21.28,
+    "ratioPrice": 262.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "JOSHI": {
     "eps": -6.54,
@@ -1684,10 +1862,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7969,
     "tradeTurnover": 2103816,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Joshi Hydropower Development Company Ltd",
-    "roe": -10.07
+    "roe": -10.07,
+    "ratioPrice": 258.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "KKHC": {
     "eps": 15.71,
@@ -1701,10 +1881,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 720308,
     "tradeTurnover": 212490860,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Khanikhola Hydropower Co. Ltd.",
-    "roe": 17.3
+    "roe": 17.3,
+    "ratioPrice": 265.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "KPCL": {
     "eps": 11.24,
@@ -1718,10 +1900,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4939,
     "tradeTurnover": 2321330,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Kalika power Company Ltd",
-    "roe": 8.98
+    "roe": 8.98,
+    "ratioPrice": 472.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "LEC": {
     "eps": 1.12,
@@ -1735,10 +1919,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 200185,
     "tradeTurnover": 45421976.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Liberty Energy Company Limited",
-    "roe": 1.59
+    "roe": 1.59,
+    "ratioPrice": 231.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "MHNL": {
     "eps": 12.78,
@@ -1752,15 +1938,17 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7798,
     "tradeTurnover": 1894914,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mountain Hydro Nepal Limited",
-    "roe": 18.22
+    "roe": 18.22,
+    "ratioPrice": 265.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NGPL": {
     "eps": 1.27,
     "bookValue": 138.35,
-    "peRatio": 145.88,
+    "peRatio": 312.44,
     "pbRatio": 2.87,
     "sharesOutstanding": 38784299.74,
     "publicFloat": 100,
@@ -1772,7 +1960,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Ngadi Group Power Ltd.",
-    "roe": 0.92
+    "roe": 0.92,
+    "ratioPrice": 396.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "NHDL": {
     "eps": 14.0,
@@ -1789,7 +1979,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Nepal Hydro Developers Ltd.",
-    "roe": 11.2
+    "roe": 11.2,
+    "ratioPrice": 645.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NHPC": {
     "eps": -0.93,
@@ -1807,13 +1999,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "National Hydro Power Company Limited",
-    "roe": -0.97
+    "roe": -0.97,
+    "ratioPrice": 254.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "PMHPL": {
     "eps": 6.07,
     "bookValue": 83.39,
-    "peRatio": 31.66,
-    "pbRatio": 3.6,
+    "peRatio": 50.91,
+    "pbRatio": 3.71,
     "sharesOutstanding": 11000000.0,
     "publicFloat": 100,
     "high52": 428.0,
@@ -1824,7 +2018,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Panchakanya Mai Hydropower Ltd",
-    "roe": 7.28
+    "roe": 7.28,
+    "ratioPrice": 309.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "PPCL": {
     "eps": 33.07,
@@ -1841,7 +2037,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Panchthar Power Compant Limited",
-    "roe": 30.93
+    "roe": 30.93,
+    "ratioPrice": 343.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "RADHI": {
     "eps": 19.75,
@@ -1858,13 +2056,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Radhi Bidyut Company Ltd",
-    "roe": 11.61
+    "roe": 11.61,
+    "ratioPrice": 725.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "AVYAN": {
     "eps": 57.04,
     "bookValue": 158.75,
-    "peRatio": 37.32,
-    "pbRatio": 6.51,
+    "peRatio": 17.88,
+    "pbRatio": 6.43,
     "sharesOutstanding": 2500000.0,
     "promoterHolding": 61,
     "publicFloat": 39,
@@ -1873,10 +2073,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3775,
     "tradeTurnover": 3824075,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Aviyan laghubittya bittiya sanstha limited",
-    "roe": 35.93
+    "roe": 35.93,
+    "ratioPrice": 1020.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RHPL": {
     "eps": -21.13,
@@ -1893,13 +2095,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "RASUWAGADHI HYDROPOWER COMPANY LIMITED",
-    "roe": -31.53
+    "roe": -31.53,
+    "ratioPrice": 168.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "SHPC": {
     "eps": 7.85,
     "bookValue": 137.5,
-    "peRatio": 9.83,
-    "pbRatio": 3.67,
+    "peRatio": 71.12,
+    "pbRatio": 4.06,
     "sharesOutstanding": 37379937.1,
     "publicFloat": 100,
     "high52": 588.0,
@@ -1910,7 +2114,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Sanima Mai Hydropower Limited",
-    "roe": 5.71
+    "roe": 5.71,
+    "ratioPrice": 558.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "SJCL": {
     "eps": 2.25,
@@ -1927,7 +2133,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "SANJEN JALAVIDHYUT COMPANY LIMITED",
-    "roe": 2.68
+    "roe": 2.68,
+    "ratioPrice": 246.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "SPDL": {
     "eps": 6.05,
@@ -1944,7 +2152,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Synergy Power Development Ltd.",
-    "roe": 5.54
+    "roe": 5.54,
+    "ratioPrice": 356.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SSHL": {
     "eps": -4.03,
@@ -1962,13 +2172,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Shiva Shree Hydropower Limited",
-    "roe": -7.63
+    "roe": -7.63,
+    "ratioPrice": 206.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "UMHL": {
     "eps": 5.74,
     "bookValue": 105.95,
-    "peRatio": 81.55,
-    "pbRatio": 5.17,
+    "peRatio": 97.04,
+    "pbRatio": 5.26,
     "sharesOutstanding": 13166350.0,
     "publicFloat": 100,
     "high52": 706.0,
@@ -1979,7 +2191,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "United Modi Hydropower Ltd.",
-    "roe": 5.42
+    "roe": 5.42,
+    "ratioPrice": 557.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "UNHPL": {
     "eps": 4.36,
@@ -1996,7 +2210,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Union Hydropower Limited",
-    "roe": 4.15
+    "roe": 4.15,
+    "ratioPrice": 357.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "UPCL": {
     "eps": 1.13,
@@ -2013,12 +2229,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Universal Power Company Limited",
-    "roe": 1.03
+    "roe": 1.03,
+    "ratioPrice": 333.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "ALICL": {
     "eps": 7.89,
     "bookValue": 120.13,
-    "peRatio": 191.91,
+    "peRatio": 53.51,
     "pbRatio": 3.51,
     "sharesOutstanding": 52512171.68,
     "promoterHolding": 51,
@@ -2028,10 +2246,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7936,
     "tradeTurnover": 3460096,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Asian Life Insurance Co. Limited",
-    "roe": 6.57
+    "roe": 6.57,
+    "ratioPrice": 422.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "MHL": {
     "eps": 8.76,
@@ -2045,10 +2265,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7960,
     "tradeTurnover": 3773040,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mandakini Hydropower Limited",
-    "roe": 7.56
+    "roe": 7.56,
+    "ratioPrice": 510.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "LICN": {
     "eps": 7.38,
@@ -2063,16 +2285,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9284,
     "tradeTurnover": 7333431.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Life Insurance Corporation (Nepal) Limited",
-    "roe": 4.15
+    "roe": 4.15,
+    "ratioPrice": 799.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NLIC": {
     "eps": 4.91,
     "bookValue": 126.07,
-    "peRatio": 136.53,
-    "pbRatio": 5.79,
+    "peRatio": 150.71,
+    "pbRatio": 5.87,
     "sharesOutstanding": 94802013.7,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -2084,7 +2308,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Life Insurance",
     "companyName": "NEPAL LIFE INSURANCE COMPANY LIMITED",
-    "roe": 3.89
+    "roe": 3.89,
+    "ratioPrice": 740.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NLICL": {
     "eps": 6.51,
@@ -2102,13 +2328,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Life Insurance",
     "companyName": "National Life Insurance Co. Ltd.",
-    "roe": 5.1
+    "roe": 5.1,
+    "ratioPrice": 580.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SWMF": {
     "eps": 19.69,
     "bookValue": 155.26,
-    "peRatio": 15.51,
-    "pbRatio": 3.71,
+    "peRatio": 30.88,
+    "pbRatio": 3.92,
     "sharesOutstanding": 11062862.96,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -2120,13 +2348,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Suryodaya Womi Laghubitta Bittiya Sanstha Limited",
-    "roe": 12.68
+    "roe": 12.68,
+    "ratioPrice": 608.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "USHEC": {
     "eps": 15.46,
     "bookValue": 119.02,
-    "peRatio": 13.12,
-    "pbRatio": 4.03,
+    "peRatio": 33.44,
+    "pbRatio": 4.34,
     "sharesOutstanding": 13500000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -2138,11 +2368,13 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Upper Solu Hydro Electric Company Limited",
-    "roe": 12.99
+    "roe": 12.99,
+    "ratioPrice": 517.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BNL": {
-    "eps": 450.71,
-    "bookValue": 3660.87,
+    "eps": 702.81,
+    "bookValue": 3820.44,
     "peRatio": 20.18,
     "pbRatio": 3.71,
     "sharesOutstanding": 1948890.0,
@@ -2153,10 +2385,12 @@
     "lastTradeDate": "2026-07-28",
     "tradeVolume": 10,
     "tradeTurnover": 147000,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Bottlers Nepal (Balaju) Limited",
-    "roe": 12.31
+    "roe": 18.4,
+    "ratioPrice": 14186.2,
+    "ratioPriceDate": "2026-10-30"
   },
   "BNT": {
     "eps": 1149.06,
@@ -2171,10 +2405,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 10,
     "tradeTurnover": 117500,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Bottlers Nepal (Terai) Limited",
-    "roe": 30.54
+    "roe": 30.54,
+    "ratioPrice": 12000.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "UNL": {
     "eps": 1095.77,
@@ -2192,7 +2428,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Manufacturing",
     "companyName": "Unilever Nepal Limited",
-    "roe": 18.8
+    "roe": 18.8,
+    "ratioPrice": 48500.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ALBSL": {
     "eps": 32.63,
@@ -2207,16 +2445,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 580,
     "tradeTurnover": 629242,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Asha Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 18.68
+    "roe": 18.68,
+    "ratioPrice": 1169.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "HLBSL": {
     "eps": 31.26,
     "bookValue": 185.53,
-    "peRatio": 43.39,
-    "pbRatio": 5.15,
+    "peRatio": 27.83,
+    "pbRatio": 4.69,
     "sharesOutstanding": 3410860.36,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -2225,14 +2465,16 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 694,
     "tradeTurnover": 610720,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Himalayan Laghubitta Bittiya Sanstha Limited",
-    "roe": 16.85
+    "roe": 16.85,
+    "ratioPrice": 870.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "DDBL": {
-    "eps": 48.15,
-    "bookValue": 226.87,
+    "eps": 42.81,
+    "bookValue": 236.26,
     "peRatio": 20.15,
     "pbRatio": 3.65,
     "sharesOutstanding": 20551142.66,
@@ -2243,10 +2485,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4927,
     "tradeTurnover": 4122420.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Deprosc Laghubitta Bittiya Sanstha Limited",
-    "roe": 21.22
+    "roe": 18.12,
+    "ratioPrice": 862.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "FMDBL": {
     "eps": 5.29,
@@ -2261,10 +2505,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6078,
     "tradeTurnover": 4635690.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "First Micro Finance Laghubitta Bittiya Sanstha Limited",
-    "roe": 3.79
+    "roe": 3.79,
+    "ratioPrice": 718.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "FOWAD": {
     "eps": 52.14,
@@ -2279,36 +2525,40 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 6781,
     "tradeTurnover": 6441950,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Forward Microfinance Laghubitta Bittiya Sanstha Limited",
-    "roe": 18.72
+    "roe": 18.72,
+    "ratioPrice": 900.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "BHCL": {
-    "eps": 9.8271356758392,
-    "bookValue": 102.30259668131993,
-    "peRatio": 55.560441822573,
-    "pbRatio": 5.337107929927,
+    "eps": 9.1111998589856,
+    "bookValue": 103.28651143517429,
+    "peRatio": 59.93,
+    "pbRatio": 5.29,
     "sharesOutstanding": 10000114.3,
     "promoterHolding": 51,
     "publicFloat": 49,
     "high52": 608.18181818182,
-    "low52": 383.72727272727,
+    "low52": 400.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15746,
     "tradeTurnover": 7795844.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bikash Hydropower Company Limited",
-    "ltp": 546.0,
-    "roe": 9.6059494036612,
-    "roa": 8.247015712203499
+    "ltp": 543.9,
+    "roe": 8.8212872449507,
+    "roa": 7.3637625682952,
+    "ratioPrice": 546.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GILB": {
     "eps": 61.87,
     "bookValue": 242.58,
-    "peRatio": 27.24,
-    "pbRatio": 4.57,
+    "peRatio": 18.23,
+    "pbRatio": 4.65,
     "sharesOutstanding": 6482977.97,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -2317,10 +2567,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 58,
     "tradeTurnover": 64206,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Global IME Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 25.51
+    "roe": 25.51,
+    "ratioPrice": 1127.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "GLBSL": {
     "eps": 41.09,
@@ -2335,10 +2587,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 467,
     "tradeTurnover": 845270,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Gurans Laghubitta Bittiya Sanstha Limited",
-    "roe": 25.2
+    "roe": 25.2,
+    "ratioPrice": 1440.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GMFBS": {
     "eps": 28.68,
@@ -2353,16 +2607,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 394,
     "tradeTurnover": 489781.4,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Ganapati Laghubitta Bittiya Sanstha Limited",
-    "roe": 18.15
+    "roe": 18.15,
+    "ratioPrice": 1039.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ILBS": {
     "eps": 36.66,
     "bookValue": 161.73,
-    "peRatio": 48.89,
-    "pbRatio": 5.79,
+    "peRatio": 26.32,
+    "pbRatio": 5.97,
     "sharesOutstanding": 4974159.43,
     "promoterHolding": 67.5,
     "publicFloat": 32.5,
@@ -2371,10 +2627,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 58,
     "tradeTurnover": 51446,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Infinity Laghubitta Bittiya Sanstha Limited",
-    "roe": 22.67
+    "roe": 22.67,
+    "ratioPrice": 965.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "JSLBB": {
     "eps": 10.7,
@@ -2389,10 +2647,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 79,
     "tradeTurnover": 80098.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Janautthan Samudayic Laghubitta Bittya Sanstha Limited",
-    "roe": 6.11
+    "roe": 6.11,
+    "ratioPrice": 923.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "KMCDB": {
     "eps": 27.4,
@@ -2407,10 +2667,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4767,
     "tradeTurnover": 3737328,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Kalika Laghubitta Bittiya Sanstha Ltd",
-    "roe": 15.33
+    "roe": 15.33,
+    "ratioPrice": 775.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "LLBS": {
     "eps": 30.13,
@@ -2425,14 +2687,16 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2744,
     "tradeTurnover": 2497040,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Laxmi Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 14.24
+    "roe": 14.24,
+    "ratioPrice": 813.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "MERO": {
-    "eps": 8.47,
-    "bookValue": 149.87,
+    "eps": 23.31,
+    "bookValue": 153.5,
     "peRatio": 27.11,
     "pbRatio": 4.12,
     "sharesOutstanding": 14864025.0,
@@ -2443,17 +2707,19 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2155,
     "tradeTurnover": 1463245,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Meromicrofinance Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 5.65
+    "roe": 15.19,
+    "ratioPrice": 631.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "MLBBL": {
-    "eps": 20.07,
-    "bookValue": 167.93,
+    "eps": 67.93,
+    "bookValue": 179.6,
     "peRatio": 13.54,
     "pbRatio": 5.12,
-    "sharesOutstanding": 2558436.22,
+    "sharesOutstanding": 2558436.25,
     "promoterHolding": 60,
     "publicFloat": 40,
     "high52": 1661.0,
@@ -2461,16 +2727,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1024,
     "tradeTurnover": 1161216,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Mithila LaghuBitta Bittiya Sanstha Limited",
-    "roe": 11.95
+    "roe": 37.82,
+    "ratioPrice": 920.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NWCL": {
     "eps": -6.5360901818182,
     "bookValue": 102.91379636363637,
-    "peRatio": -78.533188147843,
-    "pbRatio": 4.9876694683994,
+    "peRatio": -78.53,
+    "pbRatio": 4.99,
     "sharesOutstanding": 6875000.0,
     "promoterHolding": 80,
     "publicFloat": 19.6,
@@ -2484,7 +2752,9 @@
     "companyName": "Nepal Warehousing Company Limited ",
     "ltp": 513.3,
     "roe": 0.0,
-    "roa": -2.6040154626559
+    "roa": -2.6040154626559,
+    "ratioPrice": 513.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "RHGCL": {
     "eps": -2.16,
@@ -2502,7 +2772,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Rapti Hydro And General Construction Limited",
-    "roe": -2.3
+    "roe": -2.3,
+    "ratioPrice": 256.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "NESDO": {
     "eps": 50.06,
@@ -2522,7 +2794,9 @@
     "companyName": "NESDO Sambridha Laghubitta Bittiya Sanstha Limited",
     "roe": 17.34,
     "ltp": 1329.0,
-    "roa": 3.2959648730551003
+    "roa": 3.2959648730551003,
+    "ratioPrice": 1325.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MLBSL": {
     "eps": 37.91,
@@ -2537,16 +2811,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 42,
     "tradeTurnover": 70980,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Mahila Lagubitta Bittiya Sanstha Limited ",
-    "roe": 25.5
+    "roe": 25.5,
+    "ratioPrice": 1020.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMBMF": {
     "eps": 20.43,
     "bookValue": 150.76,
-    "peRatio": 18.67,
-    "pbRatio": 3.86,
+    "peRatio": 30.25,
+    "pbRatio": 4.1,
     "sharesOutstanding": 7214491.49,
     "promoterHolding": 60,
     "publicFloat": 40,
@@ -2558,13 +2834,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "NMB  Microfinance Bittiya Sanstha Ltd.",
-    "roe": 13.55
+    "roe": 13.55,
+    "ratioPrice": 618.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "DLBS": {
     "eps": 18.49,
     "bookValue": 155.2,
-    "peRatio": 56.19,
-    "pbRatio": 6.69,
+    "peRatio": 55.44,
+    "pbRatio": 6.6,
     "sharesOutstanding": 1331000.0,
     "promoterHolding": 67.9,
     "publicFloat": 32.1,
@@ -2573,7 +2851,7 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 227,
     "tradeTurnover": 272627,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Dhaulagiri Laghubitta Bittiya Sanstha Limited",
     "roe": 11.91
@@ -2581,8 +2859,8 @@
   "RURU": {
     "eps": 10.4,
     "bookValue": 128.84,
-    "peRatio": 32.27,
-    "pbRatio": 4.7,
+    "peRatio": 60.48,
+    "pbRatio": 4.88,
     "sharesOutstanding": 6240544.24,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -2594,13 +2872,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Mutual Fund",
     "companyName": "Ru Ru Jalbidhyut  Pariyojana Ltd.",
-    "roe": 8.07
+    "roe": 8.07,
+    "ratioPrice": 629.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NUBL": {
     "eps": 12.8,
     "bookValue": 221.18,
-    "peRatio": 36.05,
-    "pbRatio": 2.69,
+    "peRatio": 47.42,
+    "pbRatio": 2.74,
     "sharesOutstanding": 27426837.38,
     "promoterHolding": 51,
     "publicFloat": 49,
@@ -2612,13 +2892,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Nirdhan Utthan Laghubitta Bittiya Sanstha Limited",
-    "roe": 5.79
+    "roe": 5.79,
+    "ratioPrice": 607.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "TSHL": {
     "eps": -6.4007431472081,
     "bookValue": 61.472765482233505,
-    "peRatio": -52.806368296067,
-    "pbRatio": 5.4983698447353,
+    "peRatio": -52.81,
+    "pbRatio": 5.5,
     "sharesOutstanding": 4925000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -2632,7 +2914,9 @@
     "companyName": "Three Star Hydropower Limited",
     "ltp": 338.0,
     "roe": 0.0,
-    "roa": -2.2861394184933
+    "roa": -2.2861394184933,
+    "ratioPrice": 338.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RSDC": {
     "eps": 4.89,
@@ -2650,7 +2934,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "RSDC Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 3.76
+    "roe": 3.76,
+    "ratioPrice": 624.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "PMLI": {
     "eps": 7.08,
@@ -2673,28 +2959,30 @@
   "MKCL": {
     "eps": 0.37821031746032,
     "bookValue": 103.48319708994708,
-    "peRatio": 1969.5390781563,
-    "pbRatio": 7.1982700665164,
+    "peRatio": 1969.54,
+    "pbRatio": 7.2,
     "sharesOutstanding": 7560000.0,
     "promoterHolding": 80,
     "publicFloat": 19.4,
     "high52": 1485.0,
-    "low52": 724.0,
+    "low52": 722.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 454,
     "tradeTurnover": 519330.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Others",
     "companyName": "Muktinath Krishi Company Limited",
-    "ltp": 744.9,
+    "ltp": 722.0,
     "roe": 0.36012948867268,
-    "roa": 0.21502232778339
+    "roa": 0.21502232778339,
+    "ratioPrice": 744.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "CKHL": {
     "eps": 13.25136,
     "bookValue": 100.1947475,
-    "peRatio": 33.053211142102,
-    "pbRatio": 4.3714866390576,
+    "peRatio": 33.05,
+    "pbRatio": 4.37,
     "sharesOutstanding": 4000000.0,
     "promoterHolding": 70,
     "publicFloat": 24.48,
@@ -2703,12 +2991,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1497,
     "tradeTurnover": 875745,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Chirkhwa Hydropower Limited ",
-    "ltp": 438.0,
+    "ltp": 430.0,
     "roe": 14.142742554946,
-    "roa": 4.4565811018998005
+    "roa": 4.4565811018998005,
+    "ratioPrice": 438.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SLBBL": {
     "eps": 34.8,
@@ -2726,7 +3016,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Swarojgar Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 20.33
+    "roe": 20.33,
+    "ratioPrice": 829.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GVL": {
     "eps": 12.94,
@@ -2740,10 +3032,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 14835,
     "tradeTurnover": 7209810,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Green Ventures Limited",
-    "roe": 10.41
+    "roe": 10.41,
+    "ratioPrice": 559.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SLBSL": {
     "eps": 26.66,
@@ -2761,13 +3055,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Samudayik Laghubitta Bittiya Sanstha Limited",
-    "roe": 20.62
+    "roe": 20.62,
+    "ratioPrice": 870.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMB": {
     "eps": 56.82,
     "bookValue": 205.13,
-    "peRatio": 35.61,
-    "pbRatio": 7.96,
+    "peRatio": 30.45,
+    "pbRatio": 8.43,
     "sharesOutstanding": 1340755.77,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -2779,13 +3075,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Support Microfinance Bittiya Sanstha Ltd.",
-    "roe": 27.7
+    "roe": 27.7,
+    "ratioPrice": 1730.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMFBS": {
     "eps": 33.77,
     "bookValue": 197.5,
-    "peRatio": 21.45,
-    "pbRatio": 6.64,
+    "peRatio": 42.05,
+    "pbRatio": 7.19,
     "sharesOutstanding": 1534455.09,
     "promoterHolding": 67.89,
     "publicFloat": 32.11,
@@ -2797,13 +3095,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Swabhimaan Laghubitta Bittiya Sanstha Limited",
-    "roe": 17.1
+    "roe": 17.1,
+    "ratioPrice": 1420.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ENL": {
     "eps": 2.7,
     "bookValue": 110.08,
-    "peRatio": 54.92,
-    "pbRatio": 4.28,
+    "peRatio": 177.78,
+    "pbRatio": 4.36,
     "sharesOutstanding": 5556000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -2812,16 +3112,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 315,
     "tradeTurnover": 253260,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Investment",
     "companyName": "Emerging Nepal Limited",
-    "roe": 2.45
+    "roe": 2.45,
+    "ratioPrice": 480.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ILI": {
     "eps": 11.6848872,
     "bookValue": 135.6619762,
-    "peRatio": 37.91221878462,
-    "pbRatio": 3.2654691639381,
+    "peRatio": 37.91,
+    "pbRatio": 3.27,
     "sharesOutstanding": 50000000.0,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -2830,12 +3132,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2991,
     "tradeTurnover": 1250238,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "IME Life Insurance Company Limited",
-    "ltp": 443.0,
+    "ltp": 440.0,
     "roe": 8.690211140922301,
-    "roa": 2.4719166332918
+    "roa": 2.4719166332918,
+    "ratioPrice": 443.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SWBBL": {
     "eps": 35.41,
@@ -2853,13 +3157,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Swabalamban Laghubitta Bittiya Sanstha Limited",
-    "roe": 14.64
+    "roe": 14.64,
+    "ratioPrice": 724.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "USLB": {
     "eps": 28.02,
     "bookValue": 178.87,
-    "peRatio": 163.5,
-    "pbRatio": 5.44,
+    "peRatio": 35.01,
+    "pbRatio": 5.48,
     "sharesOutstanding": 2468657.36,
     "promoterHolding": 62.41,
     "publicFloat": 37.59,
@@ -2871,7 +3177,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Unnati Sahakarya Laghubitta Bittiya Sanstha Limited",
-    "roe": 15.66
+    "roe": 15.66,
+    "ratioPrice": 981.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "VLBS": {
     "eps": 24.78,
@@ -2889,12 +3197,14 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Vijaya laghubitta Bittiya Sanstha Ltd.",
-    "roe": 14.25
+    "roe": 14.25,
+    "ratioPrice": 624.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "RIDI": {
     "eps": 2.04,
     "bookValue": 102.03,
-    "peRatio": 710.0,
+    "peRatio": 163.58,
     "pbRatio": 3.27,
     "sharesOutstanding": 23233518.0,
     "promoterHolding": 0,
@@ -2907,7 +3217,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Ridi Power Company Limited",
-    "roe": 2.0
+    "roe": 2.0,
+    "ratioPrice": 333.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "HEI": {
     "eps": 13.51,
@@ -2922,10 +3234,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1764,
     "tradeTurnover": 957499.2,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Non-Life Insurance",
     "companyName": "Himalayan Everest Insurance Limited",
-    "roe": 6.32
+    "roe": 6.32,
+    "ratioPrice": 444.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "RFPL": {
     "eps": 2.71,
@@ -2942,7 +3256,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "River Falls Power Limited",
-    "roe": 2.26
+    "roe": 2.26,
+    "ratioPrice": 375.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SALICO": {
     "eps": 11.94,
@@ -2960,7 +3276,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Sagarmatha Lumbini Insurance Co. Limited",
-    "roe": 5.13
+    "roe": 5.13,
+    "ratioPrice": 523.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NICL": {
     "eps": 5.0,
@@ -2978,7 +3296,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Nepal Insurance Co. Ltd.",
-    "roe": 2.83
+    "roe": 2.83,
+    "ratioPrice": 435.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "NIL": {
     "eps": 10.4,
@@ -2996,7 +3316,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Neco Insurance Limited",
-    "roe": 4.6
+    "roe": 4.6,
+    "ratioPrice": 517.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "NLG": {
     "eps": 2.17,
@@ -3014,14 +3336,16 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "NLG Insurance Company Ltd.",
-    "roe": 1.3
+    "roe": 1.3,
+    "ratioPrice": 495.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "DOLTI": {
-    "eps": 0.87,
-    "bookValue": 59.87,
+    "eps": 19.22,
+    "bookValue": 63.67,
     "peRatio": 16.07,
     "pbRatio": 4.85,
-    "sharesOutstanding": 5499860.0,
+    "sharesOutstanding": 5364860.0,
     "promoterHolding": 0,
     "publicFloat": 100,
     "high52": 596.0,
@@ -3029,10 +3353,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11480,
     "tradeTurnover": 3714928,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Dolti Power Company Limited",
-    "roe": 1.45
+    "roe": 30.19,
+    "ratioPrice": 308.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "RBCL": {
     "eps": 129.18,
@@ -3052,7 +3378,9 @@
     "companyName": "Rastriya Beema Company Limited",
     "ltp": 13675.0,
     "roe": 2.02,
-    "roa": 1.3844793528282
+    "roa": 1.3844793528282,
+    "ratioPrice": 14200.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SICL": {
     "eps": 4.19,
@@ -3070,11 +3398,13 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Shikhar Insurance Co. Ltd.",
-    "roe": 2.19
+    "roe": 2.19,
+    "ratioPrice": 532.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "BEDC": {
-    "eps": -1.7,
-    "bookValue": 46.28,
+    "eps": 12.26,
+    "bookValue": 49.35,
     "peRatio": 24.06,
     "pbRatio": 5.98,
     "sharesOutstanding": 5440534.0,
@@ -3085,16 +3415,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 11327,
     "tradeTurnover": 3648426.7,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bhugol Energy Development Company Limited",
-    "roe": -3.66
+    "roe": 24.84,
+    "ratioPrice": 295.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CIT": {
     "eps": 19.84,
     "bookValue": 152.47,
     "peRatio": 86.35,
-    "pbRatio": 5.97,
+    "pbRatio": 11.24,
     "sharesOutstanding": 68057980.0,
     "promoterHolding": 80,
     "publicFloat": 20,
@@ -3103,10 +3435,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2158,
     "tradeTurnover": 3711760,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Investment",
     "companyName": "Citizen Investment Trust",
-    "roe": 13.01
+    "roe": 13.01,
+    "ratioPrice": 1713.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "HIDCL": {
     "eps": 2.73,
@@ -3121,15 +3455,17 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 31898,
     "tradeTurnover": 8293480,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Investment",
     "companyName": "Hydorelectricity Investment and Development Company Ltd",
-    "roe": 2.42
+    "roe": 2.42,
+    "ratioPrice": 251.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "NRIC": {
     "eps": -43.51,
     "bookValue": 109.2,
-    "peRatio": -15.25,
+    "peRatio": -20.34,
     "pbRatio": 8.1,
     "sharesOutstanding": 134221870.78,
     "promoterHolding": 84,
@@ -3142,7 +3478,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Nepal Reinsurance Company Limited",
-    "roe": -39.85
+    "roe": -39.85,
+    "ratioPrice": 885.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BBC": {
     "eps": 0,
@@ -3155,16 +3493,19 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 150,
     "tradeTurnover": 645000,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-15",
     "sector": "Trading",
     "companyName": "Bishal Bazar Company Limited",
-    "pbRatio": 40.16
+    "pbRatio": 40.15,
+    "peRatio": null,
+    "ratioPrice": 4016.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "STC": {
     "eps": 38.83,
     "bookValue": 507.67,
-    "peRatio": 144.58,
-    "pbRatio": 11.07,
+    "peRatio": 145.25,
+    "pbRatio": 11.11,
     "sharesOutstanding": 3527886.51,
     "promoterHolding": 9.67,
     "publicFloat": 78.74,
@@ -3176,7 +3517,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Trading",
     "companyName": "Salt Trading Corporation",
-    "roe": 7.65
+    "roe": 7.65,
+    "ratioPrice": 5640.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NABBC": {
     "eps": 2.28,
@@ -3194,13 +3537,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Development Bank",
     "companyName": "Narayani Development Bank Limited",
-    "roe": 7.64
+    "roe": 7.64,
+    "ratioPrice": 663.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MEN": {
     "eps": 25.52,
     "bookValue": 150.78,
-    "peRatio": 26.66,
-    "pbRatio": 3.98,
+    "peRatio": 22.22,
+    "pbRatio": 3.76,
     "sharesOutstanding": 31232588.5,
     "publicFloat": 100,
     "high52": 683.4,
@@ -3208,10 +3553,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26074,
     "tradeTurnover": 15618326,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mountain Energy Nepal Limited",
-    "roe": 16.93
+    "roe": 16.93,
+    "ratioPrice": 567.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NIFRA": {
     "eps": 3.08,
@@ -3229,13 +3576,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Commercial Bank",
     "companyName": "Nepal Infrastructure Bank Limited",
-    "roe": 2.74
+    "roe": 2.74,
+    "ratioPrice": 246.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "UMRH": {
     "eps": 11.53,
     "bookValue": 112.0,
-    "peRatio": 19.81,
-    "pbRatio": 4.33,
+    "peRatio": 44.56,
+    "pbRatio": 4.59,
     "sharesOutstanding": 4838652.0,
     "publicFloat": 100,
     "high52": 622.0,
@@ -3246,7 +3595,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "United IDI Mardi RB Hydropower Limited.",
-    "roe": 10.29
+    "roe": 10.29,
+    "ratioPrice": 513.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "CGH": {
     "eps": 5.12,
@@ -3260,16 +3611,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12078,
     "tradeTurnover": 9541620,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "Chandragiri Hills Limited",
-    "roe": 4.84
+    "roe": 4.84,
+    "ratioPrice": 728.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MSLB": {
     "eps": 49.88,
     "bookValue": 227.91,
-    "peRatio": 99.91,
-    "pbRatio": 11.06,
+    "peRatio": 23.61,
+    "pbRatio": 5.17,
     "sharesOutstanding": 3874948.66,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -3278,16 +3631,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1042,
     "tradeTurnover": 1255610,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Mahuli Laghubitta Bittiya Sanstha Limited",
-    "roe": 21.89
+    "roe": 21.89,
+    "ratioPrice": 1177.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "VLUCL": {
     "eps": 4.7297103267974,
     "bookValue": 137.71345098039217,
-    "peRatio": 79.687755477238,
-    "pbRatio": 2.7368423150885,
+    "peRatio": 79.69,
+    "pbRatio": 2.74,
     "sharesOutstanding": 19125000.0,
     "promoterHolding": 80,
     "publicFloat": 9.8,
@@ -3301,11 +3656,13 @@
     "companyName": "Vision Lumbini Urja Company Limited ",
     "ltp": 376.9,
     "roe": 3.6163694667539,
-    "roa": 1.3481087425382
+    "roa": 1.3481087425382,
+    "ratioPrice": 376.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "ACLBSL": {
-    "eps": 27.79,
-    "bookValue": 180.9,
+    "eps": -25.67,
+    "bookValue": 175.99,
     "peRatio": -31.85,
     "pbRatio": 4.65,
     "sharesOutstanding": 3671434.09,
@@ -3316,10 +3673,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2420,
     "tradeTurnover": 2241404,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Aarambha Chautari Laghubitta Bittiya Sanstha Limited",
-    "roe": 15.36
+    "roe": -14.59,
+    "ratioPrice": 817.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "NICLBSL": {
     "eps": 7.01,
@@ -3337,7 +3696,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "NIC ASIA Laghubitta Bittiya Sanstha Limited",
-    "roe": 6.51
+    "roe": 6.51,
+    "ratioPrice": 495.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMATA": {
     "eps": 18.04,
@@ -3355,7 +3716,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Samata Gharelu Laghubitta Bittiya Sanstha Limited",
-    "roe": 12.43
+    "roe": 12.43,
+    "ratioPrice": 675.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ULBSL": {
     "eps": 8.78,
@@ -3373,7 +3736,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Upakar Laghubitta Bittiya  Sanstha  Limited",
-    "roe": 3.73
+    "roe": 3.73,
+    "ratioPrice": 2537.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SHEL": {
     "eps": 6.78,
@@ -3391,11 +3756,13 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Singati Hydro Energy Limited",
-    "roe": 6.17
+    "roe": 6.17,
+    "ratioPrice": 304.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "MKJC": {
-    "eps": 0.46,
-    "bookValue": 101.97,
+    "eps": -20.36,
+    "bookValue": 95.77,
     "peRatio": -14.58,
     "pbRatio": 3.1,
     "sharesOutstanding": 3763198.0,
@@ -3406,16 +3773,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3515,
     "tradeTurnover": 1635178,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mailung Khola Jal Vidhyut Company Limited",
-    "roe": 0.45
+    "roe": -21.26,
+    "ratioPrice": 296.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "MLBS": {
-    "eps": 24.66,
-    "bookValue": 103.1,
-    "peRatio": 39.9,
-    "pbRatio": 9.54,
+    "eps": 11.79,
+    "bookValue": 106.53,
+    "peRatio": 83.46,
+    "pbRatio": 9.24,
     "sharesOutstanding": 1093750.0,
     "promoterHolding": 64,
     "publicFloat": 36,
@@ -3424,10 +3793,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 211,
     "tradeTurnover": 247292,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Manushi Laghubitta Bittiya Sanstha Limited",
-    "roe": 23.92
+    "roe": 11.07,
+    "ratioPrice": 984.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "TPC": {
     "eps": 31.85,
@@ -3445,13 +3816,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Terhathum Power Company Limited",
-    "roe": 28.55
+    "roe": 28.55,
+    "ratioPrice": 378.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "SPC": {
     "eps": 3.97,
     "bookValue": 109.88,
-    "peRatio": 11.45,
-    "pbRatio": 3.36,
+    "peRatio": 100.38,
+    "pbRatio": 3.63,
     "sharesOutstanding": 5000000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -3463,7 +3836,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Samling Power Company Limited",
-    "roe": 3.61
+    "roe": 3.61,
+    "ratioPrice": 398.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "NYADI": {
     "eps": 2.7,
@@ -3481,13 +3856,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Nyadi Hydropower Limited",
-    "roe": 3.92
+    "roe": 3.92,
+    "ratioPrice": 340.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MBJC": {
-    "eps": 2.83,
-    "bookValue": 96.25,
-    "peRatio": 116.25,
-    "pbRatio": 3.42,
+    "eps": 13.07,
+    "bookValue": 99.47,
+    "peRatio": 25.17,
+    "pbRatio": 3.31,
     "sharesOutstanding": 60000000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -3496,10 +3873,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 37825,
     "tradeTurnover": 10174925,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Madhya Bhotekoshi Jalavidyut Company Limited",
-    "roe": 2.94
+    "roe": 13.14,
+    "ratioPrice": 329.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BNHC": {
     "eps": 1.49,
@@ -3514,16 +3893,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 15036,
     "tradeTurnover": 4297288.8,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Buddha bhumi nepal hydro power company limited",
-    "roe": 1.49
+    "roe": 1.49,
+    "ratioPrice": 274.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SIKLES": {
     "eps": 14.07,
     "bookValue": 114.13,
-    "peRatio": 21.03,
-    "pbRatio": 4.86,
+    "peRatio": 41.74,
+    "pbRatio": 5.15,
     "sharesOutstanding": 9775000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -3535,7 +3916,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Sikles Hydropower Limited",
-    "roe": 12.33
+    "roe": 12.33,
+    "ratioPrice": 587.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "UAIL": {
     "eps": 2.73,
@@ -3553,7 +3936,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "United Ajod Insurance Limited",
-    "roe": 1.45
+    "roe": 1.45,
+    "ratioPrice": 361.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMHL": {
     "eps": 26.21,
@@ -3571,13 +3956,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Super Madi Hydropower Limited",
-    "roe": 23.9
+    "roe": 23.9,
+    "ratioPrice": 489.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "UNLB": {
     "eps": 34.39,
     "bookValue": 247.59,
-    "peRatio": 53.89,
-    "pbRatio": 4.85,
+    "peRatio": 35.73,
+    "pbRatio": 4.96,
     "sharesOutstanding": 1485750.0,
     "promoterHolding": 52,
     "publicFloat": 48,
@@ -3589,7 +3976,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Unique Nepal Laghubitta Bittiya Sanstha Limited",
-    "roe": 13.89
+    "roe": 13.89,
+    "ratioPrice": 1228.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "KBL": {
     "eps": 16.39,
@@ -3604,10 +3993,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 259920,
     "tradeTurnover": 57442320,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Kumari Bank Limited",
-    "roe": 9.51
+    "roe": 9.51,
+    "ratioPrice": 230.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "KBSH": {
     "eps": 12.16,
@@ -3622,10 +4013,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 25843,
     "tradeTurnover": 24421635,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Kutheli Bukhari Small Hydropower Limited",
-    "roe": 9.25
+    "roe": 9.25,
+    "ratioPrice": 905.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SPL": {
     "eps": 3.58,
@@ -3643,7 +4036,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Shuvam Power Limited",
-    "roe": 3.42
+    "roe": 3.42,
+    "ratioPrice": 576.7,
+    "ratioPriceDate": "2026-11-06"
   },
   "SJLIC": {
     "eps": 7.59,
@@ -3664,10 +4059,10 @@
     "roe": 6.18
   },
   "MHCL": {
-    "eps": 7.19,
-    "bookValue": 87.28,
-    "peRatio": 39.43,
-    "pbRatio": 3.25,
+    "eps": 21.18,
+    "bookValue": 92.24,
+    "peRatio": 13.39,
+    "pbRatio": 3.07,
     "sharesOutstanding": 8025000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -3676,10 +4071,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2486,
     "tradeTurnover": 780852.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Molung Hydropower Company Limited",
-    "roe": 8.24
+    "roe": 22.96,
+    "ratioPrice": 283.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "PRIN": {
     "eps": 13.33,
@@ -3697,7 +4094,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Prabhu Insurance Limited",
-    "roe": 6.91
+    "roe": 6.91,
+    "ratioPrice": 585.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "SPIL": {
     "eps": 11.65,
@@ -3715,7 +4114,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Siddhartha Premier Insurance Limited",
-    "roe": 4.47
+    "roe": 4.47,
+    "ratioPrice": 607.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MCHL": {
     "eps": -1.03,
@@ -3730,10 +4131,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4227,
     "tradeTurnover": 1197509.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Menchhiyam Hydropower Limited",
-    "roe": 4.03
+    "roe": 4.03,
+    "ratioPrice": 257.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "IGI": {
     "eps": 0.13,
@@ -3748,10 +4151,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2536,
     "tradeTurnover": 1118376,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Non-Life Insurance",
     "companyName": "IGI Prudential insurance Limited",
-    "roe": 0.07
+    "roe": 0.07,
+    "ratioPrice": 389.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "NADEP": {
     "eps": 29.52,
@@ -3769,7 +4174,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Nadep Laghubittiya bittya Sanstha Ltd.",
-    "roe": 15.35
+    "roe": 15.35,
+    "ratioPrice": 676.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMFBS": {
     "eps": 50.09,
@@ -3787,7 +4194,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "National  Laghubitta Bittiya Sanstha Limited",
-    "roe": 17.19
+    "roe": 17.19,
+    "ratioPrice": 1192.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "TAMOR": {
     "eps": 51.57,
@@ -3820,10 +4229,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 375094,
     "tradeTurnover": 96361648.6,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Global IME Bank Limited",
-    "roe": 13.28
+    "roe": 13.28,
+    "ratioPrice": 266.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MKHC": {
     "eps": 25.52,
@@ -3838,16 +4249,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 7635,
     "tradeTurnover": 2214913.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Maya Khola Hydropower Company Limited",
-    "roe": 37.68
+    "roe": 37.68,
+    "ratioPrice": 270.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "NRM": {
     "eps": -3.1752640826873,
     "bookValue": 85.63204754521963,
-    "peRatio": -94.480330513518,
-    "pbRatio": 3.5033612835379,
+    "peRatio": -94.48,
+    "pbRatio": 3.5,
     "sharesOutstanding": 9675000.0,
     "publicFloat": 100,
     "high52": 470.0,
@@ -3860,13 +4273,15 @@
     "companyName": "Nepal Republic Media Limited",
     "ltp": 300.0,
     "roe": 0.0,
-    "roa": -2.555234066944
+    "roa": -2.555234066944,
+    "ratioPrice": 300.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "KDL": {
     "eps": 9.16,
     "bookValue": 109.21,
-    "peRatio": -185.2,
-    "pbRatio": 4.62,
+    "peRatio": 54.39,
+    "pbRatio": 4.56,
     "sharesOutstanding": 6300000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -3875,10 +4290,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3243,
     "tradeTurnover": 2542512,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "KALINCHOWK DARSHAN LIMITED ",
-    "roe": 8.38
+    "roe": 8.38,
+    "ratioPrice": 498.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMH": {
     "eps": 9.42,
@@ -3896,13 +4313,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Super Mai Hydropower Limited",
-    "roe": 7.19
+    "roe": 7.19,
+    "ratioPrice": 565.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "AHL": {
     "eps": -17.41,
     "bookValue": 68.43,
-    "peRatio": 9.53,
-    "pbRatio": 4.89,
+    "peRatio": -21.83,
+    "pbRatio": 5.55,
     "sharesOutstanding": 3400000.0,
     "publicFloat": 100,
     "high52": 699.0,
@@ -3910,10 +4329,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2839,
     "tradeTurnover": 1183863,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Asian Hydropower Limited",
-    "roe": -25.44
+    "roe": -25.44,
+    "ratioPrice": 380.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SGIC": {
     "eps": 5.76,
@@ -3931,13 +4352,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Non-Life Insurance",
     "companyName": "Sanima GIC Insurance Limited",
-    "roe": 3.91
+    "roe": 3.91,
+    "ratioPrice": 387.4,
+    "ratioPriceDate": "2026-11-06"
   },
   "HIMSTAR": {
     "eps": -29.71772386059,
     "bookValue": 68.13805898123324,
-    "peRatio": -20.028451801765,
-    "pbRatio": 8.735206269435,
+    "peRatio": -20.03,
+    "pbRatio": 8.74,
     "sharesOutstanding": 3730000.0,
     "promoterHolding": 70,
     "publicFloat": 29.5,
@@ -3946,12 +4369,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 4500,
     "tradeTurnover": 3343050,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Him Star Urja Company Limited",
-    "ltp": 595.2,
+    "ltp": 595.5,
     "roe": 0.0,
-    "roa": -8.370593387844199
+    "roa": -8.370593387844199,
+    "ratioPrice": 595.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "EHPL": {
     "eps": 13.53,
@@ -3965,10 +4390,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5950,
     "tradeTurnover": 2045610,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Eastern Hydropower Limited",
-    "roe": 16.96
+    "roe": 16.96,
+    "ratioPrice": 325.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SHLB": {
     "eps": 30.81,
@@ -3986,7 +4413,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Shrijanshil Laghubitta Baittiya sanstha Limited",
-    "roe": 10.68
+    "roe": 10.68,
+    "ratioPrice": 1293.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "PHCL": {
     "eps": 2.23,
@@ -4003,13 +4432,15 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Peoples Hydropower Company Limited",
-    "roe": 2.18
+    "roe": 2.18,
+    "ratioPrice": 354.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "BHPL": {
-    "eps": -0.3,
-    "bookValue": 50.03,
-    "peRatio": -1430.0,
-    "pbRatio": 8.57,
+    "eps": 10.37,
+    "bookValue": 50.38,
+    "peRatio": 41.37,
+    "pbRatio": 8.52,
     "sharesOutstanding": 2500000.0,
     "publicFloat": 100,
     "high52": 789.0,
@@ -4017,10 +4448,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5072,
     "tradeTurnover": 2394491.2,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Barahi Hydropower Public Limited",
-    "roe": -0.59
+    "roe": 20.58,
+    "ratioPrice": 429.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MAKAR": {
     "eps": 33.68,
@@ -4035,10 +4468,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 70620,
     "tradeTurnover": 31072800,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Makar Jitumaya Suri Hydropower Limited",
-    "roe": 27.48
+    "roe": 27.48,
+    "ratioPrice": 454.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "SRLI": {
     "eps": 7.65,
@@ -4056,11 +4491,13 @@
     "capturedAt": "2026-11-07",
     "sector": "Life Insurance",
     "companyName": "Sanima Reliance Life Insurance Limited",
-    "roe": 6.8
+    "roe": 6.8,
+    "ratioPrice": 378.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "MKHL": {
-    "eps": 13.83,
-    "bookValue": 114.34,
+    "eps": 3.26,
+    "bookValue": 115.15,
     "peRatio": 158.25,
     "pbRatio": 4.48,
     "sharesOutstanding": 3921568.0,
@@ -4071,16 +4508,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3608,
     "tradeTurnover": 1854512,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mai Khola Hydropower Limited",
-    "roe": 12.1
+    "roe": 2.83,
+    "ratioPrice": 515.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "SMJC": {
     "eps": 3.78,
     "bookValue": 109.59,
-    "peRatio": 78.88,
-    "pbRatio": 3.8,
+    "peRatio": 111.64,
+    "pbRatio": 3.85,
     "sharesOutstanding": 11732000.0,
     "promoterHolding": 0,
     "publicFloat": 100,
@@ -4092,7 +4531,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Sagarmatha Jalabidhyut Company Limited",
-    "roe": 3.45
+    "roe": 3.45,
+    "ratioPrice": 422.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMLBBL": {
     "eps": -8.01,
@@ -4110,7 +4551,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Microfinance",
     "companyName": "Nerude Mirmire Laghubitta Bittiya Sanstha Limited",
-    "roe": -4.35
+    "roe": -4.35,
+    "ratioPrice": 485.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ANLB": {
     "eps": 95.37,
@@ -4125,10 +4568,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2167,
     "tradeTurnover": 12260886,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Aatmanirbhar Laghubitta Bittitya Sanstha Limited",
-    "roe": 24.98
+    "roe": 24.98,
+    "ratioPrice": 4899.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "CITY": {
     "eps": -5.74,
@@ -4143,10 +4588,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 69469,
     "tradeTurnover": 25703530,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "CITY HOTEL LIMITED ",
-    "roe": -5.98
+    "roe": -5.98,
+    "ratioPrice": 321.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "IHL": {
     "eps": 5.02,
@@ -4161,10 +4608,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 5569,
     "tradeTurnover": 1949150,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Ingwa Hydropower Limited",
-    "roe": 5.51
+    "roe": 5.51,
+    "ratioPrice": 317.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HLI": {
     "eps": 3.48,
@@ -4179,10 +4628,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13570,
     "tradeTurnover": 4421106,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Himalayan Life Insurance Limited",
-    "roe": 3.72
+    "roe": 3.72,
+    "ratioPrice": 303.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CYCL": {
     "eps": 110.66,
@@ -4197,10 +4648,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 636,
     "tradeTurnover": 843972,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "CYC Nepal Laghubitta Bittiya Sanstha Limited",
-    "roe": 30.93
+    "roe": 30.93,
+    "ratioPrice": 1362.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MEL": {
     "eps": 2.18,
@@ -4215,10 +4668,12 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 22057,
     "tradeTurnover": 4806220.3,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Modi Energy Limited",
-    "roe": 3.71
+    "roe": 3.71,
+    "ratioPrice": 211.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RAWA": {
     "eps": 11.17,
@@ -4235,7 +4690,9 @@
     "capturedAt": "2026-11-07",
     "sector": "Hydropower",
     "companyName": "Rawa Energy Development Limited",
-    "roe": 12.93
+    "roe": 12.93,
+    "ratioPrice": 407.6,
+    "ratioPriceDate": "2026-11-06"
   },
   "LSL": {
     "eps": 9.76,
@@ -4250,16 +4707,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 191885,
     "tradeTurnover": 43845722.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Commercial Bank",
     "companyName": "Laxmi Sunrise Bank Limited",
-    "roe": 5.48
+    "roe": 5.48,
+    "ratioPrice": 274.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "RNLI": {
     "eps": 11.210800300185,
     "bookValue": 148.4886972752463,
-    "peRatio": 39.783065263649,
-    "pbRatio": 3.0035956149124,
+    "peRatio": 39.78,
+    "pbRatio": 3.0,
     "sharesOutstanding": 51968000.0,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -4273,13 +4732,15 @@
     "companyName": "Reliable Nepal Life Insurance Limited",
     "ltp": 446.0,
     "roe": 7.560678705386,
-    "roa": 2.4419340098101
+    "roa": 2.4419340098101,
+    "ratioPrice": 446.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "ULHC": {
     "eps": -3.8385379479172,
     "bookValue": 88.04352849330331,
-    "peRatio": -83.365073979178,
-    "pbRatio": 3.6345658275649,
+    "peRatio": -83.37,
+    "pbRatio": 3.63,
     "sharesOutstanding": 5098040.0,
     "promoterHolding": 51,
     "publicFloat": 44.16,
@@ -4293,13 +4754,15 @@
     "companyName": "Upper Lohore Khola Hydropower Company Limited",
     "ltp": 320.0,
     "roe": 0.0,
-    "roa": -1.5995149720403001
+    "roa": -1.5995149720403001,
+    "ratioPrice": 320.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MEHL": {
     "eps": 1.53881625,
     "bookValue": 64.09915875,
-    "peRatio": 157.84860603077,
-    "pbRatio": 3.7894413083853,
+    "peRatio": 157.85,
+    "pbRatio": 3.79,
     "sharesOutstanding": 8000000.0,
     "promoterHolding": 65,
     "publicFloat": 32.21,
@@ -4308,12 +4771,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2393,
     "tradeTurnover": 734651,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Manakamana Engineering Hydropower Limited",
-    "ltp": 242.9,
+    "ltp": 243.5,
     "roe": 2.3930948031532,
-    "roa": 0.95791909525534
+    "roa": 0.95791909525534,
+    "ratioPrice": 242.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "HATHY": {
     "eps": 0.6,
@@ -4328,16 +4793,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3382,
     "tradeTurnover": 2455332,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Investment",
     "companyName": "Hathway Investment Nepal Limited",
-    "roe": 0.87
+    "roe": 0.87,
+    "ratioPrice": 405.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MANDU": {
     "eps": 32.358671565953,
     "bookValue": 151.19952544022146,
-    "peRatio": 25.340966124913,
-    "pbRatio": 5.4232974449659,
+    "peRatio": 25.34,
+    "pbRatio": 5.42,
     "sharesOutstanding": 15000007.0,
     "promoterHolding": 88,
     "publicFloat": 10.37,
@@ -4346,12 +4813,14 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3558,
     "tradeTurnover": 2935350,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mandu Hydropower Limited",
-    "ltp": 820.0,
+    "ltp": 825.9,
     "roe": 22.684565835209,
-    "roa": 9.2065381364835
+    "roa": 9.2065381364835,
+    "ratioPrice": 820.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BGWT": {
     "eps": 14.48,
@@ -4366,16 +4835,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1588,
     "tradeTurnover": 948036,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bhagawati Hydropower Development Company Limited",
-    "roe": 12.38
+    "roe": 12.38,
+    "ratioPrice": 503.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MSHL": {
-    "eps": 14.546126228708,
-    "bookValue": 118.26484442172287,
-    "peRatio": 37.810753966546,
-    "pbRatio": 4.6505789838843,
+    "eps": 16.363999721144,
+    "bookValue": 124.8932877094323,
+    "peRatio": 33.61,
+    "pbRatio": 4.4,
     "sharesOutstanding": 8606600.0,
     "promoterHolding": 80,
     "publicFloat": 9.8,
@@ -4384,18 +4855,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 443,
     "tradeTurnover": 269919.9,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mid Solu Hydropower Limited",
     "ltp": 550.0,
-    "roe": 12.948676158236,
-    "roa": 5.6660860113108
+    "roe": 14.056357936682002,
+    "roa": 6.3519584634133,
+    "ratioPrice": 550.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MMKJL": {
     "eps": 4.194922,
     "bookValue": 99.721941,
-    "peRatio": 92.898032430639,
-    "pbRatio": 3.9078661736037,
+    "peRatio": 92.25,
+    "pbRatio": 3.88,
     "sharesOutstanding": 10000000.0,
     "promoterHolding": 70,
     "publicFloat": 15.09,
@@ -4404,18 +4877,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 2585,
     "tradeTurnover": 1245970,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Mathillo Mailun Khola Jalvidhyut Limited",
-    "ltp": 389.7,
+    "ltp": 387.0,
     "roe": 4.2647913517004,
-    "roa": 0.47616790023950006
+    "roa": 0.47616790023950006,
+    "ratioPrice": 387.0,
+    "ratioPriceDate": "2026-11-14"
   },
   "TVCL": {
     "eps": -7.3584898035856,
     "bookValue": 76.11812590980753,
-    "peRatio": -39.002568143827,
-    "pbRatio": 3.770455414786,
+    "peRatio": -39.0,
+    "pbRatio": 3.77,
     "sharesOutstanding": 17891627.7,
     "publicFloat": 100,
     "high52": 676.0,
@@ -4428,13 +4903,15 @@
     "companyName": "Trishuli Jal Vidhyut Company Limited ",
     "ltp": 287.0,
     "roe": 0.0,
-    "roa": -1.7227278579568999
+    "roa": -1.7227278579568999,
+    "ratioPrice": 287.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MATRI": {
     "eps": 45.128694274946,
     "bookValue": 145.4230585969068,
-    "peRatio": 15.728352246922,
-    "pbRatio": 4.880931585736,
+    "peRatio": 15.73,
+    "pbRatio": 4.88,
     "sharesOutstanding": 6283574.0,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -4443,38 +4920,42 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1193,
     "tradeTurnover": 978260,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Matribhumi Lagubitta Bittiya Sanstha Limited",
-    "ltp": 709.8,
+    "ltp": 701.0,
     "roe": 29.460349628832,
-    "roa": 2.2797622580758
+    "roa": 2.2797622580758,
+    "ratioPrice": 709.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "GMLI": {
     "eps": 2.1424733333333,
     "bookValue": 107.28199066666667,
-    "peRatio": 413.54073640746,
-    "pbRatio": 8.2586088726937,
+    "peRatio": 413.54,
+    "pbRatio": 8.26,
     "sharesOutstanding": 7500000.0,
     "promoterHolding": 70,
     "publicFloat": 30,
     "high52": 1929.9,
-    "low52": 886.0,
+    "low52": 883.1,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 1060,
     "tradeTurnover": 1224300,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Guardian Micro Life Insurance Limited ",
-    "ltp": 886.0,
+    "ltp": 883.1,
     "roe": 2.0019976731174003,
-    "roa": 1.4126116559952
+    "roa": 1.4126116559952,
+    "ratioPrice": 886.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "NMIC": {
     "eps": 5.6813333333333,
     "bookValue": 106.35853333333333,
-    "peRatio": 136.41164045999,
-    "pbRatio": 7.2866743806172,
+    "peRatio": 136.41,
+    "pbRatio": 7.29,
     "sharesOutstanding": 7500000.0,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -4488,13 +4969,15 @@
     "companyName": "Nepal Micro Insurance Company Limited",
     "ltp": 775.0,
     "roe": 5.5166494746843,
-    "roa": 3.7443986353608003
+    "roa": 3.7443986353608003,
+    "ratioPrice": 775.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "CREST": {
     "eps": 0.336856,
     "bookValue": 105.08859333333334,
-    "peRatio": 3538.6040325837,
-    "pbRatio": 11.342810501032,
+    "peRatio": 3538.6,
+    "pbRatio": 11.34,
     "sharesOutstanding": 7500000.0,
     "promoterHolding": 70,
     "publicFloat": 30,
@@ -4503,18 +4986,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 9303,
     "tradeTurnover": 11160809.1,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Life Insurance",
     "companyName": "Crest Micro Life Insurance Limited",
-    "ltp": 1192.0,
+    "ltp": 1078.0,
     "roe": 0.31064213613272,
-    "roa": 0.21733454412307998
+    "roa": 0.21733454412307998,
+    "ratioPrice": 1192.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "OMPL": {
     "eps": -6.2928366666667,
     "bookValue": 98.03981,
-    "peRatio": -127.11278591372,
-    "pbRatio": 8.1589305405631,
+    "peRatio": -127.11,
+    "pbRatio": 8.16,
     "sharesOutstanding": 6000000.0,
     "promoterHolding": 70,
     "publicFloat": 29.1,
@@ -4528,13 +5013,15 @@
     "companyName": "Om Megashree Pharmaceuticals Limited",
     "ltp": 799.9,
     "roe": 0.0,
-    "roa": -2.5314004820899
+    "roa": -2.5314004820899,
+    "ratioPrice": 799.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "PURE": {
     "eps": 3.16271875,
     "bookValue": 103.64245625,
-    "peRatio": 233.97591075716,
-    "pbRatio": 7.1399311322284,
+    "peRatio": 233.98,
+    "pbRatio": 7.14,
     "sharesOutstanding": 8000000.0,
     "promoterHolding": 80,
     "publicFloat": 20,
@@ -4548,13 +5035,15 @@
     "companyName": "Pure Energy Limited",
     "ltp": 740.0,
     "roe": 3.0515667656227,
-    "roa": 1.0858917291679
+    "roa": 1.0858917291679,
+    "ratioPrice": 740.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "TTL": {
     "eps": 0.90519031345508,
     "bookValue": 105.20196240922589,
-    "peRatio": 681.62461620356,
-    "pbRatio": 5.8649096069131,
+    "peRatio": 681.62,
+    "pbRatio": 5.86,
     "sharesOutstanding": 8156097.0,
     "promoterHolding": 51.3,
     "publicFloat": 47.73,
@@ -4568,13 +5057,15 @@
     "companyName": "Trade Tower Limited",
     "ltp": 617.0,
     "roe": 0.86043101547286,
-    "roa": 0.5403168365859601
+    "roa": 0.5403168365859601,
+    "ratioPrice": 617.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SANVI": {
     "eps": -7.7167340909091,
     "bookValue": 106.20919204545454,
-    "peRatio": -62.656040016929,
-    "pbRatio": 4.5523366733935,
+    "peRatio": -62.66,
+    "pbRatio": 4.55,
     "sharesOutstanding": 8800000.0,
     "promoterHolding": 56.93,
     "publicFloat": 42.41,
@@ -4588,33 +5079,37 @@
     "companyName": "Sanvi Energy Limited",
     "ltp": 483.5,
     "roe": 0.0,
-    "roa": -2.481615871038
+    "roa": -2.481615871038,
+    "ratioPrice": 483.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "DHEL": {
     "eps": -9.8803561377972,
     "bookValue": 118.13810965550704,
-    "peRatio": -51.415150720798,
-    "pbRatio": 4.300051875566,
+    "peRatio": -51.42,
+    "pbRatio": 4.3,
     "sharesOutstanding": 10305000.0,
     "promoterHolding": 61.67,
     "publicFloat": 26.91,
     "high52": 851.0,
-    "low52": 442.4,
+    "low52": 499.0,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 18392,
     "tradeTurnover": 10980024,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Daramkhola Hydro Energy Limited",
-    "ltp": 508.0,
+    "ltp": 499.0,
     "roe": 0.0,
-    "roa": -3.5288951718109
+    "roa": -3.5288951718109,
+    "ratioPrice": 508.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SAGAR": {
     "eps": -7.8883829201102,
     "bookValue": 119.96296694214875,
-    "peRatio": -190.78688436425,
-    "pbRatio": 12.54553833039,
+    "peRatio": -190.79,
+    "pbRatio": 12.55,
     "sharesOutstanding": 7260000.0,
     "promoterHolding": 80,
     "publicFloat": 20,
@@ -4628,53 +5123,59 @@
     "companyName": "Sagar Distillery Limited",
     "ltp": 1505.0,
     "roe": 0.0,
-    "roa": -3.7233637076533004
+    "roa": -3.7233637076533004,
+    "ratioPrice": 1505.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BUNGAL": {
     "eps": 23.303344578313,
     "bookValue": 87.23566987951807,
-    "peRatio": 19.658122397861,
-    "pbRatio": 5.251292282534,
+    "peRatio": 19.66,
+    "pbRatio": 5.25,
     "sharesOutstanding": 8300000.0,
     "promoterHolding": 65,
     "publicFloat": 24.25,
     "high52": 888.0,
-    "low52": 332.6,
+    "low52": 442.5,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 26811,
     "tradeTurnover": 15898923,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bungal Hydro Limited",
-    "ltp": 458.1,
+    "ltp": 458.0,
     "roe": 26.713091801207,
-    "roa": 6.4858651955151005
+    "roa": 6.4858651955151005,
+    "ratioPrice": 458.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "BANDIPUR": {
     "eps": -0.48236713780919,
     "bookValue": 91.41470318021202,
-    "peRatio": -1146.4296728662,
-    "pbRatio": 6.0493550901744,
+    "peRatio": -1146.43,
+    "pbRatio": 6.05,
     "sharesOutstanding": 28300000.0,
     "promoterHolding": 79.29,
     "publicFloat": 18.15,
     "high52": 1165.0,
-    "low52": 313.5,
+    "low52": 379.2,
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 13665,
     "tradeTurnover": 9868863,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "Bandipur Cablecar and Tourism Limited",
-    "ltp": 553.0,
+    "ltp": 553.9,
     "roe": 0.0,
-    "roa": -0.35180275074594
+    "roa": -0.35180275074594,
+    "ratioPrice": 553.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SWASTIK": {
     "eps": 21.110458874459,
     "bookValue": 146.61116883116884,
-    "peRatio": 79.107707223763,
-    "pbRatio": 11.390673802779,
+    "peRatio": 79.11,
+    "pbRatio": 11.39,
     "sharesOutstanding": 577500.0,
     "promoterHolding": 60,
     "publicFloat": 40,
@@ -4688,13 +5189,15 @@
     "companyName": "Swastik Laghubitta Bittiya Sanstha Limited",
     "ltp": 1670.0,
     "roe": 14.398943165624999,
-    "roa": 1.5559292148686
+    "roa": 1.5559292148686,
+    "ratioPrice": 1670.0,
+    "ratioPriceDate": "2026-11-07"
   },
   "JHAPA": {
     "eps": 3.855230279597,
     "bookValue": 101.94350719377154,
-    "peRatio": 235.26480501051,
-    "pbRatio": 8.8970845222738,
+    "peRatio": 235.26,
+    "pbRatio": 8.9,
     "sharesOutstanding": 3801900.0,
     "promoterHolding": 75,
     "publicFloat": 14.7,
@@ -4703,18 +5206,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3628,
     "tradeTurnover": 4117417.2,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Jhapa Energy Limited",
-    "ltp": 907.0,
+    "ltp": 905.0,
     "roe": 3.7817320452485004,
-    "roa": 1.7489309466882998
+    "roa": 1.7489309466882998,
+    "ratioPrice": 907.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SAIL": {
     "eps": 1.0932855172414,
     "bookValue": 108.22760582375479,
-    "peRatio": 825.03608231813,
-    "pbRatio": 8.3342876628807,
+    "peRatio": 825.04,
+    "pbRatio": 8.33,
     "sharesOutstanding": 16312500.0,
     "promoterHolding": 80,
     "publicFloat": 9.24,
@@ -4728,13 +5233,15 @@
     "companyName": "Shreenagar Agritech Industries Limited",
     "ltp": 902.0,
     "roe": 1.0101725053604,
-    "roa": 0.5837476428992
+    "roa": 0.5837476428992,
+    "ratioPrice": 902.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SYPNL": {
     "eps": 5.1612701757331,
     "bookValue": 111.7837220578791,
-    "peRatio": 247.03221427832,
-    "pbRatio": 11.405954073884,
+    "peRatio": 247.03,
+    "pbRatio": 11.41,
     "sharesOutstanding": 13081371.0,
     "promoterHolding": 60,
     "publicFloat": 36.86,
@@ -4748,7 +5255,9 @@
     "companyName": "SY Panel Nepal Limited",
     "ltp": 1275.0,
     "roe": 4.6171929872408,
-    "roa": 3.8924132247809005
+    "roa": 3.8924132247809005,
+    "ratioPrice": 1275.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "GBLBS": {
     "eps": 12.16,
@@ -4763,16 +5272,18 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 3675,
     "tradeTurnover": 2755882.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Microfinance",
     "companyName": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd.",
-    "roe": 4.15
+    "roe": 4.15,
+    "ratioPrice": 641.3,
+    "ratioPriceDate": "2026-11-06"
   },
   "SABBL": {
     "eps": -13.344831810838,
     "bookValue": 98.82777169460248,
-    "peRatio": -59.573624551367,
-    "pbRatio": 8.0442975326481,
+    "peRatio": -59.57,
+    "pbRatio": 8.04,
     "sharesOutstanding": 5223880.0,
     "promoterHolding": 67,
     "publicFloat": 33,
@@ -4786,13 +5297,15 @@
     "companyName": "Salapa Bikas Bank Limited",
     "ltp": 795.0,
     "roe": 0.0,
-    "roa": -3.2358841795041995
+    "roa": -3.2358841795041995,
+    "ratioPrice": 795.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RSML": {
     "eps": 21.001561578947,
     "bookValue": 503.3209052631579,
-    "peRatio": 127.08578788139,
-    "pbRatio": 5.3027799403733,
+    "peRatio": 127.09,
+    "pbRatio": 5.3,
     "sharesOutstanding": 19000000.0,
     "promoterHolding": 89.86,
     "publicFloat": 5.78,
@@ -4806,13 +5319,15 @@
     "companyName": "Reliance Spinning Mills Limited",
     "ltp": 2669.0,
     "roe": 4.1725987057833,
-    "roa": 2.8515442413296
+    "roa": 2.8515442413296,
+    "ratioPrice": 2669.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "HFIN": {
     "eps": -12.2284305,
     "bookValue": 107.281695,
-    "peRatio": -42.106793672336,
-    "pbRatio": 4.7995140270668,
+    "peRatio": -42.11,
+    "pbRatio": 4.8,
     "sharesOutstanding": 20000000.0,
     "promoterHolding": 80,
     "publicFloat": 18.6,
@@ -4821,18 +5336,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 30571,
     "tradeTurnover": 21919407,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hotels & Tourism",
     "companyName": "Hotel Forest Inn Limited",
-    "ltp": 514.9,
+    "ltp": 513.0,
     "roe": 0.0,
-    "roa": -5.555129201326
+    "roa": -5.555129201326,
+    "ratioPrice": 514.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "SOHL": {
     "eps": 11.1387958,
     "bookValue": 138.0438772,
-    "peRatio": 56.379523538801,
-    "pbRatio": 4.5492781913836,
+    "peRatio": 56.38,
+    "pbRatio": 4.55,
     "sharesOutstanding": 100000000.0,
     "promoterHolding": 80,
     "publicFloat": 9.7,
@@ -4846,13 +5363,15 @@
     "companyName": "Solu Hydropower Limited",
     "ltp": 628.0,
     "roe": 8.0690256068815,
-    "roa": 4.291894848693801
+    "roa": 4.291894848693801,
+    "ratioPrice": 628.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "BJHL": {
     "eps": -2.599236,
     "bookValue": 88.949463,
-    "peRatio": -209.67699739462,
-    "pbRatio": 6.1270746513669,
+    "peRatio": -209.68,
+    "pbRatio": 6.13,
     "sharesOutstanding": 10000000.0,
     "promoterHolding": 80,
     "publicFloat": 9.3,
@@ -4861,18 +5380,20 @@
     "lastTradeDate": "2026-07-29",
     "tradeVolume": 12305,
     "tradeTurnover": 8914972.5,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Hydropower",
     "companyName": "Bhujung Hydropower Limited",
-    "ltp": 545.0,
+    "ltp": 553.0,
     "roe": 0.0,
-    "roa": -1.426479618294
+    "roa": -1.426479618294,
+    "ratioPrice": 545.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SKHL": {
     "eps": 19.095258709677,
     "bookValue": 145.2883929032258,
-    "peRatio": 36.344100415267,
-    "pbRatio": 4.776706425972,
+    "peRatio": 36.34,
+    "pbRatio": 4.78,
     "sharesOutstanding": 15500000.0,
     "promoterHolding": 80,
     "publicFloat": 9.3,
@@ -4886,13 +5407,15 @@
     "companyName": "Super Khudi Hydropower Limited",
     "ltp": 694.0,
     "roe": 13.143003600017,
-    "roa": 4.6264624237982
+    "roa": 4.6264624237982,
+    "ratioPrice": 694.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "RLEL": {
     "eps": 12.235632067511,
     "bookValue": 129.20475611814345,
-    "peRatio": 50.679850176808,
-    "pbRatio": 4.7993589294267,
+    "peRatio": 50.68,
+    "pbRatio": 4.8,
     "sharesOutstanding": 11850000.0,
     "promoterHolding": 78,
     "publicFloat": 11.16,
@@ -4906,13 +5429,15 @@
     "companyName": "Ridge Line Energy Limited",
     "ltp": 620.1,
     "roe": 9.46995484928,
-    "roa": 5.435185392156701
+    "roa": 5.435185392156701,
+    "ratioPrice": 620.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "SKHEL": {
     "eps": -4.8125869250765,
     "bookValue": 90.38181640495863,
-    "peRatio": -158.7919370387,
-    "pbRatio": 8.4552405605125,
+    "peRatio": -158.79,
+    "pbRatio": 8.46,
     "sharesOutstanding": 6896744.0,
     "promoterHolding": 80,
     "publicFloat": 9.3,
@@ -4926,13 +5451,15 @@
     "companyName": "Suryakunda Hydro Electric Limited",
     "ltp": 764.2,
     "roe": 0.0,
-    "roa": -1.350333362224
+    "roa": -1.350333362224,
+    "ratioPrice": 764.2,
+    "ratioPriceDate": "2026-11-06"
   },
   "SIPD": {
     "eps": -7.7331020408163,
     "bookValue": 93.71789693877551,
-    "peRatio": -64.398477786985,
-    "pbRatio": 5.3138196253522,
+    "peRatio": -64.4,
+    "pbRatio": 5.31,
     "sharesOutstanding": 9800000.0,
     "promoterHolding": 67.35,
     "publicFloat": 21.06,
@@ -4946,13 +5473,15 @@
     "companyName": "Shikhar power Development Limited",
     "ltp": 498.0,
     "roe": 0.0,
-    "roa": -4.7630917096276
+    "roa": -4.7630917096276,
+    "ratioPrice": 498.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "PCIL": {
     "eps": 1.0664712,
     "bookValue": 129.15350853333334,
-    "peRatio": 568.2291279877,
-    "pbRatio": 4.6920908837998,
+    "peRatio": 568.23,
+    "pbRatio": 4.69,
     "sharesOutstanding": 37500000.0,
     "promoterHolding": 80,
     "publicFloat": 13.5,
@@ -4966,13 +5495,15 @@
     "companyName": "Palpa Cement Industries Limited",
     "ltp": 606.0,
     "roe": 0.8257392401575799,
-    "roa": 0.38771067333354003
+    "roa": 0.38771067333354003,
+    "ratioPrice": 606.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SAPIL": {
     "eps": 4.5863262032086,
     "bookValue": 101.90483689839573,
-    "peRatio": 235.24275252057,
-    "pbRatio": 10.587328657183,
+    "peRatio": 235.24,
+    "pbRatio": 10.59,
     "sharesOutstanding": 3740000.0,
     "promoterHolding": 75.0,
     "publicFloat": 23.25,
@@ -4981,12 +5512,14 @@
     "lastTradeDate": "2026-09-11",
     "tradeVolume": 53992,
     "tradeTurnover": 71141539.3,
-    "capturedAt": "2026-11-07",
+    "capturedAt": "2026-11-14",
     "sector": "Manufacturing",
     "companyName": "Sarvottam Paints Industries Limited",
-    "ltp": 1078.9,
+    "ltp": 1025.5,
     "roe": 4.5005971677099,
-    "roa": 3.5813567157699
+    "roa": 3.5813567157699,
+    "ratioPrice": 1078.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "ACLBSLP": {
     "high52": 613.0,
@@ -5013,7 +5546,9 @@
     "eps": 1.34,
     "bookValue": 126.13,
     "roe": 1.07,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 1180.0,
+    "ratioPriceDate": "2023-06-15"
   },
   "ADLBP": {
     "sector": "Microfinance"
@@ -5022,12 +5557,14 @@
     "sharesOutstanding": 1190000.0,
     "sector": "Microfinance",
     "companyName": "Adhikhola Laghubitta Bittiya Sanstha Limited",
-    "peRatio": 62.95,
-    "pbRatio": 5.93,
+    "peRatio": 48.39,
+    "pbRatio": 5.36,
     "eps": 18.99,
     "bookValue": 171.38,
     "roe": 11.08,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 919.0,
+    "ratioPriceDate": "2023-03-13"
   },
   "AKBSLPO": {
     "sector": "Microfinance"
@@ -5061,11 +5598,13 @@
     "sector": "Non-Life Insurance",
     "companyName": "Ajod Insurance Limited",
     "peRatio": 32.28,
-    "pbRatio": 3.68,
+    "pbRatio": 3.11,
     "eps": 13.97,
     "bookValue": 144.81,
     "roe": 9.65,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 451.0,
+    "ratioPriceDate": "2023-05-24"
   },
   "AILP": {
     "sector": "Non-Life Insurance"
@@ -5104,14 +5643,16 @@
     "sharesOutstanding": 4700000.0,
     "sector": "Hydropower",
     "companyName": "Appolo Hydropower Limited",
-    "ltp": 564.9,
-    "peRatio": 42.95267073615,
-    "pbRatio": 5.3430902358053,
+    "ltp": 566.0,
+    "peRatio": 42.95,
+    "pbRatio": 5.34,
     "eps": 13.151685106383,
     "bookValue": 105.72533404255319,
     "roe": 12.439483143264,
     "roa": 3.9872484259272998,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 564.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "AMFI": {
     "sharesOutstanding": 644280,
@@ -5194,12 +5735,14 @@
     "sharesOutstanding": 106239940.72,
     "sector": "Commercial Bank",
     "companyName": "Bank Of Kathmandu Ltd.",
-    "peRatio": 20.79,
-    "pbRatio": 1.22,
+    "peRatio": 19.61,
+    "pbRatio": 1.19,
     "eps": 10.57,
     "bookValue": 174.77,
     "roe": 6.05,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 207.3,
+    "ratioPriceDate": "2023-01-08"
   },
   "BOKLPO": {
     "sharesOutstanding": 2472879,
@@ -5273,7 +5816,9 @@
     "eps": -26.97,
     "bookValue": 82.0,
     "roe": -32.88,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 1141.5,
+    "ratioPriceDate": "2024-03-06"
   },
   "BRTBL": {
     "sharesOutstanding": 1400000,
@@ -5321,12 +5866,14 @@
     "sharesOutstanding": 95539090.0,
     "sector": "Commercial Bank",
     "companyName": "Century Commercial Bank Ltd.",
-    "peRatio": 15.67,
-    "pbRatio": 1.54,
+    "peRatio": 14.96,
+    "pbRatio": 1.53,
     "eps": 13.34,
     "bookValue": 130.52,
     "roe": 10.22,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 199.5,
+    "ratioPriceDate": "2023-01-09"
   },
   "CCBD88": {
     "high52": 1326.0,
@@ -5396,7 +5943,9 @@
     "companyName": "City Express Finance Co. Limited",
     "peRatio": -53.16,
     "pbRatio": 1.54,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 101.0,
+    "ratioPriceDate": "2020-01-08"
   },
   "CEFLPO": {
     "sharesOutstanding": 500000,
@@ -5410,12 +5959,14 @@
     "sharesOutstanding": 90758440.0,
     "sector": "Commercial Bank",
     "companyName": "Civil Bank Ltd",
-    "peRatio": 16.01,
-    "pbRatio": 1.59,
+    "peRatio": 15.24,
+    "pbRatio": 1.57,
     "eps": 14.04,
     "bookValue": 135.96,
     "roe": 10.32,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 214.0,
+    "ratioPriceDate": "2023-02-23"
   },
   "CBLPO": {
     "sharesOutstanding": 21400000,
@@ -5572,14 +6123,16 @@
     "sharesOutstanding": 3000000.0,
     "sector": "Manufacturing",
     "companyName": "Everest Colour Limited",
-    "ltp": 1274.9,
-    "peRatio": 172.82811449394,
-    "pbRatio": 10.930820824993,
+    "ltp": 1249.0,
+    "peRatio": 172.83,
+    "pbRatio": 10.93,
     "eps": 7.3766933333333,
     "bookValue": 116.63351,
     "roe": 6.3246774733379,
     "roa": 5.3328990558634,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 1274.9,
+    "ratioPriceDate": "2026-11-06"
   },
   "EFL": {
     "sharesOutstanding": 1103966,
@@ -5599,7 +6152,9 @@
     "companyName": "Everest Insurance Co. Ltd.",
     "peRatio": 88.97,
     "pbRatio": 4.2,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 500.0,
+    "ratioPriceDate": "2022-05-05"
   },
   "EDBLPO": {
     "high52": 408.0,
@@ -5693,11 +6248,13 @@
     "sector": "Non-Life Insurance",
     "companyName": "General Insurance Company Nepal Ltd",
     "peRatio": 49.01,
-    "pbRatio": 3.24,
+    "pbRatio": 2.87,
     "eps": 7.55,
     "bookValue": 129.05,
     "roe": 5.85,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 370.0,
+    "ratioPriceDate": "2022-07-13"
   },
   "GICP": {
     "sector": "Non-Life Insurance"
@@ -5706,12 +6263,14 @@
     "sharesOutstanding": 1106325.0,
     "sector": "Microfinance",
     "companyName": "Ghodighoda Laghubitta Bittiya Sanstha Ltd.",
-    "peRatio": -76.36,
-    "pbRatio": 12.07,
+    "peRatio": 64.29,
+    "pbRatio": 2.41,
     "eps": 12.91,
     "bookValue": 344.23,
     "roe": 3.75,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 830.0,
+    "ratioPriceDate": "2020-11-05"
   },
   "GGBSLP": {
     "sector": "Microfinance"
@@ -5836,11 +6395,14 @@
     "sharesOutstanding": 22393700.0,
     "sector": "Life Insurance",
     "companyName": "Gurans Life Insurance Company Ltd.",
-    "pbRatio": 2.9,
+    "pbRatio": 2.57,
     "eps": 9.6,
     "bookValue": 133.76,
     "roe": 7.18,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "peRatio": 35.83,
+    "ratioPrice": 344.0,
+    "ratioPriceDate": "2023-05-08"
   },
   "GLICLP": {
     "sharesOutstanding": 100000,
@@ -6058,7 +6620,9 @@
     "eps": 4.58,
     "bookValue": 280.24,
     "roe": 1.63,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 1442.1,
+    "ratioPriceDate": "2024-07-10"
   },
   "JFLPO": {
     "high52": 349.0,
@@ -6118,11 +6682,14 @@
     "sharesOutstanding": 24200000.0,
     "sector": "Life Insurance",
     "companyName": "Jyoti Life Insurance Company Limited",
-    "pbRatio": 2.28,
+    "pbRatio": 2.46,
     "eps": 35.58,
     "bookValue": 142.8,
     "roe": 24.92,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "peRatio": 9.89,
+    "ratioPrice": 351.9,
+    "ratioPriceDate": "2022-06-27"
   },
   "JLIP": {
     "sector": "Life Insurance"
@@ -6163,14 +6730,16 @@
     "sharesOutstanding": 14000000.0,
     "sector": "Hydropower",
     "companyName": "Kalanga Hydro Limited",
-    "ltp": 429.8,
-    "peRatio": 22.335729639527,
-    "pbRatio": 4.0294345600796,
+    "ltp": 425.0,
+    "peRatio": 22.34,
+    "pbRatio": 4.03,
     "eps": 19.242711428571,
     "bookValue": 106.66509,
     "roe": 18.040308622598,
     "roa": 6.2272673116274,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 429.8,
+    "ratioPriceDate": "2026-11-06"
   },
   "KMCDBP": {
     "high52": 605.0,
@@ -6184,14 +6753,16 @@
     "sharesOutstanding": 5500000.0,
     "sector": "Hydropower",
     "companyName": "Kalinchock Hydropower Limited",
-    "ltp": 621.0,
-    "peRatio": 563.30153578214,
-    "pbRatio": 5.8415752478527,
+    "ltp": 618.9,
+    "peRatio": 563.3,
+    "pbRatio": 5.84,
     "eps": 1.1024290909091,
     "bookValue": 106.30694181818181,
     "roe": 1.0370245555503,
     "roa": 0.44131660793931005,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 621.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "KDLP": {
     "sector": "Hotels & Tourism"
@@ -6255,7 +6826,9 @@
     "eps": -15.77,
     "bookValue": 97.5,
     "roe": -16.18,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 810.0,
+    "ratioPriceDate": "2024-12-24"
   },
   "KAFIL": {
     "sharesOutstanding": 2836960,
@@ -6286,7 +6859,9 @@
     "eps": -29.79,
     "bookValue": 81.2,
     "roe": -37.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 836.0,
+    "ratioPriceDate": "2023-07-04"
   },
   "KLBSP": {
     "sector": "Microfinance"
@@ -6339,7 +6914,9 @@
     "companyName": "Lalitpur Finance Ltd.",
     "peRatio": 2.1,
     "pbRatio": 1.2,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 126.0,
+    "ratioPriceDate": "2019-06-06"
   },
   "LUK": {
     "high52": 10.91,
@@ -6443,12 +7020,14 @@
     "sharesOutstanding": 13128000.0,
     "sector": "Non-Life Insurance",
     "companyName": "Lumbini General Insurance Co. Ltd.",
-    "peRatio": 34.22,
-    "pbRatio": 4.15,
+    "peRatio": 43.03,
+    "pbRatio": 2.71,
     "eps": 11.85,
     "bookValue": 187.85,
     "roe": 6.31,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 509.9,
+    "ratioPriceDate": "2023-03-12"
   },
   "LGILPO": {
     "sharesOutstanding": 2927472,
@@ -6539,7 +7118,9 @@
     "companyName": "Mahila Sahayatra Microfinance Bittiya Sanstha Ltd.",
     "peRatio": 31.46,
     "pbRatio": 8.29,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 1259.0,
+    "ratioPriceDate": "2021-01-21"
   },
   "MSMBSP": {
     "sharesOutstanding": 1100000,
@@ -6560,7 +7141,9 @@
     "eps": -9.87,
     "bookValue": 104.29,
     "roe": -9.47,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 1169.0,
+    "ratioPriceDate": "2024-07-07"
   },
   "MKLBP": {
     "sector": "Microfinance"
@@ -6608,12 +7191,14 @@
     "sharesOutstanding": 161204614.53,
     "sector": "Commercial Bank",
     "companyName": "Mega  Bank Nepal Ltd.",
-    "peRatio": 18.02,
-    "pbRatio": 1.63,
+    "peRatio": 17.34,
+    "pbRatio": 1.61,
     "eps": 12.63,
     "bookValue": 135.63,
     "roe": 9.32,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 219.0,
+    "ratioPriceDate": "2023-01-10"
   },
   "MEROPO": {
     "high52": 226.0,
@@ -6634,7 +7219,9 @@
     "eps": 10.22,
     "bookValue": 164.41,
     "roe": 6.21,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 580.0,
+    "ratioPriceDate": "2024-03-12"
   },
   "MMFDBP": {
     "sharesOutstanding": 200000,
@@ -6670,14 +7257,16 @@
     "sharesOutstanding": 8600000.0,
     "sector": "Hydropower",
     "companyName": "Mount Everest Power Development Limited",
-    "ltp": 568.0,
-    "peRatio": 56.290531418203,
-    "pbRatio": 5.0996012209563,
-    "eps": 10.090506976744,
-    "bookValue": 111.38125813953488,
-    "roe": 9.059429876526599,
-    "roa": 3.8094899445212,
-    "capturedAt": "2026-11-07"
+    "ltp": 582.0,
+    "peRatio": 18.42,
+    "pbRatio": 4.7,
+    "eps": 30.835213953488,
+    "bookValue": 120.9355476744186,
+    "roe": 25.497229347737,
+    "roa": 11.375582687799,
+    "capturedAt": "2026-11-14",
+    "ratioPrice": 568.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "MMDBL": {
     "sharesOutstanding": 691600,
@@ -6831,12 +7420,14 @@
     "sharesOutstanding": 3033952.6,
     "sector": "Microfinance",
     "companyName": "Naya Sarathi Laghubitta Bittiya Sanstha Limited",
-    "peRatio": 97.27,
-    "pbRatio": 4.51,
+    "peRatio": 81.68,
+    "pbRatio": 4.23,
     "eps": 8.49,
     "bookValue": 164.11,
     "roe": 5.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 693.5,
+    "ratioPriceDate": "2023-07-13"
   },
   "NSLBP": {
     "sharesOutstanding": 200000,
@@ -6862,7 +7453,9 @@
     "companyName": "Nepal Agro Laghubitta Bittiya Sanstha Limited",
     "peRatio": 15.67,
     "pbRatio": 4.41,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 720.0,
+    "ratioPriceDate": "2019-10-03"
   },
   "NAGROP": {
     "sector": "Microfinance"
@@ -6877,7 +7470,9 @@
     "companyName": "Nepal Bangladesh Bank Limited",
     "peRatio": 27.16,
     "pbRatio": 2.49,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 399.0,
+    "ratioPriceDate": "2022-01-13"
   },
   "NBBD2085": {
     "high52": 1206.3,
@@ -6927,12 +7522,14 @@
     "sharesOutstanding": 111396780.14,
     "sector": "Commercial Bank",
     "companyName": "Nepal Credit And Commercial Bank Limited",
-    "peRatio": 10.53,
-    "pbRatio": 1.28,
+    "peRatio": 10.18,
+    "pbRatio": 1.27,
     "eps": 18.56,
     "bookValue": 148.94,
     "roe": 12.46,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 189.0,
+    "ratioPriceDate": "2022-12-29"
   },
   "RMBFPO": {
     "sharesOutstanding": 357500,
@@ -7416,7 +8013,9 @@
     "eps": -9.9,
     "bookValue": 67.17,
     "roe": -14.74,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 324.5,
+    "ratioPriceDate": "2026-11-06"
   },
   "PFLPO": {
     "high52": 221.0,
@@ -7562,11 +8161,13 @@
     "sector": "Non-Life Insurance",
     "companyName": "Prudential Insurance Co. Ltd.",
     "peRatio": 33.66,
-    "pbRatio": 2.96,
+    "pbRatio": 2.01,
     "eps": 10.92,
     "bookValue": 183.27,
     "roe": 5.96,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 367.6,
+    "ratioPriceDate": "2023-05-09"
   },
   "PDB": {
     "sharesOutstanding": 1500000,
@@ -7596,7 +8197,9 @@
     "companyName": "Rairang Hydropower Development Company Ltd.",
     "peRatio": 43.02,
     "pbRatio": 5.1,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 563.1,
+    "ratioPriceDate": "2021-11-03"
   },
   "RBBBL": {
     "sharesOutstanding": 1437654,
@@ -7619,7 +8222,9 @@
     "eps": 19.1,
     "bookValue": 180.17,
     "roe": 11.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 755.0,
+    "ratioPriceDate": "2023-07-13"
   },
   "RULBP": {
     "sector": "Microfinance"
@@ -7704,7 +8309,10 @@
     "eps": 9.29,
     "bookValue": 120.75,
     "roe": 7.7,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "peRatio": 41.66,
+    "ratioPrice": 387.0,
+    "ratioPriceDate": "2023-03-22"
   },
   "RLIP": {
     "sector": "Life Insurance"
@@ -7733,7 +8341,9 @@
     "eps": 23.4,
     "bookValue": 229.41,
     "roe": 10.2,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 775.0,
+    "ratioPriceDate": "2023-07-06"
   },
   "RSDCP": {
     "high52": 366.0,
@@ -7750,7 +8360,9 @@
     "eps": 8.25,
     "bookValue": 138.96,
     "roe": 5.94,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 1045.0,
+    "ratioPriceDate": "2024-07-11"
   },
   "SABSLPO": {
     "high52": 523.0,
@@ -7777,7 +8389,7 @@
     "companyName": "Sahara Bikas Bank Ltd.",
     "peRatio": 66.09,
     "pbRatio": 3.07,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15"
   },
   "SHBLPO": {
     "sharesOutstanding": 200000,
@@ -7813,7 +8425,9 @@
     "eps": 62.1,
     "bookValue": 258.84,
     "roe": 23.99,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 1875.8,
+    "ratioPriceDate": "2025-10-16"
   },
   "SAMAJP": {
     "sector": "Microfinance"
@@ -7860,7 +8474,9 @@
     "eps": 0.12,
     "bookValue": 60.3,
     "roe": 0.2,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 370.0,
+    "ratioPriceDate": "2026-07-09"
   },
   "SLBSLPO": {
     "sector": "Microfinance"
@@ -7878,13 +8494,15 @@
     "sector": "Hydropower",
     "companyName": "Sanigad Hydro Limited",
     "ltp": 473.0,
-    "peRatio": 14.728536696362,
-    "pbRatio": 3.947171921226,
+    "peRatio": 14.73,
+    "pbRatio": 3.95,
     "eps": 32.114527719298,
     "bookValue": 119.83263192982456,
     "roe": 26.799484582885004,
     "roa": 10.822828633118,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 473.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SNMAPO": {
     "high52": 180.0,
@@ -8041,7 +8659,9 @@
     "companyName": "Shrijana Finance  (Bittaya Sanstha)",
     "peRatio": 14.45,
     "pbRatio": 1.49,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 210.0,
+    "ratioPriceDate": "2020-01-22"
   },
   "SFFILP": {
     "sharesOutstanding": 84000,
@@ -8148,12 +8768,14 @@
     "sharesOutstanding": 14039200.0,
     "sector": "Non-Life Insurance",
     "companyName": "Siddhartha Insurance Ltd.",
-    "peRatio": 17.46,
-    "pbRatio": 4.79,
+    "peRatio": 31.02,
+    "pbRatio": 3.0,
     "eps": 20.99,
     "bookValue": 216.91,
     "roe": 9.68,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 651.2,
+    "ratioPriceDate": "2023-02-28"
   },
   "SILPO": {
     "sharesOutstanding": 1000000,
@@ -8178,13 +8800,15 @@
     "sector": "Hydropower",
     "companyName": "Snow Rivers Limited",
     "ltp": 810.0,
-    "peRatio": 39.747599619708,
-    "pbRatio": 7.6538981586797,
+    "peRatio": 39.75,
+    "pbRatio": 7.65,
     "eps": 20.378589090909,
     "bookValue": 105.82842666666667,
     "roe": 19.25625253326,
     "roa": 7.0027943206717,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 810.0,
+    "ratioPriceDate": "2026-11-06"
   },
   "SODBL": {
     "sharesOutstanding": 90530946,
@@ -8201,13 +8825,15 @@
     "sector": "Manufacturing",
     "companyName": "Sopan Pharmaceuticals Limited",
     "ltp": 608.0,
-    "peRatio": 1168.5550313831,
-    "pbRatio": 5.0080255860279,
+    "peRatio": 1168.56,
+    "pbRatio": 5.01,
     "eps": 0.5203006993007,
     "bookValue": 121.40513053613054,
     "roe": 0.4285656602839,
     "roa": 0.32967625181044,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 608.0,
+    "ratioPriceDate": "2026-11-07"
   },
   "SPARS": {
     "sharesOutstanding": 1120291,
@@ -8215,7 +8841,9 @@
     "companyName": "Sparsha Laghubitta Bittiya Sanstha Limited",
     "peRatio": 23.23,
     "pbRatio": 6.83,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 972.0,
+    "ratioPriceDate": "2020-10-06"
   },
   "SPARSPO": {
     "sector": "Microfinance"
@@ -8254,12 +8882,14 @@
     "sharesOutstanding": 5610000.0,
     "sector": "Development Bank",
     "companyName": "Summit Micro Finance Development Bank Ltd.",
-    "peRatio": 104.54,
-    "pbRatio": 7.55,
+    "peRatio": 92.01,
+    "pbRatio": 7.33,
     "eps": 10.51,
     "bookValue": 131.9,
     "roe": 8.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 967.0,
+    "ratioPriceDate": "2023-07-13"
   },
   "SMFDBP": {
     "sharesOutstanding": 352800,
@@ -8279,7 +8909,9 @@
     "eps": 15.43,
     "bookValue": 175.14,
     "roe": 9.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 173.1,
+    "ratioPriceDate": "2023-07-13"
   },
   "SRBLPO": {
     "sharesOutstanding": 20000000,
@@ -8339,7 +8971,9 @@
     "companyName": "Suryodaya Laghubitta Bittiya Sanstha Ltd.",
     "peRatio": 99.19,
     "pbRatio": 10.35,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 1713.0,
+    "ratioPriceDate": "2021-08-31"
   },
   "SLBSP": {
     "sector": "Microfinance"
@@ -8403,13 +9037,15 @@
     "sector": "Hydropower",
     "companyName": "Taksar Pikhuwa Khola Hydropower Limited",
     "ltp": 426.1,
-    "peRatio": 143.72748109241,
-    "pbRatio": 4.1593466087195,
+    "peRatio": 143.73,
+    "pbRatio": 4.16,
     "eps": 2.9646383333333,
     "bookValue": 102.443975,
     "roe": 2.8939118511687,
     "roa": 1.7049220106222,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 426.1,
+    "ratioPriceDate": "2026-11-06"
   },
   "TRHPR": {
     "sharesOutstanding": 2121750,
@@ -8429,7 +9065,9 @@
     "companyName": "Tinau Mission Development Bank Limited",
     "peRatio": 17.27,
     "pbRatio": 1.6,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 197.0,
+    "ratioPriceDate": "2020-10-15"
   },
   "TMDBLP": {
     "sharesOutstanding": 9801765,
@@ -8470,11 +9108,14 @@
     "sharesOutstanding": 23428550.0,
     "sector": "Life Insurance",
     "companyName": "Union Life Insurance Company Limited",
-    "pbRatio": 3.68,
+    "pbRatio": 3.33,
     "eps": 7.38,
     "bookValue": 107.38,
     "roe": 6.87,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "peRatio": 48.51,
+    "ratioPrice": 358.0,
+    "ratioPriceDate": "2023-05-08"
   },
   "UFIL": {
     "sharesOutstanding": 1115000,
@@ -8501,7 +9142,9 @@
     "companyName": "United Finance Ltd.",
     "peRatio": 40.44,
     "pbRatio": 2.65,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 423.0,
+    "ratioPriceDate": "2021-04-29"
   },
   "UFLPO": {
     "sharesOutstanding": 900000,
@@ -8563,13 +9206,15 @@
     "sector": "Hydropower",
     "companyName": "Yambaling Hydropower Limited",
     "ltp": 441.0,
-    "peRatio": 40.373502636113,
-    "pbRatio": 4.638105890707,
+    "peRatio": 40.37,
+    "pbRatio": 4.64,
     "eps": 10.923005714286,
     "bookValue": 95.08191714285714,
     "roe": 11.487994818062,
     "roa": 4.0842174917188,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "ratioPrice": 441.0,
+    "ratioPriceDate": "2026-11-07"
   },
   "YFL": {
     "sharesOutstanding": 2019584,
@@ -8619,24 +9264,26 @@
   "MOLUNG": {
     "companyName": "Molung",
     "sector": "Hydropower",
-    "ltp": 283.5,
-    "peRatio": 39.422719366433,
-    "pbRatio": 3.2482136582774,
-    "eps": 7.1912847352025,
-    "bookValue": 87.2787414330218,
-    "roe": 8.3833197149199,
-    "roa": 4.9846352126302,
+    "ltp": 285.1,
+    "peRatio": 38.54,
+    "pbRatio": 3.09,
+    "eps": 7.397323364486,
+    "bookValue": 92.23648224299066,
+    "roe": 8.3856044332627,
+    "roa": 5.140898333262999,
     "sharesOutstanding": 8025000.0,
     "high52": 417.7,
     "low52": 274.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 285.1,
+    "ratioPriceDate": "2026-11-15"
   },
   "NECO": {
     "companyName": "Neco Insurance",
     "sector": "Non-Life Insurance",
-    "ltp": 517.1,
-    "peRatio": 49.720302147547,
-    "pbRatio": 2.2846723914333,
+    "ltp": 523.9,
+    "peRatio": 50.37,
+    "pbRatio": 2.31,
     "eps": 10.400178149873,
     "bookValue": 226.33441973515548,
     "roe": 4.6457234023898,
@@ -8644,7 +9291,9 @@
     "sharesOutstanding": 27722782.806708,
     "high52": 681.0,
     "low52": 510.0,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 523.9,
+    "ratioPriceDate": "2026-11-15"
   },
   "RHPC": {
     "companyName": "Ridi Hydropower Development Company Ltd.",
@@ -8652,14 +9301,18 @@
     "eps": 110.17,
     "bookValue": 182.68,
     "roe": 60.31,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-07",
+    "peRatio": 7.61,
+    "pbRatio": 4.59,
+    "ratioPrice": 838.0,
+    "ratioPriceDate": "2021-11-03"
   },
   "SHIVAM": {
     "companyName": "Shivam Hydropower",
     "sector": "Hydropower",
-    "ltp": 685.0,
-    "peRatio": 48.839871499431,
-    "pbRatio": 3.6290199006198,
+    "ltp": 676.0,
+    "peRatio": 48.2,
+    "pbRatio": 3.58,
     "eps": 14.025425927011,
     "bookValue": 188.75619830108994,
     "roe": 7.5738066049701995,
@@ -8667,6 +9320,8 @@
     "sharesOutstanding": 55932287.125,
     "high52": 720.0,
     "low52": 566.24390243902,
-    "capturedAt": "2026-11-07"
+    "capturedAt": "2026-11-15",
+    "ratioPrice": 676.0,
+    "ratioPriceDate": "2026-11-15"
   }
 }

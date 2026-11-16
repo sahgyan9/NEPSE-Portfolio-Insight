@@ -92,7 +92,7 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 52.74,
+      "pe_ratio": 52.8,
       "pb_ratio": 2.19,
       "eps_ttm": 12.16,
       "book_value": 293.12,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Microfinance",
       "name": "Grameen Bikas Laghubitta Bittiya Sanstha Ltd."
     }

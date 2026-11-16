@@ -86,6 +86,28 @@
       "trade_volume": 179018,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 24.92,
+      "pb_ratio": 3.27,
+      "eps_ttm": 13.07,
+      "book_value": 99.47,
+      "roe": 13.14,
+      "roa": null,
+      "graham_number": 171.03,
+      "net_profit_ttm": 196106660.0,
+      "revenue_ttm": 759267190.0,
+      "shares_outstanding": 60000000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Madhya Bhotekoshi Jalavidyut Company Limited"
     }
   ],
   "sector": "Hydropower"

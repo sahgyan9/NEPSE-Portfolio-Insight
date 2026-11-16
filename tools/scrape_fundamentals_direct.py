@@ -9,8 +9,8 @@ db/fundamentals.json stores, with exact values instead of LLM-extracted ones:
 
     eps               <- masterData.eps
     bookValue         <- masterData.book_value
-    peRatio           <- funda_table.pe_ratio        (live, based on LTP)
-    pbRatio           <- funda_table.pb_ratio
+    peRatio           <- latest close / eps        (portfolio_common.recompute_ratios;
+    pbRatio           <- latest close / bookValue   funda_table's own ratios are not kept)
     sharesOutstanding <- masterData.shares_outstnading
     promoterHolding   <- stocksGenralInfo.promoter_holding  (x100 -> percent)
     publicFloat       <- stocksGenralInfo.public_holding    (x100 -> percent)
@@ -46,6 +46,7 @@ import httpx
 TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, TOOLS_DIR)
 from scrape_nepsealpha_direct import fetch_props, make_client  # noqa: E402  (reuse, no key needed)
+from portfolio_common import recompute_ratios  # noqa: E402
 
 ROOT = os.path.dirname(TOOLS_DIR)
 DB_PATH = os.path.join(ROOT, "db", "fundamentals.json")
@@ -185,7 +186,12 @@ def main():
                 fields = extract_fundamentals(props)
                 if not fields:
                     raise RuntimeError("no fundamentals fields in page payload")
-                db.setdefault(symbol, {}).update(fields)
+                record = db.setdefault(symbol, {})
+                record.update(fields)
+                # funda_table.pe_ratio rests on NepseAlpha's own EPS; derive it from ours
+                recompute_ratios(symbol, record)
+                fields["peRatio"] = record.get("peRatio")
+                fields["pbRatio"] = record.get("pbRatio")
                 print(f"  {symbol}: {len(fields)} fields updated "
                       f"(eps={fields.get('eps')}, pe={fields.get('peRatio')}, "
                       f"pb={fields.get('pbRatio')}, 52wk={fields.get('low52')}-{fields.get('high52')})")

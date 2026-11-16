@@ -85,6 +85,23 @@
       "trade_turnover": 64538625.1,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": 543.9,
+      "pe_ratio": 55.346747815564,
+      "pb_ratio": 5.316580591735,
+      "eps_ttm": 9.1111998589856,
+      "book_value": 103.28651143517429,
+      "roe": 8.8212872449507,
+      "roa": 7.3637625682952,
+      "graham_number": 145.51,
+      "shares_outstanding": 10000114.3,
+      "week52_high": 608.18181818182,
+      "week52_low": 400.0,
+      "captured_at": "2026-11-14"
     }
   ],
   "sector": "Hydropower"

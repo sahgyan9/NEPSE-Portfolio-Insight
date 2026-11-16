@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 24.02,
-      "pb_ratio": 4.07,
+      "pe_ratio": 23.78,
+      "pb_ratio": 4.03,
       "eps_ttm": 13.53,
       "book_value": 79.81,
       "roe": 16.96,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Eastern Hydropower Limited"
     }

@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 11.93,
-      "pb_ratio": 2.54,
+      "pe_ratio": 12.1,
+      "pb_ratio": 2.57,
       "eps_ttm": 22.03,
       "book_value": 103.53,
       "roe": 21.28,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Himalaya Urja Bikas Company Limited"
     }

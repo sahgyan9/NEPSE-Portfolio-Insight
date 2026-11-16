@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 16.02,
-      "pb_ratio": 2.85,
+      "pe_ratio": 15.92,
+      "pb_ratio": 2.83,
       "eps_ttm": 31.09,
       "book_value": 174.8,
       "roe": 17.79,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Gurkhas Finance Ltd."
     }

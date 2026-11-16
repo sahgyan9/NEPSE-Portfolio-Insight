@@ -7,9 +7,9 @@
       "reported_quarter": "2082-83-Q4",
       "fiscal_year": "2082-83",
       "quarter": 4,
-      "ltp_at_capture": 517.1,
-      "pe_ratio": 49.720302147547,
-      "pb_ratio": 2.2846723914333,
+      "ltp_at_capture": 523.9,
+      "pe_ratio": 50.374137101334,
+      "pb_ratio": 2.3147164298432,
       "eps_ttm": 10.400178149873,
       "book_value": 226.33441973515548,
       "roe": 4.6457234023898,
@@ -18,7 +18,7 @@
       "shares_outstanding": 27722782.806708,
       "week52_high": 681.0,
       "week52_low": 510.0,
-      "captured_at": "2026-11-07"
+      "captured_at": "2026-11-15"
     }
   ]
 }

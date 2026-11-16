@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 162.82,
-      "pb_ratio": 5.65,
+      "pe_ratio": 161.32,
+      "pb_ratio": 5.6,
       "eps_ttm": 4.68,
       "book_value": 134.86,
       "roe": 3.47,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Development Bank",
       "name": "Corporate Development Bank Limited"
     }

@@ -86,6 +86,28 @@
       "trade_volume": 10198,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 443.75,
+      "pb_ratio": 3.22,
+      "eps_ttm": 1.28,
+      "book_value": 176.63,
+      "roe": 0.73,
+      "roa": null,
+      "graham_number": 71.32,
+      "net_profit_ttm": 4007570.0,
+      "revenue_ttm": 282304220.0,
+      "shares_outstanding": 12496944.71,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Development Bank",
+      "name": "Excel Development Bank Ltd."
     }
   ],
   "sector": "Development Bank"

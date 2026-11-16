@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 96.79,
-      "pb_ratio": 3.59,
+      "pe_ratio": 97.2,
+      "pb_ratio": 3.61,
       "eps_ttm": 2.18,
       "book_value": 58.73,
       "roe": 3.71,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Modi Energy Limited"
     }

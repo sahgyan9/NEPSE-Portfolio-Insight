@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 14.59,
-      "pb_ratio": 2.43,
+      "pe_ratio": 14.76,
+      "pb_ratio": 2.46,
       "eps_ttm": 36.11,
       "book_value": 216.68,
       "roe": 16.67,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Development Bank",
       "name": "Lumbini Bikas Bank Ltd."
     }

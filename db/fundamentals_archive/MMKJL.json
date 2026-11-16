@@ -90,9 +90,9 @@
       "reported_quarter": "2083-84-Q1",
       "fiscal_year": "2083-84",
       "quarter": 1,
-      "ltp_at_capture": 389.7,
-      "pe_ratio": 92.898032430639,
-      "pb_ratio": 3.9078661736037,
+      "ltp_at_capture": 387.0,
+      "pe_ratio": 92.25439710202,
+      "pb_ratio": 3.8807908883362,
       "eps_ttm": 4.194922,
       "book_value": 99.721941,
       "roe": 4.2647913517004,
@@ -101,7 +101,7 @@
       "shares_outstanding": 10000000.0,
       "week52_high": 659.0,
       "week52_low": 322.9,
-      "captured_at": "2026-11-07"
+      "captured_at": "2026-11-14"
     }
   ],
   "sector": "Hydropower"

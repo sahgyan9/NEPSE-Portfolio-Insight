@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 15.02,
-      "pb_ratio": 1.62,
+      "pe_ratio": 15.13,
+      "pb_ratio": 1.63,
       "eps_ttm": 3.93,
       "book_value": 164.37,
       "roe": 9.54,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Commercial Bank",
       "name": "Machhapuchhre Bank Limited"
     }

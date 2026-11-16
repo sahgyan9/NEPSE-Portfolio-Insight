@@ -50,8 +50,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 50.62,
-      "pb_ratio": 3.92,
+      "pe_ratio": 50.98,
+      "pb_ratio": 3.95,
       "eps_ttm": 11.26,
       "book_value": 145.4,
       "roe": 7.75,
@@ -63,7 +63,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Development Bank",
       "name": "Miteri Development Bank Limited"
     }

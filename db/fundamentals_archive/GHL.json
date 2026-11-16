@@ -86,6 +86,28 @@
       "trade_volume": 1064075,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": 4628.57,
+      "pb_ratio": 3.41,
+      "eps_ttm": 0.07,
+      "book_value": 95.07,
+      "roe": 0.07,
+      "roa": null,
+      "graham_number": 12.24,
+      "net_profit_ttm": 293390.0,
+      "revenue_ttm": 37351020.0,
+      "shares_outstanding": 16500000.0,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Hydropower",
+      "name": "Ghalemdi Hydro Limited"
     }
   ],
   "sector": "Hydropower"

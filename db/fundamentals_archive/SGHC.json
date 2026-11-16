@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 9.7,
-      "pb_ratio": 3.6,
+      "pe_ratio": 10.44,
+      "pb_ratio": 3.87,
       "eps_ttm": 34.22,
       "book_value": 92.2,
       "roe": 37.11,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Swet-Ganga Hydropower and Construction Limited"
     }

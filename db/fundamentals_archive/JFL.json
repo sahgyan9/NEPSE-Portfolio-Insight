@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": -55.17,
-      "pb_ratio": -33.36,
+      "pe_ratio": -54.39,
+      "pb_ratio": -32.88,
       "eps_ttm": -4.97,
       "book_value": -8.22,
       "roe": null,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Janaki Finance Company Limited"
     }

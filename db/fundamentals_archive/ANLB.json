@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 51.37,
-      "pb_ratio": 12.83,
+      "pe_ratio": 51.17,
+      "pb_ratio": 12.78,
       "eps_ttm": 95.37,
       "book_value": 381.79,
       "roe": 24.98,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Microfinance",
       "name": "Aatmanirbhar Laghubitta Bittitya Sanstha Limited"
     }

@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 10.59,
-      "pb_ratio": 3.99,
+      "pe_ratio": 10.74,
+      "pb_ratio": 4.04,
       "eps_ttm": 25.52,
       "book_value": 67.74,
       "roe": 37.68,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Maya Khola Hydropower Company Limited"
     }

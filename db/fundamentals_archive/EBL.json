@@ -92,7 +92,7 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 20.47,
+      "pe_ratio": 20.5,
       "pb_ratio": 2.93,
       "eps_ttm": 34.78,
       "book_value": 243.01,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Commercial Bank",
       "name": "Everest Bank Limited"
     }

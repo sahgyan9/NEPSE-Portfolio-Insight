@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 10.44,
-      "pb_ratio": 3.19,
+      "pe_ratio": 10.36,
+      "pb_ratio": 3.16,
       "eps_ttm": 1149.06,
       "book_value": 3762.23,
       "roe": 30.54,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Manufacturing",
       "name": "Bottlers Nepal (Terai) Limited"
     }

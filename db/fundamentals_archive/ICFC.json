@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 25.86,
-      "pb_ratio": 3.31,
+      "pe_ratio": 25.65,
+      "pb_ratio": 3.29,
       "eps_ttm": 23.59,
       "book_value": 184.06,
       "roe": 12.82,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "ICFC Finance Limited"
     }

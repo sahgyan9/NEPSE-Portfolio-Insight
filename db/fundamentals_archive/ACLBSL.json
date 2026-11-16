@@ -86,6 +86,28 @@
       "trade_volume": 348,
       "days_since_trade": 1,
       "price_is_stale": false
+    },
+    {
+      "reported_quarter": "2083-84-Q1",
+      "fiscal_year": "2083-84",
+      "quarter": 1,
+      "ltp_at_capture": null,
+      "pe_ratio": -31.67,
+      "pb_ratio": 4.62,
+      "eps_ttm": -25.67,
+      "book_value": 175.99,
+      "roe": -14.59,
+      "roa": null,
+      "graham_number": null,
+      "net_profit_ttm": -23563680.0,
+      "revenue_ttm": 171696510.0,
+      "shares_outstanding": 3671434.09,
+      "week52_high": null,
+      "week52_low": null,
+      "trade_turnover": null,
+      "captured_at": "2026-11-14",
+      "sector": "Microfinance",
+      "name": "Aarambha Chautari Laghubitta Bittya Sanstha Limited"
     }
   ],
   "sector": "Microfinance"

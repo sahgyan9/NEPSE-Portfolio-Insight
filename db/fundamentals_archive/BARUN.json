@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 39.93,
-      "pb_ratio": 2.84,
+      "pe_ratio": 40.14,
+      "pb_ratio": 2.86,
       "eps_ttm": 8.07,
       "book_value": 113.4,
       "roe": 7.12,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Barun Hydropower Co. Ltd."
     }

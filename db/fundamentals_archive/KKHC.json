@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": 16.9,
-      "pb_ratio": 2.92,
+      "pe_ratio": 16.68,
+      "pb_ratio": 2.89,
       "eps_ttm": 15.71,
       "book_value": 90.78,
       "roe": 17.3,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Hydropower",
       "name": "Khanikhola Hydropower Co. Ltd."
     }

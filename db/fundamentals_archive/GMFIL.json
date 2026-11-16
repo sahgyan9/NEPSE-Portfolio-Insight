@@ -92,8 +92,8 @@
       "fiscal_year": "2083-84",
       "quarter": 1,
       "ltp_at_capture": null,
-      "pe_ratio": -296.45,
-      "pb_ratio": 2.65,
+      "pe_ratio": -291.49,
+      "pb_ratio": 2.61,
       "eps_ttm": -1.41,
       "book_value": 157.57,
       "roe": -0.9,
@@ -105,7 +105,7 @@
       "week52_high": null,
       "week52_low": null,
       "trade_turnover": null,
-      "captured_at": "2026-11-07",
+      "captured_at": "2026-11-14",
       "sector": "Finance",
       "name": "Guheswori Merchant Banking & Finance Ltd."
     }
