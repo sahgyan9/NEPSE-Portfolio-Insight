@@ -145,47 +145,57 @@ def _r(x, nd=2):
 
 
 def make_flags(h, sector_median_pe):
-    """Plain-English flags for one holding record (h holds numeric fields, unrounded)."""
+    """Plain-English flags for one holding record (h holds numeric fields, unrounded).
+
+    Each flag carries `code`, `severity`, the English `text`, and `params` with the raw values
+    in the sentence, so the app can build it in Nepali (src/lib/epsText.ts, `eps.flag_<code>`
+    templates). PROFIT_FALLING has two sentences; params.variant says which one."""
     flags = []
     ttm, ann = h["ttm_eps"], h["annualized_eps"]
     growth = h["growth_yoy_pct"]
     sector = h["sector"]
 
+    def flag(code, severity, params, text):
+        flags.append({"code": code, "severity": severity, "params": params, "text": text})
+
     if ttm is not None and ttm <= 0:
-        flags.append({"code": "LOSS", "severity": "high", "text":
-                      f"The company lost money over the last 12 months (EPS Rs {ttm:.2f} per share). "
-                      "A P/E ratio has no meaning for a loss."})
+        flag("LOSS", "high", {"ttmEps": _r(ttm)},
+             f"The company lost money over the last 12 months (EPS Rs {ttm:.2f} per share). "
+             "A P/E ratio has no meaning for a loss.")
     if growth is not None and growth <= GROWTH_FALLING_PCT:
         if h.get("growth_state") == "turned_to_loss":
-            text = "The company made a profit in the same period last year but a loss so far this year."
+            flag("PROFIT_FALLING", "high", {"variant": "turned_to_loss", "growthPct": _r(growth, 1)},
+                 "The company made a profit in the same period last year but a loss so far this year.")
         else:
-            text = f"Profit so far this year is {abs(growth):.0f}% lower than the same period last year."
-        flags.append({"code": "PROFIT_FALLING", "severity": "high", "text": text})
+            flag("PROFIT_FALLING", "high", {"variant": "lower", "growthPct": _r(growth, 1)},
+                 f"Profit so far this year is {abs(growth):.0f}% lower than the same period last year.")
     if growth is not None and growth >= GROWTH_RISING_PCT:
-        flags.append({"code": "PROFIT_RISING", "severity": "info", "text":
-                      f"Profit so far this year is {growth:.0f}% higher than the same period last year."})
+        flag("PROFIT_RISING", "info", {"growthPct": _r(growth, 1)},
+             f"Profit so far this year is {growth:.0f}% higher than the same period last year.")
 
     if ttm is not None and ann is not None and ttm != 0:
         if sector == "Hydropower" and h["quarter"] in (1, 2) and ann > SEASONAL_RATIO * ttm:
-            flags.append({"code": "SEASONAL_ANNUALIZED", "severity": "medium", "text":
-                          f"Annualized EPS (Rs {ann:.2f}) is far above the 12-month EPS (Rs {ttm:.2f}). "
-                          "The monsoon quarter is this sector's best, so scaling it up to a year inflates the figure. "
-                          "Use the 12-month EPS."})
+            flag("SEASONAL_ANNUALIZED", "medium", {"annualizedEps": _r(ann), "ttmEps": _r(ttm)},
+                 f"Annualized EPS (Rs {ann:.2f}) is far above the 12-month EPS (Rs {ttm:.2f}). "
+                 "The monsoon quarter is this sector's best, so scaling it up to a year inflates the figure. "
+                 "The 12-month EPS is the better guide.")
         elif sector != "Hydropower" and abs(ann - ttm) / abs(ttm) * 100 > ANNUALIZED_GAP_PCT:
-            flags.append({"code": "ANNUALIZED_GAP", "severity": "low", "text":
-                          f"Annualized EPS (Rs {ann:.2f}) differs a lot from the 12-month EPS (Rs {ttm:.2f}). "
-                          "The annualized figure only scales the year so far; the 12-month figure is the better guide."})
+            flag("ANNUALIZED_GAP", "low", {"annualizedEps": _r(ann), "ttmEps": _r(ttm)},
+                 f"Annualized EPS (Rs {ann:.2f}) differs a lot from the 12-month EPS (Rs {ttm:.2f}). "
+                 "The annualized figure only scales the year so far; the 12-month figure is the better guide.")
 
     pac, mpe = h["pe_at_cost"], h["market_pe"]
     if sector_median_pe:
         if pac is not None and pac > EXPENSIVE_AT_COST_MULT * sector_median_pe:
-            flags.append({"code": "EXPENSIVE_AT_COST", "severity": "medium", "text":
-                          f"You paid {pac:.1f} times the 12-month EPS, more than twice the {sector} median P/E of "
-                          f"{sector_median_pe:.1f}. Your earnings yield on cost is low for this sector."})
+            flag("EXPENSIVE_AT_COST", "medium",
+                 {"peAtCost": _r(pac, 1), "sector": sector, "sectorPe": _r(sector_median_pe, 1)},
+                 f"You paid {pac:.1f} times the 12-month EPS, more than twice the {sector} median P/E of "
+                 f"{sector_median_pe:.1f}. Your earnings yield on cost is low for this sector.")
         if mpe is not None and mpe < CHEAP_VS_SECTOR_MULT * sector_median_pe:
-            flags.append({"code": "CHEAP_VS_SECTOR", "severity": "info", "text":
-                          f"The market P/E of {mpe:.1f} is well below the {sector} median of {sector_median_pe:.1f}. "
-                          "Check whether profits are about to fall."})
+            flag("CHEAP_VS_SECTOR", "info",
+                 {"marketPe": _r(mpe, 1), "sector": sector, "sectorPe": _r(sector_median_pe, 1)},
+                 f"The market P/E of {mpe:.1f} is well below the {sector} median of {sector_median_pe:.1f}. "
+                 "Check whether profits are about to fall.")
     flags.sort(key=lambda f: SEVERITY_ORDER[f["severity"]])
     return flags
 
@@ -239,9 +249,9 @@ def build_holding(hold, data, fundamentals, sector_median, price_fn):
     shares = shares_for(latest, fund_shares)
     cur_ytd = ytd(latest)
     if shares is None:
-        return None, "number of shares not available"
+        return None, "NO_SHARES"
     if cur_ytd is None:
-        return None, "net profit not available in the latest quarter"
+        return None, "NO_PROFIT"
 
     profit = ttm_profit(index, latest)
     ttm = profit / shares if profit is not None else None
@@ -281,10 +291,12 @@ def build_holding(hold, data, fundamentals, sector_median, price_fn):
         "gain_pct": (price - cost) / cost * 100 if (price and cost > 0) else None,
         "eps_history": eps_history(quarters, index, fund_shares),
     }
-    notes = []
+    # notes: plain English (older readers); note_items: same notes with code and params.
+    note_items = []
     if ttm is None:
-        notes.append("only annualized EPS available")
-    rec["notes"] = notes
+        note_items.append({"code": "ONLY_ANNUALIZED", "params": {}, "text": "only annualized EPS available"})
+    rec["notes"] = [n["text"] for n in note_items]
+    rec["note_items"] = note_items
     rec["flags"] = make_flags(rec, sector_median)
 
     for k in ("shares", "ytd_profit", "ttm_profit"):
@@ -316,6 +328,19 @@ def portfolio_block(holdings):
     }
 
 
+SKIP_REASONS = {
+    "MUTUAL_FUND": "mutual fund, no earnings per share",
+    "NO_QUARTERLY": "no quarterly report data",
+    "NO_SHARES": "number of shares not available",
+    "NO_PROFIT": "net profit not available in the latest quarter",
+}
+
+
+def skip(symbol, code):
+    """A skipped holding: English `reason` (unchanged wording) plus `reason_code` for the app."""
+    return {"symbol": symbol, "reason": SKIP_REASONS[code], "reason_code": code}
+
+
 def build_insights(portfolio, fundamentals, quarterly_dir, price_fn=pc.latest_close):
     """Pure: reads inputs, returns the insights dict, writes nothing."""
     qfiles = _load_quarterly_files(quarterly_dir)
@@ -329,14 +354,14 @@ def build_insights(portfolio, fundamentals, quarterly_dir, price_fn=pc.latest_cl
         data = qfiles.get(sym)
         sector = sector_of(sym, data, fundamentals)
         if sector == "Mutual Fund":
-            skipped.append({"symbol": sym, "reason": "mutual fund, no earnings per share"})
+            skipped.append(skip(sym, "MUTUAL_FUND"))
             continue
         if not data:
-            skipped.append({"symbol": sym, "reason": "no quarterly report data"})
+            skipped.append(skip(sym, "NO_QUARTERLY"))
             continue
         rec, reason = build_holding(hold, data, fundamentals, medians.get(sector), price_fn)
         if rec is None:
-            skipped.append({"symbol": sym, "reason": reason})
+            skipped.append(skip(sym, reason))
         else:
             holdings.append(rec)
 

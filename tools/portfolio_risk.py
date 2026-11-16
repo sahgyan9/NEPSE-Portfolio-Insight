@@ -549,13 +549,20 @@ def analyze(portfolio, fundamentals=None, prices_dir=None, today=None):
         "Excludes cash dividends and trading fees. The benchmark puts the same amounts on the "
         "same dates into an equal-weight index of all listed stocks on file."
     )
+    # The app shows this note in the reader's language from the `home.rvmNote_<noteCode>` template.
+    performance["noteCode"] = "xirr_method"
 
     # ---- Findings, in plain language, most important first
     findings = []
 
-    def add(severity, code, title, detail, symbols=None):
+    def add(severity, code, title, detail, symbols=None, params=None):
+        # params holds the raw values used in title/detail so the app can build the
+        # same sentence in another language. Percentages are percent numbers (23.4 = 23.4%).
         findings.append({"severity": severity, "code": code, "title": title,
-                         "detail": detail, "symbols": symbols or []})
+                         "detail": detail, "symbols": symbols or [], "params": params or {}})
+
+    def pc_num(x, digits=1):
+        return round(x * 100, digits)
 
     for hsum in holdings_out:
         if hsum["sector"] == "Mutual Fund":
@@ -566,25 +573,31 @@ def analyze(portfolio, fundamentals=None, prices_dir=None, today=None):
                     f"{hsum['symbol']} is {pct(hsum['weight'])} of the portfolio",
                     "A mutual fund is diversified inside, so this is not single-company risk. "
                     "It does mean a large share of your money depends on one fund manager's decisions.",
-                    [hsum["symbol"]])
+                    [hsum["symbol"]],
+                    {"symbol": hsum["symbol"], "weightPct": pc_num(hsum["weight"])})
             continue
         if hsum["weight"] >= 0.20:
             add("high", "concentration", f"{hsum['symbol']} is {pct(hsum['weight'])} of the portfolio",
                 "One holding above 20% means a single company's bad year becomes the portfolio's bad year.",
-                [hsum["symbol"]])
+                [hsum["symbol"]],
+                {"symbol": hsum["symbol"], "weightPct": pc_num(hsum["weight"]), "thresholdPct": 20})
         if hsum["riskShare"] >= 0.10 and hsum["riskShare"] >= 1.5 * hsum["weight"]:
             add("medium", "risk_heavy",
                 f"{hsum['symbol']} carries {pct(hsum['riskShare'])} of the risk on {pct(hsum['weight'])} of the money",
                 "It swings more than the rest of the portfolio, or moves with your other holdings, "
                 "so it drives more of the ups and downs than its size suggests.",
-                [hsum["symbol"]])
+                [hsum["symbol"]],
+                {"symbol": hsum["symbol"], "riskPct": pc_num(hsum["riskShare"]),
+                 "weightPct": pc_num(hsum["weight"])})
     for s in sectors_out:
         if s["riskShare"] >= 0.40:
             add("high" if s["riskShare"] >= 0.55 else "medium", "sector_risk",
                 f"{s['sector']} drives {pct(s['riskShare'])} of portfolio risk",
                 f"It holds {pct(s['weight'])} of the money. Stocks in one sector tend to fall together, "
                 "so spreading across more names inside the same sector does not lower this.",
-                [r["symbol"] for r in rows if r["sector"] == s["sector"]])
+                [r["symbol"] for r in rows if r["sector"] == s["sector"]],
+                {"sector": s["sector"], "riskPct": pc_num(s["riskShare"]),
+                 "weightPct": pc_num(s["weight"]), "holdings": s["holdings"]})
     pairs = []
     for i in range(len(rows)):
         for j in range(i + 1, len(rows)):
@@ -593,22 +606,29 @@ def analyze(portfolio, fundamentals=None, prices_dir=None, today=None):
                 pairs.append((corr[i][j], rows[i]["symbol"], rows[j]["symbol"]))
     for c, a, b in sorted(pairs, reverse=True)[:3]:
         add("low", "correlated_pair", f"{a} and {b} move together (correlation {c:.2f})",
-            "Holding both adds little diversification; they behave close to one position.", [a, b])
+            "Holding both adds little diversification; they behave close to one position.", [a, b],
+            {"symbolA": a, "symbolB": b, "correlation": round(c, 2)})
     if vol_ratio is not None and vol_ratio > 1.1:
         add("medium", "above_market_risk",
             f"Portfolio swings about {vol_ratio:.1f}x as much as the market",
-            f"Estimated yearly volatility {pct(port_vol)} against {pct(market_vol)} for the equal-weight index.")
+            f"Estimated yearly volatility {pct(port_vol)} against {pct(market_vol)} for the equal-weight index.",
+            None,
+            {"ratio": round(vol_ratio, 1), "volatilityPct": pc_num(port_vol),
+             "marketVolatilityPct": pc_num(market_vol)})
     eff_n = 1.0 / hhi if hhi > 0 else 0
     if eff_n < 8:
         add("medium", "few_effective_holdings",
             f"The portfolio behaves like about {eff_n:.0f} equal-sized holdings",
-            f"There are {len(rows)} holdings, but the money is concentrated in a few of them.")
+            f"There are {len(rows)} holdings, but the money is concentrated in a few of them.",
+            None,
+            {"effective": round(eff_n), "effectiveExact": round(eff_n, 1), "holdings": len(rows)})
     if measured_weight < 0.7:
         add("low", "coverage",
             f"Only {pct(measured_weight, 0)} of the portfolio has its own price history",
             "The rest (mostly mutual funds and new listings) is estimated from the market or sector "
             "average, so treat the risk numbers as approximate.",
-            [p["symbol"] for p in proxied])
+            [p["symbol"] for p in proxied],
+            {"measuredPct": pc_num(measured_weight, 0), "estimated": len(proxied)})
     if performance["xirr"] is not None and performance["benchmarkXirr"] is not None:
         diff = performance["xirr"] - performance["benchmarkXirr"]
         if abs(diff) >= 0.02:
@@ -616,7 +636,10 @@ def analyze(portfolio, fundamentals=None, prices_dir=None, today=None):
                 f"Your return is {pct(performance['xirr'])} a year; the market index with the same deposits gave {pct(performance['benchmarkXirr'])}",
                 "Money-weighted, before dividends and fees. " +
                 ("Stock selection, IPO allotments and timing have added value so far." if diff > 0 else
-                 "So far a plain basket of all stocks would have done better; a broad mutual fund is the practical equivalent."))
+                 "So far a plain basket of all stocks would have done better."),
+                None,
+                {"xirrPct": pc_num(performance["xirr"]), "benchmarkPct": pc_num(performance["benchmarkXirr"]),
+                 "diffPct": pc_num(diff), "ahead": diff > 0})
     order = {"high": 0, "medium": 1, "low": 2, "info": 3}
     findings.sort(key=lambda f: order[f["severity"]])
 

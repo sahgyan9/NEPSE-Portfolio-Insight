@@ -144,6 +144,23 @@ def test_analyze_end_to_end_on_synthetic_market(tmp_path, monkeypatch):
     assert len(report["history"]) == report["lookbackWeeks"] + 1
     n = len(report["correlation"]["symbols"])
     assert all(len(row) == n for row in report["correlation"]["matrix"])
+    # Every finding carries the raw values the app needs to rebuild it in Nepali.
+    assert report["findings"]
+    for f in report["findings"]:
+        assert isinstance(f.get("params"), dict) and f["params"], f["code"]
+        assert {"severity", "code", "title", "detail", "symbols"} <= set(f)
+
+
+def test_every_finding_call_passes_params():
+    """Static guard: each add(...) in analyze() passes a params dict (6th argument)."""
+    import ast, inspect
+    tree = ast.parse(inspect.getsource(pr.analyze))
+    calls = [n for n in ast.walk(tree)
+             if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "add"]
+    assert len(calls) >= 9
+    for c in calls:
+        code = c.args[1].value if isinstance(c.args[1], ast.Constant) else "?"
+        assert len(c.args) == 6 and isinstance(c.args[5], ast.Dict), code
 
 
 def test_analyze_handles_empty_portfolio():

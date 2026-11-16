@@ -12,6 +12,9 @@ import portfolio_risk  # noqa: E402
 normalize_sector = pc.normalize_sector
 load_json = pc.load_json
 
+# Sectors licensed by Nepal Rastra Bank, where the 51% promoter-group rule applies (see the promoter check).
+NRB_PROMOTER_RULE_SECTORS = ("Commercial Bank", "Development Bank", "Finance", "Microfinance")
+
 
 def get_sector_averages(fundamentals_data, db_dir=None):
     """Typical (median) P/E and P/B per sector. Medians are used because a few loss-recovery
@@ -96,10 +99,22 @@ def calculate_health():
     for h in holdings_processed:
         h["weight"] = h["currentValue"] / total_value
 
-    alerts = []
-    strengths = []
-    warnings = []
-    recommendations = []
+    # Every sentence is stored as {code, params, text}: `text` is the English sentence, `params`
+    # holds the raw values so the app can build the same sentence in Nepali from the
+    # `health.<code>` templates (src/lib/healthText.ts). Percentages are percent numbers
+    # (23.4 = 23.4%). The old plain-string lists are still written for older readers.
+    strength_items = []
+    warning_items = []
+    recommendation_items = []
+
+    def strength(code, params, text):
+        strength_items.append({"code": code, "params": params, "text": text})
+
+    def warn(code, params, text):
+        warning_items.append({"code": code, "params": params, "text": text})
+
+    def recommend(code, params, text):
+        recommendation_items.append({"code": code, "params": params, "text": text})
 
     # ---------------------------------------------------------
     # Pillar 1: Structure & Diversification (20% weight)
@@ -127,21 +142,26 @@ def calculate_health():
         max_stock_entry = next((h for h in holdings_processed if h["symbol"] == max_stock), None)
         if max_stock_entry:
             qty_to_trim = int(trim_value / max_stock_entry["currentPrice"]) if max_stock_entry["currentPrice"] > 0 else 0
-            warnings.append(
-                f"Concentration risk: {max_stock} represents {max_weight*100:.1f}% of your portfolio (limit: 25.0%). "
-                f"Having too much capital in a single stock exposes your entire portfolio to extreme downside risk if that company underperforms."
-            )
-            recommendations.append(
-                f"Trim your position in {max_stock} by {qty_to_trim:,} shares (approx. Rs. {trim_value:,.2f}) to bring its allocation down to a safe {target_allocation*100:.0f}%."
-            )
+            warn("w_concentration",
+                 {"symbol": max_stock, "weightPct": round(max_weight * 100, 1), "limitPct": 25.0},
+                 f"Concentration risk: {max_stock} represents {max_weight*100:.1f}% of your portfolio (limit: 25.0%). "
+                 f"Having too much capital in a single stock exposes your entire portfolio to extreme downside risk if that company underperforms.")
+            recommend("r_concentration",
+                      {"symbol": max_stock, "shares": qty_to_trim, "amount": round(trim_value, 2),
+                       "targetPct": round(target_allocation * 100)},
+                      f"{max_stock} is about {qty_to_trim:,} shares (approx. Rs. {trim_value:,.2f}) above a {target_allocation*100:.0f}% share of your portfolio. Check whether you are comfortable with that much in one company.")
     else:
-        strengths.append("Concentration risk is well-managed with no holding exceeding 25% weight.")
-        
+        strength("s_concentration_ok", {"limitPct": 25.0},
+                 "Concentration risk is well-managed with no holding exceeding 25% weight.")
+
     if len(sector_weights) >= 5:
-        strengths.append(f"Good sector diversification across {len(sector_weights)} sectors.")
+        strength("s_sectors_spread", {"sectors": len(sector_weights)},
+                 f"Good sector diversification across {len(sector_weights)} sectors.")
     elif len(sector_weights) <= 2:
-        warnings.append("Low sector diversification. Highly vulnerable to sector-specific shocks.")
-        recommendations.append("Consider allocating capital to other sectors (e.g. Commercial Banks or Manufacturing) to spread risk.")
+        warn("w_few_sectors", {"sectors": len(sector_weights)},
+             "Low sector diversification. Highly vulnerable to sector-specific shocks.")
+        recommend("r_few_sectors", {"sectors": len(sector_weights)},
+                  "Most of your money is in few sectors. A portfolio spread across more sectors is less exposed to one sector's bad news.")
 
     structure_score = round(diversification_score * 0.6 + concentration_score * 0.4)
 
@@ -186,15 +206,21 @@ def calculate_health():
                     min_car = 11.0 if sector == "Commercial Bank" else 8.0
                     exc_car = 14.0 if sector == "Commercial Bank" else 15.0
                     
+                    # min_car equals the NRB minimum (checked 2026-11-15):
+                    # - commercial banks 11% (minimum total capital ratio plus conservation buffer),
+                    #   NRB Unified Directive 2082 for class A/B/C, Directive 1 and the Capital Adequacy
+                    #   Framework, https://www.nrb.org.np/contents/uploads/2026/01/Unified-Directive-ABC-2082.pdf
+                    # - microfinance 8% total capital fund (core capital 4%), NRB Unified Directive 2082
+                    #   for class D, Directive 1(1), https://www.nrb.org.np/contents/uploads/2026/01/MFI-Unified-Directive-2082.pdf
+                    # exc_car is this tool's own line for a comfortable cushion.
                     if car < min_car:
                         car_score = 0.0
-                        warnings.append(
-                            f"Regulatory Capital Adequacy Alert: {sym} CAR ({car:.2f}%) is below the NRB requirement of {min_car:.1f}%. "
-                            f"Banks failing to meet CAR requirements face strict corrective action, including dividend distribution bans."
-                        )
-                        recommendations.append(
-                            f"Stop accumulating {sym} and monitor upcoming earnings to see if CAR recovers above {min_car:.1f}%."
-                        )
+                        warn("w_car_low", {"symbol": sym, "carPct": round(car, 2), "sector": sector, "thresholdPct": min_car},
+                             f"Capital Adequacy Alert: {sym} has a capital adequacy ratio (CAR) of {car:.2f}%, below the {min_car:.0f}% minimum "
+                             f"that Nepal Rastra Bank sets for a {sector}. A bank or microfinance below the minimum can be stopped from paying dividends.")
+                        recommend("r_car_low", {"symbol": sym, "carPct": round(car, 2)},
+                                  f"{sym}'s CAR is {car:.2f}%. Check the next quarterly reports to see whether it is rising, "
+                                  f"and look for any Nepal Rastra Bank notice about {sym}'s capital.")
                     elif car >= exc_car:
                         car_score = 100.0
                     else:
@@ -209,25 +235,32 @@ def calculate_health():
                         elif 75.0 <= cd <= 88.0: cd_score = 85.0
                         elif cd > 90.0:
                             cd_score = 30.0
-                            warnings.append(
-                                f"Liquidity Strain Warning: {sym} CD ratio ({cd:.2f}%) exceeds the regulatory limit of 90.0%. "
-                                f"This limits credit expansion capacity and puts negative pressure on interest margins."
-                            )
-                            recommendations.append(
-                                f"Prefer commercial banks with CD ratios in the stable 80-85% range for safer credit growth capacity."
-                            )
+                            # 90% is the NRB ceiling for class A/B/C (checked 2026-11-15): NRB Unified
+                            # Directive 2082, Directive 5, clause 6(6) ("CD Ratio ... maximum limit 90 percent"),
+                            # https://www.nrb.org.np/contents/uploads/2026/01/Unified-Directive-ABC-2082.pdf
+                            warn("w_cd_high_bank", {"symbol": sym, "cdPct": round(cd, 2)},
+                                 f"Liquidity Strain Warning: {sym} has lent out {cd:.2f}% of its deposits (CD ratio), which is very high. "
+                                 f"As of November 2026, Nepal Rastra Bank caps this ratio at 90% for banks. A bank at or above the cap has little room "
+                                 f"to give new loans, which can squeeze interest income.")
+                            recommend("r_cd_high_bank", {"symbol": sym, "cdPct": round(cd, 2)},
+                                      f"{sym}'s CD ratio is {cd:.2f}%. A bank that has lent out almost all its deposits has less room to grow its loans. "
+                                      f"Check how this ratio moves in the next quarterly reports.")
                     else:  # Microfinance
+                        # 125% is this tool's own line, not a rule. NRB sets no CD ratio ceiling for
+                        # microfinance. Its limit is on total funds raised (savings, deposits, borrowing
+                        # and debentures together): at most 30 times core capital, NRB Unified Directive
+                        # 2082 for class D, Directive 15(1)(a), checked 2026-11-15,
+                        # https://www.nrb.org.np/contents/uploads/2026/01/MFI-Unified-Directive-2082.pdf
+                        # The sentence below therefore states no number.
                         if 90.0 <= cd <= 115.0: cd_score = 100.0
                         elif 85.0 <= cd <= 125.0: cd_score = 80.0
                         elif cd > 125.0:
                             cd_score = 40.0
-                            warnings.append(
-                                f"Microfinance Leverage Warning: {sym} CD ratio is {cd:.2f}%, exceeding the microfinance ceiling of 120.0%. "
-                                f"This high CD ratio highlights heavy dependency on commercial bank wholesale lending."
-                            )
-                            recommendations.append(
-                                f"Monitor {sym}'s Cost of Funds (COF) carefully, as wholesale borrowing costs directly squeeze margins."
-                            )
+                            warn("w_cd_high_mfi", {"symbol": sym, "cdPct": round(cd, 2)},
+                                 f"Microfinance Leverage Warning: {sym} CD ratio is {cd:.2f}%, which is high for a microfinance. "
+                                 f"It means {sym} lends much more than it collects in deposits and depends on loans from banks.")
+                            recommend("r_cd_high_mfi", {"symbol": sym},
+                                      f"Check {sym}'s cost of funds (COF) in the quarterly report. Money borrowed from banks costs more, and that cost cuts into profit.")
                 
                 # Cost of Funds (COF) Score
                 cof = plausible_percent(first_value(raw, "Cost of funds", "Cost of Funds", "cost_of_funds"), 25.0)
@@ -237,7 +270,8 @@ def calculate_health():
                     elif cof < 7.5: cof_score = 85.0
                     elif cof > 9.5:
                         cof_score = 30.0
-                        warnings.append(f"Margin Squeeze: {sym} Cost of Funds is very high at {cof:.2f}%.")
+                        warn("w_cof_high", {"symbol": sym, "cofPct": round(cof, 2)},
+                             f"Margin Squeeze: {sym} Cost of Funds is very high at {cof:.2f}%.")
                 
                 # NPL Score
                 npl = plausible_percent(first_value(raw, "NPL", "npl"), 40.0)
@@ -247,13 +281,12 @@ def calculate_health():
                     elif npl <= 3.0: npl_score = 80.0
                     elif npl > 5.0:
                         npl_score = 20.0
-                        warnings.append(
-                            f"Asset Quality Alert: {sym} NPL ratio ({npl:.2f}%) exceeds the critical 5.0% threshold. "
-                            f"High NPLs require heavy provision charges which severely reduce net income and dividend capacity."
-                        )
-                        recommendations.append(
-                            f"Review the loan loss provision coverage ratio for {sym} to verify if write-offs are sufficiently covered."
-                        )
+                        # 5% is this tool's own alert line, not a regulatory figure.
+                        warn("w_npl_high", {"symbol": sym, "nplPct": round(npl, 2), "thresholdPct": 5.0},
+                             f"Asset Quality Alert: {sym} NPL ratio ({npl:.2f}%) is above the 5.0% level this tool treats as high. "
+                             f"High NPLs require heavy provision charges which severely reduce net income and dividend capacity.")
+                        recommend("r_npl_high", {"symbol": sym},
+                                  f"Check in {sym}'s quarterly report how much of its bad loans is already covered by provisions (money set aside for losses).")
                 
                 scrip_score = 0.35 * car_score + 0.25 * cd_score + 0.20 * cof_score + 0.20 * npl_score
                 
@@ -270,13 +303,11 @@ def calculate_health():
                     elif de <= 1.6: de_score = 60.0
                     elif de > 2.0:
                         de_score = 20.0
-                        warnings.append(
-                            f"High Balance Sheet Leverage: {sym} Debt-to-Equity is {de:.2f} (safe limit: < 2.0). "
-                            f"Hydropower projects with excessive debt carry high fixed interest expenses that eat profits in dry seasons."
-                        )
-                        recommendations.append(
-                            f"Favor hydropowers with lower debt loads such as CHCL or BHL/MEN to reduce interest expense vulnerability."
-                        )
+                        warn("w_de_high", {"symbol": sym, "de": round(de, 2), "limit": 2.0},
+                             f"High Balance Sheet Leverage: {sym} Debt-to-Equity is {de:.2f} (this tool's comfort line: below 2.0). "
+                             f"Hydropower projects with excessive debt carry high fixed interest expenses that eat profits in dry seasons.")
+                        recommend("r_de_high", {"symbol": sym},
+                                  "Hydropower companies with heavy debt lose more of their income to interest. Check the debt level in the latest quarterly report.")
                 
                 # ROA Score
                 roa = computed.get("roa_ttm") or computed.get("roa")
@@ -331,27 +362,38 @@ def calculate_health():
         # 1. Promoter holding check
         if promoter_holding is not None:
             min_promoter = 51.0 if sector in ["Commercial Bank", "Development Bank", "Life Insurance", "Non-Life Insurance"] else 30.0
+            # min_promoter is this tool's scoring line. Rule checked 2026-11-15: for NRB-licensed
+            # banks, finance companies and microfinance, promoter shares may be turned into public
+            # shares only while the promoter group keeps at least 51% (NRB Unified Directive 2082,
+            # Directive 9 for class A/B/C and the class D directive, under BAFIA 2073 s. 11(4);
+            # https://www.nrb.org.np/contents/uploads/2026/01/Unified-Directive-ABC-2082.pdf and
+            # https://www.nrb.org.np/contents/uploads/2026/01/MFI-Unified-Directive-2082.pdf).
+            # The 51% line for insurers was not verified, so their sentence states no minimum.
+            # Note: Finance and Microfinance fall under the 51% rule but this check uses 30% for them.
             if promoter_holding < min_promoter:
-                warnings.append(
-                    f"Low Promoter Shareholding: {sym} promoter holding is {promoter_holding:.1f}% "
-                    f"(minimum recommended: {min_promoter:.1f}%). Low skin-in-the-game by promoters "
-                    f"increases governance risks and potential for management misalignment."
-                )
-                recommendations.append(
-                    f"Investigate why promoters have reduced stake in {sym} and monitor management stability."
-                )
+                warn("w_promoter_low", {"symbol": sym, "promoterPct": round(promoter_holding, 1)},
+                     f"Low Promoter Shareholding: {sym} promoter holding is {promoter_holding:.1f}%, "
+                     f"low for its sector. When promoters own less, they have less of their own money at stake "
+                     f"in how the company is run.")
+                if sector in NRB_PROMOTER_RULE_SECTORS:
+                    recommend("r_promoter_low_bfi", {"symbol": sym},
+                              f"Nepal Rastra Bank lets promoters of banks, finance companies and microfinance turn their shares "
+                              f"into public shares only while the promoter group keeps at least 51%. Check {sym}'s notices to see "
+                              f"why the promoter share is lower, and whether management has changed recently.")
+                else:
+                    recommend("r_promoter_low", {"symbol": sym},
+                              f"Check {sym}'s notices to see whether promoters have reduced their stake, and whether management has changed recently.")
                 scrip_score = max(0.0, scrip_score - 15.0)
-                
+
         # 2. Liquidity check
         if avg_volume_120d is not None:
             if avg_volume_120d < 5000:
-                warnings.append(
-                    f"Low Liquidity alert: {sym} has an average 120-day volume of {int(avg_volume_120d):,} shares. "
-                    f"Illiquid counters suffer from high slippage, making it hard to exit large positions quickly."
-                )
-                recommendations.append(
-                    f"Avoid building large positions in {sym} and be prepared for potential exit delays during market stress."
-                )
+                warn("w_liquidity_low", {"symbol": sym, "avgVolume": int(avg_volume_120d)},
+                     f"Low Liquidity alert: {sym} has an average 120-day volume of {int(avg_volume_120d):,} shares. "
+                     f"Illiquid counters suffer from high slippage, making it hard to exit large positions quickly.")
+                recommend("r_liquidity_low", {"symbol": sym, "avgVolume": int(avg_volume_120d)},
+                          f"Only about {int(avg_volume_120d):,} {sym} shares trade on a normal day. Check the daily volume before a large order: "
+                          f"it can take days to fill, and the price can move while it does.")
                 scrip_score = max(0.0, scrip_score - 10.0)
 
         fundamental_scores.append(scrip_score)
@@ -366,7 +408,8 @@ def calculate_health():
 
     # Add strength if fundamentals score is high
     if fundamentals_score >= 80:
-        strengths.append("The portfolio is anchored by highly profitable and capital-efficient businesses.")
+        strength("s_fundamentals_strong", {"score": fundamentals_score},
+                 "The portfolio is anchored by highly profitable and capital-efficient businesses.")
 
     # ---------------------------------------------------------
     # Pillar 3: Valuation Margin of Safety (20% weight)
@@ -436,13 +479,12 @@ def calculate_health():
         if sect_avg and pe is not None and pe > 0:
             avg_pe = sect_avg.get("pe")
             if avg_pe and pe > 1.5 * avg_pe:
-                warnings.append(
-                    f"Relative Overvaluation Warning: {sym} P/E ({pe:.1f}) is more than 50% higher than its sector median P/E ({avg_pe:.1f}). "
-                    f"Paying an extreme premium relative to industry peers decreases your safety margin."
-                )
-                recommendations.append(
-                    f"Investigate if {sym} merits this premium, or consider shifting capital to cheaper peers in the {h['sector']} sector."
-                )
+                warn("w_pe_premium",
+                     {"symbol": sym, "pe": round(pe, 1), "sectorPe": round(avg_pe, 1), "sector": h["sector"]},
+                     f"Relative Overvaluation Warning: {sym} P/E ({pe:.1f}) is more than 50% higher than its sector median P/E ({avg_pe:.1f}). "
+                     f"Paying an extreme premium relative to industry peers decreases your safety margin.")
+                recommend("r_pe_premium", {"symbol": sym, "sector": h["sector"]},
+                          f"Check why {sym} is priced above its peers in the {h['sector']} sector, and whether its earnings support that price.")
                 scrip_val_score = max(0.0, scrip_val_score - 15.0)
 
         valuation_scores.append(scrip_val_score)
@@ -454,10 +496,13 @@ def calculate_health():
         valuation_score = 60
 
     if valuation_score >= 75:
-        strengths.append("High Margin of Safety: Portfolio is priced reasonably relative to its earnings power.")
+        strength("s_valuation_reasonable", {"score": valuation_score},
+                 "High Margin of Safety: Portfolio is priced reasonably relative to its earnings power.")
     elif valuation_score < 50:
-        warnings.append("Valuation warning: Portfolio components are trading at premium multiples relative to earnings.")
-        recommendations.append("Consider locking in profits on extremely high PE/PB holdings and reallocating to value-zone stocks.")
+        warn("w_valuation_high", {"score": valuation_score},
+             "Valuation warning: Portfolio components are trading at premium multiples relative to earnings.")
+        recommend("r_valuation_high", {"score": valuation_score},
+                  "Some holdings are priced very high compared with their earnings and book value. Prices like that fall harder when results disappoint.")
 
     # ---------------------------------------------------------
     # Pillar 4: Dividend & Compounding Quality (15% weight)
@@ -513,8 +558,11 @@ def calculate_health():
                 alignment = 100
             elif roe < 10.0:
                 alignment = 45
-                warnings.append(f"Compounding Drag: {sym} has low ROE ({roe:.1f}%) but issues bonus shares, causing capital dilution.")
-                recommendations.append(f"For low ROE holdings like {sym}, prefer cash dividends over bonus share issuances.")
+                warn("w_bonus_low_roe", {"symbol": sym, "roePct": round(roe, 1)},
+                     f"Compounding Drag: {sym} has low ROE ({roe:.1f}%) but issues bonus shares, causing capital dilution.")
+                recommend("r_bonus_low_roe", {"symbol": sym, "roePct": round(roe, 1)},
+                          f"{sym} earns {roe:.1f}% on its shareholders' money but still issues bonus shares. Bonus shares raise the share count; "
+                          f"check whether profit grows fast enough to keep EPS from falling.")
         elif cash_pct and cash_pct > 0:
             if roe > 15.0:
                 alignment = 70 # paying cash when they could compound inside
@@ -532,7 +580,8 @@ def calculate_health():
     dividend_score = round(yield_score * 0.5 + avg_alignment * 0.5)
 
     if total_yield >= 4.5:
-        strengths.append(f"High income potential: Portfolio is yielding {total_yield:.2f}% in cash flow.")
+        strength("s_high_yield", {"yieldPct": round(total_yield, 2)},
+                 f"High income potential: Portfolio is yielding {total_yield:.2f}% in cash flow.")
 
     # ---------------------------------------------------------
     # Pillar 5: Market Risk & Volatility (20% weight)
@@ -560,10 +609,15 @@ def calculate_health():
         }
         for finding in risk["findings"]:
             if finding["severity"] in ("high", "medium") and finding["code"] != "concentration":
-                warnings.append(f"{finding['title']}. {finding['detail']}")
+                # The finding already carries its own code and params (portfolio_risk.py);
+                # the app rebuilds it with src/lib/findingText.ts.
+                warn("w_risk_finding",
+                     {"finding": {"code": finding["code"], "params": finding.get("params") or {},
+                                  "title": finding["title"], "detail": finding["detail"]}},
+                     f"{finding['title']}. {finding['detail']}")
         if ratio is not None and ratio <= 0.9:
-            strengths.append(
-                f"The portfolio swings less than the market (about {ratio:.1f}x market volatility).")
+            strength("s_low_volatility", {"ratio": round(ratio, 2)},
+                     f"The portfolio swings less than the market (about {ratio:.1f}x market volatility).")
 
     history = portfolio_data.get("valueHistory", [])
     if history:
@@ -571,16 +625,36 @@ def calculate_health():
         invested = [pt["invested"] for pt in history if pt.get("invested", 0) > 0]
         if vals and invested and vals[-1] < invested[-1]:
             loss_pct = (invested[-1] - vals[-1]) / invested[-1] * 100
-            warnings.append(f"Current portfolio value is resting at {loss_pct:.1f}% below total invested cost.")
+            warn("w_below_cost", {"lossPct": round(loss_pct, 1)},
+                 f"Current portfolio value is resting at {loss_pct:.1f}% below total invested cost.")
 
     # ---------------------------------------------------------
-    # NRB Margin Lending Cap Warning (Rs. 25 Crores)
+    # Very large single holding (margin lending limits)
     # ---------------------------------------------------------
-    NRB_CAP_NPR = 250000000.0  # 25 Crores
+    # Rs. 25 crore is this tool's trigger only, kept from the old per-borrower cap. Checked
+    # 2026-11-15, Nepal Rastra Bank no longer sets a fixed amount per borrower:
+    # - NRB Unified Directive 2082 for class A/B/C (Magh 2082), Directive 2, clause 17(ka): no
+    #   per-borrower amount; total margin loans of a bank at most 40% of its core capital (17(ka)(7)),
+    #   https://www.nrb.org.np/contents/uploads/2026/01/Unified-Directive-ABC-2082.pdf
+    #   (the Rs. 25 crore single-borrower cap was removed by an NRB circular of 8 October 2025,
+    #   reported by ShareSansar the same day; that circular itself was not opened).
+    # - NRB circular ref. BFRD/Policy/Circular/19/082/83 dated 2083/03/31 (15 July 2026), amending
+    #   clause 17(ka)(2): loan at most 70% of the lower of the 180-day average closing price and
+    #   the market price, up to 10 points more for shares of companies the bank rates as strong,
+    #   https://www.nrb.org.np/category/circulars/ (page 2, "Circular No. 19 (ka, kha, ga) 2082/83").
+    # - Monetary Policy 2083/84, para 20: share-loan limits to be set by each institution's strength,
+    #   https://www.nrb.org.np/category/monetary-policy/
+    # The owner may want to retire this warning, since no regulatory cap now sits behind it.
+    LARGE_HOLDING_NPR = 250000000.0
     for h in holdings_processed:
-        if h["currentValue"] > NRB_CAP_NPR:
-            warnings.append(f"Regulatory Cap Threat: Your holding in {h['symbol']} (Rs. {h['currentValue']:,.2f}) exceeds the NRB single-obligor margin lending cap of Rs. 25 Crores.")
-            recommendations.append(f"Consider diversifying out of {h['symbol']} to avoid lending-related liquidity constraints.")
+        if h["currentValue"] > LARGE_HOLDING_NPR:
+            warn("w_margin_cap", {"symbol": h["symbol"], "value": round(h["currentValue"], 2)},
+                 f"Very Large Holding: Your holding in {h['symbol']} is worth Rs. {h['currentValue']:,.2f}. "
+                 f"As of November 2026, Nepal Rastra Bank sets no fixed limit on how much one person can borrow against shares (margin loan). "
+                 f"A bank lends at most 70% of the shares' value (80% for shares of companies it rates as strong), and each bank sets its own limits.")
+            recommend("r_margin_cap", {"symbol": h["symbol"]},
+                      f"If you borrow against your {h['symbol']} shares, ask your bank how much it lends against them. "
+                      f"If the price falls, the bank can ask you for more collateral or sell the shares.")
 
     # ---------------------------------------------------------
     # Overall Score Calculation
@@ -602,34 +676,50 @@ def calculate_health():
     elif overall_score >= 40: grade = 'D'
     else: grade = 'F'
 
-    # 4. Generate Text Summary
-    text_summary = (
-        f"Your portfolio is graded '{grade}' with an overall health score of {overall_score}/100. "
-    )
+    # 4. Generate Text Summary: built from parts so the app can show each part in Nepali.
+    summary_items = []
+
+    def summary(code, params, text):
+        summary_items.append({"code": code, "params": params, "text": text})
+
+    summary("sum_grade", {"grade": grade, "score": overall_score},
+            f"Your portfolio is graded '{grade}' with an overall health score of {overall_score}/100.")
     if overall_score >= 80:
-        text_summary += "This indicates excellent balance sheet strength, strong profitability, and conservative valuations. "
+        summary("sum_level_high", {"score": overall_score},
+                "This indicates excellent balance sheet strength, strong profitability, and conservative valuations.")
     elif overall_score >= 60:
-        text_summary += "This indicates moderate health. Your portfolio is diversified but contains some elevated leverage or valuation risks that warrant closer monitoring. "
+        summary("sum_level_mid", {"score": overall_score},
+                "This indicates moderate health. Your portfolio is diversified but contains some elevated leverage or valuation risks that warrant closer monitoring.")
     else:
-        text_summary += "This indicates high risk. Several core holdings show weak capital adequacy, poor asset quality, or extreme concentration. "
-        
-    text_summary += f"The portfolio's structure scores {structure_score}/100 in diversification. "
+        summary("sum_level_low", {"score": overall_score},
+                "This indicates high risk. Several core holdings show weak capital adequacy, poor asset quality, or extreme concentration.")
+
+    summary("sum_structure", {"score": structure_score},
+            f"The portfolio's structure scores {structure_score}/100 in diversification.")
     if max_weight > 0.25:
-        text_summary += f"The primary structural issue is high concentration in {max_stock} ({max_weight*100:.1f}%). "
+        summary("sum_concentrated", {"symbol": max_stock, "weightPct": round(max_weight * 100, 1)},
+                f"The primary structural issue is high concentration in {max_stock} ({max_weight*100:.1f}%).")
     else:
-        text_summary += "Your stock concentration is well balanced. "
-        
-    text_summary += f"Financial fundamentals score {fundamentals_score}/100, "
-    bank_warnings = [w for w in warnings if "Regulatory" in w or "NPL" in w]
-    hydro_warnings = [w for w in warnings if "Leverage" in w or "High" in w]
-    if bank_warnings and hydro_warnings:
-        text_summary += "reflecting capital adequacy (CAR) limits in your banks and high debt levels in your hydropower holdings."
-    elif bank_warnings:
-        text_summary += "reflecting capital adequacy (CAR) or bad loan issues in your banking holdings."
-    elif hydro_warnings:
-        text_summary += "reflecting high debt loads in your hydropower holdings."
+        summary("sum_concentration_ok", {},
+                "Your stock concentration is well balanced.")
+
+    # Which fundamentals problems were found, read from the warning codes.
+    codes = {w["code"] for w in warning_items}
+    bank_issue = bool(codes & {"w_car_low", "w_npl_high"})
+    hydro_issue = "w_de_high" in codes
+    if bank_issue and hydro_issue:
+        summary("sum_fund_bank_hydro", {"score": fundamentals_score},
+                f"Financial fundamentals score {fundamentals_score}/100, reflecting capital adequacy (CAR) limits in your banks and high debt levels in your hydropower holdings.")
+    elif bank_issue:
+        summary("sum_fund_bank", {"score": fundamentals_score},
+                f"Financial fundamentals score {fundamentals_score}/100, reflecting capital adequacy (CAR) or bad loan issues in your banking holdings.")
+    elif hydro_issue:
+        summary("sum_fund_hydro", {"score": fundamentals_score},
+                f"Financial fundamentals score {fundamentals_score}/100, reflecting high debt loads in your hydropower holdings.")
     else:
-        text_summary += "reflecting healthy earnings and clean balance sheets across all major holdings."
+        summary("sum_fund_clean", {"score": fundamentals_score},
+                f"Financial fundamentals score {fundamentals_score}/100, reflecting healthy earnings and clean balance sheets across all major holdings.")
+    text_summary = " ".join(s["text"] for s in summary_items)
 
     # Build response structure
     result = {
@@ -638,26 +728,31 @@ def calculate_health():
         "textSummary": text_summary,
         "pillars": {
             "structure": {
+                "id": "structure",
                 "name": "Diversification & Structure",
                 "score": structure_score,
                 "description": "Measures sector weight balance and concentration limits."
             },
             "fundamentals": {
+                "id": "fundamentals",
                 "name": "Financial Fundamentals",
                 "score": fundamentals_score,
                 "description": "Sector-aware banking metrics (CAR, CD, COF) and hydropower leverage analysis."
             },
             "valuation": {
+                "id": "valuation",
                 "name": "Margin of Safety",
                 "score": valuation_score,
                 "description": "Portfolio pricing relative to book value, earnings, and PEG growth metrics."
             },
             "dividend": {
+                "id": "dividend",
                 "name": "Dividend & Compounding",
                 "score": dividend_score,
                 "description": "Cash flow yield and ROE-to-retention alignment."
             },
             "volatility": {
+                "id": "volatility",
                 "name": "Market Risk & Drawdown",
                 "score": volatility_score,
                 "description": "Measured price swings against the market and the deepest historical fall of the current mix."
@@ -672,9 +767,15 @@ def calculate_health():
             } for h in holdings_processed
         ],
         "risk": risk_summary,
-        "strengths": strengths,
-        "warnings": warnings,
-        "recommendations": recommendations,
+        # Plain English lists, unchanged in shape for older readers.
+        "strengths": [s["text"] for s in strength_items],
+        "warnings": [w["text"] for w in warning_items],
+        "recommendations": [r["text"] for r in recommendation_items],
+        # Same sentences with code and params, for the app to show in the reader's language.
+        "strengthItems": strength_items,
+        "warningItems": warning_items,
+        "recommendationItems": recommendation_items,
+        "summaryItems": summary_items,
         "calculatedAt": datetime.now().isoformat()
     }
 

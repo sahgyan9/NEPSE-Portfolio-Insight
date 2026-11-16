@@ -183,4 +183,112 @@ def test_relative_valuation_premium_warning(mock_portfolio, mock_fundamentals):
     assert any("Relative Overvaluation" in w and "NABIL" in w for w in warnings), "Should warn about relative overvaluation of NABIL"
 
 
+# ---------------------------------------------------------------- translation support
+# Every sentence the health report shows is also sent as {code, params, text} so the app can
+# build it in Nepali (src/lib/healthText.ts, `health.<code>` templates).
+
+import ast  # noqa: E402
+import inspect  # noqa: E402
+import re  # noqa: E402
+
+sys.path.insert(0, os.path.join(project_root, "tools"))
+import portfolio_health as ph  # noqa: E402
+
+LOCALES = os.path.join(project_root, "src", "i18n", "locales")
+ITEM_LISTS = ("strengthItems", "warningItems", "recommendationItems", "summaryItems")
+HELPERS = {"strength": "s_", "warn": "w_", "recommend": "r_", "summary": "sum_"}
+
+
+def locale_keys(lang, namespace):
+    """Keys of a flat locale file (`key: "text"` or `key:` followed by the string)."""
+    path = os.path.join(LOCALES, lang, f"{namespace}.ts")
+    with open(path, "r", encoding="utf-8") as f:
+        return set(re.findall(r"^\s*([A-Za-z_][\w]*)\s*:", f.read(), flags=re.M))
+
+
+def emitted_health_codes():
+    """Every code passed to strength/warn/recommend/summary in calculate_health()."""
+    tree = ast.parse(inspect.getsource(ph.calculate_health))
+    calls = [n for n in ast.walk(tree)
+             if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id in HELPERS]
+    return tree, calls
+
+
+def test_health_items_carry_code_and_params(mock_portfolio, mock_fundamentals):
+    mock_portfolio([
+        {"symbol": "NABIL", "quantity": 100, "avgCost": 500.0},
+        {"symbol": "HBL", "quantity": 100, "avgCost": 200.0},
+        {"symbol": "UPPER", "quantity": 200, "avgCost": 200.0},
+    ])
+    mock_fundamentals({
+        "NABIL": {"eps": 10.0, "bookValue": 100.0, "peRatio": 32.0, "pbRatio": 2.0,
+                  "promoterHolding": 48.0, "avgVolume120d": 12000},
+        "HBL": {"eps": 10.0, "bookValue": 100.0, "peRatio": 10.0, "pbRatio": 1.0},
+        "UPPER": {"eps": -1.03, "bookValue": 46.69, "peRatio": -184.54, "pbRatio": 4.07,
+                  "avgVolume120d": 3200},
+    })
+    res = subprocess.run([python_bin, script_path], capture_output=True, text=True)
+    assert res.returncode == 0, res.stderr
+    with open(health_out_path, "r", encoding="utf-8") as f:
+        health = json.load(f)
+
+    for key in ITEM_LISTS:
+        assert isinstance(health[key], list), key
+        for item in health[key]:
+            assert isinstance(item.get("code"), str) and item["code"], item
+            assert isinstance(item.get("params"), dict), item
+            assert isinstance(item.get("text"), str) and item["text"], item
+    assert health["warningItems"] and health["recommendationItems"] and health["summaryItems"]
+    # The old plain-string lists are kept, in the same order, for older readers.
+    assert health["strengths"] == [i["text"] for i in health["strengthItems"]]
+    assert health["warnings"] == [i["text"] for i in health["warningItems"]]
+    assert health["recommendations"] == [i["text"] for i in health["recommendationItems"]]
+    assert health["textSummary"] == " ".join(i["text"] for i in health["summaryItems"])
+    for pid, pillar in health["pillars"].items():
+        assert pillar["id"] == pid
+    codes = {i["code"] for i in health["warningItems"]}
+    assert {"w_promoter_low", "w_liquidity_low", "w_pe_premium"} <= codes
+
+
+def test_every_health_sentence_goes_through_a_helper():
+    """Static guard: each emit site passes a constant code with the right prefix and a params dict,
+    and nothing appends to the item lists except the four helpers."""
+    tree, calls = emitted_health_codes()
+    assert len(calls) >= 40
+    for c in calls:
+        assert len(c.args) == 3, ast.dump(c)
+        assert isinstance(c.args[0], ast.Constant) and isinstance(c.args[0].value, str), ast.dump(c)
+        assert c.args[0].value.startswith(HELPERS[c.func.id]), c.args[0].value
+        assert isinstance(c.args[1], ast.Dict), c.args[0].value
+    appends = [n for n in ast.walk(tree)
+               if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and n.func.attr == "append"
+               and isinstance(n.func.value, ast.Name)]
+    targets = [n.func.value.id for n in appends]
+    item_appends = [t for t in targets if t.endswith("_items")]
+    assert sorted(item_appends) == sorted(["strength_items", "warning_items", "recommendation_items", "summary_items"])
+    # The old string lists must not come back as separate emit sites.
+    names = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name)}
+    assert not names & {"strengths", "warnings", "recommendations"}
+
+
+def test_every_health_code_has_templates_in_both_languages():
+    _, calls = emitted_health_codes()
+    codes = {c.args[0].value for c in calls}
+    pillars = {f"pillar_{p}_{part}" for p in ("structure", "fundamentals", "valuation", "dividend", "volatility")
+               for part in ("name", "desc")}
+    en, ne = locale_keys("en", "health"), locale_keys("ne", "health")
+    assert en == ne, f"en/ne key mismatch: {sorted(en ^ ne)}"
+    missing = sorted((codes | pillars) - en)
+    assert not missing, f"codes without a health template: {missing}"
+
+
+def test_performance_note_code_has_templates():
+    with open(os.path.join(project_root, "tools", "portfolio_risk.py"), "r", encoding="utf-8") as f:
+        codes = re.findall(r'performance\["noteCode"\]\s*=\s*"(\w+)"', f.read())
+    assert codes
+    for lang in ("en", "ne"):
+        keys = locale_keys(lang, "home")
+        for code in codes:
+            assert f"rvmNote_{code}" in keys, (lang, code)
+
 

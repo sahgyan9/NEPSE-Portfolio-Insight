@@ -168,6 +168,110 @@ def test_portfolio_totals(tmp_path):
     assert p["pe_at_cost"] == 10.0 and p["market_pe"] == 20.0
 
 
+# ---------------------------------------------------------------- translation support
+# Flags, notes and skip reasons carry a code and params so the app can build the sentence
+# in Nepali (src/lib/epsText.ts, `eps.*` templates).
+
+import ast  # noqa: E402
+import inspect  # noqa: E402
+import re  # noqa: E402
+
+LOCALES = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src", "i18n", "locales")
+
+
+def locale_keys(lang, namespace):
+    with open(os.path.join(LOCALES, lang, f"{namespace}.ts"), "r", encoding="utf-8") as f:
+        return set(re.findall(r"^\s*([A-Za-z_][\w]*)\s*:", f.read(), flags=re.M))
+
+
+def _calls(func, name):
+    tree = ast.parse(inspect.getsource(func))
+    return tree, [n for n in ast.walk(tree)
+                  if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == name]
+
+
+def emitted_eps_keys():
+    """Template keys for every flag, note and skip reason the Python can emit."""
+    keys = set()
+    _, calls = _calls(ei.make_flags, "flag")
+    for c in calls:
+        code = c.args[0].value
+        params = c.args[2]
+        variant = next((v.value for k, v in zip(params.keys, params.values)
+                        if isinstance(k, ast.Constant) and k.value == "variant"), None)
+        keys.add(f"flag_{code}_{variant}" if variant else f"flag_{code}")
+    tree = ast.parse(inspect.getsource(ei.build_holding))
+    for d in ast.walk(tree):
+        if isinstance(d, ast.Dict):
+            for k, v in zip(d.keys, d.values):
+                if isinstance(k, ast.Constant) and k.value == "code" and isinstance(v, ast.Constant):
+                    keys.add(f"note_{v.value}")
+    keys |= {f"skip_{code}" for code in ei.SKIP_REASONS}
+    return keys
+
+
+def test_flags_notes_and_skips_carry_code_and_params(tmp_path):
+    peers = [(f"P{i}", [q("2082-83", 4, 10_000)], "Commercial Bank") for i in range(4)]
+    # falling profit, annualized gap and expensive at cost in one holding
+    mine = [q("2082-83", 1, 100), q("2082-83", 4, 10_000), q("2083-84", 1, 50, ann=0.2)]
+    res = run(tmp_path, mine, cost=2_000.0, price=100.0, extra=peers, peer_price=100.0)
+    flags = res["holdings"][0]["flags"]
+    assert {"PROFIT_FALLING", "ANNUALIZED_GAP", "EXPENSIVE_AT_COST"} <= {f["code"] for f in flags}
+    for f in flags:
+        assert isinstance(f.get("params"), dict) and f["params"], f["code"]
+        assert isinstance(f.get("text"), str) and f["text"]
+    falling = next(f for f in flags if f["code"] == "PROFIT_FALLING")
+    assert falling["params"]["variant"] == "lower" and falling["params"]["growthPct"] == -50.0
+
+    # only annualized EPS: the previous year's same quarter is missing
+    sub = tmp_path / "only_annualized"
+    sub.mkdir()
+    only_ann = run(sub, [q("2082-83", 4, 700), q("2083-84", 2, 300, ann=6.0)])["holdings"][0]
+    assert only_ann["notes"] == [n["text"] for n in only_ann["note_items"]]
+    assert [n["code"] for n in only_ann["note_items"]] == ["ONLY_ANNUALIZED"]
+    assert all(isinstance(n["params"], dict) for n in only_ann["note_items"])
+
+    write_quarterly(tmp_path, "NOSH", [q("2082-83", 4, 100, shares=None)])
+    pf = {"holdings": [{"symbol": "CSBY", "quantity": 1, "avgCost": 10},
+                       {"symbol": "GONE", "quantity": 1, "avgCost": 10},
+                       {"symbol": "NOSH", "quantity": 1, "avgCost": 10}]}
+    skipped = ei.build_insights(pf, {}, str(tmp_path), price_fn=lambda s: (None, None))["skipped"]
+    by = {s["symbol"]: s for s in skipped}
+    assert by["CSBY"]["reason_code"] == "MUTUAL_FUND"
+    assert by["GONE"]["reason_code"] == "NO_QUARTERLY"
+    assert by["NOSH"]["reason_code"] == "NO_SHARES"
+    assert all(s["reason"] == ei.SKIP_REASONS[s["reason_code"]] for s in skipped)
+
+
+def test_every_flag_emit_site_passes_params():
+    """Static guard: every flag goes through flag(code, severity, params, text) with a constant
+    code and a params dict, and nothing else appends to the flag list."""
+    tree, calls = _calls(ei.make_flags, "flag")
+    assert len(calls) >= 8
+    for c in calls:
+        assert len(c.args) == 4, ast.dump(c)
+        assert isinstance(c.args[0], ast.Constant) and isinstance(c.args[1], ast.Constant)
+        assert isinstance(c.args[2], ast.Dict), c.args[0].value
+    appends = [n for n in ast.walk(tree) if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
+               and n.func.attr == "append"]
+    assert len(appends) == 1  # the one inside flag()
+    # skipped entries are built only by skip()
+    tree = ast.parse(inspect.getsource(ei.build_insights))
+    for n in ast.walk(tree):
+        if (isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and n.func.attr == "append"
+                and isinstance(n.func.value, ast.Name) and n.func.value.id == "skipped"):
+            assert isinstance(n.args[0], ast.Call) and n.args[0].func.id == "skip"
+
+
+def test_every_eps_code_has_templates_in_both_languages():
+    keys = emitted_eps_keys()
+    assert "flag_PROFIT_FALLING_lower" in keys and "flag_PROFIT_FALLING_turned_to_loss" in keys
+    en, ne = locale_keys("en", "eps"), locale_keys("ne", "eps")
+    assert en == ne, f"en/ne key mismatch: {sorted(en ^ ne)}"
+    missing = sorted(keys - en)
+    assert not missing, f"codes without an eps template: {missing}"
+
+
 def test_real_data_anchors():
     """Reads the real quarterly files read-only."""
     fundamentals = pc.load_json(os.path.join(pc.DB_DIR, "fundamentals.json")) or {}

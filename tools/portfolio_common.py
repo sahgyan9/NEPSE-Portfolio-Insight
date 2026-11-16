@@ -112,6 +112,45 @@ def current_price(symbol, avg_cost, fundamentals=None):
     return float(avg_cost or 0.0), "cost"
 
 
+def valuation_ratios(eps, book_value, price):
+    """(P/E, P/B) from a single price. A ratio is None when it cannot be formed:
+    no positive price, EPS of exactly zero, or non-positive book value.
+    A loss (negative EPS) gives a negative P/E, the convention the scorers expect."""
+    if not isinstance(price, (int, float)) or price <= 0:
+        return None, None
+    pe = round(price / eps, 2) if isinstance(eps, (int, float)) and eps != 0 else None
+    pb = (round(price / book_value, 2)
+          if isinstance(book_value, (int, float)) and book_value > 0 else None)
+    return pe, pb
+
+
+def recompute_ratios(symbol, record):
+    """Rewrite record["peRatio"] / ["pbRatio"] from the record's own eps / bookValue.
+
+    The source sites publish a P/E built on their own EPS figure, which lags or differs
+    from the quarterly EPS we store (NIMB: eps 0.53 from the new Q1 report, site P/E 14.81
+    still on an EPS near 13.8). Copying that number leaves P/E disagreeing with EPS, so
+    both ratios are derived here from one price: the latest close in db/prices, else the
+    record's captured ltp. ratioPrice / ratioPriceDate record which price was used.
+    With no usable price, or no numeric eps, the record is left as it was.
+    """
+    price, price_date = latest_close(symbol)
+    if not price:
+        ltp = record.get("ltp")
+        if isinstance(ltp, (int, float)) and ltp > 0:
+            price, price_date = float(ltp), record.get("capturedAt")
+    if not price:
+        return record
+    pe, pb = valuation_ratios(record.get("eps"), record.get("bookValue"), price)
+    if isinstance(record.get("eps"), (int, float)):
+        record["peRatio"] = pe
+    if pb is not None:
+        record["pbRatio"] = pb
+    record["ratioPrice"] = round(price, 2)
+    record["ratioPriceDate"] = price_date
+    return record
+
+
 def sector_medians(fundamentals):
     """Median P/E and P/B per sector over profitable companies. Medians, not means:
     a handful of P/E 300+ outliers otherwise drag a sector 'average' far above its typical firm."""
