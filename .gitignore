@@ -54,3 +54,6 @@ db/portfolio_risk.json
 
 # Personal holdings-based EPS analysis (regenerated on demand)
 db/eps_insights.json
+
+# Claude Code session worktrees (local only)
+.claude/worktrees/
