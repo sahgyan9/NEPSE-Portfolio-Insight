@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-14T20:24:35.185883",
+      "parsed_at": "2026-11-16T18:02:41.750154",
       "raw": {
         "EPS(Rs.)": 101.46
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-14T20:24:35.185876",
+      "parsed_at": "2026-11-16T18:02:41.750144",
       "raw": {
         "Paid Up Capital": 422790000.0,
         "Reserve and Surplus": 624448000.0,
@@ -101,7 +101,7 @@
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-14T20:24:35.185844",
+      "parsed_at": "2026-11-16T18:02:41.750092",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 595254000.0,
@@ -171,7 +171,7 @@
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-14T20:24:35.185812",
+      "parsed_at": "2026-11-16T18:02:41.750040",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 796385000.0,
@@ -241,7 +241,7 @@
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-14T20:24:35.185780",
+      "parsed_at": "2026-11-16T18:02:41.749988",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 746827000.0,
@@ -314,7 +314,7 @@
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-14T20:24:35.185748",
+      "parsed_at": "2026-11-16T18:02:41.749928",
       "raw": {
         "Paid Up Capital": 595748000.0,
         "Reserve and Surplus": 865704000.0,
@@ -409,7 +409,7 @@
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-14T20:24:35.185715",
+      "parsed_at": "2026-11-16T18:02:41.749875",
       "raw": {
         "Paid Up Capital": 834047000.0,
         "Reserve and Surplus": 673970000.0,
@@ -504,7 +504,7 @@
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-14T20:24:35.185682",
+      "parsed_at": "2026-11-16T18:02:41.749823",
       "raw": {
         "Paid Up Capital": 834071000.0,
         "Reserve and Surplus": 822016000.0,
@@ -599,7 +599,7 @@
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-14T20:24:35.185648",
+      "parsed_at": "2026-11-16T18:02:41.749770",
       "raw": {
         "Paid Up Capital": 834071000.0,
         "Reserve and Surplus": 954691000.0,
@@ -694,7 +694,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-14T20:24:35.185615",
+      "parsed_at": "2026-11-16T18:02:41.749716",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3292848810.0,
@@ -788,7 +788,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-14T20:24:35.185582",
+      "parsed_at": "2026-11-16T18:02:41.749657",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3583727490.0,
@@ -885,7 +885,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-14T20:24:35.185548",
+      "parsed_at": "2026-11-16T18:02:41.749600",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 3957880670.0,
@@ -979,7 +979,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-14T20:24:35.185516",
+      "parsed_at": "2026-11-16T18:02:41.749532",
       "raw": {
         "Paid Up Capital": 2324100000.0,
         "Reserve and Surplus": 4036964110.0,
@@ -1073,7 +1073,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-14T20:24:35.185482",
+      "parsed_at": "2026-11-16T18:02:41.749479",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 3745120040.0,
@@ -1168,7 +1168,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-14T20:24:35.185450",
+      "parsed_at": "2026-11-16T18:02:41.749424",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 3920504920.0,
@@ -1266,7 +1266,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-14T20:24:35.185417",
+      "parsed_at": "2026-11-16T18:02:41.749370",
       "raw": {
         "Paid Up Capital": 2835402000.0,
         "Reserve and Surplus": 4186170340.0,
@@ -1363,7 +1363,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-14T20:24:35.185375",
+      "parsed_at": "2026-11-16T18:02:41.749314",
       "raw": {
         "Paid Up Capital": 2977172100.0,
         "Reserve and Surplus": 3915617790.0,
@@ -1460,7 +1460,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-14T20:24:35.185336",
+      "parsed_at": "2026-11-16T18:02:41.749223",
       "raw": {
         "Paid Up Capital": 2977172100.0,
         "Reserve and Surplus": 4087739640.0,
@@ -1558,7 +1558,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-14T20:24:35.185298",
+      "parsed_at": "2026-11-16T18:02:41.749157",
       "computed": {
         "pe_ratio": 38.7,
         "pb_ratio": 4.5,
@@ -1689,7 +1689,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-14T20:24:35.185262",
+      "parsed_at": "2026-11-16T18:02:41.749102",
       "computed": {
         "pe_ratio": 29.2,
         "pb_ratio": 3.9,
@@ -1815,7 +1815,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-14T20:24:35.185227",
+      "parsed_at": "2026-11-16T18:02:41.749044",
       "computed": {
         "pe_ratio": 25.9,
         "pb_ratio": 3.7,
@@ -1941,7 +1941,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-14T20:24:35.185192",
+      "parsed_at": "2026-11-16T18:02:41.748987",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.6,
@@ -2067,7 +2067,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-14T20:24:35.185156",
+      "parsed_at": "2026-11-16T18:02:41.748917",
       "computed": {
         "pe_ratio": 27.4,
         "pb_ratio": 4.2,
@@ -2193,7 +2193,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-14T20:24:35.185119",
+      "parsed_at": "2026-11-16T18:02:41.748858",
       "computed": {
         "pe_ratio": 26.4,
         "pb_ratio": 3.9,
@@ -2319,7 +2319,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-14T20:24:35.185082",
+      "parsed_at": "2026-11-16T18:02:41.748799",
       "computed": {
         "pe_ratio": 27.0,
         "pb_ratio": 3.9,
@@ -2445,7 +2445,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-14T20:24:35.185043",
+      "parsed_at": "2026-11-16T18:02:41.748736",
       "computed": {
         "pe_ratio": 25.5,
         "pb_ratio": 3.9,
@@ -2570,7 +2570,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:24:35.184998",
+      "parsed_at": "2026-11-16T18:02:41.748671",
       "raw": {
         "Paid Up Capital": 3617264100.0,
         "Reserve and Surplus": 5464086640.0,
@@ -2666,5 +2666,5 @@
       }
     }
   ],
-  "last_updated": "2026-11-14T20:24:35.187298"
+  "last_updated": "2026-11-16T18:02:41.751884"
 }

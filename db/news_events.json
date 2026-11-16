@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T05:36:08",
+  "generated_at": "2026-11-16T18:02:22",
   "stats": {
     "total": 138,
     "by_type": {
@@ -27,11 +27,28 @@
     "non_roundup": 85,
     "other": 0,
     "other_share": 0.0,
-    "high_confidence": 54,
-    "bodies_fetched": 2,
+    "high_confidence": 56,
+    "bodies_fetched": 4,
     "body_fetch_failures": 0
   },
   "events": [
+    {
+      "id": "99865773b4f4a0ec",
+      "symbol": "NABIL",
+      "event_type": "market_roundup",
+      "headline": "Sanima Bank Leads Deposit Rates as Average Bank Interest Rates Decline in Mangsir",
+      "date": "2026-11-16",
+      "link": "https://www.sharesansar.com/newsdetail/sanima-bank-leads-deposit-rates-as-average-bank-interest-rates-decline-in-mangsir-2026-11-16",
+      "fields": {
+        "popularity_list": false
+      },
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": true,
+      "subject_match": null,
+      "body_used": false,
+      "confidence": "low"
+    },
     {
       "id": "786a50ddbee2ad45",
       "symbol": "SHL",
@@ -1021,24 +1038,24 @@
       "date": "2026-09-28",
       "link": "https://www.sharesansar.com/newsdetail/reminder-last-trading-day-to-secure-dividend-of-three-companies-2026-09-28",
       "fields": {
-        "bonus_pct": null,
+        "bonus_pct": 10.0,
         "cash_pct": null,
         "total_pct": null,
-        "fiscal_year": null,
-        "book_close_date": null,
-        "book_close_date_bs": null,
-        "agm_date": null,
-        "agm_date_bs": null,
+        "fiscal_year": "2082/83",
+        "book_close_date": "2026-09-29",
+        "book_close_date_bs": "Ashwin 13",
+        "agm_date": "2026-10-11",
+        "agm_date_bs": "25th Ashwin, 2083",
         "last_buy_date": "2026-09-28",
         "last_buy_date_source": "article_date",
         "purpose": "dividend"
       },
-      "action_date": null,
-      "action_kind": null,
+      "action_date": "2026-09-28",
+      "action_kind": "last_buy_day",
       "is_roundup": false,
-      "subject_match": false,
-      "body_used": false,
-      "confidence": "low"
+      "subject_match": true,
+      "body_used": true,
+      "confidence": "high"
     },
     {
       "id": "81c7646784d0013d",
@@ -1195,7 +1212,7 @@
       "fields": {
         "bonus_pct": null,
         "cash_pct": null,
-        "total_pct": null,
+        "total_pct": 3.5,
         "fiscal_year": null,
         "book_close_date": null,
         "book_close_date_bs": null,
@@ -1205,12 +1222,12 @@
         "last_buy_date_source": "article_date",
         "purpose": "dividend"
       },
-      "action_date": null,
-      "action_kind": null,
+      "action_date": "2026-09-22",
+      "action_kind": "last_buy_day",
       "is_roundup": false,
-      "subject_match": false,
-      "body_used": false,
-      "confidence": "low"
+      "subject_match": true,
+      "body_used": true,
+      "confidence": "high"
     },
     {
       "id": "ea06f41c60e3f1ba",
@@ -1285,23 +1302,23 @@
       "date": "2026-09-18",
       "link": "https://www.sharesansar.com/newsdetail/sarvottam-paints-industries-limited-unveils-book-closure-date-for-its-10-dividend-calls-agm-on-ashwin-25-2026-09-18",
       "fields": {
-        "bonus_pct": null,
+        "bonus_pct": 10.0,
         "cash_pct": null,
         "total_pct": 10.0,
-        "fiscal_year": null,
-        "book_close_date": null,
-        "book_close_date_bs": null,
+        "fiscal_year": "2082/83",
+        "book_close_date": "2026-09-29",
+        "book_close_date_bs": "Ashwin 13",
         "agm_date": "2026-10-11",
         "agm_date_bs": "Ashwin 25",
         "last_buy_date": null,
         "last_buy_date_source": null,
         "purpose": "dividend"
       },
-      "action_date": null,
-      "action_kind": null,
+      "action_date": "2026-09-29",
+      "action_kind": "book_closure",
       "is_roundup": false,
       "subject_match": true,
-      "body_used": false,
+      "body_used": true,
       "confidence": "high"
     },
     {
@@ -2343,23 +2360,6 @@
     {
       "id": "759284ec549f104c",
       "symbol": "NICA",
-      "event_type": "market_roundup",
-      "headline": "Unveiling Q4 2082/83: A Comprehensive Analysis of Leading Commercial Banks and Key Financial Insights",
-      "date": "2026-08-18",
-      "link": "https://www.sharesansar.com/newsdetail/unveiling-q4-208283-a-comprehensive-analysis-of-leading-commercial-banks-and-key-financial-insights-2026-08-18",
-      "fields": {
-        "popularity_list": false
-      },
-      "action_date": null,
-      "action_kind": null,
-      "is_roundup": true,
-      "subject_match": null,
-      "body_used": false,
-      "confidence": "low"
-    },
-    {
-      "id": "759284ec549f104c",
-      "symbol": "NABIL",
       "event_type": "market_roundup",
       "headline": "Unveiling Q4 2082/83: A Comprehensive Analysis of Leading Commercial Banks and Key Financial Insights",
       "date": "2026-08-18",

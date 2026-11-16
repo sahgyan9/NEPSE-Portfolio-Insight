@@ -157,7 +157,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-14T20:24:43.912790",
+      "parsed_at": "2026-11-16T18:02:45.673016",
       "computed": {
         "pe_ratio": -14.6,
         "pb_ratio": 2.5,
@@ -232,7 +232,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-14T20:24:43.912786",
+      "parsed_at": "2026-11-16T18:02:45.673002",
       "computed": {
         "pe_ratio": -15.9,
         "pb_ratio": 2.7,
@@ -331,7 +331,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-14T20:24:43.912780",
+      "parsed_at": "2026-11-16T18:02:45.672987",
       "computed": {
         "pe_ratio": -20.1,
         "pb_ratio": 2.6,
@@ -429,7 +429,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-14T20:24:43.912775",
+      "parsed_at": "2026-11-16T18:02:45.672970",
       "computed": {
         "pe_ratio": -70.7,
         "pb_ratio": 2.3,
@@ -472,7 +472,7 @@
         "Total Assets": 22327733140.0,
         "Revenue from Operation": 906021960.0,
         "Gross Profit": 223620900.0,
-        "Total Operating Profit": 14463920000.0,
+        "Total Operating Profit": 14463920.0,
         "Net Profit": -128020830.0,
         "Number of Shares": 45676857.0,
         "EPS Reported": -11.21,
@@ -528,7 +528,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-14T20:24:43.912769",
+      "parsed_at": "2026-11-16T18:02:45.672955",
       "computed": {
         "pe_ratio": -78.1,
         "pb_ratio": 2.5,
@@ -571,7 +571,7 @@
         "Total Assets": 21910646410.0,
         "Revenue from Operation": 2081548150.0,
         "Gross Profit": 405496820.0,
-        "Total Operating Profit": 3907590000.0,
+        "Total Operating Profit": 3907590.0,
         "Net Profit": -264902710.00000003,
         "Number of Shares": 50244542.7,
         "EPS Reported": -10.54,
@@ -627,7 +627,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-14T20:24:43.912764",
+      "parsed_at": "2026-11-16T18:02:45.672941",
       "computed": {
         "pe_ratio": -78.3,
         "pb_ratio": 2.4,
@@ -724,7 +724,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:24:43.912752",
+      "parsed_at": "2026-11-16T18:02:45.672914",
       "raw": {
         "Paid Up Capital": 5024454270.0,
         "Reserve and Surplus": 3302354290.0,
@@ -791,5 +791,5 @@
       }
     }
   ],
-  "last_updated": "2026-11-14T20:24:43.913601"
+  "last_updated": "2026-11-16T18:02:45.674851"
 }
