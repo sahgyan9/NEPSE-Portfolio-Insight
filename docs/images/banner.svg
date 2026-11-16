@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="NEPSE Portfolio Insight. नेप्से पोर्टफोलियो इनसाइट.">
+  <rect width="1200" height="240" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <!-- Background chart line -->
+  <polyline points="800,150 870,128 940,140 1010,100 1080,110 1150,62" fill="none" stroke="#1842b4" stroke-opacity="0.14" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- App mark -->
+  <g transform="translate(56,64)">
+    <rect width="112" height="112" rx="22" fill="#080c0a"/>
+    <polyline points="24,80 46,68 62,84 86,34" fill="none" stroke="#33cc8c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="86" cy="34" r="6" fill="#33cc8c"/>
+  </g>
+
+  <g font-family="Inter, 'Segoe UI', 'Noto Sans', 'Noto Sans Devanagari', 'Nirmala UI', Mangal, Arial, sans-serif" fill="#0f172a">
+    <text x="204" y="104" font-size="42" font-weight="700">NEPSE Portfolio Insight</text>
+    <text x="204" y="146" font-size="26" font-weight="600" fill="#1842b4">नेप्से पोर्टफोलियो इनसाइट</text>
+    <text x="204" y="184" font-size="17" fill="#475569">A plain-language tracker for NEPSE shares. Runs on your own computer.</text>
+  </g>
+</svg>
