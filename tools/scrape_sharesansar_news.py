@@ -36,6 +36,23 @@ SLUG_DATE_RE = re.compile(r"-(\d{4}-\d{2}-\d{2})/?$")
 KEEP_DAYS = 90
 
 
+def normalize_date(value: str, link: str = "") -> str:
+    """Always store dates as ISO YYYY-MM-DD. Older items in db/news.json were
+    saved as 'Tuesday, April 28, 2026'; accept that and a few close variants.
+    Falls back to the date in the article URL slug, then to the input unchanged."""
+    s = (value or "").strip()
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})", s)
+    if m:
+        return m.group(1)
+    for fmt in ("%A, %B %d, %Y", "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y"):
+        try:
+            return datetime.strptime(s, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    m = SLUG_DATE_RE.search((link or "").split("?")[0])
+    return m.group(1) if m else s
+
+
 def parse_news_page(html: str) -> list:
     """Extract news items from a ShareSansar category listing page.
     Layout-independent: keyed on /newsdetail/ links whose slug ends in a date
@@ -108,6 +125,8 @@ def scrape_news(symbol: str, pages: int = 1):
 
     existing_items = db.get(symbol, [])
     combined = existing_items + new_items
+    for item in combined:  # one date format for every stored item
+        item["date"] = normalize_date(item.get("date", ""), item.get("link", ""))
 
     # Deduplicate by link (fallback: headline)
     merged_dict = {}
