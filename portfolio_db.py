@@ -647,6 +647,18 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 eps_data = {"error": str(e)}
             self._send_json({"insights": eps_data})
 
+        elif path == "/api/sip":
+            # Computed on request from portfolio.json and the cached NAV; nothing is written.
+            try:
+                tools_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools")
+                if tools_dir not in sys.path:
+                    sys.path.insert(0, tools_dir)
+                import sip_summary
+                sip_data = sip_summary.load_summary()
+            except Exception as e:
+                sip_data = {"error": str(e)}
+            self._send_json({"sip": sip_data})
+
         elif path == "/api/transactions":
             db = load_db()
             period = query.get("period", ["all"])[0]

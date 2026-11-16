@@ -35,6 +35,7 @@ export const SHORTCUTS: Shortcut[] = [
   { id: "go-correlation", keys: ["g", "l"], labelKey: "nav.scCorrelation", group: "Navigate", route: "/risk", section: "correlation" },
   { id: "go-research", keys: ["g", "c"], labelKey: "nav.scResearch", group: "Navigate", route: "/research" },
   { id: "go-dividends", keys: ["g", "d"], labelKey: "nav.dividends", group: "Navigate", route: "/dividends" },
+  { id: "go-sip", keys: ["g", "s"], labelKey: "nav.sip", group: "Navigate", route: "/sip" },
   { id: "go-quarterly", keys: ["g", "q"], labelKey: "nav.scQuarterly", group: "Navigate", route: "/quarterly" },
   { id: "go-fundamentals", keys: ["g", "f"], labelKey: "nav.scValuation", group: "Navigate", route: "/fundamentals" },
   { id: "go-market", keys: ["g", "m"], labelKey: "nav.market", group: "Navigate", route: "/market" },

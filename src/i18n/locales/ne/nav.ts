@@ -8,6 +8,7 @@ export default {
   risk: "जोखिम",
   research: "अध्ययन",
   dividends: "लाभांश",
+  sip: "SIP",
   quarterly: "त्रैमासिक",
   valuation: "मूल्याङ्कन",
   market: "बजार",

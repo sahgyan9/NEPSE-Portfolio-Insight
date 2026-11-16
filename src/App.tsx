@@ -13,6 +13,7 @@ import IntelligencePage from "./pages/Intelligence";
 import RiskPage from "./pages/RiskPage";
 import ResearchPage from "./pages/ResearchPage";
 import LearnPage from "./pages/LearnPage";
+import SipPage from "./pages/SipPage";
 import { ShortcutsProvider } from "./components/ShortcutsProvider";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./i18n";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/risk" element={<RiskPage />} />
           <Route path="/research" element={<ResearchPage />} />
           <Route path="/learn" element={<LearnPage />} />
+          <Route path="/sip" element={<SipPage />} />
           <Route path="/misc" element={<MiscPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

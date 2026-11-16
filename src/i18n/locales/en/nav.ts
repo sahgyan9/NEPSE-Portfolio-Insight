@@ -8,6 +8,7 @@ export default {
   risk: "Risk",
   research: "Research",
   dividends: "Dividends",
+  sip: "SIP",
   quarterly: "Quarterly",
   valuation: "Valuation",
   market: "Market",

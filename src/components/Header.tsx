@@ -4,6 +4,7 @@ import {
   BarChart3,
   RefreshCw,
   Gift,
+  PiggyBank,
   FileBarChart,
   Brain,
   ShieldAlert,
@@ -70,6 +71,7 @@ const ITEMS: Record<string, NavItem> = {
   risk: { key: "risk", labelKey: "nav.risk", icon: ShieldAlert, route: "/risk" },
   research: { key: "research", labelKey: "nav.research", icon: ClipboardCheck, route: "/research" },
   dividends: { key: "dividends", labelKey: "nav.dividends", icon: Gift, route: "/dividends" },
+  sip: { key: "sip", labelKey: "nav.sip", icon: PiggyBank, route: "/sip" },
   quarterly: { key: "quarterly", labelKey: "nav.quarterly", icon: FileBarChart, route: "/quarterly" },
   valuation: { key: "valuation", labelKey: "nav.valuation", icon: TrendingUp, route: "/fundamentals" },
   market: { key: "market", labelKey: "nav.market", icon: Activity, route: "/market" },
@@ -79,10 +81,10 @@ const ITEMS: Record<string, NavItem> = {
 
 // Simple view: the five places a new investor needs; everything else sits under "More".
 const SIMPLE_PRIMARY = [ITEMS.overview, ITEMS.myShares, ITEMS.learn, ITEMS.dividends, ITEMS.risk];
-const SIMPLE_MORE = [ITEMS.research, ITEMS.quarterly, ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
+const SIMPLE_MORE = [ITEMS.sip, ITEMS.research, ITEMS.quarterly, ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
 // Advanced view: the full list.
 const ADVANCED_PRIMARY = [ITEMS.overview, ITEMS.learn, ITEMS.holdings, ITEMS.risk, ITEMS.research, ITEMS.dividends, ITEMS.quarterly];
-const ADVANCED_MORE = [ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
+const ADVANCED_MORE = [ITEMS.sip, ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
 // Advanced items that sit in the bar only from xl up; between lg and xl they move into "More" so the bar never overflows.
 const WIDE_ONLY = new Set(["quarterly"]);
 
