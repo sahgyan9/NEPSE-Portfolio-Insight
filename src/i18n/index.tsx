@@ -19,6 +19,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, Fragment, type ReactNode } from "react";
 
 export type Lang = "ne" | "en";
+/** Date system: Bikram Sambat ("bs") or Gregorian ("ad"). Independent of language. */
+export type Calendar = "bs" | "ad";
 export type TVars = Record<string, string | number>;
 
 const STORAGE_KEY = "pi_lang";
@@ -45,8 +47,26 @@ const readStoredLang = (): Lang => {
 
 let currentLang: Lang = readStoredLang();
 
+const CALENDAR_KEY = "pi_calendar";
+const DEFAULT_CALENDAR: Calendar = "bs";
+
+const readStoredCalendar = (): Calendar => {
+  try {
+    const v = localStorage.getItem(CALENDAR_KEY);
+    if (v === "bs" || v === "ad") return v;
+  } catch {
+    /* storage unavailable */
+  }
+  return DEFAULT_CALENDAR;
+};
+
+let currentCalendar: Calendar = readStoredCalendar();
+
 /** Current language, for code that runs outside React. */
 export const getLang = (): Lang => currentLang;
+
+/** Current date system, for code that runs outside React. */
+export const getCalendar = (): Calendar => currentCalendar;
 
 const lookup = (lang: Lang, key: string): string | undefined => {
   const dot = key.indexOf(".");
@@ -67,12 +87,16 @@ export const pick = (ne: string, en: string): string => (currentLang === "ne" ? 
 interface LanguageContextValue {
   lang: Lang;
   setLang: (lang: Lang) => void;
+  calendar: Calendar;
+  setCalendar: (calendar: Calendar) => void;
   t: (key: string, vars?: TVars) => string;
 }
 
 const LanguageContext = createContext<LanguageContextValue>({
   lang: currentLang,
   setLang: () => {},
+  calendar: currentCalendar,
+  setCalendar: () => {},
   t: translate,
 });
 
@@ -89,16 +113,31 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     setLangState(next);
   }, []);
 
+  const [calendar, setCalendarState] = useState<Calendar>(currentCalendar);
+
+  const setCalendar = useCallback((next: Calendar) => {
+    currentCalendar = next;
+    try {
+      localStorage.setItem(CALENDAR_KEY, next);
+    } catch {
+      /* storage unavailable */
+    }
+    setCalendarState(next);
+  }, []);
+
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const value = useMemo<LanguageContextValue>(() => ({ lang, setLang, t: translate }), [lang, setLang]);
+  const value = useMemo<LanguageContextValue>(
+    () => ({ lang, setLang, calendar, setCalendar, t: translate }),
+    [lang, setLang, calendar, setCalendar]
+  );
 
-  // Keyed on the language so every screen re-renders with the new text and number formats.
+  // Keyed on language and date system so every screen re-renders with the new text, numbers and dates.
   return (
     <LanguageContext.Provider value={value}>
-      <Fragment key={lang}>{children}</Fragment>
+      <Fragment key={`${lang}-${calendar}`}>{children}</Fragment>
     </LanguageContext.Provider>
   );
 };

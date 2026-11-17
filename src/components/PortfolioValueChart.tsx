@@ -3,7 +3,7 @@ import { PortfolioSummary } from "@/data/portfolioData";
 import { useEffect, useState } from "react";
 import { getValueHistory, isServerRunning, ValueHistoryPoint, recordPortfolioValue, getTransactions, DBTransaction } from "@/services/portfolioDb";
 import { useT } from "@/i18n";
-import { bsMonthName, fmtDate, fmtMoney, fmtNumber, fmtPercent, toBS } from "@/i18n/format";
+import { fmtDate, fmtDayMonth, fmtMoney, fmtNumber, fmtPercent } from "@/i18n/format";
 import { fmtAxisCompact } from "@/components/charts";
 
 interface PortfolioValueChartProps {
@@ -71,9 +71,8 @@ export const PortfolioValueChart = ({ summary }: PortfolioValueChartProps) => {
           );
 
           const chartData = aggregatedHistory.map((point: ValueHistoryPoint) => {
-            const bs = toBS(point.date);
             return {
-              month: bs ? `${bs.day} ${bsMonthName(bs.month)}` : point.date,
+              month: fmtDayMonth(point.date),
               value: Math.round(point.value),
               invested: Math.round(point.invested),
               fullDate: point.date,

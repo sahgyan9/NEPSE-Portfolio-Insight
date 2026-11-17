@@ -10,6 +10,10 @@ export default {
   stripSales: "{count} पटक बिक्री",
   stripNone: "यो आर्थिक वर्ष कुनै बिक्री छैन",
   stripSee: "बेचेका सेयर हेर्नुहोस्",
+  soldToday: "आज बेचेको: {symbols}",
+  soldTodayProfit: "नाफा",
+  soldTodayLoss: "घाटा",
+  soldTodayBeforeFees: "(शुल्क र कर अघि)",
   feesNote: "यीमध्ये {count} बिक्रीमा ब्रोकर शुल्क र पुँजीगत लाभ कर अझै घटाइएको छैन। सही अङ्कका लागि बिक्री राख्दा बिलको रकम पनि हाल्नुहोस्।",
   uncountedNote: "किनेको मूल्य थाहा नभएकाले {count} बिक्री जोडिएको छैन।",
   explain:

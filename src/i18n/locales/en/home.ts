@@ -173,6 +173,8 @@ export default {
   mktError: "Could not load today's market numbers. The NEPSE data server may still be starting.",
   mktIndex: "NEPSE index",
   mktNepse: "NEPSE",
+  mktMine: "Your shares",
+  mktMineHint: "Change in the value of the shares you still hold, since the previous trading day's closing price. Shares sold today are not counted here; their profit is shown separately. Meroshare keeps sold shares until the sale settles, so its number can differ for a day or two.",
   mktUp: "Up",
   mktDown: "Down",
   mktHigh: "High: {value}",

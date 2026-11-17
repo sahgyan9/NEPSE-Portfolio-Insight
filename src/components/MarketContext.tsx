@@ -48,11 +48,18 @@ const fmtIndex = (v: number) => idx2.format(v);
 const fmtSignedPts = (v: number) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
 const timeOf = (d: Date) => d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
 
-interface MarketContextDisplayProps {
-    compact?: boolean;
+/** The user's own change since the previous close, shown beside NEPSE in the compact strip. */
+export interface PortfolioDayChange {
+    amount?: number;
+    percent?: number;
 }
 
-export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayProps) => {
+interface MarketContextDisplayProps {
+    compact?: boolean;
+    portfolioToday?: PortfolioDayChange;
+}
+
+export const MarketContextDisplay = ({ compact = false, portfolioToday }: MarketContextDisplayProps) => {
     const { t } = useT();
     const [marketData, setMarketData] = useState<MarketContext | null>(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -102,7 +109,7 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
     if (!marketData) return null;
 
     if (compact) {
-        return <CompactMarketWidget data={marketData} onRefresh={fetchData} />;
+        return <CompactMarketWidget data={marketData} onRefresh={fetchData} portfolioToday={portfolioToday} />;
     }
 
     return (
@@ -231,11 +238,17 @@ export const MarketContextDisplay = ({ compact = false }: MarketContextDisplayPr
 const CompactMarketWidget = ({
     data,
     onRefresh,
+    portfolioToday,
 }: {
     data: MarketContext;
     onRefresh: () => void;
+    portfolioToday?: PortfolioDayChange;
 }) => {
     const { t } = useT();
+    const mine = portfolioToday?.amount;
+    const hasMine = mine !== undefined && mine !== null && !Number.isNaN(mine);
+    // Under Rs. 1 either way counts as no change, same rule as the simple view.
+    const mineDir = !hasMine ? null : Math.abs(mine) < 1 ? 'flat' : mine > 0 ? 'up' : 'down';
     return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 p-3 rounded-lg bg-muted/50">
         <div className="flex items-center gap-2">
@@ -264,6 +277,29 @@ const CompactMarketWidget = ({
                     {fmtSignedPts(data.nepseIndex.change)} ({fmtPercent(data.nepseIndex.percentChange, 2)})
                 </Badge>
             </>
+        )}
+
+        {hasMine && (
+            <div className="flex items-center gap-2" title={t('home.mktMineHint')}>
+                <span className="text-sm font-medium">{t('home.mktMine')}</span>
+                <Badge
+                    variant="outline"
+                    className={mineDir === 'up'
+                        ? 'bg-green-500/10 text-green-700 border-green-500/20'
+                        : mineDir === 'down'
+                            ? 'bg-red-500/10 text-red-700 border-red-500/20'
+                            : 'text-muted-foreground'
+                    }
+                >
+                    {mineDir === 'up' && <ArrowUpRight className="w-3 h-3 mr-1" aria-hidden="true" />}
+                    {mineDir === 'down' && <ArrowDownRight className="w-3 h-3 mr-1" aria-hidden="true" />}
+                    {mineDir !== 'flat' && (
+                        <span className="sr-only">{t(mineDir === 'up' ? 'home.mktUp' : 'home.mktDown')} </span>
+                    )}
+                    {mine > 0 ? '+' : mine < 0 ? '-' : ''}{fmtMoney(Math.abs(mine))}
+                    {portfolioToday?.percent !== undefined && ` (${fmtPercent(portfolioToday.percent, 2)})`}
+                </Badge>
+            </div>
         )}
 
         {data.summary && (

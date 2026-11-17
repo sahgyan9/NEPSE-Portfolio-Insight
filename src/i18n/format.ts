@@ -3,10 +3,11 @@
  *
  * Digits stay Latin (0-9) in both languages so amounts match what investors
  * see in Meroshare and TMS. Grouping is lakh/crore (12,50,000).
- * Dates are shown in Bikram Sambat.
+ * Dates follow the user's date-system choice: Bikram Sambat (default) or AD.
+ * The fiscal year is always Nepali (Shrawan to Ashadh), whatever the choice.
  */
 import NepaliDate from "nepali-date-converter";
-import { getLang } from "./index";
+import { getCalendar, getLang } from "./index";
 
 const grouped = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
 const grouped2 = new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -70,20 +71,43 @@ export const toBS = (d: string | Date): { year: number; month: number; day: numb
 export const bsMonthName = (monthIndex: number): string =>
   (getLang() === "ne" ? NE_MONTHS : EN_MONTHS)[monthIndex] ?? "";
 
-/** "29 कात्तिक 2083"  /  "29 Kartik 2083". Falls back to the input when it cannot be parsed. */
-export const fmtDate = (d: string | Date | null | undefined): string => {
-  if (!d) return "-";
+const AD_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const AD_NE = ["जनवरी", "फेब्रुअरी", "मार्च", "अप्रिल", "मे", "जुन", "जुलाई", "अगस्ट", "सेप्टेम्बर", "अक्टोबर", "नोभेम्बर", "डिसेम्बर"];
+
+/** Day, month name and year in the chosen date system, or null when the date cannot be read. */
+const dateParts = (d: string | Date): { day: number; month: string; year: number } | null => {
+  if (getCalendar() === "ad") {
+    const date = toDate(d);
+    if (!date) return null;
+    const names = getLang() === "ne" ? AD_NE : AD_EN;
+    return { day: date.getDate(), month: names[date.getMonth()], year: date.getFullYear() };
+  }
   const bs = toBS(d);
-  if (!bs) return typeof d === "string" ? d : "-";
-  return `${bs.day} ${bsMonthName(bs.month)} ${bs.year}`;
+  return bs ? { day: bs.day, month: bsMonthName(bs.month), year: bs.year } : null;
 };
 
-/** "कात्तिक 2083"  /  "Kartik 2083" */
+/** "29 कात्तिक 2083" / "29 Kartik 2083", or "15 Nov 2026" when AD is chosen. Falls back to the input. */
+export const fmtDate = (d: string | Date | null | undefined): string => {
+  if (!d) return "-";
+  const p = dateParts(d);
+  if (!p) return typeof d === "string" ? d : "-";
+  return `${p.day} ${p.month} ${p.year}`;
+};
+
+/** "कात्तिक 2083" / "Kartik 2083", or "Nov 2026" when AD is chosen. */
 export const fmtMonthYear = (d: string | Date | null | undefined): string => {
   if (!d) return "-";
-  const bs = toBS(d);
-  if (!bs) return typeof d === "string" ? d : "-";
-  return `${bsMonthName(bs.month)} ${bs.year}`;
+  const p = dateParts(d);
+  if (!p) return typeof d === "string" ? d : "-";
+  return `${p.month} ${p.year}`;
+};
+
+/** "29 कात्तिक" / "29 Kartik", or "15 Nov" when AD is chosen. For short chart labels. */
+export const fmtDayMonth = (d: string | Date | null | undefined): string => {
+  if (!d) return "-";
+  const p = dateParts(d);
+  if (!p) return typeof d === "string" ? d : "-";
+  return `${p.day} ${p.month}`;
 };
 
 /** Gregorian date for places that must match an external source: "15 Nov 2026" */

@@ -10,6 +10,10 @@ export default {
   stripSales: "{count} sales",
   stripNone: "No sales this fiscal year",
   stripSee: "See sold shares",
+  soldToday: "Sold today: {symbols}",
+  soldTodayProfit: "Profit",
+  soldTodayLoss: "Loss",
+  soldTodayBeforeFees: "(before fees and tax)",
   feesNote: "Broker fees and capital gains tax are not yet taken off {count} of these sales. Enter the bill amount when you record a sale to get the exact figure.",
   uncountedNote: "{count} sales are left out because the buy price is not known.",
   explain:

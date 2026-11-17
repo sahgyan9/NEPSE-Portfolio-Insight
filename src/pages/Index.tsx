@@ -29,6 +29,7 @@ import { useRiskData } from "@/services/riskApi";
 import { SectionHeading } from "@/components/SectionHeading";
 import { RealizedStrip } from "@/components/realized/RealizedStrip";
 import { SoldSharesTable } from "@/components/realized/SoldSharesTable";
+import { SoldTodayLine } from "@/components/realized/SoldTodayLine";
 import { JumpLinks } from "@/components/JumpLinks";
 import { toast } from "@/hooks/use-toast";
 import { useT } from "@/i18n";
@@ -131,7 +132,13 @@ const Index = () => {
 
           <JumpLinks />
 
-          <MarketContextDisplay compact />
+          <div className="space-y-2">
+            <MarketContextDisplay
+              compact
+              portfolioToday={{ amount: summary.todayChange, percent: summary.todayChangePercent }}
+            />
+            <SoldTodayLine showLink />
+          </div>
 
           {/* 1. How am I doing? */}
           <Section id="summary" question={t("home.qSummary")}>

@@ -4,20 +4,38 @@
     {
       "name": "web",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5175
     },
     {
       "name": "portfolio-db",
       "runtimeExecutable": ".venv/Scripts/python.exe",
-      "runtimeArgs": ["portfolio_db.py"],
+      "runtimeArgs": [
+        "portfolio_db.py"
+      ],
       "port": 5001
     },
     {
       "name": "nepse-server",
       "runtimeExecutable": ".venv/Scripts/python.exe",
-      "runtimeArgs": ["nepse_server.py"],
+      "runtimeArgs": [
+        "nepse_server.py"
+      ],
       "port": 8002
+    },
+    {
+      "name": "web-alt",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "--port",
+        "5185",
+        "--strictPort"
+      ],
+      "port": 5185
     }
   ]
 }

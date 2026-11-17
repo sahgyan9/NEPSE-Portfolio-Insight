@@ -46,6 +46,7 @@ import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
 import { NewsTicker } from "./NewsTicker";
 import { LanguageToggle } from "./LanguageToggle";
+import { DateSystemToggle } from "./DateSystemToggle";
 import { ViewModeToggle } from "./ViewModeToggle";
 import { MobileTabBar } from "./MobileTabBar";
 import { StopAppDialog } from "./StopAppDialog";
@@ -292,6 +293,7 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
 
             <LanguageToggle compact className="xl:hidden" />
             <LanguageToggle className="hidden xl:inline-flex" />
+            <DateSystemToggle compact className="hidden lg:inline-flex" />
 
             <Button
               variant="ghost"
@@ -407,6 +409,10 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
               <div className="space-y-1.5 px-3">
                 <p className="text-sm font-medium">{t("common.language")}</p>
                 <LanguageToggle className="flex w-full [&>button]:flex-1" />
+              </div>
+              <div className="space-y-1.5 px-3">
+                <p className="text-sm font-medium">{t("common.dateSystem")}</p>
+                <DateSystemToggle className="flex w-full [&>button]:flex-1" />
               </div>
               <div className="space-y-1.5 px-3">
                 <p className="text-sm font-medium">{t("common.viewMode")}</p>

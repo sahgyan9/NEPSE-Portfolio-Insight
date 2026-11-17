@@ -27,7 +27,7 @@ import { Button } from "@/components/ui/button";
 import { TrendingUp, TrendingDown, RefreshCw, ArrowUpCircle, ArrowDownCircle, Gift } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/i18n";
-import { bsMonthName, fmtDate, fmtMonthYear, fmtMoney, fmtNumber, fmtPercent, toBS } from "@/i18n/format";
+import { fmtDate, fmtDayMonth, fmtMonthYear, fmtMoney, fmtNumber, fmtPercent } from "@/i18n/format";
 import { fmtAxisCompact } from "@/components/charts";
 
 const timeOf = (d: Date) => d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
@@ -120,9 +120,8 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
     const [isRefreshing, setIsRefreshing] = useState(false);
 
     const formatDateForPeriod = useCallback((dateStr: string, period: TimePeriod): { display: string; full: string } => {
-        // Bikram Sambat dates, Latin digits.
+        // Dates in the chosen system (BS or AD), Latin digits.
         const date = new Date(dateStr);
-        const bs = toBS(date);
 
         let display: string;
         switch (period) {
@@ -133,7 +132,7 @@ export const PortfolioValueTrendChart = ({ summary, ready = true }: PortfolioVal
             case "1m":
             case "3m":
             case "6m":
-                display = bs ? `${bs.day} ${bsMonthName(bs.month)}` : dateStr;
+                display = fmtDayMonth(date);
                 break;
             case "1y":
             case "all":
