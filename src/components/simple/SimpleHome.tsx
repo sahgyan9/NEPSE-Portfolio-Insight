@@ -10,6 +10,7 @@ import type { LivePortfolioSummary } from "@/types";
 import type { RiskData } from "@/services/riskApi";
 import { useViewMode } from "@/hooks/useViewMode";
 import { PlainSummary } from "./PlainSummary";
+import { RealizedLine } from "@/components/realized/RealizedLine";
 import { HoldingCards } from "./HoldingCards";
 
 interface Props {
@@ -40,6 +41,7 @@ export const SimpleHome = ({ holdings, summary, loading, risk }: Props) => {
     <div className="mx-auto w-full max-w-[640px] space-y-8 leading-relaxed">
       <Block id="summary" title={t("simple.howTitle")}>
         <PlainSummary summary={summary} performance={risk.data?.performance} loading={loading} />
+        {!loading && <RealizedLine />}
       </Block>
 
       <Block id="attention" title={t("simple.attentionTitle")} hint={t("simple.attentionHint")}>

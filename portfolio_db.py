@@ -659,6 +659,18 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 sip_data = {"error": str(e)}
             self._send_json({"sip": sip_data})
 
+        elif path == "/api/realized":
+            # Profit or loss on shares already sold. Computed on request; nothing is written.
+            try:
+                tools_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools")
+                if tools_dir not in sys.path:
+                    sys.path.insert(0, tools_dir)
+                import realized_gains
+                realized_data = realized_gains.load_summary(DB_PATH)
+            except Exception as e:
+                realized_data = {"error": str(e)}
+            self._send_json({"realized": realized_data})
+
         elif path == "/api/transactions":
             db = load_db()
             period = query.get("period", ["all"])[0]
@@ -964,7 +976,8 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             symbol = data.get("symbol", "").upper()
             quantity = data.get("quantity", 0)
             sell_price = data.get("sellPrice", 0)
-            
+            net_received = data.get("netReceived")
+
             if not symbol or quantity <= 0:
                 self._send_json({"error": "Invalid data. Required: symbol, quantity > 0"}, 400)
                 return
@@ -979,6 +992,10 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 self._send_json({"error": f"Cannot sell {quantity} units. You only have {existing['quantity']}"}, 400)
                 return
             
+            # Average cost before the sale; stored on the SELL row so the profit can be
+            # worked out after the holding is gone (tools/realized_gains.py).
+            cost_per_share = existing.get("avgCost")
+
             # Update or remove holding
             existing["quantity"] -= quantity
             
@@ -989,13 +1006,18 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 action = "reduced"
             
             # Log transaction
-            db.setdefault("transactions", []).append({
+            sell_row = {
                 "type": "SELL",
                 "symbol": symbol,
                 "quantity": quantity,
                 "price": sell_price or 0,
                 "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            })
+            }
+            if cost_per_share:
+                sell_row["costPerShare"] = cost_per_share
+            if net_received and float(net_received) > 0:
+                sell_row["netReceived"] = round(float(net_received), 2)
+            db.setdefault("transactions", []).append(sell_row)
             
             save_db(db)
             self._send_json({"success": True, "action": action, "holdings": db["holdings"]})
@@ -1153,6 +1175,7 @@ def run_server(port=5001):
 |  --------------------------------------------------------- |
 |  GET  /api/holdings          - Get all holdings            |
 |  GET  /api/transactions      - Get transaction history     |
+|  GET  /api/realized         - Profit on shares sold       |
 |       ?period=1d|1w|1m|3m|6m|1y|all                        |
 |  GET  /api/value-history     - Get portfolio value over    |
 |       time ?period=1d|1w|1m|3m|6m|1y|all                   |
@@ -1167,7 +1190,8 @@ def run_server(port=5001):
 |       Body: {{"csv", "mode": "replace"|"merge"}}             |
 |  --------------------------------------------------------- |
 |  POST /api/holdings/sell     - Sell stock                  |
-|       Body: {{"symbol", "quantity", "sellPrice"}}            |
+|       Body: {{"symbol", "quantity", "sellPrice",           |
+|              "netReceived" (optional, from the bill)}}     |
 |  --------------------------------------------------------- |
 |  POST /api/value-history/record - Record current value     |
 |       Body: {{"currentValue"}}                               |

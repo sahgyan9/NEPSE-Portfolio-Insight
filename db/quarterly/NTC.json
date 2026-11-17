@@ -8,7 +8,7 @@
       "fy": "2071-72",
       "quarter": 4,
       "quarter_label": "Q4 71-72",
-      "parsed_at": "2026-11-14T20:25:25.859071",
+      "parsed_at": "2026-11-17T11:22:01.952206",
       "raw": {
         "EPS(Rs.)": 97.04
       },
@@ -31,7 +31,7 @@
       "fy": "2072-73",
       "quarter": 1,
       "quarter_label": "Q1 72-73",
-      "parsed_at": "2026-11-14T20:25:25.859053",
+      "parsed_at": "2026-11-17T11:22:01.952172",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 52515203000.0,
@@ -68,7 +68,7 @@
         "roe_ttm": 19.63,
         "roa_ttm": null,
         "net_profit_ttm": 3313401000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 9462331220.0,
         "graham_number": 945.96
       },
       "yoy": {},
@@ -79,7 +79,7 @@
       "fy": "2072-73",
       "quarter": 2,
       "quarter_label": "Q2 72-73",
-      "parsed_at": "2026-11-14T20:25:25.858983",
+      "parsed_at": "2026-11-17T11:22:01.951933",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 71197023570.0,
@@ -116,7 +116,7 @@
         "roe_ttm": 16.84,
         "roa_ttm": null,
         "net_profit_ttm": 7256418410.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 19329238980.0,
         "graham_number": 1118.45
       },
       "yoy": {},
@@ -127,7 +127,7 @@
       "fy": "2072-73",
       "quarter": 3,
       "quarter_label": "Q3 72-73",
-      "parsed_at": "2026-11-14T20:25:25.858915",
+      "parsed_at": "2026-11-17T11:22:01.951700",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 71249165920.0,
@@ -164,7 +164,7 @@
         "roe_ttm": 14.4,
         "roa_ttm": null,
         "net_profit_ttm": 9316406250.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 31403223560.0,
         "graham_number": 1034.15
       },
       "yoy": {},
@@ -175,7 +175,7 @@
       "fy": "2072-73",
       "quarter": 4,
       "quarter_label": "Q4 72-73",
-      "parsed_at": "2026-11-14T20:25:25.858845",
+      "parsed_at": "2026-11-17T11:22:01.951469",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 70460707020.0,
@@ -212,7 +212,7 @@
         "roe_ttm": 14.23,
         "roa_ttm": null,
         "net_profit_ttm": 12157189230.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 39686986940.0,
         "graham_number": 1076.26
       },
       "yoy": {
@@ -226,7 +226,7 @@
       "fy": "2073-74",
       "quarter": 1,
       "quarter_label": "Q1 73-74",
-      "parsed_at": "2026-11-14T20:25:25.858777",
+      "parsed_at": "2026-11-17T11:22:01.951239",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 74545432000.0,
@@ -263,7 +263,7 @@
         "roe_ttm": 18.51,
         "roa_ttm": null,
         "net_profit_ttm": 4142953270.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 10415781210.0,
         "graham_number": 1218.17
       },
       "yoy": {
@@ -282,7 +282,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": 25.03,
         "Book Value(Rs.)": 32.63,
-        "ROE": -5.71
+        "ROE": -5.71,
+        "revenue_ttm": 10.08
       },
       "sector": "Others"
     },
@@ -291,7 +292,7 @@
       "fy": "2073-74",
       "quarter": 2,
       "quarter_label": "Q2 73-74",
-      "parsed_at": "2026-11-14T20:25:25.858707",
+      "parsed_at": "2026-11-17T11:22:01.951007",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 78817872200.0,
@@ -328,7 +329,7 @@
         "roe_ttm": 16.88,
         "roa_ttm": null,
         "net_profit_ttm": 7918659600.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 20641268440.0,
         "graham_number": 1218.93
       },
       "yoy": {
@@ -347,7 +348,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": 9.13,
         "Book Value(Rs.)": 8.84,
-        "ROE": 0.24
+        "ROE": 0.24,
+        "revenue_ttm": 6.79
       },
       "sector": "Others"
     },
@@ -356,7 +358,7 @@
       "fy": "2073-74",
       "quarter": 3,
       "quarter_label": "Q3 73-74",
-      "parsed_at": "2026-11-14T20:25:25.858636",
+      "parsed_at": "2026-11-17T11:22:01.950767",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 74867795400.0,
@@ -393,7 +395,7 @@
         "roe_ttm": 17.24,
         "roa_ttm": null,
         "net_profit_ttm": 11618582800.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 30172180120.0,
         "graham_number": 1179.93
       },
       "yoy": {
@@ -412,7 +414,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": 24.72,
         "Book Value(Rs.)": 4.38,
-        "ROE": 19.72
+        "ROE": 19.72,
+        "revenue_ttm": -3.92
       },
       "sector": "Others"
     },
@@ -421,7 +424,7 @@
       "fy": "2073-74",
       "quarter": 4,
       "quarter_label": "Q4 73-74",
-      "parsed_at": "2026-11-14T20:25:25.858564",
+      "parsed_at": "2026-11-17T11:22:01.950536",
       "raw": {
         "Paid Up Capital": 15000000000.0,
         "Reserve and Surplus": 78068872040.0,
@@ -458,7 +461,7 @@
         "roe_ttm": 16.14,
         "roa_ttm": null,
         "net_profit_ttm": 15016834930.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 40742494570.0,
         "graham_number": 1196.16
       },
       "yoy": {
@@ -477,7 +480,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": 13.42,
         "Book Value(Rs.)": 8.9,
-        "ROE": 13.42
+        "ROE": 13.42,
+        "revenue_ttm": 2.66
       },
       "sector": "Others"
     },
@@ -486,7 +490,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-14T20:25:25.858487",
+      "parsed_at": "2026-11-17T11:22:01.950267",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 74117703000.0,
@@ -525,7 +529,7 @@
         "roe_ttm": 7.87,
         "roa_ttm": null,
         "net_profit_ttm": 5435347000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 28219612000.0,
         "graham_number": 680.87
       },
       "yoy": {
@@ -544,7 +548,8 @@
         "Number of Shares": 20.0,
         "EPS(Rs.)": -63.56,
         "Book Value(Rs.)": -14.27,
-        "ROE": -57.48
+        "ROE": -57.48,
+        "revenue_ttm": 170.93
       },
       "sector": "Others"
     },
@@ -553,7 +558,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-14T20:25:25.858411",
+      "parsed_at": "2026-11-17T11:22:01.950017",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 77063283000.0,
@@ -592,7 +597,7 @@
         "roe_ttm": 8.82,
         "roa_ttm": null,
         "net_profit_ttm": 8380089000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 37889959000.0,
         "graham_number": 743.82
       },
       "yoy": {
@@ -611,7 +616,8 @@
         "Number of Shares": 20.0,
         "EPS(Rs.)": -55.9,
         "Book Value(Rs.)": -15.56,
-        "ROE": -47.75
+        "ROE": -47.75,
+        "revenue_ttm": 83.56
       },
       "sector": "Others"
     },
@@ -620,7 +626,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-14T20:25:25.858337",
+      "parsed_at": "2026-11-17T11:22:01.949766",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 79291948000.0,
@@ -659,7 +665,7 @@
         "roe_ttm": 9.15,
         "roa_ttm": null,
         "net_profit_ttm": 2225507000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 9077585000.0,
         "graham_number": 775.57
       },
       "yoy": {
@@ -678,7 +684,8 @@
         "Number of Shares": 20.0,
         "EPS(Rs.)": -52.11,
         "Book Value(Rs.)": -9.78,
-        "ROE": -46.93
+        "ROE": -46.93,
+        "revenue_ttm": -69.91
       },
       "sector": "Others"
     },
@@ -687,7 +694,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-14T20:25:25.858265",
+      "parsed_at": "2026-11-17T11:22:01.949506",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 74325997000.0,
@@ -726,7 +733,7 @@
         "roe_ttm": 9.22,
         "roa_ttm": null,
         "net_profit_ttm": 4254777000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 18077349000.0,
         "graham_number": 738.68
       },
       "yoy": {
@@ -745,7 +752,8 @@
         "Number of Shares": 20.0,
         "EPS(Rs.)": -53.87,
         "Book Value(Rs.)": -17.33,
-        "ROE": -42.87
+        "ROE": -42.87,
+        "revenue_ttm": -55.63
       },
       "sector": "Others"
     },
@@ -754,7 +762,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-14T20:25:25.858193",
+      "parsed_at": "2026-11-17T11:22:01.949250",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 75474758000.0,
@@ -793,7 +801,7 @@
         "roe_ttm": 7.72,
         "roa_ttm": null,
         "net_profit_ttm": 5411975000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 27346648000.0,
         "graham_number": 684.41
       },
       "yoy": {
@@ -813,7 +821,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": -0.42,
         "Book Value(Rs.)": 1.47,
-        "ROE": -1.91
+        "ROE": -1.91,
+        "revenue_ttm": -3.09
       },
       "sector": "Others"
     },
@@ -822,7 +831,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-14T20:25:25.858122",
+      "parsed_at": "2026-11-17T11:22:01.949018",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 75828193000.0,
@@ -861,7 +870,7 @@
         "roe_ttm": 8.32,
         "roa_ttm": null,
         "net_profit_ttm": 7804527000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 36803931000.0,
         "graham_number": 713.13
       },
       "yoy": {
@@ -881,7 +890,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": -6.87,
         "Book Value(Rs.)": -1.3,
-        "ROE": -5.67
+        "ROE": -5.67,
+        "revenue_ttm": -2.87
       },
       "sector": "Others"
     },
@@ -890,7 +900,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-14T20:25:25.858050",
+      "parsed_at": "2026-11-17T11:22:01.948786",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 78072277000.0,
@@ -929,7 +939,7 @@
         "roe_ttm": 8.44,
         "roa_ttm": null,
         "net_profit_ttm": 2027432000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 8585063000.0,
         "graham_number": 735.53
       },
       "yoy": {
@@ -949,7 +959,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": -8.92,
         "Book Value(Rs.)": -1.25,
-        "ROE": -7.76
+        "ROE": -7.76,
+        "revenue_ttm": -5.43
       },
       "sector": "Others"
     },
@@ -958,7 +969,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-14T20:25:25.857976",
+      "parsed_at": "2026-11-17T11:22:01.948549",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 72676442000.0,
@@ -997,7 +1008,7 @@
         "roe_ttm": 8.67,
         "roa_ttm": null,
         "net_profit_ttm": 3931404000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 17246780000.0,
         "graham_number": 703.63
       },
       "yoy": {
@@ -1017,7 +1028,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": -7.61,
         "Book Value(Rs.)": -1.79,
-        "ROE": -5.97
+        "ROE": -5.97,
+        "revenue_ttm": -4.59
       },
       "sector": "Others"
     },
@@ -1026,7 +1038,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-14T20:25:25.857901",
+      "parsed_at": "2026-11-17T11:22:01.948313",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 74338623000.0,
@@ -1065,7 +1077,7 @@
         "roe_ttm": 8.08,
         "roa_ttm": null,
         "net_profit_ttm": 5593768000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 25481289000.0,
         "graham_number": 691.6
       },
       "yoy": {
@@ -1085,7 +1097,8 @@
         "Number of Shares": 0.0,
         "EPS(Rs.)": 3.37,
         "Book Value(Rs.)": -1.22,
-        "ROE": 4.66
+        "ROE": 4.66,
+        "revenue_ttm": -6.82
       },
       "sector": "Others"
     },
@@ -1095,7 +1108,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-14T20:25:25.857827",
+      "parsed_at": "2026-11-17T11:22:01.948077",
       "computed": {
         "pe_ratio": 25.1,
         "pb_ratio": 2.2,
@@ -1109,7 +1122,7 @@
         "net_profit_till_qtr": 6617800000.0,
         "revenue_till_qtr": 34461100000.0,
         "net_profit_ttm": 6617776000.0,
-        "revenue_ttm": 34461100000.0,
+        "revenue_ttm": 34461135000.0,
         "graham_number": 659.32,
         "earnings_yield": 3.98,
         "peg_ratio": null,
@@ -1190,7 +1203,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-14T20:25:25.857754",
+      "parsed_at": "2026-11-17T11:22:01.947832",
       "computed": {
         "pe_ratio": 26.8,
         "pb_ratio": 1.9,
@@ -1204,7 +1217,7 @@
         "net_profit_till_qtr": 1739600000.0,
         "revenue_till_qtr": 8680200000.0,
         "net_profit_ttm": 1739590000.0,
-        "revenue_ttm": 34556300000.0,
+        "revenue_ttm": 8680186000.0,
         "graham_number": 682.24,
         "earnings_yield": 3.73,
         "peg_ratio": null,
@@ -1262,7 +1275,7 @@
         "net_profit_till_qtr": -14.2,
         "revenue_till_qtr": 1.11,
         "net_profit_ttm": -14.2,
-        "revenue_ttm": -4.83,
+        "revenue_ttm": 1.11,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": 0.31,
         "Total Equity": 0.25,
@@ -1285,7 +1298,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-14T20:25:25.857681",
+      "parsed_at": "2026-11-17T11:22:01.947592",
       "computed": {
         "pe_ratio": 25.1,
         "pb_ratio": 1.6,
@@ -1299,7 +1312,7 @@
         "net_profit_till_qtr": 2635100000.0,
         "revenue_till_qtr": 17004900000.0,
         "net_profit_ttm": 2635121000.0,
-        "revenue_ttm": 34219300000.0,
+        "revenue_ttm": 17004925000.0,
         "graham_number": 577.56,
         "earnings_yield": 3.98,
         "peg_ratio": null,
@@ -1357,7 +1370,7 @@
         "net_profit_till_qtr": -32.97,
         "revenue_till_qtr": -1.4,
         "net_profit_ttm": -32.97,
-        "revenue_ttm": -4.88,
+        "revenue_ttm": -1.4,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": 0.64,
         "Total Equity": 0.51,
@@ -1380,7 +1393,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-14T20:25:25.857607",
+      "parsed_at": "2026-11-17T11:22:01.947338",
       "computed": {
         "pe_ratio": 40.5,
         "pb_ratio": 1.7,
@@ -1394,7 +1407,7 @@
         "net_profit_till_qtr": 2842300000.0,
         "revenue_till_qtr": 25317600000.000004,
         "net_profit_ttm": 2842289000.0,
-        "revenue_ttm": 28573900000.0,
+        "revenue_ttm": 25317614000.0,
         "graham_number": 488.54,
         "earnings_yield": 2.47,
         "peg_ratio": null,
@@ -1452,7 +1465,7 @@
         "net_profit_till_qtr": -49.19,
         "revenue_till_qtr": -18.87,
         "net_profit_ttm": -49.19,
-        "revenue_ttm": -29.73,
+        "revenue_ttm": -0.64,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": -2.19,
         "Total Equity": -1.77,
@@ -1475,7 +1488,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-14T20:25:25.857531",
+      "parsed_at": "2026-11-17T11:22:01.947084",
       "computed": {
         "pe_ratio": 53.8,
         "pb_ratio": 1.7,
@@ -1489,7 +1502,7 @@
         "net_profit_till_qtr": 2668200000.0,
         "revenue_till_qtr": 34532400000.0,
         "net_profit_ttm": 2668192000.0,
-        "revenue_ttm": 34532400000.0,
+        "revenue_ttm": 34532442000.0,
         "graham_number": 406.41,
         "earnings_yield": 1.86,
         "peg_ratio": null,
@@ -1570,7 +1583,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-14T20:25:25.857450",
+      "parsed_at": "2026-11-17T11:22:01.946831",
       "computed": {
         "pe_ratio": 57.7,
         "pb_ratio": 1.7,
@@ -1584,7 +1597,7 @@
         "net_profit_till_qtr": 1325200000.0,
         "revenue_till_qtr": 8679500000.0,
         "net_profit_ttm": 1325175000.0,
-        "revenue_ttm": 34531800000.0,
+        "revenue_ttm": 8679515000.0,
         "graham_number": 578.9,
         "earnings_yield": 1.73,
         "peg_ratio": null,
@@ -1642,7 +1655,7 @@
         "net_profit_till_qtr": -23.82,
         "revenue_till_qtr": -0.01,
         "net_profit_ttm": -23.82,
-        "revenue_ttm": -0.07,
+        "revenue_ttm": -0.01,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": -6.74,
         "Total Equity": -5.48,
@@ -1665,7 +1678,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-14T20:25:25.857374",
+      "parsed_at": "2026-11-17T11:22:01.946588",
       "computed": {
         "pe_ratio": 67.7,
         "pb_ratio": 1.7,
@@ -1679,7 +1692,7 @@
         "net_profit_till_qtr": 4164500000.0,
         "revenue_till_qtr": 19227300000.0,
         "net_profit_ttm": 4164510000.0,
-        "revenue_ttm": 36754800000.0,
+        "revenue_ttm": 17299731000.0,
         "graham_number": 749.45,
         "earnings_yield": 1.48,
         "peg_ratio": null,
@@ -1737,7 +1750,7 @@
         "net_profit_till_qtr": 58.04,
         "revenue_till_qtr": 13.07,
         "net_profit_ttm": 58.04,
-        "revenue_ttm": 7.41,
+        "revenue_ttm": 1.73,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": 8.16,
         "Total Equity": 6.55,
@@ -1760,7 +1773,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-14T20:25:25.857293",
+      "parsed_at": "2026-11-17T11:22:01.946328",
       "computed": {
         "pe_ratio": 38.2,
         "pb_ratio": 1.6,
@@ -1774,7 +1787,7 @@
         "net_profit_till_qtr": 6273000000.0,
         "revenue_till_qtr": 28854899999.999996,
         "net_profit_ttm": 6272996000.0,
-        "revenue_ttm": 38069700000.0,
+        "revenue_ttm": 25929654000.0,
         "graham_number": 758.94,
         "earnings_yield": 2.62,
         "peg_ratio": 0.66,
@@ -1832,7 +1845,7 @@
         "net_profit_till_qtr": 120.7,
         "revenue_till_qtr": 13.97,
         "net_profit_ttm": 120.7,
-        "revenue_ttm": 33.23,
+        "revenue_ttm": 2.42,
         "Paid Up Capital": 0.0,
         "Reserve and Surplus": 11.62,
         "Total Equity": 9.32,
@@ -1854,7 +1867,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:25:25.857198",
+      "parsed_at": "2026-11-17T11:22:01.946078",
       "raw": {
         "Paid Up Capital": 18000000000.0,
         "Reserve and Surplus": 82356484000.0,
@@ -1893,7 +1906,7 @@
         "roe_ttm": 8.83,
         "roa_ttm": null,
         "net_profit_ttm": 8864638000.0,
-        "revenue_ttm": null,
+        "revenue_ttm": 34950449000.0,
         "graham_number": 786.02
       },
       "yoy": {
@@ -1913,10 +1926,11 @@
         "Number of Shares": 0.0,
         "EPS Reported": 232.32,
         "Book Value Reported": 12.56,
-        "ROE Reported": 26.14
+        "ROE Reported": 26.14,
+        "revenue_ttm": 1.21
       },
       "sector": "Others"
     }
   ],
-  "last_updated": "2026-11-14T20:25:25.861294"
+  "last_updated": "2026-11-17T11:22:01.954880"
 }

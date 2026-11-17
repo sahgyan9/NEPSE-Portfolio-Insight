@@ -8,7 +8,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-16T18:02:39.951875",
+      "parsed_at": "2026-11-17T11:20:54.831803",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 815240.0,
@@ -78,7 +78,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-16T18:02:39.951751",
+      "parsed_at": "2026-11-17T11:20:54.831486",
       "raw": {
         "Paid Up Capital": 152500000.0,
         "Reserve and Surplus": 19146520.0,
@@ -148,7 +148,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-16T18:02:39.951652",
+      "parsed_at": "2026-11-17T11:20:54.831162",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 34616970.0,
@@ -218,7 +218,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-16T18:02:39.951564",
+      "parsed_at": "2026-11-17T11:20:54.830851",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 49769310.0,
@@ -288,7 +288,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-16T18:02:39.951477",
+      "parsed_at": "2026-11-17T11:20:54.830537",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 21972240.0,
@@ -382,7 +382,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-16T18:02:39.951387",
+      "parsed_at": "2026-11-17T11:20:54.830225",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 27366510.0,
@@ -474,7 +474,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-16T18:02:39.951294",
+      "parsed_at": "2026-11-17T11:20:54.829925",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -991870.0,
@@ -565,7 +565,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-16T18:02:39.951189",
+      "parsed_at": "2026-11-17T11:20:54.829621",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -63460540.0,
@@ -656,7 +656,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-16T18:02:39.951063",
+      "parsed_at": "2026-11-17T11:20:54.829312",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": -549130.0,
@@ -751,7 +751,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-16T18:02:39.950951",
+      "parsed_at": "2026-11-17T11:20:54.828952",
       "computed": {
         "pe_ratio": -265.1,
         "pb_ratio": 10.4,
@@ -878,7 +878,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-16T18:02:39.950843",
+      "parsed_at": "2026-11-17T11:20:54.828598",
       "computed": {
         "pe_ratio": -771.0,
         "pb_ratio": 10.0,
@@ -1001,7 +1001,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-16T18:02:39.950725",
+      "parsed_at": "2026-11-17T11:20:54.828164",
       "computed": {
         "pe_ratio": 48.4,
         "pb_ratio": 11.2,
@@ -1124,7 +1124,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-16T18:02:39.950608",
+      "parsed_at": "2026-11-17T11:20:54.827703",
       "computed": {
         "pe_ratio": 40.6,
         "pb_ratio": 9.2,
@@ -1248,7 +1248,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-16T18:02:39.950482",
+      "parsed_at": "2026-11-17T11:20:54.827309",
       "computed": {
         "pe_ratio": 42.3,
         "pb_ratio": 8.8,
@@ -1372,7 +1372,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-16T18:02:39.950346",
+      "parsed_at": "2026-11-17T11:20:54.826910",
       "computed": {
         "pe_ratio": 36.9,
         "pb_ratio": 7.7,
@@ -1495,7 +1495,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-16T18:02:39.950226",
+      "parsed_at": "2026-11-17T11:20:54.826508",
       "computed": {
         "pe_ratio": 22.4,
         "pb_ratio": 7.6,
@@ -1630,7 +1630,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-16T18:02:39.950070",
+      "parsed_at": "2026-11-17T11:20:54.825971",
       "computed": {
         "pe_ratio": 21.0,
         "pb_ratio": 7.1,
@@ -1754,7 +1754,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-16T18:02:39.949869",
+      "parsed_at": "2026-11-17T11:20:54.825346",
       "raw": {
         "Paid Up Capital": 250000000.0,
         "Reserve and Surplus": 146875330.0,
@@ -1847,7 +1847,98 @@
         "factor": 1000,
         "tool": "tools/fix_quarterly_units.py"
       }
+    },
+    {
+      "symbol": "AVYAN",
+      "fy": "2083-84",
+      "quarter": 1,
+      "quarter_label": "Q1 83-84",
+      "parsed_at": "2026-11-17T11:20:54.824584",
+      "raw": {
+        "Paid Up Capital": 250000000.0,
+        "Reserve and Surplus": 141647480.0,
+        "Total Equity": 391647480.0,
+        "Total Assets": 3756630510.0,
+        "Deposits from Customers": 363970740.0,
+        "Borrowings": 2916762350.0,
+        "Loans and Advances to BFIs": 0.0,
+        "Loans and Advances to Customers": 3661579280.0,
+        "Investments": 0.0,
+        "Interest Income": 119649130.0,
+        "Net Interest Income": 74636400.0,
+        "Total Operating Income": 81379260.0,
+        "Operating Profit": 24404760.0,
+        "Net Profit": 17083330.0,
+        "Number of Shares": 2500000.0,
+        "EPS Reported": 27.33,
+        "Book Value Reported": 156.66,
+        "ROE Reported": 17.45,
+        "CAR": 8.67,
+        "NPL": 12.76,
+        "Cost of funds": 5.48,
+        "CD ratio": 111.6
+      },
+      "raw_keys_order": [
+        "Paid Up Capital",
+        "Reserve and Surplus",
+        "Total Equity",
+        "Total Assets",
+        "Deposits from Customers",
+        "Borrowings",
+        "Loans and Advances to BFIs",
+        "Loans and Advances to Customers",
+        "Investments",
+        "Interest Income",
+        "Net Interest Income",
+        "Total Operating Income",
+        "Operating Profit",
+        "Net Profit",
+        "Number of Shares",
+        "EPS Reported",
+        "Book Value Reported",
+        "ROE Reported",
+        "CAR",
+        "NPL",
+        "Cost of funds",
+        "CD ratio"
+      ],
+      "computed": {
+        "eps_ttm": 27.33,
+        "bvps": 156.66,
+        "roe_ttm": 17.45,
+        "roa_ttm": null,
+        "net_profit_ttm": 17083330.0,
+        "revenue_ttm": 119649130.0,
+        "graham_number": 310.38
+      },
+      "yoy": {
+        "eps_ttm": 110.55,
+        "bvps": 24.19,
+        "net_profit_ttm": 110.61,
+        "revenue_ttm": 10.02,
+        "Paid Up Capital": 0.0,
+        "Reserve and Surplus": 116.63,
+        "Total Equity": 24.18,
+        "Total Assets": 0.83,
+        "Deposits from Customers": 2.11,
+        "Borrowings": -2.27,
+        "Loans and Advances to Customers": 2.74,
+        "Interest Income": 10.02,
+        "Net Interest Income": 46.48,
+        "Total Operating Income": 40.54,
+        "Operating Profit": 110.61,
+        "Net Profit": 110.61,
+        "Number of Shares": 0.0,
+        "EPS Reported": 110.55,
+        "Book Value Reported": 24.19,
+        "ROE Reported": 69.58,
+        "CAR": -2.36,
+        "NPL": 65.93,
+        "Cost of funds": -21.26,
+        "CD ratio": 3.46
+      },
+      "sector": "Microfinance"
     }
   ],
-  "last_updated": "2026-11-16T18:02:39.954145"
+  "last_updated": "2026-11-17T11:20:54.832958"
 }

@@ -155,7 +155,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-14T20:25:42.222736",
+      "parsed_at": "2026-11-17T11:22:14.999473",
       "computed": {
         "pe_ratio": 42.2,
         "pb_ratio": 2.9,
@@ -233,7 +233,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-14T20:25:42.222732",
+      "parsed_at": "2026-11-17T11:22:14.999469",
       "computed": {
         "pe_ratio": -32.4,
         "pb_ratio": 2.5,
@@ -334,7 +334,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-14T20:25:42.222728",
+      "parsed_at": "2026-11-17T11:22:14.999464",
       "computed": {
         "pe_ratio": -52.7,
         "pb_ratio": 1.4,
@@ -435,7 +435,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-14T20:25:42.222723",
+      "parsed_at": "2026-11-17T11:22:14.999459",
       "computed": {
         "pe_ratio": 2059.9,
         "pb_ratio": 2.2,
@@ -538,7 +538,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-14T20:25:42.222719",
+      "parsed_at": "2026-11-17T11:22:14.999454",
       "computed": {
         "pe_ratio": -369.6,
         "pb_ratio": 2.2,
@@ -640,7 +640,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-14T20:25:42.222714",
+      "parsed_at": "2026-11-17T11:22:14.999449",
       "computed": {
         "pe_ratio": 77.3,
         "pb_ratio": 2.3,
@@ -744,7 +744,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:25:42.222705",
+      "parsed_at": "2026-11-17T11:22:14.999437",
       "raw": {
         "Paid Up Capital": 3075050000.0,
         "Reserve and Surplus": 3100100910.0,
@@ -815,5 +815,5 @@
       }
     }
   ],
-  "last_updated": "2026-11-14T20:25:42.223604"
+  "last_updated": "2026-11-17T11:22:15.000259"
 }

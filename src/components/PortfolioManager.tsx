@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { REALIZED_QUERY_KEY } from "@/services/realizedApi";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -67,7 +69,9 @@ export const PortfolioManager = ({ onPortfolioChange, triggerClassName }: Portfo
         symbol: "",
         quantity: "",
         sellPrice: "",
+        netReceived: "",
     });
+    const queryClient = useQueryClient();
 
     // The phone menu opens this dialog by event, because its own trigger is hidden there.
     useEffect(() => {
@@ -147,11 +151,12 @@ export const PortfolioManager = ({ onPortfolioChange, triggerClassName }: Portfo
             const result = await sellStock(
                 sellForm.symbol,
                 Number(sellForm.quantity),
-                sellForm.sellPrice ? Number(sellForm.sellPrice) : undefined
+                sellForm.sellPrice ? Number(sellForm.sellPrice) : undefined,
+                sellForm.netReceived ? Number(sellForm.netReceived) : undefined
             );
 
             setHoldings(result.holdings);
-            setSellForm({ symbol: "", quantity: "", sellPrice: "" });
+            setSellForm({ symbol: "", quantity: "", sellPrice: "", netReceived: "" });
 
             toast({
                 title: t("nav.pmSoldTitle"),
@@ -160,6 +165,7 @@ export const PortfolioManager = ({ onPortfolioChange, triggerClassName }: Portfo
 
             const txns = await getTransactions();
             setTransactions(txns);
+            queryClient.invalidateQueries({ queryKey: REALIZED_QUERY_KEY });
             onPortfolioChange?.();
         } catch (error) {
             showError(error);
@@ -498,6 +504,24 @@ export const PortfolioManager = ({ onPortfolioChange, triggerClassName }: Portfo
                                             className="h-11 md:h-10"
                                         />
                                     </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label htmlFor="sellNetReceived">{t("nav.pmNetReceived")}</Label>
+                                    <Input
+                                        id="sellNetReceived"
+                                        type="number"
+                                        inputMode="decimal"
+                                        min="0.01"
+                                        step="0.01"
+                                        placeholder={t("nav.pmNetReceivedPh")}
+                                        value={sellForm.netReceived}
+                                        onChange={(e) => setSellForm({ ...sellForm, netReceived: e.target.value })}
+                                        className="h-11 md:h-10"
+                                        aria-describedby="sellNetReceivedHelp"
+                                    />
+                                    <p id="sellNetReceivedHelp" className="text-xs leading-relaxed text-muted-foreground">
+                                        {t("nav.pmNetReceivedHelp")}
+                                    </p>
                                 </div>
                                 <Button type="submit" variant="destructive" className="w-full min-h-[44px]">
                                     <Minus className="h-4 w-4 mr-2" />

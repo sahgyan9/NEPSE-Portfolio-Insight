@@ -8,7 +8,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:33:04.295739",
+      "parsed_at": "2026-11-17T11:29:33.662778",
       "raw": {
         "Paid Up Capital": 470000000.0,
         "Reserve and Surplus": 11345980.0,
@@ -71,7 +71,7 @@
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-14T20:33:04.295730",
+      "parsed_at": "2026-11-17T11:29:33.662747",
       "raw": {
         "Paid Up Capital": 470000000.0,
         "Reserve and Surplus": 26909070.0,
@@ -131,5 +131,5 @@
       "sector": "Hydropower"
     }
   ],
-  "last_updated": "2026-11-14T20:33:04.296257"
+  "last_updated": "2026-11-17T11:29:33.664160"
 }

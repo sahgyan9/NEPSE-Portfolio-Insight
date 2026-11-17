@@ -1,0 +1,39 @@
+/** Profit or loss on shares already sold (realized). See tools/realized_gains.py. */
+export default {
+  errStatus: "The portfolio service answered with status {status}",
+  errNoData: "The portfolio service returned no data on sold shares",
+  errLoad: "Could not load the shares you sold.",
+
+  stripTitle: "Profit from shares you sold",
+  stripThisYear: "This fiscal year ({fy})",
+  stripAllTime: "All time",
+  stripSales: "{count} sales",
+  stripNone: "No sales this fiscal year",
+  stripSee: "See sold shares",
+  feesNote: "Broker fees and capital gains tax are not yet taken off {count} of these sales. Enter the bill amount when you record a sale to get the exact figure.",
+  uncountedNote: "{count} sales are left out because the buy price is not known.",
+  explain:
+    "Money you got from selling, minus what those shares cost you (your average buy price, the same rule MeroShare uses). Unlike the gain on shares you still hold, this money is already yours. It does not change when prices move.",
+
+  simpleSentence: "Shares you sold this fiscal year brought you {amount} profit.",
+  simpleSentenceLoss: "Shares you sold this fiscal year brought you {amount} loss.",
+  simpleAllTime: "Since you started: {amount}.",
+
+  tableTitle: "Shares you sold",
+  tableHint: "Each sale with what you paid, what you got and the profit or loss. Newest first.",
+  tableEmpty: "You have not recorded any sales yet.",
+  colDate: "Sold on",
+  colSymbol: "Share",
+  colQty: "Quantity",
+  colBuy: "Avg. buy price",
+  colSell: "Sell price",
+  colReceived: "Received",
+  colProfit: "Profit or loss",
+  colHeld: "Held since",
+  costEstimated: "Buy price worked out from your buy records",
+  costUnknown: "Buy price not known",
+  feesNotIncluded: "Before fees and tax",
+  feesBill: "From bill",
+  shortTerm: "{count} held under 1 year (7.5% CGT)",
+  longTerm: "All held over 1 year (5% CGT)",
+};

@@ -197,12 +197,13 @@ export async function importHoldingsCsv(
 export async function sellStock(
     symbol: string,
     quantity: number,
-    sellPrice?: number
+    sellPrice?: number,
+    netReceived?: number
 ): Promise<{ success: boolean; action: string; holdings: DBHolding[] }> {
     const response = await fetch(`${API_BASE}/holdings/sell`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ symbol, quantity, sellPrice }),
+        body: JSON.stringify({ symbol, quantity, sellPrice, netReceived }),
     });
 
     if (!response.ok) {

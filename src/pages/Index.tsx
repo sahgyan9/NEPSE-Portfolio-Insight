@@ -27,6 +27,8 @@ import { useApiKey } from "@/hooks/useApiKey";
 import { useViewMode } from "@/hooks/useViewMode";
 import { useRiskData } from "@/services/riskApi";
 import { SectionHeading } from "@/components/SectionHeading";
+import { RealizedStrip } from "@/components/realized/RealizedStrip";
+import { SoldSharesTable } from "@/components/realized/SoldSharesTable";
 import { JumpLinks } from "@/components/JumpLinks";
 import { toast } from "@/hooks/use-toast";
 import { useT } from "@/i18n";
@@ -134,6 +136,7 @@ const Index = () => {
           {/* 1. How am I doing? */}
           <Section id="summary" question={t("home.qSummary")}>
             <PortfolioSummaryCards summary={summary} loading={initialLoad} />
+            <RealizedStrip />
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
               <div className="min-w-0 lg:col-span-3">
                 <PortfolioValueTrendChart summary={summary} ready={!isLoading} />
@@ -184,6 +187,10 @@ const Index = () => {
               <section id="holdings" className="space-y-2">
                 <SectionHeading title={t("home.holdingsTitle")} route="/" section="holdings" />
                 <HoldingsTable holdings={holdings} dividendFiscalYear={dividendFiscalYear} onDividendFiscalYearChange={setDividendFiscalYear} />
+              </section>
+              <section id="sold" className="space-y-2">
+                <SectionHeading title={t("realized.tableTitle")} hint={t("realized.tableHint")} route="/" section="sold" />
+                <SoldSharesTable />
               </section>
               <section id="watchlist" className="space-y-2">
                 <SectionHeading title={t("home.watchlistTitle")} route="/" section="watchlist" />

@@ -8,7 +8,7 @@
       "fy": "2068-69",
       "quarter": 4,
       "quarter_label": "Q4 68-69",
-      "parsed_at": "2026-11-14T20:24:55.141171",
+      "parsed_at": "2026-11-17T11:21:14.836920",
       "raw": {
         "EPS(Rs.)": 83.23
       },
@@ -31,7 +31,7 @@
       "fy": "2069-70",
       "quarter": 4,
       "quarter_label": "Q4 69-70",
-      "parsed_at": "2026-11-14T20:24:55.141165",
+      "parsed_at": "2026-11-17T11:21:14.836888",
       "raw": {
         "EPS(Rs.)": 91.05
       },
@@ -54,7 +54,7 @@
       "fy": "2078-79",
       "quarter": 3,
       "quarter_label": "Q3 78-79",
-      "parsed_at": "2026-11-14T20:24:55.141158",
+      "parsed_at": "2026-11-17T11:21:14.836853",
       "raw": {
         "Paid Up Capital": 18496187000.0,
         "Share Premium": 74000.0,
@@ -138,7 +138,7 @@
       "fy": "2078-79",
       "quarter": 4,
       "quarter_label": "Q4 78-79",
-      "parsed_at": "2026-11-14T20:24:55.141109",
+      "parsed_at": "2026-11-17T11:21:14.836345",
       "raw": {
         "Paid Up Capital": 22832909000.0,
         "Share Premium": 176000.0,
@@ -222,7 +222,7 @@
       "fy": "2079-80",
       "quarter": 1,
       "quarter_label": "Q1 79-80",
-      "parsed_at": "2026-11-14T20:24:55.141060",
+      "parsed_at": "2026-11-17T11:21:14.835871",
       "raw": {
         "Paid Up Capital": 22832909000.0,
         "Share Premium": 176000.0,
@@ -309,7 +309,7 @@
       "fy": "2079-80",
       "quarter": 2,
       "quarter_label": "Q2 79-80",
-      "parsed_at": "2026-11-14T20:24:55.141011",
+      "parsed_at": "2026-11-17T11:21:14.835397",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 1245130000.0,
@@ -392,7 +392,7 @@
       "fy": "2079-80",
       "quarter": 3,
       "quarter_label": "Q3 79-80",
-      "parsed_at": "2026-11-14T20:24:55.140960",
+      "parsed_at": "2026-11-17T11:21:14.834967",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 1772095000.0,
@@ -502,7 +502,7 @@
       "fy": "2079-80",
       "quarter": 4,
       "quarter_label": "Q4 79-80",
-      "parsed_at": "2026-11-14T20:24:55.140863",
+      "parsed_at": "2026-11-17T11:21:14.834537",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 3961099000.0,
@@ -612,7 +612,7 @@
       "fy": "2080-81",
       "quarter": 1,
       "quarter_label": "Q1 80-81",
-      "parsed_at": "2026-11-14T20:24:55.140818",
+      "parsed_at": "2026-11-17T11:21:14.834001",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 3609801000.0,
@@ -722,7 +722,7 @@
       "fy": "2080-81",
       "quarter": 2,
       "quarter_label": "Q2 80-81",
-      "parsed_at": "2026-11-14T20:24:55.140773",
+      "parsed_at": "2026-11-17T11:21:14.833593",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 1087876000.0,
@@ -832,7 +832,7 @@
       "fy": "2080-81",
       "quarter": 3,
       "quarter_label": "Q3 80-81",
-      "parsed_at": "2026-11-14T20:24:55.140726",
+      "parsed_at": "2026-11-17T11:21:14.833177",
       "raw": {
         "Paid Up Capital": 27056997000.0,
         "Retained Earnings": 1547086000.0,
@@ -943,7 +943,7 @@
       "fy": "2080-81",
       "quarter": 4,
       "quarter_label": "Q4 80-81",
-      "parsed_at": "2026-11-14T20:24:55.140680",
+      "parsed_at": "2026-11-17T11:21:14.832765",
       "computed": {
         "pe_ratio": 25.2,
         "pb_ratio": 3.2,
@@ -1078,7 +1078,7 @@
       "fy": "2081-82",
       "quarter": 1,
       "quarter_label": "Q1 81-82",
-      "parsed_at": "2026-11-14T20:24:55.140633",
+      "parsed_at": "2026-11-17T11:21:14.832354",
       "computed": {
         "pe_ratio": 21.02,
         "pb_ratio": 2.59,
@@ -1205,7 +1205,7 @@
       "fy": "2081-82",
       "quarter": 2,
       "quarter_label": "Q2 81-82",
-      "parsed_at": "2026-11-14T20:24:55.140587",
+      "parsed_at": "2026-11-17T11:21:14.831917",
       "computed": {
         "pe_ratio": 18.46,
         "pb_ratio": 2.21,
@@ -1326,7 +1326,7 @@
       "fy": "2081-82",
       "quarter": 3,
       "quarter_label": "Q3 81-82",
-      "parsed_at": "2026-11-14T20:24:55.140540",
+      "parsed_at": "2026-11-17T11:21:14.831495",
       "computed": {
         "pe_ratio": 18.7,
         "pb_ratio": 2.24,
@@ -1449,7 +1449,7 @@
       "fy": "2081-82",
       "quarter": 4,
       "quarter_label": "Q4 81-82",
-      "parsed_at": "2026-11-14T20:24:55.140490",
+      "parsed_at": "2026-11-17T11:21:14.831047",
       "computed": {
         "pe_ratio": 19.88,
         "pb_ratio": 2.22,
@@ -1572,7 +1572,7 @@
       "fy": "2082-83",
       "quarter": 1,
       "quarter_label": "Q1 82-83",
-      "parsed_at": "2026-11-14T20:24:55.140440",
+      "parsed_at": "2026-11-17T11:21:14.830603",
       "computed": {
         "pe_ratio": 20.1,
         "pb_ratio": 2.11,
@@ -1703,7 +1703,7 @@
       "fy": "2082-83",
       "quarter": 2,
       "quarter_label": "Q2 82-83",
-      "parsed_at": "2026-11-14T20:24:55.140388",
+      "parsed_at": "2026-11-17T11:21:14.830153",
       "computed": {
         "pe_ratio": 18.43,
         "pb_ratio": 2.32,
@@ -1826,7 +1826,7 @@
       "fy": "2082-83",
       "quarter": 3,
       "quarter_label": "Q3 82-83",
-      "parsed_at": "2026-11-14T20:24:55.140334",
+      "parsed_at": "2026-11-17T11:21:14.829699",
       "computed": {
         "pe_ratio": 19.47,
         "pb_ratio": 2.45,
@@ -1949,7 +1949,7 @@
       "fy": "2082-83",
       "quarter": 4,
       "quarter_label": "Q4 82-83",
-      "parsed_at": "2026-11-14T20:24:55.140279",
+      "parsed_at": "2026-11-17T11:21:14.829249",
       "computed": {
         "pe_ratio": 20.08,
         "pb_ratio": 2.25,
@@ -2071,7 +2071,7 @@
       "fy": "2083-84",
       "quarter": 1,
       "quarter_label": "Q1 83-84",
-      "parsed_at": "2026-11-14T20:24:55.140216",
+      "parsed_at": "2026-11-17T11:21:14.828793",
       "raw": {
         "Paid Up Capital": 33409847000.0,
         "Share Premium": 0.0,
@@ -2181,5 +2181,5 @@
       }
     }
   ],
-  "last_updated": "2026-11-14T20:24:55.142534"
+  "last_updated": "2026-11-17T11:21:14.838253"
 }

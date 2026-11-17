@@ -1755,6 +1755,21 @@
         "companyName": "Sarbottam Cement Limited",
         "dividends": [
             {
+                "fiscalYear": "082-083",
+                "bonusPercent": 6.0,
+                "cashPercent": 15.0,
+                "totalPercent": 21.0,
+                "bookClosureDateAD": "2026-12-04",
+                "bookClosureDateBS": "",
+                "distributionDateAD": "",
+                "announcementDateAD": "2026-11-17",
+                "bonusListingDateAD": "",
+                "closePrice": 797.0,
+                "status": "0",
+                "source": "hamroshare",
+                "notes": ""
+            },
+            {
                 "fiscalYear": "081-082",
                 "bonusPercent": 5.0,
                 "cashPercent": 15.0,
