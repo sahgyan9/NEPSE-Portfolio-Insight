@@ -776,9 +776,9 @@ def run_harvest(symbols: list | None = None, limit: int | None = None,
 
     # Recalculate Sector Leaders
     try:
-        import score_sector_leaders
+        import live_sector_leaders
         print("[harvest] Refreshing Sector Leaders / Intelligence rankings...")
-        score_sector_leaders.export_top_performers(top_n=3)
+        live_sector_leaders.export(top_n=3)
     except Exception as e:
         print(f"[harvest] Failed to export sector leaders: {e}")
 

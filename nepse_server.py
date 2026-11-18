@@ -1970,8 +1970,8 @@ def get_quarterly_top_performers():
         try:
             print("[nepse_server] Regenerating quarterly top performers...")
             python = sys.executable
-            script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools", "score_sector_leaders.py")
-            subprocess.run([python, script_path, "--export"], check=True)
+            script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools", "live_sector_leaders.py")
+            subprocess.run([python, script_path], check=True)
         except Exception as e:
             print(f"[nepse_server] Failed to regenerate top performers: {e}")
             
