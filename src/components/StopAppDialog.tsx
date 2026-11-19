@@ -11,6 +11,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { Keys } from "@/components/Kbd";
 import { useT } from "@/i18n";
 
 const shutdownUrl = () =>
@@ -67,7 +68,15 @@ export const StopAppDialog = ({ open, onOpenChange }: StopAppDialogProps) => {
   return (
     <>
       <AlertDialog open={open && !finished} onOpenChange={(o) => phase === "confirm" && onOpenChange(o)}>
-        <AlertDialogContent>
+        <AlertDialogContent
+          onKeyDown={(e) => {
+            // "c" opens this dialog (shortcuts.ts); pressing it again confirms
+            if (e.key === "c" && !e.ctrlKey && !e.altKey && !e.metaKey && !e.repeat && phase === "confirm") {
+              e.preventDefault();
+              stop();
+            }
+          }}
+        >
           <AlertDialogHeader>
             <AlertDialogTitle>{t("nav.stopConfirmTitle")}</AlertDialogTitle>
             <AlertDialogDescription>{t("nav.stopConfirmBody")}</AlertDialogDescription>
@@ -86,6 +95,7 @@ export const StopAppDialog = ({ open, onOpenChange }: StopAppDialogProps) => {
                 <Power className="h-4 w-4" aria-hidden="true" />
               )}
               {t("nav.stopApp")}
+              <Keys keys={["c"]} />
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
