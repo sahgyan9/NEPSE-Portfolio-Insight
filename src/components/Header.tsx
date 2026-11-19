@@ -67,7 +67,6 @@ interface NavItem {
 const ITEMS: Record<string, NavItem> = {
   overview: { key: "overview", labelKey: "nav.overview", icon: BarChart3, route: "/" },
   learn: { key: "learn", labelKey: "nav.learn", icon: GraduationCap, route: "/learn" },
-  holdings: { key: "holdings", labelKey: "nav.holdings", icon: Briefcase, route: "/", section: "holdings" },
   myShares: { key: "holdings", labelKey: "nav.myShares", icon: Briefcase, route: "/", section: "holdings" },
   risk: { key: "risk", labelKey: "nav.risk", icon: ShieldAlert, route: "/risk" },
   research: { key: "research", labelKey: "nav.research", icon: ClipboardCheck, route: "/research" },
@@ -83,11 +82,15 @@ const ITEMS: Record<string, NavItem> = {
 // Simple view: the five places a new investor needs; everything else sits under "More".
 const SIMPLE_PRIMARY = [ITEMS.overview, ITEMS.myShares, ITEMS.learn, ITEMS.dividends, ITEMS.risk];
 const SIMPLE_MORE = [ITEMS.sip, ITEMS.research, ITEMS.quarterly, ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
-// Advanced view: the full list.
-const ADVANCED_PRIMARY = [ITEMS.overview, ITEMS.learn, ITEMS.holdings, ITEMS.risk, ITEMS.research, ITEMS.dividends, ITEMS.quarterly];
+// Advanced view: the full list. Holdings is not in the bar (it crowded "More"); it is
+// reached from Overview's "Jump to" links and the g h shortcut.
+const ADVANCED_PRIMARY = [ITEMS.overview, ITEMS.learn, ITEMS.risk, ITEMS.research, ITEMS.dividends, ITEMS.quarterly];
 const ADVANCED_MORE = [ITEMS.sip, ITEMS.valuation, ITEMS.market, ITEMS.screen, ITEMS.tools];
-// Advanced items that sit in the bar only from xl up; between lg and xl they move into "More" so the bar never overflows.
-const WIDE_ONLY = new Set(["quarterly"]);
+// Items that sit in the bar only from xl (1280 px) up; between lg and xl they move into
+// "More" so the bar never runs into the buttons on the right (measured in English, the
+// widest labels: without this, More overlapped at 1024 px).
+const WIDE_ONLY_SIMPLE = new Set(["risk"]);
+const WIDE_ONLY_ADVANCED = new Set(["research", "quarterly"]);
 
 const hrefOf = (item: NavItem) => item.route + (item.section ? `#${item.section}` : "");
 
@@ -181,7 +184,8 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
 
   const primary = isSimple ? SIMPLE_PRIMARY : ADVANCED_PRIMARY;
   const more = isSimple ? SIMPLE_MORE : ADVANCED_MORE;
-  const wideOnly = isSimple ? [] : primary.filter((i) => WIDE_ONLY.has(i.key));
+  const wideSet = isSimple ? WIDE_ONLY_SIMPLE : WIDE_ONLY_ADVANCED;
+  const wideOnly = primary.filter((i) => wideSet.has(i.key));
   const hashId = location.hash.slice(1);
 
   const isActive = (item: NavItem): boolean => {
@@ -200,18 +204,18 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
     <>
       <header className="sticky top-0 z-50 w-full border-b border-border bg-card">
         <div className="container flex h-16 items-center justify-between gap-2 px-4">
-          <div className="flex min-w-0 items-center gap-4 xl:gap-6">
+          <div className="flex min-w-0 items-center gap-4">
             <Link to="/" className="flex shrink-0 items-center" aria-label={t("common.appName")}>
               <img src="/favicon.svg" alt="" className="h-7 w-7" />
             </Link>
 
-            {/* Desktop navigation. Icons appear only when there is room for them. */}
+            {/* Desktop navigation: text only. The page container stops at 1400 px, so
+                icons never had room and pushed "More" into the buttons on the right. */}
             <nav aria-label={t("nav.mainNav")} className="hidden items-center lg:flex xl:gap-0.5">
               {primary.map((item) => {
-                const Icon = item.icon;
                 const active = isActive(item);
                 const sc = findShortcut(item.route, item.section);
-                const wide = !isSimple && WIDE_ONLY.has(item.key);
+                const wide = wideSet.has(item.key);
                 const link = (
                   <Link
                     to={hrefOf(item)}
@@ -223,7 +227,6 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
                       active ? "bg-primary/10 text-primary" : "text-foreground hover:bg-muted"
                     )}
                   >
-                    <Icon className="hidden h-4 w-4 min-[1400px]:block" aria-hidden="true" />
                     {t(item.labelKey)}
                   </Link>
                 );
