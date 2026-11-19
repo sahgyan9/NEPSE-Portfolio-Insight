@@ -246,6 +246,7 @@ _RULES: list[tuple[str, re.Pattern]] = [
     ("dividend_proposed", re.compile(
         r"(?:propos|declar|announc|recommend|distribut)\w*\b.*\b(?:dividend|bonus)|"
         r"(?:dividend|bonus shares?)\b.*\b(?:proposed|declared|announced)", re.I)),
+    ("auction", re.compile(r"\bauction", re.I)),
     ("right_share", re.compile(r"\bright(?:s)? (?:share|issue)|\bhakprad", re.I)),
     ("book_closure", re.compile(r"book[- ]?clos", re.I)),
     ("bonus_listed", re.compile(r"bonus shares?\b.*\blisted|listed\b.*\bbonus", re.I)),
@@ -257,7 +258,6 @@ _RULES: list[tuple[str, re.Pattern]] = [
         r"\b(?:icra|care ratings?|care nepal|india ratings)\b|"
         r"\brating\b.*\b(?:upgrade|downgrade|reaffirm|assign)|"
         r"\b(?:upgrade|downgrade|reaffirm|assign)\w*\b.*\brating", re.I)),
-    ("auction", re.compile(r"\bauction", re.I)),
     ("promoter_sale", re.compile(
         r"(?:promoter|basic shareholder|founder)\b.*\b(?:sell|sale|selling)\b", re.I)),
     ("lock_in_expiry", re.compile(r"lock[- ]?in|locking period", re.I)),
@@ -307,7 +307,7 @@ def classify(headline: str) -> str:
 # ---------------------------------------------------------------------------
 
 _NUM = r"(\d+(?:\.\d+)?)"
-_FY_RE = re.compile(r"(?:\bFY|fiscal year|f\.y\.)\s*[:\-]?\s*(20\d{2})\s*/\s*(\d{2,4})\b|"
+_FY_RE = re.compile(r"(?:\bFY|fiscal year|f\.y\.)\s*[:\-]?\s*((?:20)?[6-9]\d)\s*/\s*(\d{2,4})\b|"
                     r"\b(20[6-9]\d)\s*/\s*(\d{2})\b", re.I)
 
 
@@ -325,24 +325,41 @@ def _fiscal_year(text: str) -> str | None:
     if not m:
         return None
     start, end = (m[1], m[2]) if m[1] else (m[3], m[4])
+    if len(start) == 2:
+        start = f"20{start}"
     if not start.startswith("20") or int(start) < 2060:
         return None
     return f"{start}/{end[-2:]}"
 
 
 def _pct_before(text: str, word_re: str) -> float | None:
-    m = re.search(rf"{_NUM}\s*%\s*(?:{word_re})", text, re.I)
+    m = re.search(rf"{_NUM}[^\S\r\n]*%[^\S\r\n]*(?:{word_re})", text, re.I)
     return _num(m[1]) if m else None
 
 
 def _dividend_parts(text: str) -> dict:
     """bonus_pct, cash_pct, total_pct from a headline or body sentence."""
     bonus = _pct_before(text, r"(?:stock )?bonus")
+    if bonus is None:
+        m = re.search(rf"(?:stock\s+)?bonus\s*(?:shares?)?\s*[:\-]\s*{_NUM}\s*%", text, re.I)
+        if m:
+            bonus = _num(m[1])
+
     cash = _pct_before(text, r"cash")
+    if cash is None:
+        m = re.search(rf"cash\s*(?:dividend)?\s*[:\-]\s*{_NUM}\s*%", text, re.I)
+        if m:
+            cash = _num(m[1])
+
     total = None
-    m = re.search(rf"{_NUM}\s*%\s*(?:total\s+)?dividend", text, re.I)
+    m = re.search(rf"{_NUM}[^\S\r\n]*%[^\S\r\n]*(?:total\s+)?dividend", text, re.I)
     if m and _num(m[1]) not in (bonus, cash):
         total = _num(m[1])
+    if total is None:
+        m = re.search(rf"total\s*(?:dividend)?\s*[:\-]\s*{_NUM}\s*%", text, re.I)
+        if m and _num(m[1]) not in (bonus, cash):
+            total = _num(m[1])
+
     # "15.80% Dividend" also appears in "Book Closure Date for its 15.80% Dividend"
     if total is None and bonus is not None and cash is not None:
         total = round(bonus + cash, 6)
@@ -372,7 +389,7 @@ def _quarterly(text: str) -> dict:
     if qm:
         out["quarter"] = int(qm[1]) if qm[1] else ["first", "second", "third", "fourth"].index(qm[2].lower()) + 1
     for clause in re.split(r";|,|\bwith\b|\bdespite\b|\bwhile\b|\bbut\b", text, flags=re.I):
-        if not re.search(r"profit", clause, re.I):
+        if not re.search(r"profit|loss", clause, re.I):
             continue
         pm = re.search(rf"{_NUM}\s*%", clause)
         up = re.search(_PROFIT_UP, clause, re.I)
@@ -381,7 +398,9 @@ def _quarterly(text: str) -> dict:
             out["profit_direction"] = "up"
         elif down and not up:
             out["profit_direction"] = "down"
-        if re.search(r"turns? (?:to )?loss|into loss|net loss", clause, re.I):
+        if re.search(r"turns? (?:to )?loss|into loss|net loss|\bpost(?:s|ed)? loss|\bincur(?:s|red)? loss", clause, re.I):
+            out["profit_direction"] = "loss"
+        elif not out["profit_direction"] and re.search(r"\b(?:net )?loss\b", clause, re.I) and not up:
             out["profit_direction"] = "loss"
         if pm and out["profit_direction"] in ("up", "down"):
             out["profit_change_pct"] = _num(pm[1])
@@ -762,6 +781,9 @@ def named_company(text: str, aliases: dict[str, list[str]]) -> str | None:
 
 
 _TICKER_RE = re.compile(r"\(([A-Z][A-Z0-9]{1,9})\)")
+_NON_TICKER_ACRONYMS = {
+    "AGM", "SGM", "BOD", "CEO", "NEPSE", "SEBON", "NRB", "EPS", "NAV", "IPO", "FPO", "CSR"
+}
 
 
 def body_segment_for_symbol(body: str, symbol: str) -> tuple[str | None, bool | None]:
@@ -771,7 +793,7 @@ def body_segment_for_symbol(body: str, symbol: str) -> tuple[str | None, bool | 
     (None, False) when the body covers other companies only."""
     if not body:
         return None, None
-    marks = [(m.start(), m[1]) for m in _TICKER_RE.finditer(body)]
+    marks = [(m.start(), m[1]) for m in _TICKER_RE.finditer(body) if m[1] not in _NON_TICKER_ACRONYMS]
     tickers = {t for _, t in marks}
     if not tickers:
         return body, None

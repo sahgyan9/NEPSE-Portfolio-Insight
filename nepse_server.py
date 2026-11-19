@@ -1037,6 +1037,8 @@ def get_market_status():
 def get_market_summary():
     """Get full market summary"""
     data = run_async(nepse_fetcher.get_market_summary())
+    if not data or data.get('source') == 'error':
+        return jsonify(data or {'error': 'Failed to fetch market summary', 'source': 'error'}), 503
     return jsonify(data)
 
 
@@ -1135,10 +1137,28 @@ def load_dividends_db():
         print(f"Error loading dividends DB: {e}")
         return {"entries": []}
 
+def _atomic_write_json(file_path: str, data: dict, indent: int = 2, ensure_ascii: bool = True):
+    """Write data to a temporary file in the same directory and atomically replace destination."""
+    dir_name = os.path.dirname(file_path)
+    os.makedirs(dir_name, exist_ok=True)
+    tmp_name = None
+    try:
+        with tempfile.NamedTemporaryFile("w", dir=dir_name, delete=False, encoding="utf-8") as tf:
+            json.dump(data, tf, indent=indent, ensure_ascii=ensure_ascii)
+            tf.flush()
+            os.fsync(tf.fileno())
+            tmp_name = tf.name
+        os.replace(tmp_name, file_path)
+        tmp_name = None
+    finally:
+        if tmp_name and os.path.exists(tmp_name):
+            try:
+                os.unlink(tmp_name)
+            except OSError:
+                pass
+
 def save_dividends_db(data):
-    os.makedirs(os.path.dirname(DIVIDENDS_DB_PATH), exist_ok=True)
-    with open(DIVIDENDS_DB_PATH, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(DIVIDENDS_DB_PATH, data, indent=2, ensure_ascii=False)
 
 @app.route('/api/manual-dividends', methods=['GET', 'POST', 'OPTIONS'])
 def handle_manual_dividends():
@@ -1852,7 +1872,7 @@ def _trigger_quarterly_sync(symbols: list | None = None, force: bool = False):
         if force:
             cmd.append("--force")
         print(f"[nepse_server] Launching quarterly harvest: {' '.join(cmd)}")
-        subprocess.run(cmd, cwd=project_root)
+        subprocess.run(cmd, cwd=project_root, timeout=60)
         return True, "Sync completed successfully."
     except Exception as e:
         print(f"[nepse_server] Quarterly sync error: {e}")
@@ -1939,7 +1959,7 @@ def fetch_quarterly_data(symbol: str):
         print(f"[nepse_server] Fetching quarterly data for {symbol}...")
         res = subprocess.run(
             [python, script, "--symbols", symbol, "--force"],
-            capture_output=True, text=True, cwd=project_root
+            capture_output=True, text=True, cwd=project_root, timeout=60
         )
         if res.returncode != 0:
             detail = res.stderr or res.stdout or "Harvest process failed"
@@ -1971,7 +1991,7 @@ def get_quarterly_top_performers():
             print("[nepse_server] Regenerating quarterly top performers...")
             python = sys.executable
             script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools", "live_sector_leaders.py")
-            subprocess.run([python, script_path], check=True)
+            subprocess.run([python, script_path], check=True, timeout=60)
         except Exception as e:
             print(f"[nepse_server] Failed to regenerate top performers: {e}")
             
@@ -2068,7 +2088,7 @@ def fetch_news(symbol: str):
         print(f"[nepse_server] Fetching news for {symbol}...")
         res = subprocess.run(
             [python, "tools/scrape_sharesansar_news.py", symbol],
-            capture_output=True, text=True, cwd=project_root
+            capture_output=True, text=True, cwd=project_root, timeout=60
         )
         
         if res.returncode != 0:
@@ -2115,12 +2135,14 @@ def run_news_event_extraction(timeout: int = 300) -> bool:
 
 def _news_extract_worker():
     # Several fetches in a row (one per symbol) collapse into one or two runs.
-    while True:
-        _news_extract_pending.clear()
-        run_news_event_extraction()
-        if not _news_extract_pending.is_set():
-            break
-    _news_extract_lock.release()
+    try:
+        while True:
+            _news_extract_pending.clear()
+            run_news_event_extraction()
+            if not _news_extract_pending.is_set():
+                break
+    finally:
+        _news_extract_lock.release()
 
 
 def start_news_event_extraction():
@@ -2247,9 +2269,7 @@ def _daily_refresh_loop():
                 meta["lastDailyRefreshAt"] = datetime.now().isoformat(timespec="seconds")
                 meta["newsSymbolsOk"] = ok
                 meta["newsSymbolsFailed"] = failed
-                os.makedirs(os.path.dirname(REFRESH_META_PATH), exist_ok=True)
-                with open(REFRESH_META_PATH, "w", encoding="utf-8") as f:
-                    json.dump(meta, f, indent=2)
+                _atomic_write_json(REFRESH_META_PATH, meta, indent=2)
                 print(f"[DailyRefresh] Done — news for {ok} symbols ({failed} failed)")
         except Exception:
             print(f"[DailyRefresh] error: {traceback.format_exc()}")

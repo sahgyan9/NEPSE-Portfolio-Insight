@@ -40,9 +40,45 @@ def test_net_received_from_bill_is_used():
     assert rows[0]["profit"] == pytest.approx(150)
 
 
-def test_broker_bill_rate_counts_as_fee_inclusive():
+def test_bill_no_without_net_received_is_not_included():
+    # Broker bill rate is gross market price; without netReceived, fees are not deducted
     rows = rg.compute_sales([buy("2025-01-01", 10, 100), sell("2025-03-01", 10, 120, billNo="KTM-S1")])
+    assert rows[0]["fees"] == "not_included"
+
+
+def test_explicit_fees_included_flag():
+    rows = rg.compute_sales([buy("2025-01-01", 10, 100), sell("2025-03-01", 10, 120, fees="included")])
     assert rows[0]["fees"] == "included"
+
+
+def test_mutual_fund_bonus_counts_at_ten_rupees():
+    # KDBY is in SYMBOL_SECTOR as Mutual Fund; bonus face value is Rs 10
+    rows = rg.compute_sales([
+        buy("2025-01-01", 100, 10, sym="KDBY"),
+        buy("2025-02-01", 10, 0, sym="KDBY"),
+        sell("2025-03-01", 110, 12, sym="KDBY"),
+    ])
+    assert rows[0]["costPerShare"] == 10.0  # (100*10 + 10*10) / 110
+
+
+def test_zero_cost_basis_is_preserved():
+    # When costPerShare is explicitly 0, it must be kept as 'recorded' (not fallback to estimated/unknown)
+    rows = rg.compute_sales([sell("2025-03-01", 10, 120, costPerShare=0.0)])
+    assert rows[0]["costBasis"] == "recorded"
+    assert rows[0]["costPerShare"] == 0.0
+    assert rows[0]["profit"] == pytest.approx(1200)
+
+
+def test_float_precision_balance_deduction():
+    # Deducting small fractional share increments without IEEE 754 precision residue issues
+    rows = rg.compute_sales([
+        buy("2025-01-01", 0.3, 100),
+        sell("2025-02-01", 0.1, 120),
+        sell("2025-02-02", 0.2, 120),
+    ])
+    assert len(rows) == 2
+    assert rows[1]["costBasis"] == "estimated"
+    assert rows[1]["costPerShare"] == 100.0
 
 
 def test_bonus_shares_count_at_face_value():

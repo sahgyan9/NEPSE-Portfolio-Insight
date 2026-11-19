@@ -14,13 +14,15 @@ Cost per share, in order of preference:
   recorded   costPerShare stored on the SELL row when it was entered (the holding's
              average cost at that moment; set by /api/holdings/sell since 2026-11-17)
   estimated  worked out by replaying the BUY rows before the sale. Bonus shares
-             (BUY at price 0) count at Rs 100, the face value MeroShare's WACC uses.
+             (BUY at price 0) count at face value (Rs 10 for Mutual Funds, Rs 100
+             otherwise), the face value MeroShare's WACC uses.
   unknown    the buy history before the sale has fewer shares than were sold
 
 Money received, in order of preference:
   netReceived on the row       the bill's net amount (after commission, SEBON, DP, CGT)
-  quantity x price, billNo set rate from a broker bill, already fee-inclusive
-  quantity x price, otherwise  rate typed in by hand; fees and tax not taken off
+  quantity x price, fees='included'  explicitly marked fee-inclusive
+  quantity x price, otherwise  rate typed in by hand or from trade confirmation;
+                               fees and tax not taken off (feesMissing flagged)
 
 Fiscal year is the Nepali one (1 Shrawan to end of Asar), e.g. "2083/84".
 
@@ -39,6 +41,7 @@ import portfolio_common as pc  # noqa: E402
 
 PORTFOLIO_PATH = os.path.join(pc.DB_DIR, "portfolio.json")
 BONUS_COST = 100.0
+MUTUAL_FUND_BONUS_COST = 10.0
 SHORT_TERM_DAYS = 365
 
 
@@ -77,7 +80,9 @@ def compute_sales(transactions):
 
         if tx["type"] == "BUY":
             qty[sym] += q
-            cost[sym] += q * (price if price > 0 else BONUS_COST)
+            sector = tx.get("sector") or pc.resolve_sector(sym)
+            bonus_cost = MUTUAL_FUND_BONUS_COST if sector == "Mutual Fund" else BONUS_COST
+            cost[sym] += q * (price if price > 0 else bonus_cost)
             lots[sym].append([d, q])
             continue
 
@@ -85,7 +90,7 @@ def compute_sales(transactions):
             continue
 
         replay_avg = cost[sym] / qty[sym] if qty[sym] >= q - 1e-9 and qty[sym] > 0 else None
-        if tx.get("costPerShare"):
+        if tx.get("costPerShare") is not None and str(tx.get("costPerShare")).strip() != "":
             cps, basis = float(tx["costPerShare"]), "recorded"
         elif replay_avg is not None:
             cps, basis = replay_avg, "estimated"
@@ -110,14 +115,14 @@ def compute_sales(transactions):
             qty[sym] = max(qty[sym] - q, 0.0)
             cost[sym] = avg * qty[sym]
 
-        if tx.get("netReceived"):
+        if tx.get("netReceived") is not None and str(tx.get("netReceived")).strip() != "":
             received, fees = float(tx["netReceived"]), "bill"
-        elif tx.get("billNo"):
+        elif tx.get("fees") == "included":
             received, fees = q * price, "included"
         else:
             received, fees = q * price, "not_included"
 
-        has_received = price > 0 or bool(tx.get("netReceived"))
+        has_received = price > 0 or (tx.get("netReceived") is not None and str(tx.get("netReceived")).strip() != "")
         cost_total = cps * q if cps is not None else None
         profit = received - cost_total if has_received and cost_total is not None else None
         sales.append({

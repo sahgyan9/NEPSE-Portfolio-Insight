@@ -387,3 +387,57 @@ def test_moved_item_is_not_duplicated(tmp_path):
             "date": "2026-10-01", "link": "https://www.sharesansar.com/newsdetail/mid-solu-x-2026-10-01"}
     recs = x.build_events({"SHL": [item], "MSHL": [item]}, MOVE_ALIASES, fetcher, date(2026, 11, 15))
     assert [r["symbol"] for r in recs] == ["MSHL"]
+
+
+# ---------------------------------------------------------------------------
+# Phase 1 News Extractor Fixes: Acronyms, Tables, FY, Losses, Rules
+# ---------------------------------------------------------------------------
+
+def test_body_acronyms_do_not_truncate_segment():
+    body = (
+        "Sonapur Minerals and Oil Limited (SONA)\n"
+        "has called its 19th Annual General Meeting (AGM) on 23rd Mangsir, 2083.\n"
+        "The company has proposed a 5.263% cash dividend.\n"
+        "Mangsir 10 is the book closure date. Approved by SEBON and NRB."
+    )
+    seg, in_body = x.body_segment_for_symbol(body, "SONA")
+    assert in_body is True
+    assert seg is not None
+    assert "Mangsir 10" in seg
+    assert "5.263%" in seg
+
+
+def test_key_value_table_dividends_no_cross_line_inversion():
+    table = "Bonus Share: 10%\nCash Dividend: 5%\nTotal Dividend: 15%"
+    f = x._dividend_parts(table)
+    assert f["bonus_pct"] == 10.0
+    assert f["cash_pct"] == 5.0
+    assert f["total_pct"] == 15.0
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("FY 82/83", "2082/83"),
+    ("FY 80/81", "2080/81"),
+    ("fiscal year 81/82", "2081/82"),
+    ("f.y. 83/84", "2083/84"),
+    ("FY 2082/83", "2082/83"),
+])
+def test_two_digit_bs_fiscal_year(text, expected):
+    assert x._fiscal_year(text) == expected
+
+
+def test_quarterly_net_loss_without_word_profit():
+    f1 = x.extract_fields("HBL posts net loss of Rs 50 Crore in Q1")
+    assert f1["quarter"] == 1
+    assert f1["profit_direction"] == "loss"
+    assert f1["profit_change_pct"] is None
+
+    f2 = x.extract_fields("Company turns into net loss of Rs 10 Crore in Q2")
+    assert f2["quarter"] == 2
+    assert f2["profit_direction"] == "loss"
+
+
+def test_auction_precedence_over_right_shares():
+    h = "Auction of 100,000 Unclaimed Right Shares of ABC Limited From Today"
+    assert x.classify(h) == "auction"
+

@@ -999,7 +999,7 @@ class PortfolioHandler(BaseHTTPRequestHandler):
             # Update or remove holding
             existing["quantity"] -= quantity
             
-            if existing["quantity"] == 0:
+            if existing["quantity"] <= 1e-9:
                 db["holdings"] = [h for h in db["holdings"] if h["symbol"] != symbol]
                 action = "removed"
             else:
@@ -1013,7 +1013,7 @@ class PortfolioHandler(BaseHTTPRequestHandler):
                 "price": sell_price or 0,
                 "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
-            if cost_per_share:
+            if cost_per_share is not None:
                 sell_row["costPerShare"] = cost_per_share
             if net_received and float(net_received) > 0:
                 sell_row["netReceived"] = round(float(net_received), 2)
