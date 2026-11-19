@@ -46,6 +46,24 @@ export const AIChatbot = ({ holdings, summary }: AIChatbotProps) => {
     const [isLoading, setIsLoading] = useState(false);
     const scrollAreaRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
+    const panelRef = useRef<HTMLDivElement>(null);
+
+    // Close the panel on a click outside it or on Esc; messages and the typed text stay
+    useEffect(() => {
+        if (!isOpen) return;
+        const onPointerDown = (e: PointerEvent) => {
+            if (panelRef.current && !panelRef.current.contains(e.target as Node)) setIsOpen(false);
+        };
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setIsOpen(false);
+        };
+        document.addEventListener("pointerdown", onPointerDown);
+        document.addEventListener("keydown", onKeyDown);
+        return () => {
+            document.removeEventListener("pointerdown", onPointerDown);
+            document.removeEventListener("keydown", onKeyDown);
+        };
+    }, [isOpen]);
 
     // Load chat history from localStorage
     useEffect(() => {
@@ -252,6 +270,7 @@ export const AIChatbot = ({ holdings, summary }: AIChatbotProps) => {
 
     return (
         <div
+            ref={panelRef}
             className={cn(
                 "fixed z-50 flex flex-col bg-card border border-border shadow-sm",
                 // Phones: full width and height above the bottom tab bar

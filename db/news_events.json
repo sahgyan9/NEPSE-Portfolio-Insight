@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-11-17T11:22:27",
+  "generated_at": "2026-11-19T08:06:27",
   "stats": {
-    "total": 127,
+    "total": 133,
     "by_type": {
       "market_roundup": 52,
       "csr": 14,
-      "business_update": 11,
-      "dividend_proposed": 9,
+      "dividend_proposed": 10,
+      "business_update": 10,
       "ipo_fpo": 9,
+      "book_closure": 7,
       "quarterly_result": 6,
-      "book_closure": 6,
+      "other": 5,
       "management_change": 4,
       "incident": 3,
       "dividend_approved": 2,
@@ -24,14 +25,53 @@
       "debenture": 1,
       "bonus_listed": 1
     },
-    "non_roundup": 75,
-    "other": 0,
-    "other_share": 0.0,
-    "high_confidence": 47,
-    "bodies_fetched": 2,
+    "non_roundup": 81,
+    "other": 5,
+    "other_share": 0.0617,
+    "high_confidence": 52,
+    "bodies_fetched": 0,
     "body_fetch_failures": 0
   },
   "events": [
+    {
+      "id": "782c0f0e4f56eb6c",
+      "symbol": "SONA",
+      "event_type": "dividend_proposed",
+      "headline": "Sonapur Minerals and Oil Limited Calls AGM, Proposes 5.263% Cash Dividend for FY 82/83",
+      "date": "2026-11-18",
+      "link": "https://www.sharesansar.com/newsdetail/sonapur-minerals-and-oil-limited-calls-agm-proposes-5263-cash-dividend-for-fy-8283-2026-11-18",
+      "fields": {
+        "bonus_pct": null,
+        "cash_pct": 5.263,
+        "total_pct": null,
+        "fiscal_year": null,
+        "book_close_date": null,
+        "book_close_date_bs": null,
+        "agm_date": null,
+        "agm_date_bs": null
+      },
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": true,
+      "body_used": true,
+      "confidence": "high"
+    },
+    {
+      "id": "83f4667302b81fbd",
+      "symbol": "SHL",
+      "event_type": "other",
+      "headline": "Government Announces Top Taxpayers Across 19 Sectors: Find out 19 Highest Tax Payer Companies",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/government-announces-top-taxpayers-across-19-sectors-find-out-19-highest-tax-payer-companies-2026-11-17",
+      "fields": {},
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": false,
+      "body_used": false,
+      "confidence": "low"
+    },
     {
       "id": "50f36b0235ee3472",
       "symbol": "SARBTM",
@@ -57,6 +97,63 @@
       "confidence": "high"
     },
     {
+      "id": "d862d0cf7d13c510",
+      "symbol": "SARBTM",
+      "event_type": "book_closure",
+      "headline": "Sarbottam Cement Limited Unveils Book Closure Date for its 21% Dividend; Calls AGM on Poush 02",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/sarbottam-cement-limited-unveils-book-closure-date-for-its-21-dividend-calls-agm-on-poush-02-2026-11-17",
+      "fields": {
+        "bonus_pct": 6.0,
+        "cash_pct": 15.0,
+        "total_pct": 21.0,
+        "fiscal_year": "2082/83",
+        "book_close_date": "2026-12-04",
+        "book_close_date_bs": "Mangsir 18",
+        "agm_date": "2026-12-17",
+        "agm_date_bs": "Poush 02",
+        "last_buy_date": null,
+        "last_buy_date_source": null,
+        "purpose": "dividend"
+      },
+      "action_date": "2026-12-04",
+      "action_kind": "book_closure",
+      "is_roundup": false,
+      "subject_match": true,
+      "body_used": true,
+      "confidence": "high"
+    },
+    {
+      "id": "f4977a8fcaf0dcbc",
+      "symbol": "NABIL",
+      "event_type": "other",
+      "headline": "Nabil Bank Honoured as Highest Income Tax-Paying Bank for FY 2081/82",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/nabil-bank-honoured-as-highest-income-tax-paying-bank-for-fy-208182-2026-11-17",
+      "fields": {},
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": true,
+      "body_used": false,
+      "confidence": "low"
+    },
+    {
+      "id": "83f4667302b81fbd",
+      "symbol": "NABIL",
+      "event_type": "other",
+      "headline": "Government Announces Top Taxpayers Across 19 Sectors: Find out 19 Highest Tax Payer Companies",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/government-announces-top-taxpayers-across-19-sectors-find-out-19-highest-tax-payer-companies-2026-11-17",
+      "fields": {},
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": false,
+      "body_used": false,
+      "confidence": "low"
+    },
+    {
       "id": "3b0b996e38c41823",
       "symbol": "HDL",
       "event_type": "dividend_proposed",
@@ -73,6 +170,36 @@
         "agm_date": null,
         "agm_date_bs": null
       },
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": false,
+      "body_used": false,
+      "confidence": "low"
+    },
+    {
+      "id": "83f4667302b81fbd",
+      "symbol": "HDL",
+      "event_type": "other",
+      "headline": "Government Announces Top Taxpayers Across 19 Sectors: Find out 19 Highest Tax Payer Companies",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/government-announces-top-taxpayers-across-19-sectors-find-out-19-highest-tax-payer-companies-2026-11-17",
+      "fields": {},
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": false,
+      "body_used": false,
+      "confidence": "low"
+    },
+    {
+      "id": "83f4667302b81fbd",
+      "symbol": "CBBL",
+      "event_type": "other",
+      "headline": "Government Announces Top Taxpayers Across 19 Sectors: Find out 19 Highest Tax Payer Companies",
+      "date": "2026-11-17",
+      "link": "https://www.sharesansar.com/newsdetail/government-announces-top-taxpayers-across-19-sectors-find-out-19-highest-tax-payer-companies-2026-11-17",
+      "fields": {},
       "action_date": null,
       "action_kind": null,
       "is_roundup": false,
@@ -1065,23 +1192,6 @@
       "confidence": "high"
     },
     {
-      "id": "1270b62dc53e6e06",
-      "symbol": "SHL",
-      "event_type": "promoter_sale",
-      "headline": "Mid Solu Hydropower Basic Shareholder Plans to Sell 100,000 Shares",
-      "date": "2026-10-01",
-      "link": "https://www.sharesansar.com/newsdetail/mid-solu-hydropower-basic-shareholder-plans-to-sell-100000-shares-2026-10-01",
-      "fields": {
-        "units": "100,000"
-      },
-      "action_date": null,
-      "action_kind": null,
-      "is_roundup": false,
-      "subject_match": false,
-      "body_used": false,
-      "confidence": "low"
-    },
-    {
       "id": "58b11e28edcc3d91",
       "symbol": "NICA",
       "event_type": "ipo_fpo",
@@ -1103,6 +1213,24 @@
       "subject_match": false,
       "body_used": false,
       "confidence": "low"
+    },
+    {
+      "id": "1270b62dc53e6e06",
+      "symbol": "MSHL",
+      "event_type": "promoter_sale",
+      "headline": "Mid Solu Hydropower Basic Shareholder Plans to Sell 100,000 Shares",
+      "date": "2026-10-01",
+      "link": "https://www.sharesansar.com/newsdetail/mid-solu-hydropower-basic-shareholder-plans-to-sell-100000-shares-2026-10-01",
+      "fields": {
+        "units": "100,000"
+      },
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": true,
+      "body_used": false,
+      "confidence": "high",
+      "filed_under": "SHL"
     },
     {
       "id": "71228b2389d61e7b",
@@ -1320,30 +1448,6 @@
       "confidence": "low"
     },
     {
-      "id": "d7ba804568a78864",
-      "symbol": "SHL",
-      "event_type": "dividend_proposed",
-      "headline": "Mid Solu Hydropower Company Proposes 15.789% Dividend for Fiscal Year 2082/83; How Much in Bonus Shares and Cash?",
-      "date": "2026-09-22",
-      "link": "https://www.sharesansar.com/newsdetail/mid-solu-hydropower-company-proposes-15789-dividend-for-fiscal-year-208283-how-much-in-bonus-shares-and-cash-2026-09-22",
-      "fields": {
-        "bonus_pct": null,
-        "cash_pct": null,
-        "total_pct": 15.789,
-        "fiscal_year": "2082/83",
-        "book_close_date": null,
-        "book_close_date_bs": null,
-        "agm_date": null,
-        "agm_date_bs": null
-      },
-      "action_date": null,
-      "action_kind": null,
-      "is_roundup": false,
-      "subject_match": false,
-      "body_used": false,
-      "confidence": "low"
-    },
-    {
       "id": "c4c243c6b5c070b7",
       "symbol": "NBF3",
       "event_type": "book_closure",
@@ -1369,6 +1473,31 @@
       "subject_match": true,
       "body_used": true,
       "confidence": "high"
+    },
+    {
+      "id": "d7ba804568a78864",
+      "symbol": "MSHL",
+      "event_type": "dividend_proposed",
+      "headline": "Mid Solu Hydropower Company Proposes 15.789% Dividend for Fiscal Year 2082/83; How Much in Bonus Shares and Cash?",
+      "date": "2026-09-22",
+      "link": "https://www.sharesansar.com/newsdetail/mid-solu-hydropower-company-proposes-15789-dividend-for-fiscal-year-208283-how-much-in-bonus-shares-and-cash-2026-09-22",
+      "fields": {
+        "bonus_pct": 15.0,
+        "cash_pct": 0.789,
+        "total_pct": 15.789,
+        "fiscal_year": "2082/83",
+        "book_close_date": null,
+        "book_close_date_bs": null,
+        "agm_date": null,
+        "agm_date_bs": null
+      },
+      "action_date": null,
+      "action_kind": null,
+      "is_roundup": false,
+      "subject_match": true,
+      "body_used": true,
+      "confidence": "high",
+      "filed_under": "SHL"
     },
     {
       "id": "ea06f41c60e3f1ba",
@@ -1622,7 +1751,7 @@
     },
     {
       "id": "9b99df1373f945fc",
-      "symbol": "SHL",
+      "symbol": "SSHL",
       "event_type": "business_update",
       "headline": "Shiva Shree Hydropower Appoints Citizens Capital as Share Registrar",
       "date": "2026-09-11",
@@ -1631,9 +1760,10 @@
       "action_date": null,
       "action_kind": null,
       "is_roundup": false,
-      "subject_match": false,
+      "subject_match": true,
       "body_used": false,
-      "confidence": "low"
+      "confidence": "high",
+      "filed_under": "SHL"
     },
     {
       "id": "17b91a317fbcc62b",
@@ -1953,7 +2083,7 @@
     },
     {
       "id": "30077d207dd7f19c",
-      "symbol": "HBL",
+      "symbol": "H8020",
       "event_type": "dividend_proposed",
       "headline": "Himalayan 80-20 Declares 15% Cash Dividend for FY 2082/83",
       "date": "2026-09-03",
@@ -1971,9 +2101,10 @@
       "action_date": null,
       "action_kind": null,
       "is_roundup": false,
-      "subject_match": false,
+      "subject_match": true,
       "body_used": false,
-      "confidence": "low"
+      "confidence": "high",
+      "filed_under": "HBL"
     },
     {
       "id": "42031184090d44af",
@@ -2347,21 +2478,6 @@
       "headline": "Sun Nepal Life Honors ADM and Emerging Sun Club Agents in Madhesh Province",
       "date": "2026-08-23",
       "link": "https://www.sharesansar.com/newsdetail/sun-nepal-life-honors-adm-and-emerging-sun-club-agents-in-madhesh-province-2026-08-23",
-      "fields": {},
-      "action_date": null,
-      "action_kind": null,
-      "is_roundup": false,
-      "subject_match": true,
-      "body_used": false,
-      "confidence": "high"
-    },
-    {
-      "id": "495dbeaf84b4124a",
-      "symbol": "SNLI",
-      "event_type": "business_update",
-      "headline": "Sun Nepal Life Honors Top-Performing Agents of Bagmati Province",
-      "date": "2026-08-20",
-      "link": "https://www.sharesansar.com/newsdetail/sun-nepal-life-honors-top-performing-agents-of-bagmati-province-2026-08-20",
       "fields": {},
       "action_date": null,
       "action_kind": null,

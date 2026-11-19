@@ -354,3 +354,36 @@ def test_old_items_are_never_fetched(tmp_path, monkeypatch):
     item = {"headline": "Sahas Urja Limited Unveils Book Closure Date for its 22.1053% Dividend; Calls AGM on Mangsir 24",
             "date": "2025-11-14", "link": "https://www.sharesansar.com/newsdetail/sahas-2025-11-14"}
     x.build_record("SAHAS", item, {"SAHAS": ["sahas urja limited"]}, fetcher, date(2026, 11, 15))
+
+
+MOVE_ALIASES = dict(ALIASES, MSHL=["mid solu hydropower limited"], SOHL=["solu hydropower limited"])
+
+
+def test_named_company_prefers_longest_name():
+    h = "Mid Solu Hydropower Basic Shareholder Plans to Sell 100,000 Shares"
+    assert x.named_company(h, MOVE_ALIASES) == "MSHL"
+    assert x.named_company("Solu Hydropower Calls AGM", MOVE_ALIASES) == "SOHL"
+    assert x.named_company("Government Announces Top Taxpayers", MOVE_ALIASES) is None
+
+
+def test_misfiled_item_moves_to_named_company(tmp_path):
+    fetcher = x.BodyFetcher(enabled=False, max_fetch=0, cache_dir=str(tmp_path))
+    item = {"headline": "Mid Solu Hydropower Basic Shareholder Plans to Sell 100,000 Shares",
+            "date": "2026-10-01",
+            "link": "https://www.sharesansar.com/newsdetail/mid-solu-hydropower-basic-shareholder-plans-to-sell-100000-shares-2026-10-01"}
+    r = x.build_record("SHL", item, MOVE_ALIASES, fetcher, date(2026, 11, 15))
+    assert r["symbol"] == "MSHL" and r["filed_under"] == "SHL"
+    assert r["event_type"] == "promoter_sale" and r["subject_match"] is True
+
+    # an item about an unlisted group company stays where it was, at low confidence
+    nic = dict(item, headline="NIC Asia Capital Approves 50% Cash Dividend at 10th AGM")
+    r2 = x.build_record("NICA", nic, MOVE_ALIASES, fetcher, date(2026, 11, 15))
+    assert r2["symbol"] == "NICA" and "filed_under" not in r2 and r2["confidence"] == "low"
+
+
+def test_moved_item_is_not_duplicated(tmp_path):
+    fetcher = x.BodyFetcher(enabled=False, max_fetch=0, cache_dir=str(tmp_path))
+    item = {"headline": "Mid Solu Hydropower Basic Shareholder Plans to Sell 100,000 Shares",
+            "date": "2026-10-01", "link": "https://www.sharesansar.com/newsdetail/mid-solu-x-2026-10-01"}
+    recs = x.build_events({"SHL": [item], "MSHL": [item]}, MOVE_ALIASES, fetcher, date(2026, 11, 15))
+    assert [r["symbol"] for r in recs] == ["MSHL"]

@@ -738,6 +738,29 @@ def subject_matches(text: str, symbol: str, aliases: dict[str, list[str]]) -> bo
     return False
 
 
+def named_company(text: str, aliases: dict[str, list[str]]) -> str | None:
+    """The one listed company whose full name (two or more words, 'Limited' etc.
+    dropped) appears in the text. The longest name wins, so 'Mid Solu Hydropower'
+    beats 'Solu Hydropower'. None when no name matches or two different companies
+    tie for the longest match."""
+    if not text:
+        return None
+    low = re.sub(r"\s+", " ", re.sub(r"[’']s\b", "", text.lower()))
+    best_len, best = 0, set()
+    for sym, names in aliases.items():
+        for name in names:
+            words = _clean_name(name)
+            if len(words) < 2:
+                continue
+            phrase = " ".join(words)
+            if re.search(rf"(?<![a-z0-9]){re.escape(phrase)}(?![a-z0-9])", low):
+                if len(phrase) > best_len:
+                    best_len, best = len(phrase), {sym}
+                elif len(phrase) == best_len:
+                    best.add(sym)
+    return next(iter(best)) if len(best) == 1 else None
+
+
 _TICKER_RE = re.compile(r"\(([A-Z][A-Z0-9]{1,9})\)")
 
 
@@ -852,6 +875,24 @@ def _needs_body(event_type: str, fields: dict) -> bool:
 
 def build_record(symbol: str, item: dict, aliases: dict, fetcher: BodyFetcher | None,
                  today: date) -> dict:
+    """Builds the event record. The news scraper searches by ticker, so an item can be
+    filed under the wrong company (Mid Solu Hydropower news under SHL because 'MSHL'
+    contains 'SHL'). When the headline is not about `symbol` but names exactly one
+    other listed company, the record is moved to that company and `filed_under`
+    keeps the original symbol."""
+    rec = _build_record(symbol, item, aliases, fetcher, today)
+    if rec["subject_match"] is False and not rec["is_roundup"]:
+        other = named_company(rec["headline"], aliases)
+        if other and other != symbol:
+            moved = _build_record(other, item, aliases, fetcher, today)
+            if moved["subject_match"] is True:
+                moved["filed_under"] = symbol
+                return moved
+    return rec
+
+
+def _build_record(symbol: str, item: dict, aliases: dict, fetcher: BodyFetcher | None,
+                  today: date) -> dict:
     headline = (item.get("headline") or "").strip()
     link = (item.get("link") or "").strip()
     iso = parse_any_date(item.get("date"))
@@ -906,13 +947,18 @@ def build_record(symbol: str, item: dict, aliases: dict, fetcher: BodyFetcher | 
 
 
 def build_events(news: dict, aliases: dict, fetcher: BodyFetcher | None, today: date) -> list[dict]:
-    records = []
+    records, seen = [], set()
     for symbol, items in news.items():
         if not isinstance(items, list):
             continue
         for item in items:
             if isinstance(item, dict) and item.get("headline"):
-                records.append(build_record(symbol.upper(), item, aliases, fetcher, today))
+                rec = build_record(symbol.upper(), item, aliases, fetcher, today)
+                key = (rec["id"], rec["symbol"])
+                if key in seen:  # a moved item the correct company already had
+                    continue
+                seen.add(key)
+                records.append(rec)
     records.sort(key=lambda r: (r["date"] or "", r["symbol"]), reverse=True)
     return records
 

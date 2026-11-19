@@ -468,10 +468,23 @@ $pic.Image = $Bmp
 $form.Controls.Add($pic)
 
 $State = @{
-    Clock   = [System.Diagnostics.Stopwatch]::StartNew()
-    Shown   = 0.0
-    Closing = $false
-    Hover   = $false
+    Clock     = [System.Diagnostics.Stopwatch]::StartNew()
+    Shown     = 0.0
+    Closing   = $false
+    Hover     = $false
+    MouseDown = $false
+}
+
+# A left or right click outside the splash minimizes it to the taskbar (it can
+# be restored from there; the launcher still closes it when the app is ready).
+# Uses PortfolioNepse.NativeMouse, compiled by launch.ps1 ($sync.MouseApi).
+function Test-OutsideClick {
+    if (-not $sync.MouseApi) { return $false }
+    $down = (([PortfolioNepse.NativeMouse]::GetAsyncKeyState(0x01) -band 0x8000) -ne 0) -or
+            (([PortfolioNepse.NativeMouse]::GetAsyncKeyState(0x02) -band 0x8000) -ne 0)
+    $pressed = $down -and -not $State.MouseDown
+    $State.MouseDown = $down
+    return ($pressed -and -not $form.Bounds.Contains([System.Windows.Forms.Control]::MousePosition))
 }
 
 $pic.add_MouseMove({
@@ -499,6 +512,11 @@ $timer.add_Tick({
     try {
         $target = [double]$sync.Progress
         if ($target -gt $State.Shown) { $State.Shown += ($target - $State.Shown) * 0.12 }
+        if ($form.WindowState -ne [System.Windows.Forms.FormWindowState]::Minimized -and -not $sync.Close -and (Test-OutsideClick)) {
+            $State.Hover = $false
+            $form.WindowState = [System.Windows.Forms.FormWindowState]::Minimized
+        }
+
         # Nothing to draw while minimized; the animation clock keeps running.
         if ($form.WindowState -ne [System.Windows.Forms.FormWindowState]::Minimized) {
             Render-Frame $State.Clock.Elapsed.TotalSeconds $State.Shown ([string]$sync.Status)

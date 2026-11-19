@@ -335,6 +335,23 @@ if (-not $isWarmVite) {
     }
 }
 
+# Global mouse-button reader for the splash, so a click anywhere outside it
+# minimizes it (a click in another app never reaches the splash window).
+# Compiled here, while the services start, instead of in the splash thread,
+# where the ~1 s compile would freeze the animation.
+if ($script:splashSync) {
+    try {
+        if (-not ('PortfolioNepse.NativeMouse' -as [type])) {
+            Add-Type -Namespace PortfolioNepse -Name NativeMouse -MemberDefinition @'
+[DllImport("user32.dll")] public static extern short GetAsyncKeyState(int vKey);
+'@
+        }
+        $script:splashSync.MouseApi = $true
+    } catch {
+        Log-Message "Splash outside-click support unavailable: $($_.Exception.Message)"
+    }
+}
+
 # ------------------------------------------------------------------
 # STEP 5: High-Speed Polling Loop
 # ------------------------------------------------------------------

@@ -69,3 +69,6 @@ docs/images/*.png
 !docs/images/learn-ne.png
 !docs/images/phone-learn-ne.png
 public/NEPSE_*.png
+
+# Local pre-edit backups
+backups/
