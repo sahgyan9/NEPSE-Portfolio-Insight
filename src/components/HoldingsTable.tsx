@@ -26,14 +26,33 @@ interface EnhancedHolding extends StockHolding {
   liveBookValue?: number | null;
   livePbRatio?: number | null;
   isLoading?: boolean;
+  /** Previous trading day's closing price, from the live feed (absent when the feed had none). */
+  previousClose?: number;
+  /** quantity x (price now - previous close); null when either price is missing. */
+  dayChange?: number | null;
+  /** Percent move of the share price since the previous close. */
+  dayChangePercent?: number | null;
 }
 
-type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio" | "totalDividendValue";
+/** Adds the one-day change for a holding. Same rule as the portfolio total in useLivePortfolio. */
+const withDayChange = (h: EnhancedHolding): EnhancedHolding => {
+  const prev = h.previousClose;
+  if (!prev || prev <= 0 || !(h.currentPrice > 0)) return { ...h, dayChange: null, dayChangePercent: null };
+  return {
+    ...h,
+    dayChange: h.quantity * (h.currentPrice - prev),
+    dayChangePercent: ((h.currentPrice - prev) / prev) * 100,
+  };
+};
+
+type SortKey = keyof StockHolding | "liveBookValue" | "livePbRatio" | "totalDividendValue" | "dayChange";
 type SortOrder = "asc" | "desc";
 
 /** Options for the single sort control shown above the phone card list. */
 const MOBILE_SORTS: { value: string; key: SortKey; order: SortOrder; label: string }[] = [
   { value: "currentValue:desc", key: "currentValue", order: "desc", label: "holdings.sortValueDesc" },
+  { value: "dayChange:asc", key: "dayChange", order: "asc", label: "holdings.sortTodayAsc" },
+  { value: "dayChange:desc", key: "dayChange", order: "desc", label: "holdings.sortTodayDesc" },
   { value: "gainLoss:desc", key: "gainLoss", order: "desc", label: "holdings.sortGainDesc" },
   { value: "gainLossPercent:desc", key: "gainLossPercent", order: "desc", label: "holdings.sortGainPctDesc" },
   { value: "gainLossPercent:asc", key: "gainLossPercent", order: "asc", label: "holdings.sortGainPctAsc" },
@@ -41,6 +60,9 @@ const MOBILE_SORTS: { value: string; key: SortKey; order: SortOrder; label: stri
   { value: "quantity:desc", key: "quantity", order: "desc", label: "holdings.sortKittaDesc" },
   { value: "scrip:asc", key: "scrip", order: "asc", label: "holdings.sortSymbolAsc" },
 ];
+
+/** Right edge of the pinned Symbol column, so scrolled columns visibly pass under it. */
+const PIN_EDGE = "shadow-[inset_-1px_0_0_hsl(var(--border))]";
 
 const bookValueOf = (h: EnhancedHolding): number | null =>
   h.liveBookValue !== null && h.liveBookValue !== undefined ? h.liveBookValue : h.bookValue ?? null;
@@ -66,6 +88,29 @@ const GainLoss = ({ holding, size = "sm" }: { holding: EnhancedHolding; size?: "
         {fmtMoney(Math.abs(holding.gainLoss))}
       </span>
       <span className="font-mono text-xs">({fmtPercent(holding.gainLossPercent, 2)})</span>
+    </div>
+  );
+};
+
+/** One-day change in rupees and percent, with an icon so colour is not the only signal. */
+const DayChange = ({ holding, size = "sm" }: { holding: EnhancedHolding; size?: "sm" | "lg" }) => {
+  const { t } = useT();
+  const v = holding.dayChange;
+  if (v === null || v === undefined) return <span className="text-xs text-muted-foreground">-</span>;
+  const flat = Math.abs(v) < 0.5;
+  const up = v > 0;
+  const Icon = up ? TrendingUp : TrendingDown;
+  return (
+    <div className={cn("flex items-center gap-1.5 whitespace-nowrap", flat ? "text-muted-foreground" : up ? "text-success" : "text-destructive")}>
+      {!flat && <Icon className={size === "lg" ? "h-4 w-4" : "h-3.5 w-3.5"} aria-hidden="true" />}
+      {!flat && <span className="sr-only">{up ? t("holdings.gain") : t("holdings.loss")}</span>}
+      <span className={cn("font-mono font-medium", size === "lg" ? "text-base" : "text-sm")}>
+        {flat ? "" : up ? "+" : "-"}
+        {fmtMoney(Math.abs(v))}
+      </span>
+      {holding.dayChangePercent !== null && holding.dayChangePercent !== undefined && (
+        <span className="font-mono text-xs">({fmtPercent(holding.dayChangePercent, 2)})</span>
+      )}
     </div>
   );
 };
@@ -146,6 +191,11 @@ const HoldingCard = ({ holding, isSimple }: { holding: EnhancedHolding; isSimple
         <GainLoss holding={holding} size="lg" />
       </div>
 
+      <div className="mt-2 flex items-center gap-2 text-sm">
+        <span className="text-muted-foreground">{t("holdings.colToday")}</span>
+        <DayChange holding={holding} />
+      </div>
+
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -216,7 +266,7 @@ export const HoldingsTable = ({
       setIsLoadingFundamentals(true);
 
       // Initialize enhanced holdings with loading state
-      setEnhancedHoldings(holdings.map(h => ({ ...h, isLoading: true })));
+      setEnhancedHoldings(holdings.map(h => withDayChange({ ...h, isLoading: true })));
 
       try {
         const symbols = holdings.map(h => h.scrip);
@@ -231,18 +281,18 @@ export const HoldingsTable = ({
               ? holding.currentPrice / liveBookValue
               : null;
 
-            return {
+            return withDayChange({
               ...holding,
               liveBookValue,
               livePbRatio,
               isLoading: false,
-            };
+            });
           }
-          return { ...holding, isLoading: false };
+          return withDayChange({ ...holding, isLoading: false });
         }));
       } catch (error) {
         console.error("Failed to fetch fundamentals:", error);
-        setEnhancedHoldings(holdings.map(h => ({ ...h, isLoading: false })));
+        setEnhancedHoldings(holdings.map(h => withDayChange({ ...h, isLoading: false })));
       } finally {
         setIsLoadingFundamentals(false);
       }
@@ -302,6 +352,14 @@ export const HoldingsTable = ({
 
   const sortedHoldings = useMemo(() => {
     return [...filteredHoldings].sort((a, b) => {
+      // Shares with no day change (no price today) always sort to the bottom.
+      if (sortKey === "dayChange") {
+        const av = a.dayChange, bv = b.dayChange;
+        if (av == null && bv == null) return 0;
+        if (av == null) return 1;
+        if (bv == null) return -1;
+        return sortOrder === "asc" ? av - bv : bv - av;
+      }
       let aVal: any = (a as any)[sortKey] ?? 0;
       let bVal: any = (b as any)[sortKey] ?? 0;
 
@@ -521,14 +579,28 @@ export const HoldingsTable = ({
         <table className="w-full caption-bottom text-sm">
           <thead className="sticky top-0 bg-card z-10 shadow-sm [&_tr]:border-b">
             <tr className="border-b transition-colors bg-card">
-              <TableHead className="w-12 text-muted-foreground">#</TableHead>
-              <TableHead><SortableHeader label={t("holdings.colSymbol")} sortKeyName="scrip" /></TableHead>
+              <TableHead className="sticky left-0 z-20 w-12 min-w-12 bg-card text-muted-foreground">#</TableHead>
+              <TableHead className={cn("sticky left-12 z-20 bg-card", PIN_EDGE)}>
+                <SortableHeader label={t("holdings.colSymbol")} sortKeyName="scrip" />
+              </TableHead>
               {!isSimple && <TableHead className="hidden lg:table-cell text-muted-foreground">{t("holdings.colCompany")}</TableHead>}
               <TableHead><SortableHeader label={t("holdings.colKitta")} sortKeyName="quantity" /></TableHead>
               <TableHead><SortableHeader label={t("holdings.colAvgCost")} sortKeyName="waccRate" /></TableHead>
               <TableHead><SortableHeader label={t("holdings.colLtp")} sortKeyName="currentPrice" /></TableHead>
               <TableHead><SortableHeader label={t("holdings.colValue")} sortKeyName="currentValue" /></TableHead>
               <TableHead><SortableHeader label={t("holdings.colGainLoss")} sortKeyName="gainLossPercent" /></TableHead>
+              <TableHead>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <SortableHeader label={t("holdings.colToday")} sortKeyName="dayChange">
+                      <Info className="h-3 w-3" aria-hidden="true" />
+                    </SortableHeader>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="max-w-xs">
+                    <p className="text-xs leading-relaxed">{t("holdings.todayTip")}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TableHead>
               <TableHead>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -587,15 +659,15 @@ export const HoldingsTable = ({
           <tbody className="[&_tr:last-child]:border-0">
             {sortedHoldings.length === 0 && (
               <TableRow>
-                <TableCell colSpan={isSimple ? 8 : 12} className="h-20 text-center text-muted-foreground">
+                <TableCell colSpan={isSimple ? 9 : 13} className="h-20 text-center text-muted-foreground">
                   {searchQuery ? t("holdings.emptySearch") : t("holdings.empty")}
                 </TableCell>
               </TableRow>
             )}
             {sortedHoldings.map((holding, index) => (
               <TableRow key={holding.scrip} className="table-row-hover">
-                <TableCell className="font-mono text-muted-foreground">{index + 1}</TableCell>
-                <TableCell>
+                <TableCell className="sticky left-0 z-[1] w-12 min-w-12 bg-card font-mono text-muted-foreground">{index + 1}</TableCell>
+                <TableCell className={cn("sticky left-12 z-[1] bg-card", PIN_EDGE)}>
                   <StockSymbolLink symbol={holding.scrip} className="font-semibold text-primary" />
                 </TableCell>
                 {!isSimple && (
@@ -614,6 +686,9 @@ export const HoldingsTable = ({
                 <TableCell className="font-mono font-medium">{fmtMoney(holding.currentValue)}</TableCell>
                 <TableCell>
                   <GainLoss holding={holding} />
+                </TableCell>
+                <TableCell>
+                  <DayChange holding={holding} />
                 </TableCell>
                 <TableCell>
                   {hasDividend(holding) ? (
