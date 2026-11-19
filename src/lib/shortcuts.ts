@@ -4,7 +4,7 @@
  */
 
 export type ShortcutGroup = "Navigate" | "Actions";
-export type ShortcutAction = "open-search" | "open-help" | "cycle-theme";
+export type ShortcutAction = "open-search" | "open-help" | "cycle-theme" | "stop-app";
 
 export interface Shortcut {
   id: string;
@@ -42,6 +42,8 @@ export const SHORTCUTS: Shortcut[] = [
   { id: "go-screen", keys: ["g", "i"], labelKey: "nav.sectorScreen", group: "Navigate", route: "/intelligence" },
   { id: "search", keys: ["/"], labelKey: "nav.scSearch", group: "Actions", action: "open-search" },
   { id: "theme", keys: ["t"], labelKey: "nav.scTheme", group: "Actions", action: "cycle-theme" },
+  // Opens the confirmation; it never stops the app on its own. "g c" (Research) is checked first.
+  { id: "stop-app", keys: ["c"], labelKey: "nav.stopApp", group: "Actions", action: "stop-app" },
   { id: "help", keys: ["?"], labelKey: "nav.scHelp", group: "Actions", action: "open-help" },
 ];
 
@@ -60,3 +62,4 @@ export const hrefFor = (s: Shortcut): string => (s.route ?? "/") + (s.section ? 
 export const EVENT_OPEN_SEARCH = "pi:open-search";
 export const EVENT_OPEN_HELP = "pi:open-help";
 export const EVENT_OPEN_PORTFOLIO = "pi:open-portfolio";
+export const EVENT_OPEN_STOP = "pi:open-stop";

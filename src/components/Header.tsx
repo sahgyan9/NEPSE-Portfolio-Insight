@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   BarChart3,
@@ -41,7 +41,7 @@ import { useTheme, type ThemePreference } from "@/hooks/useTheme";
 import { useViewMode } from "@/hooks/useViewMode";
 import { useT } from "@/i18n";
 import { jumpToSection } from "@/lib/jumpTo";
-import { EVENT_OPEN_HELP, EVENT_OPEN_PORTFOLIO, findShortcut } from "@/lib/shortcuts";
+import { EVENT_OPEN_HELP, EVENT_OPEN_PORTFOLIO, EVENT_OPEN_STOP, findShortcut } from "@/lib/shortcuts";
 import { StockSearch } from "./StockSearch";
 import { PortfolioManager } from "./PortfolioManager";
 import { NewsTicker } from "./NewsTicker";
@@ -181,6 +181,13 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
   const [stopOpen, setStopOpen] = useState(false);
   // Same pattern for "Stop app": open the confirm dialog only after the sheet has closed.
   const stopAfterClose = useRef(false);
+
+  // "c" shortcut (ShortcutsProvider) opens the same confirmation as the power button
+  useEffect(() => {
+    const open = () => setStopOpen(true);
+    window.addEventListener(EVENT_OPEN_STOP, open);
+    return () => window.removeEventListener(EVENT_OPEN_STOP, open);
+  }, []);
 
   const primary = isSimple ? SIMPLE_PRIMARY : ADVANCED_PRIMARY;
   const more = isSimple ? SIMPLE_MORE : ADVANCED_MORE;
@@ -337,7 +344,9 @@ export const Header = ({ onRefresh, isRefreshing }: HeaderProps) => {
                   <Power className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>{t("nav.stopApp")}</TooltipContent>
+              <TooltipContent className="flex items-center gap-2">
+                {t("nav.stopApp")} <Keys keys={["c"]} />
+              </TooltipContent>
             </Tooltip>
 
             <Button

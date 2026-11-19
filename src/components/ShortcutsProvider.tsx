@@ -8,6 +8,7 @@ import { jumpToSection, scrollToTop } from "@/lib/jumpTo";
 import {
   EVENT_OPEN_HELP,
   EVENT_OPEN_SEARCH,
+  EVENT_OPEN_STOP,
   GO_PREFIX,
   SEQUENCE_WINDOW_MS,
   SHORTCUTS,
@@ -57,6 +58,10 @@ export const ShortcutsProvider = () => {
       }
       if (s.action === "open-help") {
         setHelpOpen(true);
+        return;
+      }
+      if (s.action === "stop-app") {
+        window.dispatchEvent(new CustomEvent(EVENT_OPEN_STOP));
         return;
       }
       const route = s.route ?? "/";
